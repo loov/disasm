@@ -1,0 +1,1418 @@
+arch=s390x funcs=1419 sha256=107659121791da8036c203f8b7a7204ec2997100c3dfe5417c22adadba58ab6c
+== runtime.runGCProg 0x33c00 1168 /usr/local/go/src/runtime/mbitmap.go
+0x33c00 6 "lg" "MOVD 16(R13), R10" "lg %r10,16(%r13)" mbitmap.go:1565
+0x33c06 6 "clgrj" "CMPUBGE R10, R15, 186(PC)" "clgrjnl %r10,%r15,0x34062" mbitmap.go:1565
+0x33c0c 6 "stg" "MOVD R14, -8(R15)" "stg %r14,-8(%r15)" mbitmap.go:1565
+0x33c12 6 "lay" "MOVD -8(R0)(R15*1), R15" "lay %r15,-8(%r15)" mbitmap.go:1565
+0x33c18 6 "stg" "MOVD R14, (R15)" "stg %r14,0(%r15)" mbitmap.go:1565
+0x33c1e 4 "lghi" "MOVB $0, R0" "lghi %r0,0" mbitmap.go:1577
+0x33c22 4 "lgr" "MOVD R3, R1" "lgr %r1,%r3" mbitmap.go:1577
+0x33c26 4 "lghi" "MOVB $0, R4" "lghi %r4,0" mbitmap.go:1577
+0x33c2a 4 "brc" "BR 10(PC)" "j 0x33c52" mbitmap.go:1577
+0x33c2e 4 "lgr" "MOVD R7, R2" "lgr %r2,%r7" mbitmap.go:1577
+0x33c32 4 "lgr" "MOVD R5, R4" "lgr %r4,%r5" mbitmap.go:1577
+0x33c36 4 "lgr" "MOVD R9, R3" "lgr %r3,%r9" mbitmap.go:1577
+0x33c3a 4 "brc" "BR 6(PC)" "j 0x33c52" mbitmap.go:1577
+0x33c3e 4 "stc" "STC R0, (R3)" "stc %r0,0(%r3)" mbitmap.go:1578
+0x33c42 2 "bcr" "NOPH" "nopr %r0" mbitmap.go:1579
+0x33c44 4 "aghi" "SUB $8, R4" "aghi %r4,-8" mbitmap.go:1577
+0x33c48 6 "srlg" "SRD 8(R0), R0, R0" "srlg %r0,%r0,8" mbitmap.go:1580
+0x33c4e 4 "aghi" "ADD $1, R3" "aghi %r3,1" mbitmap.go:1056
+0x33c52 6 "clgij" "CMPUBGE R4, $8, -3(PC)" "clgijnl %r4,8,0x33c3e" mbitmap.go:1577
+0x33c58 6 "llgc" "MOVBZ (R2), R5" "llgc %r5,0(%r2)" mbitmap.go:1584
+0x33c5e 2 "bcr" "NOPH" "nopr %r0" mbitmap.go:1585
+0x33c60 6 "risbg" "RISBGZ $57, $191, $0, R5, R6" "risbg %r6,%r5,57,191,0" mbitmap.go:1586
+0x33c66 6 "aghik" "ADD $1, R2, R7" "aghik %r7,%r2,1" mbitmap.go:1056
+0x33c6c 6 "risbg" "RISBGZ $56, $184, $0, R5, R8" "risbg %r8,%r5,56,184,0" mbitmap.go:1587
+0x33c72 6 "cgij" "CMPBNE R8, $0, 4(PC)" "cgijne %r8,0,0x33c8c" mbitmap.go:1587
+0x33c78 6 "cgij" "CMPBEQ R6, $0, 61(PC)" "cgije %r6,0,0x33dea" mbitmap.go:1589
+0x33c7e 6 "risbg" "RISBGZ $60, $191, $61, R5, R6" "risbg %r6,%r5,60,191,61" mbitmap.go:1593
+0x33c84 4 "lghi" "MOVB $0, R8" "lghi %r8,0" mbitmap.go:1594
+0x33c88 4 "brc" "BR 231(PC)" "j 0x34026" mbitmap.go:1594
+0x33c8c 6 "cgij" "CMPBNE R6, $0, 3(PC)" "cgijne %r6,0,0x33c9e" mbitmap.go:1610
+0x33c92 4 "lghi" "MOVB $0, R5" "lghi %r5,0" mbitmap.go:1610
+0x33c96 4 "lghi" "MOVB $0, R6" "lghi %r6,0" mbitmap.go:1610
+0x33c9a 4 "brc" "BR 192(PC)" "j 0x33f9c" mbitmap.go:1610
+0x33c9e 4 "lghi" "MOVB $0, R5" "lghi %r5,0" mbitmap.go:1624
+0x33ca2 4 "lghi" "MOVB $0, R8" "lghi %r8,0" mbitmap.go:1624
+0x33ca6 4 "brc" "BR 2(PC)" "j 0x33cae" mbitmap.go:1624
+0x33caa 4 "aghi" "ADD $7, R5" "aghi %r5,7" mbitmap.go:1623
+0x33cae 6 "llgc" "MOVBZ (R7), R9" "llgc %r9,0(%r7)" mbitmap.go:1624
+0x33cb4 6 "risbg" "RISBGZ $57, $191, $0, R9, R11" "risbg %r11,%r9,57,191,0" mbitmap.go:1626
+0x33cba 6 "sllg" "SLD (R5), R11, R11" "sllg %r11,%r11,0(%r5)" mbitmap.go:1626
+0x33cc0 4 "aghi" "ADD $1, R7" "aghi %r7,1" mbitmap.go:1056
+0x33cc4 2 "bcr" "NOPH" "nopr %r0" mbitmap.go:1625
+0x33cc6 6 "clgfi" "CMPU R5, $64" "clgfi %r5,64" mbitmap.go:1626
+0x33ccc 4 "lghi" "MOVB $0, R12" "lghi %r12,0" mbitmap.go:1626
+0x33cd0 4 "locgr" "MOVDGE R12, R11" "locgrhe %r11,%r12" mbitmap.go:1626
+0x33cd4 4 "ogr" "OR R11, R8" "ogr %r8,%r11" mbitmap.go:1626
+0x33cd8 6 "risbg" "RISBGZ $56, $184, $0, R9, R9" "risbg %r9,%r9,56,184,0" mbitmap.go:1627
+0x33cde 6 "cgij" "CMPBNE R9, $0, -8(PC)" "cgijne %r9,0,0x33caa" mbitmap.go:1627
+0x33ce4 4 "msgr" "MSGR R8, R6" "msgr %r8,%r6" mbitmap.go:1631
+0x33ce8 6 "clgij" "CMPUBGT R6, $57, 4(PC)" "clgijh %r6,57,0x33d02" mbitmap.go:1642
+0x33cee 2 "bcr" "NOPH" "nopr %r0" mbitmap.go:1648
+0x33cf0 6 "aghik" "SUB $1, R3, R5" "aghik %r5,%r3,-1" mbitmap.go:1069
+0x33cf6 4 "lgr" "MOVD R4, R2" "lgr %r2,%r4" mbitmap.go:1577
+0x33cfa 4 "lgr" "MOVD R0, R9" "lgr %r9,%r0" mbitmap.go:1577
+0x33cfe 4 "brc" "BR 74(PC)" "j 0x33e28" mbitmap.go:1649
+0x33d02 4 "sgrk" "SUB R4, R6, R5" "sgrk %r5,%r6,%r4" mbitmap.go:1723
+0x33d06 6 "aghik" "ADD $7, R5, R6" "aghik %r6,%r5,7" mbitmap.go:1725
+0x33d0c 6 "srlg" "SRD 3(R0), R6, R6" "srlg %r6,%r6,3" mbitmap.go:1725
+0x33d12 4 "lgr" "MOVD R3, R9" "lgr %r9,%r3" mbitmap.go:1045
+0x33d16 4 "sgr" "SUB R6, R3" "sgr %r3,%r6" mbitmap.go:1045
+0x33d1a 4 "lgr" "MOVD R3, R6" "lgr %r6,%r3" mbitmap.go:1045
+0x33d1e 6 "risbg" "RISBGZ $61, $191, $0, R5, R5" "risbg %r5,%r5,61,191,0" mbitmap.go:1726
+0x33d24 6 "cgij" "CMPBEQ R5, $0, 9(PC)" "cgije %r5,0,0x33d5a" mbitmap.go:1726
+0x33d2a 6 "llgc" "MOVBZ (R3), R11" "llgc %r11,0(%r3)" mbitmap.go:1727
+0x33d30 6 "aghik" "SUB $8, R5, R14" "aghik %r14,%r5,-8" mbitmap.go:1727
+0x33d36 4 "lcgr" "NEG R14" "lcgr %r14,%r14" mbitmap.go:1727
+0x33d3a 6 "srlg" "SRD (R14), R11, R11" "srlg %r11,%r11,0(%r14)" mbitmap.go:1727
+0x33d40 6 "sllg" "SLD (R4), R11, R11" "sllg %r11,%r11,0(%r4)" mbitmap.go:1727
+0x33d46 6 "aghik" "ADD $1, R6, R3" "aghik %r3,%r6,1" mbitmap.go:1056
+0x33d4c 4 "ogr" "OR R11, R0" "ogr %r0,%r11" mbitmap.go:1727
+0x33d50 2 "bcr" "NOPH" "nopr %r0" mbitmap.go:1728
+0x33d52 4 "agrk" "ADD R4, R5, R4" "agrk %r4,%r5,%r4" mbitmap.go:1729
+0x33d56 4 "sgr" "SUB R5, R8" "sgr %r8,%r5" mbitmap.go:1730
+0x33d5a 6 "srlg" "SRD 3(R0), R8, R5" "srlg %r5,%r8,3" mbitmap.go:1734
+0x33d60 4 "brc" "BR 14(PC)" "j 0x33d98" mbitmap.go:1734
+0x33d64 6 "llgc" "MOVBZ (R3), R6" "llgc %r6,0(%r3)" mbitmap.go:1735
+0x33d6a 6 "sllg" "SLD (R4), R6, R6" "sllg %r6,%r6,0(%r4)" mbitmap.go:1735
+0x33d70 2 "bcr" "NOPH" "nopr %r0" mbitmap.go:1736
+0x33d72 6 "clgfi" "CMPU R4, $64" "clgfi %r4,64" mbitmap.go:1735
+0x33d78 4 "locgr" "MOVDGE R12, R6" "locgrhe %r6,%r12" mbitmap.go:1735
+0x33d7c 4 "ogrk" "OR R6, R0, R6" "ogrk %r6,%r6,%r0" mbitmap.go:1735
+0x33d80 4 "stc" "STC R6, (R9)" "stc %r6,0(%r9)" mbitmap.go:1737
+0x33d84 2 "bcr" "NOPH" "nopr %r0" mbitmap.go:1738
+0x33d86 6 "srlg" "SRD 8(R0), R6, R0" "srlg %r0,%r6,8" mbitmap.go:1739
+0x33d8c 4 "aghi" "SUB $1, R5" "aghi %r5,-1" mbitmap.go:1734
+0x33d90 4 "aghi" "ADD $1, R3" "aghi %r3,1" mbitmap.go:1056
+0x33d94 4 "aghi" "ADD $1, R9" "aghi %r9,1" mbitmap.go:1056
+0x33d98 6 "clgij" "CMPUBGT R5, $0, -8(PC)" "clgijh %r5,0,0x33d64" mbitmap.go:1734
+0x33d9e 6 "risbg" "RISBGZ $61, $191, $0, R8, R5" "risbg %r5,%r8,61,191,0" mbitmap.go:1742
+0x33da4 6 "clgij" "CMPUBLE R5, $0, 9(PC)" "clgijnh %r5,0,0x33dde" mbitmap.go:1742
+0x33daa 6 "llgc" "MOVBZ (R3), R3" "llgc %r3,0(%r3)" mbitmap.go:1743
+0x33db0 4 "lghi" "MOVB $1, R6" "lghi %r6,1" mbitmap.go:1743
+0x33db4 6 "sllg" "SLD (R5), R6, R8" "sllg %r8,%r6,0(%r5)" mbitmap.go:1743
+0x33dba 4 "aghi" "SUB $1, R8" "aghi %r8,-1" mbitmap.go:1743
+0x33dbe 4 "ngrk" "AND R3, R8, R3" "ngrk %r3,%r3,%r8" mbitmap.go:1743
+0x33dc2 6 "sllg" "SLD (R4), R3, R3" "sllg %r3,%r3,0(%r4)" mbitmap.go:1743
+0x33dc8 4 "agrk" "ADD R4, R5" "agrk %r5,%r5,%r4" mbitmap.go:1744
+0x33dcc 6 "clgfi" "CMPU R4, $64" "clgfi %r4,64" mbitmap.go:1743
+0x33dd2 4 "locgr" "MOVDGE R12, R3" "locgrhe %r3,%r12" mbitmap.go:1743
+0x33dd6 4 "ogr" "OR R3, R0" "ogr %r0,%r3" mbitmap.go:1743
+0x33dda 4 "brc" "BR -107(PC)" "j 0x33c2e" mbitmap.go:1744
+0x33dde 4 "lghi" "MOVB $1, R6" "lghi %r6,1" mbitmap.go:1744
+0x33de2 4 "lgr" "MOVD R4, R5" "lgr %r5,%r4" mbitmap.go:1744
+0x33de6 4 "brc" "BR -110(PC)" "j 0x33c2e" mbitmap.go:1742
+0x33dea 4 "lgr" "MOVD R3, R5" "lgr %r5,%r3" mbitmap.go:1749
+0x33dee 4 "sgrk" "SUB R1, R5, R1" "sgrk %r1,%r5,%r1" mbitmap.go:1749
+0x33df2 6 "sllg" "SLD 3(R0), R1, R1" "sllg %r1,%r1,3" mbitmap.go:1749
+0x33df8 4 "lcgr" "NEG R4, R5" "lcgr %r5,%r4" mbitmap.go:1750
+0x33dfc 6 "risbg" "RISBGZ $61, $191, $0, R5, R5" "risbg %r5,%r5,61,191,0" mbitmap.go:1750
+0x33e02 4 "agrk" "ADD R4, R1, R2" "agrk %r2,%r1,%r4" mbitmap.go:1749
+0x33e06 4 "agrk" "ADD R4, R5, R1" "agrk %r1,%r5,%r4" mbitmap.go:1750
+0x33e0a 4 "brc" "BR 120(PC)" "j 0x33fea" mbitmap.go:1751
+0x33e0e 6 "sllg" "SLD 8(R0), R0, R11" "sllg %r11,%r0,8" mbitmap.go:1650
+0x33e14 6 "llgc" "MOVBZ (R5), R14" "llgc %r14,0(%r5)" mbitmap.go:1651
+0x33e1a 4 "ogrk" "OR R11, R14, R0" "ogrk %r0,%r11,%r14" mbitmap.go:1651
+0x33e1e 2 "bcr" "NOPH" "nopr %r0" mbitmap.go:1652
+0x33e20 4 "aghi" "ADD $8, R4" "aghi %r4,8" mbitmap.go:1653
+0x33e24 4 "aghi" "SUB $1, R5" "aghi %r5,-1" mbitmap.go:1069
+0x33e28 6 "clgrj" "CMPUBLT R4, R6, -4(PC)" "clgrjl %r4,%r6,0x33e0e" mbitmap.go:1649
+0x33e2e 6 "clgrj" "CMPUBLE R4, R6, 5(PC)" "clgrjnh %r4,%r6,0x33e4c" mbitmap.go:1660
+0x33e34 4 "sgrk" "SUB R6, R4, R5" "sgrk %r5,%r4,%r6" mbitmap.go:1661
+0x33e38 6 "srlg" "SRD (R5), R0, R0" "srlg %r0,%r0,0(%r5)" mbitmap.go:1661
+0x33e3e 6 "clgfi" "CMPU R5, $64" "clgfi %r5,64" mbitmap.go:1661
+0x33e44 4 "locgr" "MOVDGE R12, R0" "locgrhe %r0,%r12" mbitmap.go:1661
+0x33e48 4 "brc" "BR 2(PC)" "j 0x33e50" mbitmap.go:1662
+0x33e4c 4 "lgr" "MOVD R4, R6" "lgr %r6,%r4" mbitmap.go:1666
+0x33e50 6 "cgij" "CMPBNE R6, $1, 5(PC)" "cgijne %r6,1,0x33e72" mbitmap.go:1666
+0x33e56 6 "cgij" "CMPBNE R0, $1, 3(PC)" "cgijne %r0,1,0x33e6a" mbitmap.go:1673
+0x33e5c 6 "lgrl" "LGRL R0, $i64.01ffffffffffffff(SB)" "lgrl %r0,0xa7e20" mbitmap.go:1673
+0x33e62 4 "lghi" "MOVB $57, R4" "lghi %r4,57" mbitmap.go:1673
+0x33e66 4 "brc" "BR 13(PC)" "j 0x33e9a" mbitmap.go:1673
+0x33e6a 4 "lgr" "MOVD R8, R4" "lgr %r4,%r8" mbitmap.go:1673
+0x33e6e 4 "brc" "BR 11(PC)" "j 0x33e9a" mbitmap.go:1677
+0x33e72 6 "sllg" "SLD 1(R0), R6, R4" "sllg %r4,%r6,1" mbitmap.go:1682
+0x33e78 6 "clgij" "CMPUBGT R4, $57, 2(PC)" "clgijh %r4,57,0x33e86" mbitmap.go:1682
+0x33e7e 4 "lgr" "MOVD R6, R4" "lgr %r4,%r6" mbitmap.go:1666
+0x33e82 4 "brc" "BR 51(PC)" "j 0x33f4e" mbitmap.go:1682
+0x33e86 4 "lgr" "MOVD R6, R4" "lgr %r4,%r6" mbitmap.go:1700
+0x33e8a 4 "brc" "BR 4(PC)" "j 0x33e9a" mbitmap.go:1700
+0x33e8e 4 "sgr" "SUB R4, R8" "sgr %r8,%r4" mbitmap.go:1700
+0x33e92 4 "lgr" "MOVD R6, R2" "lgr %r2,%r6" mbitmap.go:1700
+0x33e96 4 "lgr" "MOVD R5, R9" "lgr %r9,%r5" mbitmap.go:1700
+0x33e9a 6 "clgrj" "CMPUBGT R4, R8, 10(PC)" "clgrjh %r4,%r8,0x33eda" mbitmap.go:1700
+0x33ea0 6 "sllg" "SLD (R2), R0, R5" "sllg %r5,%r0,0(%r2)" mbitmap.go:1701
+0x33ea6 4 "agrk" "ADD R2, R4, R6" "agrk %r6,%r4,%r2" mbitmap.go:1702
+0x33eaa 6 "clgfi" "CMPU R2, $64" "clgfi %r2,64" mbitmap.go:1701
+0x33eb0 4 "locgr" "MOVDGE R12, R5" "locgrhe %r5,%r12" mbitmap.go:1701
+0x33eb4 4 "ogrk" "OR R5, R9, R5" "ogrk %r5,%r5,%r9" mbitmap.go:1701
+0x33eb8 4 "brc" "BR 6(PC)" "j 0x33ed0" mbitmap.go:1703
+0x33ebc 4 "stc" "STC R5, (R3)" "stc %r5,0(%r3)" mbitmap.go:1704
+0x33ec0 2 "bcr" "NOPH" "nopr %r0" mbitmap.go:1705
+0x33ec2 6 "srlg" "SRD 8(R0), R5, R5" "srlg %r5,%r5,8" mbitmap.go:1706
+0x33ec8 4 "aghi" "SUB $8, R6" "aghi %r6,-8" mbitmap.go:1707
+0x33ecc 4 "aghi" "ADD $1, R3" "aghi %r3,1" mbitmap.go:1056
+0x33ed0 6 "clgij" "CMPUBGE R6, $8, -3(PC)" "clgijnl %r6,8,0x33ebc" mbitmap.go:1703
+0x33ed6 4 "brc" "BR -18(PC)" "j 0x33e8e" mbitmap.go:1703
+0x33eda 6 "clgij" "CMPUBLE R8, $0, 10(PC)" "clgijnh %r8,0,0x33f18" mbitmap.go:1712
+0x33ee0 4 "lghi" "MOVB $1, R4" "lghi %r4,1" mbitmap.go:1713
+0x33ee4 6 "sllg" "SLD (R8), R4, R5" "sllg %r5,%r4,0(%r8)" mbitmap.go:1713
+0x33eea 4 "agrk" "ADD R8, R2, R6" "agrk %r6,%r2,%r8" mbitmap.go:1715
+0x33eee 6 "clgfi" "CMPU R8, $64" "clgfi %r8,64" mbitmap.go:1713
+0x33ef4 4 "locgr" "MOVDGE R12, R5" "locgrhe %r5,%r12" mbitmap.go:1713
+0x33ef8 4 "aghi" "SUB $1, R5" "aghi %r5,-1" mbitmap.go:1713
+0x33efc 4 "ngr" "AND R5, R0" "ngr %r0,%r5" mbitmap.go:1713
+0x33f00 6 "sllg" "SLD (R2), R0, R0" "sllg %r0,%r0,0(%r2)" mbitmap.go:1714
+0x33f06 6 "clgfi" "CMPU R2, $64" "clgfi %r2,64" mbitmap.go:1714
+0x33f0c 4 "locgr" "MOVDGE R12, R0" "locgrhe %r0,%r12" mbitmap.go:1714
+0x33f10 4 "ogr" "OR R0, R9" "ogr %r9,%r0" mbitmap.go:1714
+0x33f14 4 "brc" "BR 3(PC)" "j 0x33f20" mbitmap.go:1715
+0x33f18 4 "lghi" "MOVB $1, R4" "lghi %r4,1" mbitmap.go:1715
+0x33f1c 4 "lgr" "MOVD R2, R6" "lgr %r6,%r2" mbitmap.go:1717
+0x33f20 4 "lgr" "MOVD R6, R5" "lgr %r5,%r6" mbitmap.go:1577
+0x33f24 4 "lgr" "MOVD R9, R0" "lgr %r0,%r9" mbitmap.go:1577
+0x33f28 4 "lghi" "MOVB $1, R6" "lghi %r6,1" mbitmap.go:1577
+0x33f2c 4 "lgr" "MOVD R3, R9" "lgr %r9,%r3" mbitmap.go:1577
+0x33f30 4 "brc" "BR -192(PC)" "j 0x33c2e" mbitmap.go:1717
+0x33f34 6 "sllg" "SLD (R6), R0, R5" "sllg %r5,%r0,0(%r6)" mbitmap.go:1685
+0x33f3a 6 "clgfi" "CMPU R6, $64" "clgfi %r6,64" mbitmap.go:1685
+0x33f40 4 "locgr" "MOVDGE R12, R5" "locgrhe %r5,%r12" mbitmap.go:1685
+0x33f44 4 "ogr" "OR R5, R0" "ogr %r0,%r5" mbitmap.go:1685
+0x33f48 6 "sllg" "SLD 1(R0), R6, R6" "sllg %r6,%r6,1" mbitmap.go:1686
+0x33f4e 6 "clgij" "CMPUBLE R6, $64, -4(PC)" "clgijnh %r6,64,0x33f34" mbitmap.go:1684
+0x33f54 6 "cgij" "CMPBEQ R4, $0, 10(PC)" "cgije %r4,0,0x33f92" mbitmap.go:1690
+0x33f5a 4 "lghi" "MOVB $57, R6" "lghi %r6,57" mbitmap.go:1690
+0x33f5e 4 "lghi" "MOVB $0, R10" "lghi %r10,0" mbitmap.go:1690
+0x33f62 4 "lgr" "MOVD R6, R11" "lgr %r11,%r6" mbitmap.go:1690
+0x33f66 4 "dlgr" "DLGR R10, R4" "dlgr %r10,%r4" mbitmap.go:1690
+0x33f6a 4 "lgr" "MOVD R11, R6" "lgr %r6,%r11" mbitmap.go:1690
+0x33f6e 4 "msgr" "MSGR R6, R4" "msgr %r6,%r4" mbitmap.go:1690
+0x33f72 4 "lghi" "MOVB $1, R4" "lghi %r4,1" mbitmap.go:1691
+0x33f76 6 "sllg" "SLD (R6), R4, R5" "sllg %r5,%r4,0(%r6)" mbitmap.go:1691
+0x33f7c 6 "clgfi" "CMPU R6, $64" "clgfi %r6,64" mbitmap.go:1691
+0x33f82 4 "locgr" "MOVDGE R12, R5" "locgrhe %r5,%r12" mbitmap.go:1691
+0x33f86 4 "aghi" "SUB $1, R5" "aghi %r5,-1" mbitmap.go:1691
+0x33f8a 4 "ngr" "AND R5, R0" "ngr %r0,%r5" mbitmap.go:1691
+0x33f8e 4 "brc" "BR -66(PC)" "j 0x33e86" mbitmap.go:1693
+0x33f92 6 "brasl" "CALL runtime.panicdivide(SB)" "brasl %r14,0x58ec0" mbitmap.go:1690
+0x33f98 4 "aghi" "ADD $7, R5" "aghi %r5,7" mbitmap.go:1611
+0x33f9c 6 "llgc" "MOVBZ (R7), R8" "llgc %r8,0(%r7)" mbitmap.go:1612
+0x33fa2 6 "risbg" "RISBGZ $57, $191, $0, R8, R9" "risbg %r9,%r8,57,191,0" mbitmap.go:1614
+0x33fa8 6 "sllg" "SLD (R5), R9, R9" "sllg %r9,%r9,0(%r5)" mbitmap.go:1614
+0x33fae 4 "aghi" "ADD $1, R7" "aghi %r7,1" mbitmap.go:1056
+0x33fb2 2 "bcr" "NOPH" "nopr %r0" mbitmap.go:1613
+0x33fb4 6 "clgfi" "CMPU R5, $64" "clgfi %r5,64" mbitmap.go:1614
+0x33fba 4 "lghi" "MOVB $0, R11" "lghi %r11,0" mbitmap.go:1614
+0x33fbe 4 "locgr" "MOVDGE R11, R9" "locgrhe %r9,%r11" mbitmap.go:1614
+0x33fc2 4 "ogr" "OR R9, R6" "ogr %r6,%r9" mbitmap.go:1614
+0x33fc6 6 "risbg" "RISBGZ $56, $184, $0, R8, R8" "risbg %r8,%r8,56,184,0" mbitmap.go:1615
+0x33fcc 6 "cgij" "CMPBEQ R8, $0, -135(PC)" "cgije %r8,0,0x33c9e" mbitmap.go:1615
+0x33fd2 4 "brc" "BR -14(PC)" "j 0x33f98" mbitmap.go:1615
+0x33fd6 4 "stc" "STC R0, (R3)" "stc %r0,0(%r3)" mbitmap.go:1752
+0x33fda 2 "bcr" "NOPH" "nopr %r0" mbitmap.go:1753
+0x33fdc 4 "aghi" "SUB $8, R1" "aghi %r1,-8" mbitmap.go:1751
+0x33fe0 6 "srlg" "SRD 8(R0), R0, R0" "srlg %r0,%r0,8" mbitmap.go:1754
+0x33fe6 4 "aghi" "ADD $1, R3" "aghi %r3,1" mbitmap.go:1056
+0x33fea 6 "clgij" "CMPUBGT R1, $0, -3(PC)" "clgijh %r1,0,0x33fd6" mbitmap.go:1751
+0x33ff0 6 "lg" "MOVD (R15), R14" "lg %r14,0(%r15)" mbitmap.go:1756
+0x33ff6 4 "aghi" "ADD $8, R15" "aghi %r15,8" mbitmap.go:1756
+0x33ffa 2 "bcr" "RET" "br %r14" mbitmap.go:1756
+0x33ffc 6 "llgc" "MOVBZ (R7), R9" "llgc %r9,0(%r7)" mbitmap.go:1595
+0x34002 6 "sllg" "SLD (R4), R9, R9" "sllg %r9,%r9,0(%r4)" mbitmap.go:1595
+0x34008 4 "ogrk" "OR R9, R0, R9" "ogrk %r9,%r9,%r0" mbitmap.go:1595
+0x3400c 2 "bcr" "NOPH" "nopr %r0" mbitmap.go:1596
+0x3400e 4 "stc" "STC R9, (R3)" "stc %r9,0(%r3)" mbitmap.go:1597
+0x34012 2 "bcr" "NOPH" "nopr %r0" mbitmap.go:1598
+0x34014 6 "srlg" "SRD 8(R0), R9, R0" "srlg %r0,%r9,8" mbitmap.go:1599
+0x3401a 4 "aghi" "ADD $1, R8" "aghi %r8,1" mbitmap.go:1594
+0x3401e 4 "aghi" "ADD $1, R7" "aghi %r7,1" mbitmap.go:1056
+0x34022 4 "aghi" "ADD $1, R3" "aghi %r3,1" mbitmap.go:1056
+0x34026 6 "clgrj" "CMPUBLT R8, R6, -7(PC)" "clgrjl %r8,%r6,0x33ffc" mbitmap.go:1594
+0x3402c 6 "risbg" "RISBGZ $61, $191, $0, R5, R5" "risbg %r5,%r5,61,191,0" mbitmap.go:1601
+0x34032 6 "clgij" "CMPUBLE R5, $0, 5(PC)" "clgijnh %r5,0,0x34052" mbitmap.go:1601
+0x34038 6 "llgc" "MOVBZ (R7), R6" "llgc %r6,0(%r7)" mbitmap.go:1602
+0x3403e 6 "sllg" "SLD (R4), R6, R6" "sllg %r6,%r6,0(%r4)" mbitmap.go:1602
+0x34044 4 "ogr" "OR R6, R0" "ogr %r0,%r6" mbitmap.go:1602
+0x34048 2 "bcr" "NOPH" "nopr %r0" mbitmap.go:1603
+0x3404a 4 "agrk" "ADD R4, R5, R4" "agrk %r4,%r5,%r4" mbitmap.go:1604
+0x3404e 4 "aghi" "ADD $1, R7" "aghi %r7,1" mbitmap.go:1056
+0x34052 4 "lghi" "MOVB $1, R6" "lghi %r6,1" mbitmap.go:1606
+0x34056 4 "lgr" "MOVD R4, R5" "lgr %r5,%r4" mbitmap.go:1577
+0x3405a 4 "lgr" "MOVD R3, R9" "lgr %r9,%r3" mbitmap.go:1577
+0x3405e 4 "brc" "BR -268(PC)" "j 0x33c2e" mbitmap.go:1606
+0x34062 6 "stg" "MOVD R2, 8(R15)" "stg %r2,8(%r15)" mbitmap.go:1565
+0x34068 6 "stg" "MOVD R3, 16(R15)" "stg %r3,16(%r15)" mbitmap.go:1565
+0x3406e 4 "lgr" "MOVD R14, R5" "lgr %r5,%r14" mbitmap.go:1565
+0x34072 6 "brasl" "CALL runtime.morestack_noctxt.abi0(SB)" "brasl %r14,0x99560" mbitmap.go:1565
+0x34078 6 "lg" "MOVD 8(R15), R2" "lg %r2,8(%r15)" mbitmap.go:1565
+0x3407e 6 "lg" "MOVD 16(R15), R3" "lg %r3,16(%r15)" mbitmap.go:1565
+0x34084 4 "brc" "BR runtime.runGCProg(SB)" "j 0x33c00" mbitmap.go:1565
+0x34088 2 "" "BYTE 0x0000" ".byte 0x0000" mbitmap.go:1565
+0x3408a 2 "" "BYTE 0x0000" ".byte 0x0000" mbitmap.go:1565
+0x3408c 2 "" "BYTE 0x0000" ".byte 0x0000" mbitmap.go:1565
+0x3408e 2 "" "BYTE 0x0000" ".byte 0x0000" mbitmap.go:1565
+== runtime.runCheckmark 0x35620 256 /usr/local/go/src/runtime/mcheckmark.go
+0x35620 6 "lg" "MOVD 16(R13), R10" "lg %r10,16(%r13)" mcheckmark.go:126
+0x35626 6 "clgrj" "CMPUBGE R10, R15, 36(PC)" "clgrjnl %r10,%r15,0x35700" mcheckmark.go:126
+0x3562c 6 "stg" "MOVD R14, -32(R15)" "stg %r14,-32(%r15)" mcheckmark.go:126
+0x35632 6 "lay" "MOVD -32(R0)(R15*1), R15" "lay %r15,-32(%r15)" mcheckmark.go:126
+0x35638 6 "stg" "MOVD R14, (R15)" "stg %r14,0(%r15)" mcheckmark.go:126
+0x3563e 6 "stg" "MOVD R2, 40(R15)" "stg %r2,40(%r15)" mcheckmark.go:144
+0x35644 2 "bcr" "NOPH" "nopr %r0" mcheckmark.go:134
+0x35646 2 "bcr" "NOPH" "nopr %r0" types.go:179
+0x35648 6 "larl" "MOVD 188741(PC), R1" "larl %r1,0x149de8" types.go:131
+0x3564e 4 "lghi" "MOVB $0, R0" "lghi %r0,0" types.go:131
+0x35652 4 "stc" "STC R0, (R1)" "stc %r0,0(%r1)" types.go:131
+0x35656 2 "bcr" "SYNC" "bnor %r0" types.go:131
+0x35658 6 "brasl" "CALL runtime.startCheckmarks(SB)" "brasl %r14,0x351b0" mcheckmark.go:135
+0x3565e 6 "brasl" "CALL runtime.gcResetMarkState(SB)" "brasl %r14,0x3b140" mcheckmark.go:136
+0x35664 4 "lgr" "MOVD g, R0" "lgr %r0,%r13" mcheckmark.go:137
+0x35668 4 "lgr" "MOVD R0, R1" "lgr %r1,%r0" mcheckmark.go:137
+0x3566c 6 "lg" "MOVD 48(R1), R0" "lg %r0,48(%r1)" mcheckmark.go:137
+0x35672 4 "lgr" "MOVD R0, R1" "lgr %r1,%r0" mcheckmark.go:137
+0x35676 6 "lg" "MOVD 208(R1), R0" "lg %r0,208(%r1)" mcheckmark.go:137
+0x3567c 6 "lg" "MOVD 40(R15), R12" "lg %r12,40(%r15)" mcheckmark.go:138
+0x35682 6 "lg" "MOVD (R12), R1" "lg %r1,0(%r12)" mcheckmark.go:138
+0x35688 4 "lgr" "MOVD R0, R2" "lgr %r2,%r0" mcheckmark.go:137
+0x3568c 6 "llgc" "MOVBZ (R2), R10" "llgc %r10,0(%r2)" mcheckmark.go:137
+0x35692 6 "aghik" "ADD $4696, R0, R2" "aghik %r2,%r0,4696" mcheckmark.go:137
+0x35698 6 "stg" "MOVD R2, 24(R15)" "stg %r2,24(%r15)" mcheckmark.go:137
+0x3569e 2 "basr" "BASR R14, R1" "basr %r14,%r1" mcheckmark.go:138
+0x356a0 6 "lg" "MOVD 24(R15), R2" "lg %r2,24(%r15)" mcheckmark.go:139
+0x356a6 4 "lghi" "MOVB $0, R3" "lghi %r3,0" mcheckmark.go:139
+0x356aa 6 "brasl" "CALL runtime.gcDrain(SB)" "brasl %r14,0x3e9f0" mcheckmark.go:139
+0x356b0 4 "lgr" "MOVD g, R0" "lgr %r0,%r13" mcheckmark.go:140
+0x356b4 4 "lgr" "MOVD R0, R1" "lgr %r1,%r0" mcheckmark.go:140
+0x356b8 6 "lg" "MOVD 48(R1), R0" "lg %r0,48(%r1)" mcheckmark.go:140
+0x356be 4 "lgr" "MOVD R0, R1" "lgr %r1,%r0" mcheckmark.go:140
+0x356c2 6 "lg" "MOVD 208(R1), R2" "lg %r2,208(%r1)" mcheckmark.go:140
+0x356c8 6 "brasl" "CALL runtime.wbBufFlush1(SB)" "brasl %r14,0x56820" mcheckmark.go:140
+0x356ce 6 "lg" "MOVD 24(R15), R2" "lg %r2,24(%r15)" mcheckmark.go:141
+0x356d4 6 "brasl" "CALL runtime.(*gcWork).dispose(SB)" "brasl %r14,0x4a6d0" mcheckmark.go:141
+0x356da 6 "brasl" "CALL runtime.endCheckmarks(SB)" "brasl %r14,0x352a0" mcheckmark.go:142
+0x356e0 2 "bcr" "NOPH" "nopr %r0" mcheckmark.go:143
+0x356e2 2 "bcr" "NOPH" "nopr %r0" types.go:179
+0x356e4 6 "larl" "MOVD 188715(PC), R1" "larl %r1,0x149de8" types.go:131
+0x356ea 4 "lghi" "MOVB $1, R0" "lghi %r0,1" types.go:131
+0x356ee 4 "stc" "STC R0, (R1)" "stc %r0,0(%r1)" types.go:131
+0x356f2 2 "bcr" "SYNC" "bnor %r0" types.go:131
+0x356f4 6 "lg" "MOVD (R15), R14" "lg %r14,0(%r15)" mcheckmark.go:144
+0x356fa 4 "aghi" "ADD $32, R15" "aghi %r15,32" mcheckmark.go:144
+0x356fe 2 "bcr" "RET" "br %r14" mcheckmark.go:144
+0x35700 6 "stg" "MOVD R2, 8(R15)" "stg %r2,8(%r15)" mcheckmark.go:126
+0x35706 4 "lgr" "MOVD R14, R5" "lgr %r5,%r14" mcheckmark.go:126
+0x3570a 6 "brasl" "CALL runtime.morestack_noctxt.abi0(SB)" "brasl %r14,0x99560" mcheckmark.go:126
+0x35710 6 "lg" "MOVD 8(R15), R2" "lg %r2,8(%r15)" mcheckmark.go:126
+0x35716 4 "brc" "BR runtime.runCheckmark(SB)" "j 0x35620" mcheckmark.go:126
+0x3571a 2 "" "BYTE 0x0000" ".byte 0x0000" mcheckmark.go:126
+0x3571c 2 "" "BYTE 0x0000" ".byte 0x0000" mcheckmark.go:126
+0x3571e 2 "" "BYTE 0x0000" ".byte 0x0000" mcheckmark.go:126
+== runtime.runPerThreadSyscall 0x587a0 768 /usr/local/go/src/runtime/os_linux.go
+0x587a0 6 "stg" "MOVD R14, -224(R15)" "stg %r14,-224(%r15)" os_linux.go:890
+0x587a6 6 "lay" "MOVD -224(R0)(R15*1), R15" "lay %r15,-224(%r15)" os_linux.go:890
+0x587ac 6 "stg" "MOVD R14, (R15)" "stg %r14,0(%r15)" os_linux.go:890
+0x587b2 4 "lgr" "MOVD g, R0" "lgr %r0,%r13" os_linux.go:891
+0x587b6 4 "lgr" "MOVD R0, R1" "lgr %r1,%r0" os_linux.go:892
+0x587ba 6 "lg" "MOVD 48(R1), R9" "lg %r9,48(%r1)" os_linux.go:892
+0x587c0 6 "llgc" "MOVBZ (R9), R10" "llgc %r10,0(%r9)" os_linux.go:892
+0x587c6 4 "aghi" "ADD $1317, R9" "aghi %r9,1317" types.go:124
+0x587ca 6 "llgc" "MOVBZ (R9), R9" "llgc %r9,0(%r9)" types.go:124
+0x587d0 4 "lgbr" "MOVB R9, R9" "lgbr %r9,%r9" os_linux.go:892
+0x587d4 6 "cij" "CIJ $8, R9, $0, 115(PC)" "cije %r9,0,0x58a88" os_linux.go:892
+0x587da 6 "stg" "MOVD R0, 216(R15)" "stg %r0,216(%r15)" os_linux.go:891
+0x587e0 6 "lgrl" "LGRL R2, runtime.perThreadSyscall(SB)" "lgrl %r2,0x176840" os_linux.go:897
+0x587e6 6 "lgrl" "LGRL R3, 195259(PC)" "lgrl %r3,0x176848" os_linux.go:897
+0x587ec 6 "lgrl" "LGRL R4, 195259(PC)" "lgrl %r4,0x176850" os_linux.go:897
+0x587f2 6 "lgrl" "LGRL R5, 195259(PC)" "lgrl %r5,0x176858" os_linux.go:897
+0x587f8 6 "lgrl" "LGRL R6, 195260(PC)" "lgrl %r6,0x176860" os_linux.go:897
+0x587fe 6 "lgrl" "LGRL R7, 195260(PC)" "lgrl %r7,0x176868" os_linux.go:897
+0x58804 6 "lgrl" "LGRL R8, 195260(PC)" "lgrl %r8,0x176870" os_linux.go:897
+0x5880a 4 "la" "MOVD 88(R0)(R15*1), R1" "la %r1,88(%r15)" os_linux.go:896
+0x5880e 6 "larl" "MOVD runtime.perThreadSyscall(SB), R9" "larl %r9,0x176840" os_linux.go:896
+0x58814 6 "mvc" "MVC $72, (R1), (R9)" "mvc 0(72,%r1),0(%r9)" os_linux.go:896
+0x5881a 6 "brasl" "CALL internal/runtime/syscall/linux.Syscall6(SB)" "brasl %r14,0x1e660" os_linux.go:897
+0x58820 6 "stg" "MOVD R2, 72(R15)" "stg %r2,72(%r15)" os_linux.go:897
+0x58826 6 "stg" "MOVD R3, 64(R15)" "stg %r3,64(%r15)" os_linux.go:897
+0x5882c 6 "stg" "MOVD R4, 80(R15)" "stg %r4,80(%r15)" os_linux.go:897
+0x58832 6 "cgij" "CMPBNE R4, $0, 5(PC)" "cgijne %r4,0,0x58850" os_linux.go:902
+0x58838 6 "lg" "MOVD 144(R15), R0" "lg %r0,144(%r15)" os_linux.go:902
+0x5883e 6 "cgrj" "CMPBNE R2, R0, 3(PC)" "cgrjne %r2,%r0,0x58850" os_linux.go:902
+0x58844 6 "lg" "MOVD 152(R15), R0" "lg %r0,152(%r15)" os_linux.go:902
+0x5884a 6 "cgrj" "CMPBEQ R3, R0, 87(PC)" "cgrje %r3,%r0,0x58a54" os_linux.go:902
+0x58850 6 "lg" "MOVD 88(R15), R0" "lg %r0,88(%r15)" os_linux.go:903
+0x58856 6 "stg" "MOVD R0, 208(R15)" "stg %r0,208(%r15)" os_linux.go:903
+0x5885c 6 "lg" "MOVD 96(R15), R0" "lg %r0,96(%r15)" os_linux.go:903
+0x58862 6 "stg" "MOVD R0, 200(R15)" "stg %r0,200(%r15)" os_linux.go:903
+0x58868 6 "lg" "MOVD 104(R15), R0" "lg %r0,104(%r15)" os_linux.go:903
+0x5886e 6 "stg" "MOVD R0, 192(R15)" "stg %r0,192(%r15)" os_linux.go:903
+0x58874 6 "lg" "MOVD 112(R15), R0" "lg %r0,112(%r15)" os_linux.go:903
+0x5887a 6 "stg" "MOVD R0, 184(R15)" "stg %r0,184(%r15)" os_linux.go:903
+0x58880 6 "lg" "MOVD 120(R15), R0" "lg %r0,120(%r15)" os_linux.go:903
+0x58886 6 "stg" "MOVD R0, 176(R15)" "stg %r0,176(%r15)" os_linux.go:903
+0x5888c 6 "lg" "MOVD 128(R15), R0" "lg %r0,128(%r15)" os_linux.go:903
+0x58892 6 "stg" "MOVD R0, 168(R15)" "stg %r0,168(%r15)" os_linux.go:903
+0x58898 6 "lg" "MOVD 136(R15), R0" "lg %r0,136(%r15)" os_linux.go:903
+0x5889e 6 "stg" "MOVD R0, 160(R15)" "stg %r0,160(%r15)" os_linux.go:903
+0x588a4 6 "brasl" "CALL runtime.printlock(SB)" "brasl %r14,0x5c130" os_linux.go:903
+0x588aa 6 "larl" "MOVD 48885(PC), R2" "larl %r2,0xa026a" os_linux.go:903
+0x588b0 4 "lghi" "MOVB $5, R3" "lghi %r3,5" os_linux.go:903
+0x588b4 6 "brasl" "CALL runtime.printstring(SB)" "brasl %r14,0x5ce50" os_linux.go:903
+0x588ba 6 "lg" "MOVD 208(R15), R2" "lg %r2,208(%r15)" os_linux.go:903
+0x588c0 6 "brasl" "CALL runtime.printuint(SB)" "brasl %r14,0x5c6b0" os_linux.go:903
+0x588c6 6 "larl" "MOVD 49380(PC), R2" "larl %r2,0xa0e20" os_linux.go:903
+0x588cc 4 "lghi" "MOVB $11, R3" "lghi %r3,11" os_linux.go:903
+0x588d0 6 "brasl" "CALL runtime.printstring(SB)" "brasl %r14,0x5ce50" os_linux.go:903
+0x588d6 6 "lg" "MOVD 200(R15), R2" "lg %r2,200(%r15)" os_linux.go:903
+0x588dc 6 "brasl" "CALL runtime.printuint(SB)" "brasl %r14,0x5c6b0" os_linux.go:903
+0x588e2 6 "larl" "MOVD 48776(PC), R2" "larl %r2,0xa0016" os_linux.go:903
+0x588e8 4 "lghi" "MOVB $1, R3" "lghi %r3,1" os_linux.go:903
+0x588ec 6 "brasl" "CALL runtime.printstring(SB)" "brasl %r14,0x5ce50" os_linux.go:903
+0x588f2 6 "lg" "MOVD 192(R15), R2" "lg %r2,192(%r15)" os_linux.go:903
+0x588f8 6 "brasl" "CALL runtime.printuint(SB)" "brasl %r14,0x5c6b0" os_linux.go:903
+0x588fe 6 "larl" "MOVD 48772(PC), R2" "larl %r2,0xa0016" os_linux.go:903
+0x58904 4 "lghi" "MOVB $1, R3" "lghi %r3,1" os_linux.go:903
+0x58908 6 "brasl" "CALL runtime.printstring(SB)" "brasl %r14,0x5ce50" os_linux.go:903
+0x5890e 6 "lg" "MOVD 184(R15), R2" "lg %r2,184(%r15)" os_linux.go:903
+0x58914 6 "brasl" "CALL runtime.printuint(SB)" "brasl %r14,0x5c6b0" os_linux.go:903
+0x5891a 6 "larl" "MOVD 48767(PC), R2" "larl %r2,0xa0016" os_linux.go:903
+0x58920 4 "lghi" "MOVB $1, R3" "lghi %r3,1" os_linux.go:903
+0x58924 6 "brasl" "CALL runtime.printstring(SB)" "brasl %r14,0x5ce50" os_linux.go:903
+0x5892a 6 "lg" "MOVD 176(R15), R2" "lg %r2,176(%r15)" os_linux.go:903
+0x58930 6 "brasl" "CALL runtime.printuint(SB)" "brasl %r14,0x5c6b0" os_linux.go:903
+0x58936 6 "larl" "MOVD 48762(PC), R2" "larl %r2,0xa0016" os_linux.go:903
+0x5893c 4 "lghi" "MOVB $1, R3" "lghi %r3,1" os_linux.go:903
+0x58940 6 "brasl" "CALL runtime.printstring(SB)" "brasl %r14,0x5ce50" os_linux.go:903
+0x58946 6 "lg" "MOVD 168(R15), R2" "lg %r2,168(%r15)" os_linux.go:903
+0x5894c 6 "brasl" "CALL runtime.printuint(SB)" "brasl %r14,0x5c6b0" os_linux.go:903
+0x58952 6 "larl" "MOVD 48758(PC), R2" "larl %r2,0xa0016" os_linux.go:903
+0x58958 4 "lghi" "MOVB $1, R3" "lghi %r3,1" os_linux.go:903
+0x5895c 6 "brasl" "CALL runtime.printstring(SB)" "brasl %r14,0x5ce50" os_linux.go:903
+0x58962 6 "lg" "MOVD 160(R15), R2" "lg %r2,160(%r15)" os_linux.go:903
+0x58968 6 "brasl" "CALL runtime.printuint(SB)" "brasl %r14,0x5c6b0" os_linux.go:903
+0x5896e 6 "larl" "MOVD 48762(PC), R2" "larl %r2,0xa004e" os_linux.go:903
+0x58974 4 "lghi" "MOVB $2, R3" "lghi %r3,2" os_linux.go:903
+0x58978 6 "brasl" "CALL runtime.printstring(SB)" "brasl %r14,0x5ce50" os_linux.go:903
+0x5897e 6 "brasl" "CALL runtime.printunlock(SB)" "brasl %r14,0x5c1d0" os_linux.go:903
+0x58984 6 "lg" "MOVD 144(R15), R0" "lg %r0,144(%r15)" os_linux.go:904
+0x5898a 6 "stg" "MOVD R0, 208(R15)" "stg %r0,208(%r15)" os_linux.go:904
+0x58990 6 "lg" "MOVD 152(R15), R0" "lg %r0,152(%r15)" os_linux.go:904
+0x58996 6 "stg" "MOVD R0, 200(R15)" "stg %r0,200(%r15)" os_linux.go:904
+0x5899c 6 "brasl" "CALL runtime.printlock(SB)" "brasl %r14,0x5c130" os_linux.go:904
+0x589a2 6 "larl" "MOVD 50050(PC), R2" "larl %r2,0xa1eb0" os_linux.go:904
+0x589a8 4 "lghi" "MOVB $17, R3" "lghi %r3,17" os_linux.go:904
+0x589ac 6 "brasl" "CALL runtime.printstring(SB)" "brasl %r14,0x5ce50" os_linux.go:904
+0x589b2 6 "lg" "MOVD 72(R15), R2" "lg %r2,72(%r15)" os_linux.go:904
+0x589b8 6 "brasl" "CALL runtime.printuint(SB)" "brasl %r14,0x5c6b0" os_linux.go:904
+0x589be 6 "larl" "MOVD 48793(PC), R2" "larl %r2,0xa0156" os_linux.go:904
+0x589c4 4 "lghi" "MOVB $4, R3" "lghi %r3,4" os_linux.go:904
+0x589c8 6 "brasl" "CALL runtime.printstring(SB)" "brasl %r14,0x5ce50" os_linux.go:904
+0x589ce 6 "lg" "MOVD 64(R15), R2" "lg %r2,64(%r15)" os_linux.go:904
+0x589d4 6 "brasl" "CALL runtime.printuint(SB)" "brasl %r14,0x5c6b0" os_linux.go:904
+0x589da 6 "larl" "MOVD 48949(PC), R2" "larl %r2,0xa051a" os_linux.go:904
+0x589e0 4 "lghi" "MOVB $7, R3" "lghi %r3,7" os_linux.go:904
+0x589e4 6 "brasl" "CALL runtime.printstring(SB)" "brasl %r14,0x5ce50" os_linux.go:904
+0x589ea 6 "lg" "MOVD 80(R15), R2" "lg %r2,80(%r15)" os_linux.go:904
+0x589f0 6 "brasl" "CALL runtime.printuint(SB)" "brasl %r14,0x5c6b0" os_linux.go:904
+0x589f6 6 "larl" "MOVD 49455(PC), R2" "larl %r2,0xa1114" os_linux.go:904
+0x589fc 4 "lghi" "MOVB $12, R3" "lghi %r3,12" os_linux.go:904
+0x58a00 6 "brasl" "CALL runtime.printstring(SB)" "brasl %r14,0x5ce50" os_linux.go:904
+0x58a06 6 "lg" "MOVD 208(R15), R2" "lg %r2,208(%r15)" os_linux.go:904
+0x58a0c 6 "brasl" "CALL runtime.printuint(SB)" "brasl %r14,0x5c6b0" os_linux.go:904
+0x58a12 6 "larl" "MOVD 48779(PC), R2" "larl %r2,0xa0156" os_linux.go:904
+0x58a18 4 "lghi" "MOVB $4, R3" "lghi %r3,4" os_linux.go:904
+0x58a1c 6 "brasl" "CALL runtime.printstring(SB)" "brasl %r14,0x5ce50" os_linux.go:904
+0x58a22 6 "lg" "MOVD 200(R15), R2" "lg %r2,200(%r15)" os_linux.go:904
+0x58a28 6 "brasl" "CALL runtime.printuint(SB)" "brasl %r14,0x5c6b0" os_linux.go:904
+0x58a2e 6 "larl" "MOVD 49228(PC), R2" "larl %r2,0xa0bf6" os_linux.go:904
+0x58a34 4 "lghi" "MOVB $10, R3" "lghi %r3,10" os_linux.go:904
+0x58a38 6 "brasl" "CALL runtime.printstring(SB)" "brasl %r14,0x5ce50" os_linux.go:904
+0x58a3e 6 "brasl" "CALL runtime.printunlock(SB)" "brasl %r14,0x5c1d0" os_linux.go:904
+0x58a44 6 "larl" "MOVD 53773(PC), R2" "larl %r2,0xa7696" os_linux.go:905
+0x58a4a 4 "lghi" "MOVB $68, R3" "lghi %r3,68" os_linux.go:905
+0x58a4e 6 "brasl" "CALL runtime.fatal(SB)" "brasl %r14,0x5a1b0" os_linux.go:905
+0x58a54 6 "lg" "MOVD 216(R15), R1" "lg %r1,216(%r15)" os_linux.go:908
+0x58a5a 6 "lg" "MOVD 48(R1), R0" "lg %r0,48(%r1)" os_linux.go:908
+0x58a60 4 "lgr" "MOVD R0, R1" "lgr %r1,%r0" os_linux.go:908
+0x58a64 6 "llgc" "MOVBZ (R1), R10" "llgc %r10,0(%r1)" os_linux.go:908
+0x58a6a 4 "aghi" "ADD $1317, R0" "aghi %r0,1317" types.go:131
+0x58a6e 4 "lgr" "MOVD R0, R1" "lgr %r1,%r0" types.go:131
+0x58a72 4 "lghi" "MOVB $0, R2" "lghi %r2,0" types.go:131
+0x58a76 4 "stc" "STC R2, (R1)" "stc %r2,0(%r1)" types.go:131
+0x58a7a 2 "bcr" "SYNC" "bnor %r0" types.go:131
+0x58a7c 6 "lg" "MOVD (R15), R14" "lg %r14,0(%r15)" os_linux.go:909
+0x58a82 4 "aghi" "ADD $224, R15" "aghi %r15,224" os_linux.go:909
+0x58a86 2 "bcr" "RET" "br %r14" os_linux.go:909
+0x58a88 6 "lg" "MOVD (R15), R14" "lg %r14,0(%r15)" os_linux.go:893
+0x58a8e 4 "aghi" "ADD $224, R15" "aghi %r15,224" os_linux.go:893
+0x58a92 2 "bcr" "RET" "br %r14" os_linux.go:893
+0x58a94 2 "" "BYTE 0x0000" ".byte 0x0000" os_linux.go:893
+0x58a96 2 "" "BYTE 0x0000" ".byte 0x0000" os_linux.go:893
+0x58a98 2 "" "BYTE 0x0000" ".byte 0x0000" os_linux.go:893
+0x58a9a 2 "" "BYTE 0x0000" ".byte 0x0000" os_linux.go:893
+0x58a9c 2 "" "BYTE 0x0000" ".byte 0x0000" os_linux.go:893
+0x58a9e 2 "" "BYTE 0x0000" ".byte 0x0000" os_linux.go:893
+== runtime.runSafePointFn 0x617e0 224 /usr/local/go/src/runtime/proc.go
+0x617e0 6 "lg" "MOVD 16(R13), R10" "lg %r10,16(%r13)" proc.go:2250
+0x617e6 6 "clgrj" "CMPUBGE R10, R15, 32(PC)" "clgrjnl %r10,%r15,0x618a8" proc.go:2250
+0x617ec 6 "stg" "MOVD R14, -16(R15)" "stg %r14,-16(%r15)" proc.go:2250
+0x617f2 6 "lay" "MOVD -16(R0)(R15*1), R15" "lay %r15,-16(%r15)" proc.go:2250
+0x617f8 6 "stg" "MOVD R14, (R15)" "stg %r14,0(%r15)" proc.go:2250
+0x617fe 4 "lgr" "MOVD g, R1" "lgr %r1,%r13" proc.go:2251
+0x61802 6 "lg" "MOVD 48(R1), R1" "lg %r1,48(%r1)" proc.go:2251
+0x61808 6 "lg" "MOVD 208(R1), R2" "lg %r2,208(%r1)" proc.go:2251
+0x6180e 6 "llgc" "MOVBZ (R2), R10" "llgc %r10,0(%r2)" proc.go:2255
+0x61814 6 "aghik" "ADD $13664, R2, R1" "aghik %r1,%r2,13664" proc.go:2255
+0x6181a 4 "lghi" "MOVB $1, R0" "lghi %r0,1" proc.go:2255
+0x6181e 4 "lghi" "MOVB $0, R3" "lghi %r3,0" proc.go:2255
+0x61822 4 "cs" "CS R0, R3, (R1)" "cs %r0,%r3,0(%r1)" proc.go:2255
+0x61826 4 "lghi" "MOVB $0, R1" "lghi %r1,0" proc.go:2255
+0x6182a 4 "brc" "BNE 2(PC)" "jne 0x61832" proc.go:2255
+0x6182e 4 "lghi" "MOVB $1, R1" "lghi %r1,1" proc.go:2255
+0x61832 4 "llgcr" "MOVBZ R1, R1" "llgcr %r1,%r1" proc.go:2255
+0x61836 6 "clij" "CLIJ $8, R1, $0, 17(PC)" "clije %r1,0,0x6189c" proc.go:2255
+0x6183c 6 "lgrl" "LGRL R12, 158626(PC)" "lgrl %r12,0x149e08" proc.go:2258
+0x61842 6 "lg" "MOVD (R12), R0" "lg %r0,0(%r12)" proc.go:2258
+0x61848 4 "lgr" "MOVD R0, R1" "lgr %r1,%r0" proc.go:2258
+0x6184c 2 "basr" "BASR R14, R1" "basr %r14,%r1" proc.go:2258
+0x6184e 2 "bcr" "NOPH" "nopr %r0" proc.go:2259
+0x61850 2 "bcr" "NOPH" "nopr %r0" lock_spinbit.go:161
+0x61852 6 "larl" "MOVD 158578(PC), R2" "larl %r2,0x149d00" lockrank_off.go:24
+0x61858 6 "brasl" "CALL runtime.lock2(SB)" "brasl %r14,0x29c50" lockrank_off.go:24
+0x6185e 6 "lgfrl" "LGFRL R0, 158621(PC)" "lgfrl %r0,0x149e10" proc.go:2260
+0x61864 4 "ahi" "ADDW $-1, R0" "ahi %r0,-1" proc.go:2260
+0x61868 6 "strl" "STRL R0, 158620(PC)" "strl %r0,0x149e10" proc.go:2260
+0x6186e 6 "cij" "CIJ $6, R0, $0, 3(PC)" "cijne %r0,0,0x61880" proc.go:2261
+0x61874 6 "larl" "MOVD 158619(PC), R2" "larl %r2,0x149e18" proc.go:2262
+0x6187a 6 "brasl" "CALL runtime.notewakeup(SB)" "brasl %r14,0x29530" proc.go:2262
+0x61880 2 "bcr" "NOPH" "nopr %r0" proc.go:2264
+0x61882 2 "bcr" "NOPH" "nopr %r0" lock_spinbit.go:270
+0x61884 6 "larl" "MOVD 158570(PC), R2" "larl %r2,0x149d00" lockrank_off.go:36
+0x6188a 6 "brasl" "CALL runtime.unlock2(SB)" "brasl %r14,0x2a2e0" lockrank_off.go:36
+0x61890 6 "lg" "MOVD (R15), R14" "lg %r14,0(%r15)" proc.go:2265
+0x61896 4 "aghi" "ADD $16, R15" "aghi %r15,16" proc.go:2265
+0x6189a 2 "bcr" "RET" "br %r14" proc.go:2265
+0x6189c 6 "lg" "MOVD (R15), R14" "lg %r14,0(%r15)" proc.go:2256
+0x618a2 4 "aghi" "ADD $16, R15" "aghi %r15,16" proc.go:2256
+0x618a6 2 "bcr" "RET" "br %r14" proc.go:2256
+0x618a8 4 "lgr" "MOVD R14, R5" "lgr %r5,%r14" proc.go:2250
+0x618ac 6 "brasl" "CALL runtime.morestack_noctxt.abi0(SB)" "brasl %r14,0x99560" proc.go:2250
+0x618b2 4 "brc" "BR runtime.runSafePointFn(SB)" "j 0x617e0" proc.go:2250
+0x618b6 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:2250
+0x618b8 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:2250
+0x618ba 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:2250
+0x618bc 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:2250
+0x618be 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:2250
+== runtime.runqput 0x6db80 336 /usr/local/go/src/runtime/proc.go
+0x6db80 6 "lg" "MOVD 16(R13), R10" "lg %r10,16(%r13)" proc.go:7529
+0x6db86 6 "clgrj" "CMPUBGE R10, R15, 45(PC)" "clgrjnl %r10,%r15,0x6dc94" proc.go:7529
+0x6db8c 6 "stg" "MOVD R14, -48(R15)" "stg %r14,-48(%r15)" proc.go:7529
+0x6db92 6 "lay" "MOVD -48(R0)(R15*1), R15" "lay %r15,-48(%r15)" proc.go:7529
+0x6db98 6 "stg" "MOVD R14, (R15)" "stg %r14,0(%r15)" proc.go:7529
+0x6db9e 4 "llgcr" "MOVBZ R4, R1" "llgcr %r1,%r4" proc.go:7545
+0x6dba2 6 "clij" "CLIJ $6, R1, $0, 26(PC)" "clijne %r1,0,0x6dc42" proc.go:7545
+0x6dba8 6 "stg" "MOVD R2, 56(R15)" "stg %r2,56(%r15)" proc.go:7545
+0x6dbae 6 "stg" "MOVD R3, 40(R15)" "stg %r3,40(%r15)" proc.go:7558
+0x6dbb4 4 "brc" "BR 4(PC)" "j 0x6dbc4" proc.go:7559
+0x6dbb8 6 "lg" "MOVD 56(R15), R2" "lg %r2,56(%r15)" proc.go:7559
+0x6dbbe 6 "lg" "MOVD 40(R15), R3" "lg %r3,40(%r15)" proc.go:7566
+0x6dbc4 6 "llgc" "MOVBZ (R2), R10" "llgc %r10,0(%r2)" proc.go:7559
+0x6dbca 6 "aghik" "ADD $400, R2, R0" "aghik %r0,%r2,400" proc.go:7559
+0x6dbd0 4 "lgr" "MOVD R0, R1" "lgr %r1,%r0" proc.go:7559
+0x6dbd4 6 "llgf" "MOVWZ (R1), R4" "llgf %r4,0(%r1)" proc.go:7559
+0x6dbda 6 "llgf" "MOVWZ 404(R2), R5" "llgf %r5,404(%r2)" proc.go:7560
+0x6dbe0 4 "srk" "SUBW R4, R5, R0" "srk %r0,%r5,%r4" proc.go:7561
+0x6dbe4 6 "clij" "CLIJ $12, R0, $255, 5(PC)" "clijnh %r0,255,0x6dc06" proc.go:7561
+0x6dbea 6 "brasl" "CALL runtime.runqputslow(SB)" "brasl %r14,0x6dcd0" proc.go:7566
+0x6dbf0 4 "llgcr" "MOVBZ R2, R0" "llgcr %r0,%r2" proc.go:7566
+0x6dbf4 6 "clij" "CLIJ $8, R0, $0, -10(PC)" "clije %r0,0,0x6dbb8" proc.go:7566
+0x6dbfa 6 "lg" "MOVD (R15), R14" "lg %r14,0(%r15)" proc.go:7567
+0x6dc00 4 "aghi" "ADD $48, R15" "aghi %r15,48" proc.go:7567
+0x6dc04 2 "bcr" "RET" "br %r14" proc.go:7567
+0x6dc06 6 "aghik" "ADD $404, R2, R0" "aghik %r0,%r2,404" proc.go:7560
+0x6dc0c 6 "aghik" "ADD $408, R2, R1" "aghik %r1,%r2,408" proc.go:7562
+0x6dc12 4 "llgcr" "MOVBZ R5, R2" "llgcr %r2,%r5" proc.go:7562
+0x6dc16 6 "sllg" "SLD 3(R0), R2, R2" "sllg %r2,%r2,3" proc.go:7562
+0x6dc1c 6 "ahik" "ADDW $1, R5, R4" "ahik %r4,%r5,1" proc.go:7563
+0x6dc22 6 "stg" "MOVD R3, (R1)(R2*1)" "stg %r3,0(%r2,%r1)" runtime2.go:248
+0x6dc28 4 "lgr" "MOVD R0, R1" "lgr %r1,%r0" proc.go:7563
+0x6dc2c 4 "st" "MOVW R4, (R1)" "st %r4,0(%r1)" proc.go:7563
+0x6dc30 2 "bcr" "SYNC" "bnor %r0" proc.go:7563
+0x6dc32 6 "lg" "MOVD (R15), R14" "lg %r14,0(%r15)" proc.go:7564
+0x6dc38 4 "aghi" "ADD $48, R15" "aghi %r15,48" proc.go:7564
+0x6dc3c 2 "bcr" "RET" "br %r14" proc.go:7564
+0x6dc3e 4 "lgr" "MOVD R6, R3" "lgr %r3,%r6" proc.go:7548
+0x6dc42 6 "lg" "MOVD 2456(R2), R0" "lg %r0,2456(%r2)" proc.go:7547
+0x6dc48 6 "stg" "MOVD R0, 32(R15)" "stg %r0,32(%r15)" proc.go:7547
+0x6dc4e 6 "aghik" "ADD $2456, R2, R1" "aghik %r1,%r2,2456" proc.go:7547
+0x6dc54 4 "lgr" "MOVD R3, R6" "lgr %r6,%r3" proc.go:7548
+0x6dc58 6 "csg" "CSG R0, R3, (R1)" "csg %r0,%r3,0(%r1)" runtime2.go:252
+0x6dc5e 4 "lghi" "MOVB $0, R1" "lghi %r1,0" runtime2.go:252
+0x6dc62 4 "brc" "BNE 2(PC)" "jne 0x6dc6a" runtime2.go:252
+0x6dc66 4 "lghi" "MOVB $1, R1" "lghi %r1,1" runtime2.go:252
+0x6dc6a 4 "llgcr" "MOVBZ R1, R1" "llgcr %r1,%r1" runtime2.go:252
+0x6dc6e 6 "clij" "CLIJ $8, R1, $0, -8(PC)" "clije %r1,0,0x6dc3e" proc.go:7548
+0x6dc74 6 "lg" "MOVD 32(R15), R0" "lg %r0,32(%r15)" proc.go:7551
+0x6dc7a 6 "cgij" "CMPBEQ R0, $0, 2(PC)" "cgije %r0,0,0x6dc88" proc.go:7551
+0x6dc80 4 "lgr" "MOVD R0, R3" "lgr %r3,%r0" proc.go:7558
+0x6dc84 4 "brc" "BR -55(PC)" "j 0x6dba8" proc.go:7555
+0x6dc88 6 "lg" "MOVD (R15), R14" "lg %r14,0(%r15)" proc.go:7552
+0x6dc8e 4 "aghi" "ADD $48, R15" "aghi %r15,48" proc.go:7552
+0x6dc92 2 "bcr" "RET" "br %r14" proc.go:7552
+0x6dc94 6 "stg" "MOVD R2, 8(R15)" "stg %r2,8(%r15)" proc.go:7529
+0x6dc9a 6 "stg" "MOVD R3, 16(R15)" "stg %r3,16(%r15)" proc.go:7529
+0x6dca0 4 "stc" "STC R4, 24(R15)" "stc %r4,24(%r15)" proc.go:7529
+0x6dca4 4 "lgr" "MOVD R14, R5" "lgr %r5,%r14" proc.go:7529
+0x6dca8 6 "brasl" "CALL runtime.morestack_noctxt.abi0(SB)" "brasl %r14,0x99560" proc.go:7529
+0x6dcae 6 "lg" "MOVD 8(R15), R2" "lg %r2,8(%r15)" proc.go:7529
+0x6dcb4 6 "lg" "MOVD 16(R15), R3" "lg %r3,16(%r15)" proc.go:7529
+0x6dcba 6 "llgc" "MOVBZ 24(R15), R4" "llgc %r4,24(%r15)" proc.go:7529
+0x6dcc0 4 "brc" "BR runtime.runqput(SB)" "j 0x6db80" proc.go:7529
+0x6dcc4 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:7529
+0x6dcc6 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:7529
+0x6dcc8 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:7529
+0x6dcca 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:7529
+0x6dccc 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:7529
+0x6dcce 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:7529
+== runtime.runqputslow 0x6dcd0 528 /usr/local/go/src/runtime/proc.go
+0x6dcd0 6 "lg" "MOVD 16(R13), R10" "lg %r10,16(%r13)" proc.go:7575
+0x6dcd6 6 "aghik" "SUB $952, R15, R11" "aghik %r11,%r15,-952" proc.go:7575
+0x6dcdc 6 "clgrj" "CMPUBGE R10, R11, 76(PC)" "clgrjnl %r10,%r11,0x6dea4" proc.go:7575
+0x6dce2 6 "stg" "MOVD R14, -1080(R15)" "stg %r14,-1080(%r15)" proc.go:7575
+0x6dce8 6 "lay" "MOVD -1080(R0)(R15*1), R15" "lay %r15,-1080(%r15)" proc.go:7575
+0x6dcee 6 "stg" "MOVD R14, (R15)" "stg %r14,0(%r15)" proc.go:7575
+0x6dcf4 4 "la" "MOVD 48(R0)(R15*1), R1" "la %r1,48(%r15)" proc.go:7576
+0x6dcf8 4 "la" "MOVD 1072(R0)(R15*1), R6" "la %r6,1072(%r15)" proc.go:7576
+0x6dcfc 6 "xc" "XC $256, (R1), (R1)" "xc 0(256,%r1),0(%r1)" proc.go:7576
+0x6dd02 4 "la" "MOVD 256(R0)(R1*1), R1" "la %r1,256(%r1)" proc.go:7576
+0x6dd06 4 "clgr" "CMPU R1, R6" "clgr %r1,%r6" proc.go:7576
+0x6dd0a 4 "brc" "BLT -3(PC)" "jl 0x6dcfc" proc.go:7576
+0x6dd0e 6 "mvghi" "MVGHI (R1), $0" "mvghi 0(%r1),0" proc.go:7576
+0x6dd14 2 "sr" "SUBW R4, R5" "sr %r5,%r4" proc.go:7579
+0x6dd16 6 "srlk" "SRW 1(R0), R5, R5" "srlk %r5,%r5,1" proc.go:7580
+0x6dd1c 6 "clij" "CLIJ $6, R5, $128, 62(PC)" "clijne %r5,128,0x6de92" proc.go:7581
+0x6dd22 4 "lghi" "MOVB $0, R5" "lghi %r5,0" proc.go:7581
+0x6dd26 4 "brc" "BR 14(PC)" "j 0x6dd5e" proc.go:7581
+0x6dd2a 6 "llgc" "MOVBZ (R2), R10" "llgc %r10,0(%r2)" proc.go:7585
+0x6dd30 4 "llgfr" "MOVWZ R5, R6" "llgfr %r6,%r5" proc.go:7585
+0x6dd34 6 "sllg" "SLD 3(R0), R6, R6" "sllg %r6,%r6,3" proc.go:7585
+0x6dd3a 6 "aghik" "ADD $408, R2, R7" "aghik %r7,%r2,408" proc.go:7585
+0x6dd40 4 "ark" "ADDW R4, R5, R8" "ark %r8,%r5,%r4" proc.go:7585
+0x6dd44 4 "llgcr" "MOVBZ R8, R8" "llgcr %r8,%r8" proc.go:7585
+0x6dd48 6 "sllg" "SLD 3(R0), R8, R8" "sllg %r8,%r8,3" proc.go:7585
+0x6dd4e 6 "lg" "MOVD (R7)(R8*1), R7" "lg %r7,0(%r8,%r7)" proc.go:7585
+0x6dd54 6 "stg" "MOVD R7, 48(R15)(R6*1)" "stg %r7,48(%r6,%r15)" proc.go:7585
+0x6dd5a 4 "ahi" "ADDW $1, R5" "ahi %r5,1" proc.go:7584
+0x6dd5e 6 "clij" "CLIJ $4, R5, $128, -8(PC)" "clijl %r5,128,0x6dd2a" proc.go:7584
+0x6dd64 6 "llgc" "MOVBZ (R2), R10" "llgc %r10,0(%r2)" proc.go:7587
+0x6dd6a 6 "aghik" "ADD $400, R2, R5" "aghik %r5,%r2,400" proc.go:7587
+0x6dd70 6 "ahik" "ADDW $128, R4, R6" "ahik %r6,%r4,128" proc.go:7587
+0x6dd76 4 "llgfr" "MOVWZ R4, R0" "llgfr %r0,%r4" proc.go:7587
+0x6dd7a 4 "cs" "CS R0, R6, (R5)" "cs %r0,%r6,0(%r5)" proc.go:7587
+0x6dd7e 4 "lghi" "MOVB $0, R4" "lghi %r4,0" proc.go:7587
+0x6dd82 4 "brc" "BNE 2(PC)" "jne 0x6dd8a" proc.go:7587
+0x6dd86 4 "lghi" "MOVB $1, R4" "lghi %r4,1" proc.go:7587
+0x6dd8a 4 "llgcr" "MOVBZ R4, R4" "llgcr %r4,%r4" proc.go:7587
+0x6dd8e 6 "clij" "CLIJ $8, R4, $0, 3(PC)" "clije %r4,0,0x6dda2" proc.go:7587
+0x6dd94 6 "stg" "MOVD R3, 1072(R15)" "stg %r3,1072(%r15)" proc.go:7590
+0x6dd9a 4 "lghi" "MOVB $0, R0" "lghi %r0,0" proc.go:7600
+0x6dd9e 4 "brc" "BR 15(PC)" "j 0x6dddc" proc.go:7600
+0x6dda2 4 "lghi" "MOVB $0, R2" "lghi %r2,0" proc.go:7588
+0x6dda6 6 "lg" "MOVD (R15), R14" "lg %r14,0(%r15)" proc.go:7588
+0x6ddac 4 "aghi" "ADD $1080, R15" "aghi %r15,1080" proc.go:7588
+0x6ddb0 2 "bcr" "RET" "br %r14" proc.go:7588
+0x6ddb2 4 "llgfr" "MOVWZ R0, R3" "llgfr %r3,%r0" proc.go:7601
+0x6ddb6 6 "sllg" "SLD 3(R0), R3, R3" "sllg %r3,%r3,3" proc.go:7601
+0x6ddbc 6 "lg" "MOVD 48(R15)(R3*1), R3" "lg %r3,48(%r3,%r15)" proc.go:7601
+0x6ddc2 4 "ahi" "ADDW $1, R0" "ahi %r0,1" proc.go:7601
+0x6ddc6 4 "llgfr" "MOVWZ R0, R4" "llgfr %r4,%r0" proc.go:7601
+0x6ddca 6 "sllg" "SLD 3(R0), R4, R4" "sllg %r4,%r4,3" proc.go:7601
+0x6ddd0 6 "lg" "MOVD 48(R15)(R4*1), R4" "lg %r4,48(%r4,%r15)" proc.go:7601
+0x6ddd6 6 "stg" "MOVD R4, 160(R3)" "stg %r4,160(%r3)" proc.go:7601
+0x6dddc 6 "clij" "CLIJ $4, R0, $128, -7(PC)" "clijl %r0,128,0x6ddb2" proc.go:7600
+0x6dde2 6 "lg" "MOVD 48(R15), R1" "lg %r1,48(%r15)" proc.go:7604
+0x6dde8 6 "lg" "MOVD 1072(R15), R2" "lg %r2,1072(%r15)" proc.go:7604
+0x6ddee 6 "stmg" "STMG R1, R2, 24(R15)" "stmg %r1,%r2,24(%r15)" proc.go:7604
+0x6ddf4 6 "mvhi" "MVHI 40(R15), $129" "mvhi 40(%r15),129" proc.go:7604
+0x6ddfa 2 "bcr" "NOPH" "nopr %r0" proc.go:7607
+0x6ddfc 2 "bcr" "NOPH" "nopr %r0" lock_spinbit.go:161
+0x6ddfe 6 "larl" "MOVD 150144(PC), R2" "larl %r2,0x149d00" lockrank_off.go:24
+0x6de04 6 "brasl" "CALL runtime.lock2(SB)" "brasl %r14,0x29c50" lockrank_off.go:24
+0x6de0a 2 "bcr" "NOPH" "nopr %r0" proc.go:7608
+0x6de0c 6 "lgf" "MOVW 40(R15), R0" "lgf %r0,40(%r15)" proc.go:7326
+0x6de12 6 "lg" "MOVD 32(R15), R3" "lg %r3,32(%r15)" proc.go:7326
+0x6de18 6 "cgij" "CMPBEQ R3, $0, 12(PC)" "cgije %r3,0,0x6de60" proc.go:7838
+0x6de1e 4 "lgr" "MOVD R3, R1" "lgr %r1,%r3" runtime2.go:245
+0x6de22 6 "lg" "MOVD 24(R15), R4" "lg %r4,24(%r15)" proc.go:7326
+0x6de28 6 "mvghi" "MVGHI 160(R3), $0" "mvghi 160(%r3),0" proc.go:7841
+0x6de2e 6 "lgrl" "LGRL R3, 150153(PC)" "lgrl %r3,0x149d68" proc.go:7842
+0x6de34 6 "cgij" "CMPBEQ R3, $0, 2(PC)" "cgije %r3,0,0x6de44" proc.go:7842
+0x6de3a 6 "stg" "MOVD R4, 160(R3)" "stg %r4,160(%r3)" proc.go:7843
+0x6de40 4 "brc" "BR 2(PC)" "j 0x6de4a" proc.go:7843
+0x6de44 6 "stgrl" "STGRL R4, 150148(PC)" "stgrl %r4,0x149d60" proc.go:7845
+0x6de4a 6 "stgrl" "STGRL R1, 150149(PC)" "stgrl %r1,0x149d68" proc.go:7847
+0x6de50 6 "lgfrl" "LGFRL R1, 150149(PC)" "lgfrl %r1,0x149d70" proc.go:7848
+0x6de56 4 "ark" "ADDW R0, R1, R0" "ark %r0,%r1,%r0" proc.go:7848
+0x6de5a 6 "strl" "STRL R0, 150147(PC)" "strl %r0,0x149d70" proc.go:7848
+0x6de60 6 "mvghi" "MVGHI 24(R15), $0" "mvghi 24(%r15),0" proc.go:7327
+0x6de66 6 "mvghi" "MVGHI 32(R15), $0" "mvghi 32(%r15),0" proc.go:7327
+0x6de6c 6 "mvhi" "MVHI 40(R15), $0" "mvhi 40(%r15),0" proc.go:7327
+0x6de72 2 "bcr" "NOPH" "nopr %r0" proc.go:7609
+0x6de74 2 "bcr" "NOPH" "nopr %r0" lock_spinbit.go:270
+0x6de76 6 "larl" "MOVD 150124(PC), R2" "larl %r2,0x149d00" lockrank_off.go:36
+0x6de7c 6 "brasl" "CALL runtime.unlock2(SB)" "brasl %r14,0x2a2e0" lockrank_off.go:36
+0x6de82 4 "lghi" "MOVB $1, R2" "lghi %r2,1" proc.go:7610
+0x6de86 6 "lg" "MOVD (R15), R14" "lg %r14,0(%r15)" proc.go:7610
+0x6de8c 4 "aghi" "ADD $1080, R15" "aghi %r15,1080" proc.go:7610
+0x6de90 2 "bcr" "RET" "br %r14" proc.go:7610
+0x6de92 6 "larl" "MOVD 37005(PC), R2" "larl %r2,0xa41e4" proc.go:7582
+0x6de98 4 "lghi" "MOVB $30, R3" "lghi %r3,30" proc.go:7582
+0x6de9c 6 "brasl" "CALL runtime.throw(SB)" "brasl %r14,0x95ed0" proc.go:7582
+0x6dea2 2 "bcr" "NOPH" "nopr %r0" proc.go:7582
+0x6dea4 6 "stg" "MOVD R2, 8(R15)" "stg %r2,8(%r15)" proc.go:7575
+0x6deaa 6 "stg" "MOVD R3, 16(R15)" "stg %r3,16(%r15)" proc.go:7575
+0x6deb0 4 "st" "MOVW R4, 24(R15)" "st %r4,24(%r15)" proc.go:7575
+0x6deb4 4 "st" "MOVW R5, 28(R15)" "st %r5,28(%r15)" proc.go:7575
+0x6deb8 4 "lgr" "MOVD R14, R5" "lgr %r5,%r14" proc.go:7575
+0x6debc 6 "brasl" "CALL runtime.morestack_noctxt.abi0(SB)" "brasl %r14,0x99560" proc.go:7575
+0x6dec2 6 "lg" "MOVD 8(R15), R2" "lg %r2,8(%r15)" proc.go:7575
+0x6dec8 6 "lg" "MOVD 16(R15), R3" "lg %r3,16(%r15)" proc.go:7575
+0x6dece 6 "llgf" "MOVWZ 24(R15), R4" "llgf %r4,24(%r15)" proc.go:7575
+0x6ded4 6 "llgf" "MOVWZ 28(R15), R5" "llgf %r5,28(%r15)" proc.go:7575
+0x6deda 4 "brc" "BR runtime.runqputslow(SB)" "j 0x6dcd0" proc.go:7575
+0x6dede 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:7575
+== runtime.runqputbatch 0x6dee0 176 /usr/local/go/src/runtime/proc.go
+0x6dee0 2 "bcr" "NOPH" "nopr %r0" proc.go:7616
+0x6dee2 6 "lg" "MOVD (R3), R0" "lg %r0,0(%r3)" proc.go:7810
+0x6dee8 6 "cgij" "CMPBEQ R0, $0, 6(PC)" "cgije %r0,0,0x6df0e" proc.go:7617
+0x6deee 6 "llgc" "MOVBZ (R2), R10" "llgc %r10,0(%r2)" proc.go:7620
+0x6def4 6 "aghik" "ADD $400, R2, R0" "aghik %r0,%r2,400" proc.go:7620
+0x6defa 4 "lgr" "MOVD R0, R1" "lgr %r1,%r0" proc.go:7620
+0x6defe 6 "llgf" "MOVWZ (R1), R0" "llgf %r0,0(%r1)" proc.go:7620
+0x6df04 6 "llgf" "MOVWZ 404(R2), R1" "llgf %r1,404(%r2)" proc.go:7621
+0x6df0a 4 "brc" "BR 8(PC)" "j 0x6df2a" proc.go:7623
+0x6df0e 2 "bcr" "RET" "br %r14" proc.go:7618
+0x6df10 6 "aghik" "ADD $408, R2, R5" "aghik %r5,%r2,408" proc.go:7625
+0x6df16 4 "llgcr" "MOVBZ R1, R6" "llgcr %r6,%r1" proc.go:7625
+0x6df1a 6 "sllg" "SLD 3(R0), R6, R6" "sllg %r6,%r6,3" proc.go:7625
+0x6df20 6 "stg" "MOVD R4, (R5)(R6*1)" "stg %r4,0(%r6,%r5)" runtime2.go:248
+0x6df26 4 "ahi" "ADDW $1, R1" "ahi %r1,1" proc.go:7626
+0x6df2a 6 "lg" "MOVD (R3), R4" "lg %r4,0(%r3)" proc.go:7810
+0x6df30 6 "cgij" "CMPBEQ R4, $0, 11(PC)" "cgije %r4,0,0x6df74" proc.go:7623
+0x6df36 4 "srk" "SUBW R0, R1, R5" "srk %r5,%r1,%r0" proc.go:7623
+0x6df3a 6 "clij" "CLIJ $2, R5, $255, 9(PC)" "clijh %r5,255,0x6df74" proc.go:7623
+0x6df40 2 "bcr" "NOPH" "nopr %r0" proc.go:7624
+0x6df42 2 "bcr" "NOPH" "nopr %r0" proc.go:7854
+0x6df44 6 "cgij" "CMPBEQ R4, $0, -8(PC)" "cgije %r4,0,0x6df10" proc.go:7855
+0x6df4a 6 "lg" "MOVD 160(R4), R5" "lg %r5,160(%r4)" proc.go:7856
+0x6df50 6 "stg" "MOVD R5, (R3)" "stg %r5,0(%r3)" proc.go:7856
+0x6df56 6 "cgij" "CMPBNE R5, $0, 2(PC)" "cgijne %r5,0,0x6df62" proc.go:7857
+0x6df5c 6 "mvghi" "MVGHI 8(R3), $0" "mvghi 8(%r3),0" proc.go:7858
+0x6df62 6 "lgf" "MOVW 16(R3), R5" "lgf %r5,16(%r3)" proc.go:7860
+0x6df68 4 "ahi" "ADDW $-1, R5" "ahi %r5,-1" proc.go:7860
+0x6df6c 4 "st" "MOVW R5, 16(R3)" "st %r5,16(%r3)" proc.go:7860
+0x6df70 4 "brc" "BR -24(PC)" "j 0x6df10" proc.go:7860
+0x6df74 6 "aghik" "ADD $404, R2, R0" "aghik %r0,%r2,404" proc.go:7640
+0x6df7a 4 "lgr" "MOVD R0, R2" "lgr %r2,%r0" proc.go:7640
+0x6df7e 4 "st" "MOVW R1, (R2)" "st %r1,0(%r2)" proc.go:7640
+0x6df82 2 "bcr" "SYNC" "bnor %r0" proc.go:7640
+0x6df84 2 "bcr" "RET" "br %r14" proc.go:7642
+0x6df86 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:7642
+0x6df88 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:7642
+0x6df8a 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:7642
+0x6df8c 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:7642
+0x6df8e 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:7642
+== runtime.runqdrain 0x6df90 416 /usr/local/go/src/runtime/proc.go
+0x6df90 6 "stg" "MOVD R14, -48(R15)" "stg %r14,-48(%r15)" proc.go:7674
+0x6df96 6 "lay" "MOVD -48(R0)(R15*1), R15" "lay %r15,-48(%r15)" proc.go:7674
+0x6df9c 6 "stg" "MOVD R14, (R15)" "stg %r14,0(%r15)" proc.go:7674
+0x6dfa2 6 "mvghi" "MVGHI 24(R15), $0" "mvghi 24(%r15),0" proc.go:7674
+0x6dfa8 6 "mvghi" "MVGHI 32(R15), $0" "mvghi 32(%r15),0" proc.go:7674
+0x6dfae 6 "mvhi" "MVHI 40(R15), $0" "mvhi 40(%r15),0" proc.go:7674
+0x6dfb4 6 "lg" "MOVD 2456(R2), R0" "lg %r0,2456(%r2)" proc.go:7675
+0x6dfba 6 "cgij" "CMPBEQ R0, $0, 21(PC)" "cgije %r0,0,0x6e03c" proc.go:7676
+0x6dfc0 6 "stg" "MOVD R0, 16(R15)" "stg %r0,16(%r15)" proc.go:7675
+0x6dfc6 6 "aghik" "ADD $2456, R2, R1" "aghik %r1,%r2,2456" proc.go:7675
+0x6dfcc 4 "lghi" "MOVB $0, R5" "lghi %r5,0" runtime2.go:252
+0x6dfd0 6 "csg" "CSG R0, R5, (R1)" "csg %r0,%r5,0(%r1)" runtime2.go:252
+0x6dfd6 4 "lghi" "MOVB $0, R1" "lghi %r1,0" runtime2.go:252
+0x6dfda 4 "brc" "BNE 2(PC)" "jne 0x6dfe2" runtime2.go:252
+0x6dfde 4 "lghi" "MOVB $1, R1" "lghi %r1,1" runtime2.go:252
+0x6dfe2 4 "llgcr" "MOVBZ R1, R1" "llgcr %r1,%r1" runtime2.go:252
+0x6dfe6 6 "clij" "CLIJ $8, R1, $0, 14(PC)" "clije %r1,0,0x6e03c" proc.go:7676
+0x6dfec 6 "lg" "MOVD 16(R15), R1" "lg %r1,16(%r15)" runtime2.go:245
+0x6dff2 2 "bcr" "NOPH" "nopr %r0" proc.go:7677
+0x6dff4 2 "bcr" "NOPH" "nopr %r0" proc.go:7677
+0x6dff6 6 "mvghi" "MVGHI 160(R1), $0" "mvghi 160(%r1),0" proc.go:7825
+0x6dffc 6 "lg" "MOVD 32(R15), R5" "lg %r5,32(%r15)" proc.go:7826
+0x6e002 6 "cgij" "CMPBEQ R5, $0, 3(PC)" "cgije %r5,0,0x6e016" proc.go:7826
+0x6e008 4 "lgr" "MOVD R1, R6" "lgr %r6,%r1" runtime2.go:248
+0x6e00c 6 "stg" "MOVD R1, 160(R5)" "stg %r1,160(%r5)" proc.go:7827
+0x6e012 4 "brc" "BR 5(PC)" "j 0x6e026" proc.go:7827
+0x6e016 4 "lgr" "MOVD R1, R5" "lgr %r5,%r1" runtime2.go:248
+0x6e01a 2 "bcr" "NOPH" "nopr %r0" proc.go:7829
+0x6e01c 6 "stg" "MOVD R1, 24(R15)" "stg %r1,24(%r15)" runtime2.go:248
+0x6e022 4 "lgr" "MOVD R5, R6" "lgr %r6,%r5" runtime2.go:248
+0x6e026 2 "bcr" "NOPH" "nopr %r0" proc.go:7831
+0x6e028 6 "stg" "MOVD R6, 32(R15)" "stg %r6,32(%r15)" runtime2.go:248
+0x6e02e 6 "lgf" "MOVW 40(R15), R1" "lgf %r1,40(%r15)" proc.go:7832
+0x6e034 4 "ahi" "ADDW $1, R1" "ahi %r1,1" proc.go:7832
+0x6e038 4 "st" "MOVW R1, 40(R15)" "st %r1,40(%r15)" proc.go:7832
+0x6e03c 6 "aghik" "ADD $400, R2, R1" "aghik %r1,%r2,400" proc.go:7681
+0x6e042 6 "llgf" "MOVWZ (R1), R0" "llgf %r0,0(%r1)" proc.go:7681
+0x6e048 6 "llgf" "MOVWZ 404(R2), R5" "llgf %r5,404(%r2)" proc.go:7682
+0x6e04e 4 "srk" "SUBW R0, R5, R6" "srk %r6,%r5,%r0" proc.go:7683
+0x6e052 6 "cij" "CIJ $8, R6, $0, 10(PC)" "cije %r6,0,0x6e08e" proc.go:7684
+0x6e058 6 "clfi" "CMPWU R6, $256" "clfi %r6,256" proc.go:7687
+0x6e05e 4 "brc" "BGT -8(PC)" "jh 0x6e03c" proc.go:7687
+0x6e062 4 "st" "MOVW R0, 12(R15)" "st %r0,12(%r15)" proc.go:7681
+0x6e066 4 "cs" "CS R0, R5, (R1)" "cs %r0,%r5,0(%r1)" proc.go:7691
+0x6e06a 4 "lghi" "MOVB $0, R1" "lghi %r1,0" proc.go:7691
+0x6e06e 4 "brc" "BNE 2(PC)" "jne 0x6e076" proc.go:7691
+0x6e072 4 "lghi" "MOVB $1, R1" "lghi %r1,1" proc.go:7691
+0x6e076 4 "llgcr" "MOVBZ R1, R1" "llgcr %r1,%r1" proc.go:7691
+0x6e07a 6 "clij" "CLIJ $8, R1, $0, -10(PC)" "clije %r1,0,0x6e03c" proc.go:7691
+0x6e080 4 "lghi" "MOVB $0, R0" "lghi %r0,0" proc.go:7691
+0x6e084 6 "llgf" "MOVWZ 12(R15), R1" "llgf %r1,12(%r15)" proc.go:7691
+0x6e08a 4 "brc" "BR 13(PC)" "j 0x6e0c0" proc.go:7691
+0x6e08e 6 "lg" "MOVD 24(R15), R2" "lg %r2,24(%r15)" proc.go:7685
+0x6e094 6 "lg" "MOVD 32(R15), R3" "lg %r3,32(%r15)" proc.go:7685
+0x6e09a 6 "lgf" "MOVW 40(R15), R4" "lgf %r4,40(%r15)" proc.go:7685
+0x6e0a0 4 "aghi" "ADD $48, R15" "aghi %r15,48" proc.go:7685
+0x6e0a4 2 "bcr" "RET" "br %r14" proc.go:7685
+0x6e0a6 2 "bcr" "NOPH" "nopr %r0" proc.go:7831
+0x6e0a8 6 "stg" "MOVD R8, 32(R15)" "stg %r8,32(%r15)" runtime2.go:248
+0x6e0ae 6 "lgf" "MOVW 40(R15), R5" "lgf %r5,40(%r15)" proc.go:7832
+0x6e0b4 4 "ahi" "ADDW $1, R5" "ahi %r5,1" proc.go:7832
+0x6e0b8 4 "st" "MOVW R5, 40(R15)" "st %r5,40(%r15)" proc.go:7832
+0x6e0bc 4 "ahi" "ADDW $1, R0" "ahi %r0,1" proc.go:7702
+0x6e0c0 6 "clrj" "CLRJ $10, R0, R6, 14(PC)" "clrjnl %r0,%r6,0x6e114" proc.go:7702
+0x6e0c6 6 "aghik" "ADD $408, R2, R5" "aghik %r5,%r2,408" proc.go:7703
+0x6e0cc 4 "ark" "ADDW R1, R0, R7" "ark %r7,%r0,%r1" proc.go:7703
+0x6e0d0 4 "llgcr" "MOVBZ R7, R7" "llgcr %r7,%r7" proc.go:7703
+0x6e0d4 6 "sllg" "SLD 3(R0), R7, R7" "sllg %r7,%r7,3" proc.go:7703
+0x6e0da 6 "lg" "MOVD (R5)(R7*1), R5" "lg %r5,0(%r7,%r5)" proc.go:7703
+0x6e0e0 2 "bcr" "NOPH" "nopr %r0" proc.go:7704
+0x6e0e2 6 "mvghi" "MVGHI 160(R5), $0" "mvghi 160(%r5),0" proc.go:7825
+0x6e0e8 6 "lg" "MOVD 32(R15), R7" "lg %r7,32(%r15)" proc.go:7826
+0x6e0ee 6 "cgij" "CMPBEQ R7, $0, 3(PC)" "cgije %r7,0,0x6e102" proc.go:7826
+0x6e0f4 4 "lgr" "MOVD R5, R8" "lgr %r8,%r5" runtime2.go:248
+0x6e0f8 6 "stg" "MOVD R5, 160(R7)" "stg %r5,160(%r7)" proc.go:7827
+0x6e0fe 4 "brc" "BR -22(PC)" "j 0x6e0a6" proc.go:7827
+0x6e102 4 "lgr" "MOVD R5, R7" "lgr %r7,%r5" runtime2.go:248
+0x6e106 6 "stg" "MOVD R5, 24(R15)" "stg %r5,24(%r15)" runtime2.go:248
+0x6e10c 4 "lgr" "MOVD R7, R8" "lgr %r8,%r7" runtime2.go:248
+0x6e110 4 "brc" "BR -26(PC)" "j 0x6e0a6" proc.go:7829
+0x6e114 6 "lg" "MOVD 24(R15), R2" "lg %r2,24(%r15)" proc.go:7706
+0x6e11a 6 "lg" "MOVD 32(R15), R3" "lg %r3,32(%r15)" proc.go:7706
+0x6e120 6 "lgf" "MOVW 40(R15), R4" "lgf %r4,40(%r15)" proc.go:7706
+0x6e126 4 "aghi" "ADD $48, R15" "aghi %r15,48" proc.go:7706
+0x6e12a 2 "bcr" "RET" "br %r14" proc.go:7706
+0x6e12c 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:7706
+0x6e12e 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:7706
+== runtime.runqgrab 0x6e130 528 /usr/local/go/src/runtime/proc.go
+0x6e130 6 "lg" "MOVD 16(R13), R10" "lg %r10,16(%r13)" proc.go:7713
+0x6e136 6 "clgrj" "CMPUBGE R10, R15, 77(PC)" "clgrjnl %r10,%r15,0x6e304" proc.go:7713
+0x6e13c 6 "stg" "MOVD R14, -24(R15)" "stg %r14,-24(%r15)" proc.go:7713
+0x6e142 6 "lay" "MOVD -24(R0)(R15*1), R15" "lay %r15,-24(%r15)" proc.go:7713
+0x6e148 6 "stg" "MOVD R14, (R15)" "stg %r14,0(%r15)" proc.go:7713
+0x6e14e 6 "stg" "MOVD R2, 32(R15)" "stg %r2,32(%r15)" proc.go:7714
+0x6e154 6 "stg" "MOVD R3, 40(R15)" "stg %r3,40(%r15)" proc.go:7714
+0x6e15a 4 "st" "MOVW R4, 48(R15)" "st %r4,48(%r15)" proc.go:7714
+0x6e15e 4 "stc" "STC R5, 52(R15)" "stc %r5,52(%r15)" proc.go:7714
+0x6e162 6 "llgc" "MOVBZ (R2), R10" "llgc %r10,0(%r2)" proc.go:7715
+0x6e168 6 "aghik" "ADD $400, R2, R1" "aghik %r1,%r2,400" proc.go:7715
+0x6e16e 6 "llgf" "MOVWZ (R1), R0" "llgf %r0,0(%r1)" proc.go:7715
+0x6e174 6 "aghik" "ADD $404, R2, R6" "aghik %r6,%r2,404" proc.go:7716
+0x6e17a 6 "llgf" "MOVWZ (R6), R6" "llgf %r6,0(%r6)" proc.go:7716
+0x6e180 2 "sr" "SUBW R0, R6" "sr %r6,%r0" proc.go:7717
+0x6e182 6 "srlk" "SRW 1(R0), R6, R7" "srlk %r7,%r6,1" proc.go:7718
+0x6e188 2 "sr" "SUBW R7, R6" "sr %r6,%r7" proc.go:7718
+0x6e18a 6 "cij" "CIJ $6, R6, $0, 29(PC)" "cijne %r6,0,0x6e23a" proc.go:7719
+0x6e190 4 "llgcr" "MOVBZ R5, R1" "llgcr %r1,%r5" proc.go:7714
+0x6e194 6 "clij" "CLIJ $8, R1, $0, 56(PC)" "clije %r1,0,0x6e2e4" proc.go:7720
+0x6e19a 6 "lg" "MOVD 2456(R2), R0" "lg %r0,2456(%r2)" proc.go:7722
+0x6e1a0 6 "cgij" "CMPBEQ R0, $0, 54(PC)" "cgije %r0,0,0x6e2e4" proc.go:7722
+0x6e1a6 6 "stg" "MOVD R0, 16(R15)" "stg %r0,16(%r15)" proc.go:7722
+0x6e1ac 6 "llgf" "MOVWZ 4(R2), R1" "llgf %r1,4(%r2)" proc.go:7723
+0x6e1b2 6 "cij" "CIJ $6, R1, $1, 15(PC)" "cijne %r1,1,0x6e210" proc.go:7723
+0x6e1b8 6 "lg" "MOVD 48(R2), R1" "lg %r1,48(%r2)" proc.go:7724
+0x6e1be 6 "cgij" "CMPBEQ R1, $0, 13(PC)" "cgije %r1,0,0x6e210" proc.go:7724
+0x6e1c4 6 "lg" "MOVD 184(R1), R1" "lg %r1,184(%r1)" proc.go:7725
+0x6e1ca 6 "cgij" "CMPBEQ R1, $0, 4(PC)" "cgije %r1,0,0x6e1e6" proc.go:7725
+0x6e1d0 4 "aghi" "ADD $144, R1" "aghi %r1,144" types.go:194
+0x6e1d4 2 "bcr" "NOPH" "nopr %r0" proc.go:1221
+0x6e1d6 6 "llgf" "MOVWZ (R1), R1" "llgf %r1,0(%r1)" types.go:194
+0x6e1dc 4 "nill" "ANDW $-4097, R1" "nill %r1,-4097" proc.go:7725
+0x6e1e0 6 "cij" "CIJ $8, R1, $3, 8(PC)" "cije %r1,3,0x6e210" proc.go:7725
+0x6e1e6 6 "mvhi" "MVHI 8(R15), $3" "mvhi 8(%r15),3" proc.go:7746
+0x6e1ec 6 "brasl" "CALL runtime.usleep.abi0(SB)" "brasl %r14,0x99f30" proc.go:7746
+0x6e1f2 6 "lg" "MOVD 16(R15), R0" "lg %r0,16(%r15)" runtime2.go:252
+0x6e1f8 6 "lg" "MOVD 32(R15), R2" "lg %r2,32(%r15)" proc.go:7756
+0x6e1fe 6 "lg" "MOVD 40(R15), R3" "lg %r3,40(%r15)" proc.go:7770
+0x6e204 6 "llgf" "MOVWZ 48(R15), R4" "llgf %r4,48(%r15)" proc.go:7770
+0x6e20a 6 "llgc" "MOVBZ 52(R15), R5" "llgc %r5,52(%r15)" proc.go:7714
+0x6e210 6 "aghik" "ADD $2456, R2, R1" "aghik %r1,%r2,2456" proc.go:7756
+0x6e216 4 "lghi" "MOVB $0, R6" "lghi %r6,0" runtime2.go:252
+0x6e21a 6 "csg" "CSG R0, R6, (R1)" "csg %r0,%r6,0(%r1)" runtime2.go:252
+0x6e220 4 "lghi" "MOVB $0, R1" "lghi %r1,0" runtime2.go:252
+0x6e224 4 "brc" "BNE 2(PC)" "jne 0x6e22c" runtime2.go:252
+0x6e228 4 "lghi" "MOVB $1, R1" "lghi %r1,1" runtime2.go:252
+0x6e22c 4 "llgcr" "MOVBZ R1, R1" "llgcr %r1,%r1" runtime2.go:252
+0x6e230 6 "clij" "CLIJ $6, R1, $0, 22(PC)" "clijne %r1,0,0x6e2b4" proc.go:7756
+0x6e236 4 "brc" "BR -53(PC)" "j 0x6e162" proc.go:7756
+0x6e23a 6 "clij" "CLIJ $12, R6, $128, 2(PC)" "clijnh %r6,128,0x6e248" proc.go:7765
+0x6e240 4 "lghi" "MOVB $0, R6" "lghi %r6,0" proc.go:7765
+0x6e244 4 "brc" "BR -56(PC)" "j 0x6e162" proc.go:7766
+0x6e248 4 "lghi" "MOVB $0, R7" "lghi %r7,0" proc.go:7765
+0x6e24c 4 "brc" "BR 15(PC)" "j 0x6e288" proc.go:7765
+0x6e250 6 "llgc" "MOVBZ (R3), R10" "llgc %r10,0(%r3)" proc.go:7770
+0x6e256 6 "aghik" "ADD $408, R2, R8" "aghik %r8,%r2,408" proc.go:7769
+0x6e25c 4 "ark" "ADDW R0, R7, R9" "ark %r9,%r7,%r0" proc.go:7769
+0x6e260 4 "llgcr" "MOVBZ R9, R9" "llgcr %r9,%r9" proc.go:7769
+0x6e264 6 "sllg" "SLD 3(R0), R9, R9" "sllg %r9,%r9,3" proc.go:7769
+0x6e26a 6 "lg" "MOVD (R8)(R9*1), R8" "lg %r8,0(%r9,%r8)" proc.go:7769
+0x6e270 4 "ark" "ADDW R4, R7, R9" "ark %r9,%r7,%r4" proc.go:7770
+0x6e274 4 "llgcr" "MOVBZ R9, R9" "llgcr %r9,%r9" proc.go:7770
+0x6e278 6 "sllg" "SLD 3(R0), R9, R9" "sllg %r9,%r9,3" proc.go:7770
+0x6e27e 6 "stg" "MOVD R8, (R3)(R9*1)" "stg %r8,0(%r9,%r3)" proc.go:7770
+0x6e284 4 "ahi" "ADDW $1, R7" "ahi %r7,1" proc.go:7768
+0x6e288 6 "clrj" "CLRJ $4, R7, R6, -9(PC)" "clrjl %r7,%r6,0x6e250" proc.go:7768
+0x6e28e 4 "ark" "ADDW R0, R6, R7" "ark %r7,%r6,%r0" proc.go:7772
+0x6e292 4 "cs" "CS R0, R7, (R1)" "cs %r0,%r7,0(%r1)" proc.go:7772
+0x6e296 4 "lghi" "MOVB $0, R1" "lghi %r1,0" proc.go:7772
+0x6e29a 4 "brc" "BNE 2(PC)" "jne 0x6e2a2" proc.go:7772
+0x6e29e 4 "lghi" "MOVB $1, R1" "lghi %r1,1" proc.go:7772
+0x6e2a2 4 "llgcr" "MOVBZ R1, R1" "llgcr %r1,%r1" proc.go:7772
+0x6e2a6 6 "clij" "CLIJ $6, R1, $0, 13(PC)" "clijne %r1,0,0x6e2f4" proc.go:7772
+0x6e2ac 4 "lghi" "MOVB $0, R6" "lghi %r6,0" proc.go:7772
+0x6e2b0 4 "brc" "BR -83(PC)" "j 0x6e162" proc.go:7772
+0x6e2b4 6 "llgc" "MOVBZ (R3), R10" "llgc %r10,0(%r3)" proc.go:7759
+0x6e2ba 4 "llgcr" "MOVBZ R4, R0" "llgcr %r0,%r4" proc.go:7759
+0x6e2be 6 "sllg" "SLD 3(R0), R0, R0" "sllg %r0,%r0,3" proc.go:7759
+0x6e2c4 4 "lgr" "MOVD R0, R1" "lgr %r1,%r0" proc.go:7759
+0x6e2c8 6 "lg" "MOVD 16(R15), R4" "lg %r4,16(%r15)" proc.go:7759
+0x6e2ce 6 "stg" "MOVD R4, (R3)(R1*1)" "stg %r4,0(%r1,%r3)" proc.go:7759
+0x6e2d4 4 "lghi" "MOVB $1, R2" "lghi %r2,1" proc.go:7760
+0x6e2d8 6 "lg" "MOVD (R15), R14" "lg %r14,0(%r15)" proc.go:7760
+0x6e2de 4 "aghi" "ADD $24, R15" "aghi %r15,24" proc.go:7760
+0x6e2e2 2 "bcr" "RET" "br %r14" proc.go:7760
+0x6e2e4 4 "lghi" "MOVB $0, R2" "lghi %r2,0" proc.go:7763
+0x6e2e8 6 "lg" "MOVD (R15), R14" "lg %r14,0(%r15)" proc.go:7763
+0x6e2ee 4 "aghi" "ADD $24, R15" "aghi %r15,24" proc.go:7763
+0x6e2f2 2 "bcr" "RET" "br %r14" proc.go:7763
+0x6e2f4 4 "llgfr" "MOVWZ R6, R2" "llgfr %r2,%r6" proc.go:7773
+0x6e2f8 6 "lg" "MOVD (R15), R14" "lg %r14,0(%r15)" proc.go:7773
+0x6e2fe 4 "aghi" "ADD $24, R15" "aghi %r15,24" proc.go:7773
+0x6e302 2 "bcr" "RET" "br %r14" proc.go:7773
+0x6e304 6 "stg" "MOVD R2, 8(R15)" "stg %r2,8(%r15)" proc.go:7713
+0x6e30a 6 "stg" "MOVD R3, 16(R15)" "stg %r3,16(%r15)" proc.go:7713
+0x6e310 4 "st" "MOVW R4, 24(R15)" "st %r4,24(%r15)" proc.go:7713
+0x6e314 4 "stc" "STC R5, 28(R15)" "stc %r5,28(%r15)" proc.go:7713
+0x6e318 4 "lgr" "MOVD R14, R5" "lgr %r5,%r14" proc.go:7713
+0x6e31c 6 "brasl" "CALL runtime.morestack_noctxt.abi0(SB)" "brasl %r14,0x99560" proc.go:7713
+0x6e322 6 "lg" "MOVD 8(R15), R2" "lg %r2,8(%r15)" proc.go:7713
+0x6e328 6 "lg" "MOVD 16(R15), R3" "lg %r3,16(%r15)" proc.go:7713
+0x6e32e 6 "llgf" "MOVWZ 24(R15), R4" "llgf %r4,24(%r15)" proc.go:7713
+0x6e334 6 "llgc" "MOVBZ 28(R15), R5" "llgc %r5,28(%r15)" proc.go:7713
+0x6e33a 4 "brc" "BR runtime.runqgrab(SB)" "j 0x6e130" proc.go:7713
+0x6e33e 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:7713
+== runtime.runqsteal 0x6e340 304 /usr/local/go/src/runtime/proc.go
+0x6e340 6 "lg" "MOVD 16(R13), R10" "lg %r10,16(%r13)" proc.go:7781
+0x6e346 6 "clgrj" "CMPUBGE R10, R15, 39(PC)" "clgrjnl %r10,%r15,0x6e432" proc.go:7781
+0x6e34c 6 "stg" "MOVD R14, -48(R15)" "stg %r14,-48(%r15)" proc.go:7781
+0x6e352 6 "lay" "MOVD -48(R0)(R15*1), R15" "lay %r15,-48(%r15)" proc.go:7781
+0x6e358 6 "stg" "MOVD R14, (R15)" "stg %r14,0(%r15)" proc.go:7781
+0x6e35e 6 "stg" "MOVD R2, 56(R15)" "stg %r2,56(%r15)" proc.go:7784
+0x6e364 6 "llgf" "MOVWZ 404(R2), R0" "llgf %r0,404(%r2)" proc.go:7782
+0x6e36a 4 "st" "MOVW R0, 36(R15)" "st %r0,36(%r15)" proc.go:7782
+0x6e36e 6 "aghik" "ADD $408, R2, R1" "aghik %r1,%r2,408" proc.go:7783
+0x6e374 6 "stg" "MOVD R1, 40(R15)" "stg %r1,40(%r15)" proc.go:7783
+0x6e37a 4 "lgr" "MOVD R3, R2" "lgr %r2,%r3" proc.go:7783
+0x6e37e 4 "lgr" "MOVD R1, R3" "lgr %r3,%r1" proc.go:7783
+0x6e382 4 "llgcr" "MOVBZ R4, R5" "llgcr %r5,%r4" proc.go:7783
+0x6e386 4 "llgfr" "MOVWZ R0, R4" "llgfr %r4,%r0" proc.go:7783
+0x6e38a 6 "brasl" "CALL runtime.runqgrab(SB)" "brasl %r14,0x6e130" proc.go:7783
+0x6e390 6 "cij" "CIJ $8, R2, $0, 21(PC)" "cije %r2,0,0x6e410" proc.go:7784
+0x6e396 6 "llgf" "MOVWZ 36(R15), R0" "llgf %r0,36(%r15)" proc.go:7788
+0x6e39c 4 "ark" "ADDW R0, R2, R1" "ark %r1,%r2,%r0" proc.go:7788
+0x6e3a0 4 "ahi" "ADDW $-1, R1" "ahi %r1,-1" proc.go:7788
+0x6e3a4 4 "llgcr" "MOVBZ R1, R4" "llgcr %r4,%r1" proc.go:7788
+0x6e3a8 6 "sllg" "SLD 3(R0), R4, R4" "sllg %r4,%r4,3" proc.go:7788
+0x6e3ae 6 "lg" "MOVD 40(R15), R5" "lg %r5,40(%r15)" proc.go:7788
+0x6e3b4 6 "lg" "MOVD (R5)(R4*1), R4" "lg %r4,0(%r4,%r5)" proc.go:7788
+0x6e3ba 6 "cij" "CIJ $8, R2, $1, 11(PC)" "cije %r2,1,0x6e400" proc.go:7789
+0x6e3c0 6 "lg" "MOVD 56(R15), R5" "lg %r5,56(%r15)" proc.go:7792
+0x6e3c6 6 "aghik" "ADD $400, R5, R6" "aghik %r6,%r5,400" proc.go:7792
+0x6e3cc 6 "llgf" "MOVWZ (R6), R6" "llgf %r6,0(%r6)" proc.go:7792
+0x6e3d2 2 "sr" "SUBW R6, R0" "sr %r0,%r6" proc.go:7793
+0x6e3d4 2 "ar" "ADDW R2, R0" "ar %r0,%r2" proc.go:7793
+0x6e3d6 4 "ahi" "ADDW $-1, R0" "ahi %r0,-1" proc.go:7793
+0x6e3da 6 "clij" "CLIJ $2, R0, $255, 11(PC)" "clijh %r0,255,0x6e420" proc.go:7793
+0x6e3e0 6 "aghik" "ADD $404, R5, R0" "aghik %r0,%r5,404" proc.go:7796
+0x6e3e6 4 "lgr" "MOVD R0, R3" "lgr %r3,%r0" proc.go:7796
+0x6e3ea 4 "st" "MOVW R1, (R3)" "st %r1,0(%r3)" proc.go:7796
+0x6e3ee 2 "bcr" "SYNC" "bnor %r0" proc.go:7796
+0x6e3f0 4 "lgr" "MOVD R4, R2" "lgr %r2,%r4" proc.go:7797
+0x6e3f4 6 "lg" "MOVD (R15), R14" "lg %r14,0(%r15)" proc.go:7797
+0x6e3fa 4 "aghi" "ADD $48, R15" "aghi %r15,48" proc.go:7797
+0x6e3fe 2 "bcr" "RET" "br %r14" proc.go:7797
+0x6e400 4 "lgr" "MOVD R4, R2" "lgr %r2,%r4" proc.go:7790
+0x6e404 6 "lg" "MOVD (R15), R14" "lg %r14,0(%r15)" proc.go:7790
+0x6e40a 4 "aghi" "ADD $48, R15" "aghi %r15,48" proc.go:7790
+0x6e40e 2 "bcr" "RET" "br %r14" proc.go:7790
+0x6e410 4 "lghi" "MOVB $0, R2" "lghi %r2,0" proc.go:7785
+0x6e414 6 "lg" "MOVD (R15), R14" "lg %r14,0(%r15)" proc.go:7785
+0x6e41a 4 "aghi" "ADD $48, R15" "aghi %r15,48" proc.go:7785
+0x6e41e 2 "bcr" "RET" "br %r14" proc.go:7785
+0x6e420 6 "larl" "MOVD 36044(PC), R2" "larl %r2,0xa30ea" proc.go:7794
+0x6e426 4 "lghi" "MOVB $24, R3" "lghi %r3,24" proc.go:7794
+0x6e42a 6 "brasl" "CALL runtime.throw(SB)" "brasl %r14,0x95ed0" proc.go:7794
+0x6e430 2 "bcr" "NOPH" "nopr %r0" proc.go:7794
+0x6e432 6 "stg" "MOVD R2, 8(R15)" "stg %r2,8(%r15)" proc.go:7781
+0x6e438 6 "stg" "MOVD R3, 16(R15)" "stg %r3,16(%r15)" proc.go:7781
+0x6e43e 4 "stc" "STC R4, 24(R15)" "stc %r4,24(%r15)" proc.go:7781
+0x6e442 4 "lgr" "MOVD R14, R5" "lgr %r5,%r14" proc.go:7781
+0x6e446 6 "brasl" "CALL runtime.morestack_noctxt.abi0(SB)" "brasl %r14,0x99560" proc.go:7781
+0x6e44c 6 "lg" "MOVD 8(R15), R2" "lg %r2,8(%r15)" proc.go:7781
+0x6e452 6 "lg" "MOVD 16(R15), R3" "lg %r3,16(%r15)" proc.go:7781
+0x6e458 6 "llgc" "MOVBZ 24(R15), R4" "llgc %r4,24(%r15)" proc.go:7781
+0x6e45e 4 "brc" "BR runtime.runqsteal(SB)" "j 0x6e340" proc.go:7781
+0x6e462 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:7781
+0x6e464 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:7781
+0x6e466 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:7781
+0x6e468 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:7781
+0x6e46a 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:7781
+0x6e46c 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:7781
+0x6e46e 2 "" "BYTE 0x0000" ".byte 0x0000" proc.go:7781
+== runtime.memmove 0x99ad0 688 /usr/local/go/src/runtime/memmove_s390x.s
+0x99ad0 4 "lgr" "MOVD R4, R5" "lgr %r5,%r4" memmove_s390x.s:11
+0x99ad4 4 "lgr" "MOVD R3, R4" "lgr %r4,%r3" memmove_s390x.s:12
+0x99ad8 4 "lgr" "MOVD R2, R6" "lgr %r6,%r2" memmove_s390x.s:13
+0x99adc 6 "cgrj" "CMPBEQ R6, R4, 111(PC)" "cgrje %r6,%r4,0x99d78" memmove_s390x.s:14
+0x99ae2 6 "cgij" "CMPBLE R5, $3, 37(PC)" "cgijnh %r5,3,0x99bc4" memmove_s390x.s:17
+0x99ae8 6 "cgij" "CMPBLE R5, $7, 47(PC)" "cgijnh %r5,7,0x99c04" memmove_s390x.s:18
+0x99aee 6 "cgij" "CMPBLE R5, $11, 64(PC)" "cgijnh %r5,11,0x99c6e" memmove_s390x.s:19
+0x99af4 6 "cgij" "CMPBLE R5, $15, 82(PC)" "cgijnh %r5,15,0x99ce0" memmove_s390x.s:20
+0x99afa 6 "cgij" "CGIJ R5, $16, $7, 5(PC)" "cgij %r5,16,7,0x99b1a" memmove_s390x.s:21
+0x99b00 6 "lg" "MOVD (R4), R7" "lg %r7,0(%r4)" memmove_s390x.s:22
+0x99b06 6 "lg" "MOVD 8(R4), R8" "lg %r8,8(%r4)" memmove_s390x.s:23
+0x99b0c 6 "stg" "MOVD R7, (R6)" "stg %r7,0(%r6)" memmove_s390x.s:24
+0x99b12 6 "stg" "MOVD R8, 8(R6)" "stg %r8,8(%r6)" memmove_s390x.s:25
+0x99b18 2 "bcr" "RET" "br %r14" memmove_s390x.s:26
+0x99b1a 6 "cgrj" "CMPBGT R4, R6, 11(PC)" "cgrjh %r4,%r6,0x99b5e" memmove_s390x.s:29
+0x99b20 4 "agrk" "ADD R5, R4, R7" "agrk %r7,%r4,%r5" memmove_s390x.s:30
+0x99b24 6 "cgrj" "CMPBLE R7, R6, 9(PC)" "cgrjnh %r7,%r6,0x99b5e" memmove_s390x.s:31
+0x99b2a 4 "agrk" "ADD R5, R6, R8" "agrk %r8,%r6,%r5" memmove_s390x.s:32
+0x99b2e 6 "lg" "MOVD -8(R7), R3" "lg %r3,-8(%r7)" memmove_s390x.s:34
+0x99b34 6 "stg" "MOVD R3, -8(R8)" "stg %r3,-8(%r8)" memmove_s390x.s:35
+0x99b3a 6 "lg" "MOVD -16(R7), R3" "lg %r3,-16(%r7)" memmove_s390x.s:36
+0x99b40 6 "stg" "MOVD R3, -16(R8)" "stg %r3,-16(%r8)" memmove_s390x.s:37
+0x99b46 4 "aghi" "SUB $16, R5" "aghi %r5,-16" memmove_s390x.s:38
+0x99b4a 4 "aghi" "SUB $16, R7" "aghi %r7,-16" memmove_s390x.s:39
+0x99b4e 4 "aghi" "SUB $16, R8" "aghi %r8,-16" memmove_s390x.s:40
+0x99b52 4 "cghi" "CMP R5, $16" "cghi %r5,16" memmove_s390x.s:41
+0x99b56 4 "brc" "BGE -10(PC)" "brc 10,0x99b2e" memmove_s390x.s:42
+0x99b5a 4 "brc" "BR -30(PC)" "j 0x99ae2" memmove_s390x.s:43
+0x99b5e 6 "cgij" "CMPBGT R5, $64, 9(PC)" "cgijh %r5,64,0x99b94" memmove_s390x.s:46
+0x99b64 6 "lg" "MOVD (R4), R3" "lg %r3,0(%r4)" memmove_s390x.s:47
+0x99b6a 6 "stg" "MOVD R3, (R6)" "stg %r3,0(%r6)" memmove_s390x.s:48
+0x99b70 6 "lg" "MOVD 8(R4), R3" "lg %r3,8(%r4)" memmove_s390x.s:49
+0x99b76 6 "stg" "MOVD R3, 8(R6)" "stg %r3,8(%r6)" memmove_s390x.s:50
+0x99b7c 4 "aghi" "ADD $16, R4" "aghi %r4,16" memmove_s390x.s:51
+0x99b80 4 "aghi" "ADD $16, R6" "aghi %r6,16" memmove_s390x.s:52
+0x99b84 4 "aghi" "SUB $16, R5" "aghi %r5,-16" memmove_s390x.s:53
+0x99b88 4 "cghi" "CMP R5, $16" "cghi %r5,16" memmove_s390x.s:54
+0x99b8c 4 "brc" "BGE -11(PC)" "brc 10,0x99b5e" memmove_s390x.s:55
+0x99b90 4 "brc" "BR -43(PC)" "j 0x99ae2" memmove_s390x.s:56
+0x99b94 4 "cghi" "CMP R5, $256" "cghi %r5,256" memmove_s390x.s:59
+0x99b98 4 "brc" "BLE 6(PC)" "brc 12,0x99bb2" memmove_s390x.s:60
+0x99b9c 6 "mvc" "MVC $256, (R6), (R4)" "mvc 0(256,%r6),0(%r4)" memmove_s390x.s:61
+0x99ba2 4 "aghi" "ADD $256, R4" "aghi %r4,256" memmove_s390x.s:62
+0x99ba6 4 "aghi" "ADD $256, R6" "aghi %r6,256" memmove_s390x.s:63
+0x99baa 4 "aghi" "SUB $256, R5" "aghi %r5,-256" memmove_s390x.s:64
+0x99bae 4 "brc" "BR -6(PC)" "j 0x99b94" memmove_s390x.s:65
+0x99bb2 6 "cgij" "CMPBEQ R5, $0, 75(PC)" "cgije %r5,0,0x99d78" memmove_s390x.s:68
+0x99bb8 4 "aghi" "SUB $1, R5" "aghi %r5,-1" memmove_s390x.s:69
+0x99bbc 6 "exrl" "EXRL R5, memmove_exrl_mvc(SB)" "exrl %r5,0x99ac0" memmove_s390x.s:70
+0x99bc2 2 "bcr" "RET" "br %r14" memmove_s390x.s:71
+0x99bc4 6 "cgij" "CMPBEQ R5, $0, 72(PC)" "cgije %r5,0,0x99d78" memmove_s390x.s:74
+0x99bca 6 "cgij" "CGIJ R5, $1, $7, 3(PC)" "cgij %r5,1,7,0x99bdc" memmove_s390x.s:76
+0x99bd0 6 "lgb" "MOVB (R4), R3" "lgb %r3,0(%r4)" memmove_s390x.s:77
+0x99bd6 4 "stc" "STC R3, (R6)" "stc %r3,0(%r6)" memmove_s390x.s:78
+0x99bda 2 "bcr" "RET" "br %r14" memmove_s390x.s:79
+0x99bdc 6 "cgij" "CGIJ R5, $2, $7, 3(PC)" "cgij %r5,2,7,0x99bee" memmove_s390x.s:81
+0x99be2 6 "lgh" "MOVH (R4), R3" "lgh %r3,0(%r4)" memmove_s390x.s:82
+0x99be8 4 "sth" "STH R3, (R6)" "sth %r3,0(%r6)" memmove_s390x.s:83
+0x99bec 2 "bcr" "RET" "br %r14" memmove_s390x.s:84
+0x99bee 6 "lgh" "MOVH (R4), R3" "lgh %r3,0(%r4)" memmove_s390x.s:86
+0x99bf4 6 "lgb" "MOVB 2(R4), R7" "lgb %r7,2(%r4)" memmove_s390x.s:87
+0x99bfa 4 "sth" "STH R3, (R6)" "sth %r3,0(%r6)" memmove_s390x.s:88
+0x99bfe 4 "stc" "STC R7, 2(R6)" "stc %r7,2(%r6)" memmove_s390x.s:89
+0x99c02 2 "bcr" "RET" "br %r14" memmove_s390x.s:90
+0x99c04 6 "cgij" "CGIJ R5, $4, $7, 3(PC)" "cgij %r5,4,7,0x99c16" memmove_s390x.s:93
+0x99c0a 6 "lgf" "MOVW (R4), R3" "lgf %r3,0(%r4)" memmove_s390x.s:94
+0x99c10 4 "st" "MOVW R3, (R6)" "st %r3,0(%r6)" memmove_s390x.s:95
+0x99c14 2 "bcr" "RET" "br %r14" memmove_s390x.s:96
+0x99c16 6 "cgij" "CGIJ R5, $5, $7, 4(PC)" "cgij %r5,5,7,0x99c32" memmove_s390x.s:98
+0x99c1c 6 "lgf" "MOVW (R4), R3" "lgf %r3,0(%r4)" memmove_s390x.s:99
+0x99c22 6 "lgb" "MOVB 4(R4), R7" "lgb %r7,4(%r4)" memmove_s390x.s:100
+0x99c28 4 "st" "MOVW R3, (R6)" "st %r3,0(%r6)" memmove_s390x.s:101
+0x99c2c 4 "stc" "STC R7, 4(R6)" "stc %r7,4(%r6)" memmove_s390x.s:102
+0x99c30 2 "bcr" "RET" "br %r14" memmove_s390x.s:103
+0x99c32 6 "cgij" "CGIJ R5, $6, $7, 4(PC)" "cgij %r5,6,7,0x99c4e" memmove_s390x.s:105
+0x99c38 6 "lgf" "MOVW (R4), R3" "lgf %r3,0(%r4)" memmove_s390x.s:106
+0x99c3e 6 "lgh" "MOVH 4(R4), R7" "lgh %r7,4(%r4)" memmove_s390x.s:107
+0x99c44 4 "st" "MOVW R3, (R6)" "st %r3,0(%r6)" memmove_s390x.s:108
+0x99c48 4 "sth" "STH R7, 4(R6)" "sth %r7,4(%r6)" memmove_s390x.s:109
+0x99c4c 2 "bcr" "RET" "br %r14" memmove_s390x.s:110
+0x99c4e 6 "lgf" "MOVW (R4), R3" "lgf %r3,0(%r4)" memmove_s390x.s:112
+0x99c54 6 "lgh" "MOVH 4(R4), R7" "lgh %r7,4(%r4)" memmove_s390x.s:113
+0x99c5a 6 "lgb" "MOVB 6(R4), R8" "lgb %r8,6(%r4)" memmove_s390x.s:114
+0x99c60 4 "st" "MOVW R3, (R6)" "st %r3,0(%r6)" memmove_s390x.s:115
+0x99c64 4 "sth" "STH R7, 4(R6)" "sth %r7,4(%r6)" memmove_s390x.s:116
+0x99c68 4 "stc" "STC R8, 6(R6)" "stc %r8,6(%r6)" memmove_s390x.s:117
+0x99c6c 2 "bcr" "RET" "br %r14" memmove_s390x.s:118
+0x99c6e 6 "cgij" "CGIJ R5, $8, $7, 3(PC)" "cgij %r5,8,7,0x99c82" memmove_s390x.s:121
+0x99c74 6 "lg" "MOVD (R4), R3" "lg %r3,0(%r4)" memmove_s390x.s:122
+0x99c7a 6 "stg" "MOVD R3, (R6)" "stg %r3,0(%r6)" memmove_s390x.s:123
+0x99c80 2 "bcr" "RET" "br %r14" memmove_s390x.s:124
+0x99c82 6 "cgij" "CGIJ R5, $9, $7, 5(PC)" "cgij %r5,9,7,0x99ca0" memmove_s390x.s:126
+0x99c88 6 "lg" "MOVD (R4), R3" "lg %r3,0(%r4)" memmove_s390x.s:127
+0x99c8e 6 "lgb" "MOVB 8(R4), R7" "lgb %r7,8(%r4)" memmove_s390x.s:128
+0x99c94 6 "stg" "MOVD R3, (R6)" "stg %r3,0(%r6)" memmove_s390x.s:129
+0x99c9a 4 "stc" "STC R7, 8(R6)" "stc %r7,8(%r6)" memmove_s390x.s:130
+0x99c9e 2 "bcr" "RET" "br %r14" memmove_s390x.s:131
+0x99ca0 6 "cgij" "CGIJ R5, $10, $7, 5(PC)" "cgij %r5,10,7,0x99cbe" memmove_s390x.s:133
+0x99ca6 6 "lg" "MOVD (R4), R3" "lg %r3,0(%r4)" memmove_s390x.s:134
+0x99cac 6 "lgh" "MOVH 8(R4), R7" "lgh %r7,8(%r4)" memmove_s390x.s:135
+0x99cb2 6 "stg" "MOVD R3, (R6)" "stg %r3,0(%r6)" memmove_s390x.s:136
+0x99cb8 4 "sth" "STH R7, 8(R6)" "sth %r7,8(%r6)" memmove_s390x.s:137
+0x99cbc 2 "bcr" "RET" "br %r14" memmove_s390x.s:138
+0x99cbe 6 "lg" "MOVD (R4), R3" "lg %r3,0(%r4)" memmove_s390x.s:140
+0x99cc4 6 "lgh" "MOVH 8(R4), R7" "lgh %r7,8(%r4)" memmove_s390x.s:141
+0x99cca 6 "lgb" "MOVB 10(R4), R8" "lgb %r8,10(%r4)" memmove_s390x.s:142
+0x99cd0 6 "stg" "MOVD R3, (R6)" "stg %r3,0(%r6)" memmove_s390x.s:143
+0x99cd6 4 "sth" "STH R7, 8(R6)" "sth %r7,8(%r6)" memmove_s390x.s:144
+0x99cda 4 "stc" "STC R8, 10(R6)" "stc %r8,10(%r6)" memmove_s390x.s:145
+0x99cde 2 "bcr" "RET" "br %r14" memmove_s390x.s:146
+0x99ce0 6 "cgij" "CGIJ R5, $12, $7, 5(PC)" "cgij %r5,12,7,0x99cfe" memmove_s390x.s:149
+0x99ce6 6 "lg" "MOVD (R4), R3" "lg %r3,0(%r4)" memmove_s390x.s:150
+0x99cec 6 "lgf" "MOVW 8(R4), R7" "lgf %r7,8(%r4)" memmove_s390x.s:151
+0x99cf2 6 "stg" "MOVD R3, (R6)" "stg %r3,0(%r6)" memmove_s390x.s:152
+0x99cf8 4 "st" "MOVW R7, 8(R6)" "st %r7,8(%r6)" memmove_s390x.s:153
+0x99cfc 2 "bcr" "RET" "br %r14" memmove_s390x.s:154
+0x99cfe 6 "cgij" "CGIJ R5, $13, $7, 6(PC)" "cgij %r5,13,7,0x99d26" memmove_s390x.s:156
+0x99d04 6 "lg" "MOVD (R4), R3" "lg %r3,0(%r4)" memmove_s390x.s:157
+0x99d0a 6 "lgf" "MOVW 8(R4), R7" "lgf %r7,8(%r4)" memmove_s390x.s:158
+0x99d10 6 "lgb" "MOVB 12(R4), R8" "lgb %r8,12(%r4)" memmove_s390x.s:159
+0x99d16 6 "stg" "MOVD R3, (R6)" "stg %r3,0(%r6)" memmove_s390x.s:160
+0x99d1c 4 "st" "MOVW R7, 8(R6)" "st %r7,8(%r6)" memmove_s390x.s:161
+0x99d20 4 "stc" "STC R8, 12(R6)" "stc %r8,12(%r6)" memmove_s390x.s:162
+0x99d24 2 "bcr" "RET" "br %r14" memmove_s390x.s:163
+0x99d26 6 "cgij" "CGIJ R5, $14, $7, 6(PC)" "cgij %r5,14,7,0x99d4e" memmove_s390x.s:165
+0x99d2c 6 "lg" "MOVD (R4), R3" "lg %r3,0(%r4)" memmove_s390x.s:166
+0x99d32 6 "lgf" "MOVW 8(R4), R7" "lgf %r7,8(%r4)" memmove_s390x.s:167
+0x99d38 6 "lgh" "MOVH 12(R4), R8" "lgh %r8,12(%r4)" memmove_s390x.s:168
+0x99d3e 6 "stg" "MOVD R3, (R6)" "stg %r3,0(%r6)" memmove_s390x.s:169
+0x99d44 4 "st" "MOVW R7, 8(R6)" "st %r7,8(%r6)" memmove_s390x.s:170
+0x99d48 4 "sth" "STH R8, 12(R6)" "sth %r8,12(%r6)" memmove_s390x.s:171
+0x99d4c 2 "bcr" "RET" "br %r14" memmove_s390x.s:172
+0x99d4e 6 "lg" "MOVD (R4), R3" "lg %r3,0(%r4)" memmove_s390x.s:174
+0x99d54 6 "lgf" "MOVW 8(R4), R7" "lgf %r7,8(%r4)" memmove_s390x.s:175
+0x99d5a 6 "lgh" "MOVH 12(R4), R8" "lgh %r8,12(%r4)" memmove_s390x.s:176
+0x99d60 6 "lgb" "MOVB 14(R4), R10" "lgb %r10,14(%r4)" memmove_s390x.s:177
+0x99d66 6 "stg" "MOVD R3, (R6)" "stg %r3,0(%r6)" memmove_s390x.s:178
+0x99d6c 4 "st" "MOVW R7, 8(R6)" "st %r7,8(%r6)" memmove_s390x.s:179
+0x99d70 4 "sth" "STH R8, 12(R6)" "sth %r8,12(%r6)" memmove_s390x.s:180
+0x99d74 4 "stc" "STC R10, 14(R6)" "stc %r10,14(%r6)" memmove_s390x.s:181
+0x99d78 2 "bcr" "RET" "br %r14" memmove_s390x.s:183
+0x99d7a 2 "" "BYTE 0x0000" ".byte 0x0000" memmove_s390x.s:183
+0x99d7c 2 "" "BYTE 0x0000" ".byte 0x0000" memmove_s390x.s:183
+0x99d7e 2 "" "BYTE 0x0000" ".byte 0x0000" memmove_s390x.s:183
+== main.sumInts 0x9b9a0 48 /Users/egon/code/gio/lensm/testdata/testprog/main.go
+0x9b9a0 6 "stg" "MOVD R2, 8(R15)" "stg %r2,8(%r15)" main.go:19
+0x9b9a6 4 "lghi" "MOVB $0, R0" "lghi %r0,0" main.go:21
+0x9b9aa 4 "brc" "BR 6(PC)" "j 0x9b9c2" main.go:21
+0x9b9ae 4 "lgr" "MOVD R2, R1" "lgr %r1,%r2" main.go:21
+0x9b9b2 6 "ag" "ADD (R2), R0" "ag %r0,0(%r2)" main.go:22
+0x9b9b8 6 "aghik" "ADD $8, R1, R2" "aghik %r2,%r1,8" main.go:21
+0x9b9be 4 "aghi" "SUB $1, R3" "aghi %r3,-1" main.go:21
+0x9b9c2 6 "cgij" "CMPBGT R3, $0, -3(PC)" "cgijh %r3,0,0x9b9ae" main.go:21
+0x9b9c8 4 "lgr" "MOVD R0, R2" "lgr %r2,%r0" main.go:24
+0x9b9cc 2 "bcr" "RET" "br %r14" main.go:24
+0x9b9ce 2 "" "BYTE 0x0000" ".byte 0x0000" main.go:24
+== main.dot 0x9b9d0 208 /Users/egon/code/gio/lensm/testdata/testprog/main.go
+0x9b9d0 6 "lg" "MOVD 16(R13), R10" "lg %r10,16(%r13)" main.go:28
+0x9b9d6 6 "clgrj" "CMPUBGE R10, R15, 18(PC)" "clgrjnl %r10,%r15,0x9ba42" main.go:28
+0x9b9dc 6 "stg" "MOVD R14, -8(R15)" "stg %r14,-8(%r15)" main.go:28
+0x9b9e2 6 "lay" "MOVD -8(R0)(R15*1), R15" "lay %r15,-8(%r15)" main.go:28
+0x9b9e8 6 "stg" "MOVD R14, (R15)" "stg %r14,0(%r15)" main.go:28
+0x9b9ee 6 "stg" "MOVD R2, 16(R15)" "stg %r2,16(%r15)" main.go:28
+0x9b9f4 6 "stg" "MOVD R5, 40(R15)" "stg %r5,40(%r15)" main.go:28
+0x9b9fa 4 "lzdr" "FMOVD $0, F1" "lzdr %f1" main.go:30
+0x9b9fe 4 "lghi" "MOVB $0, R0" "lghi %r0,0" main.go:30
+0x9ba02 4 "brc" "BR 4(PC)" "j 0x9ba12" main.go:30
+0x9ba06 4 "ld" "FMOVD (R5)(R1*1), F2" "ld %f2,0(%r1,%r5)" main.go:31
+0x9ba0a 4 "madbr" "FMADD F0, F2, F1" "madbr %f1,%f0,%f2" main.go:31
+0x9ba0e 4 "aghi" "ADD $1, R0" "aghi %r0,1" main.go:30
+0x9ba12 6 "cgrj" "CMPBLE R3, R0, 4(PC)" "cgrjnh %r3,%r0,0x9ba2c" main.go:30
+0x9ba18 6 "sllg" "SLD 3(R0), R0, R1" "sllg %r1,%r0,3" main.go:31
+0x9ba1e 4 "ld" "FMOVD (R2)(R1*1), F0" "ld %f0,0(%r1,%r2)" main.go:31
+0x9ba22 6 "clgrj" "CMPUBGT R6, R0, -4(PC)" "clgrjh %r6,%r0,0x9ba06" main.go:31
+0x9ba28 4 "brc" "BR 4(PC)" "j 0x9ba3a" main.go:31
+0x9ba2c 2 "ldr" "FMOVD F1, F0" "ldr %f0,%f1" main.go:33
+0x9ba2e 6 "lg" "MOVD (R15), R14" "lg %r14,0(%r15)" main.go:33
+0x9ba34 4 "aghi" "ADD $8, R15" "aghi %r15,8" main.go:33
+0x9ba38 2 "bcr" "RET" "br %r14" main.go:33
+0x9ba3a 6 "brasl" "CALL runtime.panicBounds(SB)" "brasl %r14,0x99790" main.go:31
+0x9ba40 2 "bcr" "NOPH" "nopr %r0" main.go:31
+0x9ba42 6 "stg" "MOVD R2, 8(R15)" "stg %r2,8(%r15)" main.go:28
+0x9ba48 6 "stg" "MOVD R3, 16(R15)" "stg %r3,16(%r15)" main.go:28
+0x9ba4e 6 "stg" "MOVD R4, 24(R15)" "stg %r4,24(%r15)" main.go:28
+0x9ba54 6 "stg" "MOVD R5, 32(R15)" "stg %r5,32(%r15)" main.go:28
+0x9ba5a 6 "stg" "MOVD R6, 40(R15)" "stg %r6,40(%r15)" main.go:28
+0x9ba60 6 "stg" "MOVD R7, 48(R15)" "stg %r7,48(%r15)" main.go:28
+0x9ba66 4 "lgr" "MOVD R14, R5" "lgr %r5,%r14" main.go:28
+0x9ba6a 6 "brasl" "CALL runtime.morestack_noctxt.abi0(SB)" "brasl %r14,0x99560" main.go:28
+0x9ba70 6 "lg" "MOVD 8(R15), R2" "lg %r2,8(%r15)" main.go:28
+0x9ba76 6 "lg" "MOVD 16(R15), R3" "lg %r3,16(%r15)" main.go:28
+0x9ba7c 6 "lg" "MOVD 24(R15), R4" "lg %r4,24(%r15)" main.go:28
+0x9ba82 6 "lg" "MOVD 32(R15), R5" "lg %r5,32(%r15)" main.go:28
+0x9ba88 6 "lg" "MOVD 40(R15), R6" "lg %r6,40(%r15)" main.go:28
+0x9ba8e 6 "lg" "MOVD 48(R15), R7" "lg %r7,48(%r15)" main.go:28
+0x9ba94 4 "brc" "BR main.dot(SB)" "j 0x9b9d0" main.go:28
+0x9ba98 2 "" "BYTE 0x0000" ".byte 0x0000" main.go:28
+0x9ba9a 2 "" "BYTE 0x0000" ".byte 0x0000" main.go:28
+0x9ba9c 2 "" "BYTE 0x0000" ".byte 0x0000" main.go:28
+0x9ba9e 2 "" "BYTE 0x0000" ".byte 0x0000" main.go:28
+== main.popcountAll 0x9baa0 96 /Users/egon/code/gio/lensm/testdata/testprog/main.go
+0x9baa0 6 "stg" "MOVD R2, 8(R15)" "stg %r2,8(%r15)" main.go:37
+0x9baa6 4 "lghi" "MOVB $0, R0" "lghi %r0,0" main.go:39
+0x9baaa 4 "brc" "BR 16(PC)" "j 0x9baec" main.go:39
+0x9baae 4 "lgr" "MOVD R2, R1" "lgr %r1,%r2" main.go:39
+0x9bab2 6 "lg" "MOVD (R2), R4" "lg %r4,0(%r2)" main.go:39
+0x9bab8 4 "popcnt" "POPCNT R4, R4, $0" "popcnt %r4,%r4,0" main.go:40
+0x9babc 6 "srlg" "SRD 32(R0), R4, R5" "srlg %r5,%r4,32" main.go:40
+0x9bac2 4 "ark" "ADDW R4, R5, R4" "ark %r4,%r5,%r4" main.go:40
+0x9bac6 6 "srlk" "SRW 16(R0), R4, R5" "srlk %r5,%r4,16" main.go:40
+0x9bacc 4 "ark" "ADDW R4, R5, R4" "ark %r4,%r5,%r4" main.go:40
+0x9bad0 6 "srlk" "SRW 8(R0), R4, R5" "srlk %r5,%r4,8" main.go:40
+0x9bad6 4 "ark" "ADDW R4, R5, R4" "ark %r4,%r5,%r4" main.go:40
+0x9bada 4 "llgcr" "MOVBZ R4, R4" "llgcr %r4,%r4" main.go:40
+0x9bade 4 "agrk" "ADD R0, R4, R0" "agrk %r0,%r4,%r0" main.go:40
+0x9bae2 6 "aghik" "ADD $8, R1, R2" "aghik %r2,%r1,8" main.go:39
+0x9bae8 4 "aghi" "SUB $1, R3" "aghi %r3,-1" main.go:39
+0x9baec 6 "cgij" "CMPBGT R3, $0, -10(PC)" "cgijh %r3,0,0x9baae" main.go:39
+0x9baf2 4 "lgr" "MOVD R0, R2" "lgr %r2,%r0" main.go:42
+0x9baf6 2 "bcr" "RET" "br %r14" main.go:42
+0x9baf8 2 "" "BYTE 0x0000" ".byte 0x0000" main.go:42
+0x9bafa 2 "" "BYTE 0x0000" ".byte 0x0000" main.go:42
+0x9bafc 2 "" "BYTE 0x0000" ".byte 0x0000" main.go:42
+0x9bafe 2 "" "BYTE 0x0000" ".byte 0x0000" main.go:42
+== main.collatzSteps 0x9bb00 80 /Users/egon/code/gio/lensm/testdata/testprog/main.go
+0x9bb00 4 "lghi" "MOVB $0, R0" "lghi %r0,0" main.go:48
+0x9bb04 4 "brc" "BR 3(PC)" "j 0x9bb10" main.go:48
+0x9bb08 4 "aghi" "ADD $1, R0" "aghi %r0,1" main.go:54
+0x9bb0c 4 "lgr" "MOVD R1, R2" "lgr %r2,%r1" main.go:48
+0x9bb10 6 "cgij" "CMPBEQ R2, $1, 9(PC)" "cgije %r2,1,0x9bb4a" main.go:48
+0x9bb16 6 "srlg" "SRD 63(R0), R2, R1" "srlg %r1,%r2,63" main.go:49
+0x9bb1c 4 "agrk" "ADD R2, R1" "agrk %r1,%r1,%r2" main.go:49
+0x9bb20 6 "risbg" "RISBGZ $63, $191, $0, R2, R3" "risbg %r3,%r2,63,191,0" main.go:49
+0x9bb26 6 "cgij" "CMPBNE R3, $0, 2(PC)" "cgijne %r3,0,0x9bb36" main.go:49
+0x9bb2c 6 "srag" "SRAD 1(R0), R1, R1" "srag %r1,%r1,1" main.go:49
+0x9bb32 4 "brc" "BR -10(PC)" "j 0x9bb08" main.go:50
+0x9bb36 6 "sllg" "SLD 1(R0), R2, R3" "sllg %r3,%r2,1" main.go:52
+0x9bb3c 4 "agrk" "ADD R2, R3, R2" "agrk %r2,%r3,%r2" main.go:52
+0x9bb40 6 "aghik" "ADD $1, R2, R1" "aghik %r1,%r2,1" main.go:52
+0x9bb46 4 "brc" "BR -15(PC)" "j 0x9bb08" main.go:52
+0x9bb4a 4 "lgr" "MOVD R0, R2" "lgr %r2,%r0" main.go:56
+0x9bb4e 2 "bcr" "RET" "br %r14" main.go:56
+== main.mat4Mul 0x9bb50 240 /Users/egon/code/gio/lensm/testdata/testprog/main.go
+0x9bb50 6 "lg" "MOVD 16(R13), R10" "lg %r10,16(%r13)" main.go:60
+0x9bb56 6 "aghik" "SUB $8, R15, R11" "aghik %r11,%r15,-8" main.go:60
+0x9bb5c 6 "clgrj" "CMPUBGE R10, R11, 31(PC)" "clgrjnl %r10,%r11,0x9bc18" main.go:60
+0x9bb62 6 "stg" "MOVD R14, -136(R15)" "stg %r14,-136(%r15)" main.go:60
+0x9bb68 6 "lay" "MOVD -136(R0)(R15*1), R15" "lay %r15,-136(%r15)" main.go:60
+0x9bb6e 6 "stg" "MOVD R14, (R15)" "stg %r14,0(%r15)" main.go:60
+0x9bb74 4 "la" "MOVD 144(R0)(R15*1), R1" "la %r1,144(%r15)" main.go:60
+0x9bb78 6 "xc" "XC $128, (R1), (R1)" "xc 0(128,%r1),0(%r1)" main.go:60
+0x9bb7e 4 "la" "MOVD 8(R0)(R15*1), R4" "la %r4,8(%r15)" main.go:61
+0x9bb82 6 "xc" "XC $128, (R4), (R4)" "xc 0(128,%r4),0(%r4)" main.go:61
+0x9bb88 4 "lghi" "MOVB $0, R0" "lghi %r0,0" main.go:62
+0x9bb8c 4 "brc" "BR 2(PC)" "j 0x9bb94" main.go:62
+0x9bb90 4 "aghi" "ADD $1, R0" "aghi %r0,1" main.go:62
+0x9bb94 6 "cgij" "CMPBGE R0, $4, 20(PC)" "cgijnl %r0,4,0x9bc0c" main.go:62
+0x9bb9a 4 "lghi" "MOVB $0, R5" "lghi %r5,0" main.go:63
+0x9bb9e 4 "brc" "BR 2(PC)" "j 0x9bba6" main.go:63
+0x9bba2 4 "aghi" "ADD $1, R5" "aghi %r5,1" main.go:63
+0x9bba6 6 "cgij" "CMPBGE R5, $4, -3(PC)" "cgijnl %r5,4,0x9bb90" main.go:63
+0x9bbac 6 "sllg" "SLD 2(R0), R0, R6" "sllg %r6,%r0,2" main.go:65
+0x9bbb2 4 "agrk" "ADD R5, R6, R7" "agrk %r7,%r6,%r5" main.go:65
+0x9bbb6 6 "sllg" "SLD 3(R0), R7, R7" "sllg %r7,%r7,3" main.go:65
+0x9bbbc 4 "lghi" "MOVB $0, R8" "lghi %r8,0" main.go:64
+0x9bbc0 4 "brc" "BR 16(PC)" "j 0x9bc02" main.go:64
+0x9bbc4 6 "llgc" "MOVBZ (R2), R10" "llgc %r10,0(%r2)" main.go:65
+0x9bbca 6 "llgc" "MOVBZ (R3), R10" "llgc %r10,0(%r3)" main.go:65
+0x9bbd0 4 "ld" "FMOVD 8(R15)(R7*1), F0" "ld %f0,8(%r7,%r15)" main.go:65
+0x9bbd4 4 "agrk" "ADD R6, R8, R9" "agrk %r9,%r8,%r6" main.go:65
+0x9bbd8 6 "sllg" "SLD 3(R0), R9, R9" "sllg %r9,%r9,3" main.go:65
+0x9bbde 4 "ld" "FMOVD (R2)(R9*1), F1" "ld %f1,0(%r9,%r2)" main.go:65
+0x9bbe2 6 "sllg" "SLD 2(R0), R8, R9" "sllg %r9,%r8,2" main.go:65
+0x9bbe8 4 "agrk" "ADD R5, R9" "agrk %r9,%r9,%r5" main.go:65
+0x9bbec 6 "sllg" "SLD 3(R0), R9, R9" "sllg %r9,%r9,3" main.go:65
+0x9bbf2 4 "ld" "FMOVD (R3)(R9*1), F2" "ld %f2,0(%r9,%r3)" main.go:65
+0x9bbf6 4 "madbr" "FMADD F1, F2, F0" "madbr %f0,%f1,%f2" main.go:65
+0x9bbfa 4 "std" "FMOVD F0, 8(R15)(R7*1)" "std %f0,8(%r7,%r15)" main.go:65
+0x9bbfe 4 "aghi" "ADD $1, R8" "aghi %r8,1" main.go:64
+0x9bc02 6 "cgij" "CMPBLT R8, $4, -10(PC)" "cgijl %r8,4,0x9bbc4" main.go:64
+0x9bc08 4 "brc" "BR -25(PC)" "j 0x9bba2" main.go:64
+0x9bc0c 6 "mvc" "MVC $128, (R1), (R4)" "mvc 0(128,%r1),0(%r4)" main.go:69
+0x9bc12 4 "aghi" "ADD $136, R15" "aghi %r15,136" main.go:69
+0x9bc16 2 "bcr" "RET" "br %r14" main.go:69
+0x9bc18 6 "stg" "MOVD R2, 136(R15)" "stg %r2,136(%r15)" main.go:60
+0x9bc1e 6 "stg" "MOVD R3, 144(R15)" "stg %r3,144(%r15)" main.go:60
+0x9bc24 4 "lgr" "MOVD R14, R5" "lgr %r5,%r14" main.go:60
+0x9bc28 6 "brasl" "CALL runtime.morestack_noctxt.abi0(SB)" "brasl %r14,0x99560" main.go:60
+0x9bc2e 6 "lg" "MOVD 136(R15), R2" "lg %r2,136(%r15)" main.go:60
+0x9bc34 6 "lg" "MOVD 144(R15), R3" "lg %r3,144(%r15)" main.go:60
+0x9bc3a 4 "brc" "BR main.mat4Mul(SB)" "j 0x9bb50" main.go:60
+0x9bc3e 2 "" "BYTE 0x0000" ".byte 0x0000" main.go:60
+== main.normalize 0x9bc40 112 /Users/egon/code/gio/lensm/testdata/testprog/main.go
+0x9bc40 6 "stg" "MOVD R2, 8(R15)" "stg %r2,8(%r15)" main.go:73
+0x9bc46 4 "lgr" "MOVD R2, R0" "lgr %r0,%r2" main.go:75
+0x9bc4a 4 "lzdr" "FMOVD $0, F0" "lzdr %f0" main.go:75
+0x9bc4e 4 "lgr" "MOVD R3, R1" "lgr %r1,%r3" main.go:75
+0x9bc52 4 "brc" "BR 6(PC)" "j 0x9bc6c" main.go:75
+0x9bc56 4 "lgr" "MOVD R2, R4" "lgr %r4,%r2" main.go:75
+0x9bc5a 4 "ld" "FMOVD (R2), F1" "ld %f1,0(%r2)" main.go:75
+0x9bc5e 4 "madbr" "FMADD F1, F1, F0" "madbr %f0,%f1,%f1" main.go:76
+0x9bc62 6 "aghik" "ADD $8, R4, R2" "aghik %r2,%r4,8" main.go:75
+0x9bc68 4 "aghi" "SUB $1, R3" "aghi %r3,-1" main.go:75
+0x9bc6c 6 "cgij" "CMPBGT R3, $0, -3(PC)" "cgijh %r3,0,0x9bc56" main.go:75
+0x9bc72 2 "bcr" "NOPH" "nopr %r0" main.go:78
+0x9bc74 4 "sqdbr" "FSQRT F0, F0" "sqdbr %f0,%f0" sqrt.go:94
+0x9bc78 4 "lghi" "MOVB $0, R2" "lghi %r2,0" main.go:79
+0x9bc7c 4 "brc" "BR 7(PC)" "j 0x9bc9a" main.go:79
+0x9bc80 6 "sllg" "SLD 3(R0), R2, R3" "sllg %r3,%r2,3" main.go:80
+0x9bc86 4 "lgr" "MOVD R0, R4" "lgr %r4,%r0" main.go:80
+0x9bc8a 4 "ld" "FMOVD (R4)(R3*1), F1" "ld %f1,0(%r3,%r4)" main.go:80
+0x9bc8e 4 "ddbr" "FDIV F0, F1" "ddbr %f1,%f0" main.go:80
+0x9bc92 4 "std" "FMOVD F1, (R4)(R3*1)" "std %f1,0(%r3,%r4)" main.go:80
+0x9bc96 4 "aghi" "ADD $1, R2" "aghi %r2,1" main.go:79
+0x9bc9a 6 "cgrj" "CMPBGT R1, R2, -4(PC)" "cgrjh %r1,%r2,0x9bc80" main.go:79
+0x9bca0 2 "bcr" "RET" "br %r14" main.go:82
+0x9bca2 2 "" "BYTE 0x0000" ".byte 0x0000" main.go:82
+0x9bca4 2 "" "BYTE 0x0000" ".byte 0x0000" main.go:82
+0x9bca6 2 "" "BYTE 0x0000" ".byte 0x0000" main.go:82
+0x9bca8 2 "" "BYTE 0x0000" ".byte 0x0000" main.go:82
+0x9bcaa 2 "" "BYTE 0x0000" ".byte 0x0000" main.go:82
+0x9bcac 2 "" "BYTE 0x0000" ".byte 0x0000" main.go:82
+0x9bcae 2 "" "BYTE 0x0000" ".byte 0x0000" main.go:82
+== main.main 0x9bcb0 512 /Users/egon/code/gio/lensm/testdata/testprog/main.go
+0x9bcb0 6 "lg" "MOVD 16(R13), R10" "lg %r10,16(%r13)" main.go:84
+0x9bcb6 6 "aghik" "SUB $568, R15, R11" "aghik %r11,%r15,-568" main.go:84
+0x9bcbc 6 "clgrj" "CMPUBGE R10, R11, 78(PC)" "clgrjnl %r10,%r11,0x9be94" main.go:84
+0x9bcc2 6 "stg" "MOVD R14, -696(R15)" "stg %r14,-696(%r15)" main.go:84
+0x9bcc8 6 "lay" "MOVD -696(R0)(R15*1), R15" "lay %r15,-696(%r15)" main.go:84
+0x9bcce 6 "stg" "MOVD R14, (R15)" "stg %r14,0(%r15)" main.go:84
+0x9bcd4 6 "mvghi" "MVGHI 632(R15), $3" "mvghi 632(%r15),3" main.go:85
+0x9bcda 6 "mvghi" "MVGHI 640(R15), $1" "mvghi 640(%r15),1" main.go:85
+0x9bce0 6 "mvghi" "MVGHI 648(R15), $4" "mvghi 648(%r15),4" main.go:85
+0x9bce6 6 "mvghi" "MVGHI 656(R15), $1" "mvghi 656(%r15),1" main.go:85
+0x9bcec 6 "mvghi" "MVGHI 664(R15), $5" "mvghi 664(%r15),5" main.go:85
+0x9bcf2 6 "mvghi" "MVGHI 672(R15), $9" "mvghi 672(%r15),9" main.go:85
+0x9bcf8 6 "mvghi" "MVGHI 680(R15), $2" "mvghi 680(%r15),2" main.go:85
+0x9bcfe 6 "mvghi" "MVGHI 688(R15), $6" "mvghi 688(%r15),6" main.go:85
+0x9bd04 6 "larl" "MOVD $f64.400599999999999a(SB), R10" "larl %r10,0xa7cc8" main.go:86
+0x9bd0a 4 "ld" "FMOVD (R10), F0" "ld %f0,0(%r10)" main.go:86
+0x9bd0e 4 "std" "FMOVD F0, 600(R15)" "std %f0,600(%r15)" main.go:86
+0x9bd12 6 "larl" "MOVD $f64.3ffccccccccccccd(SB), R10" "larl %r10,0xa7cc0" main.go:86
+0x9bd18 4 "ld" "FMOVD (R10), F0" "ld %f0,0(%r10)" main.go:86
+0x9bd1c 4 "std" "FMOVD F0, 608(R15)" "std %f0,608(%r15)" main.go:86
+0x9bd20 6 "larl" "MOVD $f64.4006666666666666(SB), R10" "larl %r10,0xa7cd0" main.go:86
+0x9bd26 4 "ld" "FMOVD (R10), F1" "ld %f1,0(%r10)" main.go:86
+0x9bd2a 4 "std" "FMOVD F1, 616(R15)" "std %f1,616(%r15)" main.go:86
+0x9bd2e 4 "std" "FMOVD F0, 624(R15)" "std %f0,624(%r15)" main.go:86
+0x9bd32 6 "llilf" "MOVD $-559038737, R0" "llilf %r0,-559038737" main.go:87
+0x9bd38 6 "stg" "MOVD R0, 576(R15)" "stg %r0,576(%r15)" main.go:87
+0x9bd3e 6 "llilf" "MOVD $-889275714, R1" "llilf %r1,-889275714" main.go:87
+0x9bd44 6 "lgfi" "MOVW $14531089, R2" "lgfi %r2,14531089" main.go:87
+0x9bd4a 6 "stmg" "STMG R1, R2, 584(R15)" "stmg %r1,%r2,584(%r15)" main.go:87
+0x9bd50 4 "la" "MOVD 408(R0)(R15*1), R2" "la %r2,408(%r15)" main.go:89
+0x9bd54 6 "xc" "XC $128, (R2), (R2)" "xc 0(128,%r2),0(%r2)" main.go:89
+0x9bd5a 4 "la" "MOVD 280(R0)(R15*1), R3" "la %r3,280(%r15)" main.go:89
+0x9bd5e 6 "xc" "XC $128, (R3), (R3)" "xc 0(128,%r3),0(%r3)" main.go:89
+0x9bd64 4 "lghi" "MOVB $0, R0" "lghi %r0,0" main.go:90
+0x9bd68 4 "brc" "BR 10(PC)" "j 0x9bd90" main.go:90
+0x9bd6c 6 "sllg" "SLD 3(R0), R0, R1" "sllg %r1,%r0,3" main.go:91
+0x9bd72 4 "cdgbr" "CDGBR F0, R0" "cdgbr %f0,%r0" main.go:91
+0x9bd76 4 "std" "FMOVD F0, 408(R15)(R1*1)" "std %f0,408(%r1,%r15)" main.go:91
+0x9bd7a 6 "aghik" "SUB $15, R0, R4" "aghik %r4,%r0,-15" main.go:92
+0x9bd80 4 "lcgr" "NEG R4" "lcgr %r4,%r4" main.go:92
+0x9bd84 4 "cdgbr" "CDGBR F0, R4" "cdgbr %f0,%r4" main.go:92
+0x9bd88 4 "std" "FMOVD F0, 280(R15)(R1*1)" "std %f0,280(%r1,%r15)" main.go:92
+0x9bd8c 4 "aghi" "ADD $1, R0" "aghi %r0,1" main.go:90
+0x9bd90 6 "cgij" "CMPBLT R0, $16, -6(PC)" "cgijl %r0,16,0x9bd6c" main.go:90
+0x9bd96 6 "brasl" "CALL main.mat4Mul(SB)" "brasl %r14,0x9bb50" main.go:94
+0x9bd9c 4 "la" "MOVD 152(R0)(R15*1), R1" "la %r1,152(%r15)" main.go:94
+0x9bda0 4 "la" "MOVD 8(R0)(R15*1), R4" "la %r4,8(%r15)" main.go:94
+0x9bda4 6 "mvc" "MVC $128, (R1), (R4)" "mvc 0(128,%r1),0(%r4)" main.go:94
+0x9bdaa 4 "la" "MOVD 600(R0)(R15*1), R2" "la %r2,600(%r15)" main.go:95
+0x9bdae 4 "lghi" "MOVB $4, R3" "lghi %r3,4" main.go:95
+0x9bdb2 4 "lgr" "MOVD R3, R4" "lgr %r4,%r3" main.go:95
+0x9bdb6 6 "brasl" "CALL main.normalize(SB)" "brasl %r14,0x9bc40" main.go:95
+0x9bdbc 4 "la" "MOVD 632(R0)(R15*1), R2" "la %r2,632(%r15)" main.go:97
+0x9bdc0 4 "lghi" "MOVB $8, R3" "lghi %r3,8" main.go:97
+0x9bdc4 4 "lgr" "MOVD R3, R4" "lgr %r4,%r3" main.go:97
+0x9bdc8 6 "brasl" "CALL main.sumInts(SB)" "brasl %r14,0x9b9a0" main.go:97
+0x9bdce 6 "stg" "MOVD R2, 568(R15)" "stg %r2,568(%r15)" main.go:97
+0x9bdd4 4 "la" "MOVD 600(R0)(R15*1), R2" "la %r2,600(%r15)" main.go:97
+0x9bdd8 4 "lghi" "MOVB $4, R3" "lghi %r3,4" main.go:97
+0x9bddc 4 "lgr" "MOVD R3, R4" "lgr %r4,%r3" main.go:97
+0x9bde0 4 "lgr" "MOVD R2, R5" "lgr %r5,%r2" main.go:97
+0x9bde4 4 "lgr" "MOVD R3, R6" "lgr %r6,%r3" main.go:97
+0x9bde8 4 "lgr" "MOVD R3, R7" "lgr %r7,%r3" main.go:97
+0x9bdec 6 "brasl" "CALL main.dot(SB)" "brasl %r14,0x9b9d0" main.go:97
+0x9bdf2 4 "std" "FMOVD F0, 560(R15)" "std %f0,560(%r15)" main.go:97
+0x9bdf6 4 "la" "MOVD 576(R0)(R15*1), R2" "la %r2,576(%r15)" main.go:97
+0x9bdfa 4 "lghi" "MOVB $3, R3" "lghi %r3,3" main.go:97
+0x9bdfe 4 "lgr" "MOVD R3, R4" "lgr %r4,%r3" main.go:97
+0x9be02 6 "brasl" "CALL main.popcountAll(SB)" "brasl %r14,0x9baa0" main.go:97
+0x9be08 6 "stg" "MOVD R2, 552(R15)" "stg %r2,552(%r15)" main.go:97
+0x9be0e 4 "lghi" "MOVB $27, R2" "lghi %r2,27" main.go:97
+0x9be12 6 "brasl" "CALL main.collatzSteps(SB)" "brasl %r14,0x9bb00" main.go:97
+0x9be18 6 "stg" "MOVD R2, 544(R15)" "stg %r2,544(%r15)" main.go:97
+0x9be1e 4 "ld" "FMOVD 192(R15), F0" "ld %f0,192(%r15)" main.go:97
+0x9be22 4 "std" "FMOVD F0, 536(R15)" "std %f0,536(%r15)" main.go:97
+0x9be26 6 "brasl" "CALL runtime.printlock(SB)" "brasl %r14,0x5c130" main.go:97
+0x9be2c 6 "lg" "MOVD 568(R15), R2" "lg %r2,568(%r15)" main.go:97
+0x9be32 6 "brasl" "CALL runtime.printint(SB)" "brasl %r14,0x5c750" main.go:97
+0x9be38 6 "brasl" "CALL runtime.printsp(SB)" "brasl %r14,0x5c3c0" main.go:97
+0x9be3e 4 "ld" "FMOVD 560(R15), F0" "ld %f0,560(%r15)" main.go:97
+0x9be42 6 "brasl" "CALL runtime.printfloat64(SB)" "brasl %r14,0x5c4d0" main.go:97
+0x9be48 6 "brasl" "CALL runtime.printsp(SB)" "brasl %r14,0x5c3c0" main.go:97
+0x9be4e 6 "lg" "MOVD 552(R15), R2" "lg %r2,552(%r15)" main.go:97
+0x9be54 6 "brasl" "CALL runtime.printint(SB)" "brasl %r14,0x5c750" main.go:97
+0x9be5a 6 "brasl" "CALL runtime.printsp(SB)" "brasl %r14,0x5c3c0" main.go:97
+0x9be60 6 "lg" "MOVD 544(R15), R2" "lg %r2,544(%r15)" main.go:97
+0x9be66 6 "brasl" "CALL runtime.printint(SB)" "brasl %r14,0x5c750" main.go:97
+0x9be6c 6 "brasl" "CALL runtime.printsp(SB)" "brasl %r14,0x5c3c0" main.go:97
+0x9be72 4 "ld" "FMOVD 536(R15), F0" "ld %f0,536(%r15)" main.go:97
+0x9be76 6 "brasl" "CALL runtime.printfloat64(SB)" "brasl %r14,0x5c4d0" main.go:97
+0x9be7c 6 "brasl" "CALL runtime.printnl(SB)" "brasl %r14,0x5c410" main.go:97
+0x9be82 6 "brasl" "CALL runtime.printunlock(SB)" "brasl %r14,0x5c1d0" main.go:97
+0x9be88 6 "lg" "MOVD (R15), R14" "lg %r14,0(%r15)" main.go:98
+0x9be8e 4 "aghi" "ADD $696, R15" "aghi %r15,696" main.go:98
+0x9be92 2 "bcr" "RET" "br %r14" main.go:98
+0x9be94 4 "lgr" "MOVD R14, R5" "lgr %r5,%r14" main.go:84
+0x9be98 6 "brasl" "CALL runtime.morestack_noctxt.abi0(SB)" "brasl %r14,0x99560" main.go:84
+0x9be9e 4 "brc" "BR main.main(SB)" "j 0x9bcb0" main.go:84
+0x9bea2 2 "" "BYTE 0x0000" ".byte 0x0000" main.go:84
+0x9bea4 2 "" "BYTE 0x0000" ".byte 0x0000" main.go:84
+0x9bea6 2 "" "BYTE 0x0000" ".byte 0x0000" main.go:84
+0x9bea8 2 "" "BYTE 0x0000" ".byte 0x0000" main.go:84
+0x9beaa 2 "" "BYTE 0x0000" ".byte 0x0000" main.go:84
+0x9beac 2 "" "BYTE 0x0000" ".byte 0x0000" main.go:84
+0x9beae 2 "" "BYTE 0x0000" ".byte 0x0000" main.go:84

@@ -1,0 +1,2432 @@
+arch=loong64 funcs=1487 sha256=cf6b2195a2bfbdb0f82099fb366c2bf682213dec18d35c8ab6ddab8c48a9501d
+== runtime.runGCProg 0x2ebd0 1104 /usr/local/go/src/runtime/mbitmap.go
+0x2ebd0 4 "LD.D" "MOVV 16(R22), R20" "ld.d $t8, $fp, 16" mbitmap.go:1565
+0x2ebd4 4 "SLTU" "SGTU R3, R20" "sltu $t8, $t8, $sp" mbitmap.go:1565
+0x2ebd8 4 "BEQZ" "BEQ R20, 266(PC)" "beqz $t8, 1064" mbitmap.go:1565
+0x2ebdc 4 "ST.D" "MOVV R1, -8(R3)" "st.d $ra, $sp, -8" mbitmap.go:1565
+0x2ebe0 4 "ADDI.D" "ADDV $-8, R3" "addi.d $sp, $sp, -8" mbitmap.go:1565
+0x2ebe4 4 "ST.D" "MOVV R1, 0(R3)" "st.d $ra, $sp, 0" mbitmap.go:1565
+0x2ebe8 4 "OR" "MOVV R0, R6" "move $a2, $zero" mbitmap.go:1577
+0x2ebec 4 "OR" "MOVV R5, R7" "move $a3, $a1" mbitmap.go:1577
+0x2ebf0 4 "OR" "MOVV R0, R8" "move $a4, $zero" mbitmap.go:1577
+0x2ebf4 4 "B" "JMP 12(PC)" "b 48" mbitmap.go:1577
+0x2ebf8 4 "ANDI" "NOOP" "nop" mbitmap.go:1577
+0x2ebfc 4 "ANDI" "NOOP" "nop" mbitmap.go:1577
+0x2ec00 4 "OR" "MOVV R12, R4" "move $a0, $t0" mbitmap.go:1577
+0x2ec04 4 "OR" "MOVV R13, R5" "move $a1, $t1" mbitmap.go:1577
+0x2ec08 4 "B" "JMP 7(PC)" "b 28" mbitmap.go:1577
+0x2ec0c 4 "ANDI" "NOOP" "nop" mbitmap.go:1577
+0x2ec10 4 "ST.B" "MOVB R6, 0(R5)" "st.b $a2, $a1, 0" mbitmap.go:1578
+0x2ec14 4 "ANDI" "NOOP" "nop" mbitmap.go:1579
+0x2ec18 4 "ADDI.D" "ADDV $-8, R8" "addi.d $a4, $a4, -8" mbitmap.go:1577
+0x2ec1c 4 "SRLI.D" "SRLV $8, R6" "srli.d $a2, $a2, 0x8" mbitmap.go:1580
+0x2ec20 4 "ADDI.D" "ADDV $1, R5" "addi.d $a1, $a1, 1" mbitmap.go:1056
+0x2ec24 4 "ORI" "MOVW $8, R9" "ori $a5, $zero, 0x8" mbitmap.go:1577
+0x2ec28 4 "BGEU" "BGEU R8, R9, -6(PC)" "bgeu $a4, $a5, -24" mbitmap.go:1577
+0x2ec2c 4 "LD.BU" "MOVBU 0(R4), R10" "ld.bu $a6, $a0, 0" mbitmap.go:1584
+0x2ec30 4 "ANDI" "NOOP" "nop" mbitmap.go:1585
+0x2ec34 4 "ANDI" "AND $127, R10, R11" "andi $a7, $a6, 0x7f" mbitmap.go:1586
+0x2ec38 4 "ADDI.D" "ADDV $1, R4, R12" "addi.d $t0, $a0, 1" mbitmap.go:1056
+0x2ec3c 4 "ANDI" "AND $128, R10, R13" "andi $t1, $a6, 0x80" mbitmap.go:1587
+0x2ec40 4 "BNEZ" "BNE R13, 5(PC)" "bnez $t1, 20" mbitmap.go:1587
+0x2ec44 4 "BEQZ" "BEQ R11, 86(PC)" "beqz $a7, 344" mbitmap.go:1589
+0x2ec48 4 "SRLI.D" "SRLV $3, R11, R9" "srli.d $a5, $a7, 0x3" mbitmap.go:1593
+0x2ec4c 4 "OR" "MOVV R0, R11" "move $a7, $zero" mbitmap.go:1594
+0x2ec50 4 "B" "JMP 222(PC)" "b 888" mbitmap.go:1594
+0x2ec54 4 "BNEZ" "BNE R11, 7(PC)" "bnez $a7, 28" mbitmap.go:1610
+0x2ec58 4 "OR" "MOVV R0, R10" "move $a6, $zero" mbitmap.go:1610
+0x2ec5c 4 "OR" "MOVV R0, R11" "move $a7, $zero" mbitmap.go:1610
+0x2ec60 4 "B" "JMP 181(PC)" "b 724" mbitmap.go:1610
+0x2ec64 4 "ANDI" "NOOP" "nop" mbitmap.go:1610
+0x2ec68 4 "ANDI" "NOOP" "nop" mbitmap.go:1610
+0x2ec6c 4 "ANDI" "NOOP" "nop" mbitmap.go:1610
+0x2ec70 4 "OR" "MOVV R0, R10" "move $a6, $zero" mbitmap.go:1624
+0x2ec74 4 "OR" "MOVV R0, R13" "move $t1, $zero" mbitmap.go:1624
+0x2ec78 4 "B" "JMP 3(PC)" "b 12" mbitmap.go:1624
+0x2ec7c 4 "ANDI" "NOOP" "nop" mbitmap.go:1624
+0x2ec80 4 "ADDI.D" "ADDV $7, R13" "addi.d $t1, $t1, 7" mbitmap.go:1623
+0x2ec84 4 "LD.BU" "MOVBU 0(R12), R14" "ld.bu $t2, $t0, 0" mbitmap.go:1624
+0x2ec88 4 "ANDI" "AND $127, R14, R15" "andi $t3, $t2, 0x7f" mbitmap.go:1626
+0x2ec8c 4 "SLL.D" "SLLV R13, R15" "sll.d $t3, $t3, $t1" mbitmap.go:1626
+0x2ec90 4 "SLTUI" "SGTU $64, R13, R16" "sltui $t4, $t1, 64" mbitmap.go:1626
+0x2ec94 4 "MASKEQZ" "MASKEQZ R16, R15" "maskeqz $t3, $t3, $t4" mbitmap.go:1626
+0x2ec98 4 "OR" "OR R15, R10" "or $a6, $a6, $t3" mbitmap.go:1626
+0x2ec9c 4 "ADDI.D" "ADDV $1, R12" "addi.d $t0, $t0, 1" mbitmap.go:1056
+0x2eca0 4 "ANDI" "NOOP" "nop" mbitmap.go:1625
+0x2eca4 4 "ANDI" "AND $128, R14" "andi $t2, $t2, 0x80" mbitmap.go:1627
+0x2eca8 4 "BNEZ" "BNE R14, -10(PC)" "bnez $t2, -40" mbitmap.go:1627
+0x2ecac 4 "MUL.D" "MULV R10, R11, R10" "mul.d $a6, $a7, $a6" mbitmap.go:1631
+0x2ecb0 4 "ORI" "MOVW $57, R4" "ori $a0, $zero, 0x39" mbitmap.go:1642
+0x2ecb4 4 "BLTU" "BLTU R4, R11, 6(PC)" "bltu $a0, $a7, 24" mbitmap.go:1642
+0x2ecb8 4 "ANDI" "NOOP" "nop" mbitmap.go:1648
+0x2ecbc 4 "ADDI.D" "ADDV $-1, R5, R13" "addi.d $t1, $a1, -1" mbitmap.go:1069
+0x2ecc0 4 "OR" "MOVV R8, R14" "move $t2, $a4" mbitmap.go:1577
+0x2ecc4 4 "OR" "MOVV R6, R15" "move $t3, $a2" mbitmap.go:1577
+0x2ecc8 4 "B" "JMP 68(PC)" "b 272" mbitmap.go:1649
+0x2eccc 4 "SUB.D" "SUBV R8, R11, R9" "sub.d $a5, $a7, $a4" mbitmap.go:1723
+0x2ecd0 4 "ADDI.D" "ADDV $7, R9, R11" "addi.d $a7, $a5, 7" mbitmap.go:1725
+0x2ecd4 4 "SRLI.D" "SRLV $3, R11" "srli.d $a7, $a7, 0x3" mbitmap.go:1725
+0x2ecd8 4 "OR" "MOVV R5, R13" "move $t1, $a1" mbitmap.go:1045
+0x2ecdc 4 "SUB.D" "SUBV R11, R5" "sub.d $a1, $a1, $a7" mbitmap.go:1045
+0x2ece0 4 "OR" "MOVV R5, R11" "move $a7, $a1" mbitmap.go:1045
+0x2ece4 4 "ANDI" "AND $7, R9" "andi $a5, $a5, 0x7" mbitmap.go:1726
+0x2ece8 4 "BEQZ" "BEQ R9, 12(PC)" "beqz $a5, 48" mbitmap.go:1726
+0x2ecec 4 "LD.BU" "MOVBU 0(R5), R14" "ld.bu $t2, $a1, 0" mbitmap.go:1727
+0x2ecf0 4 "ORI" "MOVW $8, R15" "ori $t3, $zero, 0x8" mbitmap.go:1727
+0x2ecf4 4 "SUB.D" "SUBV R9, R15, R16" "sub.d $t4, $t3, $a5" mbitmap.go:1727
+0x2ecf8 4 "SRL.D" "SRLV R16, R14" "srl.d $t2, $t2, $t4" mbitmap.go:1727
+0x2ecfc 4 "SLL.D" "SLLV R8, R14" "sll.d $t2, $t2, $a4" mbitmap.go:1727
+0x2ed00 4 "ADDI.D" "ADDV $1, R11, R5" "addi.d $a1, $a7, 1" mbitmap.go:1056
+0x2ed04 4 "OR" "OR R14, R6" "or $a2, $a2, $t2" mbitmap.go:1727
+0x2ed08 4 "ANDI" "NOOP" "nop" mbitmap.go:1728
+0x2ed0c 4 "ADD.D" "ADDV R8, R9, R8" "add.d $a4, $a5, $a4" mbitmap.go:1729
+0x2ed10 4 "SUB.D" "SUBV R9, R10" "sub.d $a6, $a6, $a5" mbitmap.go:1730
+0x2ed14 4 "B" "JMP 2(PC)" "b 8" mbitmap.go:1730
+0x2ed18 4 "ORI" "MOVW $8, R15" "ori $t3, $zero, 0x8" mbitmap.go:1730
+0x2ed1c 4 "SRLI.D" "SRLV $3, R10, R9" "srli.d $a5, $a6, 0x3" mbitmap.go:1734
+0x2ed20 4 "SLTUI" "SGTU $64, R8, R11" "sltui $a7, $a4, 64" mbitmap.go:1735
+0x2ed24 4 "B" "JMP 14(PC)" "b 56" mbitmap.go:1734
+0x2ed28 4 "ANDI" "NOOP" "nop" mbitmap.go:1734
+0x2ed2c 4 "ANDI" "NOOP" "nop" mbitmap.go:1734
+0x2ed30 4 "LD.BU" "MOVBU 0(R5), R14" "ld.bu $t2, $a1, 0" mbitmap.go:1735
+0x2ed34 4 "SLL.D" "SLLV R8, R14" "sll.d $t2, $t2, $a4" mbitmap.go:1735
+0x2ed38 4 "MASKEQZ" "MASKEQZ R11, R14" "maskeqz $t2, $t2, $a7" mbitmap.go:1735
+0x2ed3c 4 "OR" "OR R14, R6, R14" "or $t2, $a2, $t2" mbitmap.go:1735
+0x2ed40 4 "ANDI" "NOOP" "nop" mbitmap.go:1736
+0x2ed44 4 "ST.B" "MOVB R14, 0(R13)" "st.b $t2, $t1, 0" mbitmap.go:1737
+0x2ed48 4 "ANDI" "NOOP" "nop" mbitmap.go:1738
+0x2ed4c 4 "SRLI.D" "SRLV $8, R14, R6" "srli.d $a2, $t2, 0x8" mbitmap.go:1739
+0x2ed50 4 "ADDI.D" "ADDV $-1, R9" "addi.d $a5, $a5, -1" mbitmap.go:1734
+0x2ed54 4 "ADDI.D" "ADDV $1, R5" "addi.d $a1, $a1, 1" mbitmap.go:1056
+0x2ed58 4 "ADDI.D" "ADDV $1, R13" "addi.d $t1, $t1, 1" mbitmap.go:1056
+0x2ed5c 4 "BNEZ" "BNE R9, -11(PC)" "bnez $a5, -44" mbitmap.go:1734
+0x2ed60 4 "ANDI" "AND $7, R10, R9" "andi $a5, $a6, 0x7" mbitmap.go:1742
+0x2ed64 4 "BEQZ" "BEQ R9, 12(PC)" "beqz $a5, 48" mbitmap.go:1742
+0x2ed68 4 "LD.BU" "MOVBU 0(R5), R5" "ld.bu $a1, $a1, 0" mbitmap.go:1743
+0x2ed6c 4 "ORI" "MOVW $1, R10" "ori $a6, $zero, 0x1" mbitmap.go:1743
+0x2ed70 4 "SLL.D" "SLLV R9, R10, R11" "sll.d $a7, $a6, $a5" mbitmap.go:1743
+0x2ed74 4 "ADDI.D" "ADDV $-1, R11" "addi.d $a7, $a7, -1" mbitmap.go:1743
+0x2ed78 4 "AND" "AND R5, R11, R5" "and $a1, $a7, $a1" mbitmap.go:1743
+0x2ed7c 4 "SLL.D" "SLLV R8, R5" "sll.d $a1, $a1, $a4" mbitmap.go:1743
+0x2ed80 4 "SLTUI" "SGTU $64, R8, R11" "sltui $a7, $a4, 64" mbitmap.go:1743
+0x2ed84 4 "MASKEQZ" "MASKEQZ R11, R5" "maskeqz $a1, $a1, $a7" mbitmap.go:1743
+0x2ed88 4 "OR" "OR R5, R6" "or $a2, $a2, $a1" mbitmap.go:1743
+0x2ed8c 4 "ADD.D" "ADDV R8, R9, R8" "add.d $a4, $a5, $a4" mbitmap.go:1744
+0x2ed90 4 "B" "JMP -100(PC)" "b -400" mbitmap.go:1744
+0x2ed94 4 "ORI" "MOVW $1, R10" "ori $a6, $zero, 0x1" mbitmap.go:1744
+0x2ed98 4 "B" "JMP -102(PC)" "b -408" mbitmap.go:1742
+0x2ed9c 4 "OR" "MOVV R5, R9" "move $a5, $a1" mbitmap.go:1749
+0x2eda0 4 "SUB.D" "SUBV R7, R9, R7" "sub.d $a3, $a5, $a3" mbitmap.go:1749
+0x2eda4 4 "SUB.D" "NEGV R8, R9" "sub.d $a5, $zero, $a4" mbitmap.go:1750
+0x2eda8 4 "ANDI" "AND $7, R9" "andi $a5, $a5, 0x7" mbitmap.go:1750
+0x2edac 4 "ALSL.D" "Unknown ALSL.D $3, R8, R7, R4" "alsl.d $a0, $a3, $a4, 0x3" mbitmap.go:1749
+0x2edb0 4 "ADD.D" "ADDV R8, R9, R7" "add.d $a3, $a5, $a4" mbitmap.go:1750
+0x2edb4 4 "B" "JMP 116(PC)" "b 464" mbitmap.go:1751
+0x2edb8 4 "ANDI" "NOOP" "nop" mbitmap.go:1751
+0x2edbc 4 "ANDI" "NOOP" "nop" mbitmap.go:1751
+0x2edc0 4 "SLLI.D" "SLLV $8, R6, R16" "slli.d $t4, $a2, 0x8" mbitmap.go:1650
+0x2edc4 4 "LD.BU" "MOVBU 0(R13), R17" "ld.bu $t5, $t1, 0" mbitmap.go:1651
+0x2edc8 4 "OR" "OR R17, R16, R6" "or $a2, $t4, $t5" mbitmap.go:1651
+0x2edcc 4 "ANDI" "NOOP" "nop" mbitmap.go:1652
+0x2edd0 4 "ADDI.D" "ADDV $8, R8" "addi.d $a4, $a4, 8" mbitmap.go:1653
+0x2edd4 4 "ADDI.D" "ADDV $-1, R13" "addi.d $t1, $t1, -1" mbitmap.go:1069
+0x2edd8 4 "BLTU" "BLTU R8, R11, -6(PC)" "bltu $a4, $a7, -24" mbitmap.go:1649
+0x2eddc 4 "BGEU" "BGEU R11, R8, 6(PC)" "bgeu $a7, $a4, 24" mbitmap.go:1660
+0x2ede0 4 "SUB.D" "SUBV R11, R8, R13" "sub.d $t1, $a4, $a7" mbitmap.go:1661
+0x2ede4 4 "SRL.D" "SRLV R13, R6, R16" "srl.d $t4, $a2, $t1" mbitmap.go:1661
+0x2ede8 4 "SLTUI" "SGTU $64, R13" "sltui $t1, $t1, 64" mbitmap.go:1661
+0x2edec 4 "MASKEQZ" "MASKEQZ R13, R16, R6" "maskeqz $a2, $t4, $t1" mbitmap.go:1661
+0x2edf0 4 "B" "JMP 2(PC)" "b 8" mbitmap.go:1662
+0x2edf4 4 "OR" "MOVV R8, R11" "move $a7, $a4" mbitmap.go:1666
+0x2edf8 4 "XORI" "XOR $1, R11, R8" "xori $a4, $a7, 0x1" mbitmap.go:1666
+0x2edfc 4 "BNEZ" "BNE R8, 9(PC)" "bnez $a4, 36" mbitmap.go:1666
+0x2ee00 4 "XORI" "XOR $1, R6, R8" "xori $a4, $a2, 0x1" mbitmap.go:1673
+0x2ee04 4 "BNEZ" "BNE R8, 5(PC)" "bnez $a4, 20" mbitmap.go:1673
+0x2ee08 4 "ADDI.D" "MOVW $-1, R6" "addi.d $a2, $zero, -1" mbitmap.go:1673
+0x2ee0c 4 "LU52I.D" "LU52ID $31, R6" "lu52i.d $a2, $a2, 31" mbitmap.go:1673
+0x2ee10 4 "ORI" "MOVW $57, R8" "ori $a4, $zero, 0x39" mbitmap.go:1673
+0x2ee14 4 "B" "JMP 14(PC)" "b 56" mbitmap.go:1673
+0x2ee18 4 "OR" "MOVV R10, R8" "move $a4, $a6" mbitmap.go:1673
+0x2ee1c 4 "B" "JMP 12(PC)" "b 48" mbitmap.go:1677
+0x2ee20 4 "ADD.D" "ADDV R11, R11, R8" "add.d $a4, $a7, $a7" mbitmap.go:1682
+0x2ee24 4 "BLTU" "BLTU R4, R8, 3(PC)" "bltu $a0, $a4, 12" mbitmap.go:1682
+0x2ee28 4 "OR" "MOVV R11, R8" "move $a4, $a7" mbitmap.go:1666
+0x2ee2c 4 "B" "JMP 50(PC)" "b 200" mbitmap.go:1682
+0x2ee30 4 "OR" "MOVV R11, R8" "move $a4, $a7" mbitmap.go:1700
+0x2ee34 4 "B" "JMP 6(PC)" "b 24" mbitmap.go:1700
+0x2ee38 4 "ANDI" "NOOP" "nop" mbitmap.go:1700
+0x2ee3c 4 "ANDI" "NOOP" "nop" mbitmap.go:1700
+0x2ee40 4 "SUB.D" "SUBV R8, R10" "sub.d $a6, $a6, $a4" mbitmap.go:1700
+0x2ee44 4 "OR" "MOVV R13, R14" "move $t2, $t1" mbitmap.go:1700
+0x2ee48 4 "OR" "MOVV R11, R15" "move $t3, $a7" mbitmap.go:1700
+0x2ee4c 4 "BLTU" "BLTU R10, R8, 16(PC)" "bltu $a6, $a4, 64" mbitmap.go:1700
+0x2ee50 4 "SLL.D" "SLLV R14, R6, R11" "sll.d $a7, $a2, $t2" mbitmap.go:1701
+0x2ee54 4 "SLTUI" "SGTU $64, R14, R13" "sltui $t1, $t2, 64" mbitmap.go:1701
+0x2ee58 4 "MASKEQZ" "MASKEQZ R13, R11" "maskeqz $a7, $a7, $t1" mbitmap.go:1701
+0x2ee5c 4 "OR" "OR R11, R15, R11" "or $a7, $t3, $a7" mbitmap.go:1701
+0x2ee60 4 "ADD.D" "ADDV R14, R8, R13" "add.d $t1, $a4, $t2" mbitmap.go:1702
+0x2ee64 4 "B" "JMP 8(PC)" "b 32" mbitmap.go:1703
+0x2ee68 4 "ANDI" "NOOP" "nop" mbitmap.go:1703
+0x2ee6c 4 "ANDI" "NOOP" "nop" mbitmap.go:1703
+0x2ee70 4 "ST.B" "MOVB R11, 0(R5)" "st.b $a7, $a1, 0" mbitmap.go:1704
+0x2ee74 4 "ANDI" "NOOP" "nop" mbitmap.go:1705
+0x2ee78 4 "SRLI.D" "SRLV $8, R11" "srli.d $a7, $a7, 0x8" mbitmap.go:1706
+0x2ee7c 4 "ADDI.D" "ADDV $-8, R13" "addi.d $t1, $t1, -8" mbitmap.go:1707
+0x2ee80 4 "ADDI.D" "ADDV $1, R5" "addi.d $a1, $a1, 1" mbitmap.go:1056
+0x2ee84 4 "BGEU" "BGEU R13, R9, -5(PC)" "bgeu $t1, $a5, -20" mbitmap.go:1703
+0x2ee88 4 "B" "JMP -18(PC)" "b -72" mbitmap.go:1703
+0x2ee8c 4 "BEQZ" "BEQ R10, 13(PC)" "beqz $a6, 52" mbitmap.go:1712
+0x2ee90 4 "ORI" "MOVW $1, R8" "ori $a4, $zero, 0x1" mbitmap.go:1713
+0x2ee94 4 "SLL.D" "SLLV R10, R8, R9" "sll.d $a5, $a4, $a6" mbitmap.go:1713
+0x2ee98 4 "SLTUI" "SGTU $64, R10, R11" "sltui $a7, $a6, 64" mbitmap.go:1713
+0x2ee9c 4 "MASKEQZ" "MASKEQZ R11, R9" "maskeqz $a5, $a5, $a7" mbitmap.go:1713
+0x2eea0 4 "ADDI.D" "ADDV $-1, R9" "addi.d $a5, $a5, -1" mbitmap.go:1713
+0x2eea4 4 "AND" "AND R9, R6" "and $a2, $a2, $a5" mbitmap.go:1713
+0x2eea8 4 "SLL.D" "SLLV R14, R6" "sll.d $a2, $a2, $t2" mbitmap.go:1714
+0x2eeac 4 "SLTUI" "SGTU $64, R14, R9" "sltui $a5, $t2, 64" mbitmap.go:1714
+0x2eeb0 4 "MASKEQZ" "MASKEQZ R9, R6" "maskeqz $a2, $a2, $a5" mbitmap.go:1714
+0x2eeb4 4 "OR" "OR R6, R15" "or $t3, $t3, $a2" mbitmap.go:1714
+0x2eeb8 4 "ADD.D" "ADDV R10, R14" "add.d $t2, $t2, $a6" mbitmap.go:1715
+0x2eebc 4 "B" "JMP 2(PC)" "b 8" mbitmap.go:1715
+0x2eec0 4 "ORI" "MOVW $1, R8" "ori $a4, $zero, 0x1" mbitmap.go:1715
+0x2eec4 4 "ORI" "MOVW $1, R10" "ori $a6, $zero, 0x1" mbitmap.go:1717
+0x2eec8 4 "OR" "MOVV R14, R8" "move $a4, $t2" mbitmap.go:1577
+0x2eecc 4 "OR" "MOVV R5, R13" "move $t1, $a1" mbitmap.go:1577
+0x2eed0 4 "OR" "MOVV R15, R6" "move $a2, $t3" mbitmap.go:1577
+0x2eed4 4 "ORI" "MOVW $8, R15" "ori $t3, $zero, 0x8" mbitmap.go:1577
+0x2eed8 4 "B" "JMP -182(PC)" "b -728" mbitmap.go:1717
+0x2eedc 4 "ANDI" "NOOP" "nop" mbitmap.go:1717
+0x2eee0 4 "SLL.D" "SLLV R11, R6, R16" "sll.d $t4, $a2, $a7" mbitmap.go:1685
+0x2eee4 4 "SLTUI" "SGTU $64, R11, R17" "sltui $t5, $a7, 64" mbitmap.go:1685
+0x2eee8 4 "MASKEQZ" "MASKEQZ R17, R16" "maskeqz $t4, $t4, $t5" mbitmap.go:1685
+0x2eeec 4 "OR" "OR R16, R6" "or $a2, $a2, $t4" mbitmap.go:1685
+0x2eef0 4 "ADD.D" "ADDV R11, R11" "add.d $a7, $a7, $a7" mbitmap.go:1686
+0x2eef4 4 "ORI" "MOVW $64, R13" "ori $t1, $zero, 0x40" mbitmap.go:1684
+0x2eef8 4 "BGEU" "BGEU R13, R11, -6(PC)" "bgeu $t1, $a7, -24" mbitmap.go:1684
+0x2eefc 4 "BEQZ" "BEQ R8, 10(PC)" "beqz $a4, 40" mbitmap.go:1690
+0x2ef00 4 "DIV.DU" "DIVVU R8, R4, R16" "div.du $t4, $a0, $a4" mbitmap.go:1690
+0x2ef04 4 "MUL.D" "MULV R8, R16, R11" "mul.d $a7, $t4, $a4" mbitmap.go:1690
+0x2ef08 4 "ORI" "MOVW $1, R8" "ori $a4, $zero, 0x1" mbitmap.go:1691
+0x2ef0c 4 "SLL.D" "SLLV R11, R8, R16" "sll.d $t4, $a4, $a7" mbitmap.go:1691
+0x2ef10 4 "SLTUI" "SGTU $64, R11, R17" "sltui $t5, $a7, 64" mbitmap.go:1691
+0x2ef14 4 "MASKEQZ" "MASKEQZ R17, R16" "maskeqz $t4, $t4, $t5" mbitmap.go:1691
+0x2ef18 4 "ADDI.D" "ADDV $-1, R16" "addi.d $t4, $t4, -1" mbitmap.go:1691
+0x2ef1c 4 "AND" "AND R16, R6" "and $a2, $a2, $t4" mbitmap.go:1691
+0x2ef20 4 "B" "JMP -60(PC)" "b -240" mbitmap.go:1693
+0x2ef24 4 "BL" "CALL runtime.panicdivide(SB)" "bl 145004" mbitmap.go:1690
+0x2ef28 4 "ANDI" "NOOP" "nop" mbitmap.go:1690
+0x2ef2c 4 "ANDI" "NOOP" "nop" mbitmap.go:1690
+0x2ef30 4 "ADDI.D" "ADDV $7, R11" "addi.d $a7, $a7, 7" mbitmap.go:1611
+0x2ef34 4 "LD.BU" "MOVBU 0(R12), R13" "ld.bu $t1, $t0, 0" mbitmap.go:1612
+0x2ef38 4 "ANDI" "AND $127, R13, R14" "andi $t2, $t1, 0x7f" mbitmap.go:1614
+0x2ef3c 4 "SLL.D" "SLLV R11, R14" "sll.d $t2, $t2, $a7" mbitmap.go:1614
+0x2ef40 4 "SLTUI" "SGTU $64, R11, R15" "sltui $t3, $a7, 64" mbitmap.go:1614
+0x2ef44 4 "MASKEQZ" "MASKEQZ R15, R14" "maskeqz $t2, $t2, $t3" mbitmap.go:1614
+0x2ef48 4 "OR" "OR R14, R10" "or $a6, $a6, $t2" mbitmap.go:1614
+0x2ef4c 4 "ADDI.D" "ADDV $1, R12" "addi.d $t0, $t0, 1" mbitmap.go:1056
+0x2ef50 4 "ANDI" "NOOP" "nop" mbitmap.go:1613
+0x2ef54 4 "ANDI" "AND $128, R13" "andi $t1, $t1, 0x80" mbitmap.go:1615
+0x2ef58 4 "BNEZ" "BNE R13, -10(PC)" "bnez $t1, -40" mbitmap.go:1615
+0x2ef5c 4 "OR" "MOVV R10, R11" "move $a7, $a6" mbitmap.go:1622
+0x2ef60 4 "B" "JMP -188(PC)" "b -752" mbitmap.go:1616
+0x2ef64 4 "ANDI" "NOOP" "nop" mbitmap.go:1616
+0x2ef68 4 "ANDI" "NOOP" "nop" mbitmap.go:1616
+0x2ef6c 4 "ANDI" "NOOP" "nop" mbitmap.go:1616
+0x2ef70 4 "ST.B" "MOVB R6, 0(R5)" "st.b $a2, $a1, 0" mbitmap.go:1752
+0x2ef74 4 "ANDI" "NOOP" "nop" mbitmap.go:1753
+0x2ef78 4 "ADDI.D" "ADDV $-8, R7" "addi.d $a3, $a3, -8" mbitmap.go:1751
+0x2ef7c 4 "SRLI.D" "SRLV $8, R6" "srli.d $a2, $a2, 0x8" mbitmap.go:1754
+0x2ef80 4 "ADDI.D" "ADDV $1, R5" "addi.d $a1, $a1, 1" mbitmap.go:1056
+0x2ef84 4 "BNEZ" "BNE R7, -5(PC)" "bnez $a3, -20" mbitmap.go:1751
+0x2ef88 4 "LD.D" "MOVV 0(R3), R1" "ld.d $ra, $sp, 0" mbitmap.go:1756
+0x2ef8c 4 "ADDI.D" "ADDV $8, R3" "addi.d $sp, $sp, 8" mbitmap.go:1756
+0x2ef90 4 "JIRL" "RET" "ret" mbitmap.go:1756
+0x2ef94 4 "ANDI" "NOOP" "nop" mbitmap.go:1756
+0x2ef98 4 "ANDI" "NOOP" "nop" mbitmap.go:1756
+0x2ef9c 4 "ANDI" "NOOP" "nop" mbitmap.go:1756
+0x2efa0 4 "LD.BU" "MOVBU 0(R12), R13" "ld.bu $t1, $t0, 0" mbitmap.go:1595
+0x2efa4 4 "SLL.D" "SLLV R8, R13" "sll.d $t1, $t1, $a4" mbitmap.go:1595
+0x2efa8 4 "OR" "OR R13, R6, R13" "or $t1, $a2, $t1" mbitmap.go:1595
+0x2efac 4 "ANDI" "NOOP" "nop" mbitmap.go:1596
+0x2efb0 4 "ST.B" "MOVB R13, 0(R5)" "st.b $t1, $a1, 0" mbitmap.go:1597
+0x2efb4 4 "ANDI" "NOOP" "nop" mbitmap.go:1598
+0x2efb8 4 "SRLI.D" "SRLV $8, R13, R6" "srli.d $a2, $t1, 0x8" mbitmap.go:1599
+0x2efbc 4 "ADDI.D" "ADDV $1, R11" "addi.d $a7, $a7, 1" mbitmap.go:1594
+0x2efc0 4 "ADDI.D" "ADDV $1, R12" "addi.d $t0, $t0, 1" mbitmap.go:1056
+0x2efc4 4 "ADDI.D" "ADDV $1, R5" "addi.d $a1, $a1, 1" mbitmap.go:1056
+0x2efc8 4 "BLTU" "BLTU R11, R9, -10(PC)" "bltu $a7, $a5, -40" mbitmap.go:1594
+0x2efcc 4 "ANDI" "AND $7, R10, R9" "andi $a5, $a6, 0x7" mbitmap.go:1601
+0x2efd0 4 "BEQZ" "BEQ R9, 7(PC)" "beqz $a5, 28" mbitmap.go:1601
+0x2efd4 4 "LD.BU" "MOVBU 0(R12), R10" "ld.bu $a6, $t0, 0" mbitmap.go:1602
+0x2efd8 4 "SLL.D" "SLLV R8, R10" "sll.d $a6, $a6, $a4" mbitmap.go:1602
+0x2efdc 4 "OR" "OR R10, R6" "or $a2, $a2, $a6" mbitmap.go:1602
+0x2efe0 4 "ANDI" "NOOP" "nop" mbitmap.go:1603
+0x2efe4 4 "ADD.D" "ADDV R8, R9, R8" "add.d $a4, $a5, $a4" mbitmap.go:1604
+0x2efe8 4 "ADDI.D" "ADDV $1, R12" "addi.d $t0, $t0, 1" mbitmap.go:1056
+0x2efec 4 "ORI" "MOVW $57, R4" "ori $a0, $zero, 0x39" mbitmap.go:1606
+0x2eff0 4 "ORI" "MOVW $1, R10" "ori $a6, $zero, 0x1" mbitmap.go:1606
+0x2eff4 4 "ORI" "MOVW $8, R15" "ori $t3, $zero, 0x8" mbitmap.go:1606
+0x2eff8 4 "OR" "MOVV R5, R13" "move $t1, $a1" mbitmap.go:1577
+0x2effc 4 "B" "JMP -255(PC)" "b -1020" mbitmap.go:1606
+0x2f000 4 "ST.D" "MOVV R4, 8(R3)" "st.d $a0, $sp, 8" mbitmap.go:1565
+0x2f004 4 "ST.D" "MOVV R5, 16(R3)" "st.d $a1, $sp, 16" mbitmap.go:1565
+0x2f008 4 "OR" "MOVV R1, R31" "move $s8, $ra" mbitmap.go:1565
+0x2f00c 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 386404" mbitmap.go:1565
+0x2f010 4 "LD.D" "MOVV 8(R3), R4" "ld.d $a0, $sp, 8" mbitmap.go:1565
+0x2f014 4 "LD.D" "MOVV 16(R3), R5" "ld.d $a1, $sp, 16" mbitmap.go:1565
+0x2f018 4 "B" "JMP runtime.runGCProg(SB)" "b -1096" mbitmap.go:1565
+0x2f01c 4 "BREAK" "BREAK" "break 0x0" .:-1
+== runtime.runCheckmark 0x30320 208 /usr/local/go/src/runtime/mcheckmark.go
+0x30320 4 "LD.D" "MOVV 16(R22), R20" "ld.d $t8, $fp, 16" mcheckmark.go:126
+0x30324 4 "SLTU" "SGTU R3, R20" "sltu $t8, $t8, $sp" mcheckmark.go:126
+0x30328 4 "BEQZ" "BEQ R20, 45(PC)" "beqz $t8, 180" mcheckmark.go:126
+0x3032c 4 "ST.D" "MOVV R1, -32(R3)" "st.d $ra, $sp, -32" mcheckmark.go:126
+0x30330 4 "ADDI.D" "ADDV $-32, R3" "addi.d $sp, $sp, -32" mcheckmark.go:126
+0x30334 4 "ST.D" "MOVV R1, 0(R3)" "st.d $ra, $sp, 0" mcheckmark.go:126
+0x30338 4 "ST.D" "MOVV R4, 40(R3)" "st.d $a0, $sp, 40" mcheckmark.go:144
+0x3033c 4 "ANDI" "NOOP" "nop" mcheckmark.go:134
+0x30340 4 "ANDI" "NOOP" "nop" types.go:179
+0x30344 4 "OR" "MOVV R0, R4" "move $a0, $zero" types.go:131
+0x30348 4 "PCALAU12I" "PCALAU12I $281, R5" "pcalau12i $a1, 281" types.go:131
+0x3034c 4 "ADDI.D" "ADDV $72, R5" "addi.d $a1, $a1, 72" types.go:131
+0x30350 4 "DBAR" "DBAR" "dbar 0x12" types.go:131
+0x30354 4 "ST.B" "MOVB R4, 0(R5)" "st.b $a0, $a1, 0" types.go:131
+0x30358 4 "DBAR" "DBAR" "dbar 0x18" types.go:131
+0x3035c 4 "BL" "CALL runtime.startCheckmarks(SB)" "bl -1084" mcheckmark.go:135
+0x30360 4 "BL" "CALL runtime.gcResetMarkState(SB)" "bl 24704" mcheckmark.go:136
+0x30364 4 "LD.D" "MOVV 48(R22), R4" "ld.d $a0, $fp, 48" mcheckmark.go:137
+0x30368 4 "LD.D" "MOVV 208(R4), R4" "ld.d $a0, $a0, 208" mcheckmark.go:137
+0x3036c 4 "LD.D" "MOVV 40(R3), R29" "ld.d $s6, $sp, 40" mcheckmark.go:138
+0x30370 4 "LD.D" "MOVV 0(R29), R5" "ld.d $a1, $s6, 0" mcheckmark.go:138
+0x30374 4 "LD.B" "MOVB 0(R4), R30" "ld.b $s7, $a0, 0" mcheckmark.go:137
+0x30378 4 "LU12I.W" "LU12IW $1, R30" "lu12i.w $s7, 1" mcheckmark.go:137
+0x3037c 4 "ORI" "OR $600, R30" "ori $s7, $s7, 0x258" mcheckmark.go:137
+0x30380 4 "ADD.D" "ADDV R30, R4" "add.d $a0, $a0, $s7" mcheckmark.go:137
+0x30384 4 "ST.D" "MOVV R4, 24(R3)" "st.d $a0, $sp, 24" mcheckmark.go:137
+0x30388 4 "JIRL" "CALL (R5)" "jirl $ra, $a1, 0" mcheckmark.go:138
+0x3038c 4 "LD.D" "MOVV 24(R3), R4" "ld.d $a0, $sp, 24" mcheckmark.go:139
+0x30390 4 "OR" "MOVV R0, R5" "move $a1, $zero" mcheckmark.go:139
+0x30394 4 "BL" "CALL runtime.gcDrain(SB)" "bl 38620" mcheckmark.go:139
+0x30398 4 "LD.D" "MOVV 48(R22), R4" "ld.d $a0, $fp, 48" mcheckmark.go:140
+0x3039c 4 "LD.D" "MOVV 208(R4), R4" "ld.d $a0, $a0, 208" mcheckmark.go:140
+0x303a0 4 "BL" "CALL runtime.wbBufFlush1(SB)" "bl 130608" mcheckmark.go:140
+0x303a4 4 "LD.D" "MOVV 24(R3), R4" "ld.d $a0, $sp, 24" mcheckmark.go:141
+0x303a8 4 "BL" "CALL runtime.(*gcWork).dispose(SB)" "bl 84216" mcheckmark.go:141
+0x303ac 4 "BL" "CALL runtime.endCheckmarks(SB)" "bl -940" mcheckmark.go:142
+0x303b0 4 "ANDI" "NOOP" "nop" mcheckmark.go:143
+0x303b4 4 "ANDI" "NOOP" "nop" types.go:179
+0x303b8 4 "ORI" "MOVW $1, R4" "ori $a0, $zero, 0x1" types.go:131
+0x303bc 4 "PCALAU12I" "PCALAU12I $281, R5" "pcalau12i $a1, 281" types.go:131
+0x303c0 4 "ADDI.D" "ADDV $72, R5" "addi.d $a1, $a1, 72" types.go:131
+0x303c4 4 "DBAR" "DBAR" "dbar 0x12" types.go:131
+0x303c8 4 "ST.B" "MOVB R4, 0(R5)" "st.b $a0, $a1, 0" types.go:131
+0x303cc 4 "DBAR" "DBAR" "dbar 0x18" types.go:131
+0x303d0 4 "LD.D" "MOVV 0(R3), R1" "ld.d $ra, $sp, 0" mcheckmark.go:144
+0x303d4 4 "ADDI.D" "ADDV $32, R3" "addi.d $sp, $sp, 32" mcheckmark.go:144
+0x303d8 4 "JIRL" "RET" "ret" mcheckmark.go:144
+0x303dc 4 "ST.D" "MOVV R4, 8(R3)" "st.d $a0, $sp, 8" mcheckmark.go:126
+0x303e0 4 "OR" "MOVV R1, R31" "move $s8, $ra" mcheckmark.go:126
+0x303e4 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 381324" mcheckmark.go:126
+0x303e8 4 "LD.D" "MOVV 8(R3), R4" "ld.d $a0, $sp, 8" mcheckmark.go:126
+0x303ec 4 "B" "JMP runtime.runCheckmark(SB)" "b -204" mcheckmark.go:126
+== runtime.runFinalizers 0x32100 1376 /usr/local/go/src/runtime/mfinal.go
+0x32100 4 "LD.D" "MOVV 16(R22), R20" "ld.d $t8, $fp, 16" mfinal.go:193
+0x32104 4 "ADDI.D" "ADDV $-456, R3, R24" "addi.d $s1, $sp, -456" mfinal.go:193
+0x32108 4 "SLTU" "SGTU R24, R20" "sltu $t8, $t8, $s1" mfinal.go:193
+0x3210c 4 "BEQZ" "BEQ R20, 336(PC)" "beqz $t8, 1344" mfinal.go:193
+0x32110 4 "ST.D" "MOVV R1, -584(R3)" "st.d $ra, $sp, -584" mfinal.go:193
+0x32114 4 "ADDI.D" "ADDV $-584, R3" "addi.d $sp, $sp, -584" mfinal.go:193
+0x32118 4 "ST.D" "MOVV R1, 0(R3)" "st.d $ra, $sp, 0" mfinal.go:193
+0x3211c 4 "ST.D" "MOVV R22, 536(R3)" "st.d $fp, $sp, 536" mfinal.go:200
+0x32120 4 "ANDI" "NOOP" "nop" mfinal.go:201
+0x32124 4 "ANDI" "NOOP" "nop" lock_spinbit.go:161
+0x32128 4 "PCALAU12I" "PCALAU12I $309, R4" "pcalau12i $a0, 309" lockrank_off.go:24
+0x3212c 4 "ADDI.D" "ADDV $1624, R4" "addi.d $a0, $a0, 1624" lockrank_off.go:24
+0x32130 4 "BL" "CALL runtime.lock2(SB)" "bl -46848" lockrank_off.go:24
+0x32134 4 "PCALAU12I" "PCALAU12I $310, R30" "pcalau12i $s7, 310" mfinal.go:202
+0x32138 4 "LD.WU" "MOVWU -2048(R30), R5" "ld.wu $a1, $s7, -2048" mfinal.go:202
+0x3213c 4 "BNEZ" "BNE R5, 3(PC)" "bnez $a1, 12" mfinal.go:202
+0x32140 4 "LD.D" "MOVV 536(R3), R6" "ld.d $a2, $sp, 536" mfinal.go:202
+0x32144 4 "B" "JMP 7(PC)" "b 28" mfinal.go:202
+0x32148 4 "PCALAU12I" "PCALAU12I $277, R30" "pcalau12i $s7, 277" mfinal.go:202
+0x3214c 4 "LD.D" "MOVV 808(R30), R5" "ld.d $a1, $s7, 808" mfinal.go:202
+0x32150 4 "BL" "CALL runtime.gcWriteBarrier2(SB)" "bl 385024" mfinal.go:202
+0x32154 4 "LD.D" "MOVV 536(R3), R6" "ld.d $a2, $sp, 536" mfinal.go:202
+0x32158 4 "ST.D" "MOVV R6, 0(R29)" "st.d $a2, $s6, 0" mfinal.go:202
+0x3215c 4 "ST.D" "MOVV R5, 8(R29)" "st.d $a1, $s6, 8" mfinal.go:202
+0x32160 4 "PCALAU12I" "PCALAU12I $277, R30" "pcalau12i $s7, 277" mfinal.go:202
+0x32164 4 "ST.D" "MOVV R6, 808(R30)" "st.d $a2, $s7, 808" mfinal.go:202
+0x32168 4 "ANDI" "NOOP" "nop" mfinal.go:203
+0x3216c 4 "ANDI" "NOOP" "nop" lock_spinbit.go:270
+0x32170 4 "PCALAU12I" "PCALAU12I $309, R4" "pcalau12i $a0, 309" lockrank_off.go:36
+0x32174 4 "ADDI.D" "ADDV $1624, R4" "addi.d $a0, $a0, 1624" lockrank_off.go:36
+0x32178 4 "BL" "CALL runtime.unlock2(SB)" "bl -45576" lockrank_off.go:36
+0x3217c 4 "OR" "MOVV R0, R4" "move $a0, $zero" lockrank_off.go:36
+0x32180 4 "OR" "MOVV R0, R5" "move $a1, $zero" lockrank_off.go:36
+0x32184 4 "ANDI" "NOOP" "nop" lockrank_off.go:36
+0x32188 4 "ANDI" "NOOP" "nop" lockrank_off.go:36
+0x3218c 4 "ANDI" "NOOP" "nop" lockrank_off.go:36
+0x32190 4 "ST.D" "MOVV R5, 544(R3)" "st.d $a1, $sp, 544" lockrank_off.go:36
+0x32194 4 "ST.D" "MOVV R4, 64(R3)" "st.d $a0, $sp, 64" lockrank_off.go:36
+0x32198 4 "ANDI" "NOOP" "nop" lock_spinbit.go:161
+0x3219c 4 "PCALAU12I" "PCALAU12I $309, R4" "pcalau12i $a0, 309" lockrank_off.go:24
+0x321a0 4 "ADDI.D" "ADDV $1624, R4" "addi.d $a0, $a0, 1624" lockrank_off.go:24
+0x321a4 4 "BL" "CALL runtime.lock2(SB)" "bl -46964" lockrank_off.go:24
+0x321a8 4 "PCALAU12I" "PCALAU12I $309, R30" "pcalau12i $s7, 309" mfinal.go:207
+0x321ac 4 "LD.D" "MOVV 1632(R30), R5" "ld.d $a1, $s7, 1632" mfinal.go:207
+0x321b0 4 "PCALAU12I" "PCALAU12I $309, R30" "pcalau12i $s7, 309" mfinal.go:208
+0x321b4 4 "ST.D" "MOVV R0, 1632(R30)" "st.d $zero, $s7, 1632" mfinal.go:208
+0x321b8 4 "BEQZ" "BEQ R5, 13(PC)" "beqz $a1, 52" mfinal.go:209
+0x321bc 4 "ST.D" "MOVV R5, 72(R3)" "st.d $a1, $sp, 72" mfinal.go:207
+0x321c0 4 "PCALAU12I" "PCALAU12I $270, R30" "pcalau12i $s7, 270" mfinal.go:213
+0x321c4 4 "LD.D" "MOVV 1224(R30), R5" "ld.d $a1, $s7, 1224" mfinal.go:213
+0x321c8 4 "ST.D" "MOVV R5, 80(R3)" "st.d $a1, $sp, 80" mfinal.go:213
+0x321cc 4 "ANDI" "NOOP" "nop" mfinal.go:214
+0x321d0 4 "PCALAU12I" "PCALAU12I $309, R4" "pcalau12i $a0, 309" lockrank_off.go:36
+0x321d4 4 "ADDI.D" "ADDV $1624, R4" "addi.d $a0, $a0, 1624" lockrank_off.go:36
+0x321d8 4 "BL" "CALL runtime.unlock2(SB)" "bl -45672" lockrank_off.go:36
+0x321dc 4 "LD.D" "MOVV 72(R3), R4" "ld.d $a0, $sp, 72" mfinal.go:218
+0x321e0 4 "LD.D" "MOVV 64(R3), R5" "ld.d $a1, $sp, 64" mfinal.go:218
+0x321e4 4 "LD.D" "MOVV 544(R3), R6" "ld.d $a2, $sp, 544" mfinal.go:218
+0x321e8 4 "B" "JMP 45(PC)" "b 180" lock_spinbit.go:270
+0x321ec 4 "PCALAU12I" "PCALAU12I $266, R4" "pcalau12i $a0, 266" mfinal.go:210
+0x321f0 4 "ADDI.D" "ADDV $-616, R4" "addi.d $a0, $a0, -616" mfinal.go:210
+0x321f4 4 "PCALAU12I" "PCALAU12I $309, R5" "pcalau12i $a1, 309" mfinal.go:210
+0x321f8 4 "ADDI.D" "ADDV $1624, R5" "addi.d $a1, $a1, 1624" mfinal.go:210
+0x321fc 4 "ORI" "MOVW $10, R6" "ori $a2, $zero, 0xa" mfinal.go:210
+0x32200 4 "ORI" "MOVW $10, R7" "ori $a3, $zero, 0xa" mfinal.go:210
+0x32204 4 "ORI" "MOVW $1, R8" "ori $a4, $zero, 0x1" mfinal.go:210
+0x32208 4 "BL" "CALL runtime.gopark(SB)" "bl 360616" mfinal.go:210
+0x3220c 4 "LD.D" "MOVV 64(R3), R4" "ld.d $a0, $sp, 64" mfinal.go:206
+0x32210 4 "LD.D" "MOVV 544(R3), R5" "ld.d $a1, $sp, 544" mfinal.go:206
+0x32214 4 "B" "JMP -33(PC)" "b -132" mfinal.go:211
+0x32218 4 "ANDI" "NOOP" "nop" mfinal.go:211
+0x3221c 4 "ANDI" "NOOP" "nop" mfinal.go:211
+0x32220 4 "ST.D" "MOVV R6, 560(R3)" "st.d $a2, $sp, 560" mfinal.go:220
+0x32224 4 "ST.D" "MOVV R5, 104(R3)" "st.d $a1, $sp, 104" mfinal.go:220
+0x32228 4 "OR" "MOVV R8, R5" "move $a1, $a4" mfinal.go:286
+0x3222c 4 "ST.D" "MOVV R5, 96(R3)" "st.d $a1, $sp, 96" mfinal.go:286
+0x32230 4 "LD.D" "MOVV 8(R4), R5" "ld.d $a1, $a0, 8" mfinal.go:284
+0x32234 4 "ST.D" "MOVV R5, 88(R3)" "st.d $a1, $sp, 88" mfinal.go:284
+0x32238 4 "ANDI" "NOOP" "nop" mfinal.go:285
+0x3223c 4 "ANDI" "NOOP" "nop" lock_spinbit.go:161
+0x32240 4 "PCALAU12I" "PCALAU12I $309, R4" "pcalau12i $a0, 309" lockrank_off.go:24
+0x32244 4 "ADDI.D" "ADDV $1624, R4" "addi.d $a0, $a0, 1624" lockrank_off.go:24
+0x32248 4 "BL" "CALL runtime.lock2(SB)" "bl -47128" lockrank_off.go:24
+0x3224c 4 "PCALAU12I" "PCALAU12I $309, R30" "pcalau12i $s7, 309" mfinal.go:286
+0x32250 4 "LD.D" "MOVV 1656(R30), R5" "ld.d $a1, $s7, 1656" mfinal.go:286
+0x32254 4 "LD.D" "MOVV 96(R3), R6" "ld.d $a2, $sp, 96" mfinal.go:286
+0x32258 4 "ADD.D" "ADDV R6, R5" "add.d $a1, $a1, $a2" mfinal.go:286
+0x3225c 4 "PCALAU12I" "PCALAU12I $309, R30" "pcalau12i $s7, 309" mfinal.go:286
+0x32260 4 "ST.D" "MOVV R5, 1656(R30)" "st.d $a1, $s7, 1656" mfinal.go:286
+0x32264 4 "PCALAU12I" "PCALAU12I $309, R30" "pcalau12i $s7, 309" mfinal.go:287
+0x32268 4 "LD.D" "MOVV 1640(R30), R5" "ld.d $a1, $s7, 1640" mfinal.go:287
+0x3226c 4 "LD.D" "MOVV 72(R3), R6" "ld.d $a2, $sp, 72" mfinal.go:287
+0x32270 4 "ST.D" "MOVV R5, 8(R6)" "st.d $a1, $a2, 8" mfinal.go:287
+0x32274 4 "PCALAU12I" "PCALAU12I $309, R30" "pcalau12i $s7, 309" mfinal.go:288
+0x32278 4 "ST.D" "MOVV R6, 1640(R30)" "st.d $a2, $s7, 1640" mfinal.go:288
+0x3227c 4 "ANDI" "NOOP" "nop" mfinal.go:289
+0x32280 4 "ANDI" "NOOP" "nop" lock_spinbit.go:270
+0x32284 4 "PCALAU12I" "PCALAU12I $309, R4" "pcalau12i $a0, 309" lockrank_off.go:36
+0x32288 4 "ADDI.D" "ADDV $1624, R4" "addi.d $a0, $a0, 1624" lockrank_off.go:36
+0x3228c 4 "BL" "CALL runtime.unlock2(SB)" "bl -45852" lockrank_off.go:36
+0x32290 4 "LD.D" "MOVV 88(R3), R4" "ld.d $a0, $sp, 88" mfinal.go:218
+0x32294 4 "LD.D" "MOVV 104(R3), R5" "ld.d $a1, $sp, 104" mfinal.go:218
+0x32298 4 "LD.D" "MOVV 560(R3), R6" "ld.d $a2, $sp, 560" mfinal.go:218
+0x3229c 4 "BEQZ" "BEQ R4, 200(PC)" "beqz $a0, 800" mfinal.go:218
+0x322a0 4 "ST.D" "MOVV R4, 72(R3)" "st.d $a0, $sp, 72" mfinal.go:218
+0x322a4 4 "LD.WU" "MOVWU 16(R4), R7" "ld.wu $a3, $a0, 16" mfinal.go:219
+0x322a8 4 "ST.W" "MOVW R7, 56(R3)" "st.w $a3, $sp, 56" mfinal.go:219
+0x322ac 4 "OR" "MOVV R7, R8" "move $a4, $a3" mfinal.go:219
+0x322b0 4 "B" "JMP 8(PC)" "b 32" mfinal.go:220
+0x322b4 4 "ANDI" "NOOP" "nop" mfinal.go:220
+0x322b8 4 "ANDI" "NOOP" "nop" mfinal.go:220
+0x322bc 4 "ANDI" "NOOP" "nop" mfinal.go:220
+0x322c0 4 "OR" "MOVV R8, R4" "move $a0, $a4" mfinal.go:221
+0x322c4 4 "LD.WU" "MOVWU 56(R3), R8" "ld.wu $a4, $sp, 56" mfinal.go:286
+0x322c8 4 "LD.D" "MOVV 112(R3), R5" "ld.d $a1, $sp, 112" mfinal.go:220
+0x322cc 4 "LD.D" "MOVV 568(R3), R6" "ld.d $a2, $sp, 568" mfinal.go:220
+0x322d0 4 "BSTRPICK.D" "BSTRPICKV $31, R7, $0, R9" "bstrpick.d $a5, $a3, 0x1f, 0x0" mfinal.go:220
+0x322d4 4 "BEQZ" "BEQ R9, -45(PC)" "beqz $a5, -180" mfinal.go:220
+0x322d8 4 "ADDI.D" "ADDV $-1, R7" "addi.d $a3, $a3, -1" mfinal.go:221
+0x322dc 4 "BSTRPICK.D" "BSTRPICKV $31, R7, $0, R9" "bstrpick.d $a5, $a3, 0x1f, 0x0" mfinal.go:221
+0x322e0 4 "ORI" "MOVW $101, R10" "ori $a6, $zero, 0x65" mfinal.go:221
+0x322e4 4 "BGEU" "BGEU R9, R10, 215(PC)" "bgeu $a5, $a6, 860" mfinal.go:221
+0x322e8 4 "ST.W" "MOVW R7, 60(R3)" "st.w $a3, $sp, 60" mfinal.go:221
+0x322ec 4 "ADDI.D" "ADDV $24, R4, R11" "addi.d $a7, $a0, 24" mfinal.go:221
+0x322f0 4 "ST.D" "MOVV R11, 576(R3)" "st.d $a7, $sp, 576" mfinal.go:221
+0x322f4 4 "SLLI.D" "SLLV $3, R9" "slli.d $a5, $a5, 0x3" mfinal.go:221
+0x322f8 4 "ALSL.D" "Unknown ALSL.D $2, R9, R9, R9" "alsl.d $a5, $a5, $a5, 0x2" mfinal.go:221
+0x322fc 4 "ST.D" "MOVV R9, 120(R3)" "st.d $a5, $sp, 120" mfinal.go:221
+0x32300 4 "ADD.D" "ADDV R9, R11, R12" "add.d $t0, $a7, $a5" mfinal.go:221
+0x32304 4 "ST.D" "MOVV R12, 552(R3)" "st.d $t0, $sp, 552" mfinal.go:221
+0x32308 4 "ADDI.D" "ADDV $136, R3, R13" "addi.d $t1, $sp, 136" mfinal.go:223
+0x3230c 4 "ADDI.D" "ADDV $384, R13, R14" "addi.d $t2, $t1, 384" mfinal.go:223
+0x32310 4 "PCALAU12I" "PCALAU12I $309, R30" "pcalau12i $s7, 309" mfinal.go:223
+0x32314 4 "LD.BU" "MOVBU 1422(R30), R30" "ld.bu $s7, $s7, 1422" mfinal.go:223
+0x32318 4 "BNEZ" "BNE R30, 13(PC)" "bnez $s7, 52" mfinal.go:223
+0x3231c 4 "ANDI" "NOOP" "nop" mfinal.go:223
+0x32320 4 "ST.D" "MOVV R0, 0(R13)" "st.d $zero, $t1, 0" mfinal.go:223
+0x32324 4 "ST.D" "MOVV R0, 8(R13)" "st.d $zero, $t1, 8" mfinal.go:223
+0x32328 4 "ST.D" "MOVV R0, 16(R13)" "st.d $zero, $t1, 16" mfinal.go:223
+0x3232c 4 "ST.D" "MOVV R0, 24(R13)" "st.d $zero, $t1, 24" mfinal.go:223
+0x32330 4 "ST.D" "MOVV R0, 32(R13)" "st.d $zero, $t1, 32" mfinal.go:223
+0x32334 4 "ST.D" "MOVV R0, 40(R13)" "st.d $zero, $t1, 40" mfinal.go:223
+0x32338 4 "ST.D" "MOVV R0, 48(R13)" "st.d $zero, $t1, 48" mfinal.go:223
+0x3233c 4 "ST.D" "MOVV R0, 56(R13)" "st.d $zero, $t1, 56" mfinal.go:223
+0x32340 4 "ADDI.D" "ADDV $64, R13" "addi.d $t1, $t1, 64" mfinal.go:223
+0x32344 4 "BNE" "BNE R14, R13, -9(PC)" "bne $t2, $t1, -36" mfinal.go:223
+0x32348 4 "B" "JMP 8(PC)" "b 32" mfinal.go:223
+0x3234c 4 "" "BYTE 0xff7f2771" ".byte 0xff7f2771" mfinal.go:223
+0x32350 4 "" "BYTE 0xbf01402c" ".byte 0xbf01402c" mfinal.go:223
+0x32354 4 "" "BYTE 0xbf41402c" ".byte 0xbf41402c" mfinal.go:223
+0x32358 4 "" "BYTE 0xbf81402c" ".byte 0xbf81402c" mfinal.go:223
+0x3235c 4 "" "BYTE 0xbfc1402c" ".byte 0xbfc1402c" mfinal.go:223
+0x32360 4 "ADDI.D" "ADDV $64, R13" "addi.d $t1, $t1, 64" mfinal.go:223
+0x32364 4 "BNE" "BNE R14, R13, -5(PC)" "bne $t2, $t1, -20" mfinal.go:223
+0x32368 4 "ST.D" "MOVV R0, 0(R13)" "st.d $zero, $t1, 0" mfinal.go:223
+0x3236c 4 "LD.D" "MOVV 16(R12), R13" "ld.d $t1, $t0, 16" mfinal.go:232
+0x32370 4 "ADDI.D" "ADDV $16, R13" "addi.d $t1, $t1, 16" mfinal.go:232
+0x32374 4 "ST.D" "MOVV R13, 64(R3)" "st.d $t1, $sp, 64" mfinal.go:232
+0x32378 4 "BGEU" "BGEU R5, R13, 15(PC)" "bgeu $a1, $t1, 60" mfinal.go:233
+0x3237c 4 "OR" "MOVV R13, R4" "move $a0, $t1" mfinal.go:238
+0x32380 4 "OR" "MOVV R0, R5" "move $a1, $zero" mfinal.go:238
+0x32384 4 "ORI" "MOVW $1, R6" "ori $a2, $zero, 0x1" mfinal.go:238
+0x32388 4 "BL" "CALL runtime.mallocgc(SB)" "bl 357160" mfinal.go:238
+0x3238c 4 "LD.WU" "MOVWU 60(R3), R7" "ld.wu $a3, $sp, 60" mfinal.go:282
+0x32390 4 "LD.WU" "MOVWU 56(R3), R8" "ld.wu $a4, $sp, 56" mfinal.go:286
+0x32394 4 "LD.D" "MOVV 120(R3), R9" "ld.d $a5, $sp, 120" mfinal.go:272
+0x32398 4 "ORI" "MOVW $101, R10" "ori $a6, $zero, 0x65" mfinal.go:221
+0x3239c 4 "LD.D" "MOVV 576(R3), R11" "ld.d $a7, $sp, 576" mfinal.go:272
+0x323a0 4 "LD.D" "MOVV 552(R3), R12" "ld.d $t0, $sp, 552" mfinal.go:241
+0x323a4 4 "LD.D" "MOVV 64(R3), R13" "ld.d $t1, $sp, 64" mfinal.go:272
+0x323a8 4 "OR" "MOVV R4, R6" "move $a2, $a0" mfinal.go:241
+0x323ac 4 "OR" "MOVV R13, R5" "move $a1, $t1" mfinal.go:241
+0x323b0 4 "LD.D" "MOVV 72(R3), R4" "ld.d $a0, $sp, 72" mfinal.go:282
+0x323b4 4 "LD.D" "MOVV 24(R12), R14" "ld.d $t2, $t0, 24" mfinal.go:241
+0x323b8 4 "BEQZ" "BEQ R14, 158(PC)" "beqz $t2, 632" mfinal.go:241
+0x323bc 4 "LD.D" "MOVV 80(R3), R14" "ld.d $t2, $sp, 80" mfinal.go:245
+0x323c0 4 "BGE" "BLEZ R14, 3(PC)" "blez $t2, 12" mfinal.go:245
+0x323c4 4 "ADDI.D" "ADDV $136, R3, R15" "addi.d $t3, $sp, 136" mfinal.go:246
+0x323c8 4 "B" "JMP 4(PC)" "b 16" mfinal.go:246
+0x323cc 4 "ST.D" "MOVV R0, 0(R6)" "st.d $zero, $a2, 0" mfinal.go:252
+0x323d0 4 "ST.D" "MOVV R0, 8(R6)" "st.d $zero, $a2, 8" mfinal.go:252
+0x323d4 4 "OR" "MOVV R6, R15" "move $t3, $a2" mfinal.go:254
+0x323d8 4 "ST.D" "MOVV R6, 568(R3)" "st.d $a2, $sp, 568" mfinal.go:241
+0x323dc 4 "ST.D" "MOVV R5, 112(R3)" "st.d $a1, $sp, 112" mfinal.go:241
+0x323e0 4 "LD.D" "MOVV 24(R12), R16" "ld.d $t4, $t0, 24" mfinal.go:254
+0x323e4 4 "LD.BU" "MOVBU 23(R16), R17" "ld.bu $t5, $t4, 23" type.go:197
+0x323e8 4 "XORI" "XOR $20, R17, R18" "xori $t6, $t5, 0x14" mfinal.go:258
+0x323ec 4 "BNEZ" "BNE R18, 52(PC)" "bnez $t6, 208" mfinal.go:258
+0x323f0 4 "LD.B" "MOVB 0(R15), R30" "ld.b $s7, $t3, 0" mfinal.go:261
+0x323f4 4 "PCALAU12I" "PCALAU12I $310, R30" "pcalau12i $s7, 310" mfinal.go:261
+0x323f8 4 "LD.WU" "MOVWU -2048(R30), R17" "ld.wu $t5, $s7, -2048" mfinal.go:261
+0x323fc 4 "LD.D" "MOVV 32(R12), R18" "ld.d $t6, $t0, 32" mfinal.go:261
+0x32400 4 "LD.B" "MOVB 0(R18), R30" "ld.b $s7, $t6, 0" mfinal.go:261
+0x32404 4 "BEQZ" "BEQ R17, 5(PC)" "beqz $t5, 20" mfinal.go:261
+0x32408 4 "LD.D" "MOVV 0(R15), R17" "ld.d $t5, $t3, 0" mfinal.go:261
+0x3240c 4 "BL" "CALL runtime.gcWriteBarrier2(SB)" "bl 384324" mfinal.go:261
+0x32410 4 "ST.D" "MOVV R18, 0(R29)" "st.d $t6, $s6, 0" mfinal.go:261
+0x32414 4 "ST.D" "MOVV R17, 8(R29)" "st.d $t5, $s6, 8" mfinal.go:261
+0x32418 4 "ST.D" "MOVV R18, 0(R15)" "st.d $t6, $t3, 0" mfinal.go:261
+0x3241c 4 "PCALAU12I" "PCALAU12I $310, R30" "pcalau12i $s7, 310" mfinal.go:262
+0x32420 4 "LD.WU" "MOVWU -2048(R30), R17" "ld.wu $t5, $s7, -2048" mfinal.go:262
+0x32424 4 "LD.D" "MOVV 8(R12), R19" "ld.d $t7, $t0, 8" mfinal.go:262
+0x32428 4 "BEQZ" "BEQ R17, 5(PC)" "beqz $t5, 20" mfinal.go:262
+0x3242c 4 "LD.D" "MOVV 8(R15), R17" "ld.d $t5, $t3, 8" mfinal.go:262
+0x32430 4 "BL" "CALL runtime.gcWriteBarrier2(SB)" "bl 384288" mfinal.go:262
+0x32434 4 "ST.D" "MOVV R19, 0(R29)" "st.d $t7, $s6, 0" mfinal.go:262
+0x32438 4 "ST.D" "MOVV R17, 8(R29)" "st.d $t5, $s6, 8" mfinal.go:262
+0x3243c 4 "ST.D" "MOVV R19, 8(R15)" "st.d $t7, $t3, 8" mfinal.go:262
+0x32440 4 "LD.D" "MOVV 64(R16), R17" "ld.d $t5, $t4, 64" mfinal.go:263
+0x32444 4 "BEQZ" "BEQ R17, 41(PC)" "beqz $t5, 164" mfinal.go:263
+0x32448 4 "BEQZ" "BEQ R18, 100(PC)" "beqz $t6, 400" iface.go:468
+0x3244c 4 "ST.D" "MOVV R15, 528(R3)" "st.d $t3, $sp, 528" mfinal.go:254
+0x32450 4 "OR" "MOVV R16, R4" "move $a0, $t4" iface.go:472
+0x32454 4 "OR" "MOVV R18, R5" "move $a1, $t6" iface.go:472
+0x32458 4 "OR" "MOVV R0, R6" "move $a2, $zero" iface.go:472
+0x3245c 4 "BL" "CALL runtime.getitab(SB)" "bl 356068" iface.go:472
+0x32460 4 "PCALAU12I" "PCALAU12I $310, R30" "pcalau12i $s7, 310" mfinal.go:266
+0x32464 4 "LD.WU" "MOVWU -2048(R30), R7" "ld.wu $a3, $s7, -2048" mfinal.go:266
+0x32468 4 "BNEZ" "BNE R7, 3(PC)" "bnez $a3, 12" mfinal.go:266
+0x3246c 4 "LD.D" "MOVV 528(R3), R5" "ld.d $a1, $sp, 528" mfinal.go:266
+0x32470 4 "B" "JMP 6(PC)" "b 24" mfinal.go:266
+0x32474 4 "LD.D" "MOVV 528(R3), R5" "ld.d $a1, $sp, 528" mfinal.go:266
+0x32478 4 "LD.D" "MOVV 0(R5), R6" "ld.d $a2, $a1, 0" mfinal.go:266
+0x3247c 4 "BL" "CALL runtime.gcWriteBarrier2(SB)" "bl 384212" mfinal.go:266
+0x32480 4 "ST.D" "MOVV R4, 0(R29)" "st.d $a0, $s6, 0" mfinal.go:266
+0x32484 4 "ST.D" "MOVV R6, 8(R29)" "st.d $a2, $s6, 8" mfinal.go:266
+0x32488 4 "ST.D" "MOVV R4, 0(R5)" "st.d $a0, $a1, 0" mfinal.go:266
+0x3248c 4 "LD.D" "MOVV 72(R3), R4" "ld.d $a0, $sp, 72" mfinal.go:282
+0x32490 4 "LD.D" "MOVV 112(R3), R5" "ld.d $a1, $sp, 112" mfinal.go:220
+0x32494 4 "LD.D" "MOVV 568(R3), R6" "ld.d $a2, $sp, 568" mfinal.go:272
+0x32498 4 "LD.WU" "MOVWU 60(R3), R7" "ld.wu $a3, $sp, 60" mfinal.go:282
+0x3249c 4 "LD.WU" "MOVWU 56(R3), R8" "ld.wu $a4, $sp, 56" mfinal.go:286
+0x324a0 4 "LD.D" "MOVV 120(R3), R9" "ld.d $a5, $sp, 120" mfinal.go:272
+0x324a4 4 "ORI" "MOVW $101, R10" "ori $a6, $zero, 0x65" mfinal.go:221
+0x324a8 4 "LD.D" "MOVV 576(R3), R11" "ld.d $a7, $sp, 576" mfinal.go:272
+0x324ac 4 "LD.D" "MOVV 552(R3), R12" "ld.d $t0, $sp, 552" mfinal.go:280
+0x324b0 4 "LD.D" "MOVV 64(R3), R13" "ld.d $t1, $sp, 64" mfinal.go:272
+0x324b4 4 "LD.D" "MOVV 80(R3), R14" "ld.d $t2, $sp, 80" mfinal.go:245
+0x324b8 4 "B" "JMP 12(PC)" "b 48" mfinal.go:266
+0x324bc 4 "XORI" "XOR $22, R17, R16" "xori $t4, $t5, 0x16" mfinal.go:255
+0x324c0 4 "BNEZ" "BNE R16, 66(PC)" "bnez $t4, 264" mfinal.go:255
+0x324c4 4 "PCALAU12I" "PCALAU12I $310, R30" "pcalau12i $s7, 310" mfinal.go:257
+0x324c8 4 "LD.WU" "MOVWU -2048(R30), R16" "ld.wu $t4, $s7, -2048" mfinal.go:257
+0x324cc 4 "LD.D" "MOVV 8(R12), R17" "ld.d $t5, $t0, 8" mfinal.go:257
+0x324d0 4 "BEQZ" "BEQ R16, 5(PC)" "beqz $t4, 20" mfinal.go:257
+0x324d4 4 "LD.D" "MOVV 0(R15), R16" "ld.d $t4, $t3, 0" mfinal.go:257
+0x324d8 4 "BL" "CALL runtime.gcWriteBarrier2(SB)" "bl 384120" mfinal.go:257
+0x324dc 4 "ST.D" "MOVV R17, 0(R29)" "st.d $t5, $s6, 0" mfinal.go:257
+0x324e0 4 "ST.D" "MOVV R16, 8(R29)" "st.d $t4, $s6, 8" mfinal.go:257
+0x324e4 4 "ST.D" "MOVV R17, 0(R15)" "st.d $t5, $t3, 0" mfinal.go:257
+0x324e8 4 "ANDI" "NOOP" "nop" mfinal.go:271
+0x324ec 4 "ORI" "MOVW $2, R4" "ori $a0, $zero, 0x2" types.go:280
+0x324f0 4 "PCALAU12I" "PCALAU12I $309, R5" "pcalau12i $a1, 309" types.go:280
+0x324f4 4 "ADDI.D" "ADDV $1448, R5" "addi.d $a1, $a1, 1448" types.go:280
+0x324f8 4 "AMOR_DB.W" "AMORDBW R4, (R5), R0" "amor_db.w $zero, $a0, $a1" types.go:280
+0x324fc 4 "LDX.D" "MOVV (R11)(R9), R4" "ldx.d $a0, $a7, $a5" mfinal.go:272
+0x32500 4 "ST.D" "MOVV R0, 8(R3)" "st.d $zero, $sp, 8" mfinal.go:272
+0x32504 4 "ST.D" "MOVV R4, 16(R3)" "st.d $a0, $sp, 16" mfinal.go:272
+0x32508 4 "ST.D" "MOVV R6, 24(R3)" "st.d $a2, $sp, 24" mfinal.go:272
+0x3250c 4 "ST.W" "MOVW R13, 32(R3)" "st.w $t1, $sp, 32" mfinal.go:272
+0x32510 4 "ST.W" "MOVW R13, 36(R3)" "st.w $t1, $sp, 36" mfinal.go:272
+0x32514 4 "ST.W" "MOVW R13, 40(R3)" "st.w $t1, $sp, 40" mfinal.go:272
+0x32518 4 "ADDI.D" "ADDV $136, R3, R4" "addi.d $a0, $sp, 136" mfinal.go:272
+0x3251c 4 "ST.D" "MOVV R4, 48(R3)" "st.d $a0, $sp, 48" mfinal.go:272
+0x32520 4 "BL" "CALL runtime.reflectcall.abi0(SB)" "bl 372832" mfinal.go:272
+0x32524 4 "ANDI" "NOOP" "nop" mfinal.go:273
+0x32528 4 "ADDI.D" "MOVW $-3, R4" "addi.d $a0, $zero, -3" types.go:269
+0x3252c 4 "PCALAU12I" "PCALAU12I $309, R5" "pcalau12i $a1, 309" types.go:269
+0x32530 4 "ADDI.D" "ADDV $1448, R5" "addi.d $a1, $a1, 1448" types.go:269
+0x32534 4 "AMAND_DB.W" "AMANDDBW R4, (R5), R0" "amand_db.w $zero, $a0, $a1" types.go:269
+0x32538 4 "PCALAU12I" "PCALAU12I $310, R30" "pcalau12i $s7, 310" mfinal.go:279
+0x3253c 4 "LD.WU" "MOVWU -2048(R30), R4" "ld.wu $a0, $s7, -2048" mfinal.go:279
+0x32540 4 "BNEZ" "BNE R4, 5(PC)" "bnez $a0, 20" mfinal.go:279
+0x32544 4 "LD.D" "MOVV 120(R3), R7" "ld.d $a3, $sp, 120" mfinal.go:279
+0x32548 4 "LD.D" "MOVV 576(R3), R8" "ld.d $a4, $sp, 576" mfinal.go:279
+0x3254c 4 "LD.D" "MOVV 552(R3), R10" "ld.d $a6, $sp, 552" mfinal.go:280
+0x32550 4 "B" "JMP 11(PC)" "b 44" mfinal.go:279
+0x32554 4 "LD.D" "MOVV 120(R3), R7" "ld.d $a3, $sp, 120" mfinal.go:279
+0x32558 4 "LD.D" "MOVV 576(R3), R8" "ld.d $a4, $sp, 576" mfinal.go:279
+0x3255c 4 "LDX.D" "MOVV (R8)(R7), R9" "ldx.d $a5, $a4, $a3" mfinal.go:279
+0x32560 4 "LD.D" "MOVV 552(R3), R10" "ld.d $a6, $sp, 552" mfinal.go:280
+0x32564 4 "LD.D" "MOVV 8(R10), R11" "ld.d $a7, $a6, 8" mfinal.go:280
+0x32568 4 "LD.D" "MOVV 32(R10), R12" "ld.d $t0, $a6, 32" mfinal.go:281
+0x3256c 4 "BL" "CALL runtime.gcWriteBarrier3(SB)" "bl 383988" mfinal.go:279
+0x32570 4 "ST.D" "MOVV R9, 0(R29)" "st.d $a5, $s6, 0" mfinal.go:279
+0x32574 4 "ST.D" "MOVV R11, 8(R29)" "st.d $a7, $s6, 8" mfinal.go:280
+0x32578 4 "ST.D" "MOVV R12, 16(R29)" "st.d $t0, $s6, 16" mfinal.go:281
+0x3257c 4 "STX.D" "MOVV R0, (R8)(R7)" "stx.d $zero, $a4, $a3" mfinal.go:279
+0x32580 4 "ST.D" "MOVV R0, 8(R10)" "st.d $zero, $a6, 8" mfinal.go:280
+0x32584 4 "ST.D" "MOVV R0, 32(R10)" "st.d $zero, $a6, 32" mfinal.go:281
+0x32588 4 "PCALAU12I" "PCALAU12I $309, R30" "pcalau12i $s7, 309" mfinal.go:282
+0x3258c 4 "LD.BU" "MOVBU 1421(R30), R7" "ld.bu $a3, $s7, 1421" mfinal.go:282
+0x32590 4 "LD.D" "MOVV 72(R3), R8" "ld.d $a4, $sp, 72" mfinal.go:282
+0x32594 4 "ADDI.D" "ADDV $16, R8, R9" "addi.d $a5, $a4, 16" mfinal.go:282
+0x32598 4 "BEQZ" "BEQ R7, 6(PC)" "beqz $a3, 24" mfinal.go:282
+0x3259c 4 "LD.WU" "MOVWU 60(R3), R7" "ld.wu $a3, $sp, 60" mfinal.go:282
+0x325a0 4 "DBAR" "DBAR" "dbar 0x12" mfinal.go:282
+0x325a4 4 "ST.W" "MOVW R7, 0(R9)" "st.w $a3, $a5, 0" mfinal.go:282
+0x325a8 4 "DBAR" "DBAR" "dbar 0x18" mfinal.go:282
+0x325ac 4 "B" "JMP -187(PC)" "b -748" mfinal.go:282
+0x325b0 4 "LD.WU" "MOVWU 60(R3), R7" "ld.wu $a3, $sp, 60" mfinal.go:282
+0x325b4 4 "AMSWAP_DB.W" "AMSWAPDBW R7, (R9), R0" "amswap_db.w $zero, $a3, $a5" mfinal.go:282
+0x325b8 4 "B" "JMP -190(PC)" "b -760" mfinal.go:282
+0x325bc 4 "OR" "MOVV R5, R4" "move $a0, $a1" mfinal.go:206
+0x325c0 4 "OR" "MOVV R6, R5" "move $a1, $a2" mfinal.go:206
+0x325c4 4 "B" "JMP -269(PC)" "b -1076" mfinal.go:206
+0x325c8 4 "PCALAU12I" "PCALAU12I $113, R4" "pcalau12i $a0, 113" mfinal.go:269
+0x325cc 4 "ADDI.D" "ADDV $920, R4" "addi.d $a0, $a0, 920" mfinal.go:269
+0x325d0 4 "ORI" "MOVW $26, R5" "ori $a1, $zero, 0x1a" mfinal.go:269
+0x325d4 4 "BL" "CALL runtime.throw(SB)" "bl 359564" mfinal.go:269
+0x325d8 4 "ST.D" "MOVV R16, 128(R3)" "st.d $t4, $sp, 128" mfinal.go:254
+0x325dc 4 "PCALAU12I" "PCALAU12I $261, R4" "pcalau12i $a0, 261" iface.go:470
+0x325e0 4 "ADDI.D" "ADDV $840, R4" "addi.d $a0, $a0, 840" iface.go:470
+0x325e4 4 "BL" "CALL runtime.newobject(SB)" "bl -37636" iface.go:470
+0x325e8 4 "PCALAU12I" "PCALAU12I $310, R30" "pcalau12i $s7, 310" iface.go:470
+0x325ec 4 "LD.WU" "MOVWU -2048(R30), R5" "ld.wu $a1, $s7, -2048" iface.go:470
+0x325f0 4 "BNEZ" "BNE R5, 12(PC)" "bnez $a1, 48" iface.go:470
+0x325f4 4 "ANDI" "NOOP" "nop" iface.go:470
+0x325f8 4 "ANDI" "NOOP" "nop" iface.go:470
+0x325fc 4 "ANDI" "NOOP" "nop" iface.go:470
+0x32600 4 "LD.D" "MOVV 128(R3), R6" "ld.d $a2, $sp, 128" iface.go:470
+0x32604 4 "ST.D" "MOVV R6, 16(R4)" "st.d $a2, $a0, 16" iface.go:470
+0x32608 4 "ST.D" "MOVV R0, 32(R4)" "st.d $zero, $a0, 32" iface.go:470
+0x3260c 4 "ST.D" "MOVV R0, 24(R4)" "st.d $zero, $a0, 24" iface.go:470
+0x32610 4 "OR" "MOVV R4, R5" "move $a1, $a0" iface.go:470
+0x32614 4 "PCALAU12I" "PCALAU12I $248, R4" "pcalau12i $a0, 248" iface.go:470
+0x32618 4 "ADDI.D" "ADDV $184, R4" "addi.d $a0, $a0, 184" iface.go:470
+0x3261c 4 "BL" "CALL runtime.gopanic(SB)" "bl 358596" iface.go:470
+0x32620 4 "BL" "CALL runtime.gcWriteBarrier1(SB)" "bl 383776" iface.go:470
+0x32624 4 "LD.D" "MOVV 128(R3), R6" "ld.d $a2, $sp, 128" iface.go:470
+0x32628 4 "ST.D" "MOVV R6, 0(R29)" "st.d $a2, $s6, 0" iface.go:470
+0x3262c 4 "B" "JMP -11(PC)" "b -44" iface.go:470
+0x32630 4 "PCALAU12I" "PCALAU12I $113, R4" "pcalau12i $a0, 113" mfinal.go:242
+0x32634 4 "ADDI.D" "ADDV $239, R4" "addi.d $a0, $a0, 239" mfinal.go:242
+0x32638 4 "ORI" "MOVW $25, R5" "ori $a1, $zero, 0x19" mfinal.go:242
+0x3263c 4 "BL" "CALL runtime.throw(SB)" "bl 359460" mfinal.go:242
+0x32640 4 "ORI" "MOVW $101, R4" "ori $a0, $zero, 0x65" mfinal.go:221
+0x32644 4 "BL" "CALL runtime.panicBounds(SB)" "bl 384604" mfinal.go:221
+0x32648 4 "ANDI" "NOOP" "nop" mfinal.go:221
+0x3264c 4 "OR" "MOVV R1, R31" "move $s8, $ra" mfinal.go:193
+0x32650 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 372512" mfinal.go:193
+0x32654 4 "B" "JMP runtime.runFinalizers(SB)" "b -1364" mfinal.go:193
+0x32658 4 "BREAK" "BREAK" "break 0x0" .:-1
+0x3265c 4 "BREAK" "BREAK" "break 0x0" .:-1
+== runtime.runPerThreadSyscall 0x51fe0 704 /usr/local/go/src/runtime/os_linux.go
+0x51fe0 4 "ST.D" "MOVV R1, -224(R3)" "st.d $ra, $sp, -224" os_linux.go:890
+0x51fe4 4 "ADDI.D" "ADDV $-224, R3" "addi.d $sp, $sp, -224" os_linux.go:890
+0x51fe8 4 "ST.D" "MOVV R1, 0(R3)" "st.d $ra, $sp, 0" os_linux.go:890
+0x51fec 4 "LD.D" "MOVV 48(R22), R11" "ld.d $a7, $fp, 48" os_linux.go:891
+0x51ff0 4 "LD.B" "MOVB 0(R11), R30" "ld.b $s7, $a7, 0" os_linux.go:892
+0x51ff4 4 "ADDI.D" "ADDV $1317, R11" "addi.d $a7, $a7, 1317" types.go:124
+0x51ff8 4 "LD.B" "MOVB 0(R11), R11" "ld.b $a7, $a7, 0" types.go:124
+0x51ffc 4 "DBAR" "DBAR" "dbar 0x14" types.go:124
+0x52000 4 "ANDI" "MOVBU R11" "andi $a7, $a7, 0xff" os_linux.go:892
+0x52004 4 "BEQZ" "BEQ R11, 163(PC)" "beqz $a7, 652" os_linux.go:892
+0x52008 4 "ST.D" "MOVV R22, 216(R3)" "st.d $fp, $sp, 216" os_linux.go:891
+0x5200c 4 "PCALAU12I" "PCALAU12I $278, R30" "pcalau12i $s7, 278" os_linux.go:897
+0x52010 4 "LD.D" "MOVV -1312(R30), R4" "ld.d $a0, $s7, -1312" os_linux.go:897
+0x52014 4 "PCALAU12I" "PCALAU12I $278, R30" "pcalau12i $s7, 278" os_linux.go:897
+0x52018 4 "LD.D" "MOVV -1304(R30), R5" "ld.d $a1, $s7, -1304" os_linux.go:897
+0x5201c 4 "PCALAU12I" "PCALAU12I $278, R30" "pcalau12i $s7, 278" os_linux.go:897
+0x52020 4 "LD.D" "MOVV -1296(R30), R6" "ld.d $a2, $s7, -1296" os_linux.go:897
+0x52024 4 "PCALAU12I" "PCALAU12I $278, R30" "pcalau12i $s7, 278" os_linux.go:897
+0x52028 4 "LD.D" "MOVV -1288(R30), R7" "ld.d $a3, $s7, -1288" os_linux.go:897
+0x5202c 4 "PCALAU12I" "PCALAU12I $278, R30" "pcalau12i $s7, 278" os_linux.go:897
+0x52030 4 "LD.D" "MOVV -1280(R30), R8" "ld.d $a4, $s7, -1280" os_linux.go:897
+0x52034 4 "PCALAU12I" "PCALAU12I $278, R30" "pcalau12i $s7, 278" os_linux.go:897
+0x52038 4 "LD.D" "MOVV -1272(R30), R9" "ld.d $a5, $s7, -1272" os_linux.go:897
+0x5203c 4 "PCALAU12I" "PCALAU12I $278, R30" "pcalau12i $s7, 278" os_linux.go:897
+0x52040 4 "LD.D" "MOVV -1264(R30), R10" "ld.d $a6, $s7, -1264" os_linux.go:897
+0x52044 4 "ADDI.D" "ADDV $88, R3, R11" "addi.d $a7, $sp, 88" os_linux.go:896
+0x52048 4 "PCALAU12I" "PCALAU12I $278, R12" "pcalau12i $t0, 278" os_linux.go:896
+0x5204c 4 "ADDI.D" "ADDV $-1312, R12" "addi.d $t0, $t0, -1312" os_linux.go:896
+0x52050 4 "LD.D" "MOVV 0(R12), R23" "ld.d $s0, $t0, 0" os_linux.go:896
+0x52054 4 "ST.D" "MOVV R23, 0(R11)" "st.d $s0, $a7, 0" os_linux.go:896
+0x52058 4 "LD.D" "MOVV 8(R12), R23" "ld.d $s0, $t0, 8" os_linux.go:896
+0x5205c 4 "ST.D" "MOVV R23, 8(R11)" "st.d $s0, $a7, 8" os_linux.go:896
+0x52060 4 "LD.D" "MOVV 16(R12), R23" "ld.d $s0, $t0, 16" os_linux.go:896
+0x52064 4 "ST.D" "MOVV R23, 16(R11)" "st.d $s0, $a7, 16" os_linux.go:896
+0x52068 4 "LD.D" "MOVV 24(R12), R23" "ld.d $s0, $t0, 24" os_linux.go:896
+0x5206c 4 "ST.D" "MOVV R23, 24(R11)" "st.d $s0, $a7, 24" os_linux.go:896
+0x52070 4 "LD.D" "MOVV 32(R12), R23" "ld.d $s0, $t0, 32" os_linux.go:896
+0x52074 4 "ST.D" "MOVV R23, 32(R11)" "st.d $s0, $a7, 32" os_linux.go:896
+0x52078 4 "LD.D" "MOVV 40(R12), R23" "ld.d $s0, $t0, 40" os_linux.go:896
+0x5207c 4 "ST.D" "MOVV R23, 40(R11)" "st.d $s0, $a7, 40" os_linux.go:896
+0x52080 4 "LD.D" "MOVV 48(R12), R23" "ld.d $s0, $t0, 48" os_linux.go:896
+0x52084 4 "ST.D" "MOVV R23, 48(R11)" "st.d $s0, $a7, 48" os_linux.go:896
+0x52088 4 "LD.D" "MOVV 56(R12), R23" "ld.d $s0, $t0, 56" os_linux.go:896
+0x5208c 4 "ST.D" "MOVV R23, 56(R11)" "st.d $s0, $a7, 56" os_linux.go:896
+0x52090 4 "LD.D" "MOVV 64(R12), R23" "ld.d $s0, $t0, 64" os_linux.go:896
+0x52094 4 "ST.D" "MOVV R23, 64(R11)" "st.d $s0, $a7, 64" os_linux.go:896
+0x52098 4 "BL" "CALL internal/runtime/syscall/linux.Syscall6(SB)" "bl -219288" os_linux.go:897
+0x5209c 4 "ST.D" "MOVV R4, 72(R3)" "st.d $a0, $sp, 72" os_linux.go:897
+0x520a0 4 "ST.D" "MOVV R5, 64(R3)" "st.d $a1, $sp, 64" os_linux.go:897
+0x520a4 4 "ST.D" "MOVV R6, 80(R3)" "st.d $a2, $sp, 80" os_linux.go:897
+0x520a8 4 "BNEZ" "BNE R6, 5(PC)" "bnez $a2, 20" os_linux.go:902
+0x520ac 4 "LD.D" "MOVV 144(R3), R7" "ld.d $a3, $sp, 144" os_linux.go:902
+0x520b0 4 "BNE" "BNE R4, R7, 3(PC)" "bne $a0, $a3, 12" os_linux.go:902
+0x520b4 4 "LD.D" "MOVV 152(R3), R7" "ld.d $a3, $sp, 152" os_linux.go:902
+0x520b8 4 "BEQ" "BEQ R5, R7, 107(PC)" "beq $a1, $a3, 428" os_linux.go:902
+0x520bc 4 "LD.D" "MOVV 88(R3), R4" "ld.d $a0, $sp, 88" os_linux.go:903
+0x520c0 4 "ST.D" "MOVV R4, 208(R3)" "st.d $a0, $sp, 208" os_linux.go:903
+0x520c4 4 "LD.D" "MOVV 96(R3), R4" "ld.d $a0, $sp, 96" os_linux.go:903
+0x520c8 4 "ST.D" "MOVV R4, 200(R3)" "st.d $a0, $sp, 200" os_linux.go:903
+0x520cc 4 "LD.D" "MOVV 104(R3), R4" "ld.d $a0, $sp, 104" os_linux.go:903
+0x520d0 4 "ST.D" "MOVV R4, 192(R3)" "st.d $a0, $sp, 192" os_linux.go:903
+0x520d4 4 "LD.D" "MOVV 112(R3), R4" "ld.d $a0, $sp, 112" os_linux.go:903
+0x520d8 4 "ST.D" "MOVV R4, 184(R3)" "st.d $a0, $sp, 184" os_linux.go:903
+0x520dc 4 "LD.D" "MOVV 120(R3), R4" "ld.d $a0, $sp, 120" os_linux.go:903
+0x520e0 4 "ST.D" "MOVV R4, 176(R3)" "st.d $a0, $sp, 176" os_linux.go:903
+0x520e4 4 "LD.D" "MOVV 128(R3), R4" "ld.d $a0, $sp, 128" os_linux.go:903
+0x520e8 4 "ST.D" "MOVV R4, 168(R3)" "st.d $a0, $sp, 168" os_linux.go:903
+0x520ec 4 "LD.D" "MOVV 136(R3), R4" "ld.d $a0, $sp, 136" os_linux.go:903
+0x520f0 4 "ST.D" "MOVV R4, 160(R3)" "st.d $a0, $sp, 160" os_linux.go:903
+0x520f4 4 "BL" "CALL runtime.printlock(SB)" "bl 15964" os_linux.go:903
+0x520f8 4 "PCALAU12I" "PCALAU12I $78, R4" "pcalau12i $a0, 78" os_linux.go:903
+0x520fc 4 "ADDI.D" "ADDV $491, R4" "addi.d $a0, $a0, 491" os_linux.go:903
+0x52100 4 "ORI" "MOVW $5, R5" "ori $a1, $zero, 0x5" os_linux.go:903
+0x52104 4 "BL" "CALL runtime.printstring(SB)" "bl 18940" os_linux.go:903
+0x52108 4 "LD.D" "MOVV 208(R3), R4" "ld.d $a0, $sp, 208" os_linux.go:903
+0x5210c 4 "BL" "CALL runtime.printuint(SB)" "bl 17156" os_linux.go:903
+0x52110 4 "PCALAU12I" "PCALAU12I $79, R4" "pcalau12i $a0, 79" os_linux.go:903
+0x52114 4 "ADDI.D" "ADDV $-738, R4" "addi.d $a0, $a0, -738" os_linux.go:903
+0x52118 4 "ORI" "MOVW $11, R5" "ori $a1, $zero, 0xb" os_linux.go:903
+0x5211c 4 "BL" "CALL runtime.printstring(SB)" "bl 18916" os_linux.go:903
+0x52120 4 "LD.D" "MOVV 200(R3), R4" "ld.d $a0, $sp, 200" os_linux.go:903
+0x52124 4 "BL" "CALL runtime.printuint(SB)" "bl 17132" os_linux.go:903
+0x52128 4 "PCALAU12I" "PCALAU12I $78, R4" "pcalau12i $a0, 78" os_linux.go:903
+0x5212c 4 "ADDI.D" "ADDV $11, R4" "addi.d $a0, $a0, 11" os_linux.go:903
+0x52130 4 "ORI" "MOVW $1, R5" "ori $a1, $zero, 0x1" os_linux.go:903
+0x52134 4 "BL" "CALL runtime.printstring(SB)" "bl 18892" os_linux.go:903
+0x52138 4 "LD.D" "MOVV 192(R3), R4" "ld.d $a0, $sp, 192" os_linux.go:903
+0x5213c 4 "BL" "CALL runtime.printuint(SB)" "bl 17108" os_linux.go:903
+0x52140 4 "PCALAU12I" "PCALAU12I $78, R4" "pcalau12i $a0, 78" os_linux.go:903
+0x52144 4 "ADDI.D" "ADDV $11, R4" "addi.d $a0, $a0, 11" os_linux.go:903
+0x52148 4 "ORI" "MOVW $1, R5" "ori $a1, $zero, 0x1" os_linux.go:903
+0x5214c 4 "BL" "CALL runtime.printstring(SB)" "bl 18868" os_linux.go:903
+0x52150 4 "LD.D" "MOVV 184(R3), R4" "ld.d $a0, $sp, 184" os_linux.go:903
+0x52154 4 "BL" "CALL runtime.printuint(SB)" "bl 17084" os_linux.go:903
+0x52158 4 "PCALAU12I" "PCALAU12I $78, R4" "pcalau12i $a0, 78" os_linux.go:903
+0x5215c 4 "ADDI.D" "ADDV $11, R4" "addi.d $a0, $a0, 11" os_linux.go:903
+0x52160 4 "ORI" "MOVW $1, R5" "ori $a1, $zero, 0x1" os_linux.go:903
+0x52164 4 "BL" "CALL runtime.printstring(SB)" "bl 18844" os_linux.go:903
+0x52168 4 "LD.D" "MOVV 176(R3), R4" "ld.d $a0, $sp, 176" os_linux.go:903
+0x5216c 4 "BL" "CALL runtime.printuint(SB)" "bl 17060" os_linux.go:903
+0x52170 4 "PCALAU12I" "PCALAU12I $78, R4" "pcalau12i $a0, 78" os_linux.go:903
+0x52174 4 "ADDI.D" "ADDV $11, R4" "addi.d $a0, $a0, 11" os_linux.go:903
+0x52178 4 "ORI" "MOVW $1, R5" "ori $a1, $zero, 0x1" os_linux.go:903
+0x5217c 4 "BL" "CALL runtime.printstring(SB)" "bl 18820" os_linux.go:903
+0x52180 4 "LD.D" "MOVV 168(R3), R4" "ld.d $a0, $sp, 168" os_linux.go:903
+0x52184 4 "BL" "CALL runtime.printuint(SB)" "bl 17036" os_linux.go:903
+0x52188 4 "PCALAU12I" "PCALAU12I $78, R4" "pcalau12i $a0, 78" os_linux.go:903
+0x5218c 4 "ADDI.D" "ADDV $11, R4" "addi.d $a0, $a0, 11" os_linux.go:903
+0x52190 4 "ORI" "MOVW $1, R5" "ori $a1, $zero, 0x1" os_linux.go:903
+0x52194 4 "BL" "CALL runtime.printstring(SB)" "bl 18796" os_linux.go:903
+0x52198 4 "LD.D" "MOVV 160(R3), R4" "ld.d $a0, $sp, 160" os_linux.go:903
+0x5219c 4 "BL" "CALL runtime.printuint(SB)" "bl 17012" os_linux.go:903
+0x521a0 4 "PCALAU12I" "PCALAU12I $78, R4" "pcalau12i $a0, 78" os_linux.go:903
+0x521a4 4 "ADDI.D" "ADDV $57, R4" "addi.d $a0, $a0, 57" os_linux.go:903
+0x521a8 4 "ORI" "MOVW $2, R5" "ori $a1, $zero, 0x2" os_linux.go:903
+0x521ac 4 "BL" "CALL runtime.printstring(SB)" "bl 18772" os_linux.go:903
+0x521b0 4 "BL" "CALL runtime.printunlock(SB)" "bl 15904" os_linux.go:903
+0x521b4 4 "LD.D" "MOVV 144(R3), R4" "ld.d $a0, $sp, 144" os_linux.go:904
+0x521b8 4 "ST.D" "MOVV R4, 208(R3)" "st.d $a0, $sp, 208" os_linux.go:904
+0x521bc 4 "LD.D" "MOVV 152(R3), R4" "ld.d $a0, $sp, 152" os_linux.go:904
+0x521c0 4 "ST.D" "MOVV R4, 200(R3)" "st.d $a0, $sp, 200" os_linux.go:904
+0x521c4 4 "BL" "CALL runtime.printlock(SB)" "bl 15756" os_linux.go:904
+0x521c8 4 "PCALAU12I" "PCALAU12I $80, R4" "pcalau12i $a0, 80" os_linux.go:904
+0x521cc 4 "ADDI.D" "ADDV $-650, R4" "addi.d $a0, $a0, -650" os_linux.go:904
+0x521d0 4 "ORI" "MOVW $17, R5" "ori $a1, $zero, 0x11" os_linux.go:904
+0x521d4 4 "BL" "CALL runtime.printstring(SB)" "bl 18732" os_linux.go:904
+0x521d8 4 "LD.D" "MOVV 72(R3), R4" "ld.d $a0, $sp, 72" os_linux.go:904
+0x521dc 4 "BL" "CALL runtime.printuint(SB)" "bl 16948" os_linux.go:904
+0x521e0 4 "PCALAU12I" "PCALAU12I $78, R4" "pcalau12i $a0, 78" os_linux.go:904
+0x521e4 4 "ADDI.D" "ADDV $262, R4" "addi.d $a0, $a0, 262" os_linux.go:904
+0x521e8 4 "ORI" "MOVW $4, R5" "ori $a1, $zero, 0x4" os_linux.go:904
+0x521ec 4 "BL" "CALL runtime.printstring(SB)" "bl 18708" os_linux.go:904
+0x521f0 4 "LD.D" "MOVV 64(R3), R4" "ld.d $a0, $sp, 64" os_linux.go:904
+0x521f4 4 "BL" "CALL runtime.printuint(SB)" "bl 16924" os_linux.go:904
+0x521f8 4 "PCALAU12I" "PCALAU12I $78, R4" "pcalau12i $a0, 78" os_linux.go:904
+0x521fc 4 "ADDI.D" "ADDV $1202, R4" "addi.d $a0, $a0, 1202" os_linux.go:904
+0x52200 4 "ORI" "MOVW $7, R5" "ori $a1, $zero, 0x7" os_linux.go:904
+0x52204 4 "BL" "CALL runtime.printstring(SB)" "bl 18684" os_linux.go:904
+0x52208 4 "LD.D" "MOVV 80(R3), R4" "ld.d $a0, $sp, 80" os_linux.go:904
+0x5220c 4 "BL" "CALL runtime.printuint(SB)" "bl 16900" os_linux.go:904
+0x52210 4 "PCALAU12I" "PCALAU12I $79, R4" "pcalau12i $a0, 79" os_linux.go:904
+0x52214 4 "ADDI.D" "ADDV $-6, R4" "addi.d $a0, $a0, -6" os_linux.go:904
+0x52218 4 "ORI" "MOVW $12, R5" "ori $a1, $zero, 0xc" os_linux.go:904
+0x5221c 4 "BL" "CALL runtime.printstring(SB)" "bl 18660" os_linux.go:904
+0x52220 4 "LD.D" "MOVV 208(R3), R4" "ld.d $a0, $sp, 208" os_linux.go:904
+0x52224 4 "BL" "CALL runtime.printuint(SB)" "bl 16876" os_linux.go:904
+0x52228 4 "PCALAU12I" "PCALAU12I $78, R4" "pcalau12i $a0, 78" os_linux.go:904
+0x5222c 4 "ADDI.D" "ADDV $262, R4" "addi.d $a0, $a0, 262" os_linux.go:904
+0x52230 4 "ORI" "MOVW $4, R5" "ori $a1, $zero, 0x4" os_linux.go:904
+0x52234 4 "BL" "CALL runtime.printstring(SB)" "bl 18636" os_linux.go:904
+0x52238 4 "LD.D" "MOVV 200(R3), R4" "ld.d $a0, $sp, 200" os_linux.go:904
+0x5223c 4 "BL" "CALL runtime.printuint(SB)" "bl 16852" os_linux.go:904
+0x52240 4 "PCALAU12I" "PCALAU12I $79, R4" "pcalau12i $a0, 79" os_linux.go:904
+0x52244 4 "ADDI.D" "ADDV $-1275, R4" "addi.d $a0, $a0, -1275" os_linux.go:904
+0x52248 4 "ORI" "MOVW $10, R5" "ori $a1, $zero, 0xa" os_linux.go:904
+0x5224c 4 "BL" "CALL runtime.printstring(SB)" "bl 18612" os_linux.go:904
+0x52250 4 "BL" "CALL runtime.printunlock(SB)" "bl 15744" os_linux.go:904
+0x52254 4 "PCALAU12I" "PCALAU12I $85, R4" "pcalau12i $a0, 85" os_linux.go:905
+0x52258 4 "ADDI.D" "ADDV $1878, R4" "addi.d $a0, $a0, 1878" os_linux.go:905
+0x5225c 4 "ORI" "MOVW $68, R5" "ori $a1, $zero, 0x44" os_linux.go:905
+0x52260 4 "BL" "CALL runtime.fatal(SB)" "bl 4656" os_linux.go:905
+0x52264 4 "LD.D" "MOVV 216(R3), R4" "ld.d $a0, $sp, 216" os_linux.go:908
+0x52268 4 "LD.D" "MOVV 48(R4), R4" "ld.d $a0, $a0, 48" os_linux.go:908
+0x5226c 4 "LD.B" "MOVB 0(R4), R30" "ld.b $s7, $a0, 0" os_linux.go:908
+0x52270 4 "ADDI.D" "ADDV $1317, R4" "addi.d $a0, $a0, 1317" types.go:131
+0x52274 4 "OR" "MOVV R0, R5" "move $a1, $zero" types.go:131
+0x52278 4 "DBAR" "DBAR" "dbar 0x12" types.go:131
+0x5227c 4 "ST.B" "MOVB R5, 0(R4)" "st.b $a1, $a0, 0" types.go:131
+0x52280 4 "DBAR" "DBAR" "dbar 0x18" types.go:131
+0x52284 4 "LD.D" "MOVV 0(R3), R1" "ld.d $ra, $sp, 0" os_linux.go:909
+0x52288 4 "ADDI.D" "ADDV $224, R3" "addi.d $sp, $sp, 224" os_linux.go:909
+0x5228c 4 "JIRL" "RET" "ret" os_linux.go:909
+0x52290 4 "LD.D" "MOVV 0(R3), R1" "ld.d $ra, $sp, 0" os_linux.go:893
+0x52294 4 "ADDI.D" "ADDV $224, R3" "addi.d $sp, $sp, 224" os_linux.go:893
+0x52298 4 "JIRL" "RET" "ret" os_linux.go:893
+0x5229c 4 "BREAK" "BREAK" "break 0x0" .:-1
+== runtime.runSafePointFn 0x5af30 288 /usr/local/go/src/runtime/proc.go
+0x5af30 4 "LD.D" "MOVV 16(R22), R20" "ld.d $t8, $fp, 16" proc.go:2250
+0x5af34 4 "SLTU" "SGTU R3, R20" "sltu $t8, $t8, $sp" proc.go:2250
+0x5af38 4 "BEQZ" "BEQ R20, 64(PC)" "beqz $t8, 256" proc.go:2250
+0x5af3c 4 "ST.D" "MOVV R1, -16(R3)" "st.d $ra, $sp, -16" proc.go:2250
+0x5af40 4 "ADDI.D" "ADDV $-16, R3" "addi.d $sp, $sp, -16" proc.go:2250
+0x5af44 4 "ST.D" "MOVV R1, 0(R3)" "st.d $ra, $sp, 0" proc.go:2250
+0x5af48 4 "LD.D" "MOVV 48(R22), R5" "ld.d $a1, $fp, 48" proc.go:2251
+0x5af4c 4 "LD.D" "MOVV 208(R5), R4" "ld.d $a0, $a1, 208" proc.go:2251
+0x5af50 4 "PCALAU12I" "PCALAU12I $269, R30" "pcalau12i $s7, 269" proc.go:2255
+0x5af54 4 "LD.BU" "MOVBU 1419(R30), R5" "ld.bu $a1, $s7, 1419" proc.go:2255
+0x5af58 4 "LD.B" "MOVB 0(R4), R30" "ld.b $s7, $a0, 0" proc.go:2255
+0x5af5c 4 "LU12I.W" "LU12IW $3, R30" "lu12i.w $s7, 3" proc.go:2255
+0x5af60 4 "ORI" "OR $1376, R30" "ori $s7, $s7, 0x560" proc.go:2255
+0x5af64 4 "ADD.D" "ADDV R30, R4, R6" "add.d $a2, $a0, $s7" proc.go:2255
+0x5af68 4 "BEQZ" "BEQ R5, 9(PC)" "beqz $a1, 36" proc.go:2255
+0x5af6c 4 "ORI" "MOVW $1, R5" "ori $a1, $zero, 0x1" proc.go:2255
+0x5af70 4 "OR" "MOVV R0, R7" "move $a3, $zero" proc.go:2255
+0x5af74 4 "OR" "MOVV R0, R8" "move $a4, $zero" proc.go:2255
+0x5af78 4 "OR" "MOVV R5, R30" "move $s7, $a1" proc.go:2255
+0x5af7c 4 "AMCAS_DB.W" "AMCASDBW R7, (R6), R30" "amcas_db.w $s7, $a3, $a2" proc.go:2255
+0x5af80 4 "BNE" "BNE R5, R30, 2(PC)" "bne $a1, $s7, 8" proc.go:2255
+0x5af84 4 "ORI" "MOVW $1, R8" "ori $a4, $zero, 0x1" proc.go:2255
+0x5af88 4 "B" "JMP 12(PC)" "b 48" proc.go:2255
+0x5af8c 4 "ORI" "MOVW $1, R5" "ori $a1, $zero, 0x1" proc.go:2255
+0x5af90 4 "OR" "MOVV R0, R7" "move $a3, $zero" proc.go:2255
+0x5af94 4 "OR" "MOVV R0, R8" "move $a4, $zero" proc.go:2255
+0x5af98 4 "DBAR" "DBAR" "dbar 0x14" proc.go:2255
+0x5af9c 4 "ANDI" "NOOP" "nop" proc.go:2255
+0x5afa0 4 "LL.W" "LL 0(R6), R30" "ll.w $s7, $a2, 0" proc.go:2255
+0x5afa4 4 "BNE" "BNE R5, R30, 4(PC)" "bne $a1, $s7, 16" proc.go:2255
+0x5afa8 4 "OR" "MOVV R7, R8" "move $a4, $a3" proc.go:2255
+0x5afac 4 "SC.W" "SC R8, 0(R6)" "sc.w $a4, $a2, 0" proc.go:2255
+0x5afb0 4 "BEQZ" "BEQ R8, -4(PC)" "beqz $a4, -16" proc.go:2255
+0x5afb4 4 "DBAR" "DBAR" "dbar 0x12" proc.go:2255
+0x5afb8 4 "ANDI" "MOVBU R8, R5" "andi $a1, $a4, 0xff" proc.go:2255
+0x5afbc 4 "BEQZ" "BEQ R5, 28(PC)" "beqz $a1, 112" proc.go:2255
+0x5afc0 4 "PCALAU12I" "PCALAU12I $239, R30" "pcalau12i $s7, 239" proc.go:2258
+0x5afc4 4 "LD.D" "MOVV 104(R30), R29" "ld.d $s6, $s7, 104" proc.go:2258
+0x5afc8 4 "LD.D" "MOVV 0(R29), R5" "ld.d $a1, $s6, 0" proc.go:2258
+0x5afcc 4 "JIRL" "CALL (R5)" "jirl $ra, $a1, 0" proc.go:2258
+0x5afd0 4 "ANDI" "NOOP" "nop" proc.go:2259
+0x5afd4 4 "ANDI" "NOOP" "nop" lock_spinbit.go:161
+0x5afd8 4 "PCALAU12I" "PCALAU12I $239, R4" "pcalau12i $a0, 239" lockrank_off.go:24
+0x5afdc 4 "ADDI.D" "ADDV $-160, R4" "addi.d $a0, $a0, -160" lockrank_off.go:24
+0x5afe0 4 "BL" "CALL runtime.lock2(SB)" "bl -214448" lockrank_off.go:24
+0x5afe4 4 "PCALAU12I" "PCALAU12I $239, R30" "pcalau12i $s7, 239" proc.go:2260
+0x5afe8 4 "LD.W" "MOVW 112(R30), R5" "ld.w $a1, $s7, 112" proc.go:2260
+0x5afec 4 "ADDI.D" "ADDV $-1, R5" "addi.d $a1, $a1, -1" proc.go:2260
+0x5aff0 4 "PCALAU12I" "PCALAU12I $239, R30" "pcalau12i $s7, 239" proc.go:2260
+0x5aff4 4 "ST.W" "MOVW R5, 112(R30)" "st.w $a1, $s7, 112" proc.go:2260
+0x5aff8 4 "BSTRPICK.D" "BSTRPICKV $31, R5, $0, R5" "bstrpick.d $a1, $a1, 0x1f, 0x0" proc.go:2261
+0x5affc 4 "BNEZ" "BNE R5, 4(PC)" "bnez $a1, 16" proc.go:2261
+0x5b000 4 "PCALAU12I" "PCALAU12I $238, R4" "pcalau12i $a0, 238" proc.go:2262
+0x5b004 4 "ADDI.D" "ADDV $120, R4" "addi.d $a0, $a0, 120" proc.go:2262
+0x5b008 4 "BL" "CALL runtime.notewakeup(SB)" "bl -215976" proc.go:2262
+0x5b00c 4 "ANDI" "NOOP" "nop" proc.go:2264
+0x5b010 4 "ANDI" "NOOP" "nop" lock_spinbit.go:270
+0x5b014 4 "PCALAU12I" "PCALAU12I $238, R4" "pcalau12i $a0, 238" lockrank_off.go:36
+0x5b018 4 "ADDI.D" "ADDV $-160, R4" "addi.d $a0, $a0, -160" lockrank_off.go:36
+0x5b01c 4 "BL" "CALL runtime.unlock2(SB)" "bl -213164" lockrank_off.go:36
+0x5b020 4 "LD.D" "MOVV 0(R3), R1" "ld.d $ra, $sp, 0" proc.go:2265
+0x5b024 4 "ADDI.D" "ADDV $16, R3" "addi.d $sp, $sp, 16" proc.go:2265
+0x5b028 4 "JIRL" "RET" "ret" proc.go:2265
+0x5b02c 4 "LD.D" "MOVV 0(R3), R1" "ld.d $ra, $sp, 0" proc.go:2256
+0x5b030 4 "ADDI.D" "ADDV $16, R3" "addi.d $sp, $sp, 16" proc.go:2256
+0x5b034 4 "JIRL" "RET" "ret" proc.go:2256
+0x5b038 4 "OR" "MOVV R1, R31" "move $s8, $ra" proc.go:2250
+0x5b03c 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 206132" proc.go:2250
+0x5b040 4 "B" "JMP runtime.runSafePointFn(SB)" "b -272" proc.go:2250
+0x5b044 4 "BREAK" "BREAK" "break 0x0" .:-1
+0x5b048 4 "BREAK" "BREAK" "break 0x0" .:-1
+0x5b04c 4 "BREAK" "BREAK" "break 0x0" .:-1
+== runtime.runqput 0x66450 368 /usr/local/go/src/runtime/proc.go
+0x66450 4 "LD.D" "MOVV 16(R22), R20" "ld.d $t8, $fp, 16" proc.go:7529
+0x66454 4 "SLTU" "SGTU R3, R20" "sltu $t8, $t8, $sp" proc.go:7529
+0x66458 4 "BEQZ" "BEQ R20, 80(PC)" "beqz $t8, 320" proc.go:7529
+0x6645c 4 "ST.D" "MOVV R1, -40(R3)" "st.d $ra, $sp, -40" proc.go:7529
+0x66460 4 "ADDI.D" "ADDV $-40, R3" "addi.d $sp, $sp, -40" proc.go:7529
+0x66464 4 "ST.D" "MOVV R1, 0(R3)" "st.d $ra, $sp, 0" proc.go:7529
+0x66468 4 "ANDI" "MOVBU R6, R8" "andi $a4, $a2, 0xff" proc.go:7545
+0x6646c 4 "BNEZ" "BNE R8, 42(PC)" "bnez $a4, 168" proc.go:7545
+0x66470 4 "ST.D" "MOVV R4, 48(R3)" "st.d $a0, $sp, 48" proc.go:7545
+0x66474 4 "ST.D" "MOVV R5, 32(R3)" "st.d $a1, $sp, 32" proc.go:7558
+0x66478 4 "B" "JMP 4(PC)" "b 16" proc.go:7559
+0x6647c 4 "ANDI" "NOOP" "nop" proc.go:7559
+0x66480 4 "LD.D" "MOVV 48(R3), R4" "ld.d $a0, $sp, 48" proc.go:7559
+0x66484 4 "LD.D" "MOVV 32(R3), R5" "ld.d $a1, $sp, 32" proc.go:7566
+0x66488 4 "LD.B" "MOVB 0(R4), R30" "ld.b $s7, $a0, 0" proc.go:7559
+0x6648c 4 "ADDI.D" "ADDV $400, R4, R8" "addi.d $a4, $a0, 400" proc.go:7559
+0x66490 4 "LD.W" "MOVW 0(R8), R6" "ld.w $a2, $a4, 0" proc.go:7559
+0x66494 4 "DBAR" "DBAR" "dbar 0x14" proc.go:7559
+0x66498 4 "LD.WU" "MOVWU 404(R4), R7" "ld.wu $a3, $a0, 404" proc.go:7560
+0x6649c 4 "SUB.D" "SUBV R6, R7, R8" "sub.d $a4, $a3, $a2" proc.go:7561
+0x664a0 4 "BSTRPICK.D" "BSTRPICKV $31, R8, $0, R8" "bstrpick.d $a4, $a4, 0x1f, 0x0" proc.go:7561
+0x664a4 4 "ORI" "MOVW $256, R9" "ori $a5, $zero, 0x100" proc.go:7561
+0x664a8 4 "BLTU" "BLTU R8, R9, 7(PC)" "bltu $a4, $a5, 28" proc.go:7561
+0x664ac 4 "BL" "CALL runtime.runqputslow(SB)" "bl 276" proc.go:7566
+0x664b0 4 "ANDI" "MOVBU R4, R8" "andi $a4, $a0, 0xff" proc.go:7566
+0x664b4 4 "BEQZ" "BEQ R8, -13(PC)" "beqz $a4, -52" proc.go:7566
+0x664b8 4 "LD.D" "MOVV 0(R3), R1" "ld.d $ra, $sp, 0" proc.go:7567
+0x664bc 4 "ADDI.D" "ADDV $40, R3" "addi.d $sp, $sp, 40" proc.go:7567
+0x664c0 4 "JIRL" "RET" "ret" proc.go:7567
+0x664c4 4 "ADDI.D" "ADDV $408, R4, R6" "addi.d $a2, $a0, 408" proc.go:7562
+0x664c8 4 "ANDI" "MOVBU R7, R8" "andi $a4, $a3, 0xff" proc.go:7562
+0x664cc 4 "SLLI.D" "SLLV $3, R8" "slli.d $a4, $a4, 0x3" runtime2.go:248
+0x664d0 4 "ADDI.D" "ADDV $404, R4" "addi.d $a0, $a0, 404" proc.go:7560
+0x664d4 4 "STX.D" "MOVV R5, (R6)(R8)" "stx.d $a1, $a2, $a4" runtime2.go:248
+0x664d8 4 "PCALAU12I" "PCALAU12I $257, R30" "pcalau12i $s7, 257" proc.go:7563
+0x664dc 4 "LD.BU" "MOVBU 1421(R30), R5" "ld.bu $a1, $s7, 1421" proc.go:7563
+0x664e0 4 "ADDI.D" "ADDV $1, R7, R6" "addi.d $a2, $a3, 1" proc.go:7563
+0x664e4 4 "BEQZ" "BEQ R5, 5(PC)" "beqz $a1, 20" proc.go:7563
+0x664e8 4 "DBAR" "DBAR" "dbar 0x12" proc.go:7563
+0x664ec 4 "ST.W" "MOVW R6, 0(R4)" "st.w $a2, $a0, 0" proc.go:7563
+0x664f0 4 "DBAR" "DBAR" "dbar 0x18" proc.go:7563
+0x664f4 4 "B" "JMP 2(PC)" "b 8" proc.go:7563
+0x664f8 4 "AMSWAP_DB.W" "AMSWAPDBW R6, (R4), R0" "amswap_db.w $zero, $a2, $a0" proc.go:7563
+0x664fc 4 "LD.D" "MOVV 0(R3), R1" "ld.d $ra, $sp, 0" proc.go:7564
+0x66500 4 "ADDI.D" "ADDV $40, R3" "addi.d $sp, $sp, 40" proc.go:7564
+0x66504 4 "JIRL" "RET" "ret" proc.go:7564
+0x66508 4 "ANDI" "NOOP" "nop" proc.go:7564
+0x6650c 4 "ANDI" "NOOP" "nop" proc.go:7564
+0x66510 4 "OR" "MOVV R11, R5" "move $a1, $a7" proc.go:7548
+0x66514 4 "PCALAU12I" "PCALAU12I $257, R30" "pcalau12i $s7, 257" runtime2.go:252
+0x66518 4 "LD.BU" "MOVBU 1419(R30), R8" "ld.bu $a4, $s7, 1419" runtime2.go:252
+0x6651c 4 "LU12I.W" "LU12IW $1, R30" "lu12i.w $s7, 1" proc.go:7547
+0x66520 4 "ADD.D" "ADDV R4, R30" "add.d $s7, $s7, $a0" proc.go:7547
+0x66524 4 "LD.D" "MOVV -1640(R30), R9" "ld.d $a5, $s7, -1640" proc.go:7547
+0x66528 4 "ORI" "MOVW $2456, R30" "ori $s7, $zero, 0x998" proc.go:7547
+0x6652c 4 "ADD.D" "ADDV R30, R4, R10" "add.d $a6, $a0, $s7" proc.go:7547
+0x66530 4 "OR" "MOVV R5, R11" "move $a7, $a1" proc.go:7548
+0x66534 4 "BEQZ" "BEQ R8, 7(PC)" "beqz $a4, 28" runtime2.go:252
+0x66538 4 "OR" "MOVV R0, R8" "move $a4, $zero" runtime2.go:252
+0x6653c 4 "OR" "MOVV R9, R30" "move $s7, $a5" runtime2.go:252
+0x66540 4 "AMCAS_DB.D" "AMCASDBV R5, (R10), R30" "amcas_db.d $s7, $a1, $a6" runtime2.go:252
+0x66544 4 "BNE" "BNE R9, R30, 2(PC)" "bne $a5, $s7, 8" runtime2.go:252
+0x66548 4 "ORI" "MOVW $1, R8" "ori $a4, $zero, 0x1" runtime2.go:252
+0x6654c 4 "B" "JMP 11(PC)" "b 44" runtime2.go:252
+0x66550 4 "OR" "MOVV R0, R8" "move $a4, $zero" runtime2.go:252
+0x66554 4 "DBAR" "DBAR" "dbar 0x14" runtime2.go:252
+0x66558 4 "ANDI" "NOOP" "nop" runtime2.go:252
+0x6655c 4 "ANDI" "NOOP" "nop" runtime2.go:252
+0x66560 4 "LL.D" "LLV 0(R10), R30" "ll.d $s7, $a6, 0" runtime2.go:252
+0x66564 4 "BNE" "BNE R9, R30, 4(PC)" "bne $a5, $s7, 16" runtime2.go:252
+0x66568 4 "OR" "MOVV R5, R8" "move $a4, $a1" runtime2.go:252
+0x6656c 4 "SC.D" "SCV R8, 0(R10)" "sc.d $a4, $a6, 0" runtime2.go:252
+0x66570 4 "BEQZ" "BEQ R8, -4(PC)" "beqz $a4, -16" runtime2.go:252
+0x66574 4 "DBAR" "DBAR" "dbar 0x12" runtime2.go:252
+0x66578 4 "ANDI" "MOVBU R8" "andi $a4, $a4, 0xff" proc.go:7548
+0x6657c 4 "BEQZ" "BEQ R8, -27(PC)" "beqz $a4, -108" proc.go:7548
+0x66580 4 "BEQZ" "BEQ R9, 3(PC)" "beqz $a5, 12" proc.go:7551
+0x66584 4 "OR" "MOVV R9, R5" "move $a1, $a5" proc.go:7558
+0x66588 4 "B" "JMP -70(PC)" "b -280" proc.go:7555
+0x6658c 4 "LD.D" "MOVV 0(R3), R1" "ld.d $ra, $sp, 0" proc.go:7552
+0x66590 4 "ADDI.D" "ADDV $40, R3" "addi.d $sp, $sp, 40" proc.go:7552
+0x66594 4 "JIRL" "RET" "ret" proc.go:7552
+0x66598 4 "ST.D" "MOVV R4, 8(R3)" "st.d $a0, $sp, 8" proc.go:7529
+0x6659c 4 "ST.D" "MOVV R5, 16(R3)" "st.d $a1, $sp, 16" proc.go:7529
+0x665a0 4 "ST.B" "MOVB R6, 24(R3)" "st.b $a2, $sp, 24" proc.go:7529
+0x665a4 4 "OR" "MOVV R1, R31" "move $s8, $ra" proc.go:7529
+0x665a8 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 159688" proc.go:7529
+0x665ac 4 "LD.D" "MOVV 8(R3), R4" "ld.d $a0, $sp, 8" proc.go:7529
+0x665b0 4 "LD.D" "MOVV 16(R3), R5" "ld.d $a1, $sp, 16" proc.go:7529
+0x665b4 4 "LD.BU" "MOVBU 24(R3), R6" "ld.bu $a2, $sp, 24" proc.go:7529
+0x665b8 4 "B" "JMP runtime.runqput(SB)" "b -360" proc.go:7529
+0x665bc 4 "BREAK" "BREAK" "break 0x0" .:-1
+== runtime.runqputslow 0x665c0 640 /usr/local/go/src/runtime/proc.go
+0x665c0 4 "LD.D" "MOVV 16(R22), R20" "ld.d $t8, $fp, 16" proc.go:7575
+0x665c4 4 "ADDI.D" "ADDV $-952, R3, R24" "addi.d $s1, $sp, -952" proc.go:7575
+0x665c8 4 "SLTU" "SGTU R24, R20" "sltu $t8, $t8, $s1" proc.go:7575
+0x665cc 4 "BEQZ" "BEQ R20, 145(PC)" "beqz $t8, 580" proc.go:7575
+0x665d0 4 "ST.D" "MOVV R1, -1080(R3)" "st.d $ra, $sp, -1080" proc.go:7575
+0x665d4 4 "ADDI.D" "ADDV $-1080, R3" "addi.d $sp, $sp, -1080" proc.go:7575
+0x665d8 4 "ST.D" "MOVV R1, 0(R3)" "st.d $ra, $sp, 0" proc.go:7575
+0x665dc 4 "ADDI.D" "ADDV $48, R3, R8" "addi.d $a4, $sp, 48" proc.go:7576
+0x665e0 4 "ADDI.D" "ADDV $1024, R8, R9" "addi.d $a5, $a4, 1024" proc.go:7576
+0x665e4 4 "PCALAU12I" "PCALAU12I $257, R30" "pcalau12i $s7, 257" proc.go:7576
+0x665e8 4 "LD.BU" "MOVBU 1422(R30), R30" "ld.bu $s7, $s7, 1422" proc.go:7576
+0x665ec 4 "BNEZ" "BNE R30, 12(PC)" "bnez $s7, 48" proc.go:7576
+0x665f0 4 "ST.D" "MOVV R0, 0(R8)" "st.d $zero, $a4, 0" proc.go:7576
+0x665f4 4 "ST.D" "MOVV R0, 8(R8)" "st.d $zero, $a4, 8" proc.go:7576
+0x665f8 4 "ST.D" "MOVV R0, 16(R8)" "st.d $zero, $a4, 16" proc.go:7576
+0x665fc 4 "ST.D" "MOVV R0, 24(R8)" "st.d $zero, $a4, 24" proc.go:7576
+0x66600 4 "ST.D" "MOVV R0, 32(R8)" "st.d $zero, $a4, 32" proc.go:7576
+0x66604 4 "ST.D" "MOVV R0, 40(R8)" "st.d $zero, $a4, 40" proc.go:7576
+0x66608 4 "ST.D" "MOVV R0, 48(R8)" "st.d $zero, $a4, 48" proc.go:7576
+0x6660c 4 "ST.D" "MOVV R0, 56(R8)" "st.d $zero, $a4, 56" proc.go:7576
+0x66610 4 "ADDI.D" "ADDV $64, R8" "addi.d $a4, $a4, 64" proc.go:7576
+0x66614 4 "BNE" "BNE R9, R8, -9(PC)" "bne $a5, $a4, -36" proc.go:7576
+0x66618 4 "B" "JMP 8(PC)" "b 32" proc.go:7576
+0x6661c 4 "" "BYTE 0xff7f2771" ".byte 0xff7f2771" proc.go:7576
+0x66620 4 "" "BYTE 0x1f01402c" ".byte 0x1f01402c" proc.go:7576
+0x66624 4 "" "BYTE 0x1f41402c" ".byte 0x1f41402c" proc.go:7576
+0x66628 4 "" "BYTE 0x1f81402c" ".byte 0x1f81402c" proc.go:7576
+0x6662c 4 "" "BYTE 0x1fc1402c" ".byte 0x1fc1402c" proc.go:7576
+0x66630 4 "ADDI.D" "ADDV $64, R8" "addi.d $a4, $a4, 64" proc.go:7576
+0x66634 4 "BNE" "BNE R9, R8, -5(PC)" "bne $a5, $a4, -20" proc.go:7576
+0x66638 4 "ST.D" "MOVV R0, 0(R8)" "st.d $zero, $a4, 0" proc.go:7576
+0x6663c 4 "SUB.D" "SUBV R6, R7" "sub.d $a3, $a3, $a2" proc.go:7579
+0x66640 4 "SRLI.W" "SRL $1, R7" "srli.w $a3, $a3, 0x1" proc.go:7580
+0x66644 4 "XORI" "XOR $128, R7" "xori $a3, $a3, 0x80" proc.go:7581
+0x66648 4 "BNEZ" "BNE R7, 109(PC)" "bnez $a3, 436" proc.go:7581
+0x6664c 4 "OR" "MOVV R0, R7" "move $a3, $zero" proc.go:7581
+0x66650 4 "B" "JMP 15(PC)" "b 60" proc.go:7581
+0x66654 4 "ANDI" "NOOP" "nop" proc.go:7581
+0x66658 4 "ANDI" "NOOP" "nop" proc.go:7581
+0x6665c 4 "ANDI" "NOOP" "nop" proc.go:7581
+0x66660 4 "LD.B" "MOVB 0(R4), R30" "ld.b $s7, $a0, 0" proc.go:7585
+0x66664 4 "BSTRPICK.D" "BSTRPICKV $31, R7, $0, R8" "bstrpick.d $a4, $a3, 0x1f, 0x0" proc.go:7585
+0x66668 4 "SLLI.D" "SLLV $3, R8" "slli.d $a4, $a4, 0x3" proc.go:7585
+0x6666c 4 "ADDI.D" "ADDV $408, R4, R10" "addi.d $a6, $a0, 408" proc.go:7585
+0x66670 4 "ADD.D" "ADDV R6, R7, R11" "add.d $a7, $a3, $a2" proc.go:7585
+0x66674 4 "ANDI" "MOVBU R11" "andi $a7, $a7, 0xff" proc.go:7585
+0x66678 4 "SLLI.D" "SLLV $3, R11" "slli.d $a7, $a7, 0x3" proc.go:7585
+0x6667c 4 "LDX.D" "MOVV (R10)(R11), R10" "ldx.d $a6, $a6, $a7" proc.go:7585
+0x66680 4 "ADDI.D" "ADDV $48, R3, R11" "addi.d $a7, $sp, 48" proc.go:7585
+0x66684 4 "STX.D" "MOVV R10, (R11)(R8)" "stx.d $a6, $a7, $a4" proc.go:7585
+0x66688 4 "ADDI.D" "ADDV $1, R7" "addi.d $a3, $a3, 1" proc.go:7584
+0x6668c 4 "BSTRPICK.D" "BSTRPICKV $31, R7, $0, R8" "bstrpick.d $a4, $a3, 0x1f, 0x0" proc.go:7584
+0x66690 4 "ORI" "MOVW $128, R9" "ori $a5, $zero, 0x80" proc.go:7584
+0x66694 4 "BLTU" "BLTU R8, R9, -13(PC)" "bltu $a4, $a5, -52" proc.go:7584
+0x66698 4 "LD.B" "MOVB 0(R4), R30" "ld.b $s7, $a0, 0" proc.go:7587
+0x6669c 4 "PCALAU12I" "PCALAU12I $257, R30" "pcalau12i $s7, 257" proc.go:7587
+0x666a0 4 "LD.BU" "MOVBU 1419(R30), R7" "ld.bu $a3, $s7, 1419" proc.go:7587
+0x666a4 4 "ADDI.D" "ADDV $400, R4, R8" "addi.d $a4, $a0, 400" proc.go:7587
+0x666a8 4 "ADDI.D" "ADDV $128, R6, R10" "addi.d $a6, $a2, 128" proc.go:7587
+0x666ac 4 "BEQZ" "BEQ R7, 8(PC)" "beqz $a3, 32" proc.go:7587
+0x666b0 4 "SLL.W" "MOVW R6" "sll.w $a2, $a2, $zero" proc.go:7587
+0x666b4 4 "OR" "MOVV R0, R7" "move $a3, $zero" proc.go:7587
+0x666b8 4 "OR" "MOVV R6, R30" "move $s7, $a2" proc.go:7587
+0x666bc 4 "AMCAS_DB.W" "AMCASDBW R10, (R8), R30" "amcas_db.w $s7, $a6, $a4" proc.go:7587
+0x666c0 4 "BNE" "BNE R6, R30, 2(PC)" "bne $a2, $s7, 8" proc.go:7587
+0x666c4 4 "ORI" "MOVW $1, R7" "ori $a3, $zero, 0x1" proc.go:7587
+0x666c8 4 "B" "JMP 12(PC)" "b 48" proc.go:7587
+0x666cc 4 "SLL.W" "MOVW R6" "sll.w $a2, $a2, $zero" proc.go:7587
+0x666d0 4 "OR" "MOVV R0, R7" "move $a3, $zero" proc.go:7587
+0x666d4 4 "DBAR" "DBAR" "dbar 0x14" proc.go:7587
+0x666d8 4 "ANDI" "NOOP" "nop" proc.go:7587
+0x666dc 4 "ANDI" "NOOP" "nop" proc.go:7587
+0x666e0 4 "LL.W" "LL 0(R8), R30" "ll.w $s7, $a4, 0" proc.go:7587
+0x666e4 4 "BNE" "BNE R6, R30, 4(PC)" "bne $a2, $s7, 16" proc.go:7587
+0x666e8 4 "OR" "MOVV R10, R7" "move $a3, $a6" proc.go:7587
+0x666ec 4 "SC.W" "SC R7, 0(R8)" "sc.w $a3, $a4, 0" proc.go:7587
+0x666f0 4 "BEQZ" "BEQ R7, -4(PC)" "beqz $a3, -16" proc.go:7587
+0x666f4 4 "DBAR" "DBAR" "dbar 0x12" proc.go:7587
+0x666f8 4 "ANDI" "MOVBU R7, R6" "andi $a2, $a3, 0xff" proc.go:7587
+0x666fc 4 "BEQZ" "BEQ R6, 4(PC)" "beqz $a2, 16" proc.go:7587
+0x66700 4 "ST.D" "MOVV R5, 1072(R3)" "st.d $a1, $sp, 1072" proc.go:7590
+0x66704 4 "OR" "MOVV R0, R5" "move $a1, $zero" proc.go:7600
+0x66708 4 "B" "JMP 15(PC)" "b 60" proc.go:7600
+0x6670c 4 "OR" "MOVV R0, R4" "move $a0, $zero" proc.go:7588
+0x66710 4 "LD.D" "MOVV 0(R3), R1" "ld.d $ra, $sp, 0" proc.go:7588
+0x66714 4 "ADDI.D" "ADDV $1080, R3" "addi.d $sp, $sp, 1080" proc.go:7588
+0x66718 4 "JIRL" "RET" "ret" proc.go:7588
+0x6671c 4 "ANDI" "NOOP" "nop" proc.go:7588
+0x66720 4 "BSTRPICK.D" "BSTRPICKV $31, R5, $0, R6" "bstrpick.d $a2, $a1, 0x1f, 0x0" proc.go:7601
+0x66724 4 "SLLI.D" "SLLV $3, R6" "slli.d $a2, $a2, 0x3" proc.go:7601
+0x66728 4 "ADDI.D" "ADDV $48, R3, R7" "addi.d $a3, $sp, 48" proc.go:7601
+0x6672c 4 "LDX.D" "MOVV (R7)(R6), R6" "ldx.d $a2, $a3, $a2" proc.go:7601
+0x66730 4 "ADDI.D" "ADDV $1, R5" "addi.d $a1, $a1, 1" proc.go:7601
+0x66734 4 "BSTRPICK.D" "BSTRPICKV $31, R5, $0, R8" "bstrpick.d $a4, $a1, 0x1f, 0x0" proc.go:7601
+0x66738 4 "SLLI.D" "SLLV $3, R8" "slli.d $a4, $a4, 0x3" proc.go:7601
+0x6673c 4 "LDX.D" "MOVV (R7)(R8), R8" "ldx.d $a4, $a3, $a4" proc.go:7601
+0x66740 4 "ST.D" "MOVV R8, 160(R6)" "st.d $a4, $a2, 160" proc.go:7601
+0x66744 4 "BSTRPICK.D" "BSTRPICKV $31, R5, $0, R6" "bstrpick.d $a2, $a1, 0x1f, 0x0" proc.go:7600
+0x66748 4 "BLTU" "BLTU R6, R9, -10(PC)" "bltu $a2, $a5, -40" proc.go:7600
+0x6674c 4 "LD.D" "MOVV 48(R3), R5" "ld.d $a1, $sp, 48" proc.go:7604
+0x66750 4 "LD.D" "MOVV 1072(R3), R6" "ld.d $a2, $sp, 1072" proc.go:7604
+0x66754 4 "ST.D" "MOVV R5, 24(R3)" "st.d $a1, $sp, 24" proc.go:7604
+0x66758 4 "ST.D" "MOVV R6, 32(R3)" "st.d $a2, $sp, 32" proc.go:7604
+0x6675c 4 "ORI" "MOVW $129, R5" "ori $a1, $zero, 0x81" proc.go:7604
+0x66760 4 "ST.W" "MOVW R5, 40(R3)" "st.w $a1, $sp, 40" proc.go:7604
+0x66764 4 "ANDI" "NOOP" "nop" proc.go:7607
+0x66768 4 "ANDI" "NOOP" "nop" lock_spinbit.go:161
+0x6676c 4 "PCALAU12I" "PCALAU12I $227, R4" "pcalau12i $a0, 227" lockrank_off.go:24
+0x66770 4 "ADDI.D" "ADDV $-160, R4" "addi.d $a0, $a0, -160" lockrank_off.go:24
+0x66774 4 "BL" "CALL runtime.lock2(SB)" "bl -261444" lockrank_off.go:24
+0x66778 4 "ANDI" "NOOP" "nop" proc.go:7608
+0x6677c 4 "LD.W" "MOVW 40(R3), R5" "ld.w $a1, $sp, 40" proc.go:7326
+0x66780 4 "LD.D" "MOVV 32(R3), R6" "ld.d $a2, $sp, 32" proc.go:7326
+0x66784 4 "BEQZ" "BEQ R6, 18(PC)" "beqz $a2, 72" proc.go:7838
+0x66788 4 "OR" "MOVV R6, R7" "move $a3, $a2" runtime2.go:245
+0x6678c 4 "LD.D" "MOVV 24(R3), R8" "ld.d $a4, $sp, 24" proc.go:7326
+0x66790 4 "ST.D" "MOVV R0, 160(R6)" "st.d $zero, $a2, 160" proc.go:7841
+0x66794 4 "PCALAU12I" "PCALAU12I $227, R30" "pcalau12i $s7, 227" proc.go:7842
+0x66798 4 "LD.D" "MOVV -56(R30), R6" "ld.d $a2, $s7, -56" proc.go:7842
+0x6679c 4 "BEQZ" "BEQ R6, 3(PC)" "beqz $a2, 12" proc.go:7842
+0x667a0 4 "ST.D" "MOVV R8, 160(R6)" "st.d $a4, $a2, 160" proc.go:7843
+0x667a4 4 "B" "JMP 3(PC)" "b 12" proc.go:7843
+0x667a8 4 "PCALAU12I" "PCALAU12I $227, R30" "pcalau12i $s7, 227" proc.go:7845
+0x667ac 4 "ST.D" "MOVV R8, -64(R30)" "st.d $a4, $s7, -64" proc.go:7845
+0x667b0 4 "PCALAU12I" "PCALAU12I $227, R30" "pcalau12i $s7, 227" proc.go:7847
+0x667b4 4 "ST.D" "MOVV R7, -56(R30)" "st.d $a3, $s7, -56" proc.go:7847
+0x667b8 4 "PCALAU12I" "PCALAU12I $227, R30" "pcalau12i $s7, 227" proc.go:7848
+0x667bc 4 "LD.W" "MOVW -48(R30), R6" "ld.w $a2, $s7, -48" proc.go:7848
+0x667c0 4 "ADD.D" "ADDV R5, R6, R5" "add.d $a1, $a2, $a1" proc.go:7848
+0x667c4 4 "PCALAU12I" "PCALAU12I $227, R30" "pcalau12i $s7, 227" proc.go:7848
+0x667c8 4 "ST.W" "MOVW R5, -48(R30)" "st.w $a1, $s7, -48" proc.go:7848
+0x667cc 4 "ST.D" "MOVV R0, 24(R3)" "st.d $zero, $sp, 24" proc.go:7327
+0x667d0 4 "ST.D" "MOVV R0, 32(R3)" "st.d $zero, $sp, 32" proc.go:7327
+0x667d4 4 "ST.W" "MOVW R0, 40(R3)" "st.w $zero, $sp, 40" proc.go:7327
+0x667d8 4 "ANDI" "NOOP" "nop" proc.go:7609
+0x667dc 4 "ANDI" "NOOP" "nop" lock_spinbit.go:270
+0x667e0 4 "PCALAU12I" "PCALAU12I $227, R4" "pcalau12i $a0, 227" lockrank_off.go:36
+0x667e4 4 "ADDI.D" "ADDV $-160, R4" "addi.d $a0, $a0, -160" lockrank_off.go:36
+0x667e8 4 "BL" "CALL runtime.unlock2(SB)" "bl -260216" lockrank_off.go:36
+0x667ec 4 "ORI" "MOVW $1, R4" "ori $a0, $zero, 0x1" proc.go:7610
+0x667f0 4 "LD.D" "MOVV 0(R3), R1" "ld.d $ra, $sp, 0" proc.go:7610
+0x667f4 4 "ADDI.D" "ADDV $1080, R3" "addi.d $sp, $sp, 1080" proc.go:7610
+0x667f8 4 "JIRL" "RET" "ret" proc.go:7610
+0x667fc 4 "PCALAU12I" "PCALAU12I $62, R4" "pcalau12i $a0, 62" proc.go:7582
+0x66800 4 "ADDI.D" "ADDV $111, R4" "addi.d $a0, $a0, 111" proc.go:7582
+0x66804 4 "ORI" "MOVW $30, R5" "ori $a1, $zero, 0x1e" proc.go:7582
+0x66808 4 "BL" "CALL runtime.throw(SB)" "bl 146008" proc.go:7582
+0x6680c 4 "ANDI" "NOOP" "nop" proc.go:7582
+0x66810 4 "ST.D" "MOVV R4, 8(R3)" "st.d $a0, $sp, 8" proc.go:7575
+0x66814 4 "ST.D" "MOVV R5, 16(R3)" "st.d $a1, $sp, 16" proc.go:7575
+0x66818 4 "ST.W" "MOVW R6, 24(R3)" "st.w $a2, $sp, 24" proc.go:7575
+0x6681c 4 "ST.W" "MOVW R7, 28(R3)" "st.w $a3, $sp, 28" proc.go:7575
+0x66820 4 "OR" "MOVV R1, R31" "move $s8, $ra" proc.go:7575
+0x66824 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 159052" proc.go:7575
+0x66828 4 "LD.D" "MOVV 8(R3), R4" "ld.d $a0, $sp, 8" proc.go:7575
+0x6682c 4 "LD.D" "MOVV 16(R3), R5" "ld.d $a1, $sp, 16" proc.go:7575
+0x66830 4 "LD.WU" "MOVWU 24(R3), R6" "ld.wu $a2, $sp, 24" proc.go:7575
+0x66834 4 "LD.WU" "MOVWU 28(R3), R7" "ld.wu $a3, $sp, 28" proc.go:7575
+0x66838 4 "B" "JMP runtime.runqputslow(SB)" "b -632" proc.go:7575
+0x6683c 4 "BREAK" "BREAK" "break 0x0" .:-1
+== runtime.runqputbatch 0x66840 176 /usr/local/go/src/runtime/proc.go
+0x66840 4 "ANDI" "NOOP" "nop" proc.go:7616
+0x66844 4 "LD.D" "MOVV 0(R5), R6" "ld.d $a2, $a1, 0" proc.go:7810
+0x66848 4 "BEQZ" "BEQ R6, 7(PC)" "beqz $a2, 28" proc.go:7617
+0x6684c 4 "LD.B" "MOVB 0(R4), R30" "ld.b $s7, $a0, 0" proc.go:7620
+0x66850 4 "ADDI.D" "ADDV $400, R4, R6" "addi.d $a2, $a0, 400" proc.go:7620
+0x66854 4 "LD.W" "MOVW 0(R6), R6" "ld.w $a2, $a2, 0" proc.go:7620
+0x66858 4 "DBAR" "DBAR" "dbar 0x14" proc.go:7620
+0x6685c 4 "LD.WU" "MOVWU 404(R4), R7" "ld.wu $a3, $a0, 404" proc.go:7621
+0x66860 4 "B" "JMP 9(PC)" "b 36" proc.go:7623
+0x66864 4 "JIRL" "RET" "ret" proc.go:7618
+0x66868 4 "ANDI" "NOOP" "nop" proc.go:7618
+0x6686c 4 "ANDI" "NOOP" "nop" proc.go:7618
+0x66870 4 "ADDI.D" "ADDV $408, R4, R9" "addi.d $a5, $a0, 408" proc.go:7625
+0x66874 4 "ANDI" "MOVBU R7, R11" "andi $a7, $a3, 0xff" proc.go:7625
+0x66878 4 "SLLI.D" "SLLV $3, R11" "slli.d $a7, $a7, 0x3" runtime2.go:248
+0x6687c 4 "STX.D" "MOVV R8, (R9)(R11)" "stx.d $a4, $a5, $a7" runtime2.go:248
+0x66880 4 "ADDI.D" "ADDV $1, R7" "addi.d $a3, $a3, 1" proc.go:7626
+0x66884 4 "LD.D" "MOVV 0(R5), R8" "ld.d $a4, $a1, 0" proc.go:7810
+0x66888 4 "BEQZ" "BEQ R8, 16(PC)" "beqz $a4, 64" proc.go:7623
+0x6688c 4 "SUB.D" "SUBV R6, R7, R9" "sub.d $a5, $a3, $a2" proc.go:7623
+0x66890 4 "BSTRPICK.D" "BSTRPICKV $31, R9, $0, R9" "bstrpick.d $a5, $a5, 0x1f, 0x0" proc.go:7623
+0x66894 4 "ORI" "MOVW $256, R10" "ori $a6, $zero, 0x100" proc.go:7623
+0x66898 4 "BGEU" "BGEU R9, R10, 12(PC)" "bgeu $a5, $a6, 48" proc.go:7623
+0x6689c 4 "ANDI" "NOOP" "nop" proc.go:7624
+0x668a0 4 "ANDI" "NOOP" "nop" proc.go:7854
+0x668a4 4 "BEQZ" "BEQ R8, -13(PC)" "beqz $a4, -52" proc.go:7855
+0x668a8 4 "LD.D" "MOVV 160(R8), R9" "ld.d $a5, $a4, 160" proc.go:7856
+0x668ac 4 "ST.D" "MOVV R9, 0(R5)" "st.d $a5, $a1, 0" proc.go:7856
+0x668b0 4 "BNEZ" "BNE R9, 2(PC)" "bnez $a5, 8" proc.go:7857
+0x668b4 4 "ST.D" "MOVV R0, 8(R5)" "st.d $zero, $a1, 8" proc.go:7858
+0x668b8 4 "LD.W" "MOVW 16(R5), R9" "ld.w $a5, $a1, 16" proc.go:7860
+0x668bc 4 "ADDI.D" "ADDV $-1, R9" "addi.d $a5, $a5, -1" proc.go:7860
+0x668c0 4 "ST.W" "MOVW R9, 16(R5)" "st.w $a5, $a1, 16" proc.go:7860
+0x668c4 4 "B" "JMP -21(PC)" "b -84" proc.go:7860
+0x668c8 4 "PCALAU12I" "PCALAU12I $257, R30" "pcalau12i $s7, 257" proc.go:7640
+0x668cc 4 "LD.BU" "MOVBU 1421(R30), R5" "ld.bu $a1, $s7, 1421" proc.go:7640
+0x668d0 4 "ADDI.D" "ADDV $404, R4" "addi.d $a0, $a0, 404" proc.go:7640
+0x668d4 4 "BEQZ" "BEQ R5, 5(PC)" "beqz $a1, 20" proc.go:7640
+0x668d8 4 "DBAR" "DBAR" "dbar 0x12" proc.go:7640
+0x668dc 4 "ST.W" "MOVW R7, 0(R4)" "st.w $a3, $a0, 0" proc.go:7640
+0x668e0 4 "DBAR" "DBAR" "dbar 0x18" proc.go:7640
+0x668e4 4 "B" "JMP 2(PC)" "b 8" proc.go:7640
+0x668e8 4 "AMSWAP_DB.W" "AMSWAPDBW R7, (R4), R0" "amswap_db.w $zero, $a3, $a0" proc.go:7640
+0x668ec 4 "JIRL" "RET" "ret" proc.go:7642
+== runtime.runqdrain 0x668f0 512 /usr/local/go/src/runtime/proc.go
+0x668f0 4 "ST.D" "MOVV R1, -32(R3)" "st.d $ra, $sp, -32" proc.go:7674
+0x668f4 4 "ADDI.D" "ADDV $-32, R3" "addi.d $sp, $sp, -32" proc.go:7674
+0x668f8 4 "ST.D" "MOVV R1, 0(R3)" "st.d $ra, $sp, 0" proc.go:7674
+0x668fc 4 "ST.D" "MOVV R0, 8(R3)" "st.d $zero, $sp, 8" proc.go:7674
+0x66900 4 "ST.D" "MOVV R0, 16(R3)" "st.d $zero, $sp, 16" proc.go:7674
+0x66904 4 "ST.W" "MOVW R0, 24(R3)" "st.w $zero, $sp, 24" proc.go:7674
+0x66908 4 "LU12I.W" "LU12IW $1, R30" "lu12i.w $s7, 1" proc.go:7675
+0x6690c 4 "ADD.D" "ADDV R4, R30" "add.d $s7, $s7, $a0" proc.go:7675
+0x66910 4 "LD.D" "MOVV -1640(R30), R7" "ld.d $a3, $s7, -1640" proc.go:7675
+0x66914 4 "BEQZ" "BEQ R7, 43(PC)" "beqz $a3, 172" proc.go:7676
+0x66918 4 "PCALAU12I" "PCALAU12I $257, R30" "pcalau12i $s7, 257" runtime2.go:252
+0x6691c 4 "LD.BU" "MOVBU 1419(R30), R8" "ld.bu $a4, $s7, 1419" runtime2.go:252
+0x66920 4 "ORI" "MOVW $2456, R30" "ori $s7, $zero, 0x998" proc.go:7675
+0x66924 4 "ADD.D" "ADDV R30, R4, R9" "add.d $a5, $a0, $s7" proc.go:7675
+0x66928 4 "BEQZ" "BEQ R8, 8(PC)" "beqz $a4, 32" runtime2.go:252
+0x6692c 4 "OR" "MOVV R0, R8" "move $a4, $zero" runtime2.go:252
+0x66930 4 "OR" "MOVV R0, R10" "move $a6, $zero" runtime2.go:252
+0x66934 4 "OR" "MOVV R7, R30" "move $s7, $a3" runtime2.go:252
+0x66938 4 "AMCAS_DB.D" "AMCASDBV R8, (R9), R30" "amcas_db.d $s7, $a4, $a5" runtime2.go:252
+0x6693c 4 "BNE" "BNE R7, R30, 2(PC)" "bne $a3, $s7, 8" runtime2.go:252
+0x66940 4 "ORI" "MOVW $1, R10" "ori $a6, $zero, 0x1" runtime2.go:252
+0x66944 4 "B" "JMP 13(PC)" "b 52" runtime2.go:252
+0x66948 4 "OR" "MOVV R0, R8" "move $a4, $zero" runtime2.go:252
+0x6694c 4 "OR" "MOVV R0, R10" "move $a6, $zero" runtime2.go:252
+0x66950 4 "DBAR" "DBAR" "dbar 0x14" runtime2.go:252
+0x66954 4 "ANDI" "NOOP" "nop" runtime2.go:252
+0x66958 4 "ANDI" "NOOP" "nop" runtime2.go:252
+0x6695c 4 "ANDI" "NOOP" "nop" runtime2.go:252
+0x66960 4 "LL.D" "LLV 0(R9), R30" "ll.d $s7, $a5, 0" runtime2.go:252
+0x66964 4 "BNE" "BNE R7, R30, 4(PC)" "bne $a3, $s7, 16" runtime2.go:252
+0x66968 4 "OR" "MOVV R8, R10" "move $a6, $a4" runtime2.go:252
+0x6696c 4 "SC.D" "SCV R10, 0(R9)" "sc.d $a6, $a5, 0" runtime2.go:252
+0x66970 4 "BEQZ" "BEQ R10, -4(PC)" "beqz $a6, -16" runtime2.go:252
+0x66974 4 "DBAR" "DBAR" "dbar 0x12" runtime2.go:252
+0x66978 4 "ANDI" "MOVBU R10, R9" "andi $a5, $a6, 0xff" proc.go:7676
+0x6697c 4 "BEQZ" "BEQ R9, 21(PC)" "beqz $a5, 84" proc.go:7676
+0x66980 4 "ST.D" "MOVV R0, 160(R7)" "st.d $zero, $a3, 160" proc.go:7825
+0x66984 4 "LD.D" "MOVV 16(R3), R9" "ld.d $a5, $sp, 16" proc.go:7826
+0x66988 4 "BEQZ" "BEQ R9, 4(PC)" "beqz $a5, 16" proc.go:7826
+0x6698c 4 "OR" "MOVV R7, R10" "move $a6, $a3" runtime2.go:248
+0x66990 4 "ST.D" "MOVV R7, 160(R9)" "st.d $a3, $a5, 160" proc.go:7827
+0x66994 4 "B" "JMP 5(PC)" "b 20" proc.go:7827
+0x66998 4 "OR" "MOVV R7, R9" "move $a5, $a3" runtime2.go:248
+0x6699c 4 "ANDI" "NOOP" "nop" proc.go:7829
+0x669a0 4 "ST.D" "MOVV R7, 8(R3)" "st.d $a3, $sp, 8" runtime2.go:248
+0x669a4 4 "OR" "MOVV R9, R10" "move $a6, $a5" runtime2.go:248
+0x669a8 4 "ANDI" "NOOP" "nop" proc.go:7831
+0x669ac 4 "ST.D" "MOVV R10, 16(R3)" "st.d $a6, $sp, 16" runtime2.go:248
+0x669b0 4 "LD.W" "MOVW 24(R3), R7" "ld.w $a3, $sp, 24" proc.go:7832
+0x669b4 4 "ADDI.D" "ADDV $1, R7" "addi.d $a3, $a3, 1" proc.go:7832
+0x669b8 4 "ST.W" "MOVW R7, 24(R3)" "st.w $a3, $sp, 24" proc.go:7832
+0x669bc 4 "B" "JMP 5(PC)" "b 20" proc.go:7677
+0x669c0 4 "OR" "MOVV R0, R8" "move $a4, $zero" proc.go:7825
+0x669c4 4 "ANDI" "NOOP" "nop" proc.go:7825
+0x669c8 4 "ANDI" "NOOP" "nop" proc.go:7825
+0x669cc 4 "ANDI" "NOOP" "nop" proc.go:7825
+0x669d0 4 "ADDI.D" "ADDV $400, R4, R7" "addi.d $a3, $a0, 400" proc.go:7681
+0x669d4 4 "LD.W" "MOVW 0(R7), R9" "ld.w $a5, $a3, 0" proc.go:7681
+0x669d8 4 "DBAR" "DBAR" "dbar 0x14" proc.go:7681
+0x669dc 4 "LD.WU" "MOVWU 404(R4), R10" "ld.wu $a6, $a0, 404" proc.go:7682
+0x669e0 4 "SUB.D" "SUBV R9, R10, R11" "sub.d $a7, $a6, $a5" proc.go:7683
+0x669e4 4 "BSTRPICK.D" "BSTRPICKV $31, R11, $0, R11" "bstrpick.d $a7, $a7, 0x1f, 0x0" proc.go:7684
+0x669e8 4 "BEQZ" "BEQ R11, 28(PC)" "beqz $a7, 112" proc.go:7684
+0x669ec 4 "ORI" "MOVW $256, R5" "ori $a1, $zero, 0x100" proc.go:7687
+0x669f0 4 "BLTU" "BLTU R5, R11, -8(PC)" "bltu $a1, $a7, -32" proc.go:7687
+0x669f4 4 "PCALAU12I" "PCALAU12I $257, R30" "pcalau12i $s7, 257" proc.go:7691
+0x669f8 4 "LD.BU" "MOVBU 1419(R30), R12" "ld.bu $t0, $s7, 1419" proc.go:7691
+0x669fc 4 "BEQZ" "BEQ R12, 8(PC)" "beqz $t0, 32" proc.go:7691
+0x66a00 4 "SLL.W" "MOVW R9, R12" "sll.w $t0, $a5, $zero" proc.go:7691
+0x66a04 4 "OR" "MOVV R0, R13" "move $t1, $zero" proc.go:7691
+0x66a08 4 "OR" "MOVV R12, R30" "move $s7, $t0" proc.go:7691
+0x66a0c 4 "AMCAS_DB.W" "AMCASDBW R10, (R7), R30" "amcas_db.w $s7, $a6, $a3" proc.go:7691
+0x66a10 4 "BNE" "BNE R12, R30, 2(PC)" "bne $t0, $s7, 8" proc.go:7691
+0x66a14 4 "ORI" "MOVW $1, R13" "ori $t1, $zero, 0x1" proc.go:7691
+0x66a18 4 "B" "JMP 12(PC)" "b 48" proc.go:7691
+0x66a1c 4 "SLL.W" "MOVW R9, R12" "sll.w $t0, $a5, $zero" proc.go:7691
+0x66a20 4 "OR" "MOVV R0, R13" "move $t1, $zero" proc.go:7691
+0x66a24 4 "DBAR" "DBAR" "dbar 0x14" proc.go:7691
+0x66a28 4 "ANDI" "NOOP" "nop" proc.go:7691
+0x66a2c 4 "ANDI" "NOOP" "nop" proc.go:7691
+0x66a30 4 "LL.W" "LL 0(R7), R30" "ll.w $s7, $a3, 0" proc.go:7691
+0x66a34 4 "BNE" "BNE R12, R30, 4(PC)" "bne $t0, $s7, 16" proc.go:7691
+0x66a38 4 "OR" "MOVV R10, R13" "move $t1, $a6" proc.go:7691
+0x66a3c 4 "SC.W" "SC R13, 0(R7)" "sc.w $t1, $a3, 0" proc.go:7691
+0x66a40 4 "BEQZ" "BEQ R13, -4(PC)" "beqz $t1, -16" proc.go:7691
+0x66a44 4 "DBAR" "DBAR" "dbar 0x12" proc.go:7691
+0x66a48 4 "ANDI" "MOVBU R13, R7" "andi $a3, $t1, 0xff" proc.go:7691
+0x66a4c 4 "BEQZ" "BEQ R7, -31(PC)" "beqz $a3, -124" proc.go:7691
+0x66a50 4 "OR" "MOVV R0, R7" "move $a3, $zero" proc.go:7691
+0x66a54 4 "B" "JMP 13(PC)" "b 52" proc.go:7691
+0x66a58 4 "LD.D" "MOVV 8(R3), R4" "ld.d $a0, $sp, 8" proc.go:7685
+0x66a5c 4 "LD.D" "MOVV 16(R3), R5" "ld.d $a1, $sp, 16" proc.go:7685
+0x66a60 4 "LD.W" "MOVW 24(R3), R6" "ld.w $a2, $sp, 24" proc.go:7685
+0x66a64 4 "ADDI.D" "ADDV $32, R3" "addi.d $sp, $sp, 32" proc.go:7685
+0x66a68 4 "JIRL" "RET" "ret" proc.go:7685
+0x66a6c 4 "ANDI" "NOOP" "nop" proc.go:7685
+0x66a70 4 "ANDI" "NOOP" "nop" proc.go:7831
+0x66a74 4 "ST.D" "MOVV R13, 16(R3)" "st.d $t1, $sp, 16" runtime2.go:248
+0x66a78 4 "LD.W" "MOVW 24(R3), R10" "ld.w $a6, $sp, 24" proc.go:7832
+0x66a7c 4 "ADDI.D" "ADDV $1, R10" "addi.d $a6, $a6, 1" proc.go:7832
+0x66a80 4 "ST.W" "MOVW R10, 24(R3)" "st.w $a6, $sp, 24" proc.go:7832
+0x66a84 4 "ADDI.D" "ADDV $1, R7" "addi.d $a3, $a3, 1" proc.go:7702
+0x66a88 4 "BSTRPICK.D" "BSTRPICKV $31, R7, $0, R10" "bstrpick.d $a6, $a3, 0x1f, 0x0" proc.go:7702
+0x66a8c 4 "BGEU" "BGEU R10, R11, 17(PC)" "bgeu $a6, $a7, 68" proc.go:7702
+0x66a90 4 "ADDI.D" "ADDV $408, R4, R10" "addi.d $a6, $a0, 408" proc.go:7703
+0x66a94 4 "ADD.D" "ADDV R9, R7, R12" "add.d $t0, $a3, $a5" proc.go:7703
+0x66a98 4 "ANDI" "MOVBU R12" "andi $t0, $t0, 0xff" proc.go:7703
+0x66a9c 4 "SLLI.D" "SLLV $3, R12" "slli.d $t0, $t0, 0x3" proc.go:7703
+0x66aa0 4 "LDX.D" "MOVV (R10)(R12), R10" "ldx.d $a6, $a6, $t0" proc.go:7703
+0x66aa4 4 "ANDI" "NOOP" "nop" proc.go:7704
+0x66aa8 4 "ST.D" "MOVV R0, 160(R10)" "st.d $zero, $a6, 160" proc.go:7825
+0x66aac 4 "LD.D" "MOVV 16(R3), R12" "ld.d $t0, $sp, 16" proc.go:7826
+0x66ab0 4 "BEQZ" "BEQ R12, 4(PC)" "beqz $t0, 16" proc.go:7826
+0x66ab4 4 "OR" "MOVV R10, R13" "move $t1, $a6" runtime2.go:248
+0x66ab8 4 "ST.D" "MOVV R10, 160(R12)" "st.d $a6, $t0, 160" proc.go:7827
+0x66abc 4 "B" "JMP -19(PC)" "b -76" proc.go:7827
+0x66ac0 4 "OR" "MOVV R10, R12" "move $t0, $a6" runtime2.go:248
+0x66ac4 4 "ST.D" "MOVV R10, 8(R3)" "st.d $a6, $sp, 8" runtime2.go:248
+0x66ac8 4 "OR" "MOVV R12, R13" "move $t1, $t0" runtime2.go:248
+0x66acc 4 "B" "JMP -23(PC)" "b -92" proc.go:7829
+0x66ad0 4 "LD.D" "MOVV 8(R3), R4" "ld.d $a0, $sp, 8" proc.go:7706
+0x66ad4 4 "LD.D" "MOVV 16(R3), R5" "ld.d $a1, $sp, 16" proc.go:7706
+0x66ad8 4 "LD.W" "MOVW 24(R3), R6" "ld.w $a2, $sp, 24" proc.go:7706
+0x66adc 4 "ADDI.D" "ADDV $32, R3" "addi.d $sp, $sp, 32" proc.go:7706
+0x66ae0 4 "JIRL" "RET" "ret" proc.go:7706
+0x66ae4 4 "BREAK" "BREAK" "break 0x0" .:-1
+0x66ae8 4 "BREAK" "BREAK" "break 0x0" .:-1
+0x66aec 4 "BREAK" "BREAK" "break 0x0" .:-1
+== runtime.runqgrab 0x66af0 624 /usr/local/go/src/runtime/proc.go
+0x66af0 4 "LD.D" "MOVV 16(R22), R20" "ld.d $t8, $fp, 16" proc.go:7713
+0x66af4 4 "SLTU" "SGTU R3, R20" "sltu $t8, $t8, $sp" proc.go:7713
+0x66af8 4 "BEQZ" "BEQ R20, 140(PC)" "beqz $t8, 560" proc.go:7713
+0x66afc 4 "ST.D" "MOVV R1, -24(R3)" "st.d $ra, $sp, -24" proc.go:7713
+0x66b00 4 "ADDI.D" "ADDV $-24, R3" "addi.d $sp, $sp, -24" proc.go:7713
+0x66b04 4 "ST.D" "MOVV R1, 0(R3)" "st.d $ra, $sp, 0" proc.go:7713
+0x66b08 4 "ST.D" "MOVV R4, 32(R3)" "st.d $a0, $sp, 32" proc.go:7714
+0x66b0c 4 "ST.D" "MOVV R5, 40(R3)" "st.d $a1, $sp, 40" proc.go:7714
+0x66b10 4 "ST.W" "MOVW R6, 48(R3)" "st.w $a2, $sp, 48" proc.go:7714
+0x66b14 4 "ST.B" "MOVB R7, 52(R3)" "st.b $a3, $sp, 52" proc.go:7714
+0x66b18 4 "ANDI" "NOOP" "nop" proc.go:7714
+0x66b1c 4 "ANDI" "NOOP" "nop" proc.go:7714
+0x66b20 4 "LD.B" "MOVB 0(R4), R30" "ld.b $s7, $a0, 0" proc.go:7715
+0x66b24 4 "ADDI.D" "ADDV $400, R4, R8" "addi.d $a4, $a0, 400" proc.go:7715
+0x66b28 4 "LD.W" "MOVW 0(R8), R9" "ld.w $a5, $a4, 0" proc.go:7715
+0x66b2c 4 "DBAR" "DBAR" "dbar 0x14" proc.go:7715
+0x66b30 4 "ADDI.D" "ADDV $404, R4, R10" "addi.d $a6, $a0, 404" proc.go:7716
+0x66b34 4 "LD.W" "MOVW 0(R10), R10" "ld.w $a6, $a6, 0" proc.go:7716
+0x66b38 4 "DBAR" "DBAR" "dbar 0x14" proc.go:7716
+0x66b3c 4 "SUB.D" "SUBV R9, R10" "sub.d $a6, $a6, $a5" proc.go:7717
+0x66b40 4 "SRLI.W" "SRL $1, R10, R11" "srli.w $a7, $a6, 0x1" proc.go:7718
+0x66b44 4 "SUB.D" "SUBV R11, R10" "sub.d $a6, $a6, $a7" proc.go:7718
+0x66b48 4 "BSTRPICK.D" "BSTRPICKV $31, R10, $0, R11" "bstrpick.d $a7, $a6, 0x1f, 0x0" proc.go:7719
+0x66b4c 4 "BNEZ" "BNE R11, 58(PC)" "bnez $a7, 232" proc.go:7719
+0x66b50 4 "ANDI" "MOVBU R7, R8" "andi $a4, $a3, 0xff" proc.go:7714
+0x66b54 4 "BEQZ" "BEQ R8, 109(PC)" "beqz $a4, 436" proc.go:7720
+0x66b58 4 "LU12I.W" "LU12IW $1, R30" "lu12i.w $s7, 1" proc.go:7722
+0x66b5c 4 "ADD.D" "ADDV R4, R30" "add.d $s7, $s7, $a0" proc.go:7722
+0x66b60 4 "LD.D" "MOVV -1640(R30), R8" "ld.d $a4, $s7, -1640" proc.go:7722
+0x66b64 4 "BEQZ" "BEQ R8, 105(PC)" "beqz $a4, 420" proc.go:7722
+0x66b68 4 "LD.WU" "MOVWU 4(R4), R9" "ld.wu $a5, $a0, 4" proc.go:7723
+0x66b6c 4 "XORI" "XOR $1, R9" "xori $a5, $a5, 0x1" proc.go:7723
+0x66b70 4 "BNEZ" "BNE R9, 23(PC)" "bnez $a5, 92" proc.go:7723
+0x66b74 4 "LD.D" "MOVV 48(R4), R9" "ld.d $a5, $a0, 48" proc.go:7724
+0x66b78 4 "BEQZ" "BEQ R9, 21(PC)" "beqz $a5, 84" proc.go:7724
+0x66b7c 4 "ST.D" "MOVV R8, 16(R3)" "st.d $a4, $sp, 16" proc.go:7722
+0x66b80 4 "LD.D" "MOVV 184(R9), R9" "ld.d $a5, $a5, 184" proc.go:7725
+0x66b84 4 "BEQZ" "BEQ R9, 11(PC)" "beqz $a5, 44" proc.go:7725
+0x66b88 4 "ADDI.D" "ADDV $144, R9" "addi.d $a5, $a5, 144" types.go:194
+0x66b8c 4 "ANDI" "NOOP" "nop" proc.go:1221
+0x66b90 4 "LD.W" "MOVW 0(R9), R9" "ld.w $a5, $a5, 0" types.go:194
+0x66b94 4 "DBAR" "DBAR" "dbar 0x14" types.go:194
+0x66b98 4 "LU12I.W" "LU12IW $-2, R30" "lu12i.w $s7, -2" proc.go:7725
+0x66b9c 4 "ORI" "OR $4095, R30" "ori $s7, $s7, 0xfff" proc.go:7725
+0x66ba0 4 "AND" "AND R30, R9" "and $a5, $a5, $s7" proc.go:7725
+0x66ba4 4 "BSTRPICK.D" "BSTRPICKV $31, R9, $0, R9" "bstrpick.d $a5, $a5, 0x1f, 0x0" proc.go:7725
+0x66ba8 4 "XORI" "XOR $3, R9" "xori $a5, $a5, 0x3" proc.go:7725
+0x66bac 4 "BEQZ" "BEQ R9, 8(PC)" "beqz $a5, 32" proc.go:7725
+0x66bb0 4 "ORI" "MOVW $3, R4" "ori $a0, $zero, 0x3" proc.go:7746
+0x66bb4 4 "BL" "CALL runtime.usleep(SB)" "bl 174364" proc.go:7746
+0x66bb8 4 "LD.D" "MOVV 32(R3), R4" "ld.d $a0, $sp, 32" proc.go:7756
+0x66bbc 4 "LD.D" "MOVV 40(R3), R5" "ld.d $a1, $sp, 40" proc.go:7770
+0x66bc0 4 "LD.WU" "MOVWU 48(R3), R6" "ld.wu $a2, $sp, 48" proc.go:7770
+0x66bc4 4 "LD.BU" "MOVBU 52(R3), R7" "ld.bu $a3, $sp, 52" proc.go:7714
+0x66bc8 4 "LD.D" "MOVV 16(R3), R8" "ld.d $a4, $sp, 16" runtime2.go:252
+0x66bcc 4 "PCALAU12I" "PCALAU12I $257, R30" "pcalau12i $s7, 257" runtime2.go:252
+0x66bd0 4 "LD.BU" "MOVBU 1419(R30), R9" "ld.bu $a5, $s7, 1419" runtime2.go:252
+0x66bd4 4 "ORI" "MOVW $2456, R30" "ori $s7, $zero, 0x998" proc.go:7756
+0x66bd8 4 "ADD.D" "ADDV R30, R4, R10" "add.d $a6, $a0, $s7" proc.go:7756
+0x66bdc 4 "BEQZ" "BEQ R9, 8(PC)" "beqz $a5, 32" runtime2.go:252
+0x66be0 4 "OR" "MOVV R0, R9" "move $a5, $zero" runtime2.go:252
+0x66be4 4 "OR" "MOVV R0, R11" "move $a7, $zero" runtime2.go:252
+0x66be8 4 "OR" "MOVV R8, R30" "move $s7, $a4" runtime2.go:252
+0x66bec 4 "AMCAS_DB.D" "AMCASDBV R9, (R10), R30" "amcas_db.d $s7, $a5, $a6" runtime2.go:252
+0x66bf0 4 "BNE" "BNE R8, R30, 2(PC)" "bne $a4, $s7, 8" runtime2.go:252
+0x66bf4 4 "ORI" "MOVW $1, R11" "ori $a7, $zero, 0x1" runtime2.go:252
+0x66bf8 4 "B" "JMP 12(PC)" "b 48" runtime2.go:252
+0x66bfc 4 "OR" "MOVV R0, R9" "move $a5, $zero" runtime2.go:252
+0x66c00 4 "OR" "MOVV R0, R11" "move $a7, $zero" runtime2.go:252
+0x66c04 4 "DBAR" "DBAR" "dbar 0x14" runtime2.go:252
+0x66c08 4 "ANDI" "NOOP" "nop" runtime2.go:252
+0x66c0c 4 "ANDI" "NOOP" "nop" runtime2.go:252
+0x66c10 4 "LL.D" "LLV 0(R10), R30" "ll.d $s7, $a6, 0" runtime2.go:252
+0x66c14 4 "BNE" "BNE R8, R30, 4(PC)" "bne $a4, $s7, 16" runtime2.go:252
+0x66c18 4 "OR" "MOVV R9, R11" "move $a7, $a5" runtime2.go:252
+0x66c1c 4 "SC.D" "SCV R11, 0(R10)" "sc.d $a7, $a6, 0" runtime2.go:252
+0x66c20 4 "BEQZ" "BEQ R11, -4(PC)" "beqz $a7, -16" runtime2.go:252
+0x66c24 4 "DBAR" "DBAR" "dbar 0x12" runtime2.go:252
+0x66c28 4 "ANDI" "MOVBU R11, R10" "andi $a6, $a7, 0xff" proc.go:7756
+0x66c2c 4 "BEQZ" "BEQ R10, -67(PC)" "beqz $a6, -268" proc.go:7756
+0x66c30 4 "B" "JMP 46(PC)" "b 184" proc.go:7756
+0x66c34 4 "ORI" "MOVW $128, R12" "ori $t0, $zero, 0x80" proc.go:7765
+0x66c38 4 "BGEU" "BGEU R12, R11, 3(PC)" "bgeu $t0, $a7, 12" proc.go:7765
+0x66c3c 4 "OR" "MOVV R0, R9" "move $a5, $zero" runtime2.go:252
+0x66c40 4 "B" "JMP -72(PC)" "b -288" proc.go:7766
+0x66c44 4 "OR" "MOVV R0, R12" "move $t0, $zero" proc.go:7765
+0x66c48 4 "B" "JMP 13(PC)" "b 52" proc.go:7765
+0x66c4c 4 "ANDI" "NOOP" "nop" proc.go:7765
+0x66c50 4 "LD.B" "MOVB 0(R5), R30" "ld.b $s7, $a1, 0" proc.go:7770
+0x66c54 4 "ADDI.D" "ADDV $408, R4, R13" "addi.d $t1, $a0, 408" proc.go:7769
+0x66c58 4 "ADD.D" "ADDV R9, R12, R14" "add.d $t2, $t0, $a5" proc.go:7769
+0x66c5c 4 "ANDI" "MOVBU R14" "andi $t2, $t2, 0xff" proc.go:7769
+0x66c60 4 "SLLI.D" "SLLV $3, R14" "slli.d $t2, $t2, 0x3" proc.go:7769
+0x66c64 4 "LDX.D" "MOVV (R13)(R14), R13" "ldx.d $t1, $t1, $t2" proc.go:7769
+0x66c68 4 "ADD.D" "ADDV R6, R12, R14" "add.d $t2, $t0, $a2" proc.go:7770
+0x66c6c 4 "ANDI" "MOVBU R14" "andi $t2, $t2, 0xff" proc.go:7770
+0x66c70 4 "SLLI.D" "SLLV $3, R14" "slli.d $t2, $t2, 0x3" proc.go:7770
+0x66c74 4 "STX.D" "MOVV R13, (R5)(R14)" "stx.d $t1, $a1, $t2" proc.go:7770
+0x66c78 4 "ADDI.D" "ADDV $1, R12" "addi.d $t0, $t0, 1" proc.go:7768
+0x66c7c 4 "BSTRPICK.D" "BSTRPICKV $31, R12, $0, R13" "bstrpick.d $t1, $t0, 0x1f, 0x0" proc.go:7768
+0x66c80 4 "BLTU" "BLTU R13, R11, -12(PC)" "bltu $t1, $a7, -48" proc.go:7768
+0x66c84 4 "PCALAU12I" "PCALAU12I $257, R30" "pcalau12i $s7, 257" proc.go:7772
+0x66c88 4 "LD.BU" "MOVBU 1419(R30), R11" "ld.bu $a7, $s7, 1419" proc.go:7772
+0x66c8c 4 "ADD.D" "ADDV R9, R10, R12" "add.d $t0, $a6, $a5" proc.go:7772
+0x66c90 4 "BEQZ" "BEQ R11, 8(PC)" "beqz $a7, 32" proc.go:7772
+0x66c94 4 "SLL.W" "MOVW R9" "sll.w $a5, $a5, $zero" proc.go:7772
+0x66c98 4 "OR" "MOVV R0, R11" "move $a7, $zero" proc.go:7772
+0x66c9c 4 "OR" "MOVV R9, R30" "move $s7, $a5" proc.go:7772
+0x66ca0 4 "AMCAS_DB.W" "AMCASDBW R12, (R8), R30" "amcas_db.w $s7, $t0, $a4" proc.go:7772
+0x66ca4 4 "BNE" "BNE R9, R30, 2(PC)" "bne $a5, $s7, 8" proc.go:7772
+0x66ca8 4 "ORI" "MOVW $1, R11" "ori $a7, $zero, 0x1" proc.go:7772
+0x66cac 4 "B" "JMP 11(PC)" "b 44" proc.go:7772
+0x66cb0 4 "SLL.W" "MOVW R9" "sll.w $a5, $a5, $zero" proc.go:7772
+0x66cb4 4 "OR" "MOVV R0, R11" "move $a7, $zero" proc.go:7772
+0x66cb8 4 "DBAR" "DBAR" "dbar 0x14" proc.go:7772
+0x66cbc 4 "ANDI" "NOOP" "nop" proc.go:7772
+0x66cc0 4 "LL.W" "LL 0(R8), R30" "ll.w $s7, $a4, 0" proc.go:7772
+0x66cc4 4 "BNE" "BNE R9, R30, 4(PC)" "bne $a5, $s7, 16" proc.go:7772
+0x66cc8 4 "OR" "MOVV R12, R11" "move $a7, $t0" proc.go:7772
+0x66ccc 4 "SC.W" "SC R11, 0(R8)" "sc.w $a7, $a4, 0" proc.go:7772
+0x66cd0 4 "BEQZ" "BEQ R11, -4(PC)" "beqz $a7, -16" proc.go:7772
+0x66cd4 4 "DBAR" "DBAR" "dbar 0x12" proc.go:7772
+0x66cd8 4 "ANDI" "MOVBU R11, R8" "andi $a4, $a7, 0xff" proc.go:7772
+0x66cdc 4 "BNEZ" "BNE R8, 15(PC)" "bnez $a4, 60" proc.go:7772
+0x66ce0 4 "OR" "MOVV R0, R9" "move $a5, $zero" runtime2.go:252
+0x66ce4 4 "B" "JMP -113(PC)" "b -452" proc.go:7772
+0x66ce8 4 "LD.B" "MOVB 0(R5), R30" "ld.b $s7, $a1, 0" proc.go:7759
+0x66cec 4 "ANDI" "MOVBU R6" "andi $a2, $a2, 0xff" proc.go:7759
+0x66cf0 4 "SLLI.D" "SLLV $3, R6" "slli.d $a2, $a2, 0x3" proc.go:7759
+0x66cf4 4 "STX.D" "MOVV R8, (R5)(R6)" "stx.d $a4, $a1, $a2" proc.go:7759
+0x66cf8 4 "ORI" "MOVW $1, R4" "ori $a0, $zero, 0x1" proc.go:7760
+0x66cfc 4 "LD.D" "MOVV 0(R3), R1" "ld.d $ra, $sp, 0" proc.go:7760
+0x66d00 4 "ADDI.D" "ADDV $24, R3" "addi.d $sp, $sp, 24" proc.go:7760
+0x66d04 4 "JIRL" "RET" "ret" proc.go:7760
+0x66d08 4 "OR" "MOVV R0, R4" "move $a0, $zero" proc.go:7763
+0x66d0c 4 "LD.D" "MOVV 0(R3), R1" "ld.d $ra, $sp, 0" proc.go:7763
+0x66d10 4 "ADDI.D" "ADDV $24, R3" "addi.d $sp, $sp, 24" proc.go:7763
+0x66d14 4 "JIRL" "RET" "ret" proc.go:7763
+0x66d18 4 "OR" "MOVV R10, R4" "move $a0, $a6" proc.go:7773
+0x66d1c 4 "LD.D" "MOVV 0(R3), R1" "ld.d $ra, $sp, 0" proc.go:7773
+0x66d20 4 "ADDI.D" "ADDV $24, R3" "addi.d $sp, $sp, 24" proc.go:7773
+0x66d24 4 "JIRL" "RET" "ret" proc.go:7773
+0x66d28 4 "ST.D" "MOVV R4, 8(R3)" "st.d $a0, $sp, 8" proc.go:7713
+0x66d2c 4 "ST.D" "MOVV R5, 16(R3)" "st.d $a1, $sp, 16" proc.go:7713
+0x66d30 4 "ST.W" "MOVW R6, 24(R3)" "st.w $a2, $sp, 24" proc.go:7713
+0x66d34 4 "ST.B" "MOVB R7, 28(R3)" "st.b $a3, $sp, 28" proc.go:7713
+0x66d38 4 "OR" "MOVV R1, R31" "move $s8, $ra" proc.go:7713
+0x66d3c 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 157748" proc.go:7713
+0x66d40 4 "LD.D" "MOVV 8(R3), R4" "ld.d $a0, $sp, 8" proc.go:7713
+0x66d44 4 "LD.D" "MOVV 16(R3), R5" "ld.d $a1, $sp, 16" proc.go:7713
+0x66d48 4 "LD.WU" "MOVWU 24(R3), R6" "ld.wu $a2, $sp, 24" proc.go:7713
+0x66d4c 4 "LD.BU" "MOVBU 28(R3), R7" "ld.bu $a3, $sp, 28" proc.go:7713
+0x66d50 4 "B" "JMP runtime.runqgrab(SB)" "b -608" proc.go:7713
+0x66d54 4 "BREAK" "BREAK" "break 0x0" .:-1
+0x66d58 4 "BREAK" "BREAK" "break 0x0" .:-1
+0x66d5c 4 "BREAK" "BREAK" "break 0x0" .:-1
+== runtime.runqsteal 0x66d60 288 /usr/local/go/src/runtime/proc.go
+0x66d60 4 "LD.D" "MOVV 16(R22), R20" "ld.d $t8, $fp, 16" proc.go:7781
+0x66d64 4 "SLTU" "SGTU R3, R20" "sltu $t8, $t8, $sp" proc.go:7781
+0x66d68 4 "BEQZ" "BEQ R20, 61(PC)" "beqz $t8, 244" proc.go:7781
+0x66d6c 4 "ST.D" "MOVV R1, -48(R3)" "st.d $ra, $sp, -48" proc.go:7781
+0x66d70 4 "ADDI.D" "ADDV $-48, R3" "addi.d $sp, $sp, -48" proc.go:7781
+0x66d74 4 "ST.D" "MOVV R1, 0(R3)" "st.d $ra, $sp, 0" proc.go:7781
+0x66d78 4 "ST.D" "MOVV R4, 56(R3)" "st.d $a0, $sp, 56" proc.go:7784
+0x66d7c 4 "LD.WU" "MOVWU 404(R4), R8" "ld.wu $a4, $a0, 404" proc.go:7782
+0x66d80 4 "ST.W" "MOVW R8, 36(R3)" "st.w $a4, $sp, 36" proc.go:7782
+0x66d84 4 "ADDI.D" "ADDV $408, R4, R9" "addi.d $a5, $a0, 408" proc.go:7783
+0x66d88 4 "ST.D" "MOVV R9, 40(R3)" "st.d $a5, $sp, 40" proc.go:7783
+0x66d8c 4 "OR" "MOVV R5, R4" "move $a0, $a1" proc.go:7783
+0x66d90 4 "OR" "MOVV R9, R5" "move $a1, $a5" proc.go:7783
+0x66d94 4 "OR" "MOVV R6, R7" "move $a3, $a2" proc.go:7783
+0x66d98 4 "OR" "MOVV R8, R6" "move $a2, $a4" proc.go:7783
+0x66d9c 4 "BL" "CALL runtime.runqgrab(SB)" "bl -684" proc.go:7783
+0x66da0 4 "BSTRPICK.D" "BSTRPICKV $31, R4, $0, R8" "bstrpick.d $a4, $a0, 0x1f, 0x0" proc.go:7784
+0x66da4 4 "BEQZ" "BEQ R8, 37(PC)" "beqz $a4, 148" proc.go:7784
+0x66da8 4 "LD.WU" "MOVWU 36(R3), R6" "ld.wu $a2, $sp, 36" proc.go:7788
+0x66dac 4 "ADD.D" "ADDV R6, R4, R7" "add.d $a3, $a0, $a2" proc.go:7788
+0x66db0 4 "ADDI.D" "ADDV $-1, R7" "addi.d $a3, $a3, -1" proc.go:7788
+0x66db4 4 "ANDI" "MOVBU R7, R9" "andi $a5, $a3, 0xff" proc.go:7788
+0x66db8 4 "SLLI.D" "SLLV $3, R9" "slli.d $a5, $a5, 0x3" proc.go:7788
+0x66dbc 4 "LD.D" "MOVV 40(R3), R10" "ld.d $a6, $sp, 40" proc.go:7788
+0x66dc0 4 "LDX.D" "MOVV (R10)(R9), R9" "ldx.d $a5, $a6, $a5" proc.go:7788
+0x66dc4 4 "XORI" "XOR $1, R8" "xori $a4, $a4, 0x1" proc.go:7789
+0x66dc8 4 "BEQZ" "BEQ R8, 24(PC)" "beqz $a4, 96" proc.go:7789
+0x66dcc 4 "LD.D" "MOVV 56(R3), R8" "ld.d $a4, $sp, 56" proc.go:7792
+0x66dd0 4 "ADDI.D" "ADDV $400, R8, R10" "addi.d $a6, $a4, 400" proc.go:7792
+0x66dd4 4 "LD.W" "MOVW 0(R10), R10" "ld.w $a6, $a6, 0" proc.go:7792
+0x66dd8 4 "DBAR" "DBAR" "dbar 0x14" proc.go:7792
+0x66ddc 4 "SUB.D" "SUBV R10, R6" "sub.d $a2, $a2, $a6" proc.go:7793
+0x66de0 4 "ADD.D" "ADDV R4, R6" "add.d $a2, $a2, $a0" proc.go:7793
+0x66de4 4 "ADDI.D" "ADDV $-1, R6" "addi.d $a2, $a2, -1" proc.go:7793
+0x66de8 4 "BSTRPICK.D" "BSTRPICKV $31, R6, $0, R6" "bstrpick.d $a2, $a2, 0x1f, 0x0" proc.go:7793
+0x66dec 4 "ORI" "MOVW $256, R4" "ori $a0, $zero, 0x100" proc.go:7793
+0x66df0 4 "BGEU" "BGEU R6, R4, 22(PC)" "bgeu $a2, $a0, 88" proc.go:7793
+0x66df4 4 "PCALAU12I" "PCALAU12I $257, R30" "pcalau12i $s7, 257" proc.go:7796
+0x66df8 4 "LD.BU" "MOVBU 1421(R30), R5" "ld.bu $a1, $s7, 1421" proc.go:7796
+0x66dfc 4 "ADDI.D" "ADDV $404, R8, R6" "addi.d $a2, $a4, 404" proc.go:7796
+0x66e00 4 "BEQZ" "BEQ R5, 5(PC)" "beqz $a1, 20" proc.go:7796
+0x66e04 4 "DBAR" "DBAR" "dbar 0x12" proc.go:7796
+0x66e08 4 "ST.W" "MOVW R7, 0(R6)" "st.w $a3, $a2, 0" proc.go:7796
+0x66e0c 4 "DBAR" "DBAR" "dbar 0x18" proc.go:7796
+0x66e10 4 "B" "JMP 2(PC)" "b 8" proc.go:7796
+0x66e14 4 "AMSWAP_DB.W" "AMSWAPDBW R7, (R6), R0" "amswap_db.w $zero, $a3, $a2" proc.go:7796
+0x66e18 4 "OR" "MOVV R9, R4" "move $a0, $a5" proc.go:7797
+0x66e1c 4 "LD.D" "MOVV 0(R3), R1" "ld.d $ra, $sp, 0" proc.go:7797
+0x66e20 4 "ADDI.D" "ADDV $48, R3" "addi.d $sp, $sp, 48" proc.go:7797
+0x66e24 4 "JIRL" "RET" "ret" proc.go:7797
+0x66e28 4 "OR" "MOVV R9, R4" "move $a0, $a5" proc.go:7790
+0x66e2c 4 "LD.D" "MOVV 0(R3), R1" "ld.d $ra, $sp, 0" proc.go:7790
+0x66e30 4 "ADDI.D" "ADDV $48, R3" "addi.d $sp, $sp, 48" proc.go:7790
+0x66e34 4 "JIRL" "RET" "ret" proc.go:7790
+0x66e38 4 "OR" "MOVV R0, R4" "move $a0, $zero" proc.go:7785
+0x66e3c 4 "LD.D" "MOVV 0(R3), R1" "ld.d $ra, $sp, 0" proc.go:7785
+0x66e40 4 "ADDI.D" "ADDV $48, R3" "addi.d $sp, $sp, 48" proc.go:7785
+0x66e44 4 "JIRL" "RET" "ret" proc.go:7785
+0x66e48 4 "PCALAU12I" "PCALAU12I $61, R4" "pcalau12i $a0, 61" proc.go:7794
+0x66e4c 4 "ADDI.D" "ADDV $-155, R4" "addi.d $a0, $a0, -155" proc.go:7794
+0x66e50 4 "ORI" "MOVW $24, R5" "ori $a1, $zero, 0x18" proc.go:7794
+0x66e54 4 "BL" "CALL runtime.throw(SB)" "bl 144396" proc.go:7794
+0x66e58 4 "ANDI" "NOOP" "nop" proc.go:7794
+0x66e5c 4 "ST.D" "MOVV R4, 8(R3)" "st.d $a0, $sp, 8" proc.go:7781
+0x66e60 4 "ST.D" "MOVV R5, 16(R3)" "st.d $a1, $sp, 16" proc.go:7781
+0x66e64 4 "ST.B" "MOVB R6, 24(R3)" "st.b $a2, $sp, 24" proc.go:7781
+0x66e68 4 "OR" "MOVV R1, R31" "move $s8, $ra" proc.go:7781
+0x66e6c 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 157444" proc.go:7781
+0x66e70 4 "LD.D" "MOVV 8(R3), R4" "ld.d $a0, $sp, 8" proc.go:7781
+0x66e74 4 "LD.D" "MOVV 16(R3), R5" "ld.d $a1, $sp, 16" proc.go:7781
+0x66e78 4 "LD.BU" "MOVBU 24(R3), R6" "ld.bu $a2, $sp, 24" proc.go:7781
+0x66e7c 4 "B" "JMP runtime.runqsteal(SB)" "b -284" proc.go:7781
+== runtime.memmove 0x90850 1568 /usr/local/go/src/runtime/memmove_loong64.s
+0x90850 4 "BEQ" "BEQ R4, R5, 25(PC)" "beq $a0, $a1, 100" memmove_loong64.s:66
+0x90854 4 "BEQZ" "BEQ R6, 24(PC)" "beqz $a2, 96" memmove_loong64.s:67
+0x90858 4 "ADD.D" "ADDV R4, R6, R7" "add.d $a3, $a2, $a0" memmove_loong64.s:69
+0x9085c 4 "ADD.D" "ADDV R5, R6, R8" "add.d $a4, $a2, $a1" memmove_loong64.s:70
+0x90860 4 "SLTUI" "SGTU $2, R6, R9" "sltui $a5, $a2, 2" memmove_loong64.s:75
+0x90864 4 "BNEZ" "BNE R9, 21(PC)" "bnez $a5, 84" memmove_loong64.s:76
+0x90868 4 "SLTUI" "SGTU $3, R6, R9" "sltui $a5, $a2, 3" memmove_loong64.s:79
+0x9086c 4 "BNEZ" "BNE R9, 22(PC)" "bnez $a5, 88" memmove_loong64.s:80
+0x90870 4 "SLTUI" "SGTU $4, R6, R9" "sltui $a5, $a2, 4" memmove_loong64.s:83
+0x90874 4 "BNEZ" "BNE R9, 23(PC)" "bnez $a5, 92" memmove_loong64.s:84
+0x90878 4 "SLTUI" "SGTU $5, R6, R9" "sltui $a5, $a2, 5" memmove_loong64.s:87
+0x9087c 4 "BNEZ" "BNE R9, 26(PC)" "bnez $a5, 104" memmove_loong64.s:88
+0x90880 4 "SLTUI" "SGTU $8, R6, R9" "sltui $a5, $a2, 8" memmove_loong64.s:91
+0x90884 4 "BNEZ" "BNE R9, 27(PC)" "bnez $a5, 108" memmove_loong64.s:92
+0x90888 4 "SLTUI" "SGTU $9, R6, R9" "sltui $a5, $a2, 9" memmove_loong64.s:95
+0x9088c 4 "BNEZ" "BNE R9, 30(PC)" "bnez $a5, 120" memmove_loong64.s:96
+0x90890 4 "SLTUI" "SGTU $17, R6, R9" "sltui $a5, $a2, 17" memmove_loong64.s:99
+0x90894 4 "BNEZ" "BNE R9, 31(PC)" "bnez $a5, 124" memmove_loong64.s:100
+0x90898 4 "SLTUI" "SGTU $33, R6, R9" "sltui $a5, $a2, 33" memmove_loong64.s:103
+0x9089c 4 "BNEZ" "BNE R9, 34(PC)" "bnez $a5, 136" memmove_loong64.s:104
+0x908a0 4 "SLTUI" "SGTU $65, R6, R9" "sltui $a5, $a2, 65" memmove_loong64.s:107
+0x908a4 4 "BNEZ" "BNE R9, 43(PC)" "bnez $a5, 172" memmove_loong64.s:108
+0x908a8 4 "SLTUI" "SGTU $256, R6, R9" "sltui $a5, $a2, 256" memmove_loong64.s:111
+0x908ac 4 "BNEZ" "BNE R9, 61(PC)" "bnez $a5, 244" memmove_loong64.s:112
+0x908b0 4 "B" "JMP 255(PC)" "b 1020" memmove_loong64.s:115
+0x908b4 4 "JIRL" "RET" "ret" memmove_loong64.s:118
+0x908b8 4 "LD.B" "MOVB 0(R5), R11" "ld.b $a7, $a1, 0" memmove_loong64.s:121
+0x908bc 4 "ST.B" "MOVB R11, 0(R4)" "st.b $a7, $a0, 0" memmove_loong64.s:122
+0x908c0 4 "JIRL" "RET" "ret" memmove_loong64.s:123
+0x908c4 4 "LD.H" "MOVH 0(R5), R11" "ld.h $a7, $a1, 0" memmove_loong64.s:125
+0x908c8 4 "ST.H" "MOVH R11, 0(R4)" "st.h $a7, $a0, 0" memmove_loong64.s:126
+0x908cc 4 "JIRL" "RET" "ret" memmove_loong64.s:127
+0x908d0 4 "LD.H" "MOVH 0(R5), R11" "ld.h $a7, $a1, 0" memmove_loong64.s:129
+0x908d4 4 "LD.B" "MOVB -1(R8), R12" "ld.b $t0, $a4, -1" memmove_loong64.s:130
+0x908d8 4 "ST.H" "MOVH R11, 0(R4)" "st.h $a7, $a0, 0" memmove_loong64.s:131
+0x908dc 4 "ST.B" "MOVB R12, -1(R7)" "st.b $t0, $a3, -1" memmove_loong64.s:132
+0x908e0 4 "JIRL" "RET" "ret" memmove_loong64.s:133
+0x908e4 4 "LD.W" "MOVW 0(R5), R11" "ld.w $a7, $a1, 0" memmove_loong64.s:135
+0x908e8 4 "ST.W" "MOVW R11, 0(R4)" "st.w $a7, $a0, 0" memmove_loong64.s:136
+0x908ec 4 "JIRL" "RET" "ret" memmove_loong64.s:137
+0x908f0 4 "LD.W" "MOVW 0(R5), R11" "ld.w $a7, $a1, 0" memmove_loong64.s:139
+0x908f4 4 "LD.W" "MOVW -4(R8), R12" "ld.w $t0, $a4, -4" memmove_loong64.s:140
+0x908f8 4 "ST.W" "MOVW R11, 0(R4)" "st.w $a7, $a0, 0" memmove_loong64.s:141
+0x908fc 4 "ST.W" "MOVW R12, -4(R7)" "st.w $t0, $a3, -4" memmove_loong64.s:142
+0x90900 4 "JIRL" "RET" "ret" memmove_loong64.s:143
+0x90904 4 "LD.D" "MOVV 0(R5), R11" "ld.d $a7, $a1, 0" memmove_loong64.s:145
+0x90908 4 "ST.D" "MOVV R11, 0(R4)" "st.d $a7, $a0, 0" memmove_loong64.s:146
+0x9090c 4 "JIRL" "RET" "ret" memmove_loong64.s:147
+0x90910 4 "LD.D" "MOVV 0(R5), R11" "ld.d $a7, $a1, 0" memmove_loong64.s:149
+0x90914 4 "LD.D" "MOVV -8(R8), R12" "ld.d $t0, $a4, -8" memmove_loong64.s:150
+0x90918 4 "ST.D" "MOVV R11, 0(R4)" "st.d $a7, $a0, 0" memmove_loong64.s:151
+0x9091c 4 "ST.D" "MOVV R12, -8(R7)" "st.d $t0, $a3, -8" memmove_loong64.s:152
+0x90920 4 "JIRL" "RET" "ret" memmove_loong64.s:153
+0x90924 4 "LD.D" "MOVV 0(R5), R11" "ld.d $a7, $a1, 0" memmove_loong64.s:155
+0x90928 4 "LD.D" "MOVV 8(R5), R12" "ld.d $t0, $a1, 8" memmove_loong64.s:156
+0x9092c 4 "LD.D" "MOVV -16(R8), R13" "ld.d $t1, $a4, -16" memmove_loong64.s:157
+0x90930 4 "LD.D" "MOVV -8(R8), R14" "ld.d $t2, $a4, -8" memmove_loong64.s:158
+0x90934 4 "ST.D" "MOVV R11, 0(R4)" "st.d $a7, $a0, 0" memmove_loong64.s:159
+0x90938 4 "ST.D" "MOVV R12, 8(R4)" "st.d $t0, $a0, 8" memmove_loong64.s:160
+0x9093c 4 "ST.D" "MOVV R13, -16(R7)" "st.d $t1, $a3, -16" memmove_loong64.s:161
+0x90940 4 "ST.D" "MOVV R14, -8(R7)" "st.d $t2, $a3, -8" memmove_loong64.s:162
+0x90944 4 "JIRL" "RET" "ret" memmove_loong64.s:163
+0x90948 4 "ANDI" "NOOP" "nop" memmove_loong64.s:163
+0x9094c 4 "ANDI" "NOOP" "nop" memmove_loong64.s:163
+0x90950 4 "LD.D" "MOVV 0(R5), R11" "ld.d $a7, $a1, 0" memmove_loong64.s:165
+0x90954 4 "LD.D" "MOVV 8(R5), R12" "ld.d $t0, $a1, 8" memmove_loong64.s:166
+0x90958 4 "LD.D" "MOVV 16(R5), R13" "ld.d $t1, $a1, 16" memmove_loong64.s:167
+0x9095c 4 "LD.D" "MOVV 24(R5), R14" "ld.d $t2, $a1, 24" memmove_loong64.s:168
+0x90960 4 "LD.D" "MOVV -32(R8), R15" "ld.d $t3, $a4, -32" memmove_loong64.s:169
+0x90964 4 "LD.D" "MOVV -24(R8), R16" "ld.d $t4, $a4, -24" memmove_loong64.s:170
+0x90968 4 "LD.D" "MOVV -16(R8), R17" "ld.d $t5, $a4, -16" memmove_loong64.s:171
+0x9096c 4 "LD.D" "MOVV -8(R8), R18" "ld.d $t6, $a4, -8" memmove_loong64.s:172
+0x90970 4 "ST.D" "MOVV R11, 0(R4)" "st.d $a7, $a0, 0" memmove_loong64.s:173
+0x90974 4 "ST.D" "MOVV R12, 8(R4)" "st.d $t0, $a0, 8" memmove_loong64.s:174
+0x90978 4 "ST.D" "MOVV R13, 16(R4)" "st.d $t1, $a0, 16" memmove_loong64.s:175
+0x9097c 4 "ST.D" "MOVV R14, 24(R4)" "st.d $t2, $a0, 24" memmove_loong64.s:176
+0x90980 4 "ST.D" "MOVV R15, -32(R7)" "st.d $t3, $a3, -32" memmove_loong64.s:177
+0x90984 4 "ST.D" "MOVV R16, -24(R7)" "st.d $t4, $a3, -24" memmove_loong64.s:178
+0x90988 4 "ST.D" "MOVV R17, -16(R7)" "st.d $t5, $a3, -16" memmove_loong64.s:179
+0x9098c 4 "ST.D" "MOVV R18, -8(R7)" "st.d $t6, $a3, -8" memmove_loong64.s:180
+0x90990 4 "JIRL" "RET" "ret" memmove_loong64.s:181
+0x90994 4 "ANDI" "NOOP" "nop" memmove_loong64.s:181
+0x90998 4 "ANDI" "NOOP" "nop" memmove_loong64.s:181
+0x9099c 4 "ANDI" "NOOP" "nop" memmove_loong64.s:181
+0x909a0 4 "BGEU" "BGEU R5, R4, 3(PC)" "bgeu $a1, $a0, 12" memmove_loong64.s:189
+0x909a4 4 "ADD.D" "ADDV R5, R6, R10" "add.d $a6, $a2, $a1" memmove_loong64.s:190
+0x909a8 4 "BLTU" "BLTU R4, R10, 41(PC)" "bltu $a0, $a6, 164" memmove_loong64.s:191
+0x909ac 4 "ANDI" "AND $7, R4, R9" "andi $a5, $a0, 0x7" memmove_loong64.s:193
+0x909b0 4 "BEQZ" "BEQ R9, 16(PC)" "beqz $a5, 64" memmove_loong64.s:194
+0x909b4 4 "ORI" "MOVW $8, R10" "ori $a6, $zero, 0x8" memmove_loong64.s:196
+0x909b8 4 "SUB.D" "SUBV R9, R10" "sub.d $a6, $a6, $a5" memmove_loong64.s:197
+0x909bc 4 "LD.D" "MOVV 0(R5), R11" "ld.d $a7, $a1, 0" memmove_loong64.s:198
+0x909c0 4 "SUB.D" "SUBV R10, R6" "sub.d $a2, $a2, $a6" memmove_loong64.s:199
+0x909c4 4 "ADD.D" "ADDV R10, R5" "add.d $a1, $a1, $a6" memmove_loong64.s:200
+0x909c8 4 "LD.D" "MOVV 0(R5), R12" "ld.d $t0, $a1, 0" memmove_loong64.s:201
+0x909cc 4 "ST.D" "MOVV R11, 0(R4)" "st.d $a7, $a0, 0" memmove_loong64.s:202
+0x909d0 4 "ADD.D" "ADDV R10, R4" "add.d $a0, $a0, $a6" memmove_loong64.s:203
+0x909d4 4 "ST.D" "MOVV R12, 0(R4)" "st.d $t0, $a0, 0" memmove_loong64.s:204
+0x909d8 4 "ADDI.D" "ADDV $-8, R6" "addi.d $a2, $a2, -8" memmove_loong64.s:205
+0x909dc 4 "ADDI.D" "ADDV $8, R4" "addi.d $a0, $a0, 8" memmove_loong64.s:206
+0x909e0 4 "ADDI.D" "ADDV $8, R5" "addi.d $a1, $a1, 8" memmove_loong64.s:207
+0x909e4 4 "SLTUI" "SGTU $65, R6, R9" "sltui $a5, $a2, 65" memmove_loong64.s:208
+0x909e8 4 "BNEZ" "BNE R9, -38(PC)" "bnez $a5, -152" memmove_loong64.s:209
+0x909ec 4 "ANDI" "NOOP" "nop" memmove_loong64.s:209
+0x909f0 4 "ADDI.D" "ADDV $-64, R6" "addi.d $a2, $a2, -64" memmove_loong64.s:211
+0x909f4 4 "SLTUI" "SGTU $64, R6, R9" "sltui $a5, $a2, 64" memmove_loong64.s:212
+0x909f8 4 "LD.D" "MOVV 0(R5), R11" "ld.d $a7, $a1, 0" memmove_loong64.s:213
+0x909fc 4 "LD.D" "MOVV 8(R5), R12" "ld.d $t0, $a1, 8" memmove_loong64.s:214
+0x90a00 4 "LD.D" "MOVV 16(R5), R13" "ld.d $t1, $a1, 16" memmove_loong64.s:215
+0x90a04 4 "LD.D" "MOVV 24(R5), R14" "ld.d $t2, $a1, 24" memmove_loong64.s:216
+0x90a08 4 "LD.D" "MOVV 32(R5), R15" "ld.d $t3, $a1, 32" memmove_loong64.s:217
+0x90a0c 4 "LD.D" "MOVV 40(R5), R16" "ld.d $t4, $a1, 40" memmove_loong64.s:218
+0x90a10 4 "LD.D" "MOVV 48(R5), R17" "ld.d $t5, $a1, 48" memmove_loong64.s:219
+0x90a14 4 "LD.D" "MOVV 56(R5), R18" "ld.d $t6, $a1, 56" memmove_loong64.s:220
+0x90a18 4 "ST.D" "MOVV R11, 0(R4)" "st.d $a7, $a0, 0" memmove_loong64.s:221
+0x90a1c 4 "ST.D" "MOVV R12, 8(R4)" "st.d $t0, $a0, 8" memmove_loong64.s:222
+0x90a20 4 "ST.D" "MOVV R13, 16(R4)" "st.d $t1, $a0, 16" memmove_loong64.s:223
+0x90a24 4 "ST.D" "MOVV R14, 24(R4)" "st.d $t2, $a0, 24" memmove_loong64.s:224
+0x90a28 4 "ST.D" "MOVV R15, 32(R4)" "st.d $t3, $a0, 32" memmove_loong64.s:225
+0x90a2c 4 "ST.D" "MOVV R16, 40(R4)" "st.d $t4, $a0, 40" memmove_loong64.s:226
+0x90a30 4 "ST.D" "MOVV R17, 48(R4)" "st.d $t5, $a0, 48" memmove_loong64.s:227
+0x90a34 4 "ST.D" "MOVV R18, 56(R4)" "st.d $t6, $a0, 56" memmove_loong64.s:228
+0x90a38 4 "ADDI.D" "ADDV $64, R5" "addi.d $a1, $a1, 64" memmove_loong64.s:229
+0x90a3c 4 "ADDI.D" "ADDV $64, R4" "addi.d $a0, $a0, 64" memmove_loong64.s:230
+0x90a40 4 "BEQZ" "BEQ R9, -20(PC)" "beqz $a5, -80" memmove_loong64.s:231
+0x90a44 4 "BNEZ" "BNE R6, -121(PC)" "bnez $a2, -484" memmove_loong64.s:233
+0x90a48 4 "JIRL" "RET" "ret" memmove_loong64.s:234
+0x90a4c 4 "ANDI" "AND $7, R7, R9" "andi $a5, $a3, 0x7" memmove_loong64.s:239
+0x90a50 4 "BEQZ" "BEQ R9, 16(PC)" "beqz $a5, 64" memmove_loong64.s:240
+0x90a54 4 "LD.D" "MOVV -8(R8), R11" "ld.d $a7, $a4, -8" memmove_loong64.s:242
+0x90a58 4 "SUB.D" "SUBV R9, R6" "sub.d $a2, $a2, $a5" memmove_loong64.s:243
+0x90a5c 4 "SUB.D" "SUBV R9, R8" "sub.d $a4, $a4, $a5" memmove_loong64.s:244
+0x90a60 4 "LD.D" "MOVV -8(R8), R12" "ld.d $t0, $a4, -8" memmove_loong64.s:245
+0x90a64 4 "ST.D" "MOVV R11, -8(R7)" "st.d $a7, $a3, -8" memmove_loong64.s:246
+0x90a68 4 "SUB.D" "SUBV R9, R7" "sub.d $a3, $a3, $a5" memmove_loong64.s:247
+0x90a6c 4 "ST.D" "MOVV R12, -8(R7)" "st.d $t0, $a3, -8" memmove_loong64.s:248
+0x90a70 4 "ADDI.D" "ADDV $-8, R6" "addi.d $a2, $a2, -8" memmove_loong64.s:249
+0x90a74 4 "ADDI.D" "ADDV $-8, R7" "addi.d $a3, $a3, -8" memmove_loong64.s:250
+0x90a78 4 "ADDI.D" "ADDV $-8, R8" "addi.d $a4, $a4, -8" memmove_loong64.s:251
+0x90a7c 4 "SLTUI" "SGTU $65, R6, R9" "sltui $a5, $a2, 65" memmove_loong64.s:252
+0x90a80 4 "BNEZ" "BNE R9, -76(PC)" "bnez $a5, -304" memmove_loong64.s:253
+0x90a84 4 "ANDI" "NOOP" "nop" memmove_loong64.s:253
+0x90a88 4 "ANDI" "NOOP" "nop" memmove_loong64.s:253
+0x90a8c 4 "ANDI" "NOOP" "nop" memmove_loong64.s:253
+0x90a90 4 "ADDI.D" "ADDV $-64, R6" "addi.d $a2, $a2, -64" memmove_loong64.s:255
+0x90a94 4 "SLTUI" "SGTU $64, R6, R9" "sltui $a5, $a2, 64" memmove_loong64.s:256
+0x90a98 4 "LD.D" "MOVV -8(R8), R11" "ld.d $a7, $a4, -8" memmove_loong64.s:257
+0x90a9c 4 "LD.D" "MOVV -16(R8), R12" "ld.d $t0, $a4, -16" memmove_loong64.s:258
+0x90aa0 4 "LD.D" "MOVV -24(R8), R13" "ld.d $t1, $a4, -24" memmove_loong64.s:259
+0x90aa4 4 "LD.D" "MOVV -32(R8), R14" "ld.d $t2, $a4, -32" memmove_loong64.s:260
+0x90aa8 4 "LD.D" "MOVV -40(R8), R15" "ld.d $t3, $a4, -40" memmove_loong64.s:261
+0x90aac 4 "LD.D" "MOVV -48(R8), R16" "ld.d $t4, $a4, -48" memmove_loong64.s:262
+0x90ab0 4 "LD.D" "MOVV -56(R8), R17" "ld.d $t5, $a4, -56" memmove_loong64.s:263
+0x90ab4 4 "LD.D" "MOVV -64(R8), R18" "ld.d $t6, $a4, -64" memmove_loong64.s:264
+0x90ab8 4 "ST.D" "MOVV R11, -8(R7)" "st.d $a7, $a3, -8" memmove_loong64.s:265
+0x90abc 4 "ST.D" "MOVV R12, -16(R7)" "st.d $t0, $a3, -16" memmove_loong64.s:266
+0x90ac0 4 "ST.D" "MOVV R13, -24(R7)" "st.d $t1, $a3, -24" memmove_loong64.s:267
+0x90ac4 4 "ST.D" "MOVV R14, -32(R7)" "st.d $t2, $a3, -32" memmove_loong64.s:268
+0x90ac8 4 "ST.D" "MOVV R15, -40(R7)" "st.d $t3, $a3, -40" memmove_loong64.s:269
+0x90acc 4 "ST.D" "MOVV R16, -48(R7)" "st.d $t4, $a3, -48" memmove_loong64.s:270
+0x90ad0 4 "ST.D" "MOVV R17, -56(R7)" "st.d $t5, $a3, -56" memmove_loong64.s:271
+0x90ad4 4 "ST.D" "MOVV R18, -64(R7)" "st.d $t6, $a3, -64" memmove_loong64.s:272
+0x90ad8 4 "ADDI.D" "ADDV $-64, R7" "addi.d $a3, $a3, -64" memmove_loong64.s:273
+0x90adc 4 "ADDI.D" "ADDV $-64, R8" "addi.d $a4, $a4, -64" memmove_loong64.s:274
+0x90ae0 4 "BEQZ" "BEQ R9, -20(PC)" "beqz $a5, -80" memmove_loong64.s:275
+0x90ae4 4 "BNEZ" "BNE R6, -161(PC)" "bnez $a2, -644" memmove_loong64.s:277
+0x90ae8 4 "JIRL" "RET" "ret" memmove_loong64.s:278
+0x90aec 4 "ANDI" "NOOP" "nop" memmove_loong64.s:278
+0x90af0 4 "PCALAU12I" "PCALAU12I $216, R30" "pcalau12i $s7, 216" memmove_loong64.s:283
+0x90af4 4 "LD.BU" "MOVBU -896(R30), R9" "ld.bu $a5, $s7, -896" memmove_loong64.s:283
+0x90af8 4 "BEQZ" "BEQ R9, -86(PC)" "beqz $a5, -344" memmove_loong64.s:284
+0x90afc 4 "BGEU" "BGEU R5, R4, 3(PC)" "bgeu $a1, $a0, 12" memmove_loong64.s:291
+0x90b00 4 "ADD.D" "ADDV R5, R6, R10" "add.d $a6, $a2, $a1" memmove_loong64.s:292
+0x90b04 4 "BLTU" "BLTU R4, R10, 54(PC)" "bltu $a0, $a6, 216" memmove_loong64.s:293
+0x90b08 4 "ANDI" "AND $15, R4, R9" "andi $a5, $a0, 0xf" memmove_loong64.s:295
+0x90b0c 4 "BEQZ" "BEQ R9, 13(PC)" "beqz $a5, 52" memmove_loong64.s:296
+0x90b10 4 "ORI" "MOVW $16, R10" "ori $a6, $zero, 0x10" memmove_loong64.s:298
+0x90b14 4 "SUB.D" "SUBV R9, R10" "sub.d $a6, $a6, $a5" memmove_loong64.s:299
+0x90b18 4 "" "BYTE 0xa000002c" ".byte 0xa000002c" memmove_loong64.s:300
+0x90b1c 4 "SUB.D" "SUBV R10, R6" "sub.d $a2, $a2, $a6" memmove_loong64.s:301
+0x90b20 4 "ADD.D" "ADDV R10, R5" "add.d $a1, $a1, $a6" memmove_loong64.s:302
+0x90b24 4 "" "BYTE 0xa100002c" ".byte 0xa100002c" memmove_loong64.s:303
+0x90b28 4 "" "BYTE 0x8000402c" ".byte 0x8000402c" memmove_loong64.s:304
+0x90b2c 4 "ADD.D" "ADDV R10, R4" "add.d $a0, $a0, $a6" memmove_loong64.s:305
+0x90b30 4 "" "BYTE 0x8100402c" ".byte 0x8100402c" memmove_loong64.s:306
+0x90b34 4 "ADDI.D" "ADDV $-16, R6" "addi.d $a2, $a2, -16" memmove_loong64.s:307
+0x90b38 4 "ADDI.D" "ADDV $16, R4" "addi.d $a0, $a0, 16" memmove_loong64.s:308
+0x90b3c 4 "ADDI.D" "ADDV $16, R5" "addi.d $a1, $a1, 16" memmove_loong64.s:309
+0x90b40 4 "SLTUI" "SGTU $128, R6, R9" "sltui $a5, $a2, 128" memmove_loong64.s:311
+0x90b44 4 "BNEZ" "BNE R9, 24(PC)" "bnez $a5, 96" memmove_loong64.s:312
+0x90b48 4 "ANDI" "NOOP" "nop" memmove_loong64.s:312
+0x90b4c 4 "ANDI" "NOOP" "nop" memmove_loong64.s:312
+0x90b50 4 "ADDI.D" "ADDV $-128, R6" "addi.d $a2, $a2, -128" memmove_loong64.s:314
+0x90b54 4 "SLTUI" "SGTU $128, R6, R9" "sltui $a5, $a2, 128" memmove_loong64.s:315
+0x90b58 4 "" "BYTE 0xa000002c" ".byte 0xa000002c" memmove_loong64.s:316
+0x90b5c 4 "" "BYTE 0xa140002c" ".byte 0xa140002c" memmove_loong64.s:317
+0x90b60 4 "" "BYTE 0xa280002c" ".byte 0xa280002c" memmove_loong64.s:318
+0x90b64 4 "" "BYTE 0xa3c0002c" ".byte 0xa3c0002c" memmove_loong64.s:319
+0x90b68 4 "" "BYTE 0xa400012c" ".byte 0xa400012c" memmove_loong64.s:320
+0x90b6c 4 "" "BYTE 0xa540012c" ".byte 0xa540012c" memmove_loong64.s:321
+0x90b70 4 "" "BYTE 0xa680012c" ".byte 0xa680012c" memmove_loong64.s:322
+0x90b74 4 "" "BYTE 0xa7c0012c" ".byte 0xa7c0012c" memmove_loong64.s:323
+0x90b78 4 "" "BYTE 0x8000402c" ".byte 0x8000402c" memmove_loong64.s:324
+0x90b7c 4 "" "BYTE 0x8140402c" ".byte 0x8140402c" memmove_loong64.s:325
+0x90b80 4 "" "BYTE 0x8280402c" ".byte 0x8280402c" memmove_loong64.s:326
+0x90b84 4 "" "BYTE 0x83c0402c" ".byte 0x83c0402c" memmove_loong64.s:327
+0x90b88 4 "" "BYTE 0x8400412c" ".byte 0x8400412c" memmove_loong64.s:328
+0x90b8c 4 "" "BYTE 0x8540412c" ".byte 0x8540412c" memmove_loong64.s:329
+0x90b90 4 "" "BYTE 0x8680412c" ".byte 0x8680412c" memmove_loong64.s:330
+0x90b94 4 "" "BYTE 0x87c0412c" ".byte 0x87c0412c" memmove_loong64.s:331
+0x90b98 4 "ADDI.D" "ADDV $128, R5" "addi.d $a1, $a1, 128" memmove_loong64.s:332
+0x90b9c 4 "ADDI.D" "ADDV $128, R4" "addi.d $a0, $a0, 128" memmove_loong64.s:333
+0x90ba0 4 "BEQZ" "BEQ R9, -20(PC)" "beqz $a5, -80" memmove_loong64.s:334
+0x90ba4 4 "SLTUI" "SGTU $32, R6, R9" "sltui $a5, $a2, 32" memmove_loong64.s:336
+0x90ba8 4 "BNEZ" "BNE R9, 11(PC)" "bnez $a5, 44" memmove_loong64.s:337
+0x90bac 4 "ANDI" "NOOP" "nop" memmove_loong64.s:337
+0x90bb0 4 "ADDI.D" "ADDV $-32, R6" "addi.d $a2, $a2, -32" memmove_loong64.s:339
+0x90bb4 4 "SLTUI" "SGTU $32, R6, R9" "sltui $a5, $a2, 32" memmove_loong64.s:340
+0x90bb8 4 "" "BYTE 0xa000002c" ".byte 0xa000002c" memmove_loong64.s:341
+0x90bbc 4 "" "BYTE 0xa140002c" ".byte 0xa140002c" memmove_loong64.s:342
+0x90bc0 4 "" "BYTE 0x8000402c" ".byte 0x8000402c" memmove_loong64.s:343
+0x90bc4 4 "" "BYTE 0x8140402c" ".byte 0x8140402c" memmove_loong64.s:344
+0x90bc8 4 "ADDI.D" "ADDV $32, R5" "addi.d $a1, $a1, 32" memmove_loong64.s:345
+0x90bcc 4 "ADDI.D" "ADDV $32, R4" "addi.d $a0, $a0, 32" memmove_loong64.s:346
+0x90bd0 4 "BEQZ" "BEQ R9, -8(PC)" "beqz $a5, -32" memmove_loong64.s:347
+0x90bd4 4 "BNEZ" "BNE R6, -221(PC)" "bnez $a2, -884" memmove_loong64.s:350
+0x90bd8 4 "JIRL" "RET" "ret" memmove_loong64.s:351
+0x90bdc 4 "ANDI" "AND $15, R7, R9" "andi $a5, $a3, 0xf" memmove_loong64.s:354
+0x90be0 4 "BEQZ" "BEQ R9, 11(PC)" "beqz $a5, 44" memmove_loong64.s:355
+0x90be4 4 "" "BYTE 0x00c13f2c" ".byte 0x00c13f2c" memmove_loong64.s:357
+0x90be8 4 "SUB.D" "SUBV R9, R6" "sub.d $a2, $a2, $a5" memmove_loong64.s:358
+0x90bec 4 "SUB.D" "SUBV R9, R8" "sub.d $a4, $a4, $a5" memmove_loong64.s:359
+0x90bf0 4 "" "BYTE 0x01c13f2c" ".byte 0x01c13f2c" memmove_loong64.s:360
+0x90bf4 4 "" "BYTE 0xe0c07f2c" ".byte 0xe0c07f2c" memmove_loong64.s:361
+0x90bf8 4 "SUB.D" "SUBV R9, R7" "sub.d $a3, $a3, $a5" memmove_loong64.s:362
+0x90bfc 4 "" "BYTE 0xe1c07f2c" ".byte 0xe1c07f2c" memmove_loong64.s:363
+0x90c00 4 "ADDI.D" "ADDV $-16, R6" "addi.d $a2, $a2, -16" memmove_loong64.s:364
+0x90c04 4 "ADDI.D" "ADDV $-16, R7" "addi.d $a3, $a3, -16" memmove_loong64.s:365
+0x90c08 4 "ADDI.D" "ADDV $-16, R8" "addi.d $a4, $a4, -16" memmove_loong64.s:366
+0x90c0c 4 "SLTUI" "SGTU $128, R6, R9" "sltui $a5, $a2, 128" memmove_loong64.s:368
+0x90c10 4 "BNEZ" "BNE R9, 25(PC)" "bnez $a5, 100" memmove_loong64.s:369
+0x90c14 4 "ANDI" "NOOP" "nop" memmove_loong64.s:369
+0x90c18 4 "ANDI" "NOOP" "nop" memmove_loong64.s:369
+0x90c1c 4 "ANDI" "NOOP" "nop" memmove_loong64.s:369
+0x90c20 4 "ADDI.D" "ADDV $-128, R6" "addi.d $a2, $a2, -128" memmove_loong64.s:371
+0x90c24 4 "SLTUI" "SGTU $128, R6, R9" "sltui $a5, $a2, 128" memmove_loong64.s:372
+0x90c28 4 "" "BYTE 0x00c13f2c" ".byte 0x00c13f2c" memmove_loong64.s:373
+0x90c2c 4 "" "BYTE 0x01813f2c" ".byte 0x01813f2c" memmove_loong64.s:374
+0x90c30 4 "" "BYTE 0x02413f2c" ".byte 0x02413f2c" memmove_loong64.s:375
+0x90c34 4 "" "BYTE 0x03013f2c" ".byte 0x03013f2c" memmove_loong64.s:376
+0x90c38 4 "" "BYTE 0x04c13e2c" ".byte 0x04c13e2c" memmove_loong64.s:377
+0x90c3c 4 "" "BYTE 0x05813e2c" ".byte 0x05813e2c" memmove_loong64.s:378
+0x90c40 4 "" "BYTE 0x06413e2c" ".byte 0x06413e2c" memmove_loong64.s:379
+0x90c44 4 "" "BYTE 0x07013e2c" ".byte 0x07013e2c" memmove_loong64.s:380
+0x90c48 4 "" "BYTE 0xe0c07f2c" ".byte 0xe0c07f2c" memmove_loong64.s:381
+0x90c4c 4 "" "BYTE 0xe1807f2c" ".byte 0xe1807f2c" memmove_loong64.s:382
+0x90c50 4 "" "BYTE 0xe2407f2c" ".byte 0xe2407f2c" memmove_loong64.s:383
+0x90c54 4 "" "BYTE 0xe3007f2c" ".byte 0xe3007f2c" memmove_loong64.s:384
+0x90c58 4 "" "BYTE 0xe4c07e2c" ".byte 0xe4c07e2c" memmove_loong64.s:385
+0x90c5c 4 "" "BYTE 0xe5807e2c" ".byte 0xe5807e2c" memmove_loong64.s:386
+0x90c60 4 "" "BYTE 0xe6407e2c" ".byte 0xe6407e2c" memmove_loong64.s:387
+0x90c64 4 "" "BYTE 0xe7007e2c" ".byte 0xe7007e2c" memmove_loong64.s:388
+0x90c68 4 "ADDI.D" "ADDV $-128, R8" "addi.d $a4, $a4, -128" memmove_loong64.s:389
+0x90c6c 4 "ADDI.D" "ADDV $-128, R7" "addi.d $a3, $a3, -128" memmove_loong64.s:390
+0x90c70 4 "BEQZ" "BEQ R9, -20(PC)" "beqz $a5, -80" memmove_loong64.s:391
+0x90c74 4 "SLTUI" "SGTU $32, R6, R9" "sltui $a5, $a2, 32" memmove_loong64.s:393
+0x90c78 4 "BNEZ" "BNE R9, 11(PC)" "bnez $a5, 44" memmove_loong64.s:394
+0x90c7c 4 "ANDI" "NOOP" "nop" memmove_loong64.s:394
+0x90c80 4 "ADDI.D" "ADDV $-32, R6" "addi.d $a2, $a2, -32" memmove_loong64.s:396
+0x90c84 4 "SLTUI" "SGTU $32, R6, R9" "sltui $a5, $a2, 32" memmove_loong64.s:397
+0x90c88 4 "" "BYTE 0x00c13f2c" ".byte 0x00c13f2c" memmove_loong64.s:398
+0x90c8c 4 "" "BYTE 0x01813f2c" ".byte 0x01813f2c" memmove_loong64.s:399
+0x90c90 4 "" "BYTE 0xe0c07f2c" ".byte 0xe0c07f2c" memmove_loong64.s:400
+0x90c94 4 "" "BYTE 0xe1807f2c" ".byte 0xe1807f2c" memmove_loong64.s:401
+0x90c98 4 "ADDI.D" "ADDV $-32, R8" "addi.d $a4, $a4, -32" memmove_loong64.s:402
+0x90c9c 4 "ADDI.D" "ADDV $-32, R7" "addi.d $a3, $a3, -32" memmove_loong64.s:403
+0x90ca0 4 "BEQZ" "BEQ R9, -8(PC)" "beqz $a5, -32" memmove_loong64.s:404
+0x90ca4 4 "BNEZ" "BNE R6, -273(PC)" "bnez $a2, -1092" memmove_loong64.s:407
+0x90ca8 4 "JIRL" "RET" "ret" memmove_loong64.s:408
+0x90cac 4 "PCALAU12I" "PCALAU12I $216, R30" "pcalau12i $s7, 216" memmove_loong64.s:413
+0x90cb0 4 "LD.BU" "MOVBU -895(R30), R9" "ld.bu $a5, $s7, -895" memmove_loong64.s:413
+0x90cb4 4 "BEQZ" "BEQ R9, -113(PC)" "beqz $a5, -452" memmove_loong64.s:414
+0x90cb8 4 "BGEU" "BGEU R5, R4, 3(PC)" "bgeu $a1, $a0, 12" memmove_loong64.s:421
+0x90cbc 4 "ADD.D" "ADDV R5, R6, R10" "add.d $a6, $a2, $a1" memmove_loong64.s:422
+0x90cc0 4 "BLTU" "BLTU R4, R10, 55(PC)" "bltu $a0, $a6, 220" memmove_loong64.s:423
+0x90cc4 4 "ANDI" "AND $31, R4, R9" "andi $a5, $a0, 0x1f" memmove_loong64.s:425
+0x90cc8 4 "BEQZ" "BEQ R9, 13(PC)" "beqz $a5, 52" memmove_loong64.s:426
+0x90ccc 4 "ORI" "MOVW $32, R10" "ori $a6, $zero, 0x20" memmove_loong64.s:428
+0x90cd0 4 "SUB.D" "SUBV R9, R10" "sub.d $a6, $a6, $a5" memmove_loong64.s:429
+0x90cd4 4 "" "BYTE 0xa000802c" ".byte 0xa000802c" memmove_loong64.s:430
+0x90cd8 4 "SUB.D" "SUBV R10, R6" "sub.d $a2, $a2, $a6" memmove_loong64.s:431
+0x90cdc 4 "ADD.D" "ADDV R10, R5" "add.d $a1, $a1, $a6" memmove_loong64.s:432
+0x90ce0 4 "" "BYTE 0xa100802c" ".byte 0xa100802c" memmove_loong64.s:433
+0x90ce4 4 "" "BYTE 0x8000c02c" ".byte 0x8000c02c" memmove_loong64.s:434
+0x90ce8 4 "ADD.D" "ADDV R10, R4" "add.d $a0, $a0, $a6" memmove_loong64.s:435
+0x90cec 4 "" "BYTE 0x8100c02c" ".byte 0x8100c02c" memmove_loong64.s:436
+0x90cf0 4 "ADDI.D" "ADDV $-32, R6" "addi.d $a2, $a2, -32" memmove_loong64.s:437
+0x90cf4 4 "ADDI.D" "ADDV $32, R4" "addi.d $a0, $a0, 32" memmove_loong64.s:438
+0x90cf8 4 "ADDI.D" "ADDV $32, R5" "addi.d $a1, $a1, 32" memmove_loong64.s:439
+0x90cfc 4 "SLTUI" "SGTU $256, R6, R9" "sltui $a5, $a2, 256" memmove_loong64.s:441
+0x90d00 4 "BNEZ" "BNE R9, 25(PC)" "bnez $a5, 100" memmove_loong64.s:442
+0x90d04 4 "ANDI" "NOOP" "nop" memmove_loong64.s:442
+0x90d08 4 "ANDI" "NOOP" "nop" memmove_loong64.s:442
+0x90d0c 4 "ANDI" "NOOP" "nop" memmove_loong64.s:442
+0x90d10 4 "ADDI.D" "ADDV $-256, R6" "addi.d $a2, $a2, -256" memmove_loong64.s:444
+0x90d14 4 "SLTUI" "SGTU $256, R6, R9" "sltui $a5, $a2, 256" memmove_loong64.s:445
+0x90d18 4 "" "BYTE 0xa000802c" ".byte 0xa000802c" memmove_loong64.s:446
+0x90d1c 4 "" "BYTE 0xa180802c" ".byte 0xa180802c" memmove_loong64.s:447
+0x90d20 4 "" "BYTE 0xa200812c" ".byte 0xa200812c" memmove_loong64.s:448
+0x90d24 4 "" "BYTE 0xa380812c" ".byte 0xa380812c" memmove_loong64.s:449
+0x90d28 4 "" "BYTE 0xa400822c" ".byte 0xa400822c" memmove_loong64.s:450
+0x90d2c 4 "" "BYTE 0xa580822c" ".byte 0xa580822c" memmove_loong64.s:451
+0x90d30 4 "" "BYTE 0xa600832c" ".byte 0xa600832c" memmove_loong64.s:452
+0x90d34 4 "" "BYTE 0xa780832c" ".byte 0xa780832c" memmove_loong64.s:453
+0x90d38 4 "" "BYTE 0x8000c02c" ".byte 0x8000c02c" memmove_loong64.s:454
+0x90d3c 4 "" "BYTE 0x8180c02c" ".byte 0x8180c02c" memmove_loong64.s:455
+0x90d40 4 "" "BYTE 0x8200c12c" ".byte 0x8200c12c" memmove_loong64.s:456
+0x90d44 4 "" "BYTE 0x8380c12c" ".byte 0x8380c12c" memmove_loong64.s:457
+0x90d48 4 "" "BYTE 0x8400c22c" ".byte 0x8400c22c" memmove_loong64.s:458
+0x90d4c 4 "" "BYTE 0x8580c22c" ".byte 0x8580c22c" memmove_loong64.s:459
+0x90d50 4 "" "BYTE 0x8600c32c" ".byte 0x8600c32c" memmove_loong64.s:460
+0x90d54 4 "" "BYTE 0x8780c32c" ".byte 0x8780c32c" memmove_loong64.s:461
+0x90d58 4 "ADDI.D" "ADDV $256, R5" "addi.d $a1, $a1, 256" memmove_loong64.s:462
+0x90d5c 4 "ADDI.D" "ADDV $256, R4" "addi.d $a0, $a0, 256" memmove_loong64.s:463
+0x90d60 4 "BEQZ" "BEQ R9, -20(PC)" "beqz $a5, -80" memmove_loong64.s:464
+0x90d64 4 "SLTUI" "SGTU $64, R6, R9" "sltui $a5, $a2, 64" memmove_loong64.s:466
+0x90d68 4 "BNEZ" "BNE R9, 11(PC)" "bnez $a5, 44" memmove_loong64.s:467
+0x90d6c 4 "ANDI" "NOOP" "nop" memmove_loong64.s:467
+0x90d70 4 "ADDI.D" "ADDV $-64, R6" "addi.d $a2, $a2, -64" memmove_loong64.s:469
+0x90d74 4 "SLTUI" "SGTU $64, R6, R9" "sltui $a5, $a2, 64" memmove_loong64.s:470
+0x90d78 4 "" "BYTE 0xa000802c" ".byte 0xa000802c" memmove_loong64.s:471
+0x90d7c 4 "" "BYTE 0xa180802c" ".byte 0xa180802c" memmove_loong64.s:472
+0x90d80 4 "" "BYTE 0x8000c02c" ".byte 0x8000c02c" memmove_loong64.s:473
+0x90d84 4 "" "BYTE 0x8180c02c" ".byte 0x8180c02c" memmove_loong64.s:474
+0x90d88 4 "ADDI.D" "ADDV $64, R5" "addi.d $a1, $a1, 64" memmove_loong64.s:475
+0x90d8c 4 "ADDI.D" "ADDV $64, R4" "addi.d $a0, $a0, 64" memmove_loong64.s:476
+0x90d90 4 "BEQZ" "BEQ R9, -8(PC)" "beqz $a5, -32" memmove_loong64.s:477
+0x90d94 4 "BNEZ" "BNE R6, -333(PC)" "bnez $a2, -1332" memmove_loong64.s:480
+0x90d98 4 "JIRL" "RET" "ret" memmove_loong64.s:481
+0x90d9c 4 "ANDI" "AND $31, R7, R9" "andi $a5, $a3, 0x1f" memmove_loong64.s:484
+0x90da0 4 "BEQZ" "BEQ R9, 11(PC)" "beqz $a5, 44" memmove_loong64.s:485
+0x90da4 4 "" "BYTE 0x0081bf2c" ".byte 0x0081bf2c" memmove_loong64.s:487
+0x90da8 4 "SUB.D" "SUBV R9, R6" "sub.d $a2, $a2, $a5" memmove_loong64.s:488
+0x90dac 4 "SUB.D" "SUBV R9, R8" "sub.d $a4, $a4, $a5" memmove_loong64.s:489
+0x90db0 4 "" "BYTE 0x0181bf2c" ".byte 0x0181bf2c" memmove_loong64.s:490
+0x90db4 4 "" "BYTE 0xe080ff2c" ".byte 0xe080ff2c" memmove_loong64.s:491
+0x90db8 4 "SUB.D" "SUBV R9, R7" "sub.d $a3, $a3, $a5" memmove_loong64.s:492
+0x90dbc 4 "" "BYTE 0xe180ff2c" ".byte 0xe180ff2c" memmove_loong64.s:493
+0x90dc0 4 "ADDI.D" "ADDV $-32, R6" "addi.d $a2, $a2, -32" memmove_loong64.s:494
+0x90dc4 4 "ADDI.D" "ADDV $-32, R7" "addi.d $a3, $a3, -32" memmove_loong64.s:495
+0x90dc8 4 "ADDI.D" "ADDV $-32, R8" "addi.d $a4, $a4, -32" memmove_loong64.s:496
+0x90dcc 4 "SLTUI" "SGTU $256, R6, R9" "sltui $a5, $a2, 256" memmove_loong64.s:498
+0x90dd0 4 "BNEZ" "BNE R9, 25(PC)" "bnez $a5, 100" memmove_loong64.s:499
+0x90dd4 4 "ANDI" "NOOP" "nop" memmove_loong64.s:499
+0x90dd8 4 "ANDI" "NOOP" "nop" memmove_loong64.s:499
+0x90ddc 4 "ANDI" "NOOP" "nop" memmove_loong64.s:499
+0x90de0 4 "ADDI.D" "ADDV $-256, R6" "addi.d $a2, $a2, -256" memmove_loong64.s:501
+0x90de4 4 "SLTUI" "SGTU $256, R6, R9" "sltui $a5, $a2, 256" memmove_loong64.s:502
+0x90de8 4 "" "BYTE 0x0081bf2c" ".byte 0x0081bf2c" memmove_loong64.s:503
+0x90dec 4 "" "BYTE 0x0101bf2c" ".byte 0x0101bf2c" memmove_loong64.s:504
+0x90df0 4 "" "BYTE 0x0281be2c" ".byte 0x0281be2c" memmove_loong64.s:505
+0x90df4 4 "" "BYTE 0x0301be2c" ".byte 0x0301be2c" memmove_loong64.s:506
+0x90df8 4 "" "BYTE 0x0481bd2c" ".byte 0x0481bd2c" memmove_loong64.s:507
+0x90dfc 4 "" "BYTE 0x0501bd2c" ".byte 0x0501bd2c" memmove_loong64.s:508
+0x90e00 4 "" "BYTE 0x0681bc2c" ".byte 0x0681bc2c" memmove_loong64.s:509
+0x90e04 4 "" "BYTE 0x0701bc2c" ".byte 0x0701bc2c" memmove_loong64.s:510
+0x90e08 4 "" "BYTE 0xe080ff2c" ".byte 0xe080ff2c" memmove_loong64.s:511
+0x90e0c 4 "" "BYTE 0xe100ff2c" ".byte 0xe100ff2c" memmove_loong64.s:512
+0x90e10 4 "" "BYTE 0xe280fe2c" ".byte 0xe280fe2c" memmove_loong64.s:513
+0x90e14 4 "" "BYTE 0xe300fe2c" ".byte 0xe300fe2c" memmove_loong64.s:514
+0x90e18 4 "" "BYTE 0xe480fd2c" ".byte 0xe480fd2c" memmove_loong64.s:515
+0x90e1c 4 "" "BYTE 0xe500fd2c" ".byte 0xe500fd2c" memmove_loong64.s:516
+0x90e20 4 "" "BYTE 0xe680fc2c" ".byte 0xe680fc2c" memmove_loong64.s:517
+0x90e24 4 "" "BYTE 0xe700fc2c" ".byte 0xe700fc2c" memmove_loong64.s:518
+0x90e28 4 "ADDI.D" "ADDV $-256, R8" "addi.d $a4, $a4, -256" memmove_loong64.s:519
+0x90e2c 4 "ADDI.D" "ADDV $-256, R7" "addi.d $a3, $a3, -256" memmove_loong64.s:520
+0x90e30 4 "BEQZ" "BEQ R9, -20(PC)" "beqz $a5, -80" memmove_loong64.s:521
+0x90e34 4 "SLTUI" "SGTU $64, R6, R9" "sltui $a5, $a2, 64" memmove_loong64.s:523
+0x90e38 4 "BNEZ" "BNE R9, 11(PC)" "bnez $a5, 44" memmove_loong64.s:524
+0x90e3c 4 "ANDI" "NOOP" "nop" memmove_loong64.s:524
+0x90e40 4 "ADDI.D" "ADDV $-64, R6" "addi.d $a2, $a2, -64" memmove_loong64.s:526
+0x90e44 4 "SLTUI" "SGTU $64, R6, R9" "sltui $a5, $a2, 64" memmove_loong64.s:527
+0x90e48 4 "" "BYTE 0x0081bf2c" ".byte 0x0081bf2c" memmove_loong64.s:528
+0x90e4c 4 "" "BYTE 0x0101bf2c" ".byte 0x0101bf2c" memmove_loong64.s:529
+0x90e50 4 "" "BYTE 0xe080ff2c" ".byte 0xe080ff2c" memmove_loong64.s:530
+0x90e54 4 "" "BYTE 0xe100ff2c" ".byte 0xe100ff2c" memmove_loong64.s:531
+0x90e58 4 "ADDI.D" "ADDV $-64, R8" "addi.d $a4, $a4, -64" memmove_loong64.s:532
+0x90e5c 4 "ADDI.D" "ADDV $-64, R7" "addi.d $a3, $a3, -64" memmove_loong64.s:533
+0x90e60 4 "BEQZ" "BEQ R9, -8(PC)" "beqz $a5, -32" memmove_loong64.s:534
+0x90e64 4 "BNEZ" "BNE R6, -385(PC)" "bnez $a2, -1540" memmove_loong64.s:537
+0x90e68 4 "JIRL" "RET" "ret" memmove_loong64.s:538
+0x90e6c 4 "BREAK" "BREAK" "break 0x0" .:-1
+== main.sumInts 0x92b60 48 /Users/egon/code/gio/lensm/testdata/testprog/main.go
+0x92b60 4 "ST.D" "MOVV R4, 8(R3)" "st.d $a0, $sp, 8" main.go:19
+0x92b64 4 "OR" "MOVV R0, R6" "move $a2, $zero" main.go:21
+0x92b68 4 "B" "JMP 7(PC)" "b 28" main.go:21
+0x92b6c 4 "ANDI" "NOOP" "nop" main.go:21
+0x92b70 4 "OR" "MOVV R4, R7" "move $a3, $a0" main.go:21
+0x92b74 4 "LD.D" "MOVV 0(R4), R8" "ld.d $a4, $a0, 0" main.go:21
+0x92b78 4 "ADD.D" "ADDV R6, R8, R6" "add.d $a2, $a4, $a2" main.go:22
+0x92b7c 4 "ADDI.D" "ADDV $8, R7, R4" "addi.d $a0, $a3, 8" main.go:21
+0x92b80 4 "ADDI.D" "ADDV $-1, R5" "addi.d $a1, $a1, -1" main.go:21
+0x92b84 4 "BLT" "BGTZ R5, -5(PC)" "bgtz $a1, -20" main.go:21
+0x92b88 4 "OR" "MOVV R6, R4" "move $a0, $a2" main.go:24
+0x92b8c 4 "JIRL" "RET" "ret" main.go:24
+== main.dot 0x92b90 176 /Users/egon/code/gio/lensm/testdata/testprog/main.go
+0x92b90 4 "LD.D" "MOVV 16(R22), R20" "ld.d $t8, $fp, 16" main.go:28
+0x92b94 4 "SLTU" "SGTU R3, R20" "sltu $t8, $t8, $sp" main.go:28
+0x92b98 4 "BEQZ" "BEQ R20, 24(PC)" "beqz $t8, 96" main.go:28
+0x92b9c 4 "ST.D" "MOVV R1, -8(R3)" "st.d $ra, $sp, -8" main.go:28
+0x92ba0 4 "ADDI.D" "ADDV $-8, R3" "addi.d $sp, $sp, -8" main.go:28
+0x92ba4 4 "ST.D" "MOVV R1, 0(R3)" "st.d $ra, $sp, 0" main.go:28
+0x92ba8 4 "ST.D" "MOVV R4, 16(R3)" "st.d $a0, $sp, 16" main.go:28
+0x92bac 4 "ST.D" "MOVV R7, 40(R3)" "st.d $a3, $sp, 40" main.go:28
+0x92bb0 4 "MOVGR2FR.D" "MOVV R0, F1" "movgr2fr.d $fa1, $zero" main.go:30
+0x92bb4 4 "OR" "MOVV R0, R6" "move $a2, $zero" main.go:30
+0x92bb8 4 "B" "JMP 5(PC)" "b 20" main.go:30
+0x92bbc 4 "ANDI" "NOOP" "nop" main.go:30
+0x92bc0 4 "FLDX.D" "MOVD (R7)(R9), F2" "fldx.d $fa2, $a3, $a5" main.go:31
+0x92bc4 4 "FMADD.D" "FMADDD F1, F2, F0, F1" "fmadd.d $fa1, $fa0, $fa2, $fa1" main.go:31
+0x92bc8 4 "ADDI.D" "ADDV $1, R6" "addi.d $a2, $a2, 1" main.go:30
+0x92bcc 4 "BGE" "BGE R6, R5, 5(PC)" "bge $a2, $a1, 20" main.go:30
+0x92bd0 4 "SLLI.D" "SLLV $3, R6, R9" "slli.d $a5, $a2, 0x3" main.go:31
+0x92bd4 4 "FLDX.D" "MOVD (R4)(R9), F0" "fldx.d $fa0, $a0, $a5" main.go:31
+0x92bd8 4 "BLTU" "BLTU R6, R8, -6(PC)" "bltu $a2, $a4, -24" main.go:31
+0x92bdc 4 "B" "JMP 5(PC)" "b 20" main.go:31
+0x92be0 4 "FMOV.D" "MOVD F1, F0" "fmov.d $fa0, $fa1" main.go:33
+0x92be4 4 "LD.D" "MOVV 0(R3), R1" "ld.d $ra, $sp, 0" main.go:33
+0x92be8 4 "ADDI.D" "ADDV $8, R3" "addi.d $sp, $sp, 8" main.go:33
+0x92bec 4 "JIRL" "RET" "ret" main.go:33
+0x92bf0 4 "BL" "CALL runtime.panicBounds(SB)" "bl -10064" main.go:31
+0x92bf4 4 "ANDI" "NOOP" "nop" main.go:31
+0x92bf8 4 "ST.D" "MOVV R4, 8(R3)" "st.d $a0, $sp, 8" main.go:28
+0x92bfc 4 "ST.D" "MOVV R5, 16(R3)" "st.d $a1, $sp, 16" main.go:28
+0x92c00 4 "ST.D" "MOVV R6, 24(R3)" "st.d $a2, $sp, 24" main.go:28
+0x92c04 4 "ST.D" "MOVV R7, 32(R3)" "st.d $a3, $sp, 32" main.go:28
+0x92c08 4 "ST.D" "MOVV R8, 40(R3)" "st.d $a4, $sp, 40" main.go:28
+0x92c0c 4 "ST.D" "MOVV R9, 48(R3)" "st.d $a5, $sp, 48" main.go:28
+0x92c10 4 "OR" "MOVV R1, R31" "move $s8, $ra" main.go:28
+0x92c14 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl -22180" main.go:28
+0x92c18 4 "LD.D" "MOVV 8(R3), R4" "ld.d $a0, $sp, 8" main.go:28
+0x92c1c 4 "LD.D" "MOVV 16(R3), R5" "ld.d $a1, $sp, 16" main.go:28
+0x92c20 4 "LD.D" "MOVV 24(R3), R6" "ld.d $a2, $sp, 24" main.go:28
+0x92c24 4 "LD.D" "MOVV 32(R3), R7" "ld.d $a3, $sp, 32" main.go:28
+0x92c28 4 "LD.D" "MOVV 40(R3), R8" "ld.d $a4, $sp, 40" main.go:28
+0x92c2c 4 "LD.D" "MOVV 48(R3), R9" "ld.d $a5, $sp, 48" main.go:28
+0x92c30 4 "B" "JMP main.dot(SB)" "b -160" main.go:28
+0x92c34 4 "BREAK" "BREAK" "break 0x0" .:-1
+0x92c38 4 "BREAK" "BREAK" "break 0x0" .:-1
+0x92c3c 4 "BREAK" "BREAK" "break 0x0" .:-1
+== main.popcountAll 0x92c40 192 /Users/egon/code/gio/lensm/testdata/testprog/main.go
+0x92c40 4 "LD.D" "MOVV 16(R22), R20" "ld.d $t8, $fp, 16" main.go:37
+0x92c44 4 "SLTU" "SGTU R3, R20" "sltu $t8, $t8, $sp" main.go:37
+0x92c48 4 "BEQZ" "BEQ R20, 36(PC)" "beqz $t8, 144" main.go:37
+0x92c4c 4 "ST.D" "MOVV R1, -40(R3)" "st.d $ra, $sp, -40" main.go:37
+0x92c50 4 "ADDI.D" "ADDV $-40, R3" "addi.d $sp, $sp, -40" main.go:37
+0x92c54 4 "ST.D" "MOVV R1, 0(R3)" "st.d $ra, $sp, 0" main.go:37
+0x92c58 4 "ST.D" "MOVV R4, 48(R3)" "st.d $a0, $sp, 48" main.go:37
+0x92c5c 4 "OR" "MOVV R0, R6" "move $a2, $zero" main.go:39
+0x92c60 4 "B" "JMP 7(PC)" "b 28" main.go:39
+0x92c64 4 "ANDI" "NOOP" "nop" main.go:39
+0x92c68 4 "ANDI" "NOOP" "nop" main.go:39
+0x92c6c 4 "ANDI" "NOOP" "nop" main.go:39
+0x92c70 4 "ADDI.D" "ADDV $8, R4" "addi.d $a0, $a0, 8" main.go:39
+0x92c74 4 "ADD.D" "ADDV R6, R7, R6" "add.d $a2, $a3, $a2" main.go:40
+0x92c78 4 "ADDI.D" "ADDV $-1, R5" "addi.d $a1, $a1, -1" main.go:39
+0x92c7c 4 "BGE" "BLEZ R5, 19(PC)" "blez $a1, 76" main.go:39
+0x92c80 4 "PCALAU12I" "PCALAU12I $213, R30" "pcalau12i $s7, 213" main.go:40
+0x92c84 4 "LD.BU" "MOVBU 1422(R30), R7" "ld.bu $a3, $s7, 1422" main.go:40
+0x92c88 4 "LD.D" "MOVV 0(R4), R8" "ld.d $a4, $a0, 0" main.go:39
+0x92c8c 4 "BEQZ" "BEQ R7, 5(PC)" "beqz $a3, 20" main.go:40
+0x92c90 4 "MOVGR2FR.D" "MOVV R8, F0" "movgr2fr.d $fa0, $a4" main.go:40
+0x92c94 4 "" "BYTE 0x002c9c72" ".byte 0x002c9c72" main.go:40
+0x92c98 4 "MOVFR2GR.D" "MOVV F0, R7" "movfr2gr.d $a3, $fa0" main.go:40
+0x92c9c 4 "B" "JMP -11(PC)" "b -44" main.go:40
+0x92ca0 4 "ST.D" "MOVV R5, 24(R3)" "st.d $a1, $sp, 24" main.go:39
+0x92ca4 4 "ST.D" "MOVV R4, 32(R3)" "st.d $a0, $sp, 32" main.go:39
+0x92ca8 4 "ST.D" "MOVV R6, 16(R3)" "st.d $a2, $sp, 16" main.go:39
+0x92cac 4 "OR" "MOVV R8, R4" "move $a0, $a4" main.go:40
+0x92cb0 4 "BL" "CALL math/bits.OnesCount64(SB)" "bl -464" main.go:40
+0x92cb4 4 "LD.D" "MOVV 24(R3), R5" "ld.d $a1, $sp, 24" main.go:39
+0x92cb8 4 "LD.D" "MOVV 16(R3), R6" "ld.d $a2, $sp, 16" main.go:40
+0x92cbc 4 "OR" "MOVV R4, R7" "move $a3, $a0" main.go:40
+0x92cc0 4 "LD.D" "MOVV 32(R3), R4" "ld.d $a0, $sp, 32" main.go:39
+0x92cc4 4 "B" "JMP -21(PC)" "b -84" main.go:40
+0x92cc8 4 "OR" "MOVV R6, R4" "move $a0, $a2" main.go:42
+0x92ccc 4 "LD.D" "MOVV 0(R3), R1" "ld.d $ra, $sp, 0" main.go:42
+0x92cd0 4 "ADDI.D" "ADDV $40, R3" "addi.d $sp, $sp, 40" main.go:42
+0x92cd4 4 "JIRL" "RET" "ret" main.go:42
+0x92cd8 4 "ST.D" "MOVV R4, 8(R3)" "st.d $a0, $sp, 8" main.go:37
+0x92cdc 4 "ST.D" "MOVV R5, 16(R3)" "st.d $a1, $sp, 16" main.go:37
+0x92ce0 4 "ST.D" "MOVV R6, 24(R3)" "st.d $a2, $sp, 24" main.go:37
+0x92ce4 4 "OR" "MOVV R1, R31" "move $s8, $ra" main.go:37
+0x92ce8 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl -22392" main.go:37
+0x92cec 4 "LD.D" "MOVV 8(R3), R4" "ld.d $a0, $sp, 8" main.go:37
+0x92cf0 4 "LD.D" "MOVV 16(R3), R5" "ld.d $a1, $sp, 16" main.go:37
+0x92cf4 4 "LD.D" "MOVV 24(R3), R6" "ld.d $a2, $sp, 24" main.go:37
+0x92cf8 4 "B" "JMP main.popcountAll(SB)" "b -184" main.go:37
+0x92cfc 4 "BREAK" "BREAK" "break 0x0" .:-1
+== main.collatzSteps 0x92d00 80 /Users/egon/code/gio/lensm/testdata/testprog/main.go
+0x92d00 4 "OR" "MOVV R0, R5" "move $a1, $zero" main.go:48
+0x92d04 4 "B" "JMP 4(PC)" "b 16" main.go:48
+0x92d08 4 "ANDI" "NOOP" "nop" main.go:48
+0x92d0c 4 "ANDI" "NOOP" "nop" main.go:48
+0x92d10 4 "ADDI.D" "ADDV $1, R5" "addi.d $a1, $a1, 1" main.go:54
+0x92d14 4 "XORI" "XOR $1, R4, R6" "xori $a2, $a0, 0x1" main.go:48
+0x92d18 4 "BEQZ" "BEQ R6, 10(PC)" "beqz $a2, 40" main.go:48
+0x92d1c 4 "SRLI.D" "SRLV $63, R4, R6" "srli.d $a2, $a0, 0x3f" main.go:49
+0x92d20 4 "ADD.D" "ADDV R6, R4, R6" "add.d $a2, $a0, $a2" main.go:49
+0x92d24 4 "ANDI" "AND $1, R4, R7" "andi $a3, $a0, 0x1" main.go:49
+0x92d28 4 "BNEZ" "BNE R7, 3(PC)" "bnez $a3, 12" main.go:49
+0x92d2c 4 "SRAI.D" "SRAV $1, R6, R4" "srai.d $a0, $a2, 0x1" main.go:49
+0x92d30 4 "B" "JMP -8(PC)" "b -32" main.go:50
+0x92d34 4 "ALSL.D" "Unknown ALSL.D $1, R4, R4, R6" "alsl.d $a2, $a0, $a0, 0x1" main.go:52
+0x92d38 4 "ADDI.D" "ADDV $1, R6, R4" "addi.d $a0, $a2, 1" main.go:52
+0x92d3c 4 "B" "JMP -11(PC)" "b -44" main.go:52
+0x92d40 4 "OR" "MOVV R5, R4" "move $a0, $a1" main.go:56
+0x92d44 4 "JIRL" "RET" "ret" main.go:56
+0x92d48 4 "BREAK" "BREAK" "break 0x0" .:-1
+0x92d4c 4 "BREAK" "BREAK" "break 0x0" .:-1
+== main.mat4Mul 0x92d50 464 /Users/egon/code/gio/lensm/testdata/testprog/main.go
+0x92d50 4 "LD.D" "MOVV 16(R22), R20" "ld.d $t8, $fp, 16" main.go:60
+0x92d54 4 "ADDI.D" "ADDV $-8, R3, R24" "addi.d $s1, $sp, -8" main.go:60
+0x92d58 4 "SLTU" "SGTU R24, R20" "sltu $t8, $t8, $s1" main.go:60
+0x92d5c 4 "BEQZ" "BEQ R20, 105(PC)" "beqz $t8, 420" main.go:60
+0x92d60 4 "ST.D" "MOVV R1, -136(R3)" "st.d $ra, $sp, -136" main.go:60
+0x92d64 4 "ADDI.D" "ADDV $-136, R3" "addi.d $sp, $sp, -136" main.go:60
+0x92d68 4 "ST.D" "MOVV R1, 0(R3)" "st.d $ra, $sp, 0" main.go:60
+0x92d6c 4 "ADDI.D" "ADDV $144, R3, R6" "addi.d $a2, $sp, 144" main.go:60
+0x92d70 4 "ST.D" "MOVV R0, 0(R6)" "st.d $zero, $a2, 0" main.go:60
+0x92d74 4 "ST.D" "MOVV R0, 8(R6)" "st.d $zero, $a2, 8" main.go:60
+0x92d78 4 "ST.D" "MOVV R0, 16(R6)" "st.d $zero, $a2, 16" main.go:60
+0x92d7c 4 "ST.D" "MOVV R0, 24(R6)" "st.d $zero, $a2, 24" main.go:60
+0x92d80 4 "ST.D" "MOVV R0, 32(R6)" "st.d $zero, $a2, 32" main.go:60
+0x92d84 4 "ST.D" "MOVV R0, 40(R6)" "st.d $zero, $a2, 40" main.go:60
+0x92d88 4 "ST.D" "MOVV R0, 48(R6)" "st.d $zero, $a2, 48" main.go:60
+0x92d8c 4 "ST.D" "MOVV R0, 56(R6)" "st.d $zero, $a2, 56" main.go:60
+0x92d90 4 "ST.D" "MOVV R0, 64(R6)" "st.d $zero, $a2, 64" main.go:60
+0x92d94 4 "ST.D" "MOVV R0, 72(R6)" "st.d $zero, $a2, 72" main.go:60
+0x92d98 4 "ST.D" "MOVV R0, 80(R6)" "st.d $zero, $a2, 80" main.go:60
+0x92d9c 4 "ST.D" "MOVV R0, 88(R6)" "st.d $zero, $a2, 88" main.go:60
+0x92da0 4 "ST.D" "MOVV R0, 96(R6)" "st.d $zero, $a2, 96" main.go:60
+0x92da4 4 "ST.D" "MOVV R0, 104(R6)" "st.d $zero, $a2, 104" main.go:60
+0x92da8 4 "ST.D" "MOVV R0, 112(R6)" "st.d $zero, $a2, 112" main.go:60
+0x92dac 4 "ST.D" "MOVV R0, 120(R6)" "st.d $zero, $a2, 120" main.go:60
+0x92db0 4 "ADDI.D" "ADDV $8, R3, R7" "addi.d $a3, $sp, 8" main.go:61
+0x92db4 4 "ST.D" "MOVV R0, 0(R7)" "st.d $zero, $a3, 0" main.go:61
+0x92db8 4 "ST.D" "MOVV R0, 8(R7)" "st.d $zero, $a3, 8" main.go:61
+0x92dbc 4 "ST.D" "MOVV R0, 16(R7)" "st.d $zero, $a3, 16" main.go:61
+0x92dc0 4 "ST.D" "MOVV R0, 24(R7)" "st.d $zero, $a3, 24" main.go:61
+0x92dc4 4 "ST.D" "MOVV R0, 32(R7)" "st.d $zero, $a3, 32" main.go:61
+0x92dc8 4 "ST.D" "MOVV R0, 40(R7)" "st.d $zero, $a3, 40" main.go:61
+0x92dcc 4 "ST.D" "MOVV R0, 48(R7)" "st.d $zero, $a3, 48" main.go:61
+0x92dd0 4 "ST.D" "MOVV R0, 56(R7)" "st.d $zero, $a3, 56" main.go:61
+0x92dd4 4 "ST.D" "MOVV R0, 64(R7)" "st.d $zero, $a3, 64" main.go:61
+0x92dd8 4 "ST.D" "MOVV R0, 72(R7)" "st.d $zero, $a3, 72" main.go:61
+0x92ddc 4 "ST.D" "MOVV R0, 80(R7)" "st.d $zero, $a3, 80" main.go:61
+0x92de0 4 "ST.D" "MOVV R0, 88(R7)" "st.d $zero, $a3, 88" main.go:61
+0x92de4 4 "ST.D" "MOVV R0, 96(R7)" "st.d $zero, $a3, 96" main.go:61
+0x92de8 4 "ST.D" "MOVV R0, 104(R7)" "st.d $zero, $a3, 104" main.go:61
+0x92dec 4 "ST.D" "MOVV R0, 112(R7)" "st.d $zero, $a3, 112" main.go:61
+0x92df0 4 "ST.D" "MOVV R0, 120(R7)" "st.d $zero, $a3, 120" main.go:61
+0x92df4 4 "OR" "MOVV R0, R8" "move $a4, $zero" main.go:62
+0x92df8 4 "B" "JMP 3(PC)" "b 12" main.go:62
+0x92dfc 4 "ANDI" "NOOP" "nop" main.go:62
+0x92e00 4 "ADDI.D" "ADDV $1, R8" "addi.d $a4, $a4, 1" main.go:62
+0x92e04 4 "ORI" "MOVW $4, R9" "ori $a5, $zero, 0x4" main.go:62
+0x92e08 4 "BGE" "BGE R8, R9, 28(PC)" "bge $a4, $a5, 112" main.go:62
+0x92e0c 4 "OR" "MOVV R0, R10" "move $a6, $zero" main.go:63
+0x92e10 4 "B" "JMP 5(PC)" "b 20" main.go:63
+0x92e14 4 "ANDI" "NOOP" "nop" main.go:63
+0x92e18 4 "ANDI" "NOOP" "nop" main.go:63
+0x92e1c 4 "ANDI" "NOOP" "nop" main.go:63
+0x92e20 4 "ADDI.D" "ADDV $1, R10" "addi.d $a6, $a6, 1" main.go:63
+0x92e24 4 "BGE" "BGE R10, R9, -9(PC)" "bge $a6, $a5, -36" main.go:63
+0x92e28 4 "SLLI.D" "SLLV $2, R8, R11" "slli.d $a7, $a4, 0x2" main.go:65
+0x92e2c 4 "ADD.D" "ADDV R10, R11, R12" "add.d $t0, $a7, $a6" main.go:65
+0x92e30 4 "SLLI.D" "SLLV $3, R12" "slli.d $t0, $t0, 0x3" main.go:65
+0x92e34 4 "OR" "MOVV R0, R13" "move $t1, $zero" main.go:64
+0x92e38 4 "B" "JMP 14(PC)" "b 56" main.go:64
+0x92e3c 4 "ANDI" "NOOP" "nop" main.go:64
+0x92e40 4 "LD.B" "MOVB 0(R4), R30" "ld.b $s7, $a0, 0" main.go:65
+0x92e44 4 "LD.B" "MOVB 0(R5), R30" "ld.b $s7, $a1, 0" main.go:65
+0x92e48 4 "FLDX.D" "MOVD (R7)(R12), F0" "fldx.d $fa0, $a3, $t0" main.go:65
+0x92e4c 4 "ADD.D" "ADDV R13, R11, R14" "add.d $t2, $a7, $t1" main.go:65
+0x92e50 4 "SLLI.D" "SLLV $3, R14" "slli.d $t2, $t2, 0x3" main.go:65
+0x92e54 4 "FLDX.D" "MOVD (R4)(R14), F1" "fldx.d $fa1, $a0, $t2" main.go:65
+0x92e58 4 "ALSL.D" "Unknown ALSL.D $2, R10, R13, R14" "alsl.d $t2, $t1, $a6, 0x2" main.go:65
+0x92e5c 4 "SLLI.D" "SLLV $3, R14" "slli.d $t2, $t2, 0x3" main.go:65
+0x92e60 4 "FLDX.D" "MOVD (R5)(R14), F2" "fldx.d $fa2, $a1, $t2" main.go:65
+0x92e64 4 "FMADD.D" "FMADDD F0, F2, F1, F0" "fmadd.d $fa0, $fa1, $fa2, $fa0" main.go:65
+0x92e68 4 "FSTX.D" "MOVD F0, (R7)(R12)" "fstx.d $fa0, $a3, $t0" main.go:65
+0x92e6c 4 "ADDI.D" "ADDV $1, R13" "addi.d $t1, $t1, 1" main.go:64
+0x92e70 4 "BLT" "BLT R13, R9, -12(PC)" "blt $t1, $a5, -48" main.go:64
+0x92e74 4 "B" "JMP -21(PC)" "b -84" main.go:64
+0x92e78 4 "LD.D" "MOVV 0(R7), R23" "ld.d $s0, $a3, 0" main.go:69
+0x92e7c 4 "ST.D" "MOVV R23, 0(R6)" "st.d $s0, $a2, 0" main.go:69
+0x92e80 4 "LD.D" "MOVV 8(R7), R23" "ld.d $s0, $a3, 8" main.go:69
+0x92e84 4 "ST.D" "MOVV R23, 8(R6)" "st.d $s0, $a2, 8" main.go:69
+0x92e88 4 "LD.D" "MOVV 16(R7), R23" "ld.d $s0, $a3, 16" main.go:69
+0x92e8c 4 "ST.D" "MOVV R23, 16(R6)" "st.d $s0, $a2, 16" main.go:69
+0x92e90 4 "LD.D" "MOVV 24(R7), R23" "ld.d $s0, $a3, 24" main.go:69
+0x92e94 4 "ST.D" "MOVV R23, 24(R6)" "st.d $s0, $a2, 24" main.go:69
+0x92e98 4 "LD.D" "MOVV 32(R7), R23" "ld.d $s0, $a3, 32" main.go:69
+0x92e9c 4 "ST.D" "MOVV R23, 32(R6)" "st.d $s0, $a2, 32" main.go:69
+0x92ea0 4 "LD.D" "MOVV 40(R7), R23" "ld.d $s0, $a3, 40" main.go:69
+0x92ea4 4 "ST.D" "MOVV R23, 40(R6)" "st.d $s0, $a2, 40" main.go:69
+0x92ea8 4 "LD.D" "MOVV 48(R7), R23" "ld.d $s0, $a3, 48" main.go:69
+0x92eac 4 "ST.D" "MOVV R23, 48(R6)" "st.d $s0, $a2, 48" main.go:69
+0x92eb0 4 "LD.D" "MOVV 56(R7), R23" "ld.d $s0, $a3, 56" main.go:69
+0x92eb4 4 "ST.D" "MOVV R23, 56(R6)" "st.d $s0, $a2, 56" main.go:69
+0x92eb8 4 "LD.D" "MOVV 64(R7), R23" "ld.d $s0, $a3, 64" main.go:69
+0x92ebc 4 "ST.D" "MOVV R23, 64(R6)" "st.d $s0, $a2, 64" main.go:69
+0x92ec0 4 "LD.D" "MOVV 72(R7), R23" "ld.d $s0, $a3, 72" main.go:69
+0x92ec4 4 "ST.D" "MOVV R23, 72(R6)" "st.d $s0, $a2, 72" main.go:69
+0x92ec8 4 "LD.D" "MOVV 80(R7), R23" "ld.d $s0, $a3, 80" main.go:69
+0x92ecc 4 "ST.D" "MOVV R23, 80(R6)" "st.d $s0, $a2, 80" main.go:69
+0x92ed0 4 "LD.D" "MOVV 88(R7), R23" "ld.d $s0, $a3, 88" main.go:69
+0x92ed4 4 "ST.D" "MOVV R23, 88(R6)" "st.d $s0, $a2, 88" main.go:69
+0x92ed8 4 "LD.D" "MOVV 96(R7), R23" "ld.d $s0, $a3, 96" main.go:69
+0x92edc 4 "ST.D" "MOVV R23, 96(R6)" "st.d $s0, $a2, 96" main.go:69
+0x92ee0 4 "LD.D" "MOVV 104(R7), R23" "ld.d $s0, $a3, 104" main.go:69
+0x92ee4 4 "ST.D" "MOVV R23, 104(R6)" "st.d $s0, $a2, 104" main.go:69
+0x92ee8 4 "LD.D" "MOVV 112(R7), R23" "ld.d $s0, $a3, 112" main.go:69
+0x92eec 4 "ST.D" "MOVV R23, 112(R6)" "st.d $s0, $a2, 112" main.go:69
+0x92ef0 4 "LD.D" "MOVV 120(R7), R23" "ld.d $s0, $a3, 120" main.go:69
+0x92ef4 4 "ST.D" "MOVV R23, 120(R6)" "st.d $s0, $a2, 120" main.go:69
+0x92ef8 4 "ADDI.D" "ADDV $136, R3" "addi.d $sp, $sp, 136" main.go:69
+0x92efc 4 "JIRL" "RET" "ret" main.go:69
+0x92f00 4 "ST.D" "MOVV R4, 136(R3)" "st.d $a0, $sp, 136" main.go:60
+0x92f04 4 "ST.D" "MOVV R5, 144(R3)" "st.d $a1, $sp, 144" main.go:60
+0x92f08 4 "OR" "MOVV R1, R31" "move $s8, $ra" main.go:60
+0x92f0c 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl -22940" main.go:60
+0x92f10 4 "LD.D" "MOVV 136(R3), R4" "ld.d $a0, $sp, 136" main.go:60
+0x92f14 4 "LD.D" "MOVV 144(R3), R5" "ld.d $a1, $sp, 144" main.go:60
+0x92f18 4 "B" "JMP main.mat4Mul(SB)" "b -456" main.go:60
+0x92f1c 4 "BREAK" "BREAK" "break 0x0" .:-1
+== main.normalize 0x92f20 112 /Users/egon/code/gio/lensm/testdata/testprog/main.go
+0x92f20 4 "ST.D" "MOVV R4, 8(R3)" "st.d $a0, $sp, 8" main.go:73
+0x92f24 4 "OR" "MOVV R4, R6" "move $a2, $a0" main.go:75
+0x92f28 4 "MOVGR2FR.D" "MOVV R0, F0" "movgr2fr.d $fa0, $zero" main.go:75
+0x92f2c 4 "OR" "MOVV R5, R7" "move $a3, $a1" main.go:75
+0x92f30 4 "B" "JMP 9(PC)" "b 36" main.go:75
+0x92f34 4 "ANDI" "NOOP" "nop" main.go:75
+0x92f38 4 "ANDI" "NOOP" "nop" main.go:75
+0x92f3c 4 "ANDI" "NOOP" "nop" main.go:75
+0x92f40 4 "OR" "MOVV R4, R8" "move $a4, $a0" main.go:75
+0x92f44 4 "FLD.D" "MOVD 0(R4), F1" "fld.d $fa1, $a0, 0" main.go:75
+0x92f48 4 "FMADD.D" "FMADDD F0, F1, F1, F0" "fmadd.d $fa0, $fa1, $fa1, $fa0" main.go:76
+0x92f4c 4 "ADDI.D" "ADDV $8, R8, R4" "addi.d $a0, $a4, 8" main.go:75
+0x92f50 4 "ADDI.D" "ADDV $-1, R5" "addi.d $a1, $a1, -1" main.go:75
+0x92f54 4 "BLT" "BGTZ R5, -5(PC)" "bgtz $a1, -20" main.go:75
+0x92f58 4 "ANDI" "NOOP" "nop" main.go:78
+0x92f5c 4 "FSQRT.D" "SQRTD F0, F0" "fsqrt.d $fa0, $fa0" sqrt.go:94
+0x92f60 4 "OR" "MOVV R0, R4" "move $a0, $zero" main.go:79
+0x92f64 4 "B" "JMP 8(PC)" "b 32" main.go:79
+0x92f68 4 "ANDI" "NOOP" "nop" main.go:79
+0x92f6c 4 "ANDI" "NOOP" "nop" main.go:79
+0x92f70 4 "SLLI.D" "SLLV $3, R4, R5" "slli.d $a1, $a0, 0x3" main.go:80
+0x92f74 4 "FLDX.D" "MOVD (R6)(R5), F1" "fldx.d $fa1, $a2, $a1" main.go:80
+0x92f78 4 "FDIV.D" "DIVD F0, F1" "fdiv.d $fa1, $fa1, $fa0" main.go:80
+0x92f7c 4 "FSTX.D" "MOVD F1, (R6)(R5)" "fstx.d $fa1, $a2, $a1" main.go:80
+0x92f80 4 "ADDI.D" "ADDV $1, R4" "addi.d $a0, $a0, 1" main.go:79
+0x92f84 4 "BLT" "BLT R4, R7, -5(PC)" "blt $a0, $a3, -20" main.go:79
+0x92f88 4 "JIRL" "RET" "ret" main.go:82
+0x92f8c 4 "BREAK" "BREAK" "break 0x0" .:-1
+== main.main 0x92f90 720 /Users/egon/code/gio/lensm/testdata/testprog/main.go
+0x92f90 4 "LD.D" "MOVV 16(R22), R20" "ld.d $t8, $fp, 16" main.go:84
+0x92f94 4 "ADDI.D" "ADDV $-568, R3, R24" "addi.d $s1, $sp, -568" main.go:84
+0x92f98 4 "SLTU" "SGTU R24, R20" "sltu $t8, $t8, $s1" main.go:84
+0x92f9c 4 "BEQZ" "BEQ R20, 171(PC)" "beqz $t8, 684" main.go:84
+0x92fa0 4 "ST.D" "MOVV R1, -696(R3)" "st.d $ra, $sp, -696" main.go:84
+0x92fa4 4 "ADDI.D" "ADDV $-696, R3" "addi.d $sp, $sp, -696" main.go:84
+0x92fa8 4 "ST.D" "MOVV R1, 0(R3)" "st.d $ra, $sp, 0" main.go:84
+0x92fac 4 "ORI" "MOVW $3, R6" "ori $a2, $zero, 0x3" main.go:85
+0x92fb0 4 "ST.D" "MOVV R6, 632(R3)" "st.d $a2, $sp, 632" main.go:85
+0x92fb4 4 "ORI" "MOVW $1, R6" "ori $a2, $zero, 0x1" main.go:85
+0x92fb8 4 "ST.D" "MOVV R6, 640(R3)" "st.d $a2, $sp, 640" main.go:85
+0x92fbc 4 "ORI" "MOVW $4, R7" "ori $a3, $zero, 0x4" main.go:85
+0x92fc0 4 "ST.D" "MOVV R7, 648(R3)" "st.d $a3, $sp, 648" main.go:85
+0x92fc4 4 "ST.D" "MOVV R6, 656(R3)" "st.d $a2, $sp, 656" main.go:85
+0x92fc8 4 "ORI" "MOVW $5, R6" "ori $a2, $zero, 0x5" main.go:85
+0x92fcc 4 "ST.D" "MOVV R6, 664(R3)" "st.d $a2, $sp, 664" main.go:85
+0x92fd0 4 "ORI" "MOVW $9, R6" "ori $a2, $zero, 0x9" main.go:85
+0x92fd4 4 "ST.D" "MOVV R6, 672(R3)" "st.d $a2, $sp, 672" main.go:85
+0x92fd8 4 "ORI" "MOVW $2, R6" "ori $a2, $zero, 0x2" main.go:85
+0x92fdc 4 "ST.D" "MOVV R6, 680(R3)" "st.d $a2, $sp, 680" main.go:85
+0x92fe0 4 "ORI" "MOVW $6, R6" "ori $a2, $zero, 0x6" main.go:85
+0x92fe4 4 "ST.D" "MOVV R6, 688(R3)" "st.d $a2, $sp, 688" main.go:85
+0x92fe8 4 "PCALAU12I" "PCALAU12I $22, R30" "pcalau12i $s7, 22" main.go:86
+0x92fec 4 "FLD.D" "MOVD -576(R30), F0" "fld.d $fa0, $s7, -576" main.go:86
+0x92ff0 4 "FST.D" "MOVD F0, 600(R3)" "fst.d $fa0, $sp, 600" main.go:86
+0x92ff4 4 "PCALAU12I" "PCALAU12I $22, R30" "pcalau12i $s7, 22" main.go:86
+0x92ff8 4 "FLD.D" "MOVD -584(R30), F0" "fld.d $fa0, $s7, -584" main.go:86
+0x92ffc 4 "FST.D" "MOVD F0, 608(R3)" "fst.d $fa0, $sp, 608" main.go:86
+0x93000 4 "PCALAU12I" "PCALAU12I $21, R30" "pcalau12i $s7, 21" main.go:86
+0x93004 4 "FLD.D" "MOVD -568(R30), F1" "fld.d $fa1, $s7, -568" main.go:86
+0x93008 4 "FST.D" "MOVD F1, 616(R3)" "fst.d $fa1, $sp, 616" main.go:86
+0x9300c 4 "FST.D" "MOVD F0, 624(R3)" "fst.d $fa0, $sp, 624" main.go:86
+0x93010 4 "LU12I.W" "LU12IW $-136485, R6" "lu12i.w $a2, -136485" main.go:87
+0x93014 4 "ORI" "OR $3823, R6" "ori $a2, $a2, 0xeef" main.go:87
+0x93018 4 "LU32I.D" "LU32ID $0, R6" "lu32i.d $a2, 0" main.go:87
+0x9301c 4 "ST.D" "MOVV R6, 576(R3)" "st.d $a2, $sp, 576" main.go:87
+0x93020 4 "LU12I.W" "LU12IW $-217109, R6" "lu12i.w $a2, -217109" main.go:87
+0x93024 4 "ORI" "OR $2750, R6" "ori $a2, $a2, 0xabe" main.go:87
+0x93028 4 "LU32I.D" "LU32ID $0, R6" "lu32i.d $a2, 0" main.go:87
+0x9302c 4 "ST.D" "MOVV R6, 584(R3)" "st.d $a2, $sp, 584" main.go:87
+0x93030 4 "LU12I.W" "LU12IW $3547, R6" "lu12i.w $a2, 3547" main.go:87
+0x93034 4 "ORI" "OR $2577, R6" "ori $a2, $a2, 0xa11" main.go:87
+0x93038 4 "ST.D" "MOVV R6, 592(R3)" "st.d $a2, $sp, 592" main.go:87
+0x9303c 4 "ADDI.D" "ADDV $408, R3, R4" "addi.d $a0, $sp, 408" main.go:89
+0x93040 4 "ST.D" "MOVV R0, 0(R4)" "st.d $zero, $a0, 0" main.go:89
+0x93044 4 "ST.D" "MOVV R0, 8(R4)" "st.d $zero, $a0, 8" main.go:89
+0x93048 4 "ST.D" "MOVV R0, 16(R4)" "st.d $zero, $a0, 16" main.go:89
+0x9304c 4 "ST.D" "MOVV R0, 24(R4)" "st.d $zero, $a0, 24" main.go:89
+0x93050 4 "ST.D" "MOVV R0, 32(R4)" "st.d $zero, $a0, 32" main.go:89
+0x93054 4 "ST.D" "MOVV R0, 40(R4)" "st.d $zero, $a0, 40" main.go:89
+0x93058 4 "ST.D" "MOVV R0, 48(R4)" "st.d $zero, $a0, 48" main.go:89
+0x9305c 4 "ST.D" "MOVV R0, 56(R4)" "st.d $zero, $a0, 56" main.go:89
+0x93060 4 "ST.D" "MOVV R0, 64(R4)" "st.d $zero, $a0, 64" main.go:89
+0x93064 4 "ST.D" "MOVV R0, 72(R4)" "st.d $zero, $a0, 72" main.go:89
+0x93068 4 "ST.D" "MOVV R0, 80(R4)" "st.d $zero, $a0, 80" main.go:89
+0x9306c 4 "ST.D" "MOVV R0, 88(R4)" "st.d $zero, $a0, 88" main.go:89
+0x93070 4 "ST.D" "MOVV R0, 96(R4)" "st.d $zero, $a0, 96" main.go:89
+0x93074 4 "ST.D" "MOVV R0, 104(R4)" "st.d $zero, $a0, 104" main.go:89
+0x93078 4 "ST.D" "MOVV R0, 112(R4)" "st.d $zero, $a0, 112" main.go:89
+0x9307c 4 "ST.D" "MOVV R0, 120(R4)" "st.d $zero, $a0, 120" main.go:89
+0x93080 4 "ADDI.D" "ADDV $280, R3, R5" "addi.d $a1, $sp, 280" main.go:89
+0x93084 4 "ST.D" "MOVV R0, 0(R5)" "st.d $zero, $a1, 0" main.go:89
+0x93088 4 "ST.D" "MOVV R0, 8(R5)" "st.d $zero, $a1, 8" main.go:89
+0x9308c 4 "ST.D" "MOVV R0, 16(R5)" "st.d $zero, $a1, 16" main.go:89
+0x93090 4 "ST.D" "MOVV R0, 24(R5)" "st.d $zero, $a1, 24" main.go:89
+0x93094 4 "ST.D" "MOVV R0, 32(R5)" "st.d $zero, $a1, 32" main.go:89
+0x93098 4 "ST.D" "MOVV R0, 40(R5)" "st.d $zero, $a1, 40" main.go:89
+0x9309c 4 "ST.D" "MOVV R0, 48(R5)" "st.d $zero, $a1, 48" main.go:89
+0x930a0 4 "ST.D" "MOVV R0, 56(R5)" "st.d $zero, $a1, 56" main.go:89
+0x930a4 4 "ST.D" "MOVV R0, 64(R5)" "st.d $zero, $a1, 64" main.go:89
+0x930a8 4 "ST.D" "MOVV R0, 72(R5)" "st.d $zero, $a1, 72" main.go:89
+0x930ac 4 "ST.D" "MOVV R0, 80(R5)" "st.d $zero, $a1, 80" main.go:89
+0x930b0 4 "ST.D" "MOVV R0, 88(R5)" "st.d $zero, $a1, 88" main.go:89
+0x930b4 4 "ST.D" "MOVV R0, 96(R5)" "st.d $zero, $a1, 96" main.go:89
+0x930b8 4 "ST.D" "MOVV R0, 104(R5)" "st.d $zero, $a1, 104" main.go:89
+0x930bc 4 "ST.D" "MOVV R0, 112(R5)" "st.d $zero, $a1, 112" main.go:89
+0x930c0 4 "ST.D" "MOVV R0, 120(R5)" "st.d $zero, $a1, 120" main.go:89
+0x930c4 4 "OR" "MOVV R0, R6" "move $a2, $zero" main.go:90
+0x930c8 4 "B" "JMP 12(PC)" "b 48" main.go:90
+0x930cc 4 "ANDI" "NOOP" "nop" main.go:90
+0x930d0 4 "SLLI.D" "SLLV $3, R6, R8" "slli.d $a4, $a2, 0x3" main.go:91
+0x930d4 4 "MOVGR2FR.D" "MOVV R6, F0" "movgr2fr.d $fa0, $a2" main.go:91
+0x930d8 4 "FFINT.D.L" "FFINTDV F0, F1" "ffint.d.l $fa1, $fa0" main.go:91
+0x930dc 4 "FSTX.D" "MOVD F1, (R4)(R8)" "fstx.d $fa1, $a0, $a4" main.go:91
+0x930e0 4 "ORI" "MOVW $15, R9" "ori $a5, $zero, 0xf" main.go:92
+0x930e4 4 "SUB.D" "SUBV R6, R9, R10" "sub.d $a6, $a5, $a2" main.go:92
+0x930e8 4 "MOVGR2FR.D" "MOVV R10, F1" "movgr2fr.d $fa1, $a6" main.go:92
+0x930ec 4 "FFINT.D.L" "FFINTDV F1, F1" "ffint.d.l $fa1, $fa1" main.go:92
+0x930f0 4 "FSTX.D" "MOVD F1, (R5)(R8)" "fstx.d $fa1, $a1, $a4" main.go:92
+0x930f4 4 "ADDI.D" "ADDV $1, R6" "addi.d $a2, $a2, 1" main.go:90
+0x930f8 4 "ORI" "MOVW $16, R7" "ori $a3, $zero, 0x10" main.go:90
+0x930fc 4 "BLT" "BLT R6, R7, -11(PC)" "blt $a2, $a3, -44" main.go:90
+0x93100 4 "BL" "CALL main.mat4Mul(SB)" "bl -944" main.go:94
+0x93104 4 "ADDI.D" "ADDV $152, R3, R6" "addi.d $a2, $sp, 152" main.go:94
+0x93108 4 "ADDI.D" "ADDV $8, R3, R7" "addi.d $a3, $sp, 8" main.go:94
+0x9310c 4 "LD.D" "MOVV 0(R7), R23" "ld.d $s0, $a3, 0" main.go:94
+0x93110 4 "ST.D" "MOVV R23, 0(R6)" "st.d $s0, $a2, 0" main.go:94
+0x93114 4 "LD.D" "MOVV 8(R7), R23" "ld.d $s0, $a3, 8" main.go:94
+0x93118 4 "ST.D" "MOVV R23, 8(R6)" "st.d $s0, $a2, 8" main.go:94
+0x9311c 4 "LD.D" "MOVV 16(R7), R23" "ld.d $s0, $a3, 16" main.go:94
+0x93120 4 "ST.D" "MOVV R23, 16(R6)" "st.d $s0, $a2, 16" main.go:94
+0x93124 4 "LD.D" "MOVV 24(R7), R23" "ld.d $s0, $a3, 24" main.go:94
+0x93128 4 "ST.D" "MOVV R23, 24(R6)" "st.d $s0, $a2, 24" main.go:94
+0x9312c 4 "LD.D" "MOVV 32(R7), R23" "ld.d $s0, $a3, 32" main.go:94
+0x93130 4 "ST.D" "MOVV R23, 32(R6)" "st.d $s0, $a2, 32" main.go:94
+0x93134 4 "LD.D" "MOVV 40(R7), R23" "ld.d $s0, $a3, 40" main.go:94
+0x93138 4 "ST.D" "MOVV R23, 40(R6)" "st.d $s0, $a2, 40" main.go:94
+0x9313c 4 "LD.D" "MOVV 48(R7), R23" "ld.d $s0, $a3, 48" main.go:94
+0x93140 4 "ST.D" "MOVV R23, 48(R6)" "st.d $s0, $a2, 48" main.go:94
+0x93144 4 "LD.D" "MOVV 56(R7), R23" "ld.d $s0, $a3, 56" main.go:94
+0x93148 4 "ST.D" "MOVV R23, 56(R6)" "st.d $s0, $a2, 56" main.go:94
+0x9314c 4 "LD.D" "MOVV 64(R7), R23" "ld.d $s0, $a3, 64" main.go:94
+0x93150 4 "ST.D" "MOVV R23, 64(R6)" "st.d $s0, $a2, 64" main.go:94
+0x93154 4 "LD.D" "MOVV 72(R7), R23" "ld.d $s0, $a3, 72" main.go:94
+0x93158 4 "ST.D" "MOVV R23, 72(R6)" "st.d $s0, $a2, 72" main.go:94
+0x9315c 4 "LD.D" "MOVV 80(R7), R23" "ld.d $s0, $a3, 80" main.go:94
+0x93160 4 "ST.D" "MOVV R23, 80(R6)" "st.d $s0, $a2, 80" main.go:94
+0x93164 4 "LD.D" "MOVV 88(R7), R23" "ld.d $s0, $a3, 88" main.go:94
+0x93168 4 "ST.D" "MOVV R23, 88(R6)" "st.d $s0, $a2, 88" main.go:94
+0x9316c 4 "LD.D" "MOVV 96(R7), R23" "ld.d $s0, $a3, 96" main.go:94
+0x93170 4 "ST.D" "MOVV R23, 96(R6)" "st.d $s0, $a2, 96" main.go:94
+0x93174 4 "LD.D" "MOVV 104(R7), R23" "ld.d $s0, $a3, 104" main.go:94
+0x93178 4 "ST.D" "MOVV R23, 104(R6)" "st.d $s0, $a2, 104" main.go:94
+0x9317c 4 "LD.D" "MOVV 112(R7), R23" "ld.d $s0, $a3, 112" main.go:94
+0x93180 4 "ST.D" "MOVV R23, 112(R6)" "st.d $s0, $a2, 112" main.go:94
+0x93184 4 "LD.D" "MOVV 120(R7), R23" "ld.d $s0, $a3, 120" main.go:94
+0x93188 4 "ST.D" "MOVV R23, 120(R6)" "st.d $s0, $a2, 120" main.go:94
+0x9318c 4 "ADDI.D" "ADDV $600, R3, R4" "addi.d $a0, $sp, 600" main.go:95
+0x93190 4 "ORI" "MOVW $4, R5" "ori $a1, $zero, 0x4" main.go:95
+0x93194 4 "OR" "MOVV R5, R6" "move $a2, $a1" main.go:95
+0x93198 4 "BL" "CALL main.normalize(SB)" "bl -632" main.go:95
+0x9319c 4 "ADDI.D" "ADDV $632, R3, R4" "addi.d $a0, $sp, 632" main.go:97
+0x931a0 4 "ORI" "MOVW $8, R5" "ori $a1, $zero, 0x8" main.go:97
+0x931a4 4 "OR" "MOVV R5, R6" "move $a2, $a1" main.go:97
+0x931a8 4 "BL" "CALL main.sumInts(SB)" "bl -1608" main.go:97
+0x931ac 4 "ST.D" "MOVV R4, 568(R3)" "st.d $a0, $sp, 568" main.go:97
+0x931b0 4 "ADDI.D" "ADDV $600, R3, R4" "addi.d $a0, $sp, 600" main.go:97
+0x931b4 4 "ORI" "MOVW $4, R5" "ori $a1, $zero, 0x4" main.go:97
+0x931b8 4 "OR" "MOVV R5, R6" "move $a2, $a1" main.go:97
+0x931bc 4 "OR" "MOVV R4, R7" "move $a3, $a0" main.go:97
+0x931c0 4 "OR" "MOVV R5, R8" "move $a4, $a1" main.go:97
+0x931c4 4 "OR" "MOVV R5, R9" "move $a5, $a1" main.go:97
+0x931c8 4 "BL" "CALL main.dot(SB)" "bl -1592" main.go:97
+0x931cc 4 "FST.D" "MOVD F0, 560(R3)" "fst.d $fa0, $sp, 560" main.go:97
+0x931d0 4 "ADDI.D" "ADDV $576, R3, R4" "addi.d $a0, $sp, 576" main.go:97
+0x931d4 4 "ORI" "MOVW $3, R5" "ori $a1, $zero, 0x3" main.go:97
+0x931d8 4 "OR" "MOVV R5, R6" "move $a2, $a1" main.go:97
+0x931dc 4 "BL" "CALL main.popcountAll(SB)" "bl -1436" main.go:97
+0x931e0 4 "ST.D" "MOVV R4, 552(R3)" "st.d $a0, $sp, 552" main.go:97
+0x931e4 4 "ORI" "MOVW $27, R4" "ori $a0, $zero, 0x1b" main.go:97
+0x931e8 4 "BL" "CALL main.collatzSteps(SB)" "bl -1256" main.go:97
+0x931ec 4 "ST.D" "MOVV R4, 544(R3)" "st.d $a0, $sp, 544" main.go:97
+0x931f0 4 "FLD.D" "MOVD 192(R3), F0" "fld.d $fa0, $sp, 192" main.go:97
+0x931f4 4 "FST.D" "MOVD F0, 536(R3)" "fst.d $fa0, $sp, 536" main.go:97
+0x931f8 4 "BL" "CALL runtime.printlock(SB)" "bl -250536" main.go:97
+0x931fc 4 "LD.D" "MOVV 568(R3), R4" "ld.d $a0, $sp, 568" main.go:97
+0x93200 4 "BL" "CALL runtime.printint(SB)" "bl -249184" main.go:97
+0x93204 4 "BL" "CALL runtime.printsp(SB)" "bl -250052" main.go:97
+0x93208 4 "FLD.D" "MOVD 560(R3), F0" "fld.d $fa0, $sp, 560" main.go:97
+0x9320c 4 "BL" "CALL runtime.printfloat64(SB)" "bl -249820" main.go:97
+0x93210 4 "BL" "CALL runtime.printsp(SB)" "bl -250064" main.go:97
+0x93214 4 "LD.D" "MOVV 552(R3), R4" "ld.d $a0, $sp, 552" main.go:97
+0x93218 4 "BL" "CALL runtime.printint(SB)" "bl -249208" main.go:97
+0x9321c 4 "BL" "CALL runtime.printsp(SB)" "bl -250076" main.go:97
+0x93220 4 "LD.D" "MOVV 544(R3), R4" "ld.d $a0, $sp, 544" main.go:97
+0x93224 4 "BL" "CALL runtime.printint(SB)" "bl -249220" main.go:97
+0x93228 4 "BL" "CALL runtime.printsp(SB)" "bl -250088" main.go:97
+0x9322c 4 "FLD.D" "MOVD 536(R3), F0" "fld.d $fa0, $sp, 536" main.go:97
+0x93230 4 "BL" "CALL runtime.printfloat64(SB)" "bl -249856" main.go:97
+0x93234 4 "BL" "CALL runtime.printnl(SB)" "bl -250036" main.go:97
+0x93238 4 "BL" "CALL runtime.printunlock(SB)" "bl -250472" main.go:97
+0x9323c 4 "LD.D" "MOVV 0(R3), R1" "ld.d $ra, $sp, 0" main.go:98
+0x93240 4 "ADDI.D" "ADDV $696, R3" "addi.d $sp, $sp, 696" main.go:98
+0x93244 4 "JIRL" "RET" "ret" main.go:98
+0x93248 4 "OR" "MOVV R1, R31" "move $s8, $ra" main.go:84
+0x9324c 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl -23772" main.go:84
+0x93250 4 "B" "JMP main.main(SB)" "b -704" main.go:84
+0x93254 4 "BREAK" "BREAK" "break 0x0" .:-1
+0x93258 4 "BREAK" "BREAK" "break 0x0" .:-1
+0x9325c 4 "BREAK" "BREAK" "break 0x0" .:-1

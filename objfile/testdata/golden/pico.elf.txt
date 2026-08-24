@@ -1,0 +1,418 @@
+arch=arm funcs=146 sha256=b6009309116aa6c98b14e54c7acefb409d7de4975ede56b5272c3a286860917c
+== runtime.runtimePanicAt 0x10001044 52 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/panic.go
+0x10001044 2 "MOV" "mov r4, r2" "mov r4, r2" ref=0x0 call=false .:0
+0x10001046 2 "MOV" "mov r5, r1" "mov r5, r1" ref=0x0 call=false panic.go:0
+0x10001048 2 "MOV" "mov r6, r0" "mov r6, r0" ref=0x0 call=false panic.go:0
+0x1000104a 2 "LDR" "ldr r0, 0x1000106c <runtime.runtimePanicAt+0x28>" "ldr r0, 0x1000106c <runtime.runtimePanicAt+0x28>" ref=0x0 call=false panic.go:99
+0x1000104c 2 "MOV" "movs r1, #0x18" "movs r1, #0x18" ref=0x0 call=false panic.go:99
+0x1000104e 2 "LDR" "ldr r7, 0x10001070 <runtime.runtimePanicAt+0x2c>" "ldr r7, 0x10001070 <runtime.runtimePanicAt+0x2c>" ref=0x0 call=false panic.go:99
+0x10001050 2 "BLX" "blx r7" "blx r7" ref=0x0 call=true panic.go:99
+0x10001052 2 "SUB" "subs r0, r6, #4" "subs r0, r6, #4" ref=0x0 call=false panic.go:100
+0x10001054 4 "BL" "bl 0x10001094 <runtime.printptr>" "bl 0x10001094 <runtime.printptr>" ref=0x10001094 call=true panic.go:100
+0x10001058 2 "LDR" "ldr r0, 0x10001074 <runtime.runtimePanicAt+0x30>" "ldr r0, 0x10001074 <runtime.runtimePanicAt+0x30>" ref=0x0 call=false panic.go:101
+0x1000105a 2 "MOV" "movs r1, #2" "movs r1, #2" ref=0x0 call=false panic.go:101
+0x1000105c 2 "BLX" "blx r7" "blx r7" ref=0x0 call=true panic.go:101
+0x1000105e 2 "MOV" "mov r0, r5" "mov r0, r5" ref=0x0 call=false panic.go:105
+0x10001060 2 "MOV" "mov r1, r4" "mov r1, r4" ref=0x0 call=false panic.go:105
+0x10001062 2 "BLX" "blx r7" "blx r7" ref=0x0 call=true panic.go:105
+0x10001064 4 "BL" "bl 0x100010d4 <runtime.printnl>" "bl 0x100010d4 <runtime.printnl>" ref=0x100010d4 call=true panic.go:106
+0x10001068 2 "WFI" "wfi" "wfi" ref=0x0 call=false runtime_cortexm_abort.go:16
+0x1000106a 2 "B" "b 0x10001068 <runtime.runtimePanicAt+0x24>" "b 0x10001068 <runtime.runtimePanicAt+0x24>" ref=0x10001068 call=false runtime_cortexm_abort.go:0
+0x1000106c 4 "" ".word 0x0010001c53" ".word 0x0010001c53" runtime_cortexm_abort.go:0
+0x10001070 4 "" ".word 0x0010001079" ".word 0x0010001079" runtime_cortexm_abort.go:0
+0x10001074 4 "" ".word 0x0010001c6b" ".word 0x0010001c6b" runtime_cortexm_abort.go:0
+== runtime.runtimePanic 0x100011b2 12 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/panic.go
+0x100011b2 2 "MOV" "mov r3, r0" "mov r3, r0" ref=0x0 call=false .:0
+0x100011b4 2 "MOV" "movs r2, #0x18" "movs r2, #0x18" ref=0x0 call=false panic.go:0
+0x100011b6 2 "MOV" "mov r0, lr" "mov r0, lr" ref=0x0 call=false panic.go:88
+0x100011b8 2 "MOV" "mov r1, r3" "mov r1, r3" ref=0x0 call=false panic.go:88
+0x100011ba 4 "BL" "bl 0x10001044 <runtime.runtimePanicAt>" "bl 0x10001044 <runtime.runtimePanicAt>" ref=0x10001044 call=true panic.go:88
+== Reset_Handler 0x100017f4 244 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/runtime_rp2.go
+0x100017f4 2 "LDR" "ldr r0, 0x100018b4 <Reset_Handler+0xc0>" "ldr r0, 0x100018b4 <Reset_Handler+0xc0>" ref=0x0 call=false .:0
+0x100017f6 2 "LDR" "ldr r1, 0x100018b8 <Reset_Handler+0xc4>" "ldr r1, 0x100018b8 <Reset_Handler+0xc4>" ref=0x0 call=false runtime_rp2.go:0
+0x100017f8 2 "CMP" "cmp r0, r1" "cmp r0, r1" ref=0x0 call=false runtime_rp2.go:0
+0x100017fa 2 "B" "beq 0x10001802 <Reset_Handler+0xe>" "beq 0x10001802 <Reset_Handler+0xe>" ref=0x10001802 call=false runtime_rp2.go:0
+0x100017fc 2 "MOV" "movs r2, #0" "movs r2, #0" ref=0x0 call=false runtime_rp2.go:0
+0x100017fe 2 "STM" "stm r0!, {r2}" "stm r0!, {r2}" ref=0x0 call=false runtime_cortexm.go:28
+0x10001800 2 "B" "b 0x100017f8 <Reset_Handler+0x4>" "b 0x100017f8 <Reset_Handler+0x4>" ref=0x100017f8 call=false runtime_cortexm.go:0
+0x10001802 2 "LDR" "ldr r0, 0x100018bc <Reset_Handler+0xc8>" "ldr r0, 0x100018bc <Reset_Handler+0xc8>" ref=0x0 call=false runtime_cortexm.go:0
+0x10001804 2 "LDR" "ldr r1, 0x100018c0 <Reset_Handler+0xcc>" "ldr r1, 0x100018c0 <Reset_Handler+0xcc>" ref=0x0 call=false runtime_cortexm.go:0
+0x10001806 2 "LDR" "ldr r2, 0x100018c4 <Reset_Handler+0xd0>" "ldr r2, 0x100018c4 <Reset_Handler+0xd0>" ref=0x0 call=false runtime_cortexm.go:0
+0x10001808 2 "CMP" "cmp r0, r2" "cmp r0, r2" ref=0x0 call=false runtime_cortexm.go:0
+0x1000180a 2 "B" "beq 0x10001812 <Reset_Handler+0x1e>" "beq 0x10001812 <Reset_Handler+0x1e>" ref=0x10001812 call=false runtime_cortexm.go:0
+0x1000180c 2 "LDM" "ldm r1!, {r3}" "ldm r1!, {r3}" ref=0x0 call=false runtime_cortexm.go:36
+0x1000180e 2 "STM" "stm r0!, {r3}" "stm r0!, {r3}" ref=0x0 call=false runtime_cortexm.go:36
+0x10001810 2 "B" "b 0x10001808 <Reset_Handler+0x14>" "b 0x10001808 <Reset_Handler+0x14>" ref=0x10001808 call=false runtime_cortexm.go:0
+0x10001812 2 "MOV" "movs r0, #0" "movs r0, #0" ref=0x0 call=false runtime_cortexm.go:0
+0x10001814 2 "LDR" "ldr r1, 0x100018c8 <Reset_Handler+0xd4>" "ldr r1, 0x100018c8 <Reset_Handler+0xd4>" ref=0x0 call=false runtime_cortexm.go:0
+0x10001816 2 "CMP" "cmp r0, #0x80" "cmp r0, #0x80" ref=0x0 call=false runtime_cortexm.go:0
+0x10001818 2 "B" "beq 0x10001822 <Reset_Handler+0x2e>" "beq 0x10001822 <Reset_Handler+0x2e>" ref=0x10001822 call=false runtime_cortexm.go:0
+0x1000181a 2 "MOV" "movs r2, #0" "movs r2, #0" ref=0x0 call=false runtime_cortexm.go:0
+0x1000181c 2 "STR" "str r2, [r0, r1]" "str r2, [r0, r1]" ref=0x0 call=false volatile.go:37
+0x1000181e 2 "ADD" "adds r0, r0, #4" "adds r0, r0, #4" ref=0x0 call=false runtime_rp2.go:0
+0x10001820 2 "B" "b 0x10001816 <Reset_Handler+0x22>" "b 0x10001816 <Reset_Handler+0x22>" ref=0x10001816 call=false runtime_rp2.go:0
+0x10001822 2 "LDR" "ldr r5, 0x100018cc <Reset_Handler+0xd8>" "ldr r5, 0x100018cc <Reset_Handler+0xd8>" ref=0x0 call=false gc_blocks.go:367
+0x10001824 2 "LDR" "ldr r6, 0x100018d0 <Reset_Handler+0xdc>" "ldr r6, 0x100018d0 <Reset_Handler+0xdc>" ref=0x0 call=false gc_blocks.go:367
+0x10001826 2 "SUB" "subs r4, r6, r5" "subs r4, r6, r5" ref=0x0 call=false gc_blocks.go:367
+0x10001828 4 "BL" "bl 0x10000ee8 <machine.GetRNG>" "bl 0x10000ee8 <machine.GetRNG>" ref=0x10000ee8 call=true rand_hwrng.go:16
+0x1000182c 4 "BL" "bl 0x10000ee8 <machine.GetRNG>" "bl 0x10000ee8 <machine.GetRNG>" ref=0x10000ee8 call=true rand_hwrng.go:17
+0x10001830 2 "ADD" "adds r4, #0x40" "adds r4, #0x40" ref=0x0 call=false gc_blocks.go:367
+0x10001832 2 "MOV" "movs r1, #0x41" "movs r1, #0x41" ref=0x0 call=false gc_blocks.go:0
+0x10001834 2 "MOV" "mov r0, r4" "mov r0, r4" ref=0x0 call=false gc_blocks.go:367
+0x10001836 4 "BL" "bl 0x10000554 <__udivsi3>" "bl 0x10000554 <__udivsi3>" ref=0x10000554 call=true gc_blocks.go:367
+0x1000183a 2 "MOV" "mov r1, r0" "mov r1, r0" ref=0x0 call=false gc_blocks.go:367
+0x1000183c 2 "SUB" "subs r0, r6, r0" "subs r0, r6, r0" ref=0x0 call=false gc_blocks.go:368
+0x1000183e 2 "LDR" "ldr r6, 0x100018d4 <Reset_Handler+0xe0>" "ldr r6, 0x100018d4 <Reset_Handler+0xe0>" ref=0x0 call=false gc_blocks.go:368
+0x10001840 2 "STR" "str r0, [r6, #0x2c]" "str r0, [r6, #0x2c]" ref=0x0 call=false gc_blocks.go:368
+0x10001842 2 "SUB" "subs r2, r0, r5" "subs r2, r0, r5" ref=0x0 call=false gc_blocks.go:371
+0x10001844 2 "MOV" "lsrs r2, r2, #4" "lsrs r2, r2, #4" ref=0x0 call=false gc_blocks.go:371
+0x10001846 2 "STR" "str r2, [r6, #0x38]" "str r2, [r6, #0x38]" ref=0x0 call=false gc_blocks.go:372
+0x10001848 4 "BL" "bl 0x100001dc <__aeabi_memclr>" "bl 0x100001dc <__aeabi_memclr>" ref=0x100001dc call=true runtime.go:53
+0x1000184c 4 "BL" "bl 0x10001474 <runtime.buildFreeRanges>" "bl 0x10001474 <runtime.buildFreeRanges>" ref=0x10001474 call=true gc_blocks.go:321
+0x10001850 2 "LDR" "ldr r0, 0x100018d8 <Reset_Handler+0xe4>" "ldr r0, 0x100018d8 <Reset_Handler+0xe4>" ref=0x0 call=false scheduler_cooperative.go:248
+0x10001852 2 "LDR" "ldr r5, [r0]" "ldr r5, [r0]" ref=0x0 call=false scheduler_cooperative.go:248
+0x10001854 2 "MOV" "movs r0, #0x20" "movs r0, #0x20" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001856 4 "BL" "bl 0x1000124c <runtime.alloc>" "bl 0x1000124c <runtime.alloc>" ref=0x1000124c call=true task_stack.go:75
+0x1000185a 2 "MOV" "mov r4, r0" "mov r4, r0" ref=0x0 call=false task_stack.go:75
+0x1000185c 2 "MOV" "mov r0, r5" "mov r0, r5" ref=0x0 call=false task_stack.go:43
+0x1000185e 4 "BL" "bl 0x1000124c <runtime.alloc>" "bl 0x1000124c <runtime.alloc>" ref=0x1000124c call=true task_stack.go:43
+0x10001862 2 "LDR" "ldr r1, 0x100018dc <Reset_Handler+0xe8>" "ldr r1, 0x100018dc <Reset_Handler+0xe8>" ref=0x0 call=false task_stack.go:0
+0x10001864 2 "STR" "str r1, [r0]" "str r1, [r0]" ref=0x0 call=false task_stack.go:50
+0x10001866 2 "ADD" "adds r1, r0, r5" "adds r1, r0, r5" ref=0x0 call=false task_stack.go:56
+0x10001868 2 "MOV" "mov r2, r1" "mov r2, r1" ref=0x0 call=false task_stack.go:56
+0x1000186a 2 "SUB" "subs r2, #0x24" "subs r2, #0x24" ref=0x0 call=false task_stack.go:56
+0x1000186c 2 "STR" "str r2, [r4, #0x10]" "str r2, [r4, #0x10]" ref=0x0 call=false task_stack_cortexm.go:35
+0x1000186e 2 "STR" "str r0, [r4, #0x14]" "str r0, [r4, #0x14]" ref=0x0 call=false task_stack.go:49
+0x10001870 2 "B" "beq 0x100018ae <Reset_Handler+0xba>" "beq 0x100018ae <Reset_Handler+0xba>" ref=0x100018ae call=false task_stack_cortexm.go:43
+0x10001872 2 "LDR" "ldr r0, 0x100018e0 <Reset_Handler+0xec>" "ldr r0, 0x100018e0 <Reset_Handler+0xec>" ref=0x0 call=false task_stack_cortexm.go:48
+0x10001874 2 "STR" "str r0, [r2]" "str r0, [r2]" ref=0x0 call=false task_stack_cortexm.go:48
+0x10001876 2 "SUB" "subs r0, r1, #4" "subs r0, r1, #4" ref=0x0 call=false task_stack_cortexm.go:43
+0x10001878 2 "LDR" "ldr r2, 0x100018e4 <Reset_Handler+0xf0>" "ldr r2, 0x100018e4 <Reset_Handler+0xf0>" ref=0x0 call=false task_stack_cortexm.go:43
+0x1000187a 2 "STR" "str r2, [r0]" "str r2, [r0]" ref=0x0 call=false task_stack_cortexm.go:43
+0x1000187c 2 "SUB" "subs r1, #0x20" "subs r1, #0x20" ref=0x0 call=false task_stack_cortexm.go:51
+0x1000187e 2 "MOV" "movs r5, #0" "movs r5, #0" ref=0x0 call=false task_stack_cortexm.go:51
+0x10001880 2 "STR" "str r5, [r1]" "str r5, [r1]" ref=0x0 call=false task_stack_cortexm.go:51
+0x10001882 2 "MOV" "mov r0, r6" "mov r0, r6" ref=0x0 call=false scheduler_cooperative.go:59
+0x10001884 2 "ADD" "adds r0, #0x58" "adds r0, #0x58" ref=0x0 call=false scheduler_cooperative.go:59
+0x10001886 2 "MOV" "mov r1, r4" "mov r1, r4" ref=0x0 call=false scheduler_cooperative.go:59
+0x10001888 4 "BL" "bl 0x10000bd4 <(*internal/task.Queue).Push>" "bl 0x10000bd4 <(*internal/task.Queue).Push>" ref=0x10000bd4 call=true scheduler_cooperative.go:59
+0x1000188c 2 "LDRB" "ldrb r0, [r6, #0xd]" "ldrb r0, [r6, #0xd]" ref=0x0 call=false scheduler_cooperative.go:141
+0x1000188e 2 "CMP" "cmp r0, #1" "cmp r0, #1" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001890 2 "B" "beq 0x100018aa <Reset_Handler+0xb6>" "beq 0x100018aa <Reset_Handler+0xb6>" ref=0x100018aa call=false scheduler_cooperative.go:0
+0x10001892 4 "BL" "bl 0x10000ba8 <(*internal/task.Queue).Pop>" "bl 0x10000ba8 <(*internal/task.Queue).Pop>" ref=0x10000ba8 call=true scheduler_cooperative.go:171
+0x10001896 2 "CMP" "cmp r0, #0" "cmp r0, #0" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001898 2 "B" "beq 0x100018a6 <Reset_Handler+0xb2>" "beq 0x100018a6 <Reset_Handler+0xb2>" ref=0x100018a6 call=false scheduler_cooperative.go:0
+0x1000189a 2 "STR" "str r0, [r6, #0x10]" "str r0, [r6, #0x10]" ref=0x0 call=false task_stack_unicore.go:32
+0x1000189c 2 "LDR" "ldr r0, [r0, #0x10]" "ldr r0, [r0, #0x10]" ref=0x0 call=false task_stack_cortexm.go:55
+0x1000189e 4 "BL" "bl 0x100001f8 <tinygo_switchToTask>" "bl 0x100001f8 <tinygo_switchToTask>" ref=0x100001f8 call=true task_stack_cortexm.go:55
+0x100018a2 2 "STR" "str r5, [r6, #0x10]" "str r5, [r6, #0x10]" ref=0x0 call=false task_stack_unicore.go:36
+0x100018a4 2 "B" "b 0x1000188c <Reset_Handler+0x98>" "b 0x1000188c <Reset_Handler+0x98>" ref=0x1000188c call=false scheduler_cooperative.go:0
+0x100018a6 2 "WFE" "wfe" "wfe" ref=0x0 call=false runtime_rp2.go:338
+0x100018a8 2 "B" "b 0x1000188c <Reset_Handler+0x98>" "b 0x1000188c <Reset_Handler+0x98>" ref=0x1000188c call=false scheduler_cooperative.go:0
+0x100018aa 2 "WFI" "wfi" "wfi" ref=0x0 call=false runtime_cortexm_abort.go:16
+0x100018ac 2 "B" "b 0x100018aa <Reset_Handler+0xb6>" "b 0x100018aa <Reset_Handler+0xb6>" ref=0x100018aa call=false runtime_cortexm_abort.go:0
+0x100018ae 4 "BL" "bl 0x10001034 <runtime.nilPanic>" "bl 0x10001034 <runtime.nilPanic>" ref=0x10001034 call=true task_stack_cortexm.go:43
+0x100018b2 2 "MOV" "mov r8, r8" "mov r8, r8" ref=0x0 call=false task_stack_cortexm.go:0
+0x100018b4 4 "" ".word 0x0020001070" ".word 0x0020001070" task_stack_cortexm.go:0
+0x100018b8 4 "" ".word 0x0020001620" ".word 0x0020001620" task_stack_cortexm.go:0
+0x100018bc 4 "" ".word 0x0020001000" ".word 0x0020001000" task_stack_cortexm.go:0
+0x100018c0 4 "" ".word 0x0010001e80" ".word 0x0010001e80" task_stack_cortexm.go:0
+0x100018c4 4 "" ".word 0x002000106c" ".word 0x002000106c" task_stack_cortexm.go:0
+0x100018c8 4 "" ".word 0x00d0000100" ".word 0x00d0000100" task_stack_cortexm.go:0
+0x100018cc 4 "" ".word 0x0020001620" ".word 0x0020001620" task_stack_cortexm.go:0
+0x100018d0 4 "" ".word 0x0020040000" ".word 0x0020040000" task_stack_cortexm.go:0
+0x100018d4 4 "" ".word 0x00200015b0" ".word 0x00200015b0" task_stack_cortexm.go:0
+0x100018d8 4 "" ".word 0x0010001e7c" ".word 0x0010001e7c" task_stack_cortexm.go:0
+0x100018dc 4 "" ".word 0x00b83bf575" ".word 0x00b83bf575" task_stack_cortexm.go:0
+0x100018e0 4 "" ".word 0x00100018e9" ".word 0x00100018e9" task_stack_cortexm.go:0
+0x100018e4 4 "" ".word 0x00100001e9" ".word 0x00100001e9" task_stack_cortexm.go:0
+== runtime.run$1$gowrapper 0x100018e8 628 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/scheduler_cooperative.go
+0x100018e8 2 "PUSH" "push {r4, r5, r6, r7, lr}" "push {r4, r5, r6, r7, lr}" ref=0x0 call=false scheduler_cooperative.go:0
+0x100018ea 2 "SUB" "sub sp, #0x5c" "sub sp, #0x5c" ref=0x0 call=false .:0
+0x100018ec 2 "LDR" "ldr r2, 0x10001afc <runtime.run$1$gowrapper+0x214>" "ldr r2, 0x10001afc <runtime.run$1$gowrapper+0x214>" ref=0x0 call=false .:0
+0x100018ee 2 "LDR" "ldr r0, [r2]" "ldr r0, [r2]" ref=0x0 call=false volatile.go:25
+0x100018f0 2 "LDR" "ldr r1, 0x10001b00 <runtime.run$1$gowrapper+0x218>" "ldr r1, 0x10001b00 <runtime.run$1$gowrapper+0x218>" ref=0x0 call=false volatile.go:25
+0x100018f2 2 "ORR" "orrs r1, r0" "orrs r1, r0" ref=0x0 call=false register.go:161
+0x100018f4 2 "STR" "str r1, [r2]" "str r1, [r2]" ref=0x0 call=false volatile.go:37
+0x100018f6 2 "LDR" "ldr r0, 0x10001b04 <runtime.run$1$gowrapper+0x21c>" "ldr r0, 0x10001b04 <runtime.run$1$gowrapper+0x21c>" ref=0x0 call=false volatile.go:37
+0x100018f8 4 "BL" "bl 0x10000d38 <machine.unresetBlockWait>" "bl 0x10000d38 <machine.unresetBlockWait>" ref=0x10000d38 call=true scheduler_cooperative.go:249
+0x100018fc 2 "MOV" "movs r0, #0x83" "movs r0, #0x83" ref=0x0 call=false scheduler_cooperative.go:0
+0x100018fe 2 "MOV" "lsls r0, r0, #2" "lsls r0, r0, #2" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001900 2 "LDR" "ldr r1, 0x10001b08 <runtime.run$1$gowrapper+0x220>" "ldr r1, 0x10001b08 <runtime.run$1$gowrapper+0x220>" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001902 2 "STR" "str r0, [r1]" "str r0, [r1]" ref=0x0 call=false volatile.go:37
+0x10001904 2 "MOV" "movs r0, #1" "movs r0, #1" ref=0x0 call=false volatile.go:37
+0x10001906 2 "MOV" "lsls r1, r0, #0x10" "lsls r1, r0, #0x10" ref=0x0 call=false volatile.go:37
+0x10001908 2 "LDR" "ldr r6, 0x10001b0c <runtime.run$1$gowrapper+0x224>" "ldr r6, 0x10001b0c <runtime.run$1$gowrapper+0x224>" ref=0x0 call=false volatile.go:37
+0x1000190a 2 "LDR" "ldr r2, [r6, #0x48]" "ldr r2, [r6, #0x48]" ref=0x0 call=false volatile.go:25
+0x1000190c 2 "BIC" "bics r2, r1" "bics r2, r1" ref=0x0 call=false rp2040.go:1670
+0x1000190e 2 "STR" "str r2, [r6, #0x48]" "str r2, [r6, #0x48]" ref=0x0 call=false volatile.go:37
+0x10001910 2 "MOV" "movs r1, #0x55" "movs r1, #0x55" ref=0x0 call=false volatile.go:37
+0x10001912 2 "MOV" "lsls r2, r1, #5" "lsls r2, r1, #5" ref=0x0 call=false volatile.go:37
+0x10001914 2 "LDR" "ldr r1, 0x10001b10 <runtime.run$1$gowrapper+0x228>" "ldr r1, 0x10001b10 <runtime.run$1$gowrapper+0x228>" ref=0x0 call=false volatile.go:0
+0x10001916 2 "STR" "str r2, [r1]" "str r2, [r1]" ref=0x0 call=false volatile.go:37
+0x10001918 2 "MOV" "movs r2, #0x2f" "movs r2, #0x2f" ref=0x0 call=false volatile.go:37
+0x1000191a 2 "MOV" "lsls r2, r2, #6" "lsls r2, r2, #6" ref=0x0 call=false volatile.go:37
+0x1000191c 2 "STR" "str r2, [r1, #0xc]" "str r2, [r1, #0xc]" ref=0x0 call=false volatile.go:37
+0x1000191e 2 "LDR" "ldr r2, [r1]" "ldr r2, [r1]" ref=0x0 call=false volatile.go:25
+0x10001920 2 "LDR" "ldr r3, 0x10001b14 <runtime.run$1$gowrapper+0x22c>" "ldr r3, 0x10001b14 <runtime.run$1$gowrapper+0x22c>" ref=0x0 call=false volatile.go:25
+0x10001922 2 "ORR" "orrs r3, r2" "orrs r3, r2" ref=0x0 call=false register.go:161
+0x10001924 2 "STR" "str r3, [r1]" "str r3, [r1]" ref=0x0 call=false volatile.go:37
+0x10001926 2 "LDR" "ldr r2, [r1, #4]" "ldr r2, [r1, #4]" ref=0x0 call=false volatile.go:25
+0x10001928 2 "CMP" "cmp r2, #0" "cmp r2, #0" ref=0x0 call=false machine_rp2_xosc.go:0
+0x1000192a 2 "B" "bpl 0x10001926 <runtime.run$1$gowrapper+0x3e>" "bpl 0x10001926 <runtime.run$1$gowrapper+0x3e>" ref=0x10001926 call=false machine_rp2_xosc.go:0
+0x1000192c 2 "LDR" "ldr r1, [r6, #0xc]" "ldr r1, [r6, #0xc]" ref=0x0 call=false volatile.go:25
+0x1000192e 2 "BIC" "bics r1, r0" "bics r1, r0" ref=0x0 call=false register.go:171
+0x10001930 2 "STR" "str r1, [r6, #0xc]" "str r1, [r6, #0xc]" ref=0x0 call=false volatile.go:37
+0x10001932 2 "LDR" "ldr r0, [r6, #0x14]" "ldr r0, [r6, #0x14]" ref=0x0 call=false volatile.go:25
+0x10001934 2 "MOV" "lsls r0, r0, #0x1f" "lsls r0, r0, #0x1f" ref=0x0 call=false machine_rp2_clocks.go:0
+0x10001936 2 "B" "beq 0x10001932 <runtime.run$1$gowrapper+0x4a>" "beq 0x10001932 <runtime.run$1$gowrapper+0x4a>" ref=0x10001932 call=false machine_rp2_clocks.go:0
+0x10001938 2 "LDR" "ldr r0, [r6]" "ldr r0, [r6]" ref=0x0 call=false volatile.go:25
+0x1000193a 2 "MOV" "movs r1, #3" "movs r1, #3" ref=0x0 call=false volatile.go:25
+0x1000193c 2 "STR" "str r1, [sp, #0x10]" "str r1, [sp, #0x10]" ref=0x0 call=false volatile.go:25
+0x1000193e 2 "BIC" "bics r0, r1" "bics r0, r1" ref=0x0 call=false register.go:171
+0x10001940 2 "STR" "str r0, [r6]" "str r0, [r6]" ref=0x0 call=false volatile.go:37
+0x10001942 2 "LDR" "ldr r0, [r6, #8]" "ldr r0, [r6, #8]" ref=0x0 call=false volatile.go:25
+0x10001944 2 "MOV" "lsls r0, r0, #0x1f" "lsls r0, r0, #0x1f" ref=0x0 call=false machine_rp2_clocks.go:0
+0x10001946 2 "B" "beq 0x10001942 <runtime.run$1$gowrapper+0x5a>" "beq 0x10001942 <runtime.run$1$gowrapper+0x5a>" ref=0x10001942 call=false machine_rp2_clocks.go:0
+0x10001948 2 "LDR" "ldr r0, 0x10001b18 <runtime.run$1$gowrapper+0x230>" "ldr r0, 0x10001b18 <runtime.run$1$gowrapper+0x230>" ref=0x0 call=false machine_rp2_clocks.go:0
+0x1000194a 2 "MOV" "movs r1, #0x64" "movs r1, #0x64" ref=0x0 call=false machine_rp2_clocks.go:0
+0x1000194c 2 "MOV" "movs r2, #6" "movs r2, #6" ref=0x0 call=false machine_rp2_clocks.go:0
+0x1000194e 2 "MOV" "movs r4, #1" "movs r4, #1" ref=0x0 call=false machine_rp2_clocks.go:0
+0x10001950 2 "STR" "str r2, [sp, #4]" "str r2, [sp, #4]" ref=0x0 call=false machine_rp2_clocks.go:0
+0x10001952 2 "MOV" "mov r3, r4" "mov r3, r4" ref=0x0 call=false machine_rp2_clocks.go:184
+0x10001954 4 "BL" "bl 0x10000d4c <(*machine.pll).init>" "bl 0x10000d4c <(*machine.pll).init>" ref=0x10000d4c call=true machine_rp2_clocks.go:184
+0x10001958 2 "LDR" "ldr r0, 0x10001b1c <runtime.run$1$gowrapper+0x234>" "ldr r0, 0x10001b1c <runtime.run$1$gowrapper+0x234>" ref=0x0 call=false machine_rp2_clocks.go:0
+0x1000195a 2 "MOV" "movs r1, #0x28" "movs r1, #0x28" ref=0x0 call=false machine_rp2_clocks.go:0
+0x1000195c 2 "MOV" "movs r5, #5" "movs r5, #5" ref=0x0 call=false machine_rp2_clocks.go:0
+0x1000195e 2 "MOV" "movs r7, #2" "movs r7, #2" ref=0x0 call=false machine_rp2_clocks.go:0
+0x10001960 2 "MOV" "mov r2, r5" "mov r2, r5" ref=0x0 call=false machine_rp2_clocks.go:185
+0x10001962 2 "MOV" "mov r3, r7" "mov r3, r7" ref=0x0 call=false machine_rp2_clocks.go:185
+0x10001964 4 "BL" "bl 0x10000d4c <(*machine.pll).init>" "bl 0x10000d4c <(*machine.pll).init>" ref=0x10000d4c call=true machine_rp2_clocks.go:185
+0x10001968 2 "STR" "str r6, [sp, #0x1c]" "str r6, [sp, #0x1c]" ref=0x0 call=false machine_rp2_clocks.go:189
+0x1000196a 2 "MOV" "movs r0, #4" "movs r0, #4" ref=0x0 call=false machine_rp2_clocks.go:189
+0x1000196c 2 "STR" "str r0, [sp, #0x20]" "str r0, [sp, #0x20]" ref=0x0 call=false machine_rp2_clocks.go:189
+0x1000196e 2 "ADD" "add r0, sp, #0x1c" "add r0, sp, #0x1c" ref=0x0 call=false machine_rp2_clocks.go:189
+0x10001970 2 "MOV" "movs r2, #0xc" "movs r2, #0xc" ref=0x0 call=false machine_rp2_clocks.go:189
+0x10001972 2 "STR" "str r7, [sp, #0xc]" "str r7, [sp, #0xc]" ref=0x0 call=false machine_rp2_clocks.go:189
+0x10001974 2 "MOV" "mov r1, r7" "mov r1, r7" ref=0x0 call=false machine_rp2_clocks.go:190
+0x10001976 2 "STR" "str r2, [sp, #8]" "str r2, [sp, #8]" ref=0x0 call=false machine_rp2_clocks.go:190
+0x10001978 2 "MOV" "mov r3, r2" "mov r3, r2" ref=0x0 call=false machine_rp2_clocks.go:190
+0x1000197a 4 "BL" "bl 0x10000dc8 <(*machine.clock).configure>" "bl 0x10000dc8 <(*machine.clock).configure>" ref=0x10000dc8 call=true machine_rp2_clocks.go:190
+0x1000197e 2 "LDR" "ldr r0, 0x10001b20 <runtime.run$1$gowrapper+0x238>" "ldr r0, 0x10001b20 <runtime.run$1$gowrapper+0x238>" ref=0x0 call=false machine_rp2_clocks.go:190
+0x10001980 2 "LDR" "ldr r1, [r0]" "ldr r1, [r0]" ref=0x0 call=false volatile.go:25
+0x10001982 2 "MOV" "movs r2, #0xc0" "movs r2, #0xc0" ref=0x0 call=false volatile.go:25
+0x10001984 2 "ORR" "orrs r2, r1" "orrs r2, r1" ref=0x0 call=false rp2040.go:21344
+0x10001986 2 "MOV" "movs r1, #0x30" "movs r1, #0x30" ref=0x0 call=false rp2040.go:21344
+0x10001988 2 "STR" "str r1, [sp, #0x18]" "str r1, [sp, #0x18]" ref=0x0 call=false rp2040.go:21344
+0x1000198a 2 "BIC" "bics r2, r1" "bics r2, r1" ref=0x0 call=false rp2040.go:21344
+0x1000198c 2 "STR" "str r2, [r0]" "str r2, [r0]" ref=0x0 call=false volatile.go:37
+0x1000198e 2 "LDR" "ldr r0, 0x10001b24 <runtime.run$1$gowrapper+0x23c>" "ldr r0, 0x10001b24 <runtime.run$1$gowrapper+0x23c>" ref=0x0 call=false volatile.go:37
+0x10001990 2 "CMP" "cmp r0, #0" "cmp r0, #0" ref=0x0 call=false machine_rp2_clocks.go:0
+0x10001992 2 "B" "beq 0x1000199a <runtime.run$1$gowrapper+0xb2>" "beq 0x1000199a <runtime.run$1$gowrapper+0xb2>" ref=0x1000199a call=false machine_rp2_clocks.go:0
+0x10001994 2 "NOP" "nop" "nop" ref=0x0 call=false machine_rp2_clocks.go:199
+0x10001996 2 "SUB" "subs r0, r0, #1" "subs r0, r0, #1" ref=0x0 call=false machine_rp2_clocks.go:0
+0x10001998 2 "B" "b 0x10001990 <runtime.run$1$gowrapper+0xa8>" "b 0x10001990 <runtime.run$1$gowrapper+0xa8>" ref=0x10001990 call=false machine_rp2_clocks.go:0
+0x1000199a 2 "STR" "str r5, [sp, #0x28]" "str r5, [sp, #0x28]" ref=0x0 call=false machine_rp2_clocks.go:204
+0x1000199c 2 "MOV" "mov r0, r6" "mov r0, r6" ref=0x0 call=false machine_rp2_clocks.go:204
+0x1000199e 2 "ADD" "adds r0, #0xc" "adds r0, #0xc" ref=0x0 call=false machine_rp2_clocks.go:204
+0x100019a0 2 "STR" "str r0, [sp, #0x24]" "str r0, [sp, #0x24]" ref=0x0 call=false machine_rp2_clocks.go:204
+0x100019a2 2 "ADD" "add r0, sp, #0x24" "add r0, sp, #0x24" ref=0x0 call=false machine_rp2_clocks.go:204
+0x100019a4 2 "LDR" "ldr r2, 0x10001b28 <runtime.run$1$gowrapper+0x240>" "ldr r2, 0x10001b28 <runtime.run$1$gowrapper+0x240>" ref=0x0 call=false machine_rp2_clocks.go:204
+0x100019a6 2 "LDR" "ldr r5, 0x10001b2c <runtime.run$1$gowrapper+0x244>" "ldr r5, 0x10001b2c <runtime.run$1$gowrapper+0x244>" ref=0x0 call=false machine_rp2_clocks.go:205
+0x100019a8 2 "MOV" "mov r1, r4" "mov r1, r4" ref=0x0 call=false machine_rp2_clocks.go:205
+0x100019aa 2 "MOV" "mov r3, r2" "mov r3, r2" ref=0x0 call=false machine_rp2_clocks.go:205
+0x100019ac 2 "BLX" "blx r5" "blx r5" ref=0x0 call=true machine_rp2_clocks.go:205
+0x100019ae 2 "STR" "str r4, [sp, #0x14]" "str r4, [sp, #0x14]" ref=0x0 call=false machine_rp2_clocks.go:205
+0x100019b0 2 "MOV" "mov r0, r6" "mov r0, r6" ref=0x0 call=false machine_rp2_clocks.go:211
+0x100019b2 2 "ADD" "adds r0, #0x24" "adds r0, #0x24" ref=0x0 call=false machine_rp2_clocks.go:211
+0x100019b4 2 "STR" "str r0, [sp, #0x2c]" "str r0, [sp, #0x2c]" ref=0x0 call=false machine_rp2_clocks.go:211
+0x100019b6 2 "MOV" "movs r0, #7" "movs r0, #7" ref=0x0 call=false machine_rp2_clocks.go:211
+0x100019b8 2 "STR" "str r0, [sp, #0x30]" "str r0, [sp, #0x30]" ref=0x0 call=false machine_rp2_clocks.go:211
+0x100019ba 2 "ADD" "add r0, sp, #0x2c" "add r0, sp, #0x2c" ref=0x0 call=false machine_rp2_clocks.go:211
+0x100019bc 2 "MOV" "movs r5, #0" "movs r5, #0" ref=0x0 call=false machine_rp2_clocks.go:211
+0x100019be 2 "LDR" "ldr r4, 0x10001b30 <runtime.run$1$gowrapper+0x248>" "ldr r4, 0x10001b30 <runtime.run$1$gowrapper+0x248>" ref=0x0 call=false machine_rp2_clocks.go:211
+0x100019c0 2 "MOV" "mov r1, r5" "mov r1, r5" ref=0x0 call=false machine_rp2_clocks.go:212
+0x100019c2 2 "MOV" "mov r2, r4" "mov r2, r4" ref=0x0 call=false machine_rp2_clocks.go:212
+0x100019c4 2 "MOV" "mov r3, r4" "mov r3, r4" ref=0x0 call=false machine_rp2_clocks.go:212
+0x100019c6 2 "LDR" "ldr r7, 0x10001b2c <runtime.run$1$gowrapper+0x244>" "ldr r7, 0x10001b2c <runtime.run$1$gowrapper+0x244>" ref=0x0 call=false machine_rp2_clocks.go:212
+0x100019c8 2 "BLX" "blx r7" "blx r7" ref=0x0 call=true machine_rp2_clocks.go:212
+0x100019ca 2 "MOV" "mov r0, r6" "mov r0, r6" ref=0x0 call=false machine_rp2_clocks.go:218
+0x100019cc 2 "ADD" "adds r0, #0x30" "adds r0, #0x30" ref=0x0 call=false machine_rp2_clocks.go:218
+0x100019ce 2 "STR" "str r0, [sp, #0x34]" "str r0, [sp, #0x34]" ref=0x0 call=false machine_rp2_clocks.go:218
+0x100019d0 2 "MOV" "movs r0, #8" "movs r0, #8" ref=0x0 call=false machine_rp2_clocks.go:218
+0x100019d2 2 "STR" "str r0, [sp, #0x38]" "str r0, [sp, #0x38]" ref=0x0 call=false machine_rp2_clocks.go:218
+0x100019d4 2 "ADD" "add r0, sp, #0x34" "add r0, sp, #0x34" ref=0x0 call=false machine_rp2_clocks.go:218
+0x100019d6 2 "MOV" "mov r1, r5" "mov r1, r5" ref=0x0 call=false machine_rp2_clocks.go:219
+0x100019d8 2 "MOV" "mov r2, r4" "mov r2, r4" ref=0x0 call=false machine_rp2_clocks.go:219
+0x100019da 2 "MOV" "mov r3, r4" "mov r3, r4" ref=0x0 call=false machine_rp2_clocks.go:219
+0x100019dc 2 "LDR" "ldr r7, 0x10001b2c <runtime.run$1$gowrapper+0x244>" "ldr r7, 0x10001b2c <runtime.run$1$gowrapper+0x244>" ref=0x0 call=false machine_rp2_clocks.go:219
+0x100019de 2 "BLX" "blx r7" "blx r7" ref=0x0 call=true machine_rp2_clocks.go:219
+0x100019e0 2 "LDR" "ldr r4, [sp, #0x14]" "ldr r4, [sp, #0x14]" ref=0x0 call=false machine_rp2_clocks.go:219
+0x100019e2 2 "MOV" "mov r0, r6" "mov r0, r6" ref=0x0 call=false machine_rp2_2040.go:220
+0x100019e4 2 "ADD" "adds r0, #0x3c" "adds r0, #0x3c" ref=0x0 call=false machine_rp2_2040.go:220
+0x100019e6 2 "STR" "str r0, [sp, #0x48]" "str r0, [sp, #0x48]" ref=0x0 call=false machine_rp2_2040.go:220
+0x100019e8 2 "MOV" "movs r0, #9" "movs r0, #9" ref=0x0 call=false machine_rp2_2040.go:220
+0x100019ea 2 "STR" "str r0, [sp]" "str r0, [sp]" ref=0x0 call=false machine_rp2_2040.go:0
+0x100019ec 2 "STR" "str r0, [sp, #0x4c]" "str r0, [sp, #0x4c]" ref=0x0 call=false machine_rp2_2040.go:220
+0x100019ee 2 "ADD" "add r0, sp, #0x48" "add r0, sp, #0x48" ref=0x0 call=false machine_rp2_2040.go:220
+0x100019f0 2 "LDR" "ldr r3, 0x10001b34 <runtime.run$1$gowrapper+0x24c>" "ldr r3, 0x10001b34 <runtime.run$1$gowrapper+0x24c>" ref=0x0 call=false machine_rp2_2040.go:220
+0x100019f2 2 "MOV" "mov r1, r5" "mov r1, r5" ref=0x0 call=false machine_rp2_2040.go:221
+0x100019f4 2 "LDR" "ldr r2, 0x10001b30 <runtime.run$1$gowrapper+0x248>" "ldr r2, 0x10001b30 <runtime.run$1$gowrapper+0x248>" ref=0x0 call=false machine_rp2_2040.go:221
+0x100019f6 2 "BLX" "blx r7" "blx r7" ref=0x0 call=true machine_rp2_2040.go:221
+0x100019f8 2 "ADD" "adds r6, #0x18" "adds r6, #0x18" ref=0x0 call=false machine_rp2_clocks.go:229
+0x100019fa 2 "STR" "str r6, [sp, #0x3c]" "str r6, [sp, #0x3c]" ref=0x0 call=false machine_rp2_clocks.go:229
+0x100019fc 2 "LDR" "ldr r6, [sp, #4]" "ldr r6, [sp, #4]" ref=0x0 call=false machine_rp2_clocks.go:229
+0x100019fe 2 "STR" "str r6, [sp, #0x40]" "str r6, [sp, #0x40]" ref=0x0 call=false machine_rp2_clocks.go:229
+0x10001a00 2 "ADD" "add r0, sp, #0x3c" "add r0, sp, #0x3c" ref=0x0 call=false machine_rp2_clocks.go:229
+0x10001a02 2 "MOV" "mov r1, r5" "mov r1, r5" ref=0x0 call=false machine_rp2_clocks.go:230
+0x10001a04 2 "LDR" "ldr r2, 0x10001b28 <runtime.run$1$gowrapper+0x240>" "ldr r2, 0x10001b28 <runtime.run$1$gowrapper+0x240>" ref=0x0 call=false machine_rp2_clocks.go:230
+0x10001a06 2 "MOV" "mov r3, r2" "mov r3, r2" ref=0x0 call=false machine_rp2_clocks.go:230
+0x10001a08 2 "BLX" "blx r7" "blx r7" ref=0x0 call=true machine_rp2_clocks.go:230
+0x10001a0a 2 "LDR" "ldr r0, 0x10001b38 <runtime.run$1$gowrapper+0x250>" "ldr r0, 0x10001b38 <runtime.run$1$gowrapper+0x250>" ref=0x0 call=false machine_rp2_clocks.go:230
+0x10001a0c 4 "BL" "bl 0x10000d38 <machine.unresetBlockWait>" "bl 0x10000d38 <machine.unresetBlockWait>" ref=0x10000d38 call=true scheduler_cooperative.go:249
+0x10001a10 2 "LDR" "ldr r0, 0x10001b3c <runtime.run$1$gowrapper+0x254>" "ldr r0, 0x10001b3c <runtime.run$1$gowrapper+0x254>" ref=0x0 call=false scheduler_cooperative.go:249
+0x10001a12 2 "LDR" "ldr r1, [r0]" "ldr r1, [r0]" ref=0x0 call=false volatile.go:25
+0x10001a14 2 "BIC" "bics r1, r6" "bics r1, r6" ref=0x0 call=false register.go:191
+0x10001a16 2 "STR" "str r1, [r0]" "str r1, [r0]" ref=0x0 call=false volatile.go:37
+0x10001a18 2 "MOV" "lsls r0, r4, #0x18" "lsls r0, r4, #0x18" ref=0x0 call=false volatile.go:37
+0x10001a1a 2 "LDR" "ldr r2, 0x10001afc <runtime.run$1$gowrapper+0x214>" "ldr r2, 0x10001afc <runtime.run$1$gowrapper+0x214>" ref=0x0 call=false volatile.go:37
+0x10001a1c 2 "LDR" "ldr r1, [r2]" "ldr r1, [r2]" ref=0x0 call=false volatile.go:25
+0x10001a1e 2 "ORR" "orrs r1, r0" "orrs r1, r0" ref=0x0 call=false register.go:161
+0x10001a20 2 "STR" "str r1, [r2]" "str r1, [r2]" ref=0x0 call=false volatile.go:37
+0x10001a22 4 "BL" "bl 0x10000d38 <machine.unresetBlockWait>" "bl 0x10000d38 <machine.unresetBlockWait>" ref=0x10000d38 call=true scheduler_cooperative.go:249
+0x10001a26 2 "LDR" "ldr r0, 0x10001b40 <runtime.run$1$gowrapper+0x258>" "ldr r0, 0x10001b40 <runtime.run$1$gowrapper+0x258>" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001a28 2 "CMP" "cmp r5, #0x80" "cmp r5, #0x80" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001a2a 2 "B" "beq 0x10001a40 <runtime.run$1$gowrapper+0x158>" "beq 0x10001a40 <runtime.run$1$gowrapper+0x158>" ref=0x10001a40 call=false scheduler_cooperative.go:0
+0x10001a2c 2 "MOV" "movs r1, #0" "movs r1, #0" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001a2e 2 "STR" "str r1, [r0, r5]" "str r1, [r0, r5]" ref=0x0 call=false volatile.go:37
+0x10001a30 2 "ADD" "adds r2, r0, r5" "adds r2, r0, r5" ref=0x0 call=false volatile.go:37
+0x10001a32 2 "STR" "str r1, [r2, #4]" "str r1, [r2, #4]" ref=0x0 call=false volatile.go:37
+0x10001a34 2 "MOV" "movs r3, #0x80" "movs r3, #0x80" ref=0x0 call=false volatile.go:37
+0x10001a36 2 "STR" "str r1, [r2, r3]" "str r1, [r2, r3]" ref=0x0 call=false volatile.go:37
+0x10001a38 2 "ADD" "adds r2, #0x80" "adds r2, #0x80" ref=0x0 call=false volatile.go:37
+0x10001a3a 2 "STR" "str r1, [r2, #4]" "str r1, [r2, #4]" ref=0x0 call=false volatile.go:37
+0x10001a3c 2 "ADD" "adds r5, #8" "adds r5, #8" ref=0x0 call=false machine_rp2_usb.go:0
+0x10001a3e 2 "B" "b 0x10001a28 <runtime.run$1$gowrapper+0x140>" "b 0x10001a28 <runtime.run$1$gowrapper+0x140>" ref=0x10001a28 call=false machine_rp2_usb.go:0
+0x10001a40 2 "LDR" "ldr r0, 0x10001b44 <runtime.run$1$gowrapper+0x25c>" "ldr r0, 0x10001b44 <runtime.run$1$gowrapper+0x25c>" ref=0x0 call=false machine_rp2_usb.go:0
+0x10001a42 2 "MOV" "movs r1, #0" "movs r1, #0" ref=0x0 call=false machine_rp2_usb.go:0
+0x10001a44 2 "STR" "str r1, [r0, #0x44]" "str r1, [r0, #0x44]" ref=0x0 call=false volatile.go:37
+0x10001a46 2 "MOV" "movs r1, #0xff" "movs r1, #0xff" ref=0x0 call=false volatile.go:37
+0x10001a48 2 "MOV" "lsls r1, r1, #8" "lsls r1, r1, #8" ref=0x0 call=false volatile.go:37
+0x10001a4a 2 "LDR" "ldr r2, 0x10001b48 <runtime.run$1$gowrapper+0x260>" "ldr r2, 0x10001b48 <runtime.run$1$gowrapper+0x260>" ref=0x0 call=false volatile.go:37
+0x10001a4c 2 "LDR" "ldr r3, [r2]" "ldr r3, [r2]" ref=0x0 call=false volatile.go:25
+0x10001a4e 2 "BIC" "bics r3, r1" "bics r3, r1" ref=0x0 call=false arm.go:178
+0x10001a50 2 "STR" "str r3, [r2]" "str r3, [r2]" ref=0x0 call=false volatile.go:37
+0x10001a52 2 "LDR" "ldr r1, 0x10001b4c <runtime.run$1$gowrapper+0x264>" "ldr r1, 0x10001b4c <runtime.run$1$gowrapper+0x264>" ref=0x0 call=false volatile.go:37
+0x10001a54 2 "MOV" "movs r2, #0x20" "movs r2, #0x20" ref=0x0 call=false volatile.go:37
+0x10001a56 2 "STR" "str r2, [r1]" "str r2, [r1]" ref=0x0 call=false volatile.go:37
+0x10001a58 2 "LDR" "ldr r3, 0x10001b50 <runtime.run$1$gowrapper+0x268>" "ldr r3, 0x10001b50 <runtime.run$1$gowrapper+0x268>" ref=0x0 call=false volatile.go:37
+0x10001a5a 2 "STR" "str r2, [r3]" "str r2, [r3]" ref=0x0 call=false volatile.go:37
+0x10001a5c 2 "STR" "str r2, [r1]" "str r2, [r1]" ref=0x0 call=false volatile.go:37
+0x10001a5e 2 "STR" "str r2, [r3]" "str r2, [r3]" ref=0x0 call=false volatile.go:37
+0x10001a60 2 "LDR" "ldr r1, [sp]" "ldr r1, [sp]" ref=0x0 call=false volatile.go:37
+0x10001a62 2 "STR" "str r1, [r0, #0x28]" "str r1, [r0, #0x28]" ref=0x0 call=false volatile.go:37
+0x10001a64 2 "LDR" "ldr r1, [sp, #8]" "ldr r1, [sp, #8]" ref=0x0 call=false volatile.go:37
+0x10001a66 2 "STR" "str r1, [r0, #0x2c]" "str r1, [r0, #0x2c]" ref=0x0 call=false volatile.go:37
+0x10001a68 2 "MOV" "mov r1, r0" "mov r1, r0" ref=0x0 call=false volatile.go:37
+0x10001a6a 2 "SUB" "subs r1, #0xc" "subs r1, #0xc" ref=0x0 call=false volatile.go:37
+0x10001a6c 2 "STR" "str r4, [r1]" "str r4, [r1]" ref=0x0 call=false volatile.go:37
+0x10001a6e 2 "MOV" "lsls r1, r4, #0x1d" "lsls r1, r4, #0x1d" ref=0x0 call=false volatile.go:37
+0x10001a70 2 "STR" "str r1, [r0]" "str r1, [r0]" ref=0x0 call=false volatile.go:37
+0x10001a72 2 "LDR" "ldr r1, 0x10001b54 <runtime.run$1$gowrapper+0x26c>" "ldr r1, 0x10001b54 <runtime.run$1$gowrapper+0x26c>" ref=0x0 call=false volatile.go:37
+0x10001a74 2 "STR" "str r1, [r0, #0x44]" "str r1, [r0, #0x44]" ref=0x0 call=false volatile.go:37
+0x10001a76 2 "MOV" "lsls r1, r4, #0x10" "lsls r1, r4, #0x10" ref=0x0 call=false volatile.go:37
+0x10001a78 2 "LDR" "ldr r2, [r0]" "ldr r2, [r0]" ref=0x0 call=false volatile.go:25
+0x10001a7a 2 "ORR" "orrs r2, r1" "orrs r2, r1" ref=0x0 call=false register.go:161
+0x10001a7c 2 "STR" "str r2, [r0]" "str r2, [r0]" ref=0x0 call=false volatile.go:37
+0x10001a7e 2 "LDR" "ldr r0, 0x10001b58 <runtime.run$1$gowrapper+0x270>" "ldr r0, 0x10001b58 <runtime.run$1$gowrapper+0x270>" ref=0x0 call=false scheduler_cooperative.go:249
+0x10001a80 2 "STRB" "strb r4, [r0, #0xc]" "strb r4, [r0, #0xc]" ref=0x0 call=false scheduler_cooperative.go:249
+0x10001a82 2 "LDR" "ldr r0, [sp, #0x10]" "ldr r0, [sp, #0x10]" ref=0x0 call=false main.go:13
+0x10001a84 2 "STR" "str r0, [sp, #0x44]" "str r0, [sp, #0x44]" ref=0x0 call=false main.go:13
+0x10001a86 2 "LDR" "ldr r0, [sp, #0xc]" "ldr r0, [sp, #0xc]" ref=0x0 call=false main.go:13
+0x10001a88 2 "STR" "str r0, [sp, #0x40]" "str r0, [sp, #0x40]" ref=0x0 call=false main.go:13
+0x10001a8a 2 "STR" "str r4, [sp, #0x3c]" "str r4, [sp, #0x3c]" ref=0x0 call=false main.go:13
+0x10001a8c 2 "ADD" "add r0, sp, #0x3c" "add r0, sp, #0x3c" ref=0x0 call=false main.go:13
+0x10001a8e 4 "BL" "bl 0x10001b5c <main.sumInts>" "bl 0x10001b5c <main.sumInts>" ref=0x10001b5c call=true main.go:13
+0x10001a92 2 "MOV" "mov r6, r0" "mov r6, r0" ref=0x0 call=false main.go:13
+0x10001a94 2 "CMP" "cmp r0, #0" "cmp r0, #0" ref=0x0 call=false print.go:0
+0x10001a96 2 "B" "bpl 0x10001aa0 <runtime.run$1$gowrapper+0x1b8>" "bpl 0x10001aa0 <runtime.run$1$gowrapper+0x1b8>" ref=0x10001aa0 call=false print.go:0
+0x10001a98 2 "MOV" "movs r0, #0x2d" "movs r0, #0x2d" ref=0x0 call=false print.go:0
+0x10001a9a 4 "BL" "bl 0x100010e4 <runtime.putchar>" "bl 0x100010e4 <runtime.putchar>" ref=0x100010e4 call=true print.go:69
+0x10001a9e 2 "RSB" "rsbs r6, r6, #0" "rsbs r6, r6, #0" ref=0x0 call=false print.go:70
+0x10001aa0 2 "ADD" "add r0, sp, #0x48" "add r0, sp, #0x48" ref=0x0 call=false print.go:0
+0x10001aa2 2 "MOV" "movs r1, #0x14" "movs r1, #0x14" ref=0x0 call=false print.go:0
+0x10001aa4 2 "STR" "str r1, [sp, #0x10]" "str r1, [sp, #0x10]" ref=0x0 call=false print.go:0
+0x10001aa6 4 "BL" "bl 0x100001dc <__aeabi_memclr>" "bl 0x100001dc <__aeabi_memclr>" ref=0x100001dc call=true print.go:77
+0x10001aaa 2 "MOV" "movs r4, #0x13" "movs r4, #0x13" ref=0x0 call=false print.go:77
+0x10001aac 2 "MOV" "mov r5, r4" "mov r5, r4" ref=0x0 call=false print.go:77
+0x10001aae 2 "CMP" "cmp r5, #0" "cmp r5, #0" ref=0x0 call=false print.go:0
+0x10001ab0 2 "B" "bmi 0x10001ad6 <runtime.run$1$gowrapper+0x1ee>" "bmi 0x10001ad6 <runtime.run$1$gowrapper+0x1ee>" ref=0x10001ad6 call=false print.go:0
+0x10001ab2 2 "MOV" "movs r7, #0xa" "movs r7, #0xa" ref=0x0 call=false print.go:0
+0x10001ab4 2 "MOV" "mov r0, r6" "mov r0, r6" ref=0x0 call=false print.go:86
+0x10001ab6 2 "MOV" "mov r1, r7" "mov r1, r7" ref=0x0 call=false print.go:86
+0x10001ab8 4 "BL" "bl 0x10000554 <__udivsi3>" "bl 0x10000554 <__udivsi3>" ref=0x10000554 call=true print.go:86
+0x10001abc 2 "MUL" "muls r7, r0, r7" "muls r7, r0, r7" ref=0x0 call=false print.go:81
+0x10001abe 2 "SUB" "subs r1, r6, r7" "subs r1, r6, r7" ref=0x0 call=false print.go:81
+0x10001ac0 2 "MOV" "mov r2, r1" "mov r2, r1" ref=0x0 call=false print.go:81
+0x10001ac2 2 "LDR" "ldr r3, [sp, #0x18]" "ldr r3, [sp, #0x18]" ref=0x0 call=false print.go:81
+0x10001ac4 2 "ORR" "orrs r2, r3" "orrs r2, r3" ref=0x0 call=false print.go:81
+0x10001ac6 2 "ADD" "add r3, sp, #0x48" "add r3, sp, #0x48" ref=0x0 call=false print.go:0
+0x10001ac8 2 "STRB" "strb r2, [r3, r5]" "strb r2, [r3, r5]" ref=0x0 call=false print.go:82
+0x10001aca 2 "CMP" "cmp r1, #0" "cmp r1, #0" ref=0x0 call=false print.go:0
+0x10001acc 2 "B" "beq 0x10001ad0 <runtime.run$1$gowrapper+0x1e8>" "beq 0x10001ad0 <runtime.run$1$gowrapper+0x1e8>" ref=0x10001ad0 call=false print.go:0
+0x10001ace 2 "MOV" "mov r4, r5" "mov r4, r5" ref=0x0 call=false print.go:0
+0x10001ad0 2 "SUB" "subs r5, r5, #1" "subs r5, r5, #1" ref=0x0 call=false print.go:80
+0x10001ad2 2 "MOV" "mov r6, r0" "mov r6, r0" ref=0x0 call=false print.go:0
+0x10001ad4 2 "B" "b 0x10001aae <runtime.run$1$gowrapper+0x1c6>" "b 0x10001aae <runtime.run$1$gowrapper+0x1c6>" ref=0x10001aae call=false print.go:0
+0x10001ad6 2 "CMP" "cmp r4, #0x14" "cmp r4, #0x14" ref=0x0 call=false print.go:0
+0x10001ad8 2 "MOV" "mov r5, r4" "mov r5, r4" ref=0x0 call=false print.go:0
+0x10001ada 2 "B" "bgt 0x10001aea <runtime.run$1$gowrapper+0x202>" "bgt 0x10001aea <runtime.run$1$gowrapper+0x202>" ref=0x10001aea call=false print.go:0
+0x10001adc 2 "LDR" "ldr r5, [sp, #0x10]" "ldr r5, [sp, #0x10]" ref=0x0 call=false print.go:0
+0x10001ade 2 "B" "b 0x10001aea <runtime.run$1$gowrapper+0x202>" "b 0x10001aea <runtime.run$1$gowrapper+0x202>" ref=0x10001aea call=false print.go:0
+0x10001ae0 2 "ADD" "add r0, sp, #0x48" "add r0, sp, #0x48" ref=0x0 call=false print.go:0
+0x10001ae2 2 "LDRB" "ldrb r0, [r0, r4]" "ldrb r0, [r0, r4]" ref=0x0 call=false print.go:90
+0x10001ae4 4 "BL" "bl 0x100010e4 <runtime.putchar>" "bl 0x100010e4 <runtime.putchar>" ref=0x100010e4 call=true print.go:90
+0x10001ae8 2 "ADD" "adds r4, r4, #1" "adds r4, r4, #1" ref=0x0 call=false print.go:89
+0x10001aea 2 "CMP" "cmp r5, r4" "cmp r5, r4" ref=0x0 call=false print.go:0
+0x10001aec 2 "B" "bne 0x10001ae0 <runtime.run$1$gowrapper+0x1f8>" "bne 0x10001ae0 <runtime.run$1$gowrapper+0x1f8>" ref=0x10001ae0 call=false print.go:0
+0x10001aee 4 "BL" "bl 0x100010d4 <runtime.printnl>" "bl 0x100010d4 <runtime.printnl>" ref=0x100010d4 call=true main.go:13
+0x10001af2 2 "LDR" "ldr r0, [sp, #0x14]" "ldr r0, [sp, #0x14]" ref=0x0 call=false scheduler_cooperative.go:251
+0x10001af4 2 "LDR" "ldr r1, 0x10001b58 <runtime.run$1$gowrapper+0x270>" "ldr r1, 0x10001b58 <runtime.run$1$gowrapper+0x270>" ref=0x0 call=false scheduler_cooperative.go:251
+0x10001af6 2 "STRB" "strb r0, [r1, #0xd]" "strb r0, [r1, #0xd]" ref=0x0 call=false scheduler_cooperative.go:251
+0x10001af8 2 "ADD" "add sp, #0x5c" "add sp, #0x5c" ref=0x0 call=false scheduler_cooperative.go:248
+0x10001afa 2 "POP" "pop {r4, r5, r6, r7, pc}" "pop {r4, r5, r6, r7, pc}" ref=0x0 call=false scheduler_cooperative.go:248
+0x10001afc 4 "" ".word 0x004000c000" ".word 0x004000c000" scheduler_cooperative.go:0
+0x10001b00 4 "" ".word 0x00fefbcdbf" ".word 0x00fefbcdbf" scheduler_cooperative.go:0
+0x10001b04 4 "" ".word 0x00fe3c7ffe" ".word 0x00fe3c7ffe" scheduler_cooperative.go:0
+0x10001b08 4 "" ".word 0x004005802c" ".word 0x004005802c" scheduler_cooperative.go:0
+0x10001b0c 4 "" ".word 0x0040008030" ".word 0x0040008030" scheduler_cooperative.go:0
+0x10001b10 4 "" ".word 0x0040024000" ".word 0x0040024000" scheduler_cooperative.go:0
+0x10001b14 4 "" ".word 0x0000fab000" ".word 0x0000fab000" scheduler_cooperative.go:0
+0x10001b18 4 "" ".word 0x0040028000" ".word 0x0040028000" scheduler_cooperative.go:0
+0x10001b1c 4 "" ".word 0x004002c000" ".word 0x004002c000" scheduler_cooperative.go:0
+0x10001b20 4 "" ".word 0x0040064000" ".word 0x0040064000" scheduler_cooperative.go:0
+0x10001b24 4 "" ".word 0x0000002ee0" ".word 0x0000002ee0" scheduler_cooperative.go:0
+0x10001b28 4 "" ".word 0x000bebc200" ".word 0x000bebc200" scheduler_cooperative.go:0
+0x10001b2c 4 "" ".word 0x0010000dc9" ".word 0x0010000dc9" scheduler_cooperative.go:0
+0x10001b30 4 "" ".word 0x0002dc6c00" ".word 0x0002dc6c00" scheduler_cooperative.go:0
+0x10001b34 4 "" ".word 0x000000b71b" ".word 0x000000b71b" scheduler_cooperative.go:0
+0x10001b38 4 "" ".word 0x0001ffffff" ".word 0x0001ffffff" scheduler_cooperative.go:0
+0x10001b3c 4 "" ".word 0x004005402c" ".word 0x004005402c" scheduler_cooperative.go:0
+0x10001b40 4 "" ".word 0x0050100000" ".word 0x0050100000" scheduler_cooperative.go:0
+0x10001b44 4 "" ".word 0x005011004c" ".word 0x005011004c" scheduler_cooperative.go:0
+0x10001b48 4 "" ".word 0x00e000e404" ".word 0x00e000e404" scheduler_cooperative.go:0
+0x10001b4c 4 "" ".word 0x00e000e280" ".word 0x00e000e280" scheduler_cooperative.go:0
+0x10001b50 4 "" ".word 0x00e000e100" ".word 0x00e000e100" scheduler_cooperative.go:0
+0x10001b54 4 "" ".word 0x0000011010" ".word 0x0000011010" scheduler_cooperative.go:0
+0x10001b58 4 "" ".word 0x00200015b0" ".word 0x00200015b0" scheduler_cooperative.go:0
+== main.sumInts 0x10001b5c 20 /Users/egon/code/gio/lensm/testdata/tinygo/main.go
+0x10001b5c 2 "MOV" "movs r2, #0" "movs r2, #0" ref=0x0 call=false .:0
+0x10001b5e 2 "MOV" "mov r1, r2" "mov r1, r2" ref=0x0 call=false main.go:0
+0x10001b60 2 "CMP" "cmp r2, #0xc" "cmp r2, #0xc" ref=0x0 call=false main.go:0
+0x10001b62 2 "B" "beq 0x10001b6c <main.sumInts+0x10>" "beq 0x10001b6c <main.sumInts+0x10>" ref=0x10001b6c call=false main.go:0
+0x10001b64 2 "LDR" "ldr r3, [r0, r2]" "ldr r3, [r0, r2]" ref=0x0 call=false main.go:0
+0x10001b66 2 "ADD" "adds r1, r3, r1" "adds r1, r3, r1" ref=0x0 call=false main.go:7
+0x10001b68 2 "ADD" "adds r2, r2, #4" "adds r2, r2, #4" ref=0x0 call=false main.go:0
+0x10001b6a 2 "B" "b 0x10001b60 <main.sumInts+0x4>" "b 0x10001b60 <main.sumInts+0x4>" ref=0x10001b60 call=false main.go:0
+0x10001b6c 2 "MOV" "mov r0, r1" "mov r0, r1" ref=0x0 call=false main.go:9
+0x10001b6e 2 "BX" "bx lr" "bx lr" ref=0x0 call=false main.go:9

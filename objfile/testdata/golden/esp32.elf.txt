@@ -1,0 +1,119 @@
+arch=xtensa funcs=22 sha256=368117a9b6cd1d128e894e358165e592f45d13006468c5dab902203427bdd5ed
+== runtime.runtimePanicAt 0x4008043c 112 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/panic.go
+0x4008043c 3 "ENTRY" "entry a1, 48" "entry a1, 48" ref=0x0 call=false panic.go:0
+0x4008043f 2 "S32I.N" "s32i.n a4, a1, 4" "s32i.n a4, a1, 4" ref=0x0 call=false panic.go:0
+0x40080441 2 "S32I.N" "s32i.n a3, a1, 0" "s32i.n a3, a1, 0" ref=0x0 call=false panic.go:0
+0x40080443 3 "L32R" "l32r a10, 0x40080420" "l32r a10, 0x40080420" ref=0x0 call=false panic.go:0
+0x40080446 2 "MOVI.N" "movi.n a11, 24" "movi.n a11, 24" ref=0x0 call=false panic.go:0
+0x40080448 3 "L32R" "l32r a3, 0x40080424" "l32r a3, 0x40080424" ref=0x0 call=false panic.go:0
+0x4008044b 3 "CALLX8" "callx8 a3" "callx8 a3" ref=0x0 call=true panic.go:99
+0x4008044e 3 "ADDI" "addi a5, a2, -3" "addi a5, a2, -3" ref=0x0 call=false panic.go:100
+0x40080451 3 "BEQZ" "beqz a5, 0x40080489 <runtime.runtimePanicAt+0x4d>" "beqz a5, 0x40080489 <runtime.runtimePanicAt+0x4d>" ref=0x40080489 call=false print.go:0
+0x40080454 2 "MOVI.N" "movi.n a7, 48" "movi.n a7, 48" ref=0x0 call=false print.go:0
+0x40080456 3 "L32R" "l32r a2, 0x40080428" "l32r a2, 0x40080428" ref=0x0 call=false print.go:0
+0x40080459 2 "MOV.N" "mov.n a10, a7" "mov.n a10, a7" ref=0x0 call=false print.go:376
+0x4008045b 3 "CALLX8" "callx8 a2" "callx8 a2" ref=0x0 call=true print.go:376
+0x4008045e 3 "MOVI" "movi a10, 120" "movi a10, 120" ref=0x0 call=false print.go:376
+0x40080461 3 "CALLX8" "callx8 a2" "callx8 a2" ref=0x0 call=true print.go:377
+0x40080464 2 "MOVI.N" "movi.n a6, 8" "movi.n a6, 8" ref=0x0 call=false print.go:377
+0x40080466 3 "L32R" "l32r a4, 0x4008042c" "l32r a4, 0x4008042c" ref=0x0 call=false print.go:0
+0x40080469 3 "BEQZ" "beqz a6, 0x40080491 <runtime.runtimePanicAt+0x55>" "beqz a6, 0x40080491 <runtime.runtimePanicAt+0x55>" ref=0x40080491 call=false print.go:0
+0x4008046c 3 "EXTUI" "extui a8, a5, 28, 4" "extui a8, a5, 28, 4" ref=0x0 call=false print.go:379
+0x4008046f 3 "BLTU" "bltu a5, a4, 0x40080478 <runtime.runtimePanicAt+0x3c>" "bltu a5, a4, 0x40080478 <runtime.runtimePanicAt+0x3c>" ref=0x40080478 call=false print.go:0
+0x40080472 3 "ADDI" "addi a10, a8, 87" "addi a10, a8, 87" ref=0x0 call=false print.go:0
+0x40080475 3 "J" "j 0x4008047b <runtime.runtimePanicAt+0x3f>" "j 0x4008047b <runtime.runtimePanicAt+0x3f>" ref=0x4008047b call=false print.go:0
+0x40080478 3 "OR" "or a10, a8, a7" "or a10, a8, a7" ref=0x0 call=false print.go:0
+0x4008047b 3 "CALLX8" "callx8 a2" "callx8 a2" ref=0x0 call=true print.go:0
+0x4008047e 2 "ADDI.N" "addi.n a6, a6, -1" "addi.n a6, a6, -1" ref=0x0 call=false print.go:0
+0x40080480 3 "SLLI" "slli a5, a5, 4" "slli a5, a5, 4" ref=0x0 call=false print.go:385
+0x40080483 3 "BEQZ" "beqz a6, 0x40080491 <runtime.runtimePanicAt+0x55>" "beqz a6, 0x40080491 <runtime.runtimePanicAt+0x55>" ref=0x40080491 call=false print.go:0
+0x40080486 3 "J" "j 0x4008046c <runtime.runtimePanicAt+0x30>" "j 0x4008046c <runtime.runtimePanicAt+0x30>" ref=0x4008046c call=false print.go:0
+0x40080489 3 "L32R" "l32r a10, 0x40080430" "l32r a10, 0x40080430" ref=0x0 call=false print.go:0
+0x4008048c 2 "MOVI.N" "movi.n a11, 3" "movi.n a11, 3" ref=0x0 call=false print.go:0
+0x4008048e 3 "CALLX8" "callx8 a3" "callx8 a3" ref=0x0 call=true print.go:373
+0x40080491 3 "L32R" "l32r a10, 0x40080434" "l32r a10, 0x40080434" ref=0x0 call=false print.go:0
+0x40080494 2 "MOVI.N" "movi.n a11, 2" "movi.n a11, 2" ref=0x0 call=false print.go:0
+0x40080496 3 "CALLX8" "callx8 a3" "callx8 a3" ref=0x0 call=true panic.go:101
+0x40080499 2 "L32I.N" "l32i.n a10, a1, 0" "l32i.n a10, a1, 0" ref=0x0 call=false panic.go:105
+0x4008049b 2 "L32I.N" "l32i.n a11, a1, 4" "l32i.n a11, a1, 4" ref=0x0 call=false panic.go:105
+0x4008049d 3 "CALLX8" "callx8 a3" "callx8 a3" ref=0x0 call=true panic.go:105
+0x400804a0 3 "L32R" "l32r a8, 0x40080438" "l32r a8, 0x40080438" ref=0x0 call=false panic.go:105
+0x400804a3 3 "CALLX8" "callx8 a8" "callx8 a8" ref=0x0 call=true panic.go:106
+0x400804a6 3 "WAITI" "waiti 0" "waiti 0" ref=0x0 call=false runtime_esp32.go:78
+0x400804a9 3 "J" "j 0x400804a6 <runtime.runtimePanicAt+0x6a>" "j 0x400804a6 <runtime.runtimePanicAt+0x6a>" ref=0x400804a6 call=false runtime_esp32.go:0
+== runtime.runtimePanic 0x40080678 15 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/panic.go
+0x40080678 3 "ENTRY" "entry a1, 32" "entry a1, 32" ref=0x0 call=false panic.go:0
+0x4008067b 3 "L32R" "l32r a8, 0x40080674" "l32r a8, 0x40080674" ref=0x0 call=false panic.go:0
+0x4008067e 2 "MOV.N" "mov.n a10, a0" "mov.n a10, a0" ref=0x0 call=false panic.go:88
+0x40080680 2 "MOV.N" "mov.n a11, a2" "mov.n a11, a2" ref=0x0 call=false panic.go:88
+0x40080682 2 "MOV.N" "mov.n a12, a3" "mov.n a12, a3" ref=0x0 call=false panic.go:88
+0x40080684 3 "CALLX8" "callx8 a8" "callx8 a8" ref=0x0 call=true panic.go:88
+== runtime.run$1$gowrapper 0x400808e8 142 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/scheduler_cooperative.go
+0x400808e8 3 "ENTRY" "entry a1, 80" "entry a1, 80" ref=0x0 call=false scheduler_cooperative.go:0
+0x400808eb 2 "MOVI.N" "movi.n a8, 3" "movi.n a8, 3" ref=0x0 call=false scheduler_cooperative.go:0
+0x400808ed 2 "S32I.N" "s32i.n a8, a1, 12" "s32i.n a8, a1, 12" ref=0x0 call=false main.go:13
+0x400808ef 2 "MOVI.N" "movi.n a8, 2" "movi.n a8, 2" ref=0x0 call=false main.go:13
+0x400808f1 2 "S32I.N" "s32i.n a8, a1, 8" "s32i.n a8, a1, 8" ref=0x0 call=false main.go:13
+0x400808f3 2 "MOVI.N" "movi.n a8, 1" "movi.n a8, 1" ref=0x0 call=false main.go:13
+0x400808f5 2 "S32I.N" "s32i.n a8, a1, 0" "s32i.n a8, a1, 0" ref=0x0 call=false main.go:13
+0x400808f7 2 "S32I.N" "s32i.n a8, a1, 4" "s32i.n a8, a1, 4" ref=0x0 call=false main.go:13
+0x400808f9 3 "ADDI" "addi a10, a1, 4" "addi a10, a1, 4" ref=0x0 call=false main.go:13
+0x400808fc 3 "L32R" "l32r a8, 0x400808d4" "l32r a8, 0x400808d4" ref=0x0 call=false main.go:13
+0x400808ff 3 "CALLX8" "callx8 a8" "callx8 a8" ref=0x0 call=true main.go:13
+0x40080902 2 "MOV.N" "mov.n a7, a10" "mov.n a7, a10" ref=0x0 call=false main.go:13
+0x40080904 2 "MOVI.N" "movi.n a2, -1" "movi.n a2, -1" ref=0x0 call=false main.go:13
+0x40080906 3 "L32R" "l32r a3, 0x400808d8" "l32r a3, 0x400808d8" ref=0x0 call=false main.go:13
+0x40080909 3 "BLT" "blt a2, a7, 0x40080914 <runtime.run$1$gowrapper+0x2c>" "blt a2, a7, 0x40080914 <runtime.run$1$gowrapper+0x2c>" ref=0x40080914 call=false print.go:0
+0x4008090c 2 "MOVI.N" "movi.n a10, 45" "movi.n a10, 45" ref=0x0 call=false print.go:0
+0x4008090e 3 "CALLX8" "callx8 a3" "callx8 a3" ref=0x0 call=true print.go:69
+0x40080911 3 "NEG" "neg a7, a7" "neg a7, a7" ref=0x0 call=false print.go:70
+0x40080914 3 "ADDI" "addi a10, a1, 16" "addi a10, a1, 16" ref=0x0 call=false print.go:0
+0x40080917 2 "MOVI.N" "movi.n a5, 0" "movi.n a5, 0" ref=0x0 call=false print.go:0
+0x40080919 2 "MOVI.N" "movi.n a6, 20" "movi.n a6, 20" ref=0x0 call=false print.go:0
+0x4008091b 3 "L32R" "l32r a8, 0x400808dc" "l32r a8, 0x400808dc" ref=0x0 call=false print.go:0
+0x4008091e 2 "MOV.N" "mov.n a11, a5" "mov.n a11, a5" ref=0x0 call=false print.go:77
+0x40080920 2 "MOV.N" "mov.n a12, a6" "mov.n a12, a6" ref=0x0 call=false print.go:77
+0x40080922 3 "CALLX8" "callx8 a8" "callx8 a8" ref=0x0 call=true print.go:77
+0x40080925 2 "MOVI.N" "movi.n a4, 19" "movi.n a4, 19" ref=0x0 call=false print.go:77
+0x40080927 2 "MOVI.N" "movi.n a8, 10" "movi.n a8, 10" ref=0x0 call=false print.go:77
+0x40080929 2 "MOVI.N" "movi.n a9, 48" "movi.n a9, 48" ref=0x0 call=false print.go:77
+0x4008092b 2 "MOV.N" "mov.n a10, a4" "mov.n a10, a4" ref=0x0 call=false print.go:77
+0x4008092d 3 "BGE" "bge a2, a10, 0x40080950 <runtime.run$1$gowrapper+0x68>" "bge a2, a10, 0x40080950 <runtime.run$1$gowrapper+0x68>" ref=0x40080950 call=false print.go:0
+0x40080930 3 "ADDI" "addi a11, a1, 16" "addi a11, a1, 16" ref=0x0 call=false print.go:0
+0x40080933 2 "ADD.N" "add.n a12, a11, a10" "add.n a12, a11, a10" ref=0x0 call=false print.go:82
+0x40080935 3 "QUOU" "quou a11, a7, a8" "quou a11, a7, a8" ref=0x0 call=false print.go:86
+0x40080938 3 "MULL" "mull a13, a11, a8" "mull a13, a11, a8" ref=0x0 call=false print.go:81
+0x4008093b 3 "SUB" "sub a13, a7, a13" "sub a13, a7, a13" ref=0x0 call=false print.go:81
+0x4008093e 3 "OR" "or a14, a13, a9" "or a14, a13, a9" ref=0x0 call=false print.go:81
+0x40080941 3 "S8I" "s8i a14, a12, 0" "s8i a14, a12, 0" ref=0x0 call=false print.go:82
+0x40080944 3 "BEQ" "beq a13, a5, 0x40080949 <runtime.run$1$gowrapper+0x61>" "beq a13, a5, 0x40080949 <runtime.run$1$gowrapper+0x61>" ref=0x40080949 call=false print.go:0
+0x40080947 2 "MOV.N" "mov.n a4, a10" "mov.n a4, a10" ref=0x0 call=false print.go:0
+0x40080949 2 "ADDI.N" "addi.n a10, a10, -1" "addi.n a10, a10, -1" ref=0x0 call=false print.go:80
+0x4008094b 2 "MOV.N" "mov.n a7, a11" "mov.n a7, a11" ref=0x0 call=false print.go:0
+0x4008094d 3 "BLT" "blt a2, a10, 0x40080930 <runtime.run$1$gowrapper+0x48>" "blt a2, a10, 0x40080930 <runtime.run$1$gowrapper+0x48>" ref=0x40080930 call=false print.go:0
+0x40080950 3 "MAX" "max a7, a4, a6" "max a7, a4, a6" ref=0x0 call=false print.go:0
+0x40080953 3 "BEQ" "beq a7, a4, 0x40080966 <runtime.run$1$gowrapper+0x7e>" "beq a7, a4, 0x40080966 <runtime.run$1$gowrapper+0x7e>" ref=0x40080966 call=false print.go:0
+0x40080956 3 "ADDI" "addi a8, a1, 16" "addi a8, a1, 16" ref=0x0 call=false print.go:0
+0x40080959 2 "ADD.N" "add.n a8, a8, a4" "add.n a8, a8, a4" ref=0x0 call=false print.go:90
+0x4008095b 3 "L8UI" "l8ui a10, a8, 0" "l8ui a10, a8, 0" ref=0x0 call=false print.go:90
+0x4008095e 3 "CALLX8" "callx8 a3" "callx8 a3" ref=0x0 call=true print.go:90
+0x40080961 2 "ADDI.N" "addi.n a4, a4, 1" "addi.n a4, a4, 1" ref=0x0 call=false print.go:89
+0x40080963 3 "BNE" "bne a7, a4, 0x40080956 <runtime.run$1$gowrapper+0x6e>" "bne a7, a4, 0x40080956 <runtime.run$1$gowrapper+0x6e>" ref=0x40080956 call=false print.go:0
+0x40080966 3 "L32R" "l32r a8, 0x400808e0" "l32r a8, 0x400808e0" ref=0x0 call=false print.go:0
+0x40080969 3 "CALLX8" "callx8 a8" "callx8 a8" ref=0x0 call=true main.go:13
+0x4008096c 3 "L32R" "l32r a8, 0x400808e4" "l32r a8, 0x400808e4" ref=0x0 call=false main.go:13
+0x4008096f 2 "L32I.N" "l32i.n a9, a1, 0" "l32i.n a9, a1, 0" ref=0x0 call=false scheduler_cooperative.go:251
+0x40080971 3 "S8I" "s8i a9, a8, 0" "s8i a9, a8, 0" ref=0x0 call=false scheduler_cooperative.go:251
+0x40080974 2 "RETW.N" "retw.n" "retw.n" ref=0x0 call=false scheduler_cooperative.go:248
+== main.sumInts 0x40080990 25 /Users/egon/code/gio/lensm/testdata/tinygo/main.go
+0x40080990 3 "ENTRY" "entry a1, 32" "entry a1, 32" ref=0x0 call=false main.go:0
+0x40080993 2 "MOVI.N" "movi.n a9, 0" "movi.n a9, 0" ref=0x0 call=false main.go:0
+0x40080995 2 "MOV.N" "mov.n a8, a9" "mov.n a8, a9" ref=0x0 call=false main.go:0
+0x40080997 3 "BEQI" "beqi a9, 12, 0x400809a5 <main.sumInts+0x15>" "beqi a9, 12, 0x400809a5 <main.sumInts+0x15>" ref=0x400809a5 call=false main.go:0
+0x4008099a 2 "ADD.N" "add.n a10, a2, a9" "add.n a10, a2, a9" ref=0x0 call=false main.go:0
+0x4008099c 2 "L32I.N" "l32i.n a10, a10, 0" "l32i.n a10, a10, 0" ref=0x0 call=false main.go:0
+0x4008099e 2 "ADD.N" "add.n a8, a10, a8" "add.n a8, a10, a8" ref=0x0 call=false main.go:7
+0x400809a0 2 "ADDI.N" "addi.n a9, a9, 4" "addi.n a9, a9, 4" ref=0x0 call=false main.go:0
+0x400809a2 3 "BNEI" "bnei a9, 12, 0x4008099a <main.sumInts+0xa>" "bnei a9, 12, 0x4008099a <main.sumInts+0xa>" ref=0x4008099a call=false main.go:0
+0x400809a5 2 "MOV.N" "mov.n a2, a8" "mov.n a2, a8" ref=0x0 call=false main.go:9
+0x400809a7 2 "RETW.N" "retw.n" "retw.n" ref=0x0 call=false main.go:9

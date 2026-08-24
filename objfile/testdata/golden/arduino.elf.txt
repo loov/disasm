@@ -1,0 +1,304 @@
+arch=avr funcs=20 sha256=a04b9d4da0e6cf76d54f9a91d612dec091f5c951c5a585d4d9382fd902f18691
+== runtime.runtimePanicAt 0xaf6 40 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/panic.go
+0xaf6 2 "PUSH" "push r14" "push r14" ref=0x0 call=false .:0
+0xaf8 2 "PUSH" "push r15" "push r15" ref=0x0 call=false panic.go:0
+0xafa 2 "PUSH" "push r16" "push r16" ref=0x0 call=false panic.go:0
+0xafc 2 "PUSH" "push r17" "push r17" ref=0x0 call=false panic.go:0
+0xafe 2 "MOVW" "movw r16, r22" "movw r16, r22" ref=0x0 call=false panic.go:0
+0xb00 2 "MOVW" "movw r14, r24" "movw r14, r24" ref=0x0 call=false panic.go:0
+0xb02 2 "LDI" "ldi r24, 0x00" "ldi r24, 0x00" ref=0x0 call=false panic.go:103
+0xb04 2 "LDI" "ldi r25, 0x03" "ldi r25, 0x03" ref=0x0 call=false panic.go:103
+0xb06 2 "LDI" "ldi r22, 0x16" "ldi r22, 0x16" ref=0x0 call=false panic.go:103
+0xb08 2 "LDI" "ldi r23, 0x00" "ldi r23, 0x00" ref=0x0 call=false panic.go:103
+0xb0a 4 "CALL" "call 0xb1e <runtime.printstring>" "call 0xb1e <runtime.printstring>" ref=0xb1e call=true panic.go:103
+0xb0e 2 "MOVW" "movw r24, r14" "movw r24, r14" ref=0x0 call=false panic.go:105
+0xb10 2 "MOVW" "movw r22, r16" "movw r22, r16" ref=0x0 call=false panic.go:105
+0xb12 4 "CALL" "call 0xb1e <runtime.printstring>" "call 0xb1e <runtime.printstring>" ref=0xb1e call=true panic.go:105
+0xb16 4 "CALL" "call 0xb86 <runtime.printnl>" "call 0xb86 <runtime.printnl>" ref=0xb86 call=true panic.go:106
+0xb1a 4 "CALL" "call 0xcc0 <runtime.abort>" "call 0xcc0 <runtime.abort>" ref=0xcc0 call=true panic.go:107
+== runtime.run 0xd6a 492 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/scheduler_none.go
+0xd6a 2 "PUSH" "push r2" "push r2" ref=0x0 call=false .:0
+0xd6c 2 "PUSH" "push r3" "push r3" ref=0x0 call=false scheduler_none.go:0
+0xd6e 2 "PUSH" "push r4" "push r4" ref=0x0 call=false scheduler_none.go:0
+0xd70 2 "PUSH" "push r5" "push r5" ref=0x0 call=false scheduler_none.go:0
+0xd72 2 "PUSH" "push r6" "push r6" ref=0x0 call=false scheduler_none.go:0
+0xd74 2 "PUSH" "push r7" "push r7" ref=0x0 call=false scheduler_none.go:0
+0xd76 2 "PUSH" "push r8" "push r8" ref=0x0 call=false scheduler_none.go:0
+0xd78 2 "PUSH" "push r9" "push r9" ref=0x0 call=false scheduler_none.go:0
+0xd7a 2 "PUSH" "push r10" "push r10" ref=0x0 call=false scheduler_none.go:0
+0xd7c 2 "PUSH" "push r11" "push r11" ref=0x0 call=false scheduler_none.go:0
+0xd7e 2 "PUSH" "push r12" "push r12" ref=0x0 call=false scheduler_none.go:0
+0xd80 2 "PUSH" "push r13" "push r13" ref=0x0 call=false scheduler_none.go:0
+0xd82 2 "PUSH" "push r14" "push r14" ref=0x0 call=false scheduler_none.go:0
+0xd84 2 "PUSH" "push r15" "push r15" ref=0x0 call=false scheduler_none.go:0
+0xd86 2 "PUSH" "push r16" "push r16" ref=0x0 call=false scheduler_none.go:0
+0xd88 2 "PUSH" "push r17" "push r17" ref=0x0 call=false scheduler_none.go:0
+0xd8a 2 "PUSH" "push r28" "push r28" ref=0x0 call=false scheduler_none.go:0
+0xd8c 2 "PUSH" "push r29" "push r29" ref=0x0 call=false scheduler_none.go:0
+0xd8e 2 "IN" "in r28, 0x3d" "in r28, 0x3d" ref=0x0 call=false scheduler_none.go:0
+0xd90 2 "IN" "in r29, 0x3e" "in r29, 0x3e" ref=0x0 call=false scheduler_none.go:0
+0xd92 2 "SBIW" "sbiw r28, 0x2c" "sbiw r28, 0x2c" ref=0x0 call=false scheduler_none.go:0
+0xd94 2 "IN" "in r0, 0x3f" "in r0, 0x3f" ref=0x0 call=false scheduler_none.go:0
+0xd96 2 "CLI" "cli" "cli" ref=0x0 call=false scheduler_none.go:0
+0xd98 2 "OUT" "out 0x3e, r29" "out 0x3e, r29" ref=0x0 call=false scheduler_none.go:0
+0xd9a 2 "OUT" "out 0x3f, r0" "out 0x3f, r0" ref=0x0 call=false scheduler_none.go:0
+0xd9c 2 "OUT" "out 0x3d, r28" "out 0x3d, r28" ref=0x0 call=false scheduler_none.go:0
+0xd9e 2 "LDI" "ldi r16, 0x5d" "ldi r16, 0x5d" ref=0x0 call=false gc_blocks.go:367
+0xda0 2 "LDI" "ldi r17, 0x03" "ldi r17, 0x03" ref=0x0 call=false gc_blocks.go:367
+0xda2 2 "LDI" "ldi r24, 0x20" "ldi r24, 0x20" ref=0x0 call=false gc_blocks.go:0
+0xda4 2 "LDI" "ldi r25, 0x09" "ldi r25, 0x09" ref=0x0 call=false gc_blocks.go:0
+0xda6 2 "SUB" "sub r24, r16" "sub r24, r16" ref=0x0 call=false gc_blocks.go:367
+0xda8 2 "SBC" "sbc r25, r17" "sbc r25, r17" ref=0x0 call=false gc_blocks.go:367
+0xdaa 2 "LDI" "ldi r22, 0x21" "ldi r22, 0x21" ref=0x0 call=false gc_blocks.go:367
+0xdac 2 "LDI" "ldi r23, 0x00" "ldi r23, 0x00" ref=0x0 call=false gc_blocks.go:367
+0xdae 4 "CALL" "call 0x9c <__udivmodhi4>" "call 0x9c <__udivmodhi4>" ref=0x9c call=true gc_blocks.go:367
+0xdb2 2 "MOVW" "movw r20, r22" "movw r20, r22" ref=0x0 call=false gc_blocks.go:367
+0xdb4 2 "LDI" "ldi r24, 0x00" "ldi r24, 0x00" ref=0x0 call=false gc_blocks.go:367
+0xdb6 2 "LDI" "ldi r25, 0x09" "ldi r25, 0x09" ref=0x0 call=false gc_blocks.go:367
+0xdb8 2 "SUB" "sub r24, r20" "sub r24, r20" ref=0x0 call=false gc_blocks.go:368
+0xdba 2 "SBC" "sbc r25, r21" "sbc r25, r21" ref=0x0 call=false gc_blocks.go:368
+0xdbc 4 "STS" "sts 0x0350, r25" "sts 0x0350, r25" ref=0x0 call=false gc_blocks.go:368
+0xdc0 4 "STS" "sts 0x034f, r24" "sts 0x034f, r24" ref=0x0 call=false gc_blocks.go:368
+0xdc4 2 "MOVW" "movw r18, r24" "movw r18, r24" ref=0x0 call=false gc_blocks.go:371
+0xdc6 2 "SUB" "sub r18, r16" "sub r18, r16" ref=0x0 call=false gc_blocks.go:371
+0xdc8 2 "SBC" "sbc r19, r17" "sbc r19, r17" ref=0x0 call=false gc_blocks.go:371
+0xdca 2 "LSR" "lsr r19" "lsr r19" ref=0x0 call=false gc_blocks.go:371
+0xdcc 2 "ROR" "ror r18" "ror r18" ref=0x0 call=false gc_blocks.go:371
+0xdce 2 "LSR" "lsr r19" "lsr r19" ref=0x0 call=false gc_blocks.go:371
+0xdd0 2 "ROR" "ror r18" "ror r18" ref=0x0 call=false gc_blocks.go:371
+0xdd2 2 "LSR" "lsr r19" "lsr r19" ref=0x0 call=false gc_blocks.go:371
+0xdd4 2 "ROR" "ror r18" "ror r18" ref=0x0 call=false gc_blocks.go:371
+0xdd6 4 "STS" "sts 0x0354, r19" "sts 0x0354, r19" ref=0x0 call=false gc_blocks.go:372
+0xdda 4 "STS" "sts 0x0353, r18" "sts 0x0353, r18" ref=0x0 call=false gc_blocks.go:372
+0xdde 2 "MOV" "mov r22, r1" "mov r22, r1" ref=0x0 call=false runtime.go:53
+0xde0 4 "CALL" "call 0xe8 <memset>" "call 0xe8 <memset>" ref=0xe8 call=true runtime.go:53
+0xde4 4 "CALL" "call 0xba0 <runtime.buildFreeRanges>" "call 0xba0 <runtime.buildFreeRanges>" ref=0xba0 call=true gc_blocks.go:321
+0xde8 2 "LDI" "ldi r16, 0x00" "ldi r16, 0x00" ref=0x0 call=false gc_blocks.go:321
+0xdea 2 "LDI" "ldi r17, 0x00" "ldi r17, 0x00" ref=0x0 call=false gc_blocks.go:0
+0xdec 2 "STD" "std Y+24, r17" "std Y+24, r17" ref=0x0 call=false main.go:13
+0xdee 2 "STD" "std Y+23, r16" "std Y+23, r16" ref=0x0 call=false main.go:13
+0xdf0 2 "LDI" "ldi r24, 0x03" "ldi r24, 0x03" ref=0x0 call=false main.go:13
+0xdf2 2 "LDI" "ldi r25, 0x00" "ldi r25, 0x00" ref=0x0 call=false main.go:13
+0xdf4 2 "STD" "std Y+22, r25" "std Y+22, r25" ref=0x0 call=false main.go:13
+0xdf6 2 "STD" "std Y+21, r24" "std Y+21, r24" ref=0x0 call=false main.go:13
+0xdf8 2 "STD" "std Y+20, r17" "std Y+20, r17" ref=0x0 call=false main.go:13
+0xdfa 2 "STD" "std Y+19, r16" "std Y+19, r16" ref=0x0 call=false main.go:13
+0xdfc 2 "LDI" "ldi r24, 0x02" "ldi r24, 0x02" ref=0x0 call=false main.go:13
+0xdfe 2 "LDI" "ldi r25, 0x00" "ldi r25, 0x00" ref=0x0 call=false main.go:13
+0xe00 2 "STD" "std Y+18, r25" "std Y+18, r25" ref=0x0 call=false main.go:13
+0xe02 2 "STD" "std Y+17, r24" "std Y+17, r24" ref=0x0 call=false main.go:13
+0xe04 2 "STD" "std Y+16, r17" "std Y+16, r17" ref=0x0 call=false main.go:13
+0xe06 2 "STD" "std Y+15, r16" "std Y+15, r16" ref=0x0 call=false main.go:13
+0xe08 2 "LDI" "ldi r24, 0x01" "ldi r24, 0x01" ref=0x0 call=false main.go:13
+0xe0a 2 "LDI" "ldi r25, 0x00" "ldi r25, 0x00" ref=0x0 call=false main.go:13
+0xe0c 2 "STD" "std Y+14, r25" "std Y+14, r25" ref=0x0 call=false main.go:13
+0xe0e 2 "STD" "std Y+13, r24" "std Y+13, r24" ref=0x0 call=false main.go:13
+0xe10 2 "MOVW" "movw r24, r28" "movw r24, r28" ref=0x0 call=false main.go:13
+0xe12 2 "ADIW" "adiw r24, 0x0d" "adiw r24, 0x0d" ref=0x0 call=false main.go:13
+0xe14 4 "CALL" "call 0xf56 <main.sumInts>" "call 0xf56 <main.sumInts>" ref=0xf56 call=true main.go:13
+0xe18 2 "MOVW" "movw r2, r22" "movw r2, r22" ref=0x0 call=false main.go:13
+0xe1a 2 "MOVW" "movw r14, r24" "movw r14, r24" ref=0x0 call=false main.go:13
+0xe1c 2 "LDI" "ldi r24, 0x01" "ldi r24, 0x01" ref=0x0 call=false main.go:13
+0xe1e 2 "MOV" "mov r25, r15" "mov r25, r15" ref=0x0 call=false print.go:68
+0xe20 2 "AND" "and r25, r25" "and r25, r25" ref=0x0 call=false print.go:68
+0xe22 2 "BRPL" "brpl 0xe26 <runtime.run+0xbc>" "brpl 0xe26 <runtime.run+0xbc>" ref=0xe26 call=false print.go:68
+0xe24 2 "MOV" "mov r24, r1" "mov r24, r1" ref=0x0 call=false print.go:0
+0xe26 2 "ANDI" "andi r24, 0x01" "andi r24, 0x01" ref=0x0 call=false print.go:68
+0xe28 2 "CPI" "cpi r24, 0x00" "cpi r24, 0x00" ref=0x0 call=false print.go:0
+0xe2a 2 "BRNE" "brne 0xe40 <runtime.run+0xd6>" "brne 0xe40 <runtime.run+0xd6>" ref=0xe40 call=false print.go:0
+0xe2c 2 "LDI" "ldi r24, 0x2d" "ldi r24, 0x2d" ref=0x0 call=false print.go:69
+0xe2e 4 "CALL" "call 0xcb0 <runtime.putchar>" "call 0xcb0 <runtime.putchar>" ref=0xcb0 call=true print.go:69
+0xe32 2 "MOVW" "movw r24, r16" "movw r24, r16" ref=0x0 call=false print.go:70
+0xe34 2 "SUB" "sub r24, r2" "sub r24, r2" ref=0x0 call=false print.go:70
+0xe36 2 "SBC" "sbc r25, r3" "sbc r25, r3" ref=0x0 call=false print.go:70
+0xe38 2 "SBC" "sbc r16, r14" "sbc r16, r14" ref=0x0 call=false print.go:70
+0xe3a 2 "SBC" "sbc r17, r15" "sbc r17, r15" ref=0x0 call=false print.go:70
+0xe3c 2 "MOVW" "movw r2, r24" "movw r2, r24" ref=0x0 call=false print.go:0
+0xe3e 2 "MOVW" "movw r14, r16" "movw r14, r16" ref=0x0 call=false print.go:0
+0xe40 2 "MOVW" "movw r24, r28" "movw r24, r28" ref=0x0 call=false print.go:0
+0xe42 2 "ADIW" "adiw r24, 0x19" "adiw r24, 0x19" ref=0x0 call=false print.go:0
+0xe44 2 "LDI" "ldi r20, 0x14" "ldi r20, 0x14" ref=0x0 call=false print.go:0
+0xe46 2 "LDI" "ldi r21, 0x00" "ldi r21, 0x00" ref=0x0 call=false print.go:0
+0xe48 2 "STD" "std Y+12, r25" "std Y+12, r25" ref=0x0 call=false print.go:0
+0xe4a 2 "STD" "std Y+11, r24" "std Y+11, r24" ref=0x0 call=false print.go:0
+0xe4c 2 "MOV" "mov r22, r1" "mov r22, r1" ref=0x0 call=false print.go:77
+0xe4e 4 "CALL" "call 0xe8 <memset>" "call 0xe8 <memset>" ref=0xe8 call=true print.go:77
+0xe52 2 "LDI" "ldi r26, 0x00" "ldi r26, 0x00" ref=0x0 call=false print.go:77
+0xe54 2 "LDI" "ldi r27, 0x00" "ldi r27, 0x00" ref=0x0 call=false print.go:77
+0xe56 2 "LDI" "ldi r18, 0x13" "ldi r18, 0x13" ref=0x0 call=false print.go:0
+0xe58 2 "LDI" "ldi r19, 0x00" "ldi r19, 0x00" ref=0x0 call=false print.go:0
+0xe5a 2 "MOVW" "movw r22, r26" "movw r22, r26" ref=0x0 call=false print.go:0
+0xe5c 2 "MOVW" "movw r24, r26" "movw r24, r26" ref=0x0 call=false print.go:0
+0xe5e 2 "MOVW" "movw r16, r26" "movw r16, r26" ref=0x0 call=false print.go:0
+0xe60 2 "MOVW" "movw r30, r18" "movw r30, r18" ref=0x0 call=false print.go:0
+0xe62 2 "LDI" "ldi r20, 0x01" "ldi r20, 0x01" ref=0x0 call=false print.go:0
+0xe64 2 "MOV" "mov r21, r27" "mov r21, r27" ref=0x0 call=false print.go:80
+0xe66 2 "AND" "and r21, r21" "and r21, r21" ref=0x0 call=false print.go:80
+0xe68 2 "BRPL" "brpl 0xe6c <runtime.run+0x102>" "brpl 0xe6c <runtime.run+0x102>" ref=0xe6c call=false print.go:80
+0xe6a 2 "MOV" "mov r20, r1" "mov r20, r1" ref=0x0 call=false print.go:0
+0xe6c 2 "ANDI" "andi r20, 0x01" "andi r20, 0x01" ref=0x0 call=false print.go:80
+0xe6e 2 "CPI" "cpi r20, 0x00" "cpi r20, 0x00" ref=0x0 call=false print.go:0
+0xe70 2 "BRNE" "brne 0xe74 <runtime.run+0x10a>" "brne 0xe74 <runtime.run+0x10a>" ref=0xe74 call=false print.go:0
+0xe72 2 "RJMP" "rjmp 0xf08 <runtime.run+0x19e>" "rjmp 0xf08 <runtime.run+0x19e>" ref=0xf08 call=false print.go:0
+0xe74 2 "STD" "std Y+8, r19" "std Y+8, r19" ref=0x0 call=false print.go:0
+0xe76 2 "STD" "std Y+7, r18" "std Y+7, r18" ref=0x0 call=false print.go:0
+0xe78 2 "MOVW" "movw r18, r2" "movw r18, r2" ref=0x0 call=false print.go:86
+0xe7a 2 "MOVW" "movw r6, r16" "movw r6, r16" ref=0x0 call=false print.go:86
+0xe7c 2 "MOVW" "movw r20, r14" "movw r20, r14" ref=0x0 call=false print.go:86
+0xe7e 2 "MOVW" "movw r8, r30" "movw r8, r30" ref=0x0 call=false print.go:0
+0xe80 2 "LDI" "ldi r30, 0x0a" "ldi r30, 0x0a" ref=0x0 call=false print.go:0
+0xe82 2 "LDI" "ldi r31, 0x00" "ldi r31, 0x00" ref=0x0 call=false print.go:0
+0xe84 2 "MOVW" "movw r10, r30" "movw r10, r30" ref=0x0 call=false print.go:0
+0xe86 2 "LDI" "ldi r30, 0x00" "ldi r30, 0x00" ref=0x0 call=false print.go:0
+0xe88 2 "LDI" "ldi r31, 0x00" "ldi r31, 0x00" ref=0x0 call=false print.go:0
+0xe8a 2 "MOVW" "movw r12, r30" "movw r12, r30" ref=0x0 call=false print.go:0
+0xe8c 2 "MOVW" "movw r14, r12" "movw r14, r12" ref=0x0 call=false print.go:86
+0xe8e 2 "MOVW" "movw r16, r12" "movw r16, r12" ref=0x0 call=false print.go:86
+0xe90 2 "STD" "std Y+6, r27" "std Y+6, r27" ref=0x0 call=false print.go:86
+0xe92 2 "STD" "std Y+5, r26" "std Y+5, r26" ref=0x0 call=false print.go:86
+0xe94 4 "CALL" "call 0xfa <__udivdi3>" "call 0xfa <__udivdi3>" ref=0xfa call=true print.go:86
+0xe98 2 "MOVW" "movw r4, r18" "movw r4, r18" ref=0x0 call=false print.go:86
+0xe9a 2 "STD" "std Y+10, r21" "std Y+10, r21" ref=0x0 call=false print.go:0
+0xe9c 2 "STD" "std Y+9, r20" "std Y+9, r20" ref=0x0 call=false print.go:0
+0xe9e 2 "STD" "std Y+4, r23" "std Y+4, r23" ref=0x0 call=false print.go:0
+0xea0 2 "STD" "std Y+3, r22" "std Y+3, r22" ref=0x0 call=false print.go:0
+0xea2 2 "STD" "std Y+2, r25" "std Y+2, r25" ref=0x0 call=false print.go:0
+0xea4 2 "STD" "std Y+1, r24" "std Y+1, r24" ref=0x0 call=false print.go:0
+0xea6 4 "CALL" "call 0x8ac <__muldi3>" "call 0x8ac <__muldi3>" ref=0x8ac call=true print.go:81
+0xeaa 2 "MOVW" "movw r22, r2" "movw r22, r2" ref=0x0 call=false print.go:81
+0xeac 2 "MOVW" "movw r16, r6" "movw r16, r6" ref=0x0 call=false print.go:81
+0xeae 2 "MOVW" "movw r30, r8" "movw r30, r8" ref=0x0 call=false print.go:81
+0xeb0 2 "SUB" "sub r22, r18" "sub r22, r18" ref=0x0 call=false print.go:81
+0xeb2 2 "SBC" "sbc r23, r19" "sbc r23, r19" ref=0x0 call=false print.go:81
+0xeb4 2 "MOV" "mov r24, r22" "mov r24, r22" ref=0x0 call=false print.go:81
+0xeb6 2 "ORI" "ori r24, 0x30" "ori r24, 0x30" ref=0x0 call=false print.go:81
+0xeb8 2 "LDD" "ldd r26, Y+11" "ldd r26, Y+11" ref=0x0 call=false print.go:0
+0xeba 2 "LDD" "ldd r27, Y+12" "ldd r27, Y+12" ref=0x0 call=false print.go:0
+0xebc 2 "ADD" "add r26, r30" "add r26, r30" ref=0x0 call=false print.go:82
+0xebe 2 "ADC" "adc r27, r31" "adc r27, r31" ref=0x0 call=false print.go:82
+0xec0 2 "ST" "st X, r24" "st X, r24" ref=0x0 call=false print.go:82
+0xec2 2 "LDD" "ldd r26, Y+5" "ldd r26, Y+5" ref=0x0 call=false print.go:82
+0xec4 2 "LDD" "ldd r27, Y+6" "ldd r27, Y+6" ref=0x0 call=false print.go:82
+0xec6 2 "CPI" "cpi r22, 0x00" "cpi r22, 0x00" ref=0x0 call=false print.go:0
+0xec8 2 "BREQ" "breq 0xecc <runtime.run+0x162>" "breq 0xecc <runtime.run+0x162>" ref=0xecc call=false print.go:0
+0xeca 2 "MOVW" "movw r16, r26" "movw r16, r26" ref=0x0 call=false print.go:0
+0xecc 2 "CPI" "cpi r22, 0x00" "cpi r22, 0x00" ref=0x0 call=false print.go:0
+0xece 2 "LDD" "ldd r18, Y+7" "ldd r18, Y+7" ref=0x0 call=false print.go:0
+0xed0 2 "LDD" "ldd r19, Y+8" "ldd r19, Y+8" ref=0x0 call=false print.go:0
+0xed2 2 "BREQ" "breq 0xed6 <runtime.run+0x16c>" "breq 0xed6 <runtime.run+0x16c>" ref=0xed6 call=false print.go:0
+0xed4 2 "MOVW" "movw r18, r30" "movw r18, r30" ref=0x0 call=false print.go:0
+0xed6 2 "SUBI" "subi r30, 0x01" "subi r30, 0x01" ref=0x0 call=false print.go:80
+0xed8 2 "SBCI" "sbci r31, 0x00" "sbci r31, 0x00" ref=0x0 call=false print.go:80
+0xeda 2 "SBCI" "sbci r26, 0x00" "sbci r26, 0x00" ref=0x0 call=false print.go:80
+0xedc 2 "SBCI" "sbci r27, 0x00" "sbci r27, 0x00" ref=0x0 call=false print.go:80
+0xede 2 "MOVW" "movw r2, r4" "movw r2, r4" ref=0x0 call=false print.go:0
+0xee0 2 "LDD" "ldd r14, Y+9" "ldd r14, Y+9" ref=0x0 call=false print.go:0
+0xee2 2 "LDD" "ldd r15, Y+10" "ldd r15, Y+10" ref=0x0 call=false print.go:0
+0xee4 2 "LDD" "ldd r22, Y+3" "ldd r22, Y+3" ref=0x0 call=false print.go:0
+0xee6 2 "LDD" "ldd r23, Y+4" "ldd r23, Y+4" ref=0x0 call=false print.go:0
+0xee8 2 "LDD" "ldd r24, Y+1" "ldd r24, Y+1" ref=0x0 call=false print.go:0
+0xeea 2 "LDD" "ldd r25, Y+2" "ldd r25, Y+2" ref=0x0 call=false print.go:0
+0xeec 2 "RJMP" "rjmp 0xe62 <runtime.run+0xf8>" "rjmp 0xe62 <runtime.run+0xf8>" ref=0xe62 call=false print.go:0
+0xeee 2 "LDD" "ldd r26, Y+11" "ldd r26, Y+11" ref=0x0 call=false print.go:0
+0xef0 2 "LDD" "ldd r27, Y+12" "ldd r27, Y+12" ref=0x0 call=false print.go:0
+0xef2 2 "ADD" "add r26, r18" "add r26, r18" ref=0x0 call=false print.go:90
+0xef4 2 "ADC" "adc r27, r19" "adc r27, r19" ref=0x0 call=false print.go:90
+0xef6 2 "LD" "ld r24, X" "ld r24, X" ref=0x0 call=false print.go:90
+0xef8 2 "MOVW" "movw r14, r18" "movw r14, r18" ref=0x0 call=false print.go:90
+0xefa 4 "CALL" "call 0xcb0 <runtime.putchar>" "call 0xcb0 <runtime.putchar>" ref=0xcb0 call=true print.go:90
+0xefe 2 "MOVW" "movw r18, r14" "movw r18, r14" ref=0x0 call=false print.go:90
+0xf00 2 "SUBI" "subi r18, 0xff" "subi r18, 0xff" ref=0x0 call=false print.go:89
+0xf02 2 "SBCI" "sbci r19, 0xff" "sbci r19, 0xff" ref=0x0 call=false print.go:89
+0xf04 2 "SBCI" "sbci r16, 0xff" "sbci r16, 0xff" ref=0x0 call=false print.go:89
+0xf06 2 "SBCI" "sbci r17, 0xff" "sbci r17, 0xff" ref=0x0 call=false print.go:89
+0xf08 2 "LDI" "ldi r24, 0x01" "ldi r24, 0x01" ref=0x0 call=false print.go:0
+0xf0a 2 "CPI" "cpi r18, 0x14" "cpi r18, 0x14" ref=0x0 call=false print.go:89
+0xf0c 2 "CPC" "cpc r19, r1" "cpc r19, r1" ref=0x0 call=false print.go:89
+0xf0e 2 "LDI" "ldi r20, 0x00" "ldi r20, 0x00" ref=0x0 call=false print.go:89
+0xf10 2 "LDI" "ldi r21, 0x00" "ldi r21, 0x00" ref=0x0 call=false print.go:89
+0xf12 2 "CPC" "cpc r16, r20" "cpc r16, r20" ref=0x0 call=false print.go:89
+0xf14 2 "CPC" "cpc r17, r21" "cpc r17, r21" ref=0x0 call=false print.go:89
+0xf16 2 "BRGE" "brge 0xf1a <runtime.run+0x1b0>" "brge 0xf1a <runtime.run+0x1b0>" ref=0xf1a call=false print.go:89
+0xf18 2 "MOV" "mov r24, r1" "mov r24, r1" ref=0x0 call=false print.go:0
+0xf1a 2 "ANDI" "andi r24, 0x01" "andi r24, 0x01" ref=0x0 call=false print.go:89
+0xf1c 2 "CPI" "cpi r24, 0x00" "cpi r24, 0x00" ref=0x0 call=false print.go:0
+0xf1e 2 "BREQ" "breq 0xeee <runtime.run+0x184>" "breq 0xeee <runtime.run+0x184>" ref=0xeee call=false print.go:0
+0xf20 4 "CALL" "call 0xb86 <runtime.printnl>" "call 0xb86 <runtime.printnl>" ref=0xb86 call=true main.go:13
+0xf24 2 "ADIW" "adiw r28, 0x2c" "adiw r28, 0x2c" ref=0x0 call=false scheduler_none.go:29
+0xf26 2 "IN" "in r0, 0x3f" "in r0, 0x3f" ref=0x0 call=false scheduler_none.go:29
+0xf28 2 "CLI" "cli" "cli" ref=0x0 call=false scheduler_none.go:29
+0xf2a 2 "OUT" "out 0x3e, r29" "out 0x3e, r29" ref=0x0 call=false scheduler_none.go:29
+0xf2c 2 "OUT" "out 0x3f, r0" "out 0x3f, r0" ref=0x0 call=false scheduler_none.go:29
+0xf2e 2 "OUT" "out 0x3d, r28" "out 0x3d, r28" ref=0x0 call=false scheduler_none.go:29
+0xf30 2 "POP" "pop r29" "pop r29" ref=0x0 call=false scheduler_none.go:29
+0xf32 2 "POP" "pop r28" "pop r28" ref=0x0 call=false scheduler_none.go:29
+0xf34 2 "POP" "pop r17" "pop r17" ref=0x0 call=false scheduler_none.go:29
+0xf36 2 "POP" "pop r16" "pop r16" ref=0x0 call=false scheduler_none.go:29
+0xf38 2 "POP" "pop r15" "pop r15" ref=0x0 call=false scheduler_none.go:29
+0xf3a 2 "POP" "pop r14" "pop r14" ref=0x0 call=false scheduler_none.go:29
+0xf3c 2 "POP" "pop r13" "pop r13" ref=0x0 call=false scheduler_none.go:29
+0xf3e 2 "POP" "pop r12" "pop r12" ref=0x0 call=false scheduler_none.go:29
+0xf40 2 "POP" "pop r11" "pop r11" ref=0x0 call=false scheduler_none.go:29
+0xf42 2 "POP" "pop r10" "pop r10" ref=0x0 call=false scheduler_none.go:29
+0xf44 2 "POP" "pop r9" "pop r9" ref=0x0 call=false scheduler_none.go:29
+0xf46 2 "POP" "pop r8" "pop r8" ref=0x0 call=false scheduler_none.go:29
+0xf48 2 "POP" "pop r7" "pop r7" ref=0x0 call=false scheduler_none.go:29
+0xf4a 2 "POP" "pop r6" "pop r6" ref=0x0 call=false scheduler_none.go:29
+0xf4c 2 "POP" "pop r5" "pop r5" ref=0x0 call=false scheduler_none.go:29
+0xf4e 2 "POP" "pop r4" "pop r4" ref=0x0 call=false scheduler_none.go:29
+0xf50 2 "POP" "pop r3" "pop r3" ref=0x0 call=false scheduler_none.go:29
+0xf52 2 "POP" "pop r2" "pop r2" ref=0x0 call=false scheduler_none.go:29
+0xf54 2 "RET" "ret" "ret" ref=0x0 call=false scheduler_none.go:29
+== main.sumInts 0xf56 104 /Users/egon/code/gio/lensm/testdata/tinygo/main.go
+0xf56 2 "PUSH" "push r12" "push r12" ref=0x0 call=false .:0
+0xf58 2 "PUSH" "push r13" "push r13" ref=0x0 call=false main.go:0
+0xf5a 2 "PUSH" "push r14" "push r14" ref=0x0 call=false main.go:0
+0xf5c 2 "PUSH" "push r15" "push r15" ref=0x0 call=false main.go:0
+0xf5e 2 "PUSH" "push r16" "push r16" ref=0x0 call=false main.go:0
+0xf60 2 "PUSH" "push r17" "push r17" ref=0x0 call=false main.go:0
+0xf62 2 "LDI" "ldi r20, 0xff" "ldi r20, 0xff" ref=0x0 call=false main.go:0
+0xf64 2 "LDI" "ldi r21, 0xff" "ldi r21, 0xff" ref=0x0 call=false main.go:0
+0xf66 2 "LDI" "ldi r18, 0x00" "ldi r18, 0x00" ref=0x0 call=false main.go:0
+0xf68 2 "LDI" "ldi r19, 0x00" "ldi r19, 0x00" ref=0x0 call=false main.go:0
+0xf6a 2 "MOVW" "movw r22, r18" "movw r22, r18" ref=0x0 call=false main.go:0
+0xf6c 2 "MOVW" "movw r12, r18" "movw r12, r18" ref=0x0 call=false main.go:0
+0xf6e 2 "MOVW" "movw r26, r20" "movw r26, r20" ref=0x0 call=false main.go:0
+0xf70 2 "SUBI" "subi r20, 0xff" "subi r20, 0xff" ref=0x0 call=false main.go:0
+0xf72 2 "SBCI" "sbci r21, 0xff" "sbci r21, 0xff" ref=0x0 call=false main.go:0
+0xf74 2 "SBCI" "sbci r26, 0xff" "sbci r26, 0xff" ref=0x0 call=false main.go:0
+0xf76 2 "SBCI" "sbci r27, 0xff" "sbci r27, 0xff" ref=0x0 call=false main.go:0
+0xf78 2 "LDI" "ldi r17, 0x01" "ldi r17, 0x01" ref=0x0 call=false main.go:0
+0xf7a 2 "CPI" "cpi r20, 0x03" "cpi r20, 0x03" ref=0x0 call=false main.go:0
+0xf7c 2 "CPC" "cpc r21, r1" "cpc r21, r1" ref=0x0 call=false main.go:0
+0xf7e 2 "MOVW" "movw r30, r12" "movw r30, r12" ref=0x0 call=false main.go:0
+0xf80 2 "CPC" "cpc r26, r30" "cpc r26, r30" ref=0x0 call=false main.go:0
+0xf82 2 "CPC" "cpc r27, r31" "cpc r27, r31" ref=0x0 call=false main.go:0
+0xf84 2 "BRCC" "brcc 0xf88 <main.sumInts+0x32>" "brcc 0xf88 <main.sumInts+0x32>" ref=0xf88 call=false main.go:0
+0xf86 2 "MOV" "mov r17, r1" "mov r17, r1" ref=0x0 call=false main.go:0
+0xf88 2 "ANDI" "andi r17, 0x01" "andi r17, 0x01" ref=0x0 call=false main.go:0
+0xf8a 2 "CPI" "cpi r17, 0x00" "cpi r17, 0x00" ref=0x0 call=false main.go:0
+0xf8c 2 "BRNE" "brne 0xfae <main.sumInts+0x58>" "brne 0xfae <main.sumInts+0x58>" ref=0xfae call=false main.go:0
+0xf8e 2 "MOVW" "movw r30, r20" "movw r30, r20" ref=0x0 call=false main.go:6
+0xf90 2 "ADD" "add r30, r30" "add r30, r30" ref=0x0 call=false main.go:6
+0xf92 2 "ADC" "adc r31, r31" "adc r31, r31" ref=0x0 call=false main.go:6
+0xf94 2 "ADD" "add r30, r30" "add r30, r30" ref=0x0 call=false main.go:6
+0xf96 2 "ADC" "adc r31, r31" "adc r31, r31" ref=0x0 call=false main.go:6
+0xf98 2 "ADD" "add r30, r24" "add r30, r24" ref=0x0 call=false main.go:6
+0xf9a 2 "ADC" "adc r31, r25" "adc r31, r25" ref=0x0 call=false main.go:6
+0xf9c 2 "LDD" "ld r16, Z" "ld r16, Z" ref=0x0 call=false main.go:0
+0xf9e 2 "LDD" "ldd r17, Z+1" "ldd r17, Z+1" ref=0x0 call=false main.go:0
+0xfa0 2 "LDD" "ldd r14, Z+2" "ldd r14, Z+2" ref=0x0 call=false main.go:0
+0xfa2 2 "LDD" "ldd r15, Z+3" "ldd r15, Z+3" ref=0x0 call=false main.go:0
+0xfa4 2 "ADD" "add r22, r16" "add r22, r16" ref=0x0 call=false main.go:7
+0xfa6 2 "ADC" "adc r23, r17" "adc r23, r17" ref=0x0 call=false main.go:7
+0xfa8 2 "ADC" "adc r18, r14" "adc r18, r14" ref=0x0 call=false main.go:7
+0xfaa 2 "ADC" "adc r19, r15" "adc r19, r15" ref=0x0 call=false main.go:7
+0xfac 2 "RJMP" "rjmp 0xf70 <main.sumInts+0x1a>" "rjmp 0xf70 <main.sumInts+0x1a>" ref=0xf70 call=false main.go:0
+0xfae 2 "MOVW" "movw r24, r18" "movw r24, r18" ref=0x0 call=false main.go:9
+0xfb0 2 "POP" "pop r17" "pop r17" ref=0x0 call=false main.go:9
+0xfb2 2 "POP" "pop r16" "pop r16" ref=0x0 call=false main.go:9
+0xfb4 2 "POP" "pop r15" "pop r15" ref=0x0 call=false main.go:9
+0xfb6 2 "POP" "pop r14" "pop r14" ref=0x0 call=false main.go:9
+0xfb8 2 "POP" "pop r13" "pop r13" ref=0x0 call=false main.go:9
+0xfba 2 "POP" "pop r12" "pop r12" ref=0x0 call=false main.go:9
+0xfbc 2 "RET" "ret" "ret" ref=0x0 call=false main.go:9

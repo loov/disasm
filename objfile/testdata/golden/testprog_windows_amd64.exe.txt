@@ -1,0 +1,2134 @@
+arch=amd64 funcs=1493 sha256=4be92a309ba47e52eb8d46e36d4044b745f22e3c3c2793ca8ff104f749e8e534
+== runtime.runGCProg 0x14001cd20 960 /usr/local/go/src/runtime/mbitmap.go
+0x14001cd20 1 "PUSH" "PUSHQ BP" "push %rbp" mbitmap.go:1565
+0x14001cd21 3 "MOV" "MOVQ SP, BP" "mov %rsp,%rbp" mbitmap.go:1565
+0x14001cd24 2 "XOR" "XORL DX, DX" "xor %edx,%edx" mbitmap.go:1577
+0x14001cd26 3 "MOV" "MOVQ BX, CX" "mov %rbx,%rcx" mbitmap.go:1577
+0x14001cd29 2 "XOR" "XORL SI, SI" "xor %esi,%esi" mbitmap.go:1577
+0x14001cd2b 2 "JMP" "JMP 0x14001cd49" "jmp 0x14001cd49" mbitmap.go:1577
+0x14001cd2d 3 "MOV" "MOVQ AX, CX" "mov %rax,%rcx" mbitmap.go:1749
+0x14001cd30 3 "MOV" "MOVQ R9, AX" "mov %r9,%rax" mbitmap.go:1749
+0x14001cd33 3 "MOV" "MOVQ BX, SI" "mov %rbx,%rsi" mbitmap.go:1749
+0x14001cd36 3 "MOV" "MOVQ R11, BX" "mov %r11,%rbx" mbitmap.go:1749
+0x14001cd39 2 "JMP" "JMP 0x14001cd49" "jmp 0x14001cd49" mbitmap.go:1577
+0x14001cd3b 2 "MOV" "MOVB DL, 0(BX)" "mov %dl,(%rbx)" mbitmap.go:1578
+0x14001cd3d 1 "NOP" "NOPL" "nop" mbitmap.go:1579
+0x14001cd3e 4 "ADD" "ADDQ $-0x8, SI" "add $-0x8,%rsi" mbitmap.go:1577
+0x14001cd42 4 "SHR" "SHRQ $0x8, DX" "shr $0x8,%rdx" mbitmap.go:1580
+0x14001cd46 3 "INC" "INCQ BX" "inc %rbx" mbitmap.go:1056
+0x14001cd49 4 "CMP" "CMPQ SI, $0x8" "cmp $0x8,%rsi" mbitmap.go:1577
+0x14001cd4d 2 "JAE" "JAE 0x14001cd3b" "jae 0x14001cd3b" mbitmap.go:1577
+0x14001cd4f 3 "MOVZX" "MOVZX 0(AX), DI" "movzbl (%rax),%edi" mbitmap.go:1584
+0x14001cd52 1 "NOP" "NOPL" "nop" mbitmap.go:1585
+0x14001cd53 3 "MOV" "MOVL DI, R8" "mov %edi,%r8d" mbitmap.go:1586
+0x14001cd56 3 "AND" "ANDL $0x7f, DI" "and $0x7f,%edi" mbitmap.go:1586
+0x14001cd59 4 "LEA" "LEAQ 0x1(AX), R9" "lea 0x1(%rax),%r9" mbitmap.go:1056
+0x14001cd5d 5 "BT" "BTL $0x7, R8" "bt $0x7,%r8d" mbitmap.go:1587
+0x14001cd62 2 "JB" "JB 0x14001cd79" "jb 0x14001cd79" mbitmap.go:1587
+0x14001cd64 3 "TEST" "TESTQ DI, DI" "test %rdi,%rdi" mbitmap.go:1589
+0x14001cd67 6 "JE" "JE 0x14001ce9c" "je 0x14001ce9c" mbitmap.go:1589
+0x14001cd6d 4 "SHR" "SHRQ $0x3, DI" "shr $0x3,%rdi" mbitmap.go:1593
+0x14001cd71 3 "XOR" "XORL R10, R10" "xor %r10d,%r10d" mbitmap.go:1594
+0x14001cd74 5 "JMP" "JMP 0x14001d0a0" "jmpq 0x14001d0a0" mbitmap.go:1594
+0x14001cd79 3 "TEST" "TESTQ DI, DI" "test %rdi,%rdi" mbitmap.go:1610
+0x14001cd7c 2 "JNE" "JNE 0x14001cd88" "jne 0x14001cd88" mbitmap.go:1610
+0x14001cd7e 2 "XOR" "XORL DI, DI" "xor %edi,%edi" mbitmap.go:1610
+0x14001cd80 3 "XOR" "XORL R8, R8" "xor %r8d,%r8d" mbitmap.go:1610
+0x14001cd83 5 "JMP" "JMP 0x14001d02c" "jmpq 0x14001d02c" mbitmap.go:1610
+0x14001cd88 3 "XOR" "XORL R8, R8" "xor %r8d,%r8d" mbitmap.go:1624
+0x14001cd8b 3 "XOR" "XORL R10, R10" "xor %r10d,%r10d" mbitmap.go:1624
+0x14001cd8e 2 "JMP" "JMP 0x14001cd97" "jmp 0x14001cd97" mbitmap.go:1624
+0x14001cd90 4 "LEA" "LEAQ 0x7(CX), R8" "lea 0x7(%rcx),%r8" mbitmap.go:1623
+0x14001cd94 3 "MOV" "MOVQ AX, CX" "mov %rax,%rcx" mbitmap.go:1749
+0x14001cd97 4 "MOVZX" "MOVZX 0(R9), R11" "movzbl (%r9),%r11d" mbitmap.go:1624
+0x14001cd9b 3 "MOV" "MOVL R11, R12" "mov %r11d,%r12d" mbitmap.go:1626
+0x14001cd9e 4 "AND" "ANDL $0x7f, R11" "and $0x7f,%r11d" mbitmap.go:1626
+0x14001cda2 3 "MOV" "MOVQ CX, AX" "mov %rcx,%rax" mbitmap.go:1577
+0x14001cda5 3 "MOV" "MOVQ R8, CX" "mov %r8,%rcx" mbitmap.go:1626
+0x14001cda8 3 "SHL" "SHLQ CL, R11" "shl %cl,%r11" mbitmap.go:1626
+0x14001cdab 3 "INC" "INCQ R9" "inc %r9" mbitmap.go:1056
+0x14001cdae 1 "NOP" "NOPL" "nop" mbitmap.go:1625
+0x14001cdaf 4 "CMP" "CMPQ CX, $0x40" "cmp $0x40,%rcx" mbitmap.go:1626
+0x14001cdb3 3 "SBB" "SBBQ R13, R13" "sbb %r13,%r13" mbitmap.go:1626
+0x14001cdb6 3 "AND" "ANDQ R13, R11" "and %r13,%r11" mbitmap.go:1626
+0x14001cdb9 3 "OR" "ORQ R11, R10" "or %r11,%r10" mbitmap.go:1626
+0x14001cdbc 5 "BT" "BTL $0x7, R12" "bt $0x7,%r12d" mbitmap.go:1627
+0x14001cdc1 2 "JB" "JB 0x14001cd90" "jb 0x14001cd90" mbitmap.go:1627
+0x14001cdc3 4 "IMUL" "IMULQ DI, R10" "imul %rdi,%r10" mbitmap.go:1631
+0x14001cdc7 4 "CMP" "CMPQ DI, $0x39" "cmp $0x39,%rdi" mbitmap.go:1642
+0x14001cdcb 2 "JA" "JA 0x14001cddd" "ja 0x14001cddd" mbitmap.go:1642
+0x14001cdcd 1 "NOP" "NOPL" "nop" mbitmap.go:1648
+0x14001cdce 4 "LEA" "LEAQ -0x1(BX), R8" "lea -0x1(%rbx),%r8" mbitmap.go:1069
+0x14001cdd2 3 "MOV" "MOVQ SI, CX" "mov %rsi,%rcx" mbitmap.go:1577
+0x14001cdd5 3 "MOV" "MOVQ DX, R11" "mov %rdx,%r11" mbitmap.go:1577
+0x14001cdd8 5 "JMP" "JMP 0x14001ceca" "jmpq 0x14001ceca" mbitmap.go:1649
+0x14001cddd 3 "SUB" "SUBQ SI, DI" "sub %rsi,%rdi" mbitmap.go:1723
+0x14001cde0 4 "LEA" "LEAQ 0x7(DI), R8" "lea 0x7(%rdi),%r8" mbitmap.go:1725
+0x14001cde4 4 "SHR" "SHRQ $0x3, R8" "shr $0x3,%r8" mbitmap.go:1725
+0x14001cde8 3 "AND" "ANDL $0x7, DI" "and $0x7,%edi" mbitmap.go:1726
+0x14001cdeb 3 "MOV" "MOVQ BX, R11" "mov %rbx,%r11" mbitmap.go:1045
+0x14001cdee 3 "SUB" "SUBQ R8, BX" "sub %r8,%rbx" mbitmap.go:1045
+0x14001cdf1 3 "MOV" "MOVQ BX, R8" "mov %rbx,%r8" mbitmap.go:1045
+0x14001cdf4 3 "TEST" "TESTQ DI, DI" "test %rdi,%rdi" mbitmap.go:1726
+0x14001cdf7 2 "JE" "JE 0x14001ce1c" "je 0x14001ce1c" mbitmap.go:1726
+0x14001cdf9 4 "MOVZX" "MOVZX 0(BX), R12" "movzbl (%rbx),%r12d" mbitmap.go:1727
+0x14001cdfd 4 "LEA" "LEAQ -0x8(DI), CX" "lea -0x8(%rdi),%rcx" mbitmap.go:1727
+0x14001ce01 3 "NEG" "NEGQ CX" "neg %rcx" mbitmap.go:1727
+0x14001ce04 3 "SHR" "SHRQ CL, R12" "shr %cl,%r12" mbitmap.go:1727
+0x14001ce07 3 "MOV" "MOVQ SI, CX" "mov %rsi,%rcx" mbitmap.go:1727
+0x14001ce0a 3 "SHL" "SHLQ CL, R12" "shl %cl,%r12" mbitmap.go:1727
+0x14001ce0d 4 "LEA" "LEAQ 0x1(R8), BX" "lea 0x1(%r8),%rbx" mbitmap.go:1056
+0x14001ce11 3 "OR" "ORQ R12, DX" "or %r12,%rdx" mbitmap.go:1727
+0x14001ce14 1 "NOP" "NOPL" "nop" mbitmap.go:1728
+0x14001ce15 4 "LEA" "LEAQ 0(DI)(CX*1), SI" "lea (%rdi,%rcx),%rsi" mbitmap.go:1729
+0x14001ce19 3 "SUB" "SUBQ DI, R10" "sub %rdi,%r10" mbitmap.go:1730
+0x14001ce1c 3 "MOV" "MOVQ R10, CX" "mov %r10,%rcx" mbitmap.go:1734
+0x14001ce1f 4 "SHR" "SHRQ $0x3, R10" "shr $0x3,%r10" mbitmap.go:1734
+0x14001ce23 2 "JMP" "JMP 0x14001ce53" "jmp 0x14001ce53" mbitmap.go:1734
+0x14001ce25 3 "MOVZX" "MOVZX 0(BX), DI" "movzbl (%rbx),%edi" mbitmap.go:1735
+0x14001ce28 3 "MOV" "MOVQ CX, R8" "mov %rcx,%r8" mbitmap.go:1734
+0x14001ce2b 3 "MOV" "MOVQ SI, CX" "mov %rsi,%rcx" mbitmap.go:1735
+0x14001ce2e 3 "SHL" "SHLQ CL, DI" "shl %cl,%rdi" mbitmap.go:1735
+0x14001ce31 1 "NOP" "NOPL" "nop" mbitmap.go:1736
+0x14001ce32 4 "CMP" "CMPQ CX, $0x40" "cmp $0x40,%rcx" mbitmap.go:1735
+0x14001ce36 3 "SBB" "SBBQ R12, R12" "sbb %r12,%r12" mbitmap.go:1735
+0x14001ce39 3 "AND" "ANDQ R12, DI" "and %r12,%rdi" mbitmap.go:1735
+0x14001ce3c 3 "OR" "ORQ DI, DX" "or %rdi,%rdx" mbitmap.go:1735
+0x14001ce3f 3 "MOV" "MOVB DL, 0(R11)" "mov %dl,(%r11)" mbitmap.go:1737
+0x14001ce42 1 "NOP" "NOPL" "nop" mbitmap.go:1738
+0x14001ce43 4 "SHR" "SHRQ $0x8, DX" "shr $0x8,%rdx" mbitmap.go:1739
+0x14001ce47 3 "DEC" "DECQ R10" "dec %r10" mbitmap.go:1734
+0x14001ce4a 3 "INC" "INCQ BX" "inc %rbx" mbitmap.go:1056
+0x14001ce4d 3 "INC" "INCQ R11" "inc %r11" mbitmap.go:1056
+0x14001ce50 3 "MOV" "MOVQ R8, CX" "mov %r8,%rcx" mbitmap.go:1742
+0x14001ce53 3 "TEST" "TESTQ R10, R10" "test %r10,%r10" mbitmap.go:1734
+0x14001ce56 2 "JA" "JA 0x14001ce25" "ja 0x14001ce25" mbitmap.go:1734
+0x14001ce58 3 "AND" "ANDL $0x7, CX" "and $0x7,%ecx" mbitmap.go:1742
+0x14001ce5b 5 "NOP" "NOPL 0(AX)(AX*1)" "nopl (%rax,%rax)" mbitmap.go:1742
+0x14001ce60 3 "TEST" "TESTQ CX, CX" "test %rcx,%rcx" mbitmap.go:1742
+0x14001ce63 2 "JBE" "JBE 0x14001ce94" "jbe 0x14001ce94" mbitmap.go:1742
+0x14001ce65 3 "MOVZX" "MOVZX 0(BX), BX" "movzbl (%rbx),%ebx" mbitmap.go:1743
+0x14001ce68 5 "MOV" "MOVL $0x1, DI" "mov $0x1,%edi" mbitmap.go:1743
+0x14001ce6d 3 "SHL" "SHLQ CL, DI" "shl %cl,%rdi" mbitmap.go:1743
+0x14001ce70 3 "DEC" "DECQ DI" "dec %rdi" mbitmap.go:1743
+0x14001ce73 3 "AND" "ANDQ BX, DI" "and %rbx,%rdi" mbitmap.go:1743
+0x14001ce76 3 "MOV" "MOVQ CX, BX" "mov %rcx,%rbx" mbitmap.go:1742
+0x14001ce79 3 "MOV" "MOVQ SI, CX" "mov %rsi,%rcx" mbitmap.go:1743
+0x14001ce7c 3 "SHL" "SHLQ CL, DI" "shl %cl,%rdi" mbitmap.go:1743
+0x14001ce7f 3 "ADD" "ADDQ CX, BX" "add %rcx,%rbx" mbitmap.go:1744
+0x14001ce82 4 "CMP" "CMPQ CX, $0x40" "cmp $0x40,%rcx" mbitmap.go:1743
+0x14001ce86 3 "SBB" "SBBQ R8, R8" "sbb %r8,%r8" mbitmap.go:1743
+0x14001ce89 3 "AND" "ANDQ R8, DI" "and %r8,%rdi" mbitmap.go:1743
+0x14001ce8c 3 "OR" "ORQ DI, DX" "or %rdi,%rdx" mbitmap.go:1743
+0x14001ce8f 5 "JMP" "JMP 0x14001cd2d" "jmpq 0x14001cd2d" mbitmap.go:1744
+0x14001ce94 3 "MOV" "MOVQ SI, BX" "mov %rsi,%rbx" mbitmap.go:1744
+0x14001ce97 5 "JMP" "JMP 0x14001cd2d" "jmpq 0x14001cd2d" mbitmap.go:1742
+0x14001ce9c 3 "MOV" "MOVQ BX, DI" "mov %rbx,%rdi" mbitmap.go:1749
+0x14001ce9f 3 "SUB" "SUBQ CX, DI" "sub %rcx,%rdi" mbitmap.go:1749
+0x14001cea2 3 "MOV" "MOVQ SI, CX" "mov %rsi,%rcx" mbitmap.go:1750
+0x14001cea5 3 "NEG" "NEGQ SI" "neg %rsi" mbitmap.go:1750
+0x14001cea8 3 "AND" "ANDL $0x7, SI" "and $0x7,%esi" mbitmap.go:1750
+0x14001ceab 4 "LEA" "LEAQ 0(CX)(DI*8), AX" "lea (%rcx,%rdi,8),%rax" mbitmap.go:1749
+0x14001ceaf 3 "ADD" "ADDQ SI, CX" "add %rsi,%rcx" mbitmap.go:1750
+0x14001ceb2 5 "JMP" "JMP 0x14001d073" "jmpq 0x14001d073" mbitmap.go:1751
+0x14001ceb7 4 "SHL" "SHLQ $0x8, DX" "shl $0x8,%rdx" mbitmap.go:1650
+0x14001cebb 4 "MOVZX" "MOVZX 0(R8), R12" "movzbl (%r8),%r12d" mbitmap.go:1651
+0x14001cebf 3 "OR" "ORQ R12, DX" "or %r12,%rdx" mbitmap.go:1651
+0x14001cec2 1 "NOP" "NOPL" "nop" mbitmap.go:1652
+0x14001cec3 4 "ADD" "ADDQ $0x8, SI" "add $0x8,%rsi" mbitmap.go:1653
+0x14001cec7 3 "DEC" "DECQ R8" "dec %r8" mbitmap.go:1069
+0x14001ceca 3 "CMP" "CMPQ SI, DI" "cmp %rdi,%rsi" mbitmap.go:1649
+0x14001cecd 2 "JB" "JB 0x14001ceb7" "jb 0x14001ceb7" mbitmap.go:1649
+0x14001cecf 2 "JBE" "JBE 0x14001cee9" "jbe 0x14001cee9" mbitmap.go:1660
+0x14001ced1 3 "SUB" "SUBQ DI, SI" "sub %rdi,%rsi" mbitmap.go:1661
+0x14001ced4 3 "MOV" "MOVQ CX, R8" "mov %rcx,%r8" mbitmap.go:1577
+0x14001ced7 3 "MOV" "MOVQ SI, CX" "mov %rsi,%rcx" mbitmap.go:1661
+0x14001ceda 3 "SHR" "SHRQ CL, DX" "shr %cl,%rdx" mbitmap.go:1661
+0x14001cedd 4 "CMP" "CMPQ CX, $0x40" "cmp $0x40,%rcx" mbitmap.go:1661
+0x14001cee1 3 "SBB" "SBBQ R12, R12" "sbb %r12,%r12" mbitmap.go:1661
+0x14001cee4 3 "AND" "ANDQ R12, DX" "and %r12,%rdx" mbitmap.go:1661
+0x14001cee7 2 "JMP" "JMP 0x14001ceef" "jmp 0x14001ceef" mbitmap.go:1662
+0x14001cee9 3 "MOV" "MOVQ CX, R8" "mov %rcx,%r8" mbitmap.go:1700
+0x14001ceec 3 "MOV" "MOVQ SI, DI" "mov %rsi,%rdi" mbitmap.go:1666
+0x14001ceef 4 "CMP" "CMPQ DI, $0x1" "cmp $0x1,%rdi" mbitmap.go:1666
+0x14001cef3 2 "JNE" "JNE 0x14001cf11" "jne 0x14001cf11" mbitmap.go:1666
+0x14001cef5 4 "CMP" "CMPQ DX, $0x1" "cmp $0x1,%rdx" mbitmap.go:1673
+0x14001cef9 2 "JNE" "JNE 0x14001cf0c" "jne 0x14001cf0c" mbitmap.go:1673
+0x14001cefb 10 "MOV" "MOVQ $0x1ffffffffffffff, DX" "mov $0x1ffffffffffffff,%rdx" mbitmap.go:1673
+0x14001cf05 5 "MOV" "MOVL $0x39, CX" "mov $0x39,%ecx" mbitmap.go:1673
+0x14001cf0a 2 "JMP" "JMP 0x14001cf36" "jmp 0x14001cf36" mbitmap.go:1673
+0x14001cf0c 3 "MOV" "MOVQ R10, CX" "mov %r10,%rcx" mbitmap.go:1673
+0x14001cf0f 2 "JMP" "JMP 0x14001cf36" "jmp 0x14001cf36" mbitmap.go:1677
+0x14001cf11 4 "LEA" "LEAQ 0(DI)(DI*1), SI" "lea (%rdi,%rdi),%rsi" mbitmap.go:1682
+0x14001cf15 4 "CMP" "CMPQ SI, $0x39" "cmp $0x39,%rsi" mbitmap.go:1682
+0x14001cf19 2 "JA" "JA 0x14001cf25" "ja 0x14001cf25" mbitmap.go:1682
+0x14001cf1b 3 "MOV" "MOVQ DI, CX" "mov %rdi,%rcx" mbitmap.go:1666
+0x14001cf1e 2 "NOP" "NOPW" "data16 nop" mbitmap.go:1666
+0x14001cf20 5 "JMP" "JMP 0x14001cfd7" "jmpq 0x14001cfd7" mbitmap.go:1682
+0x14001cf25 3 "MOV" "MOVQ DI, CX" "mov %rdi,%rcx" mbitmap.go:1700
+0x14001cf28 2 "JMP" "JMP 0x14001cf36" "jmp 0x14001cf36" mbitmap.go:1700
+0x14001cf2a 3 "SUB" "SUBQ SI, R10" "sub %rsi,%r10" mbitmap.go:1700
+0x14001cf2d 3 "MOV" "MOVQ SI, CX" "mov %rsi,%rcx" mbitmap.go:1700
+0x14001cf30 3 "MOV" "MOVQ DI, DX" "mov %rdi,%rdx" mbitmap.go:1701
+0x14001cf33 3 "MOV" "MOVQ R12, R8" "mov %r12,%r8" mbitmap.go:1700
+0x14001cf36 3 "CMP" "CMPQ CX, R10" "cmp %r10,%rcx" mbitmap.go:1700
+0x14001cf39 2 "JA" "JA 0x14001cf71" "ja 0x14001cf71" mbitmap.go:1700
+0x14001cf3b 3 "MOV" "MOVQ CX, SI" "mov %rcx,%rsi" mbitmap.go:1700
+0x14001cf3e 3 "MOV" "MOVQ R8, CX" "mov %r8,%rcx" mbitmap.go:1701
+0x14001cf41 3 "MOV" "MOVQ DX, DI" "mov %rdx,%rdi" mbitmap.go:1701
+0x14001cf44 3 "SHL" "SHLQ CL, DX" "shl %cl,%rdx" mbitmap.go:1701
+0x14001cf47 4 "LEA" "LEAQ 0(SI)(CX*1), R12" "lea (%rsi,%rcx),%r12" mbitmap.go:1702
+0x14001cf4b 4 "CMP" "CMPQ CX, $0x40" "cmp $0x40,%rcx" mbitmap.go:1701
+0x14001cf4f 3 "SBB" "SBBQ R8, R8" "sbb %r8,%r8" mbitmap.go:1701
+0x14001cf52 3 "AND" "ANDQ R8, DX" "and %r8,%rdx" mbitmap.go:1701
+0x14001cf55 3 "OR" "ORQ DX, R11" "or %rdx,%r11" mbitmap.go:1701
+0x14001cf58 2 "JMP" "JMP 0x14001cf69" "jmp 0x14001cf69" mbitmap.go:1703
+0x14001cf5a 3 "MOV" "MOVB R11, 0(BX)" "mov %r11b,(%rbx)" mbitmap.go:1704
+0x14001cf5d 1 "NOP" "NOPL" "nop" mbitmap.go:1705
+0x14001cf5e 4 "SHR" "SHRQ $0x8, R11" "shr $0x8,%r11" mbitmap.go:1706
+0x14001cf62 4 "ADD" "ADDQ $-0x8, R12" "add $-0x8,%r12" mbitmap.go:1707
+0x14001cf66 3 "INC" "INCQ BX" "inc %rbx" mbitmap.go:1056
+0x14001cf69 4 "CMP" "CMPQ R12, $0x8" "cmp $0x8,%r12" mbitmap.go:1703
+0x14001cf6d 2 "JAE" "JAE 0x14001cf5a" "jae 0x14001cf5a" mbitmap.go:1703
+0x14001cf6f 2 "JMP" "JMP 0x14001cf2a" "jmp 0x14001cf2a" mbitmap.go:1703
+0x14001cf71 3 "TEST" "TESTQ R10, R10" "test %r10,%r10" mbitmap.go:1712
+0x14001cf74 2 "JBE" "JBE 0x14001cfaa" "jbe 0x14001cfaa" mbitmap.go:1712
+0x14001cf76 3 "MOV" "MOVQ R10, CX" "mov %r10,%rcx" mbitmap.go:1713
+0x14001cf79 5 "MOV" "MOVL $0x1, SI" "mov $0x1,%esi" mbitmap.go:1713
+0x14001cf7e 3 "SHL" "SHLQ CL, SI" "shl %cl,%rsi" mbitmap.go:1713
+0x14001cf81 4 "LEA" "LEAQ 0(R8)(CX*1), DI" "lea (%r8,%rcx),%rdi" mbitmap.go:1715
+0x14001cf85 4 "CMP" "CMPQ CX, $0x40" "cmp $0x40,%rcx" mbitmap.go:1713
+0x14001cf89 3 "SBB" "SBBQ R10, R10" "sbb %r10,%r10" mbitmap.go:1713
+0x14001cf8c 3 "AND" "ANDQ R10, SI" "and %r10,%rsi" mbitmap.go:1713
+0x14001cf8f 3 "DEC" "DECQ SI" "dec %rsi" mbitmap.go:1713
+0x14001cf92 3 "AND" "ANDQ SI, DX" "and %rsi,%rdx" mbitmap.go:1713
+0x14001cf95 3 "MOV" "MOVQ R8, CX" "mov %r8,%rcx" mbitmap.go:1714
+0x14001cf98 3 "SHL" "SHLQ CL, DX" "shl %cl,%rdx" mbitmap.go:1714
+0x14001cf9b 4 "CMP" "CMPQ CX, $0x40" "cmp $0x40,%rcx" mbitmap.go:1714
+0x14001cf9f 3 "SBB" "SBBQ SI, SI" "sbb %rsi,%rsi" mbitmap.go:1714
+0x14001cfa2 3 "AND" "ANDQ SI, DX" "and %rsi,%rdx" mbitmap.go:1714
+0x14001cfa5 3 "OR" "ORQ DX, R11" "or %rdx,%r11" mbitmap.go:1714
+0x14001cfa8 2 "JMP" "JMP 0x14001cfad" "jmp 0x14001cfad" mbitmap.go:1715
+0x14001cfaa 3 "MOV" "MOVQ R8, DI" "mov %r8,%rdi" mbitmap.go:1717
+0x14001cfad 3 "MOV" "MOVQ R11, DX" "mov %r11,%rdx" mbitmap.go:1577
+0x14001cfb0 3 "MOV" "MOVQ BX, R11" "mov %rbx,%r11" mbitmap.go:1577
+0x14001cfb3 3 "MOV" "MOVQ DI, BX" "mov %rdi,%rbx" mbitmap.go:1577
+0x14001cfb6 5 "JMP" "JMP 0x14001cd2d" "jmpq 0x14001cd2d" mbitmap.go:1717
+0x14001cfbb 3 "SBB" "SBBQ SI, SI" "sbb %rsi,%rsi" mbitmap.go:1685
+0x14001cfbe 3 "MOV" "MOVQ CX, R12" "mov %rcx,%r12" mbitmap.go:1666
+0x14001cfc1 3 "MOV" "MOVQ DI, CX" "mov %rdi,%rcx" mbitmap.go:1685
+0x14001cfc4 3 "MOV" "MOVQ DX, R13" "mov %rdx,%r13" mbitmap.go:1685
+0x14001cfc7 3 "SHL" "SHLQ CL, R13" "shl %cl,%r13" mbitmap.go:1685
+0x14001cfca 3 "AND" "ANDQ SI, R13" "and %rsi,%r13" mbitmap.go:1685
+0x14001cfcd 3 "OR" "ORQ R13, DX" "or %r13,%rdx" mbitmap.go:1685
+0x14001cfd0 4 "LEA" "LEAQ 0(CX)(CX*1), DI" "lea (%rcx,%rcx),%rdi" mbitmap.go:1686
+0x14001cfd4 3 "MOV" "MOVQ R12, CX" "mov %r12,%rcx" mbitmap.go:1690
+0x14001cfd7 4 "CMP" "CMPQ DI, $0x40" "cmp $0x40,%rdi" mbitmap.go:1684
+0x14001cfdb 2 "JBE" "JBE 0x14001cfbb" "jbe 0x14001cfbb" mbitmap.go:1684
+0x14001cfdd 3 "NOP" "NOPL 0(AX)" "nopl (%rax)" mbitmap.go:1684
+0x14001cfe0 3 "TEST" "TESTQ CX, CX" "test %rcx,%rcx" mbitmap.go:1690
+0x14001cfe3 2 "JE" "JE 0x14001d01c" "je 0x14001d01c" mbitmap.go:1690
+0x14001cfe5 3 "MOV" "MOVQ AX, SI" "mov %rax,%rsi" mbitmap.go:1577
+0x14001cfe8 5 "MOV" "MOVL $0x39, AX" "mov $0x39,%eax" mbitmap.go:1690
+0x14001cfed 3 "MOV" "MOVQ DX, DI" "mov %rdx,%rdi" mbitmap.go:1684
+0x14001cff0 2 "XOR" "XORL DX, DX" "xor %edx,%edx" mbitmap.go:1690
+0x14001cff2 3 "DIV" "DIVQ CX" "div %rcx" mbitmap.go:1690
+0x14001cff5 4 "IMUL" "IMULQ AX, CX" "imul %rax,%rcx" mbitmap.go:1690
+0x14001cff9 5 "MOV" "MOVL $0x1, DX" "mov $0x1,%edx" mbitmap.go:1691
+0x14001cffe 3 "SHL" "SHLQ CL, DX" "shl %cl,%rdx" mbitmap.go:1691
+0x14001d001 4 "CMP" "CMPQ CX, $0x40" "cmp $0x40,%rcx" mbitmap.go:1691
+0x14001d005 3 "SBB" "SBBQ R12, R12" "sbb %r12,%r12" mbitmap.go:1691
+0x14001d008 3 "AND" "ANDQ R12, DX" "and %r12,%rdx" mbitmap.go:1691
+0x14001d00b 3 "DEC" "DECQ DX" "dec %rdx" mbitmap.go:1691
+0x14001d00e 3 "AND" "ANDQ DI, DX" "and %rdi,%rdx" mbitmap.go:1691
+0x14001d011 3 "MOV" "MOVQ SI, AX" "mov %rsi,%rax" mbitmap.go:1749
+0x14001d014 3 "MOV" "MOVQ CX, DI" "mov %rcx,%rdi" mbitmap.go:1749
+0x14001d017 5 "JMP" "JMP 0x14001cf25" "jmpq 0x14001cf25" mbitmap.go:1693
+0x14001d01c 4 "NOP" "NOPL 0(AX)" "nopl (%rax)" mbitmap.go:1690
+0x14001d020 5 "CALL" "CALL runtime.panicdivide(SB)" "callq 0x14003f900" mbitmap.go:1690
+0x14001d025 4 "LEA" "LEAQ 0x7(CX), DI" "lea 0x7(%rcx),%rdi" mbitmap.go:1611
+0x14001d029 3 "MOV" "MOVQ AX, CX" "mov %rax,%rcx" mbitmap.go:1749
+0x14001d02c 4 "MOVZX" "MOVZX 0(R9), R10" "movzbl (%r9),%r10d" mbitmap.go:1612
+0x14001d030 3 "MOV" "MOVL R10, R11" "mov %r10d,%r11d" mbitmap.go:1614
+0x14001d033 4 "AND" "ANDL $0x7f, R10" "and $0x7f,%r10d" mbitmap.go:1614
+0x14001d037 3 "MOV" "MOVQ CX, AX" "mov %rcx,%rax" mbitmap.go:1577
+0x14001d03a 3 "MOV" "MOVQ DI, CX" "mov %rdi,%rcx" mbitmap.go:1614
+0x14001d03d 3 "SHL" "SHLQ CL, R10" "shl %cl,%r10" mbitmap.go:1614
+0x14001d040 3 "INC" "INCQ R9" "inc %r9" mbitmap.go:1056
+0x14001d043 1 "NOP" "NOPL" "nop" mbitmap.go:1613
+0x14001d044 4 "CMP" "CMPQ CX, $0x40" "cmp $0x40,%rcx" mbitmap.go:1614
+0x14001d048 3 "SBB" "SBBQ R12, R12" "sbb %r12,%r12" mbitmap.go:1614
+0x14001d04b 3 "AND" "ANDQ R12, R10" "and %r12,%r10" mbitmap.go:1614
+0x14001d04e 3 "OR" "ORQ R10, R8" "or %r10,%r8" mbitmap.go:1614
+0x14001d051 5 "BT" "BTL $0x7, R11" "bt $0x7,%r11d" mbitmap.go:1615
+0x14001d056 2 "JB" "JB 0x14001d025" "jb 0x14001d025" mbitmap.go:1615
+0x14001d058 3 "MOV" "MOVQ AX, CX" "mov %rax,%rcx" mbitmap.go:1749
+0x14001d05b 3 "MOV" "MOVQ R8, DI" "mov %r8,%rdi" mbitmap.go:1622
+0x14001d05e 2 "NOP" "NOPW" "data16 nop" mbitmap.go:1622
+0x14001d060 5 "JMP" "JMP 0x14001cd88" "jmpq 0x14001cd88" mbitmap.go:1616
+0x14001d065 2 "MOV" "MOVB DL, 0(BX)" "mov %dl,(%rbx)" mbitmap.go:1752
+0x14001d067 1 "NOP" "NOPL" "nop" mbitmap.go:1753
+0x14001d068 4 "ADD" "ADDQ $-0x8, CX" "add $-0x8,%rcx" mbitmap.go:1751
+0x14001d06c 4 "SHR" "SHRQ $0x8, DX" "shr $0x8,%rdx" mbitmap.go:1754
+0x14001d070 3 "INC" "INCQ BX" "inc %rbx" mbitmap.go:1056
+0x14001d073 3 "TEST" "TESTQ CX, CX" "test %rcx,%rcx" mbitmap.go:1751
+0x14001d076 2 "JA" "JA 0x14001d065" "ja 0x14001d065" mbitmap.go:1751
+0x14001d078 1 "POP" "POPQ BP" "pop %rbp" mbitmap.go:1756
+0x14001d079 1 "RET" "RET" "retq" mbitmap.go:1756
+0x14001d07a 4 "MOVZX" "MOVZX 0(R9), R11" "movzbl (%r9),%r11d" mbitmap.go:1595
+0x14001d07e 3 "MOV" "MOVQ CX, AX" "mov %rcx,%rax" mbitmap.go:1577
+0x14001d081 3 "MOV" "MOVQ SI, CX" "mov %rsi,%rcx" mbitmap.go:1595
+0x14001d084 3 "SHL" "SHLQ CL, R11" "shl %cl,%r11" mbitmap.go:1595
+0x14001d087 3 "OR" "ORQ R11, DX" "or %r11,%rdx" mbitmap.go:1595
+0x14001d08a 1 "NOP" "NOPL" "nop" mbitmap.go:1596
+0x14001d08b 2 "MOV" "MOVB DL, 0(BX)" "mov %dl,(%rbx)" mbitmap.go:1597
+0x14001d08d 1 "NOP" "NOPL" "nop" mbitmap.go:1598
+0x14001d08e 4 "SHR" "SHRQ $0x8, DX" "shr $0x8,%rdx" mbitmap.go:1599
+0x14001d092 3 "INC" "INCQ R10" "inc %r10" mbitmap.go:1594
+0x14001d095 3 "INC" "INCQ R9" "inc %r9" mbitmap.go:1056
+0x14001d098 3 "INC" "INCQ BX" "inc %rbx" mbitmap.go:1056
+0x14001d09b 3 "MOV" "MOVQ AX, CX" "mov %rax,%rcx" mbitmap.go:1749
+0x14001d09e 2 "NOP" "NOPW" "data16 nop" mbitmap.go:1749
+0x14001d0a0 3 "CMP" "CMPQ R10, DI" "cmp %rdi,%r10" mbitmap.go:1594
+0x14001d0a3 2 "JB" "JB 0x14001d07a" "jb 0x14001d07a" mbitmap.go:1594
+0x14001d0a5 4 "AND" "ANDL $0x7, R8" "and $0x7,%r8d" mbitmap.go:1601
+0x14001d0a9 3 "TEST" "TESTQ R8, R8" "test %r8,%r8" mbitmap.go:1601
+0x14001d0ac 2 "JBE" "JBE 0x14001d0c8" "jbe 0x14001d0c8" mbitmap.go:1601
+0x14001d0ae 4 "MOVZX" "MOVZX 0(R9), DI" "movzbl (%r9),%edi" mbitmap.go:1602
+0x14001d0b2 3 "MOV" "MOVQ CX, AX" "mov %rcx,%rax" mbitmap.go:1577
+0x14001d0b5 3 "MOV" "MOVQ SI, CX" "mov %rsi,%rcx" mbitmap.go:1602
+0x14001d0b8 3 "SHL" "SHLQ CL, DI" "shl %cl,%rdi" mbitmap.go:1602
+0x14001d0bb 3 "OR" "ORQ DI, DX" "or %rdi,%rdx" mbitmap.go:1602
+0x14001d0be 1 "NOP" "NOPL" "nop" mbitmap.go:1603
+0x14001d0bf 4 "LEA" "LEAQ 0(R8)(CX*1), SI" "lea (%r8,%rcx),%rsi" mbitmap.go:1604
+0x14001d0c3 3 "INC" "INCQ R9" "inc %r9" mbitmap.go:1056
+0x14001d0c6 2 "JMP" "JMP 0x14001d0cb" "jmp 0x14001d0cb" mbitmap.go:1604
+0x14001d0c8 3 "MOV" "MOVQ CX, AX" "mov %rcx,%rax" mbitmap.go:1749
+0x14001d0cb 3 "MOV" "MOVQ BX, R11" "mov %rbx,%r11" mbitmap.go:1577
+0x14001d0ce 3 "MOV" "MOVQ SI, BX" "mov %rsi,%rbx" mbitmap.go:1577
+0x14001d0d1 5 "JMP" "JMP 0x14001cd2d" "jmpq 0x14001cd2d" mbitmap.go:1606
+0x14001d0d6 1 "INT" "INT $0x3" "int3" .:-1
+0x14001d0d7 1 "INT" "INT $0x3" "int3" .:-1
+0x14001d0d8 1 "INT" "INT $0x3" "int3" .:-1
+0x14001d0d9 1 "INT" "INT $0x3" "int3" .:-1
+0x14001d0da 1 "INT" "INT $0x3" "int3" .:-1
+0x14001d0db 1 "INT" "INT $0x3" "int3" .:-1
+0x14001d0dc 1 "INT" "INT $0x3" "int3" .:-1
+0x14001d0dd 1 "INT" "INT $0x3" "int3" .:-1
+0x14001d0de 1 "INT" "INT $0x3" "int3" .:-1
+0x14001d0df 1 "INT" "INT $0x3" "int3" .:-1
+== runtime.runCheckmark 0x14001e2c0 192 /usr/local/go/src/runtime/mcheckmark.go
+0x14001e2c0 4 "CMP" "CMPQ SP, 0x10(R14)" "cmp 0x10(%r14),%rsp" mcheckmark.go:126
+0x14001e2c4 6 "JBE" "JBE 0x14001e351" "jbe 0x14001e351" mcheckmark.go:126
+0x14001e2ca 1 "PUSH" "PUSHQ BP" "push %rbp" mcheckmark.go:126
+0x14001e2cb 3 "MOV" "MOVQ SP, BP" "mov %rsp,%rbp" mcheckmark.go:126
+0x14001e2ce 4 "SUB" "SUBQ $0x18, SP" "sub $0x18,%rsp" mcheckmark.go:126
+0x14001e2d2 5 "MOV" "MOVQ AX, 0x28(SP)" "mov %rax,0x28(%rsp)" mcheckmark.go:144
+0x14001e2d7 1 "NOP" "NOPL" "nop" mcheckmark.go:134
+0x14001e2d8 1 "NOP" "NOPL" "nop" types.go:179
+0x14001e2d9 2 "XOR" "XORL AX, AX" "xor %eax,%eax" types.go:131
+0x14001e2db 7 "LEA" "LEAQ runtime.sched+264(SB), CX" "lea 0x108766(%rip),%rcx" types.go:131
+0x14001e2e2 2 "XCHG" "XCHGB AL, 0(CX)" "xchg %al,(%rcx)" types.go:131
+0x14001e2e4 5 "CALL" "CALL runtime.startCheckmarks(SB)" "callq 0x14001dee0" mcheckmark.go:135
+0x14001e2e9 5 "CALL" "CALL runtime.gcResetMarkState(SB)" "callq 0x140023e40" mcheckmark.go:136
+0x14001e2ee 4 "MOV" "MOVQ 0x30(R14), AX" "mov 0x30(%r14),%rax" mcheckmark.go:137
+0x14001e2f2 7 "MOV" "MOVQ 0xa0(AX), AX" "mov 0xa0(%rax),%rax" mcheckmark.go:137
+0x14001e2f9 5 "MOV" "MOVQ 0x28(SP), DX" "mov 0x28(%rsp),%rdx" mcheckmark.go:138
+0x14001e2fe 3 "MOV" "MOVQ 0(DX), CX" "mov (%rdx),%rcx" mcheckmark.go:138
+0x14001e301 2 "TEST" "TESTB AL, 0(AX)" "test %al,(%rax)" mcheckmark.go:137
+0x14001e303 6 "ADD" "ADDQ $0x1258, AX" "add $0x1258,%rax" mcheckmark.go:137
+0x14001e309 5 "MOV" "MOVQ AX, 0x10(SP)" "mov %rax,0x10(%rsp)" mcheckmark.go:137
+0x14001e30e 2 "CALL" "CALL CX" "call *%rcx" mcheckmark.go:138
+0x14001e310 5 "MOV" "MOVQ 0x10(SP), AX" "mov 0x10(%rsp),%rax" mcheckmark.go:139
+0x14001e315 2 "XOR" "XORL BX, BX" "xor %ebx,%ebx" mcheckmark.go:139
+0x14001e317 5 "CALL" "CALL runtime.gcDrain(SB)" "callq 0x140026ec0" mcheckmark.go:139
+0x14001e31c 4 "MOV" "MOVQ 0x30(R14), AX" "mov 0x30(%r14),%rax" mcheckmark.go:140
+0x14001e320 7 "MOV" "MOVQ 0xa0(AX), AX" "mov 0xa0(%rax),%rax" mcheckmark.go:140
+0x14001e327 5 "CALL" "CALL runtime.wbBufFlush1(SB)" "callq 0x14003bd80" mcheckmark.go:140
+0x14001e32c 5 "MOV" "MOVQ 0x10(SP), AX" "mov 0x10(%rsp),%rax" mcheckmark.go:141
+0x14001e331 5 "CALL" "CALL runtime.(*gcWork).dispose(SB)" "callq 0x140030d60" mcheckmark.go:141
+0x14001e336 5 "CALL" "CALL runtime.endCheckmarks(SB)" "callq 0x14001dfc0" mcheckmark.go:142
+0x14001e33b 1 "NOP" "NOPL" "nop" mcheckmark.go:143
+0x14001e33c 1 "NOP" "NOPL" "nop" types.go:179
+0x14001e33d 5 "MOV" "MOVL $0x1, AX" "mov $0x1,%eax" types.go:131
+0x14001e342 7 "LEA" "LEAQ runtime.sched+264(SB), CX" "lea 0x1086ff(%rip),%rcx" types.go:131
+0x14001e349 2 "XCHG" "XCHGB AL, 0(CX)" "xchg %al,(%rcx)" types.go:131
+0x14001e34b 4 "ADD" "ADDQ $0x18, SP" "add $0x18,%rsp" mcheckmark.go:144
+0x14001e34f 1 "POP" "POPQ BP" "pop %rbp" mcheckmark.go:144
+0x14001e350 1 "RET" "RET" "retq" mcheckmark.go:144
+0x14001e351 5 "MOV" "MOVQ AX, 0x8(SP)" "mov %rax,0x8(%rsp)" mcheckmark.go:126
+0x14001e356 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x140075ce0" mcheckmark.go:126
+0x14001e35b 5 "MOV" "MOVQ 0x8(SP), AX" "mov 0x8(%rsp),%rax" mcheckmark.go:126
+0x14001e360 5 "JMP" "JMP runtime.runCheckmark(SB)" "jmpq 0x14001e2c0" mcheckmark.go:126
+0x14001e365 1 "INT" "INT $0x3" "int3" .:-1
+0x14001e366 1 "INT" "INT $0x3" "int3" .:-1
+0x14001e367 1 "INT" "INT $0x3" "int3" .:-1
+0x14001e368 1 "INT" "INT $0x3" "int3" .:-1
+0x14001e369 1 "INT" "INT $0x3" "int3" .:-1
+0x14001e36a 1 "INT" "INT $0x3" "int3" .:-1
+0x14001e36b 1 "INT" "INT $0x3" "int3" .:-1
+0x14001e36c 1 "INT" "INT $0x3" "int3" .:-1
+0x14001e36d 1 "INT" "INT $0x3" "int3" .:-1
+0x14001e36e 1 "INT" "INT $0x3" "int3" .:-1
+0x14001e36f 1 "INT" "INT $0x3" "int3" .:-1
+0x14001e370 1 "INT" "INT $0x3" "int3" .:-1
+0x14001e371 1 "INT" "INT $0x3" "int3" .:-1
+0x14001e372 1 "INT" "INT $0x3" "int3" .:-1
+0x14001e373 1 "INT" "INT $0x3" "int3" .:-1
+0x14001e374 1 "INT" "INT $0x3" "int3" .:-1
+0x14001e375 1 "INT" "INT $0x3" "int3" .:-1
+0x14001e376 1 "INT" "INT $0x3" "int3" .:-1
+0x14001e377 1 "INT" "INT $0x3" "int3" .:-1
+0x14001e378 1 "INT" "INT $0x3" "int3" .:-1
+0x14001e379 1 "INT" "INT $0x3" "int3" .:-1
+0x14001e37a 1 "INT" "INT $0x3" "int3" .:-1
+0x14001e37b 1 "INT" "INT $0x3" "int3" .:-1
+0x14001e37c 1 "INT" "INT $0x3" "int3" .:-1
+0x14001e37d 1 "INT" "INT $0x3" "int3" .:-1
+0x14001e37e 1 "INT" "INT $0x3" "int3" .:-1
+0x14001e37f 1 "INT" "INT $0x3" "int3" .:-1
+== runtime.runFinalizers 0x14001ffe0 1280 /usr/local/go/src/runtime/mfinal.go
+0x14001ffe0 8 "LEA" "LEAQ 0xfffffec8(SP), R12" "lea 0xfffffec8(%rsp),%r12" mfinal.go:193
+0x14001ffe8 4 "CMP" "CMPQ R12, 0x10(R14)" "cmp 0x10(%r14),%r12" mfinal.go:193
+0x14001ffec 6 "JBE" "JBE 0x1400204b6" "jbe 0x1400204b6" mfinal.go:193
+0x14001fff2 1 "PUSH" "PUSHQ BP" "push %rbp" mfinal.go:193
+0x14001fff3 3 "MOV" "MOVQ SP, BP" "mov %rsp,%rbp" mfinal.go:193
+0x14001fff6 7 "SUB" "SUBQ $0x1b0, SP" "sub $0x1b0,%rsp" mfinal.go:193
+0x14001fffd 8 "MOV" "MOVQ R14, 0x190(SP)" "mov %r14,0x190(%rsp)" mfinal.go:200
+0x140020005 1 "NOP" "NOPL" "nop" mfinal.go:201
+0x140020006 1 "NOP" "NOPL" "nop" lock_spinbit.go:161
+0x140020007 7 "LEA" "LEAQ runtime.finlock(SB), AX" "lea 0x14a3f2(%rip),%rax" lockrank_off.go:24
+0x14002000e 5 "CALL" "CALL runtime.lock2(SB)" "callq 0x140014e00" lockrank_off.go:24
+0x140020013 7 "CMP" "CMPL runtime.writeBarrier(SB), $0x0" "cmpl $0x0,0x14a556(%rip)" mfinal.go:202
+0x14002001a 2 "JNE" "JNE 0x140020026" "jne 0x140020026" mfinal.go:202
+0x14002001c 8 "MOV" "MOVQ 0x190(SP), DX" "mov 0x190(%rsp),%rdx" mfinal.go:202
+0x140020024 2 "JMP" "JMP 0x140020041" "jmp 0x140020041" mfinal.go:202
+0x140020026 7 "MOV" "MOVQ runtime.fing(SB), CX" "mov 0x104d43(%rip),%rcx" mfinal.go:202
+0x14002002d 5 "CALL" "CALL runtime.gcWriteBarrier2(SB)" "callq 0x140077780" mfinal.go:202
+0x140020032 8 "MOV" "MOVQ 0x190(SP), DX" "mov 0x190(%rsp),%rdx" mfinal.go:202
+0x14002003a 3 "MOV" "MOVQ DX, 0(R11)" "mov %rdx,(%r11)" mfinal.go:202
+0x14002003d 4 "MOV" "MOVQ CX, 0x8(R11)" "mov %rcx,0x8(%r11)" mfinal.go:202
+0x140020041 7 "MOV" "MOVQ DX, runtime.fing(SB)" "mov %rdx,0x104d28(%rip)" mfinal.go:202
+0x140020048 1 "NOP" "NOPL" "nop" mfinal.go:203
+0x140020049 1 "NOP" "NOPL" "nop" lock_spinbit.go:270
+0x14002004a 7 "LEA" "LEAQ runtime.finlock(SB), AX" "lea 0x14a3af(%rip),%rax" lockrank_off.go:36
+0x140020051 5 "CALL" "CALL runtime.unlock2(SB)" "callq 0x1400152c0" lockrank_off.go:36
+0x140020056 2 "XOR" "XORL AX, AX" "xor %eax,%eax" lockrank_off.go:36
+0x140020058 2 "XOR" "XORL CX, CX" "xor %ecx,%ecx" lockrank_off.go:36
+0x14002005a 8 "MOV" "MOVQ CX, 0x198(SP)" "mov %rcx,0x198(%rsp)" lockrank_off.go:36
+0x140020062 5 "MOV" "MOVQ AX, 0x38(SP)" "mov %rax,0x38(%rsp)" lockrank_off.go:36
+0x140020067 1 "NOP" "NOPL" "nop" lock_spinbit.go:161
+0x140020068 7 "LEA" "LEAQ runtime.finlock(SB), AX" "lea 0x14a391(%rip),%rax" lockrank_off.go:24
+0x14002006f 5 "CALL" "CALL runtime.lock2(SB)" "callq 0x140014e00" lockrank_off.go:24
+0x140020074 7 "MOV" "MOVQ runtime.finq(SB), CX" "mov 0x14a38d(%rip),%rcx" mfinal.go:207
+0x14002007b 11 "MOV" "MOVQ $0x0, runtime.finq(SB)" "movq $0x0,0x14a382(%rip)" mfinal.go:208
+0x140020086 3 "TEST" "TESTQ CX, CX" "test %rcx,%rcx" mfinal.go:209
+0x140020089 2 "JE" "JE 0x1400200c5" "je 0x1400200c5" mfinal.go:209
+0x14002008b 5 "MOV" "MOVQ CX, 0x40(SP)" "mov %rcx,0x40(%rsp)" mfinal.go:207
+0x140020090 1 "NOP" "NOPL" "nop" mfinal.go:214
+0x140020091 7 "MOV" "MOVQ runtime.intArgRegs(SB), CX" "mov 0xfe5d8(%rip),%rcx" mfinal.go:213
+0x140020098 5 "MOV" "MOVQ CX, 0x68(SP)" "mov %rcx,0x68(%rsp)" mfinal.go:213
+0x14002009d 7 "LEA" "LEAQ runtime.finlock(SB), AX" "lea 0x14a35c(%rip),%rax" lockrank_off.go:36
+0x1400200a4 5 "CALL" "CALL runtime.unlock2(SB)" "callq 0x1400152c0" lockrank_off.go:36
+0x1400200a9 5 "MOV" "MOVQ 0x40(SP), AX" "mov 0x40(%rsp),%rax" mfinal.go:218
+0x1400200ae 5 "MOV" "MOVQ 0x38(SP), CX" "mov 0x38(%rsp),%rcx" mfinal.go:218
+0x1400200b3 8 "MOV" "MOVQ 0x198(SP), DX" "mov 0x198(%rsp),%rdx" mfinal.go:218
+0x1400200bb 5 "NOP" "NOPL 0(AX)(AX*1)" "nopl (%rax,%rax)" mfinal.go:218
+0x1400200c0 5 "JMP" "JMP 0x140020160" "jmpq 0x140020160" lock_spinbit.go:270
+0x1400200c5 7 "LEA" "LEAQ go:funcdesc+344(SB), AX" "lea 0xfd274(%rip),%rax" mfinal.go:210
+0x1400200cc 7 "LEA" "LEAQ runtime.finlock(SB), BX" "lea 0x14a32d(%rip),%rbx" mfinal.go:210
+0x1400200d3 5 "MOV" "MOVL $0xa, CX" "mov $0xa,%ecx" mfinal.go:210
+0x1400200d8 5 "MOV" "MOVL $0xa, DI" "mov $0xa,%edi" mfinal.go:210
+0x1400200dd 5 "MOV" "MOVL $0x1, SI" "mov $0x1,%esi" mfinal.go:210
+0x1400200e2 5 "CALL" "CALL runtime.gopark(SB)" "callq 0x140072400" mfinal.go:210
+0x1400200e7 5 "MOV" "MOVQ 0x38(SP), AX" "mov 0x38(%rsp),%rax" mfinal.go:206
+0x1400200ec 8 "MOV" "MOVQ 0x198(SP), CX" "mov 0x198(%rsp),%rcx" mfinal.go:206
+0x1400200f4 5 "JMP" "JMP 0x14002005a" "jmpq 0x14002005a" mfinal.go:211
+0x1400200f9 8 "MOV" "MOVQ DX, 0x1a0(SP)" "mov %rdx,0x1a0(%rsp)" mfinal.go:220
+0x140020101 5 "MOV" "MOVQ CX, 0x50(SP)" "mov %rcx,0x50(%rsp)" mfinal.go:220
+0x140020106 4 "MOV" "MOVQ 0x8(AX), CX" "mov 0x8(%rax),%rcx" mfinal.go:284
+0x14002010a 5 "MOV" "MOVQ CX, 0x48(SP)" "mov %rcx,0x48(%rsp)" mfinal.go:284
+0x14002010f 1 "NOP" "NOPL" "nop" mfinal.go:285
+0x140020110 1 "NOP" "NOPL" "nop" lock_spinbit.go:161
+0x140020111 7 "LEA" "LEAQ runtime.finlock(SB), AX" "lea 0x14a2e8(%rip),%rax" lockrank_off.go:24
+0x140020118 5 "CALL" "CALL runtime.lock2(SB)" "callq 0x140014e00" lockrank_off.go:24
+0x14002011d 4 "MOV" "MOVL 0x30(SP), CX" "mov 0x30(%rsp),%ecx" mfinal.go:286
+0x140020121 7 "ADD" "ADDQ CX, runtime.finexecuted(SB)" "add %rcx,0x14a2f8(%rip)" mfinal.go:286
+0x140020128 7 "MOV" "MOVQ runtime.finc(SB), CX" "mov 0x14a2e1(%rip),%rcx" mfinal.go:287
+0x14002012f 5 "MOV" "MOVQ 0x40(SP), DX" "mov 0x40(%rsp),%rdx" mfinal.go:287
+0x140020134 4 "MOV" "MOVQ CX, 0x8(DX)" "mov %rcx,0x8(%rdx)" mfinal.go:287
+0x140020138 7 "MOV" "MOVQ DX, runtime.finc(SB)" "mov %rdx,0x14a2d1(%rip)" mfinal.go:288
+0x14002013f 1 "NOP" "NOPL" "nop" mfinal.go:289
+0x140020140 1 "NOP" "NOPL" "nop" lock_spinbit.go:270
+0x140020141 7 "LEA" "LEAQ runtime.finlock(SB), AX" "lea 0x14a2b8(%rip),%rax" lockrank_off.go:36
+0x140020148 5 "CALL" "CALL runtime.unlock2(SB)" "callq 0x1400152c0" lockrank_off.go:36
+0x14002014d 5 "MOV" "MOVQ 0x48(SP), AX" "mov 0x48(%rsp),%rax" mfinal.go:218
+0x140020152 5 "MOV" "MOVQ 0x50(SP), CX" "mov 0x50(%rsp),%rcx" mfinal.go:218
+0x140020157 8 "MOV" "MOVQ 0x1a0(SP), DX" "mov 0x1a0(%rsp),%rdx" mfinal.go:218
+0x14002015f 1 "NOP" "NOPL" "nop" mfinal.go:218
+0x140020160 3 "TEST" "TESTQ AX, AX" "test %rax,%rax" mfinal.go:218
+0x140020163 6 "JE" "JE 0x14002043c" "je 0x14002043c" mfinal.go:218
+0x140020169 5 "MOV" "MOVQ AX, 0x40(SP)" "mov %rax,0x40(%rsp)" mfinal.go:218
+0x14002016e 3 "MOV" "MOVL 0x10(AX), SI" "mov 0x10(%rax),%esi" mfinal.go:219
+0x140020171 4 "MOV" "MOVL SI, 0x30(SP)" "mov %esi,0x30(%rsp)" mfinal.go:219
+0x140020175 2 "MOV" "MOVL SI, BX" "mov %esi,%ebx" mfinal.go:219
+0x140020177 2 "JMP" "JMP 0x1400201a3" "jmp 0x1400201a3" mfinal.go:220
+0x140020179 4 "MOVUPS" "MOVUPS X15, 0(DX)" "movups %xmm15,(%rdx)" mfinal.go:279
+0x14002017d 9 "MOV" "MOVQ $0x0, 0x38(CX)(AX*8)" "movq $0x0,0x38(%rcx,%rax,8)" mfinal.go:281
+0x140020186 4 "MOV" "MOVL 0x34(SP), SI" "mov 0x34(%rsp),%esi" mfinal.go:282
+0x14002018a 2 "MOV" "MOVL SI, DI" "mov %esi,%edi" mfinal.go:282
+0x14002018c 3 "XCHG" "XCHGL DI, 0x10(CX)" "xchg %edi,0x10(%rcx)" mfinal.go:282
+0x14002018f 3 "MOV" "MOVQ CX, AX" "mov %rcx,%rax" mfinal.go:232
+0x140020192 4 "MOV" "MOVL 0x30(SP), BX" "mov 0x30(%rsp),%ebx" mfinal.go:286
+0x140020196 5 "MOV" "MOVQ 0x58(SP), CX" "mov 0x58(%rsp),%rcx" mfinal.go:220
+0x14002019b 8 "MOV" "MOVQ 0x1a8(SP), DX" "mov 0x1a8(%rsp),%rdx" mfinal.go:220
+0x1400201a3 2 "TEST" "TESTL SI, SI" "test %esi,%esi" mfinal.go:220
+0x1400201a5 6 "JBE" "JBE 0x1400200f9" "jbe 0x1400200f9" mfinal.go:220
+0x1400201ab 2 "DEC" "DECL SI" "dec %esi" mfinal.go:221
+0x1400201ad 4 "CMP" "CMPQ SI, $0x65" "cmp $0x65,%rsi" mfinal.go:221
+0x1400201b1 6 "JAE" "JAE 0x1400204ab" "jae 0x1400204ab" mfinal.go:221
+0x1400201b7 4 "MOV" "MOVL SI, 0x34(SP)" "mov %esi,0x34(%rsp)" mfinal.go:221
+0x1400201bb 4 "LEA" "LEAQ 0(SI)(SI*4), DI" "lea (%rsi,%rsi,4),%rdi" mfinal.go:221
+0x1400201bf 5 "MOV" "MOVQ DI, 0x60(SP)" "mov %rdi,0x60(%rsp)" mfinal.go:221
+0x1400201c4 5 "LEA" "LEAQ 0x78(SP), R8" "lea 0x78(%rsp),%r8" mfinal.go:223
+0x1400201c9 6 "MOV" "MOVL $0x4, R9" "mov $0x4,%r9d" mfinal.go:223
+0x1400201cf 4 "MOVUPS" "MOVUPS X15, 0(R8)" "movups %xmm15,(%r8)" mfinal.go:223
+0x1400201d3 5 "MOVUPS" "MOVUPS X15, 0x10(R8)" "movups %xmm15,0x10(%r8)" mfinal.go:223
+0x1400201d8 5 "MOVUPS" "MOVUPS X15, 0x20(R8)" "movups %xmm15,0x20(%r8)" mfinal.go:223
+0x1400201dd 5 "MOVUPS" "MOVUPS X15, 0x30(R8)" "movups %xmm15,0x30(%r8)" mfinal.go:223
+0x1400201e2 4 "ADD" "ADDQ $0x40, R8" "add $0x40,%r8" mfinal.go:223
+0x1400201e6 3 "DEC" "DECL R9" "dec %r9d" mfinal.go:223
+0x1400201e9 2 "JNE" "JNE 0x1400201cf" "jne 0x1400201cf" mfinal.go:223
+0x1400201eb 4 "MOVUPS" "MOVUPS X15, 0(R8)" "movups %xmm15,(%r8)" mfinal.go:223
+0x1400201ef 5 "MOV" "MOVQ 0x28(AX)(DI*8), R8" "mov 0x28(%rax,%rdi,8),%r8" mfinal.go:232
+0x1400201f4 4 "ADD" "ADDQ $0x10, R8" "add $0x10,%r8" mfinal.go:232
+0x1400201f8 5 "MOV" "MOVQ R8, 0x38(SP)" "mov %r8,0x38(%rsp)" mfinal.go:232
+0x1400201fd 3 "NOP" "NOPL 0(AX)" "nopl (%rax)" mfinal.go:232
+0x140020200 3 "CMP" "CMPQ CX, R8" "cmp %r8,%rcx" mfinal.go:233
+0x140020203 2 "JAE" "JAE 0x140020231" "jae 0x140020231" mfinal.go:233
+0x140020205 3 "MOV" "MOVQ R8, AX" "mov %r8,%rax" mfinal.go:238
+0x140020208 2 "XOR" "XORL BX, BX" "xor %ebx,%ebx" mfinal.go:238
+0x14002020a 5 "MOV" "MOVL $0x1, CX" "mov $0x1,%ecx" mfinal.go:238
+0x14002020f 5 "CALL" "CALL runtime.mallocgc(SB)" "callq 0x1400718a0" mfinal.go:238
+0x140020214 4 "MOV" "MOVL 0x30(SP), BX" "mov 0x30(%rsp),%ebx" mfinal.go:286
+0x140020218 4 "MOV" "MOVL 0x34(SP), SI" "mov 0x34(%rsp),%esi" mfinal.go:282
+0x14002021c 5 "MOV" "MOVQ 0x60(SP), DI" "mov 0x60(%rsp),%rdi" mfinal.go:241
+0x140020221 5 "MOV" "MOVQ 0x38(SP), R8" "mov 0x38(%rsp),%r8" mfinal.go:272
+0x140020226 3 "MOV" "MOVQ AX, DX" "mov %rax,%rdx" mfinal.go:241
+0x140020229 3 "MOV" "MOVQ R8, CX" "mov %r8,%rcx" mfinal.go:241
+0x14002022c 5 "MOV" "MOVQ 0x40(SP), AX" "mov 0x40(%rsp),%rax" mfinal.go:241
+0x140020231 5 "MOV" "MOVQ 0x30(AX)(DI*8), R9" "mov 0x30(%rax,%rdi,8),%r9" mfinal.go:241
+0x140020236 3 "TEST" "TESTQ R9, R9" "test %r9,%r9" mfinal.go:241
+0x140020239 6 "JE" "JE 0x14002049a" "je 0x14002049a" mfinal.go:241
+0x14002023f 5 "MOV" "MOVQ 0x68(SP), R9" "mov 0x68(%rsp),%r9" mfinal.go:213
+0x140020244 3 "TEST" "TESTQ R9, R9" "test %r9,%r9" mfinal.go:213
+0x140020247 2 "JLE" "JLE 0x140020250" "jle 0x140020250" mfinal.go:245
+0x140020249 5 "LEA" "LEAQ 0x78(SP), R10" "lea 0x78(%rsp),%r10" mfinal.go:246
+0x14002024e 2 "JMP" "JMP 0x140020257" "jmp 0x140020257" mfinal.go:246
+0x140020250 4 "MOVUPS" "MOVUPS X15, 0(DX)" "movups %xmm15,(%rdx)" mfinal.go:252
+0x140020254 3 "MOV" "MOVQ DX, R10" "mov %rdx,%r10" mfinal.go:254
+0x140020257 8 "MOV" "MOVQ DX, 0x1a8(SP)" "mov %rdx,0x1a8(%rsp)" mfinal.go:241
+0x14002025f 5 "MOV" "MOVQ CX, 0x58(SP)" "mov %rcx,0x58(%rsp)" mfinal.go:241
+0x140020264 5 "MOV" "MOVQ 0x30(AX)(DI*8), R11" "mov 0x30(%rax,%rdi,8),%r11" mfinal.go:254
+0x140020269 5 "MOVZX" "MOVZX 0x17(R11), R12" "movzbl 0x17(%r11),%r12d" type.go:197
+0x14002026e 4 "CMP" "CMPL R12, $0x14" "cmp $0x14,%r12b" mfinal.go:258
+0x140020272 6 "JNE" "JNE 0x140020360" "jne 0x140020360" mfinal.go:258
+0x140020278 3 "TEST" "TESTB AL, 0(R10)" "test %al,(%r10)" mfinal.go:261
+0x14002027b 5 "MOV" "MOVQ 0x38(AX)(DI*8), R12" "mov 0x38(%rax,%rdi,8),%r12" mfinal.go:261
+0x140020280 4 "TEST" "TESTB AL, 0(R12)" "test %al,(%r12,%riz)" mfinal.go:261
+0x140020284 7 "CMP" "CMPL runtime.writeBarrier(SB), $0x0" "cmpl $0x0,0x14a2e5(%rip)" mfinal.go:261
+0x14002028b 2 "JE" "JE 0x1400202a2" "je 0x1400202a2" mfinal.go:261
+0x14002028d 3 "MOV" "MOVQ 0(R10), R13" "mov (%r10),%r13" mfinal.go:261
+0x140020290 3 "MOV" "MOVQ R11, R15" "mov %r11,%r15" mfinal.go:254
+0x140020293 5 "CALL" "CALL runtime.gcWriteBarrier2(SB)" "callq 0x140077780" mfinal.go:261
+0x140020298 3 "MOV" "MOVQ R12, 0(R11)" "mov %r12,(%r11)" mfinal.go:261
+0x14002029b 4 "MOV" "MOVQ R13, 0x8(R11)" "mov %r13,0x8(%r11)" mfinal.go:261
+0x14002029f 3 "MOV" "MOVQ R15, R11" "mov %r15,%r11" mfinal.go:263
+0x1400202a2 5 "MOV" "MOVQ R11, 0x70(SP)" "mov %r11,0x70(%rsp)" mfinal.go:254
+0x1400202a7 3 "MOV" "MOVQ R12, 0(R10)" "mov %r12,(%r10)" mfinal.go:261
+0x1400202aa 5 "MOV" "MOVQ 0x20(AX)(DI*8), R13" "mov 0x20(%rax,%rdi,8),%r13" mfinal.go:262
+0x1400202af 7 "CMP" "CMPL runtime.writeBarrier(SB), $0x0" "cmpl $0x0,0x14a2ba(%rip)" mfinal.go:262
+0x1400202b6 2 "JE" "JE 0x1400202d1" "je 0x1400202d1" mfinal.go:262
+0x1400202b8 4 "MOV" "MOVQ 0x8(R10), R15" "mov 0x8(%r10),%r15" mfinal.go:262
+0x1400202bc 4 "NOP" "NOPL 0(AX)" "nopl (%rax)" mfinal.go:262
+0x1400202c0 5 "CALL" "CALL runtime.gcWriteBarrier2(SB)" "callq 0x140077780" mfinal.go:262
+0x1400202c5 3 "MOV" "MOVQ R13, 0(R11)" "mov %r13,(%r11)" mfinal.go:262
+0x1400202c8 4 "MOV" "MOVQ R15, 0x8(R11)" "mov %r15,0x8(%r11)" mfinal.go:262
+0x1400202cc 5 "MOV" "MOVQ 0x70(SP), R11" "mov 0x70(%rsp),%r11" mfinal.go:263
+0x1400202d1 4 "MOV" "MOVQ R13, 0x8(R10)" "mov %r13,0x8(%r10)" mfinal.go:262
+0x1400202d5 5 "CMP" "CMPQ 0x40(R11), $0x0" "cmpq $0x0,0x40(%r11)" mfinal.go:263
+0x1400202da 6 "NOP" "NOPW 0(AX)(AX*1)" "nopw (%rax,%rax)" mfinal.go:263
+0x1400202e0 6 "JE" "JE 0x140020392" "je 0x140020392" mfinal.go:263
+0x1400202e6 3 "TEST" "TESTQ R12, R12" "test %r12,%r12" iface.go:468
+0x1400202e9 6 "JE" "JE 0x140020458" "je 0x140020458" iface.go:468
+0x1400202ef 8 "MOV" "MOVQ R10, 0x188(SP)" "mov %r10,0x188(%rsp)" mfinal.go:254
+0x1400202f7 3 "MOV" "MOVQ R11, AX" "mov %r11,%rax" iface.go:472
+0x1400202fa 3 "MOV" "MOVQ R12, BX" "mov %r12,%rbx" iface.go:472
+0x1400202fd 2 "XOR" "XORL CX, CX" "xor %ecx,%ecx" iface.go:472
+0x1400202ff 1 "NOP" "NOPL" "nop" iface.go:472
+0x140020300 5 "CALL" "CALL runtime.getitab(SB)" "callq 0x140071540" iface.go:472
+0x140020305 7 "CMP" "CMPL runtime.writeBarrier(SB), $0x0" "cmpl $0x0,0x14a264(%rip)" mfinal.go:266
+0x14002030c 2 "JNE" "JNE 0x140020318" "jne 0x140020318" mfinal.go:266
+0x14002030e 8 "MOV" "MOVQ 0x188(SP), CX" "mov 0x188(%rsp),%rcx" mfinal.go:266
+0x140020316 2 "JMP" "JMP 0x14002032f" "jmp 0x14002032f" mfinal.go:266
+0x140020318 8 "MOV" "MOVQ 0x188(SP), CX" "mov 0x188(%rsp),%rcx" mfinal.go:266
+0x140020320 3 "MOV" "MOVQ 0(CX), DX" "mov (%rcx),%rdx" mfinal.go:266
+0x140020323 5 "CALL" "CALL runtime.gcWriteBarrier2(SB)" "callq 0x140077780" mfinal.go:266
+0x140020328 3 "MOV" "MOVQ AX, 0(R11)" "mov %rax,(%r11)" mfinal.go:266
+0x14002032b 4 "MOV" "MOVQ DX, 0x8(R11)" "mov %rdx,0x8(%r11)" mfinal.go:266
+0x14002032f 3 "MOV" "MOVQ AX, 0(CX)" "mov %rax,(%rcx)" mfinal.go:266
+0x140020332 5 "MOV" "MOVQ 0x40(SP), AX" "mov 0x40(%rsp),%rax" mfinal.go:272
+0x140020337 5 "MOV" "MOVQ 0x58(SP), CX" "mov 0x58(%rsp),%rcx" mfinal.go:220
+0x14002033c 8 "MOV" "MOVQ 0x1a8(SP), DX" "mov 0x1a8(%rsp),%rdx" mfinal.go:272
+0x140020344 4 "MOV" "MOVL 0x30(SP), BX" "mov 0x30(%rsp),%ebx" mfinal.go:286
+0x140020348 4 "MOV" "MOVL 0x34(SP), SI" "mov 0x34(%rsp),%esi" mfinal.go:282
+0x14002034c 5 "MOV" "MOVQ 0x60(SP), DI" "mov 0x60(%rsp),%rdi" mfinal.go:272
+0x140020351 5 "MOV" "MOVQ 0x38(SP), R8" "mov 0x38(%rsp),%r8" mfinal.go:272
+0x140020356 5 "MOV" "MOVQ 0x68(SP), R9" "mov 0x68(%rsp),%r9" mfinal.go:213
+0x14002035b 2 "JMP" "JMP 0x140020392" "jmp 0x140020392" mfinal.go:266
+0x14002035d 3 "NOP" "NOPL 0(AX)" "nopl (%rax)" mfinal.go:266
+0x140020360 4 "CMP" "CMPL R12, $0x16" "cmp $0x16,%r12b" mfinal.go:255
+0x140020364 6 "JNE" "JNE 0x140020447" "jne 0x140020447" mfinal.go:255
+0x14002036a 5 "MOV" "MOVQ 0x20(AX)(DI*8), R11" "mov 0x20(%rax,%rdi,8),%r11" mfinal.go:257
+0x14002036f 7 "CMP" "CMPL runtime.writeBarrier(SB), $0x0" "cmpl $0x0,0x14a1fa(%rip)" mfinal.go:257
+0x140020376 2 "JE" "JE 0x14002038f" "je 0x14002038f" mfinal.go:257
+0x140020378 3 "MOV" "MOVQ 0(R10), R12" "mov (%r10),%r12" mfinal.go:257
+0x14002037b 3 "MOV" "MOVQ R11, R13" "mov %r11,%r13" mfinal.go:257
+0x14002037e 2 "NOP" "NOPW" "data16 nop" mfinal.go:257
+0x140020380 5 "CALL" "CALL runtime.gcWriteBarrier2(SB)" "callq 0x140077780" mfinal.go:257
+0x140020385 3 "MOV" "MOVQ R13, 0(R11)" "mov %r13,(%r11)" mfinal.go:257
+0x140020388 4 "MOV" "MOVQ R12, 0x8(R11)" "mov %r12,0x8(%r11)" mfinal.go:257
+0x14002038c 3 "MOV" "MOVQ R13, R11" "mov %r13,%r11" mfinal.go:257
+0x14002038f 3 "MOV" "MOVQ R11, 0(R10)" "mov %r11,(%r10)" mfinal.go:257
+0x140020392 1 "NOP" "NOPL" "nop" mfinal.go:271
+0x140020393 5 "MOV" "MOVL $0x2, CX" "mov $0x2,%ecx" types.go:280
+0x140020398 7 "LEA" "LEAQ runtime.fingStatus(SB), BX" "lea 0x149fad(%rip),%rbx" types.go:280
+0x14002039f 3 "OR" "LOCK ORL CX, 0(BX)" "lock or %ecx,(%rbx)" types.go:280
+0x1400203a2 5 "MOV" "MOVQ 0x18(AX)(DI*8), AX" "mov 0x18(%rax,%rdi,8),%rax" mfinal.go:272
+0x1400203a7 8 "MOV" "MOVQ $0x0, 0(SP)" "movq $0x0,(%rsp)" mfinal.go:272
+0x1400203af 5 "MOV" "MOVQ AX, 0x8(SP)" "mov %rax,0x8(%rsp)" mfinal.go:272
+0x1400203b4 5 "MOV" "MOVQ DX, 0x10(SP)" "mov %rdx,0x10(%rsp)" mfinal.go:272
+0x1400203b9 5 "MOV" "MOVL R8, 0x18(SP)" "mov %r8d,0x18(%rsp)" mfinal.go:272
+0x1400203be 5 "MOV" "MOVL R8, 0x1c(SP)" "mov %r8d,0x1c(%rsp)" mfinal.go:272
+0x1400203c3 5 "MOV" "MOVL R8, 0x20(SP)" "mov %r8d,0x20(%rsp)" mfinal.go:272
+0x1400203c8 5 "LEA" "LEAQ 0x78(SP), AX" "lea 0x78(%rsp),%rax" mfinal.go:272
+0x1400203cd 5 "MOV" "MOVQ AX, 0x28(SP)" "mov %rax,0x28(%rsp)" mfinal.go:272
+0x1400203d2 5 "CALL" "CALL runtime.reflectcall.abi0(SB)" "callq 0x140075e80" mfinal.go:272
+0x1400203d7 4 "XORPS" "XORPS X15, X15" "xorps %xmm15,%xmm15" mfinal.go:272
+0x1400203db 7 "MOV" "MOVQ runtime.tls_g(SB), R14" "mov 0x14a176(%rip),%r14" mfinal.go:272
+0x1400203e2 4 "MOV" "MOVQ GS:0(R14), R14" "mov %gs:(%r14),%r14" mfinal.go:272
+0x1400203e6 3 "MOV" "MOVQ 0(R14), R14" "mov (%r14),%r14" mfinal.go:272
+0x1400203e9 1 "NOP" "NOPL" "nop" mfinal.go:273
+0x1400203ea 5 "MOV" "MOVL $-0x3, AX" "mov $-0x3,%eax" types.go:269
+0x1400203ef 7 "LEA" "LEAQ runtime.fingStatus(SB), CX" "lea 0x149f56(%rip),%rcx" types.go:269
+0x1400203f6 3 "AND" "LOCK ANDL AX, 0(CX)" "lock and %eax,(%rcx)" types.go:269
+0x1400203f9 5 "MOV" "MOVQ 0x60(SP), AX" "mov 0x60(%rsp),%rax" mfinal.go:279
+0x1400203fe 5 "MOV" "MOVQ 0x40(SP), CX" "mov 0x40(%rsp),%rcx" mfinal.go:279
+0x140020403 4 "LEA" "LEAQ 0(CX)(AX*8), DX" "lea (%rcx,%rax,8),%rdx" mfinal.go:279
+0x140020407 4 "LEA" "LEAQ 0x18(DX), DX" "lea 0x18(%rdx),%rdx" mfinal.go:279
+0x14002040b 7 "CMP" "CMPL runtime.writeBarrier(SB), $0x0" "cmpl $0x0,0x14a15e(%rip)" mfinal.go:279
+0x140020412 6 "JE" "JE 0x140020179" "je 0x140020179" mfinal.go:279
+0x140020418 5 "MOV" "MOVQ 0x18(CX)(AX*8), SI" "mov 0x18(%rcx,%rax,8),%rsi" mfinal.go:279
+0x14002041d 5 "MOV" "MOVQ 0x20(CX)(AX*8), DI" "mov 0x20(%rcx,%rax,8),%rdi" mfinal.go:280
+0x140020422 5 "MOV" "MOVQ 0x38(CX)(AX*8), R8" "mov 0x38(%rcx,%rax,8),%r8" mfinal.go:281
+0x140020427 5 "CALL" "CALL runtime.gcWriteBarrier3(SB)" "callq 0x1400777a0" mfinal.go:279
+0x14002042c 3 "MOV" "MOVQ SI, 0(R11)" "mov %rsi,(%r11)" mfinal.go:279
+0x14002042f 4 "MOV" "MOVQ DI, 0x8(R11)" "mov %rdi,0x8(%r11)" mfinal.go:280
+0x140020433 4 "MOV" "MOVQ R8, 0x10(R11)" "mov %r8,0x10(%r11)" mfinal.go:281
+0x140020437 5 "JMP" "JMP 0x140020179" "jmpq 0x140020179" mfinal.go:279
+0x14002043c 3 "MOV" "MOVQ CX, AX" "mov %rcx,%rax" mfinal.go:206
+0x14002043f 3 "MOV" "MOVQ DX, CX" "mov %rdx,%rcx" mfinal.go:206
+0x140020442 5 "JMP" "JMP 0x14002005a" "jmpq 0x14002005a" mfinal.go:206
+0x140020447 7 "LEA" "LEAQ go:string.*+12064(SB), AX" "lea 0x5fad2(%rip),%rax" mfinal.go:269
+0x14002044e 5 "MOV" "MOVL $0x1a, BX" "mov $0x1a,%ebx" mfinal.go:269
+0x140020453 5 "CALL" "CALL runtime.throw(SB)" "callq 0x1400723a0" mfinal.go:269
+0x140020458 7 "LEA" "LEAQ type:*+61656(SB), AX" "lea 0xf80c1(%rip),%rax" iface.go:470
+0x14002045f 1 "NOP" "NOPL" "nop" iface.go:470
+0x140020460 5 "CALL" "CALL runtime.newobject(SB)" "callq 0x140017560" iface.go:470
+0x140020465 7 "CMP" "CMPL runtime.writeBarrier(SB), $0x0" "cmpl $0x0,0x14a104(%rip)" iface.go:470
+0x14002046c 2 "JNE" "JNE 0x14002048b" "jne 0x14002048b" iface.go:470
+0x14002046e 5 "MOV" "MOVQ 0x70(SP), CX" "mov 0x70(%rsp),%rcx" iface.go:470
+0x140020473 4 "MOV" "MOVQ CX, 0x10(AX)" "mov %rcx,0x10(%rax)" iface.go:470
+0x140020477 5 "MOVUPS" "MOVUPS X15, 0x18(AX)" "movups %xmm15,0x18(%rax)" iface.go:470
+0x14002047c 3 "MOV" "MOVQ AX, BX" "mov %rax,%rbx" iface.go:470
+0x14002047f 7 "LEA" "LEAQ type:*+5496(SB), AX" "lea 0xea53a(%rip),%rax" iface.go:470
+0x140020486 5 "CALL" "CALL runtime.gopanic(SB)" "callq 0x140072000" iface.go:470
+0x14002048b 5 "CALL" "CALL runtime.gcWriteBarrier1(SB)" "callq 0x140077760" iface.go:470
+0x140020490 5 "MOV" "MOVQ 0x70(SP), CX" "mov 0x70(%rsp),%rcx" iface.go:470
+0x140020495 3 "MOV" "MOVQ CX, 0(R11)" "mov %rcx,(%r11)" iface.go:470
+0x140020498 2 "JMP" "JMP 0x14002046e" "jmp 0x14002046e" iface.go:470
+0x14002049a 7 "LEA" "LEAQ go:string.*+11484(SB), AX" "lea 0x5f83b(%rip),%rax" mfinal.go:242
+0x1400204a1 5 "MOV" "MOVL $0x19, BX" "mov $0x19,%ebx" mfinal.go:242
+0x1400204a6 5 "CALL" "CALL runtime.throw(SB)" "callq 0x1400723a0" mfinal.go:242
+0x1400204ab 5 "MOV" "MOVL $0x65, AX" "mov $0x65,%eax" mfinal.go:221
+0x1400204b0 5 "CALL" "CALL runtime.panicBounds(SB)" "callq 0x140077b20" mfinal.go:221
+0x1400204b5 1 "NOP" "NOPL" "nop" mfinal.go:221
+0x1400204b6 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x140075ce0" mfinal.go:193
+0x1400204bb 5 "NOP" "NOPL 0(AX)(AX*1)" "nopl (%rax,%rax)" mfinal.go:193
+0x1400204c0 5 "JMP" "JMP runtime.runFinalizers(SB)" "jmpq 0x14001ffe0" mfinal.go:193
+0x1400204c5 1 "INT" "INT $0x3" "int3" .:-1
+0x1400204c6 1 "INT" "INT $0x3" "int3" .:-1
+0x1400204c7 1 "INT" "INT $0x3" "int3" .:-1
+0x1400204c8 1 "INT" "INT $0x3" "int3" .:-1
+0x1400204c9 1 "INT" "INT $0x3" "int3" .:-1
+0x1400204ca 1 "INT" "INT $0x3" "int3" .:-1
+0x1400204cb 1 "INT" "INT $0x3" "int3" .:-1
+0x1400204cc 1 "INT" "INT $0x3" "int3" .:-1
+0x1400204cd 1 "INT" "INT $0x3" "int3" .:-1
+0x1400204ce 1 "INT" "INT $0x3" "int3" .:-1
+0x1400204cf 1 "INT" "INT $0x3" "int3" .:-1
+0x1400204d0 1 "INT" "INT $0x3" "int3" .:-1
+0x1400204d1 1 "INT" "INT $0x3" "int3" .:-1
+0x1400204d2 1 "INT" "INT $0x3" "int3" .:-1
+0x1400204d3 1 "INT" "INT $0x3" "int3" .:-1
+0x1400204d4 1 "INT" "INT $0x3" "int3" .:-1
+0x1400204d5 1 "INT" "INT $0x3" "int3" .:-1
+0x1400204d6 1 "INT" "INT $0x3" "int3" .:-1
+0x1400204d7 1 "INT" "INT $0x3" "int3" .:-1
+0x1400204d8 1 "INT" "INT $0x3" "int3" .:-1
+0x1400204d9 1 "INT" "INT $0x3" "int3" .:-1
+0x1400204da 1 "INT" "INT $0x3" "int3" .:-1
+0x1400204db 1 "INT" "INT $0x3" "int3" .:-1
+0x1400204dc 1 "INT" "INT $0x3" "int3" .:-1
+0x1400204dd 1 "INT" "INT $0x3" "int3" .:-1
+0x1400204de 1 "INT" "INT $0x3" "int3" .:-1
+0x1400204df 1 "INT" "INT $0x3" "int3" .:-1
+== runtime.runSafePointFn 0x1400474a0 160 /usr/local/go/src/runtime/proc.go
+0x1400474a0 4 "CMP" "CMPQ SP, 0x10(R14)" "cmp 0x10(%r14),%rsp" proc.go:2250
+0x1400474a4 6 "JBE" "JBE 0x140047528" "jbe 0x140047528" proc.go:2250
+0x1400474aa 1 "PUSH" "PUSHQ BP" "push %rbp" proc.go:2250
+0x1400474ab 3 "MOV" "MOVQ SP, BP" "mov %rsp,%rbp" proc.go:2250
+0x1400474ae 4 "SUB" "SUBQ $0x8, SP" "sub $0x8,%rsp" proc.go:2250
+0x1400474b2 4 "MOV" "MOVQ 0x30(R14), CX" "mov 0x30(%r14),%rcx" proc.go:2251
+0x1400474b6 7 "MOV" "MOVQ 0xa0(CX), CX" "mov 0xa0(%rcx),%rcx" proc.go:2251
+0x1400474bd 2 "TEST" "TESTB AL, 0(CX)" "test %al,(%rcx)" proc.go:2255
+0x1400474bf 5 "MOV" "MOVL $0x1, AX" "mov $0x1,%eax" proc.go:2255
+0x1400474c4 2 "XOR" "XORL BX, BX" "xor %ebx,%ebx" proc.go:2255
+0x1400474c6 8 "CMPXCHG" "LOCK CMPXCHGL BX, 0x3560(CX)" "lock cmpxchg %ebx,0x3560(%rcx)" proc.go:2255
+0x1400474ce 3 "SETE" "SETE BL" "sete %bl" proc.go:2255
+0x1400474d1 2 "TEST" "TESTL BL, BL" "test %bl,%bl" proc.go:2255
+0x1400474d3 2 "JE" "JE 0x140047522" "je 0x140047522" proc.go:2255
+0x1400474d5 7 "MOV" "MOVQ runtime.sched+296(SB), DX" "mov 0xdf58c(%rip),%rdx" proc.go:2258
+0x1400474dc 3 "MOV" "MOVQ 0(DX), BX" "mov (%rdx),%rbx" proc.go:2258
+0x1400474df 3 "MOV" "MOVQ CX, AX" "mov %rcx,%rax" proc.go:2258
+0x1400474e2 2 "CALL" "CALL BX" "call *%rbx" proc.go:2258
+0x1400474e4 1 "NOP" "NOPL" "nop" proc.go:2259
+0x1400474e5 1 "NOP" "NOPL" "nop" lock_spinbit.go:161
+0x1400474e6 7 "LEA" "LEAQ runtime.sched+32(SB), AX" "lea 0xdf473(%rip),%rax" lockrank_off.go:24
+0x1400474ed 5 "CALL" "CALL runtime.lock2(SB)" "callq 0x140014e00" lockrank_off.go:24
+0x1400474f2 6 "MOV" "MOVL runtime.sched+304(SB), CX" "mov 0xdf578(%rip),%ecx" proc.go:2260
+0x1400474f8 2 "DEC" "DECL CX" "dec %ecx" proc.go:2260
+0x1400474fa 6 "MOV" "MOVL CX, runtime.sched+304(SB)" "mov %ecx,0xdf570(%rip)" proc.go:2260
+0x140047500 2 "JNE" "JNE 0x14004750e" "jne 0x14004750e" proc.go:2261
+0x140047502 7 "LEA" "LEAQ runtime.sched+312(SB), AX" "lea 0xdf56f(%rip),%rax" proc.go:2262
+0x140047509 5 "CALL" "CALL runtime.notewakeup(SB)" "callq 0x140014780" proc.go:2262
+0x14004750e 1 "NOP" "NOPL" "nop" proc.go:2264
+0x14004750f 1 "NOP" "NOPL" "nop" lock_spinbit.go:270
+0x140047510 7 "LEA" "LEAQ runtime.sched+32(SB), AX" "lea 0xdf449(%rip),%rax" lockrank_off.go:36
+0x140047517 5 "CALL" "CALL runtime.unlock2(SB)" "callq 0x1400152c0" lockrank_off.go:36
+0x14004751c 4 "ADD" "ADDQ $0x8, SP" "add $0x8,%rsp" proc.go:2265
+0x140047520 1 "POP" "POPQ BP" "pop %rbp" proc.go:2265
+0x140047521 1 "RET" "RET" "retq" proc.go:2265
+0x140047522 4 "ADD" "ADDQ $0x8, SP" "add $0x8,%rsp" proc.go:2256
+0x140047526 1 "POP" "POPQ BP" "pop %rbp" proc.go:2256
+0x140047527 1 "RET" "RET" "retq" proc.go:2256
+0x140047528 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x140075ce0" proc.go:2250
+0x14004752d 5 "JMP" "JMP runtime.runSafePointFn(SB)" "jmpq 0x1400474a0" proc.go:2250
+0x140047532 1 "INT" "INT $0x3" "int3" .:-1
+0x140047533 1 "INT" "INT $0x3" "int3" .:-1
+0x140047534 1 "INT" "INT $0x3" "int3" .:-1
+0x140047535 1 "INT" "INT $0x3" "int3" .:-1
+0x140047536 1 "INT" "INT $0x3" "int3" .:-1
+0x140047537 1 "INT" "INT $0x3" "int3" .:-1
+0x140047538 1 "INT" "INT $0x3" "int3" .:-1
+0x140047539 1 "INT" "INT $0x3" "int3" .:-1
+0x14004753a 1 "INT" "INT $0x3" "int3" .:-1
+0x14004753b 1 "INT" "INT $0x3" "int3" .:-1
+0x14004753c 1 "INT" "INT $0x3" "int3" .:-1
+0x14004753d 1 "INT" "INT $0x3" "int3" .:-1
+0x14004753e 1 "INT" "INT $0x3" "int3" .:-1
+0x14004753f 1 "INT" "INT $0x3" "int3" .:-1
+== runtime.runqput 0x140051520 224 /usr/local/go/src/runtime/proc.go
+0x140051520 4 "CMP" "CMPQ SP, 0x10(R14)" "cmp 0x10(%r14),%rsp" proc.go:7529
+0x140051524 6 "JBE" "JBE 0x1400515d0" "jbe 0x1400515d0" proc.go:7529
+0x14005152a 1 "PUSH" "PUSHQ BP" "push %rbp" proc.go:7529
+0x14005152b 3 "MOV" "MOVQ SP, BP" "mov %rsp,%rbp" proc.go:7529
+0x14005152e 4 "SUB" "SUBQ $0x20, SP" "sub $0x20,%rsp" proc.go:7529
+0x140051532 2 "TEST" "TESTL CL, CL" "test %cl,%cl" proc.go:7545
+0x140051534 2 "JNE" "JNE 0x140051598" "jne 0x140051598" proc.go:7545
+0x140051536 5 "MOV" "MOVQ AX, 0x30(SP)" "mov %rax,0x30(%rsp)" proc.go:7545
+0x14005153b 5 "MOV" "MOVQ BX, 0x18(SP)" "mov %rbx,0x18(%rsp)" proc.go:7558
+0x140051540 2 "JMP" "JMP 0x14005154c" "jmp 0x14005154c" proc.go:7559
+0x140051542 5 "MOV" "MOVQ 0x30(SP), AX" "mov 0x30(%rsp),%rax" proc.go:7559
+0x140051547 5 "MOV" "MOVQ 0x18(SP), BX" "mov 0x18(%rsp),%rbx" proc.go:7566
+0x14005154c 6 "MOV" "MOVL 0x190(AX), CX" "mov 0x190(%rax),%ecx" proc.go:7559
+0x140051552 6 "MOV" "MOVL 0x194(AX), DI" "mov 0x194(%rax),%edi" proc.go:7560
+0x140051558 2 "MOV" "MOVL DI, DX" "mov %edi,%edx" proc.go:7561
+0x14005155a 2 "SUB" "SUBL CX, DX" "sub %ecx,%edx" proc.go:7561
+0x14005155c 4 "NOP" "NOPL 0(AX)" "nopl (%rax)" proc.go:7561
+0x140051560 6 "CMP" "CMPL DX, $0x100" "cmp $0x100,%edx" proc.go:7561
+0x140051566 2 "JB" "JB 0x140051577" "jb 0x140051577" proc.go:7561
+0x140051568 5 "CALL" "CALL runtime.runqputslow(SB)" "callq 0x140051600" proc.go:7566
+0x14005156d 2 "TEST" "TESTL AL, AL" "test %al,%al" proc.go:7566
+0x14005156f 2 "JE" "JE 0x140051542" "je 0x140051542" proc.go:7566
+0x140051571 4 "ADD" "ADDQ $0x20, SP" "add $0x20,%rsp" proc.go:7567
+0x140051575 1 "POP" "POPQ BP" "pop %rbp" proc.go:7567
+0x140051576 1 "RET" "RET" "retq" proc.go:7567
+0x140051577 4 "MOVZX" "MOVZX DI, CX" "movzbl %dil,%ecx" proc.go:7562
+0x14005157b 3 "LEA" "LEAL 0x1(DI), DX" "lea 0x1(%rdi),%edx" proc.go:7563
+0x14005157e 8 "MOV" "MOVQ BX, 0x198(AX)(CX*8)" "mov %rbx,0x198(%rax,%rcx,8)" runtime2.go:248
+0x140051586 6 "XCHG" "XCHGL DX, 0x194(AX)" "xchg %edx,0x194(%rax)" proc.go:7563
+0x14005158c 4 "ADD" "ADDQ $0x20, SP" "add $0x20,%rsp" proc.go:7564
+0x140051590 1 "POP" "POPQ BP" "pop %rbp" proc.go:7564
+0x140051591 1 "RET" "RET" "retq" proc.go:7564
+0x140051592 3 "MOV" "MOVQ CX, AX" "mov %rcx,%rax" proc.go:7547
+0x140051595 3 "MOV" "MOVQ SI, BX" "mov %rsi,%rbx" proc.go:7548
+0x140051598 7 "MOV" "MOVQ 0x998(AX), DX" "mov 0x998(%rax),%rdx" proc.go:7547
+0x14005159f 3 "MOV" "MOVQ BX, SI" "mov %rbx,%rsi" proc.go:7548
+0x1400515a2 3 "MOV" "MOVQ AX, CX" "mov %rax,%rcx" proc.go:7545
+0x1400515a5 3 "MOV" "MOVQ DX, AX" "mov %rdx,%rax" runtime2.go:252
+0x1400515a8 9 "CMPXCHG" "LOCK CMPXCHGQ BX, 0x998(CX)" "lock cmpxchg %rbx,0x998(%rcx)" runtime2.go:252
+0x1400515b1 4 "SETE" "SETE R8" "sete %r8b" runtime2.go:252
+0x1400515b5 3 "TEST" "TESTL R8, R8" "test %r8b,%r8b" runtime2.go:252
+0x1400515b8 2 "JE" "JE 0x140051592" "je 0x140051592" proc.go:7548
+0x1400515ba 3 "TEST" "TESTQ DX, DX" "test %rdx,%rdx" proc.go:7551
+0x1400515bd 2 "JE" "JE 0x1400515ca" "je 0x1400515ca" proc.go:7551
+0x1400515bf 3 "MOV" "MOVQ CX, AX" "mov %rcx,%rax" proc.go:7559
+0x1400515c2 3 "MOV" "MOVQ DX, BX" "mov %rdx,%rbx" proc.go:7558
+0x1400515c5 5 "JMP" "JMP 0x140051536" "jmpq 0x140051536" proc.go:7555
+0x1400515ca 4 "ADD" "ADDQ $0x20, SP" "add $0x20,%rsp" proc.go:7552
+0x1400515ce 1 "POP" "POPQ BP" "pop %rbp" proc.go:7552
+0x1400515cf 1 "RET" "RET" "retq" proc.go:7552
+0x1400515d0 5 "MOV" "MOVQ AX, 0x8(SP)" "mov %rax,0x8(%rsp)" proc.go:7529
+0x1400515d5 5 "MOV" "MOVQ BX, 0x10(SP)" "mov %rbx,0x10(%rsp)" proc.go:7529
+0x1400515da 4 "MOV" "MOVB CL, 0x18(SP)" "mov %cl,0x18(%rsp)" proc.go:7529
+0x1400515de 2 "NOP" "NOPW" "data16 nop" proc.go:7529
+0x1400515e0 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x140075ce0" proc.go:7529
+0x1400515e5 5 "MOV" "MOVQ 0x8(SP), AX" "mov 0x8(%rsp),%rax" proc.go:7529
+0x1400515ea 5 "MOV" "MOVQ 0x10(SP), BX" "mov 0x10(%rsp),%rbx" proc.go:7529
+0x1400515ef 5 "MOVZX" "MOVZX 0x18(SP), CX" "movzbl 0x18(%rsp),%ecx" proc.go:7529
+0x1400515f4 5 "JMP" "JMP runtime.runqput(SB)" "jmpq 0x140051520" proc.go:7529
+0x1400515f9 1 "INT" "INT $0x3" "int3" .:-1
+0x1400515fa 1 "INT" "INT $0x3" "int3" .:-1
+0x1400515fb 1 "INT" "INT $0x3" "int3" .:-1
+0x1400515fc 1 "INT" "INT $0x3" "int3" .:-1
+0x1400515fd 1 "INT" "INT $0x3" "int3" .:-1
+0x1400515fe 1 "INT" "INT $0x3" "int3" .:-1
+0x1400515ff 1 "INT" "INT $0x3" "int3" .:-1
+== runtime.runqputslow 0x140051600 448 /usr/local/go/src/runtime/proc.go
+0x140051600 8 "LEA" "LEAQ 0xfffffc48(SP), R12" "lea 0xfffffc48(%rsp),%r12" proc.go:7575
+0x140051608 4 "CMP" "CMPQ R12, 0x10(R14)" "cmp 0x10(%r14),%r12" proc.go:7575
+0x14005160c 6 "JBE" "JBE 0x14005177e" "jbe 0x14005177e" proc.go:7575
+0x140051612 1 "PUSH" "PUSHQ BP" "push %rbp" proc.go:7575
+0x140051613 3 "MOV" "MOVQ SP, BP" "mov %rsp,%rbp" proc.go:7575
+0x140051616 7 "SUB" "SUBQ $0x430, SP" "sub $0x430,%rsp" proc.go:7575
+0x14005161d 5 "LEA" "LEAQ 0x28(SP), DX" "lea 0x28(%rsp),%rdx" proc.go:7576
+0x140051622 5 "MOV" "MOVL $0x10, SI" "mov $0x10,%esi" proc.go:7576
+0x140051627 4 "MOVUPS" "MOVUPS X15, 0(DX)" "movups %xmm15,(%rdx)" proc.go:7576
+0x14005162b 5 "MOVUPS" "MOVUPS X15, 0x10(DX)" "movups %xmm15,0x10(%rdx)" proc.go:7576
+0x140051630 5 "MOVUPS" "MOVUPS X15, 0x20(DX)" "movups %xmm15,0x20(%rdx)" proc.go:7576
+0x140051635 5 "MOVUPS" "MOVUPS X15, 0x30(DX)" "movups %xmm15,0x30(%rdx)" proc.go:7576
+0x14005163a 4 "ADD" "ADDQ $0x40, DX" "add $0x40,%rdx" proc.go:7576
+0x14005163e 2 "NOP" "NOPW" "data16 nop" proc.go:7576
+0x140051640 2 "DEC" "DECL SI" "dec %esi" proc.go:7576
+0x140051642 2 "JNE" "JNE 0x140051627" "jne 0x140051627" proc.go:7576
+0x140051644 5 "MOVUPS" "MOVUPS X15, -0x8(DX)" "movups %xmm15,-0x8(%rdx)" proc.go:7576
+0x140051649 2 "SUB" "SUBL CX, DI" "sub %ecx,%edi" proc.go:7579
+0x14005164b 2 "SHR" "SHRL $0x1, DI" "shr %edi" proc.go:7580
+0x14005164d 6 "CMP" "CMPL DI, $0x80" "cmp $0x80,%edi" proc.go:7581
+0x140051653 6 "JNE" "JNE 0x14005176c" "jne 0x14005176c" proc.go:7581
+0x140051659 2 "XOR" "XORL DX, DX" "xor %edx,%edx" proc.go:7581
+0x14005165b 2 "JMP" "JMP 0x140051675" "jmp 0x140051675" proc.go:7581
+0x14005165d 2 "TEST" "TESTB AL, 0(AX)" "test %al,(%rax)" proc.go:7585
+0x14005165f 3 "LEA" "LEAL 0(DX)(CX*1), SI" "lea (%rdx,%rcx),%esi" proc.go:7585
+0x140051662 4 "MOVZX" "MOVZX SI, SI" "movzbl %sil,%esi" proc.go:7585
+0x140051666 8 "MOV" "MOVQ 0x198(AX)(SI*8), SI" "mov 0x198(%rax,%rsi,8),%rsi" proc.go:7585
+0x14005166e 5 "MOV" "MOVQ SI, 0x28(SP)(DX*8)" "mov %rsi,0x28(%rsp,%rdx,8)" proc.go:7585
+0x140051673 2 "INC" "INCL DX" "inc %edx" proc.go:7584
+0x140051675 6 "CMP" "CMPL DX, $0x80" "cmp $0x80,%edx" proc.go:7584
+0x14005167b 2 "JB" "JB 0x14005165d" "jb 0x14005165d" proc.go:7584
+0x14005167d 6 "LEA" "LEAL 0x80(CX), DX" "lea 0x80(%rcx),%edx" proc.go:7587
+0x140051683 3 "MOV" "MOVQ AX, SI" "mov %rax,%rsi" proc.go:7581
+0x140051686 2 "MOV" "MOVL CX, AX" "mov %ecx,%eax" proc.go:7587
+0x140051688 8 "CMPXCHG" "LOCK CMPXCHGL DX, 0x190(SI)" "lock cmpxchg %edx,0x190(%rsi)" proc.go:7587
+0x140051690 3 "SETE" "SETE CL" "sete %cl" proc.go:7587
+0x140051693 2 "TEST" "TESTL CL, CL" "test %cl,%cl" proc.go:7587
+0x140051695 2 "JE" "JE 0x1400516a3" "je 0x1400516a3" proc.go:7587
+0x140051697 8 "MOV" "MOVQ BX, 0x428(SP)" "mov %rbx,0x428(%rsp)" proc.go:7590
+0x14005169f 2 "XOR" "XORL CX, CX" "xor %ecx,%ecx" proc.go:7600
+0x1400516a1 2 "JMP" "JMP 0x1400516c1" "jmp 0x1400516c1" proc.go:7600
+0x1400516a3 2 "XOR" "XORL AX, AX" "xor %eax,%eax" proc.go:7588
+0x1400516a5 7 "ADD" "ADDQ $0x430, SP" "add $0x430,%rsp" proc.go:7588
+0x1400516ac 1 "POP" "POPQ BP" "pop %rbp" proc.go:7588
+0x1400516ad 1 "RET" "RET" "retq" proc.go:7588
+0x1400516ae 5 "MOV" "MOVQ 0x28(SP)(CX*8), DX" "mov 0x28(%rsp,%rcx,8),%rdx" proc.go:7601
+0x1400516b3 2 "INC" "INCL CX" "inc %ecx" proc.go:7601
+0x1400516b5 5 "MOV" "MOVQ 0x28(SP)(CX*8), BX" "mov 0x28(%rsp,%rcx,8),%rbx" proc.go:7601
+0x1400516ba 7 "MOV" "MOVQ BX, 0xa0(DX)" "mov %rbx,0xa0(%rdx)" proc.go:7601
+0x1400516c1 6 "CMP" "CMPL CX, $0x80" "cmp $0x80,%ecx" proc.go:7600
+0x1400516c7 2 "JB" "JB 0x1400516ae" "jb 0x1400516ae" proc.go:7600
+0x1400516c9 5 "MOV" "MOVQ 0x28(SP), CX" "mov 0x28(%rsp),%rcx" proc.go:7604
+0x1400516ce 8 "MOV" "MOVQ 0x428(SP), DX" "mov 0x428(%rsp),%rdx" proc.go:7604
+0x1400516d6 5 "MOV" "MOVQ CX, 0x10(SP)" "mov %rcx,0x10(%rsp)" proc.go:7604
+0x1400516db 5 "MOV" "MOVQ DX, 0x18(SP)" "mov %rdx,0x18(%rsp)" proc.go:7604
+0x1400516e0 8 "MOV" "MOVL $0x81, 0x20(SP)" "movl $0x81,0x20(%rsp)" proc.go:7604
+0x1400516e8 1 "NOP" "NOPL" "nop" proc.go:7607
+0x1400516e9 1 "NOP" "NOPL" "nop" lock_spinbit.go:161
+0x1400516ea 7 "LEA" "LEAQ runtime.sched+32(SB), AX" "lea 0xd526f(%rip),%rax" lockrank_off.go:24
+0x1400516f1 5 "CALL" "CALL runtime.lock2(SB)" "callq 0x140014e00" lockrank_off.go:24
+0x1400516f6 5 "MOV" "MOVQ 0x18(SP), CX" "mov 0x18(%rsp),%rcx" proc.go:7326
+0x1400516fb 1 "NOP" "NOPL" "nop" proc.go:7608
+0x1400516fc 4 "MOV" "MOVL 0x20(SP), DX" "mov 0x20(%rsp),%edx" proc.go:7326
+0x140051700 3 "TEST" "TESTQ CX, CX" "test %rcx,%rcx" proc.go:7838
+0x140051703 2 "JE" "JE 0x140051742" "je 0x140051742" proc.go:7838
+0x140051705 3 "MOV" "MOVQ CX, BX" "mov %rcx,%rbx" runtime2.go:245
+0x140051708 5 "MOV" "MOVQ 0x10(SP), SI" "mov 0x10(%rsp),%rsi" proc.go:7326
+0x14005170d 11 "MOV" "MOVQ $0x0, 0xa0(CX)" "movq $0x0,0xa0(%rcx)" proc.go:7841
+0x140051718 7 "MOV" "MOVQ runtime.sched+136(SB), CX" "mov 0xd52a9(%rip),%rcx" proc.go:7842
+0x14005171f 1 "NOP" "NOPL" "nop" proc.go:7842
+0x140051720 3 "TEST" "TESTQ CX, CX" "test %rcx,%rcx" proc.go:7842
+0x140051723 2 "JE" "JE 0x14005172e" "je 0x14005172e" proc.go:7842
+0x140051725 7 "MOV" "MOVQ SI, 0xa0(CX)" "mov %rsi,0xa0(%rcx)" proc.go:7843
+0x14005172c 2 "JMP" "JMP 0x140051735" "jmp 0x140051735" proc.go:7843
+0x14005172e 7 "MOV" "MOVQ SI, runtime.sched+128(SB)" "mov %rsi,0xd528b(%rip)" proc.go:7845
+0x140051735 7 "MOV" "MOVQ BX, runtime.sched+136(SB)" "mov %rbx,0xd528c(%rip)" proc.go:7847
+0x14005173c 6 "ADD" "ADDL DX, runtime.sched+144(SB)" "add %edx,0xd528e(%rip)" proc.go:7848
+0x140051742 6 "MOVUPS" "MOVUPS X15, 0x10(SP)" "movups %xmm15,0x10(%rsp)" proc.go:7327
+0x140051748 8 "MOV" "MOVL $0x0, 0x20(SP)" "movl $0x0,0x20(%rsp)" proc.go:7327
+0x140051750 1 "NOP" "NOPL" "nop" proc.go:7609
+0x140051751 1 "NOP" "NOPL" "nop" lock_spinbit.go:270
+0x140051752 7 "LEA" "LEAQ runtime.sched+32(SB), AX" "lea 0xd5207(%rip),%rax" lockrank_off.go:36
+0x140051759 5 "CALL" "CALL runtime.unlock2(SB)" "callq 0x1400152c0" lockrank_off.go:36
+0x14005175e 5 "MOV" "MOVL $0x1, AX" "mov $0x1,%eax" proc.go:7610
+0x140051763 7 "ADD" "ADDQ $0x430, SP" "add $0x430,%rsp" proc.go:7610
+0x14005176a 1 "POP" "POPQ BP" "pop %rbp" proc.go:7610
+0x14005176b 1 "RET" "RET" "retq" proc.go:7610
+0x14005176c 7 "LEA" "LEAQ go:string.*+15186(SB), AX" "lea 0x2f3df(%rip),%rax" proc.go:7582
+0x140051773 5 "MOV" "MOVL $0x1e, BX" "mov $0x1e,%ebx" proc.go:7582
+0x140051778 5 "CALL" "CALL runtime.throw(SB)" "callq 0x1400723a0" proc.go:7582
+0x14005177d 1 "NOP" "NOPL" "nop" proc.go:7582
+0x14005177e 5 "MOV" "MOVQ AX, 0x8(SP)" "mov %rax,0x8(%rsp)" proc.go:7575
+0x140051783 5 "MOV" "MOVQ BX, 0x10(SP)" "mov %rbx,0x10(%rsp)" proc.go:7575
+0x140051788 4 "MOV" "MOVL CX, 0x18(SP)" "mov %ecx,0x18(%rsp)" proc.go:7575
+0x14005178c 4 "MOV" "MOVL DI, 0x1c(SP)" "mov %edi,0x1c(%rsp)" proc.go:7575
+0x140051790 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x140075ce0" proc.go:7575
+0x140051795 5 "MOV" "MOVQ 0x8(SP), AX" "mov 0x8(%rsp),%rax" proc.go:7575
+0x14005179a 5 "MOV" "MOVQ 0x10(SP), BX" "mov 0x10(%rsp),%rbx" proc.go:7575
+0x14005179f 4 "MOV" "MOVL 0x18(SP), CX" "mov 0x18(%rsp),%ecx" proc.go:7575
+0x1400517a3 4 "MOV" "MOVL 0x1c(SP), DI" "mov 0x1c(%rsp),%edi" proc.go:7575
+0x1400517a7 5 "JMP" "JMP runtime.runqputslow(SB)" "jmpq 0x140051600" proc.go:7575
+0x1400517ac 1 "INT" "INT $0x3" "int3" .:-1
+0x1400517ad 1 "INT" "INT $0x3" "int3" .:-1
+0x1400517ae 1 "INT" "INT $0x3" "int3" .:-1
+0x1400517af 1 "INT" "INT $0x3" "int3" .:-1
+0x1400517b0 1 "INT" "INT $0x3" "int3" .:-1
+0x1400517b1 1 "INT" "INT $0x3" "int3" .:-1
+0x1400517b2 1 "INT" "INT $0x3" "int3" .:-1
+0x1400517b3 1 "INT" "INT $0x3" "int3" .:-1
+0x1400517b4 1 "INT" "INT $0x3" "int3" .:-1
+0x1400517b5 1 "INT" "INT $0x3" "int3" .:-1
+0x1400517b6 1 "INT" "INT $0x3" "int3" .:-1
+0x1400517b7 1 "INT" "INT $0x3" "int3" .:-1
+0x1400517b8 1 "INT" "INT $0x3" "int3" .:-1
+0x1400517b9 1 "INT" "INT $0x3" "int3" .:-1
+0x1400517ba 1 "INT" "INT $0x3" "int3" .:-1
+0x1400517bb 1 "INT" "INT $0x3" "int3" .:-1
+0x1400517bc 1 "INT" "INT $0x3" "int3" .:-1
+0x1400517bd 1 "INT" "INT $0x3" "int3" .:-1
+0x1400517be 1 "INT" "INT $0x3" "int3" .:-1
+0x1400517bf 1 "INT" "INT $0x3" "int3" .:-1
+== runtime.runqputbatch 0x1400517c0 128 /usr/local/go/src/runtime/proc.go
+0x1400517c0 1 "NOP" "NOPL" "nop" proc.go:7616
+0x1400517c1 4 "CMP" "CMPQ 0(BX), $0x0" "cmpq $0x0,(%rbx)" proc.go:7810
+0x1400517c5 2 "JE" "JE 0x1400517d5" "je 0x1400517d5" proc.go:7617
+0x1400517c7 6 "MOV" "MOVL 0x190(AX), CX" "mov 0x190(%rax),%ecx" proc.go:7620
+0x1400517cd 6 "MOV" "MOVL 0x194(AX), DX" "mov 0x194(%rax),%edx" proc.go:7621
+0x1400517d3 2 "JMP" "JMP 0x1400517e5" "jmp 0x1400517e5" proc.go:7623
+0x1400517d5 1 "RET" "RET" "retq" proc.go:7618
+0x1400517d6 4 "MOVZX" "MOVZX DI, R8" "movzbl %dil,%r8d" proc.go:7625
+0x1400517da 8 "MOV" "MOVQ SI, 0x198(AX)(R8*8)" "mov %rsi,0x198(%rax,%r8,8)" runtime2.go:248
+0x1400517e2 3 "LEA" "LEAL 0x1(DI), DX" "lea 0x1(%rdi),%edx" proc.go:7626
+0x1400517e5 3 "MOV" "MOVQ 0(BX), SI" "mov (%rbx),%rsi" proc.go:7810
+0x1400517e8 3 "TEST" "TESTQ SI, SI" "test %rsi,%rsi" proc.go:7810
+0x1400517eb 2 "JE" "JE 0x140051822" "je 0x140051822" proc.go:7623
+0x1400517ed 2 "MOV" "MOVL DX, DI" "mov %edx,%edi" proc.go:7623
+0x1400517ef 2 "SUB" "SUBL CX, DX" "sub %ecx,%edx" proc.go:7623
+0x1400517f1 6 "CMP" "CMPL DX, $0x100" "cmp $0x100,%edx" proc.go:7623
+0x1400517f7 2 "JAE" "JAE 0x140051824" "jae 0x140051824" proc.go:7623
+0x1400517f9 1 "NOP" "NOPL" "nop" proc.go:7624
+0x1400517fa 1 "NOP" "NOPL" "nop" proc.go:7854
+0x1400517fb 5 "NOP" "NOPL 0(AX)(AX*1)" "nopl (%rax,%rax)" proc.go:7854
+0x140051800 3 "TEST" "TESTQ SI, SI" "test %rsi,%rsi" proc.go:7855
+0x140051803 2 "JE" "JE 0x1400517d6" "je 0x1400517d6" proc.go:7855
+0x140051805 7 "MOV" "MOVQ 0xa0(SI), DX" "mov 0xa0(%rsi),%rdx" proc.go:7856
+0x14005180c 3 "MOV" "MOVQ DX, 0(BX)" "mov %rdx,(%rbx)" proc.go:7856
+0x14005180f 3 "TEST" "TESTQ DX, DX" "test %rdx,%rdx" proc.go:7857
+0x140051812 2 "JNE" "JNE 0x14005181c" "jne 0x14005181c" proc.go:7857
+0x140051814 8 "MOV" "MOVQ $0x0, 0x8(BX)" "movq $0x0,0x8(%rbx)" proc.go:7858
+0x14005181c 3 "DEC" "DECL 0x10(BX)" "decl 0x10(%rbx)" proc.go:7860
+0x14005181f 1 "NOP" "NOPL" "nop" proc.go:7860
+0x140051820 2 "JMP" "JMP 0x1400517d6" "jmp 0x1400517d6" proc.go:7860
+0x140051822 2 "MOV" "MOVL DX, DI" "mov %edx,%edi" proc.go:7640
+0x140051824 6 "XCHG" "XCHGL DI, 0x194(AX)" "xchg %edi,0x194(%rax)" proc.go:7640
+0x14005182a 1 "RET" "RET" "retq" proc.go:7642
+0x14005182b 1 "INT" "INT $0x3" "int3" .:-1
+0x14005182c 1 "INT" "INT $0x3" "int3" .:-1
+0x14005182d 1 "INT" "INT $0x3" "int3" .:-1
+0x14005182e 1 "INT" "INT $0x3" "int3" .:-1
+0x14005182f 1 "INT" "INT $0x3" "int3" .:-1
+0x140051830 1 "INT" "INT $0x3" "int3" .:-1
+0x140051831 1 "INT" "INT $0x3" "int3" .:-1
+0x140051832 1 "INT" "INT $0x3" "int3" .:-1
+0x140051833 1 "INT" "INT $0x3" "int3" .:-1
+0x140051834 1 "INT" "INT $0x3" "int3" .:-1
+0x140051835 1 "INT" "INT $0x3" "int3" .:-1
+0x140051836 1 "INT" "INT $0x3" "int3" .:-1
+0x140051837 1 "INT" "INT $0x3" "int3" .:-1
+0x140051838 1 "INT" "INT $0x3" "int3" .:-1
+0x140051839 1 "INT" "INT $0x3" "int3" .:-1
+0x14005183a 1 "INT" "INT $0x3" "int3" .:-1
+0x14005183b 1 "INT" "INT $0x3" "int3" .:-1
+0x14005183c 1 "INT" "INT $0x3" "int3" .:-1
+0x14005183d 1 "INT" "INT $0x3" "int3" .:-1
+0x14005183e 1 "INT" "INT $0x3" "int3" .:-1
+0x14005183f 1 "INT" "INT $0x3" "int3" .:-1
+== runtime.runqdrain 0x140051840 320 /usr/local/go/src/runtime/proc.go
+0x140051840 1 "PUSH" "PUSHQ BP" "push %rbp" proc.go:7674
+0x140051841 3 "MOV" "MOVQ SP, BP" "mov %rsp,%rbp" proc.go:7674
+0x140051844 4 "SUB" "SUBQ $0x20, SP" "sub $0x20,%rsp" proc.go:7674
+0x140051848 6 "MOVUPS" "MOVUPS X15, 0x8(SP)" "movups %xmm15,0x8(%rsp)" proc.go:7674
+0x14005184e 8 "MOV" "MOVL $0x0, 0x18(SP)" "movl $0x0,0x18(%rsp)" proc.go:7674
+0x140051856 7 "MOV" "MOVQ 0x998(AX), DX" "mov 0x998(%rax),%rdx" proc.go:7675
+0x14005185d 3 "NOP" "NOPL 0(AX)" "nopl (%rax)" proc.go:7675
+0x140051860 3 "TEST" "TESTQ DX, DX" "test %rdx,%rdx" proc.go:7676
+0x140051863 2 "JE" "JE 0x1400518ba" "je 0x1400518ba" proc.go:7676
+0x140051865 3 "MOV" "MOVQ AX, CX" "mov %rax,%rcx" proc.go:7676
+0x140051868 3 "MOV" "MOVQ DX, AX" "mov %rdx,%rax" runtime2.go:252
+0x14005186b 2 "XOR" "XORL SI, SI" "xor %esi,%esi" runtime2.go:252
+0x14005186d 9 "CMPXCHG" "LOCK CMPXCHGQ SI, 0x998(CX)" "lock cmpxchg %rsi,0x998(%rcx)" runtime2.go:252
+0x140051876 4 "SETE" "SETE SI" "sete %sil" runtime2.go:252
+0x14005187a 3 "TEST" "TESTL SI, SI" "test %sil,%sil" runtime2.go:252
+0x14005187d 2 "JE" "JE 0x1400518bd" "je 0x1400518bd" proc.go:7676
+0x14005187f 11 "MOV" "MOVQ $0x0, 0xa0(DX)" "movq $0x0,0xa0(%rdx)" proc.go:7825
+0x14005188a 5 "MOV" "MOVQ 0x10(SP), SI" "mov 0x10(%rsp),%rsi" proc.go:7826
+0x14005188f 3 "TEST" "TESTQ SI, SI" "test %rsi,%rsi" proc.go:7826
+0x140051892 2 "JE" "JE 0x1400518a2" "je 0x1400518a2" proc.go:7826
+0x140051894 3 "MOV" "MOVQ DX, DI" "mov %rdx,%rdi" runtime2.go:248
+0x140051897 7 "MOV" "MOVQ DX, 0xa0(SI)" "mov %rdx,0xa0(%rsi)" proc.go:7827
+0x14005189e 2 "NOP" "NOPW" "data16 nop" proc.go:7827
+0x1400518a0 2 "JMP" "JMP 0x1400518ae" "jmp 0x1400518ae" proc.go:7827
+0x1400518a2 3 "MOV" "MOVQ DX, SI" "mov %rdx,%rsi" runtime2.go:248
+0x1400518a5 1 "NOP" "NOPL" "nop" proc.go:7829
+0x1400518a6 5 "MOV" "MOVQ DX, 0x8(SP)" "mov %rdx,0x8(%rsp)" runtime2.go:248
+0x1400518ab 3 "MOV" "MOVQ SI, DI" "mov %rsi,%rdi" runtime2.go:248
+0x1400518ae 1 "NOP" "NOPL" "nop" proc.go:7831
+0x1400518af 5 "MOV" "MOVQ DI, 0x10(SP)" "mov %rdi,0x10(%rsp)" runtime2.go:248
+0x1400518b4 4 "INC" "INCL 0x18(SP)" "incl 0x18(%rsp)" proc.go:7832
+0x1400518b8 2 "JMP" "JMP 0x1400518bd" "jmp 0x1400518bd" proc.go:7677
+0x1400518ba 3 "MOV" "MOVQ AX, CX" "mov %rax,%rcx" proc.go:7681
+0x1400518bd 6 "MOV" "MOVL 0x190(CX), AX" "mov 0x190(%rcx),%eax" proc.go:7681
+0x1400518c3 6 "MOV" "MOVL 0x194(CX), DX" "mov 0x194(%rcx),%edx" proc.go:7682
+0x1400518c9 2 "MOV" "MOVL DX, SI" "mov %edx,%esi" proc.go:7683
+0x1400518cb 2 "SUB" "SUBL AX, DX" "sub %eax,%edx" proc.go:7683
+0x1400518cd 2 "TEST" "TESTL DX, DX" "test %edx,%edx" proc.go:7684
+0x1400518cf 2 "JE" "JE 0x1400518f6" "je 0x1400518f6" proc.go:7684
+0x1400518d1 6 "CMP" "CMPL DX, $0x100" "cmp $0x100,%edx" proc.go:7687
+0x1400518d7 2 "JA" "JA 0x1400518bd" "ja 0x1400518bd" proc.go:7687
+0x1400518d9 4 "MOV" "MOVL AX, 0x4(SP)" "mov %eax,0x4(%rsp)" proc.go:7681
+0x1400518dd 8 "CMPXCHG" "LOCK CMPXCHGL SI, 0x190(CX)" "lock cmpxchg %esi,0x190(%rcx)" proc.go:7691
+0x1400518e5 4 "SETE" "SETE SI" "sete %sil" proc.go:7691
+0x1400518e9 3 "TEST" "TESTL SI, SI" "test %sil,%sil" proc.go:7691
+0x1400518ec 2 "JE" "JE 0x1400518bd" "je 0x1400518bd" proc.go:7691
+0x1400518ee 2 "XOR" "XORL SI, SI" "xor %esi,%esi" proc.go:7691
+0x1400518f0 4 "MOV" "MOVL 0x4(SP), DI" "mov 0x4(%rsp),%edi" proc.go:7691
+0x1400518f4 2 "JMP" "JMP 0x140051916" "jmp 0x140051916" proc.go:7691
+0x1400518f6 5 "MOV" "MOVQ 0x8(SP), AX" "mov 0x8(%rsp),%rax" proc.go:7685
+0x1400518fb 5 "MOV" "MOVQ 0x10(SP), BX" "mov 0x10(%rsp),%rbx" proc.go:7685
+0x140051900 4 "MOV" "MOVL 0x18(SP), CX" "mov 0x18(%rsp),%ecx" proc.go:7685
+0x140051904 4 "ADD" "ADDQ $0x20, SP" "add $0x20,%rsp" proc.go:7685
+0x140051908 1 "POP" "POPQ BP" "pop %rbp" proc.go:7685
+0x140051909 1 "RET" "RET" "retq" proc.go:7685
+0x14005190a 1 "NOP" "NOPL" "nop" proc.go:7831
+0x14005190b 5 "MOV" "MOVQ R10, 0x10(SP)" "mov %r10,0x10(%rsp)" runtime2.go:248
+0x140051910 4 "INC" "INCL 0x18(SP)" "incl 0x18(%rsp)" proc.go:7832
+0x140051914 2 "INC" "INCL SI" "inc %esi" proc.go:7702
+0x140051916 2 "CMP" "CMPL SI, DX" "cmp %edx,%esi" proc.go:7702
+0x140051918 2 "JAE" "JAE 0x14005195e" "jae 0x14005195e" proc.go:7702
+0x14005191a 4 "LEA" "LEAL 0(SI)(DI*1), R8" "lea (%rsi,%rdi),%r8d" proc.go:7703
+0x14005191e 4 "MOVZX" "MOVZX R8, R8" "movzbl %r8b,%r8d" proc.go:7703
+0x140051922 8 "MOV" "MOVQ 0x198(CX)(R8*8), R8" "mov 0x198(%rcx,%r8,8),%r8" proc.go:7703
+0x14005192a 1 "NOP" "NOPL" "nop" proc.go:7704
+0x14005192b 11 "MOV" "MOVQ $0x0, 0xa0(R8)" "movq $0x0,0xa0(%r8)" proc.go:7825
+0x140051936 5 "MOV" "MOVQ 0x10(SP), R9" "mov 0x10(%rsp),%r9" proc.go:7826
+0x14005193b 5 "NOP" "NOPL 0(AX)(AX*1)" "nopl (%rax,%rax)" proc.go:7826
+0x140051940 3 "TEST" "TESTQ R9, R9" "test %r9,%r9" proc.go:7826
+0x140051943 2 "JE" "JE 0x140051951" "je 0x140051951" proc.go:7826
+0x140051945 3 "MOV" "MOVQ R8, R10" "mov %r8,%r10" runtime2.go:248
+0x140051948 7 "MOV" "MOVQ R8, 0xa0(R9)" "mov %r8,0xa0(%r9)" proc.go:7827
+0x14005194f 2 "JMP" "JMP 0x14005190a" "jmp 0x14005190a" proc.go:7827
+0x140051951 3 "MOV" "MOVQ R8, R9" "mov %r8,%r9" runtime2.go:248
+0x140051954 5 "MOV" "MOVQ R8, 0x8(SP)" "mov %r8,0x8(%rsp)" runtime2.go:248
+0x140051959 3 "MOV" "MOVQ R9, R10" "mov %r9,%r10" runtime2.go:248
+0x14005195c 2 "JMP" "JMP 0x14005190a" "jmp 0x14005190a" proc.go:7829
+0x14005195e 5 "MOV" "MOVQ 0x8(SP), AX" "mov 0x8(%rsp),%rax" proc.go:7706
+0x140051963 5 "MOV" "MOVQ 0x10(SP), BX" "mov 0x10(%rsp),%rbx" proc.go:7706
+0x140051968 4 "MOV" "MOVL 0x18(SP), CX" "mov 0x18(%rsp),%ecx" proc.go:7706
+0x14005196c 4 "ADD" "ADDQ $0x20, SP" "add $0x20,%rsp" proc.go:7706
+0x140051970 1 "POP" "POPQ BP" "pop %rbp" proc.go:7706
+0x140051971 1 "RET" "RET" "retq" proc.go:7706
+0x140051972 1 "INT" "INT $0x3" "int3" .:-1
+0x140051973 1 "INT" "INT $0x3" "int3" .:-1
+0x140051974 1 "INT" "INT $0x3" "int3" .:-1
+0x140051975 1 "INT" "INT $0x3" "int3" .:-1
+0x140051976 1 "INT" "INT $0x3" "int3" .:-1
+0x140051977 1 "INT" "INT $0x3" "int3" .:-1
+0x140051978 1 "INT" "INT $0x3" "int3" .:-1
+0x140051979 1 "INT" "INT $0x3" "int3" .:-1
+0x14005197a 1 "INT" "INT $0x3" "int3" .:-1
+0x14005197b 1 "INT" "INT $0x3" "int3" .:-1
+0x14005197c 1 "INT" "INT $0x3" "int3" .:-1
+0x14005197d 1 "INT" "INT $0x3" "int3" .:-1
+0x14005197e 1 "INT" "INT $0x3" "int3" .:-1
+0x14005197f 1 "INT" "INT $0x3" "int3" .:-1
+== runtime.runqgrab 0x140051980 448 /usr/local/go/src/runtime/proc.go
+0x140051980 4 "CMP" "CMPQ SP, 0x10(R14)" "cmp 0x10(%r14),%rsp" proc.go:7713
+0x140051984 6 "JBE" "JBE 0x140051b0a" "jbe 0x140051b0a" proc.go:7713
+0x14005198a 1 "PUSH" "PUSHQ BP" "push %rbp" proc.go:7713
+0x14005198b 3 "MOV" "MOVQ SP, BP" "mov %rsp,%rbp" proc.go:7713
+0x14005198e 4 "SUB" "SUBQ $0x10, SP" "sub $0x10,%rsp" proc.go:7713
+0x140051992 5 "MOV" "MOVQ AX, 0x20(SP)" "mov %rax,0x20(%rsp)" proc.go:7714
+0x140051997 5 "MOV" "MOVQ BX, 0x28(SP)" "mov %rbx,0x28(%rsp)" proc.go:7714
+0x14005199c 4 "MOV" "MOVL CX, 0x30(SP)" "mov %ecx,0x30(%rsp)" proc.go:7714
+0x1400519a0 5 "MOV" "MOVB DI, 0x34(SP)" "mov %dil,0x34(%rsp)" proc.go:7714
+0x1400519a5 2 "JMP" "JMP 0x1400519aa" "jmp 0x1400519aa" proc.go:7714
+0x1400519a7 3 "MOV" "MOVQ SI, AX" "mov %rsi,%rax" proc.go:7715
+0x1400519aa 6 "MOV" "MOVL 0x190(AX), DX" "mov 0x190(%rax),%edx" proc.go:7715
+0x1400519b0 6 "MOV" "MOVL 0x194(AX), SI" "mov 0x194(%rax),%esi" proc.go:7716
+0x1400519b6 2 "SUB" "SUBL DX, SI" "sub %edx,%esi" proc.go:7717
+0x1400519b8 3 "MOV" "MOVL SI, R8" "mov %esi,%r8d" proc.go:7718
+0x1400519bb 2 "SHR" "SHRL $0x1, SI" "shr %esi" proc.go:7718
+0x1400519bd 3 "SUB" "SUBL SI, R8" "sub %esi,%r8d" proc.go:7718
+0x1400519c0 3 "TEST" "TESTL R8, R8" "test %r8d,%r8d" proc.go:7719
+0x1400519c3 6 "JNE" "JNE 0x140051a80" "jne 0x140051a80" proc.go:7719
+0x1400519c9 3 "TEST" "TESTL DI, DI" "test %dil,%dil" proc.go:7714
+0x1400519cc 6 "JE" "JE 0x140051af9" "je 0x140051af9" proc.go:7720
+0x1400519d2 7 "MOV" "MOVQ 0x998(AX), DX" "mov 0x998(%rax),%rdx" proc.go:7722
+0x1400519d9 7 "NOP" "NOPL 0(AX)" "nopl (%rax)" proc.go:7722
+0x1400519e0 3 "TEST" "TESTQ DX, DX" "test %rdx,%rdx" proc.go:7722
+0x1400519e3 6 "JE" "JE 0x140051af9" "je 0x140051af9" proc.go:7722
+0x1400519e9 4 "CMP" "CMPL 0x4(AX), $0x1" "cmpl $0x1,0x4(%rax)" proc.go:7723
+0x1400519ed 2 "JNE" "JNE 0x140051a56" "jne 0x140051a56" proc.go:7723
+0x1400519ef 4 "MOV" "MOVQ 0x30(AX), SI" "mov 0x30(%rax),%rsi" proc.go:7724
+0x1400519f3 3 "TEST" "TESTQ SI, SI" "test %rsi,%rsi" proc.go:7724
+0x1400519f6 2 "JE" "JE 0x140051a56" "je 0x140051a56" proc.go:7724
+0x1400519f8 5 "MOV" "MOVQ DX, 0x8(SP)" "mov %rdx,0x8(%rsp)" proc.go:7722
+0x1400519fd 7 "MOV" "MOVQ 0x88(SI), SI" "mov 0x88(%rsi),%rsi" proc.go:7725
+0x140051a04 3 "TEST" "TESTQ SI, SI" "test %rsi,%rsi" proc.go:7725
+0x140051a07 2 "JE" "JE 0x140051a1b" "je 0x140051a1b" proc.go:7725
+0x140051a09 1 "NOP" "NOPL" "nop" proc.go:1221
+0x140051a0a 6 "MOV" "MOVL 0x90(SI), SI" "mov 0x90(%rsi),%esi" types.go:194
+0x140051a10 6 "AND" "ANDL $-0x1001, SI" "and $-0x1001,%esi" proc.go:7725
+0x140051a16 3 "CMP" "CMPL SI, $0x3" "cmp $0x3,%esi" proc.go:7725
+0x140051a19 2 "JE" "JE 0x140051a56" "je 0x140051a56" proc.go:7725
+0x140051a1b 1 "NOP" "NOPL" "nop" proc.go:7751
+0x140051a1c 7 "LEA" "LEAQ go:funcdesc+696(SB), AX" "lea 0xcba7d(%rip),%rax" os_windows.go:1011
+0x140051a23 4 "MOV" "MOVQ AX, 0(SP)" "mov %rax,(%rsp)" os_windows.go:1011
+0x140051a27 5 "CALL" "CALL runtime.systemstack.abi0(SB)" "callq 0x140075bc0" os_windows.go:1011
+0x140051a2c 4 "XORPS" "XORPS X15, X15" "xorps %xmm15,%xmm15" os_windows.go:1011
+0x140051a30 7 "MOV" "MOVQ runtime.tls_g(SB), R14" "mov 0x118b21(%rip),%r14" os_windows.go:1011
+0x140051a37 4 "MOV" "MOVQ GS:0(R14), R14" "mov %gs:(%r14),%r14" os_windows.go:1011
+0x140051a3b 3 "MOV" "MOVQ 0(R14), R14" "mov (%r14),%r14" os_windows.go:1011
+0x140051a3e 5 "MOV" "MOVQ 0x20(SP), AX" "mov 0x20(%rsp),%rax" runtime2.go:252
+0x140051a43 4 "MOV" "MOVL 0x30(SP), CX" "mov 0x30(%rsp),%ecx" proc.go:7770
+0x140051a47 5 "MOV" "MOVQ 0x8(SP), DX" "mov 0x8(%rsp),%rdx" runtime2.go:252
+0x140051a4c 5 "MOV" "MOVQ 0x28(SP), BX" "mov 0x28(%rsp),%rbx" proc.go:7770
+0x140051a51 5 "MOVZX" "MOVZX 0x34(SP), DI" "movzbl 0x34(%rsp),%edi" proc.go:7714
+0x140051a56 3 "MOV" "MOVQ AX, SI" "mov %rax,%rsi" proc.go:7714
+0x140051a59 3 "MOV" "MOVQ DX, AX" "mov %rdx,%rax" runtime2.go:252
+0x140051a5c 3 "XOR" "XORL R8, R8" "xor %r8d,%r8d" runtime2.go:252
+0x140051a5f 9 "CMPXCHG" "LOCK CMPXCHGQ R8, 0x998(SI)" "lock cmpxchg %r8,0x998(%rsi)" runtime2.go:252
+0x140051a68 4 "SETE" "SETE R9" "sete %r9b" runtime2.go:252
+0x140051a6c 3 "TEST" "TESTL R9, R9" "test %r9b,%r9b" runtime2.go:252
+0x140051a6f 6 "JE" "JE 0x1400519a7" "je 0x1400519a7" proc.go:7756
+0x140051a75 2 "JMP" "JMP 0x140051ae5" "jmp 0x140051ae5" proc.go:7756
+0x140051a77 9 "NOP" "NOPW 0(AX)(AX*1)" "nopw (%rax,%rax)" proc.go:7756
+0x140051a80 7 "CMP" "CMPL R8, $0x80" "cmp $0x80,%r8d" proc.go:7765
+0x140051a87 2 "JBE" "JBE 0x140051a94" "jbe 0x140051a94" proc.go:7765
+0x140051a89 3 "MOV" "MOVQ AX, SI" "mov %rax,%rsi" proc.go:7715
+0x140051a8c 3 "XOR" "XORL R8, R8" "xor %r8d,%r8d" proc.go:7715
+0x140051a8f 5 "JMP" "JMP 0x1400519a7" "jmpq 0x1400519a7" proc.go:7766
+0x140051a94 2 "XOR" "XORL SI, SI" "xor %esi,%esi" proc.go:7765
+0x140051a96 2 "JMP" "JMP 0x140051ab8" "jmp 0x140051ab8" proc.go:7765
+0x140051a98 2 "TEST" "TESTB AL, 0(BX)" "test %al,(%rbx)" proc.go:7770
+0x140051a9a 4 "LEA" "LEAL 0(SI)(DX*1), R9" "lea (%rsi,%rdx),%r9d" proc.go:7769
+0x140051a9e 4 "MOVZX" "MOVZX R9, R9" "movzbl %r9b,%r9d" proc.go:7769
+0x140051aa2 8 "MOV" "MOVQ 0x198(AX)(R9*8), R9" "mov 0x198(%rax,%r9,8),%r9" proc.go:7769
+0x140051aaa 4 "LEA" "LEAL 0(SI)(CX*1), R10" "lea (%rsi,%rcx),%r10d" proc.go:7770
+0x140051aae 4 "MOVZX" "MOVZX R10, R10" "movzbl %r10b,%r10d" proc.go:7770
+0x140051ab2 4 "MOV" "MOVQ R9, 0(BX)(R10*8)" "mov %r9,(%rbx,%r10,8)" proc.go:7770
+0x140051ab6 2 "INC" "INCL SI" "inc %esi" proc.go:7768
+0x140051ab8 3 "CMP" "CMPL SI, R8" "cmp %r8d,%esi" proc.go:7768
+0x140051abb 2 "JB" "JB 0x140051a98" "jb 0x140051a98" proc.go:7768
+0x140051abd 4 "LEA" "LEAL 0(R8)(DX*1), SI" "lea (%r8,%rdx),%esi" proc.go:7772
+0x140051ac1 3 "MOV" "MOVQ AX, R9" "mov %rax,%r9" proc.go:7714
+0x140051ac4 2 "MOV" "MOVL DX, AX" "mov %edx,%eax" proc.go:7772
+0x140051ac6 9 "CMPXCHG" "LOCK CMPXCHGL SI, 0x190(R9)" "lock cmpxchg %esi,0x190(%r9)" proc.go:7772
+0x140051acf 3 "SETE" "SETE DL" "sete %dl" proc.go:7772
+0x140051ad2 2 "TEST" "TESTL DL, DL" "test %dl,%dl" proc.go:7772
+0x140051ad4 2 "JNE" "JNE 0x140051b01" "jne 0x140051b01" proc.go:7772
+0x140051ad6 3 "MOV" "MOVQ R9, SI" "mov %r9,%rsi" proc.go:7715
+0x140051ad9 3 "XOR" "XORL R8, R8" "xor %r8d,%r8d" proc.go:7715
+0x140051adc 4 "NOP" "NOPL 0(AX)" "nopl (%rax)" proc.go:7715
+0x140051ae0 5 "JMP" "JMP 0x1400519a7" "jmpq 0x1400519a7" proc.go:7772
+0x140051ae5 2 "TEST" "TESTB AL, 0(BX)" "test %al,(%rbx)" proc.go:7759
+0x140051ae7 3 "MOVZX" "MOVZX CL, CX" "movzbl %cl,%ecx" proc.go:7759
+0x140051aea 4 "MOV" "MOVQ DX, 0(BX)(CX*8)" "mov %rdx,(%rbx,%rcx,8)" proc.go:7759
+0x140051aee 5 "MOV" "MOVL $0x1, AX" "mov $0x1,%eax" proc.go:7760
+0x140051af3 4 "ADD" "ADDQ $0x10, SP" "add $0x10,%rsp" proc.go:7760
+0x140051af7 1 "POP" "POPQ BP" "pop %rbp" proc.go:7760
+0x140051af8 1 "RET" "RET" "retq" proc.go:7760
+0x140051af9 2 "XOR" "XORL AX, AX" "xor %eax,%eax" proc.go:7763
+0x140051afb 4 "ADD" "ADDQ $0x10, SP" "add $0x10,%rsp" proc.go:7763
+0x140051aff 1 "POP" "POPQ BP" "pop %rbp" proc.go:7763
+0x140051b00 1 "RET" "RET" "retq" proc.go:7763
+0x140051b01 3 "MOV" "MOVL R8, AX" "mov %r8d,%eax" proc.go:7773
+0x140051b04 4 "ADD" "ADDQ $0x10, SP" "add $0x10,%rsp" proc.go:7773
+0x140051b08 1 "POP" "POPQ BP" "pop %rbp" proc.go:7773
+0x140051b09 1 "RET" "RET" "retq" proc.go:7773
+0x140051b0a 5 "MOV" "MOVQ AX, 0x8(SP)" "mov %rax,0x8(%rsp)" proc.go:7713
+0x140051b0f 5 "MOV" "MOVQ BX, 0x10(SP)" "mov %rbx,0x10(%rsp)" proc.go:7713
+0x140051b14 4 "MOV" "MOVL CX, 0x18(SP)" "mov %ecx,0x18(%rsp)" proc.go:7713
+0x140051b18 5 "MOV" "MOVB DI, 0x1c(SP)" "mov %dil,0x1c(%rsp)" proc.go:7713
+0x140051b1d 3 "NOP" "NOPL 0(AX)" "nopl (%rax)" proc.go:7713
+0x140051b20 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x140075ce0" proc.go:7713
+0x140051b25 5 "MOV" "MOVQ 0x8(SP), AX" "mov 0x8(%rsp),%rax" proc.go:7713
+0x140051b2a 5 "MOV" "MOVQ 0x10(SP), BX" "mov 0x10(%rsp),%rbx" proc.go:7713
+0x140051b2f 4 "MOV" "MOVL 0x18(SP), CX" "mov 0x18(%rsp),%ecx" proc.go:7713
+0x140051b33 5 "MOVZX" "MOVZX 0x1c(SP), DI" "movzbl 0x1c(%rsp),%edi" proc.go:7713
+0x140051b38 5 "JMP" "JMP runtime.runqgrab(SB)" "jmpq 0x140051980" proc.go:7713
+0x140051b3d 1 "INT" "INT $0x3" "int3" .:-1
+0x140051b3e 1 "INT" "INT $0x3" "int3" .:-1
+0x140051b3f 1 "INT" "INT $0x3" "int3" .:-1
+== runtime.runqsteal 0x140051b40 224 /usr/local/go/src/runtime/proc.go
+0x140051b40 4 "CMP" "CMPQ SP, 0x10(R14)" "cmp 0x10(%r14),%rsp" proc.go:7781
+0x140051b44 6 "JBE" "JBE 0x140051be6" "jbe 0x140051be6" proc.go:7781
+0x140051b4a 1 "PUSH" "PUSHQ BP" "push %rbp" proc.go:7781
+0x140051b4b 3 "MOV" "MOVQ SP, BP" "mov %rsp,%rbp" proc.go:7781
+0x140051b4e 4 "SUB" "SUBQ $0x20, SP" "sub $0x20,%rsp" proc.go:7781
+0x140051b52 5 "MOV" "MOVQ AX, 0x30(SP)" "mov %rax,0x30(%rsp)" proc.go:7784
+0x140051b57 6 "MOV" "MOVL 0x194(AX), DX" "mov 0x194(%rax),%edx" proc.go:7782
+0x140051b5d 4 "MOV" "MOVL DX, 0x1c(SP)" "mov %edx,0x1c(%rsp)" proc.go:7782
+0x140051b61 7 "LEA" "LEAQ 0x198(AX), SI" "lea 0x198(%rax),%rsi" proc.go:7783
+0x140051b68 3 "MOV" "MOVQ BX, AX" "mov %rbx,%rax" proc.go:7783
+0x140051b6b 3 "MOV" "MOVQ SI, BX" "mov %rsi,%rbx" proc.go:7783
+0x140051b6e 2 "MOV" "MOVL CX, DI" "mov %ecx,%edi" proc.go:7783
+0x140051b70 2 "MOV" "MOVL DX, CX" "mov %edx,%ecx" proc.go:7783
+0x140051b72 5 "CALL" "CALL runtime.runqgrab(SB)" "callq 0x140051980" proc.go:7783
+0x140051b77 2 "TEST" "TESTL AX, AX" "test %eax,%eax" proc.go:7784
+0x140051b79 2 "JE" "JE 0x140051bca" "je 0x140051bca" proc.go:7784
+0x140051b7b 4 "MOV" "MOVL 0x1c(SP), CX" "mov 0x1c(%rsp),%ecx" proc.go:7788
+0x140051b7f 3 "LEA" "LEAL 0(AX)(CX*1), DX" "lea (%rax,%rcx),%edx" proc.go:7788
+0x140051b82 3 "LEA" "LEAL -0x1(DX), DX" "lea -0x1(%rdx),%edx" proc.go:7788
+0x140051b85 3 "MOVZX" "MOVZX DL, SI" "movzbl %dl,%esi" proc.go:7788
+0x140051b88 5 "MOV" "MOVQ 0x30(SP), DI" "mov 0x30(%rsp),%rdi" proc.go:7788
+0x140051b8d 8 "MOV" "MOVQ 0x198(DI)(SI*8), SI" "mov 0x198(%rdi,%rsi,8),%rsi" proc.go:7788
+0x140051b95 3 "CMP" "CMPL AX, $0x1" "cmp $0x1,%eax" proc.go:7789
+0x140051b98 2 "JE" "JE 0x140051bc1" "je 0x140051bc1" proc.go:7789
+0x140051b9a 7 "MOV" "MOVL 0x190(DI), R8" "mov 0x190(%rdi),%r8d" proc.go:7792
+0x140051ba1 3 "SUB" "SUBL R8, CX" "sub %r8d,%ecx" proc.go:7793
+0x140051ba4 3 "LEA" "LEAL 0(CX)(AX*1), CX" "lea (%rcx,%rax),%ecx" proc.go:7793
+0x140051ba7 3 "LEA" "LEAL -0x1(CX), CX" "lea -0x1(%rcx),%ecx" proc.go:7793
+0x140051baa 6 "CMP" "CMPL CX, $0x100" "cmp $0x100,%ecx" proc.go:7793
+0x140051bb0 2 "JAE" "JAE 0x140051bd2" "jae 0x140051bd2" proc.go:7793
+0x140051bb2 6 "XCHG" "XCHGL DX, 0x194(DI)" "xchg %edx,0x194(%rdi)" proc.go:7796
+0x140051bb8 3 "MOV" "MOVQ SI, AX" "mov %rsi,%rax" proc.go:7797
+0x140051bbb 4 "ADD" "ADDQ $0x20, SP" "add $0x20,%rsp" proc.go:7797
+0x140051bbf 1 "POP" "POPQ BP" "pop %rbp" proc.go:7797
+0x140051bc0 1 "RET" "RET" "retq" proc.go:7797
+0x140051bc1 3 "MOV" "MOVQ SI, AX" "mov %rsi,%rax" proc.go:7790
+0x140051bc4 4 "ADD" "ADDQ $0x20, SP" "add $0x20,%rsp" proc.go:7790
+0x140051bc8 1 "POP" "POPQ BP" "pop %rbp" proc.go:7790
+0x140051bc9 1 "RET" "RET" "retq" proc.go:7790
+0x140051bca 2 "XOR" "XORL AX, AX" "xor %eax,%eax" proc.go:7785
+0x140051bcc 4 "ADD" "ADDQ $0x20, SP" "add $0x20,%rsp" proc.go:7785
+0x140051bd0 1 "POP" "POPQ BP" "pop %rbp" proc.go:7785
+0x140051bd1 1 "RET" "RET" "retq" proc.go:7785
+0x140051bd2 7 "LEA" "LEAQ go:string.*+11065(SB), AX" "lea 0x2df60(%rip),%rax" proc.go:7794
+0x140051bd9 5 "MOV" "MOVL $0x18, BX" "mov $0x18,%ebx" proc.go:7794
+0x140051bde 2 "NOP" "NOPW" "data16 nop" proc.go:7794
+0x140051be0 5 "CALL" "CALL runtime.throw(SB)" "callq 0x1400723a0" proc.go:7794
+0x140051be5 1 "NOP" "NOPL" "nop" proc.go:7794
+0x140051be6 5 "MOV" "MOVQ AX, 0x8(SP)" "mov %rax,0x8(%rsp)" proc.go:7781
+0x140051beb 5 "MOV" "MOVQ BX, 0x10(SP)" "mov %rbx,0x10(%rsp)" proc.go:7781
+0x140051bf0 4 "MOV" "MOVB CL, 0x18(SP)" "mov %cl,0x18(%rsp)" proc.go:7781
+0x140051bf4 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x140075ce0" proc.go:7781
+0x140051bf9 5 "MOV" "MOVQ 0x8(SP), AX" "mov 0x8(%rsp),%rax" proc.go:7781
+0x140051bfe 5 "MOV" "MOVQ 0x10(SP), BX" "mov 0x10(%rsp),%rbx" proc.go:7781
+0x140051c03 5 "MOVZX" "MOVZX 0x18(SP), CX" "movzbl 0x18(%rsp),%ecx" proc.go:7781
+0x140051c08 5 "JMP" "JMP runtime.runqsteal(SB)" "jmpq 0x140051b40" proc.go:7781
+0x140051c0d 1 "INT" "INT $0x3" "int3" .:-1
+0x140051c0e 1 "INT" "INT $0x3" "int3" .:-1
+0x140051c0f 1 "INT" "INT $0x3" "int3" .:-1
+0x140051c10 1 "INT" "INT $0x3" "int3" .:-1
+0x140051c11 1 "INT" "INT $0x3" "int3" .:-1
+0x140051c12 1 "INT" "INT $0x3" "int3" .:-1
+0x140051c13 1 "INT" "INT $0x3" "int3" .:-1
+0x140051c14 1 "INT" "INT $0x3" "int3" .:-1
+0x140051c15 1 "INT" "INT $0x3" "int3" .:-1
+0x140051c16 1 "INT" "INT $0x3" "int3" .:-1
+0x140051c17 1 "INT" "INT $0x3" "int3" .:-1
+0x140051c18 1 "INT" "INT $0x3" "int3" .:-1
+0x140051c19 1 "INT" "INT $0x3" "int3" .:-1
+0x140051c1a 1 "INT" "INT $0x3" "int3" .:-1
+0x140051c1b 1 "INT" "INT $0x3" "int3" .:-1
+0x140051c1c 1 "INT" "INT $0x3" "int3" .:-1
+0x140051c1d 1 "INT" "INT $0x3" "int3" .:-1
+0x140051c1e 1 "INT" "INT $0x3" "int3" .:-1
+0x140051c1f 1 "INT" "INT $0x3" "int3" .:-1
+== runtime.memmove 0x140077ec0 1792 /usr/local/go/src/runtime/memmove_amd64.s
+0x140077ec0 3 "MOV" "MOVQ AX, DI" "mov %rax,%rdi" memmove_amd64.s:39
+0x140077ec3 3 "MOV" "MOVQ BX, SI" "mov %rbx,%rsi" memmove_amd64.s:40
+0x140077ec6 3 "MOV" "MOVQ CX, BX" "mov %rcx,%rbx" memmove_amd64.s:41
+0x140077ec9 3 "TEST" "TESTQ BX, BX" "test %rbx,%rbx" memmove_amd64.s:54
+0x140077ecc 6 "JE" "JE 0x140077fed" "je 0x140077fed" memmove_amd64.s:55
+0x140077ed2 4 "CMP" "CMPQ BX, $0x2" "cmp $0x2,%rbx" memmove_amd64.s:56
+0x140077ed6 6 "JBE" "JBE 0x140077fe0" "jbe 0x140077fe0" memmove_amd64.s:57
+0x140077edc 4 "CMP" "CMPQ BX, $0x4" "cmp $0x4,%rbx" memmove_amd64.s:58
+0x140077ee0 6 "JB" "JB 0x140077ff3" "jb 0x140077ff3" memmove_amd64.s:59
+0x140077ee6 6 "JBE" "JBE 0x140077fee" "jbe 0x140077fee" memmove_amd64.s:60
+0x140077eec 4 "CMP" "CMPQ BX, $0x8" "cmp $0x8,%rbx" memmove_amd64.s:61
+0x140077ef0 6 "JB" "JB 0x140078000" "jb 0x140078000" memmove_amd64.s:62
+0x140077ef6 6 "JE" "JE 0x14007800d" "je 0x14007800d" memmove_amd64.s:63
+0x140077efc 4 "CMP" "CMPQ BX, $0x10" "cmp $0x10,%rbx" memmove_amd64.s:64
+0x140077f00 6 "JBE" "JBE 0x140078014" "jbe 0x140078014" memmove_amd64.s:65
+0x140077f06 4 "CMP" "CMPQ BX, $0x20" "cmp $0x20,%rbx" memmove_amd64.s:66
+0x140077f0a 6 "JBE" "JBE 0x140078025" "jbe 0x140078025" memmove_amd64.s:67
+0x140077f10 4 "CMP" "CMPQ BX, $0x40" "cmp $0x40,%rbx" memmove_amd64.s:68
+0x140077f14 6 "JBE" "JBE 0x14007803a" "jbe 0x14007803a" memmove_amd64.s:69
+0x140077f1a 7 "CMP" "CMPQ BX, $0x80" "cmp $0x80,%rbx" memmove_amd64.s:70
+0x140077f21 6 "JBE" "JBE 0x140078065" "jbe 0x140078065" memmove_amd64.s:71
+0x140077f27 7 "CMP" "CMPQ BX, $0x100" "cmp $0x100,%rbx" memmove_amd64.s:72
+0x140077f2e 6 "JBE" "JBE 0x1400780bc" "jbe 0x1400780bc" memmove_amd64.s:73
+0x140077f34 6 "MOV" "MOVB runtime.memmoveBits(SB), AL" "mov 0xf23f4(%rip),%al" memmove_amd64.s:75
+0x140077f3a 2 "CMP" "CMPL AL, $0x1" "cmp $0x1,%al" memmove_amd64.s:77
+0x140077f3c 6 "JE" "JE 0x14007828a" "je 0x14007828a" memmove_amd64.s:78
+0x140077f42 3 "CMP" "CMPQ SI, DI" "cmp %rdi,%rsi" memmove_amd64.s:82
+0x140077f45 2 "JBE" "JBE 0x140077f9c" "jbe 0x140077f9c" memmove_amd64.s:83
+0x140077f47 7 "CMP" "CMPQ BX, $0x800" "cmp $0x800,%rbx" memmove_amd64.s:89
+0x140077f4e 2 "JL" "JL 0x140077f5d" "jl 0x140077f5d" memmove_amd64.s:90
+0x140077f50 7 "TEST" "TESTQ $0xf, DI" "test $0xf,%rdi" memmove_amd64.s:92
+0x140077f57 2 "JNE" "JNE 0x140077f5d" "jne 0x140077f5d" memmove_amd64.s:93
+0x140077f59 2 "TEST" "TESTL $0x2, AL" "test $0x2,%al" memmove_amd64.s:94
+0x140077f5b 2 "JNE" "JNE 0x140077f83" "jne 0x140077f83" memmove_amd64.s:95
+0x140077f5d 2 "TEST" "TESTL $0x1, AL" "test $0x1,%al" memmove_amd64.s:98
+0x140077f5f 6 "JNE" "JNE 0x14007828a" "jne 0x14007828a" memmove_amd64.s:99
+0x140077f65 7 "CMP" "CMPQ BX, $0x800" "cmp $0x800,%rbx" memmove_amd64.s:101
+0x140077f6c 6 "JBE" "JBE 0x140078180" "jbe 0x140078180" memmove_amd64.s:102
+0x140077f72 2 "MOV" "MOVL SI, AX" "mov %esi,%eax" memmove_amd64.s:104
+0x140077f74 2 "OR" "ORL DI, AX" "or %edi,%eax" memmove_amd64.s:105
+0x140077f76 5 "TEST" "TESTL $0x7, AX" "test $0x7,%eax" memmove_amd64.s:106
+0x140077f7b 2 "JE" "JE 0x140077f83" "je 0x140077f83" memmove_amd64.s:107
+0x140077f7d 3 "MOV" "MOVQ BX, CX" "mov %rbx,%rcx" memmove_amd64.s:110
+0x140077f80 2 "MOVSB" "REP; MOVSB DS:0(SI), ES:0(DI)" "rep movsb %ds:(%rsi),%es:(%rdi)" memmove_amd64.s:111
+0x140077f82 1 "RET" "RET" "retq" memmove_amd64.s:112
+0x140077f83 5 "MOV" "MOVQ -0x8(SI)(BX*1), AX" "mov -0x8(%rsi,%rbx),%rax" memmove_amd64.s:117
+0x140077f88 5 "LEA" "LEAQ -0x8(DI)(BX*1), DX" "lea -0x8(%rdi,%rbx),%rdx" memmove_amd64.s:118
+0x140077f8d 4 "LEA" "LEAQ -0x1(BX), CX" "lea -0x1(%rbx),%rcx" memmove_amd64.s:120
+0x140077f91 4 "SHR" "SHRQ $0x3, CX" "shr $0x3,%rcx" memmove_amd64.s:121
+0x140077f95 3 "MOVSQ" "REP; MOVSQ DS:0(SI), ES:0(DI)" "rep movsq %ds:(%rsi),%es:(%rdi)" memmove_amd64.s:122
+0x140077f98 3 "MOV" "MOVQ AX, 0(DX)" "mov %rax,(%rdx)" memmove_amd64.s:123
+0x140077f9b 1 "RET" "RET" "retq" memmove_amd64.s:124
+0x140077f9c 3 "MOV" "MOVQ SI, CX" "mov %rsi,%rcx" memmove_amd64.s:130
+0x140077f9f 3 "ADD" "ADDQ BX, CX" "add %rbx,%rcx" memmove_amd64.s:131
+0x140077fa2 3 "CMP" "CMPQ CX, DI" "cmp %rdi,%rcx" memmove_amd64.s:132
+0x140077fa5 2 "JBE" "JBE 0x140077f47" "jbe 0x140077f47" memmove_amd64.s:133
+0x140077fa7 2 "TEST" "TESTL $0x1, AL" "test $0x1,%al" memmove_amd64.s:135
+0x140077fa9 6 "JNE" "JNE 0x14007828a" "jne 0x14007828a" memmove_amd64.s:136
+0x140077faf 3 "ADD" "ADDQ BX, DI" "add %rbx,%rdi" memmove_amd64.s:141
+0x140077fb2 3 "ADD" "ADDQ BX, SI" "add %rbx,%rsi" memmove_amd64.s:142
+0x140077fb5 1 "STD" "STD" "std" memmove_amd64.s:143
+0x140077fb6 3 "MOV" "MOVQ BX, CX" "mov %rbx,%rcx" memmove_amd64.s:148
+0x140077fb9 4 "SHR" "SHRQ $0x3, CX" "shr $0x3,%rcx" memmove_amd64.s:149
+0x140077fbd 4 "AND" "ANDQ $0x7, BX" "and $0x7,%rbx" memmove_amd64.s:150
+0x140077fc1 4 "SUB" "SUBQ $0x8, DI" "sub $0x8,%rdi" memmove_amd64.s:152
+0x140077fc5 4 "SUB" "SUBQ $0x8, SI" "sub $0x8,%rsi" memmove_amd64.s:153
+0x140077fc9 3 "MOVSQ" "REP; MOVSQ DS:0(SI), ES:0(DI)" "rep movsq %ds:(%rsi),%es:(%rdi)" memmove_amd64.s:154
+0x140077fcc 1 "CLD" "CLD" "cld" memmove_amd64.s:156
+0x140077fcd 4 "ADD" "ADDQ $0x8, DI" "add $0x8,%rdi" memmove_amd64.s:157
+0x140077fd1 4 "ADD" "ADDQ $0x8, SI" "add $0x8,%rsi" memmove_amd64.s:158
+0x140077fd5 3 "SUB" "SUBQ BX, DI" "sub %rbx,%rdi" memmove_amd64.s:159
+0x140077fd8 3 "SUB" "SUBQ BX, SI" "sub %rbx,%rsi" memmove_amd64.s:160
+0x140077fdb 5 "JMP" "JMP 0x140077ec9" "jmpq 0x140077ec9" memmove_amd64.s:161
+0x140077fe0 2 "MOV" "MOVB 0(SI), AL" "mov (%rsi),%al" memmove_amd64.s:164
+0x140077fe2 4 "MOV" "MOVB -0x1(SI)(BX*1), CL" "mov -0x1(%rsi,%rbx),%cl" memmove_amd64.s:165
+0x140077fe6 2 "MOV" "MOVB AL, 0(DI)" "mov %al,(%rdi)" memmove_amd64.s:166
+0x140077fe8 4 "MOV" "MOVB CL, -0x1(DI)(BX*1)" "mov %cl,-0x1(%rdi,%rbx)" memmove_amd64.s:167
+0x140077fec 1 "RET" "RET" "retq" memmove_amd64.s:168
+0x140077fed 1 "RET" "RET" "retq" memmove_amd64.s:170
+0x140077fee 2 "MOV" "MOVL 0(SI), AX" "mov (%rsi),%eax" memmove_amd64.s:172
+0x140077ff0 2 "MOV" "MOVL AX, 0(DI)" "mov %eax,(%rdi)" memmove_amd64.s:173
+0x140077ff2 1 "RET" "RET" "retq" memmove_amd64.s:174
+0x140077ff3 3 "MOV" "MOVW 0(SI), AX" "mov (%rsi),%ax" memmove_amd64.s:176
+0x140077ff6 3 "MOV" "MOVB 0x2(SI), CL" "mov 0x2(%rsi),%cl" memmove_amd64.s:177
+0x140077ff9 3 "MOV" "MOVW AX, 0(DI)" "mov %ax,(%rdi)" memmove_amd64.s:178
+0x140077ffc 3 "MOV" "MOVB CL, 0x2(DI)" "mov %cl,0x2(%rdi)" memmove_amd64.s:179
+0x140077fff 1 "RET" "RET" "retq" memmove_amd64.s:180
+0x140078000 2 "MOV" "MOVL 0(SI), AX" "mov (%rsi),%eax" memmove_amd64.s:182
+0x140078002 4 "MOV" "MOVL -0x4(SI)(BX*1), CX" "mov -0x4(%rsi,%rbx),%ecx" memmove_amd64.s:183
+0x140078006 2 "MOV" "MOVL AX, 0(DI)" "mov %eax,(%rdi)" memmove_amd64.s:184
+0x140078008 4 "MOV" "MOVL CX, -0x4(DI)(BX*1)" "mov %ecx,-0x4(%rdi,%rbx)" memmove_amd64.s:185
+0x14007800c 1 "RET" "RET" "retq" memmove_amd64.s:186
+0x14007800d 3 "MOV" "MOVQ 0(SI), AX" "mov (%rsi),%rax" memmove_amd64.s:189
+0x140078010 3 "MOV" "MOVQ AX, 0(DI)" "mov %rax,(%rdi)" memmove_amd64.s:190
+0x140078013 1 "RET" "RET" "retq" memmove_amd64.s:191
+0x140078014 3 "MOV" "MOVQ 0(SI), AX" "mov (%rsi),%rax" memmove_amd64.s:193
+0x140078017 5 "MOV" "MOVQ -0x8(SI)(BX*1), CX" "mov -0x8(%rsi,%rbx),%rcx" memmove_amd64.s:194
+0x14007801c 3 "MOV" "MOVQ AX, 0(DI)" "mov %rax,(%rdi)" memmove_amd64.s:195
+0x14007801f 5 "MOV" "MOVQ CX, -0x8(DI)(BX*1)" "mov %rcx,-0x8(%rdi,%rbx)" memmove_amd64.s:196
+0x140078024 1 "RET" "RET" "retq" memmove_amd64.s:197
+0x140078025 4 "MOVDQU" "MOVDQU 0(SI), X0" "movdqu (%rsi),%xmm0" memmove_amd64.s:199
+0x140078029 6 "MOVDQU" "MOVDQU -0x10(SI)(BX*1), X1" "movdqu -0x10(%rsi,%rbx),%xmm1" memmove_amd64.s:200
+0x14007802f 4 "MOVDQU" "MOVDQU X0, 0(DI)" "movdqu %xmm0,(%rdi)" memmove_amd64.s:201
+0x140078033 6 "MOVDQU" "MOVDQU X1, -0x10(DI)(BX*1)" "movdqu %xmm1,-0x10(%rdi,%rbx)" memmove_amd64.s:202
+0x140078039 1 "RET" "RET" "retq" memmove_amd64.s:203
+0x14007803a 4 "MOVDQU" "MOVDQU 0(SI), X0" "movdqu (%rsi),%xmm0" memmove_amd64.s:205
+0x14007803e 5 "MOVDQU" "MOVDQU 0x10(SI), X1" "movdqu 0x10(%rsi),%xmm1" memmove_amd64.s:206
+0x140078043 6 "MOVDQU" "MOVDQU -0x20(SI)(BX*1), X2" "movdqu -0x20(%rsi,%rbx),%xmm2" memmove_amd64.s:207
+0x140078049 6 "MOVDQU" "MOVDQU -0x10(SI)(BX*1), X3" "movdqu -0x10(%rsi,%rbx),%xmm3" memmove_amd64.s:208
+0x14007804f 4 "MOVDQU" "MOVDQU X0, 0(DI)" "movdqu %xmm0,(%rdi)" memmove_amd64.s:209
+0x140078053 5 "MOVDQU" "MOVDQU X1, 0x10(DI)" "movdqu %xmm1,0x10(%rdi)" memmove_amd64.s:210
+0x140078058 6 "MOVDQU" "MOVDQU X2, -0x20(DI)(BX*1)" "movdqu %xmm2,-0x20(%rdi,%rbx)" memmove_amd64.s:211
+0x14007805e 6 "MOVDQU" "MOVDQU X3, -0x10(DI)(BX*1)" "movdqu %xmm3,-0x10(%rdi,%rbx)" memmove_amd64.s:212
+0x140078064 1 "RET" "RET" "retq" memmove_amd64.s:213
+0x140078065 4 "MOVDQU" "MOVDQU 0(SI), X0" "movdqu (%rsi),%xmm0" memmove_amd64.s:215
+0x140078069 5 "MOVDQU" "MOVDQU 0x10(SI), X1" "movdqu 0x10(%rsi),%xmm1" memmove_amd64.s:216
+0x14007806e 5 "MOVDQU" "MOVDQU 0x20(SI), X2" "movdqu 0x20(%rsi),%xmm2" memmove_amd64.s:217
+0x140078073 5 "MOVDQU" "MOVDQU 0x30(SI), X3" "movdqu 0x30(%rsi),%xmm3" memmove_amd64.s:218
+0x140078078 6 "MOVDQU" "MOVDQU -0x40(SI)(BX*1), X4" "movdqu -0x40(%rsi,%rbx),%xmm4" memmove_amd64.s:219
+0x14007807e 6 "MOVDQU" "MOVDQU -0x30(SI)(BX*1), X5" "movdqu -0x30(%rsi,%rbx),%xmm5" memmove_amd64.s:220
+0x140078084 6 "MOVDQU" "MOVDQU -0x20(SI)(BX*1), X6" "movdqu -0x20(%rsi,%rbx),%xmm6" memmove_amd64.s:221
+0x14007808a 6 "MOVDQU" "MOVDQU -0x10(SI)(BX*1), X7" "movdqu -0x10(%rsi,%rbx),%xmm7" memmove_amd64.s:222
+0x140078090 4 "MOVDQU" "MOVDQU X0, 0(DI)" "movdqu %xmm0,(%rdi)" memmove_amd64.s:223
+0x140078094 5 "MOVDQU" "MOVDQU X1, 0x10(DI)" "movdqu %xmm1,0x10(%rdi)" memmove_amd64.s:224
+0x140078099 5 "MOVDQU" "MOVDQU X2, 0x20(DI)" "movdqu %xmm2,0x20(%rdi)" memmove_amd64.s:225
+0x14007809e 5 "MOVDQU" "MOVDQU X3, 0x30(DI)" "movdqu %xmm3,0x30(%rdi)" memmove_amd64.s:226
+0x1400780a3 6 "MOVDQU" "MOVDQU X4, -0x40(DI)(BX*1)" "movdqu %xmm4,-0x40(%rdi,%rbx)" memmove_amd64.s:227
+0x1400780a9 6 "MOVDQU" "MOVDQU X5, -0x30(DI)(BX*1)" "movdqu %xmm5,-0x30(%rdi,%rbx)" memmove_amd64.s:228
+0x1400780af 6 "MOVDQU" "MOVDQU X6, -0x20(DI)(BX*1)" "movdqu %xmm6,-0x20(%rdi,%rbx)" memmove_amd64.s:229
+0x1400780b5 6 "MOVDQU" "MOVDQU X7, -0x10(DI)(BX*1)" "movdqu %xmm7,-0x10(%rdi,%rbx)" memmove_amd64.s:230
+0x1400780bb 1 "RET" "RET" "retq" memmove_amd64.s:231
+0x1400780bc 4 "MOVDQU" "MOVDQU 0(SI), X0" "movdqu (%rsi),%xmm0" memmove_amd64.s:233
+0x1400780c0 5 "MOVDQU" "MOVDQU 0x10(SI), X1" "movdqu 0x10(%rsi),%xmm1" memmove_amd64.s:234
+0x1400780c5 5 "MOVDQU" "MOVDQU 0x20(SI), X2" "movdqu 0x20(%rsi),%xmm2" memmove_amd64.s:235
+0x1400780ca 5 "MOVDQU" "MOVDQU 0x30(SI), X3" "movdqu 0x30(%rsi),%xmm3" memmove_amd64.s:236
+0x1400780cf 5 "MOVDQU" "MOVDQU 0x40(SI), X4" "movdqu 0x40(%rsi),%xmm4" memmove_amd64.s:237
+0x1400780d4 5 "MOVDQU" "MOVDQU 0x50(SI), X5" "movdqu 0x50(%rsi),%xmm5" memmove_amd64.s:238
+0x1400780d9 5 "MOVDQU" "MOVDQU 0x60(SI), X6" "movdqu 0x60(%rsi),%xmm6" memmove_amd64.s:239
+0x1400780de 5 "MOVDQU" "MOVDQU 0x70(SI), X7" "movdqu 0x70(%rsi),%xmm7" memmove_amd64.s:240
+0x1400780e3 7 "MOVDQU" "MOVDQU -0x80(SI)(BX*1), X8" "movdqu -0x80(%rsi,%rbx),%xmm8" memmove_amd64.s:241
+0x1400780ea 7 "MOVDQU" "MOVDQU -0x70(SI)(BX*1), X9" "movdqu -0x70(%rsi,%rbx),%xmm9" memmove_amd64.s:242
+0x1400780f1 7 "MOVDQU" "MOVDQU -0x60(SI)(BX*1), X10" "movdqu -0x60(%rsi,%rbx),%xmm10" memmove_amd64.s:243
+0x1400780f8 7 "MOVDQU" "MOVDQU -0x50(SI)(BX*1), X11" "movdqu -0x50(%rsi,%rbx),%xmm11" memmove_amd64.s:244
+0x1400780ff 7 "MOVDQU" "MOVDQU -0x40(SI)(BX*1), X12" "movdqu -0x40(%rsi,%rbx),%xmm12" memmove_amd64.s:245
+0x140078106 7 "MOVDQU" "MOVDQU -0x30(SI)(BX*1), X13" "movdqu -0x30(%rsi,%rbx),%xmm13" memmove_amd64.s:246
+0x14007810d 7 "MOVDQU" "MOVDQU -0x20(SI)(BX*1), X14" "movdqu -0x20(%rsi,%rbx),%xmm14" memmove_amd64.s:247
+0x140078114 7 "MOVDQU" "MOVDQU -0x10(SI)(BX*1), X15" "movdqu -0x10(%rsi,%rbx),%xmm15" memmove_amd64.s:248
+0x14007811b 4 "MOVDQU" "MOVDQU X0, 0(DI)" "movdqu %xmm0,(%rdi)" memmove_amd64.s:249
+0x14007811f 5 "MOVDQU" "MOVDQU X1, 0x10(DI)" "movdqu %xmm1,0x10(%rdi)" memmove_amd64.s:250
+0x140078124 5 "MOVDQU" "MOVDQU X2, 0x20(DI)" "movdqu %xmm2,0x20(%rdi)" memmove_amd64.s:251
+0x140078129 5 "MOVDQU" "MOVDQU X3, 0x30(DI)" "movdqu %xmm3,0x30(%rdi)" memmove_amd64.s:252
+0x14007812e 5 "MOVDQU" "MOVDQU X4, 0x40(DI)" "movdqu %xmm4,0x40(%rdi)" memmove_amd64.s:253
+0x140078133 5 "MOVDQU" "MOVDQU X5, 0x50(DI)" "movdqu %xmm5,0x50(%rdi)" memmove_amd64.s:254
+0x140078138 5 "MOVDQU" "MOVDQU X6, 0x60(DI)" "movdqu %xmm6,0x60(%rdi)" memmove_amd64.s:255
+0x14007813d 5 "MOVDQU" "MOVDQU X7, 0x70(DI)" "movdqu %xmm7,0x70(%rdi)" memmove_amd64.s:256
+0x140078142 7 "MOVDQU" "MOVDQU X8, -0x80(DI)(BX*1)" "movdqu %xmm8,-0x80(%rdi,%rbx)" memmove_amd64.s:257
+0x140078149 7 "MOVDQU" "MOVDQU X9, -0x70(DI)(BX*1)" "movdqu %xmm9,-0x70(%rdi,%rbx)" memmove_amd64.s:258
+0x140078150 7 "MOVDQU" "MOVDQU X10, -0x60(DI)(BX*1)" "movdqu %xmm10,-0x60(%rdi,%rbx)" memmove_amd64.s:259
+0x140078157 7 "MOVDQU" "MOVDQU X11, -0x50(DI)(BX*1)" "movdqu %xmm11,-0x50(%rdi,%rbx)" memmove_amd64.s:260
+0x14007815e 7 "MOVDQU" "MOVDQU X12, -0x40(DI)(BX*1)" "movdqu %xmm12,-0x40(%rdi,%rbx)" memmove_amd64.s:261
+0x140078165 7 "MOVDQU" "MOVDQU X13, -0x30(DI)(BX*1)" "movdqu %xmm13,-0x30(%rdi,%rbx)" memmove_amd64.s:262
+0x14007816c 7 "MOVDQU" "MOVDQU X14, -0x20(DI)(BX*1)" "movdqu %xmm14,-0x20(%rdi,%rbx)" memmove_amd64.s:263
+0x140078173 7 "MOVDQU" "MOVDQU X15, -0x10(DI)(BX*1)" "movdqu %xmm15,-0x10(%rdi,%rbx)" memmove_amd64.s:264
+0x14007817a 5 "PXOR" "PXOR X15, X15" "pxor %xmm15,%xmm15" memmove_amd64.s:266
+0x14007817f 1 "RET" "RET" "retq" memmove_amd64.s:267
+0x140078180 7 "SUB" "SUBQ $0x100, BX" "sub $0x100,%rbx" memmove_amd64.s:269
+0x140078187 4 "MOVDQU" "MOVDQU 0(SI), X0" "movdqu (%rsi),%xmm0" memmove_amd64.s:270
+0x14007818b 5 "MOVDQU" "MOVDQU 0x10(SI), X1" "movdqu 0x10(%rsi),%xmm1" memmove_amd64.s:271
+0x140078190 5 "MOVDQU" "MOVDQU 0x20(SI), X2" "movdqu 0x20(%rsi),%xmm2" memmove_amd64.s:272
+0x140078195 5 "MOVDQU" "MOVDQU 0x30(SI), X3" "movdqu 0x30(%rsi),%xmm3" memmove_amd64.s:273
+0x14007819a 5 "MOVDQU" "MOVDQU 0x40(SI), X4" "movdqu 0x40(%rsi),%xmm4" memmove_amd64.s:274
+0x14007819f 5 "MOVDQU" "MOVDQU 0x50(SI), X5" "movdqu 0x50(%rsi),%xmm5" memmove_amd64.s:275
+0x1400781a4 5 "MOVDQU" "MOVDQU 0x60(SI), X6" "movdqu 0x60(%rsi),%xmm6" memmove_amd64.s:276
+0x1400781a9 5 "MOVDQU" "MOVDQU 0x70(SI), X7" "movdqu 0x70(%rsi),%xmm7" memmove_amd64.s:277
+0x1400781ae 9 "MOVDQU" "MOVDQU 0x80(SI), X8" "movdqu 0x80(%rsi),%xmm8" memmove_amd64.s:278
+0x1400781b7 9 "MOVDQU" "MOVDQU 0x90(SI), X9" "movdqu 0x90(%rsi),%xmm9" memmove_amd64.s:279
+0x1400781c0 9 "MOVDQU" "MOVDQU 0xa0(SI), X10" "movdqu 0xa0(%rsi),%xmm10" memmove_amd64.s:280
+0x1400781c9 9 "MOVDQU" "MOVDQU 0xb0(SI), X11" "movdqu 0xb0(%rsi),%xmm11" memmove_amd64.s:281
+0x1400781d2 9 "MOVDQU" "MOVDQU 0xc0(SI), X12" "movdqu 0xc0(%rsi),%xmm12" memmove_amd64.s:282
+0x1400781db 9 "MOVDQU" "MOVDQU 0xd0(SI), X13" "movdqu 0xd0(%rsi),%xmm13" memmove_amd64.s:283
+0x1400781e4 9 "MOVDQU" "MOVDQU 0xe0(SI), X14" "movdqu 0xe0(%rsi),%xmm14" memmove_amd64.s:284
+0x1400781ed 9 "MOVDQU" "MOVDQU 0xf0(SI), X15" "movdqu 0xf0(%rsi),%xmm15" memmove_amd64.s:285
+0x1400781f6 4 "MOVDQU" "MOVDQU X0, 0(DI)" "movdqu %xmm0,(%rdi)" memmove_amd64.s:286
+0x1400781fa 5 "MOVDQU" "MOVDQU X1, 0x10(DI)" "movdqu %xmm1,0x10(%rdi)" memmove_amd64.s:287
+0x1400781ff 5 "MOVDQU" "MOVDQU X2, 0x20(DI)" "movdqu %xmm2,0x20(%rdi)" memmove_amd64.s:288
+0x140078204 5 "MOVDQU" "MOVDQU X3, 0x30(DI)" "movdqu %xmm3,0x30(%rdi)" memmove_amd64.s:289
+0x140078209 5 "MOVDQU" "MOVDQU X4, 0x40(DI)" "movdqu %xmm4,0x40(%rdi)" memmove_amd64.s:290
+0x14007820e 5 "MOVDQU" "MOVDQU X5, 0x50(DI)" "movdqu %xmm5,0x50(%rdi)" memmove_amd64.s:291
+0x140078213 5 "MOVDQU" "MOVDQU X6, 0x60(DI)" "movdqu %xmm6,0x60(%rdi)" memmove_amd64.s:292
+0x140078218 5 "MOVDQU" "MOVDQU X7, 0x70(DI)" "movdqu %xmm7,0x70(%rdi)" memmove_amd64.s:293
+0x14007821d 9 "MOVDQU" "MOVDQU X8, 0x80(DI)" "movdqu %xmm8,0x80(%rdi)" memmove_amd64.s:294
+0x140078226 9 "MOVDQU" "MOVDQU X9, 0x90(DI)" "movdqu %xmm9,0x90(%rdi)" memmove_amd64.s:295
+0x14007822f 9 "MOVDQU" "MOVDQU X10, 0xa0(DI)" "movdqu %xmm10,0xa0(%rdi)" memmove_amd64.s:296
+0x140078238 9 "MOVDQU" "MOVDQU X11, 0xb0(DI)" "movdqu %xmm11,0xb0(%rdi)" memmove_amd64.s:297
+0x140078241 9 "MOVDQU" "MOVDQU X12, 0xc0(DI)" "movdqu %xmm12,0xc0(%rdi)" memmove_amd64.s:298
+0x14007824a 9 "MOVDQU" "MOVDQU X13, 0xd0(DI)" "movdqu %xmm13,0xd0(%rdi)" memmove_amd64.s:299
+0x140078253 9 "MOVDQU" "MOVDQU X14, 0xe0(DI)" "movdqu %xmm14,0xe0(%rdi)" memmove_amd64.s:300
+0x14007825c 9 "MOVDQU" "MOVDQU X15, 0xf0(DI)" "movdqu %xmm15,0xf0(%rdi)" memmove_amd64.s:301
+0x140078265 7 "CMP" "CMPQ BX, $0x100" "cmp $0x100,%rbx" memmove_amd64.s:302
+0x14007826c 7 "LEA" "LEAQ 0x100(SI), SI" "lea 0x100(%rsi),%rsi" memmove_amd64.s:303
+0x140078273 7 "LEA" "LEAQ 0x100(DI), DI" "lea 0x100(%rdi),%rdi" memmove_amd64.s:304
+0x14007827a 6 "JGE" "JGE 0x140078180" "jge 0x140078180" memmove_amd64.s:305
+0x140078280 5 "PXOR" "PXOR X15, X15" "pxor %xmm15,%xmm15" memmove_amd64.s:307
+0x140078285 5 "JMP" "JMP 0x140077ec9" "jmpq 0x140077ec9" memmove_amd64.s:308
+0x14007828a 3 "MOV" "MOVQ DI, CX" "mov %rdi,%rcx" memmove_amd64.s:314
+0x14007828d 3 "SUB" "SUBQ SI, CX" "sub %rsi,%rcx" memmove_amd64.s:315
+0x140078290 3 "CMP" "CMPQ CX, BX" "cmp %rbx,%rcx" memmove_amd64.s:317
+0x140078293 6 "JB" "JB 0x140078443" "jb 0x140078443" memmove_amd64.s:319
+0x140078299 7 "CMP" "CMPQ BX, $0x100000" "cmp $0x100000,%rbx" memmove_amd64.s:322
+0x1400782a0 6 "JAE" "JAE 0x140078367" "jae 0x140078367" memmove_amd64.s:323
+0x1400782a6 4 "LEA" "LEAQ 0(SI)(BX*1), CX" "lea (%rsi,%rbx),%rcx" memmove_amd64.s:351
+0x1400782aa 3 "MOV" "MOVQ DI, R10" "mov %rdi,%r10" memmove_amd64.s:352
+0x1400782ad 5 "MOVDQU" "MOVDQU -0x80(CX), X5" "movdqu -0x80(%rcx),%xmm5" memmove_amd64.s:354
+0x1400782b2 5 "MOVDQU" "MOVDQU -0x70(CX), X6" "movdqu -0x70(%rcx),%xmm6" memmove_amd64.s:355
+0x1400782b7 5 "MOV" "MOVL $0x80, AX" "mov $0x80,%eax" memmove_amd64.s:356
+0x1400782bc 4 "AND" "ANDQ $-0x20, DI" "and $-0x20,%rdi" memmove_amd64.s:358
+0x1400782c0 4 "ADD" "ADDQ $0x20, DI" "add $0x20,%rdi" memmove_amd64.s:359
+0x1400782c4 5 "MOVDQU" "MOVDQU -0x60(CX), X7" "movdqu -0x60(%rcx),%xmm7" memmove_amd64.s:361
+0x1400782c9 6 "MOVDQU" "MOVDQU -0x50(CX), X8" "movdqu -0x50(%rcx),%xmm8" memmove_amd64.s:362
+0x1400782cf 3 "MOV" "MOVQ DI, R11" "mov %rdi,%r11" memmove_amd64.s:364
+0x1400782d2 3 "SUB" "SUBQ R10, R11" "sub %r10,%r11" memmove_amd64.s:365
+0x1400782d5 6 "MOVDQU" "MOVDQU -0x40(CX), X9" "movdqu -0x40(%rcx),%xmm9" memmove_amd64.s:367
+0x1400782db 6 "MOVDQU" "MOVDQU -0x30(CX), X10" "movdqu -0x30(%rcx),%xmm10" memmove_amd64.s:368
+0x1400782e1 3 "SUB" "SUBQ R11, BX" "sub %r11,%rbx" memmove_amd64.s:370
+0x1400782e4 6 "MOVDQU" "MOVDQU -0x20(CX), X11" "movdqu -0x20(%rcx),%xmm11" memmove_amd64.s:372
+0x1400782ea 6 "MOVDQU" "MOVDQU -0x10(CX), X12" "movdqu -0x10(%rcx),%xmm12" memmove_amd64.s:373
+0x1400782f0 4 "VMOVDQU" "VMOVDQU 0(SI), Y4" "vmovdqu (%rsi),%ymm4" memmove_amd64.s:376
+0x1400782f4 3 "ADD" "ADDQ R11, SI" "add %r11,%rsi" memmove_amd64.s:378
+0x1400782f7 3 "SUB" "SUBQ AX, BX" "sub %rax,%rbx" memmove_amd64.s:379
+0x1400782fa 4 "VMOVDQU" "VMOVDQU 0(SI), Y0" "vmovdqu (%rsi),%ymm0" memmove_amd64.s:382
+0x1400782fe 5 "VMOVDQU" "VMOVDQU 0x20(SI), Y1" "vmovdqu 0x20(%rsi),%ymm1" memmove_amd64.s:383
+0x140078303 5 "VMOVDQU" "VMOVDQU 0x40(SI), Y2" "vmovdqu 0x40(%rsi),%ymm2" memmove_amd64.s:384
+0x140078308 5 "VMOVDQU" "VMOVDQU 0x60(SI), Y3" "vmovdqu 0x60(%rsi),%ymm3" memmove_amd64.s:385
+0x14007830d 3 "ADD" "ADDQ AX, SI" "add %rax,%rsi" memmove_amd64.s:386
+0x140078310 4 "VMOVDQA" "VMOVDQA Y0, 0(DI)" "vmovdqa %ymm0,(%rdi)" memmove_amd64.s:387
+0x140078314 5 "VMOVDQA" "VMOVDQA Y1, 0x20(DI)" "vmovdqa %ymm1,0x20(%rdi)" memmove_amd64.s:388
+0x140078319 5 "VMOVDQA" "VMOVDQA Y2, 0x40(DI)" "vmovdqa %ymm2,0x40(%rdi)" memmove_amd64.s:389
+0x14007831e 5 "VMOVDQA" "VMOVDQA Y3, 0x60(DI)" "vmovdqa %ymm3,0x60(%rdi)" memmove_amd64.s:390
+0x140078323 3 "ADD" "ADDQ AX, DI" "add %rax,%rdi" memmove_amd64.s:391
+0x140078326 3 "SUB" "SUBQ AX, BX" "sub %rax,%rbx" memmove_amd64.s:392
+0x140078329 2 "JA" "JA 0x1400782fa" "ja 0x1400782fa" memmove_amd64.s:393
+0x14007832b 3 "ADD" "ADDQ AX, BX" "add %rax,%rbx" memmove_amd64.s:395
+0x14007832e 3 "ADD" "ADDQ DI, BX" "add %rdi,%rbx" memmove_amd64.s:396
+0x140078331 5 "VMOVDQU" "VMOVDQU Y4, 0(R10)" "vmovdqu %ymm4,(%r10)" memmove_amd64.s:397
+0x140078336 4 "VZEROUPPER" "VZEROUPPER" "vzeroupper" memmove_amd64.s:398
+0x14007833a 4 "MOVQ" "MOVQ M5, -0x80(BX)" "movq %mm5,-0x80(%rbx)" memmove_amd64.s:399
+0x14007833e 5 "MOVDQU" "MOVDQU X6, -0x70(BX)" "movdqu %xmm6,-0x70(%rbx)" memmove_amd64.s:400
+0x140078343 5 "MOVDQU" "MOVDQU X7, -0x60(BX)" "movdqu %xmm7,-0x60(%rbx)" memmove_amd64.s:401
+0x140078348 6 "MOVDQU" "MOVDQU X8, -0x50(BX)" "movdqu %xmm8,-0x50(%rbx)" memmove_amd64.s:402
+0x14007834e 6 "MOVDQU" "MOVDQU X9, -0x40(BX)" "movdqu %xmm9,-0x40(%rbx)" memmove_amd64.s:403
+0x140078354 6 "MOVDQU" "MOVDQU X10, -0x30(BX)" "movdqu %xmm10,-0x30(%rbx)" memmove_amd64.s:404
+0x14007835a 6 "MOVDQU" "MOVDQU X11, -0x20(BX)" "movdqu %xmm11,-0x20(%rbx)" memmove_amd64.s:405
+0x140078360 6 "MOVDQU" "MOVDQU X12, -0x10(BX)" "movdqu %xmm12,-0x10(%rbx)" memmove_amd64.s:406
+0x140078366 1 "RET" "RET" "retq" memmove_amd64.s:407
+0x140078367 4 "LEA" "LEAQ 0(SI)(BX*1), CX" "lea (%rsi,%rbx),%rcx" memmove_amd64.s:413
+0x14007836b 6 "MOVDQU" "MOVDQU -0x80(SI)(BX*1), X5" "movdqu -0x80(%rsi,%rbx),%xmm5" memmove_amd64.s:414
+0x140078371 5 "MOVDQU" "MOVDQU -0x70(CX), X6" "movdqu -0x70(%rcx),%xmm6" memmove_amd64.s:415
+0x140078376 5 "MOVDQU" "MOVDQU -0x60(CX), X7" "movdqu -0x60(%rcx),%xmm7" memmove_amd64.s:416
+0x14007837b 6 "MOVDQU" "MOVDQU -0x50(CX), X8" "movdqu -0x50(%rcx),%xmm8" memmove_amd64.s:417
+0x140078381 6 "MOVDQU" "MOVDQU -0x40(CX), X9" "movdqu -0x40(%rcx),%xmm9" memmove_amd64.s:418
+0x140078387 6 "MOVDQU" "MOVDQU -0x30(CX), X10" "movdqu -0x30(%rcx),%xmm10" memmove_amd64.s:419
+0x14007838d 6 "MOVDQU" "MOVDQU -0x20(CX), X11" "movdqu -0x20(%rcx),%xmm11" memmove_amd64.s:420
+0x140078393 6 "MOVDQU" "MOVDQU -0x10(CX), X12" "movdqu -0x10(%rcx),%xmm12" memmove_amd64.s:421
+0x140078399 4 "VMOVDQU" "VMOVDQU 0(SI), Y4" "vmovdqu (%rsi),%ymm4" memmove_amd64.s:422
+0x14007839d 3 "MOV" "MOVQ DI, R8" "mov %rdi,%r8" memmove_amd64.s:423
+0x1400783a0 4 "AND" "ANDQ $-0x20, DI" "and $-0x20,%rdi" memmove_amd64.s:424
+0x1400783a4 4 "ADD" "ADDQ $0x20, DI" "add $0x20,%rdi" memmove_amd64.s:425
+0x1400783a8 3 "MOV" "MOVQ DI, R10" "mov %rdi,%r10" memmove_amd64.s:426
+0x1400783ab 3 "SUB" "SUBQ R8, R10" "sub %r8,%r10" memmove_amd64.s:427
+0x1400783ae 3 "SUB" "SUBQ R10, BX" "sub %r10,%rbx" memmove_amd64.s:428
+0x1400783b1 3 "ADD" "ADDQ R10, SI" "add %r10,%rsi" memmove_amd64.s:429
+0x1400783b4 4 "LEA" "LEAQ 0(DI)(BX*1), CX" "lea (%rdi,%rbx),%rcx" memmove_amd64.s:430
+0x1400783b8 7 "SUB" "SUBQ $0x80, BX" "sub $0x80,%rbx" memmove_amd64.s:431
+0x1400783bf 7 "PREFETCHNTA" "PREFETCHNTA 0x1c0(SI)" "prefetchnta 0x1c0(%rsi)" memmove_amd64.s:433
+0x1400783c6 7 "PREFETCHNTA" "PREFETCHNTA 0x280(SI)" "prefetchnta 0x280(%rsi)" memmove_amd64.s:434
+0x1400783cd 4 "VMOVDQU" "VMOVDQU 0(SI), Y0" "vmovdqu (%rsi),%ymm0" memmove_amd64.s:439
+0x1400783d1 5 "VMOVDQU" "VMOVDQU 0x20(SI), Y1" "vmovdqu 0x20(%rsi),%ymm1" memmove_amd64.s:440
+0x1400783d6 5 "VMOVDQU" "VMOVDQU 0x40(SI), Y2" "vmovdqu 0x40(%rsi),%ymm2" memmove_amd64.s:441
+0x1400783db 5 "VMOVDQU" "VMOVDQU 0x60(SI), Y3" "vmovdqu 0x60(%rsi),%ymm3" memmove_amd64.s:442
+0x1400783e0 7 "ADD" "ADDQ $0x80, SI" "add $0x80,%rsi" memmove_amd64.s:443
+0x1400783e7 4 "VMOVNTDQ" "VMOVNTDQ Y0, 0(DI)" "vmovntdq %ymm0,(%rdi)" memmove_amd64.s:444
+0x1400783eb 5 "VMOVNTDQ" "VMOVNTDQ Y1, 0x20(DI)" "vmovntdq %ymm1,0x20(%rdi)" memmove_amd64.s:445
+0x1400783f0 5 "VMOVNTDQ" "VMOVNTDQ Y2, 0x40(DI)" "vmovntdq %ymm2,0x40(%rdi)" memmove_amd64.s:446
+0x1400783f5 5 "VMOVNTDQ" "VMOVNTDQ Y3, 0x60(DI)" "vmovntdq %ymm3,0x60(%rdi)" memmove_amd64.s:447
+0x1400783fa 7 "ADD" "ADDQ $0x80, DI" "add $0x80,%rdi" memmove_amd64.s:448
+0x140078401 7 "SUB" "SUBQ $0x80, BX" "sub $0x80,%rbx" memmove_amd64.s:449
+0x140078408 2 "JA" "JA 0x1400783bf" "ja 0x1400783bf" memmove_amd64.s:450
+0x14007840a 3 "SFENCE" "SFENCE" "sfence" memmove_amd64.s:453
+0x14007840d 5 "VMOVDQU" "VMOVDQU Y4, 0(R8)" "vmovdqu %ymm4,(%r8)" memmove_amd64.s:454
+0x140078412 4 "VZEROUPPER" "VZEROUPPER" "vzeroupper" memmove_amd64.s:455
+0x140078416 4 "MOVQ" "MOVQ M5, -0x80(CX)" "movq %mm5,-0x80(%rcx)" memmove_amd64.s:456
+0x14007841a 5 "MOVDQU" "MOVDQU X6, -0x70(CX)" "movdqu %xmm6,-0x70(%rcx)" memmove_amd64.s:457
+0x14007841f 5 "MOVDQU" "MOVDQU X7, -0x60(CX)" "movdqu %xmm7,-0x60(%rcx)" memmove_amd64.s:458
+0x140078424 6 "MOVDQU" "MOVDQU X8, -0x50(CX)" "movdqu %xmm8,-0x50(%rcx)" memmove_amd64.s:459
+0x14007842a 6 "MOVDQU" "MOVDQU X9, -0x40(CX)" "movdqu %xmm9,-0x40(%rcx)" memmove_amd64.s:460
+0x140078430 6 "MOVDQU" "MOVDQU X10, -0x30(CX)" "movdqu %xmm10,-0x30(%rcx)" memmove_amd64.s:461
+0x140078436 6 "MOVDQU" "MOVDQU X11, -0x20(CX)" "movdqu %xmm11,-0x20(%rcx)" memmove_amd64.s:462
+0x14007843c 6 "MOVDQU" "MOVDQU X12, -0x10(CX)" "movdqu %xmm12,-0x10(%rcx)" memmove_amd64.s:463
+0x140078442 1 "RET" "RET" "retq" memmove_amd64.s:464
+0x140078443 3 "MOV" "MOVQ DI, AX" "mov %rdi,%rax" memmove_amd64.s:467
+0x140078446 4 "MOVDQU" "MOVDQU 0(SI), X5" "movdqu (%rsi),%xmm5" memmove_amd64.s:470
+0x14007844a 5 "MOVDQU" "MOVDQU 0x10(SI), X6" "movdqu 0x10(%rsi),%xmm6" memmove_amd64.s:471
+0x14007844f 3 "ADD" "ADDQ BX, DI" "add %rbx,%rdi" memmove_amd64.s:472
+0x140078452 5 "MOVDQU" "MOVDQU 0x20(SI), X7" "movdqu 0x20(%rsi),%xmm7" memmove_amd64.s:473
+0x140078457 6 "MOVDQU" "MOVDQU 0x30(SI), X8" "movdqu 0x30(%rsi),%xmm8" memmove_amd64.s:474
+0x14007845d 4 "LEA" "LEAQ -0x20(DI), R10" "lea -0x20(%rdi),%r10" memmove_amd64.s:475
+0x140078461 3 "MOV" "MOVQ DI, R11" "mov %rdi,%r11" memmove_amd64.s:476
+0x140078464 6 "MOVDQU" "MOVDQU 0x40(SI), X9" "movdqu 0x40(%rsi),%xmm9" memmove_amd64.s:477
+0x14007846a 6 "MOVDQU" "MOVDQU 0x50(SI), X10" "movdqu 0x50(%rsi),%xmm10" memmove_amd64.s:478
+0x140078470 4 "AND" "ANDQ $0x1f, R11" "and $0x1f,%r11" memmove_amd64.s:479
+0x140078474 6 "MOVDQU" "MOVDQU 0x60(SI), X11" "movdqu 0x60(%rsi),%xmm11" memmove_amd64.s:480
+0x14007847a 6 "MOVDQU" "MOVDQU 0x70(SI), X12" "movdqu 0x70(%rsi),%xmm12" memmove_amd64.s:481
+0x140078480 3 "XOR" "XORQ R11, DI" "xor %r11,%rdi" memmove_amd64.s:482
+0x140078483 3 "ADD" "ADDQ BX, SI" "add %rbx,%rsi" memmove_amd64.s:484
+0x140078486 5 "VMOVDQU" "VMOVDQU -0x20(SI), Y4" "vmovdqu -0x20(%rsi),%ymm4" memmove_amd64.s:486
+0x14007848b 3 "SUB" "SUBQ R11, SI" "sub %r11,%rsi" memmove_amd64.s:487
+0x14007848e 3 "SUB" "SUBQ R11, BX" "sub %r11,%rbx" memmove_amd64.s:488
+0x140078491 7 "CMP" "CMPQ BX, $0x100000" "cmp $0x100000,%rbx" memmove_amd64.s:490
+0x140078498 2 "JA" "JA 0x140078515" "ja 0x140078515" memmove_amd64.s:491
+0x14007849a 7 "SUB" "SUBQ $0x80, BX" "sub $0x80,%rbx" memmove_amd64.s:492
+0x1400784a1 5 "VMOVDQU" "VMOVDQU -0x20(SI), Y0" "vmovdqu -0x20(%rsi),%ymm0" memmove_amd64.s:494
+0x1400784a6 5 "VMOVDQU" "VMOVDQU -0x40(SI), Y1" "vmovdqu -0x40(%rsi),%ymm1" memmove_amd64.s:495
+0x1400784ab 5 "VMOVDQU" "VMOVDQU -0x60(SI), Y2" "vmovdqu -0x60(%rsi),%ymm2" memmove_amd64.s:496
+0x1400784b0 5 "VMOVDQU" "VMOVDQU -0x80(SI), Y3" "vmovdqu -0x80(%rsi),%ymm3" memmove_amd64.s:497
+0x1400784b5 7 "SUB" "SUBQ $0x80, SI" "sub $0x80,%rsi" memmove_amd64.s:498
+0x1400784bc 5 "VMOVDQA" "VMOVDQA Y0, -0x20(DI)" "vmovdqa %ymm0,-0x20(%rdi)" memmove_amd64.s:499
+0x1400784c1 5 "VMOVDQA" "VMOVDQA Y1, -0x40(DI)" "vmovdqa %ymm1,-0x40(%rdi)" memmove_amd64.s:500
+0x1400784c6 5 "VMOVDQA" "VMOVDQA Y2, -0x60(DI)" "vmovdqa %ymm2,-0x60(%rdi)" memmove_amd64.s:501
+0x1400784cb 5 "VMOVDQA" "VMOVDQA Y3, -0x80(DI)" "vmovdqa %ymm3,-0x80(%rdi)" memmove_amd64.s:502
+0x1400784d0 7 "SUB" "SUBQ $0x80, DI" "sub $0x80,%rdi" memmove_amd64.s:503
+0x1400784d7 7 "SUB" "SUBQ $0x80, BX" "sub $0x80,%rbx" memmove_amd64.s:504
+0x1400784de 2 "JA" "JA 0x1400784a1" "ja 0x1400784a1" memmove_amd64.s:505
+0x1400784e0 5 "VMOVDQU" "VMOVDQU Y4, 0(R10)" "vmovdqu %ymm4,(%r10)" memmove_amd64.s:507
+0x1400784e5 4 "VZEROUPPER" "VZEROUPPER" "vzeroupper" memmove_amd64.s:508
+0x1400784e9 3 "MOVQ" "MOVQ M5, 0(AX)" "movq %mm5,(%rax)" memmove_amd64.s:509
+0x1400784ec 5 "MOVDQU" "MOVDQU X6, 0x10(AX)" "movdqu %xmm6,0x10(%rax)" memmove_amd64.s:510
+0x1400784f1 5 "MOVDQU" "MOVDQU X7, 0x20(AX)" "movdqu %xmm7,0x20(%rax)" memmove_amd64.s:511
+0x1400784f6 6 "MOVDQU" "MOVDQU X8, 0x30(AX)" "movdqu %xmm8,0x30(%rax)" memmove_amd64.s:512
+0x1400784fc 6 "MOVDQU" "MOVDQU X9, 0x40(AX)" "movdqu %xmm9,0x40(%rax)" memmove_amd64.s:513
+0x140078502 6 "MOVDQU" "MOVDQU X10, 0x50(AX)" "movdqu %xmm10,0x50(%rax)" memmove_amd64.s:514
+0x140078508 6 "MOVDQU" "MOVDQU X11, 0x60(AX)" "movdqu %xmm11,0x60(%rax)" memmove_amd64.s:515
+0x14007850e 6 "MOVDQU" "MOVDQU X12, 0x70(AX)" "movdqu %xmm12,0x70(%rax)" memmove_amd64.s:516
+0x140078514 1 "RET" "RET" "retq" memmove_amd64.s:517
+0x140078515 7 "SUB" "SUBQ $0x80, BX" "sub $0x80,%rbx" memmove_amd64.s:520
+0x14007851c 7 "PREFETCHNTA" "PREFETCHNTA 0xfffffe40(SI)" "prefetchnta 0xfffffe40(%rsi)" memmove_amd64.s:522
+0x140078523 7 "PREFETCHNTA" "PREFETCHNTA 0xfffffd80(SI)" "prefetchnta 0xfffffd80(%rsi)" memmove_amd64.s:523
+0x14007852a 5 "VMOVDQU" "VMOVDQU -0x20(SI), Y0" "vmovdqu -0x20(%rsi),%ymm0" memmove_amd64.s:524
+0x14007852f 5 "VMOVDQU" "VMOVDQU -0x40(SI), Y1" "vmovdqu -0x40(%rsi),%ymm1" memmove_amd64.s:525
+0x140078534 5 "VMOVDQU" "VMOVDQU -0x60(SI), Y2" "vmovdqu -0x60(%rsi),%ymm2" memmove_amd64.s:526
+0x140078539 5 "VMOVDQU" "VMOVDQU -0x80(SI), Y3" "vmovdqu -0x80(%rsi),%ymm3" memmove_amd64.s:527
+0x14007853e 7 "SUB" "SUBQ $0x80, SI" "sub $0x80,%rsi" memmove_amd64.s:528
+0x140078545 5 "VMOVNTDQ" "VMOVNTDQ Y0, -0x20(DI)" "vmovntdq %ymm0,-0x20(%rdi)" memmove_amd64.s:529
+0x14007854a 5 "VMOVNTDQ" "VMOVNTDQ Y1, -0x40(DI)" "vmovntdq %ymm1,-0x40(%rdi)" memmove_amd64.s:530
+0x14007854f 5 "VMOVNTDQ" "VMOVNTDQ Y2, -0x60(DI)" "vmovntdq %ymm2,-0x60(%rdi)" memmove_amd64.s:531
+0x140078554 5 "VMOVNTDQ" "VMOVNTDQ Y3, -0x80(DI)" "vmovntdq %ymm3,-0x80(%rdi)" memmove_amd64.s:532
+0x140078559 7 "SUB" "SUBQ $0x80, DI" "sub $0x80,%rdi" memmove_amd64.s:533
+0x140078560 7 "SUB" "SUBQ $0x80, BX" "sub $0x80,%rbx" memmove_amd64.s:534
+0x140078567 2 "JA" "JA 0x14007851c" "ja 0x14007851c" memmove_amd64.s:535
+0x140078569 3 "SFENCE" "SFENCE" "sfence" memmove_amd64.s:536
+0x14007856c 5 "VMOVDQU" "VMOVDQU Y4, 0(R10)" "vmovdqu %ymm4,(%r10)" memmove_amd64.s:537
+0x140078571 4 "VZEROUPPER" "VZEROUPPER" "vzeroupper" memmove_amd64.s:538
+0x140078575 3 "MOVQ" "MOVQ M5, 0(AX)" "movq %mm5,(%rax)" memmove_amd64.s:539
+0x140078578 5 "MOVDQU" "MOVDQU X6, 0x10(AX)" "movdqu %xmm6,0x10(%rax)" memmove_amd64.s:540
+0x14007857d 5 "MOVDQU" "MOVDQU X7, 0x20(AX)" "movdqu %xmm7,0x20(%rax)" memmove_amd64.s:541
+0x140078582 6 "MOVDQU" "MOVDQU X8, 0x30(AX)" "movdqu %xmm8,0x30(%rax)" memmove_amd64.s:542
+0x140078588 6 "MOVDQU" "MOVDQU X9, 0x40(AX)" "movdqu %xmm9,0x40(%rax)" memmove_amd64.s:543
+0x14007858e 6 "MOVDQU" "MOVDQU X10, 0x50(AX)" "movdqu %xmm10,0x50(%rax)" memmove_amd64.s:544
+0x140078594 6 "MOVDQU" "MOVDQU X11, 0x60(AX)" "movdqu %xmm11,0x60(%rax)" memmove_amd64.s:545
+0x14007859a 6 "MOVDQU" "MOVDQU X12, 0x70(AX)" "movdqu %xmm12,0x70(%rax)" memmove_amd64.s:546
+0x1400785a0 1 "RET" "RET" "retq" memmove_amd64.s:547
+0x1400785a1 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785a2 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785a3 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785a4 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785a5 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785a6 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785a7 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785a8 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785a9 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785aa 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785ab 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785ac 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785ad 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785ae 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785af 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785b0 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785b1 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785b2 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785b3 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785b4 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785b5 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785b6 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785b7 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785b8 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785b9 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785ba 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785bb 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785bc 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785bd 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785be 1 "INT" "INT $0x3" "int3" .:-1
+0x1400785bf 1 "INT" "INT $0x3" "int3" .:-1
+== main.sumInts 0x14007c840 32 /Users/egon/code/gio/lensm/testdata/testprog/main.go
+0x14007c840 5 "MOV" "MOVQ AX, 0x8(SP)" "mov %rax,0x8(%rsp)" main.go:19
+0x14007c845 2 "XOR" "XORL CX, CX" "xor %ecx,%ecx" main.go:21
+0x14007c847 2 "XOR" "XORL DX, DX" "xor %edx,%edx" main.go:21
+0x14007c849 2 "JMP" "JMP 0x14007c852" "jmp 0x14007c852" main.go:21
+0x14007c84b 4 "ADD" "ADDQ 0(AX)(CX*8), DX" "add (%rax,%rcx,8),%rdx" main.go:22
+0x14007c84f 3 "INC" "INCQ CX" "inc %rcx" main.go:21
+0x14007c852 3 "CMP" "CMPQ BX, CX" "cmp %rcx,%rbx" main.go:21
+0x14007c855 2 "JG" "JG 0x14007c84b" "jg 0x14007c84b" main.go:21
+0x14007c857 3 "MOV" "MOVQ DX, AX" "mov %rdx,%rax" main.go:24
+0x14007c85a 1 "RET" "RET" "retq" main.go:24
+0x14007c85b 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c85c 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c85d 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c85e 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c85f 1 "INT" "INT $0x3" "int3" .:-1
+== main.dot 0x14007c860 64 /Users/egon/code/gio/lensm/testdata/testprog/main.go
+0x14007c860 1 "PUSH" "PUSHQ BP" "push %rbp" main.go:28
+0x14007c861 3 "MOV" "MOVQ SP, BP" "mov %rsp,%rbp" main.go:28
+0x14007c864 5 "MOV" "MOVQ AX, 0x10(SP)" "mov %rax,0x10(%rsp)" main.go:28
+0x14007c869 5 "MOV" "MOVQ DI, 0x28(SP)" "mov %rdi,0x28(%rsp)" main.go:28
+0x14007c86e 3 "XORPS" "XORPS X1, X1" "xorps %xmm1,%xmm1" main.go:30
+0x14007c871 2 "XOR" "XORL CX, CX" "xor %ecx,%ecx" main.go:30
+0x14007c873 2 "JMP" "JMP 0x14007c881" "jmp 0x14007c881" main.go:30
+0x14007c875 5 "MULSD" "MULSD 0(DI)(CX*8), X0" "mulsd (%rdi,%rcx,8),%xmm0" main.go:31
+0x14007c87a 4 "ADDSD" "ADDSD X0, X1" "addsd %xmm0,%xmm1" main.go:31
+0x14007c87e 3 "INC" "INCQ CX" "inc %rcx" main.go:30
+0x14007c881 3 "CMP" "CMPQ BX, CX" "cmp %rcx,%rbx" main.go:30
+0x14007c884 2 "JLE" "JLE 0x14007c892" "jle 0x14007c892" main.go:30
+0x14007c886 5 "MOVSD_XMM" "MOVSD_XMM 0(AX)(CX*8), X0" "movsd (%rax,%rcx,8),%xmm0" main.go:31
+0x14007c88b 3 "CMP" "CMPQ SI, CX" "cmp %rcx,%rsi" main.go:31
+0x14007c88e 2 "JA" "JA 0x14007c875" "ja 0x14007c875" main.go:31
+0x14007c890 2 "JMP" "JMP 0x14007c897" "jmp 0x14007c897" main.go:31
+0x14007c892 3 "MOVUPS" "MOVUPS X1, X0" "movups %xmm1,%xmm0" main.go:33
+0x14007c895 1 "POP" "POPQ BP" "pop %rbp" main.go:33
+0x14007c896 1 "RET" "RET" "retq" main.go:33
+0x14007c897 5 "CALL" "CALL runtime.panicBounds(SB)" "callq 0x140077b20" main.go:31
+0x14007c89c 1 "NOP" "NOPL" "nop" main.go:31
+0x14007c89d 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c89e 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c89f 1 "INT" "INT $0x3" "int3" .:-1
+== main.popcountAll 0x14007c8a0 192 /Users/egon/code/gio/lensm/testdata/testprog/main.go
+0x14007c8a0 4 "CMP" "CMPQ SP, 0x10(R14)" "cmp 0x10(%r14),%rsp" main.go:37
+0x14007c8a4 2 "JBE" "JBE 0x14007c91a" "jbe 0x14007c91a" main.go:37
+0x14007c8a6 1 "PUSH" "PUSHQ BP" "push %rbp" main.go:37
+0x14007c8a7 3 "MOV" "MOVQ SP, BP" "mov %rsp,%rbp" main.go:37
+0x14007c8aa 4 "SUB" "SUBQ $0x18, SP" "sub $0x18,%rsp" main.go:37
+0x14007c8ae 5 "MOV" "MOVQ AX, 0x28(SP)" "mov %rax,0x28(%rsp)" main.go:39
+0x14007c8b3 5 "MOV" "MOVQ BX, 0x30(SP)" "mov %rbx,0x30(%rsp)" main.go:39
+0x14007c8b8 2 "XOR" "XORL CX, CX" "xor %ecx,%ecx" main.go:39
+0x14007c8ba 2 "XOR" "XORL DX, DX" "xor %edx,%edx" main.go:39
+0x14007c8bc 2 "JMP" "JMP 0x14007c8c4" "jmp 0x14007c8c4" main.go:39
+0x14007c8be 3 "ADD" "ADDQ SI, DX" "add %rsi,%rdx" main.go:40
+0x14007c8c1 3 "INC" "INCQ CX" "inc %rcx" main.go:39
+0x14007c8c4 3 "CMP" "CMPQ BX, CX" "cmp %rcx,%rbx" main.go:39
+0x14007c8c7 2 "JLE" "JLE 0x14007c911" "jle 0x14007c911" main.go:39
+0x14007c8c9 4 "MOV" "MOVQ 0(AX)(CX*8), SI" "mov (%rax,%rcx,8),%rsi" main.go:39
+0x14007c8cd 7 "MOVZX" "MOVZX runtime.x86HasPOPCNT(SB), DI" "movzbl 0xeda58(%rip),%edi" main.go:39
+0x14007c8d4 2 "TEST" "TESTL DI, DI" "test %edi,%edi" main.go:39
+0x14007c8d6 2 "JE" "JE 0x14007c8df" "je 0x14007c8df" main.go:40
+0x14007c8d8 5 "POPCNT" "POPCNTQ SI, SI" "popcnt %rsi,%rsi" main.go:40
+0x14007c8dd 2 "JMP" "JMP 0x14007c8be" "jmp 0x14007c8be" main.go:40
+0x14007c8df 5 "MOV" "MOVQ CX, 0x10(SP)" "mov %rcx,0x10(%rsp)" main.go:39
+0x14007c8e4 5 "MOV" "MOVQ DX, 0x8(SP)" "mov %rdx,0x8(%rsp)" main.go:39
+0x14007c8e9 3 "MOV" "MOVQ SI, AX" "mov %rsi,%rax" main.go:40
+0x14007c8ec 5 "CALL" "CALL math/bits.OnesCount64(SB)" "callq 0x14007c7a0" main.go:40
+0x14007c8f1 5 "MOV" "MOVQ 0x10(SP), CX" "mov 0x10(%rsp),%rcx" main.go:39
+0x14007c8f6 5 "MOV" "MOVQ 0x8(SP), DX" "mov 0x8(%rsp),%rdx" main.go:40
+0x14007c8fb 5 "MOV" "MOVQ 0x30(SP), BX" "mov 0x30(%rsp),%rbx" main.go:39
+0x14007c900 7 "MOVZX" "MOVZX runtime.x86HasPOPCNT(SB), DI" "movzbl 0xeda25(%rip),%edi" main.go:39
+0x14007c907 3 "MOV" "MOVQ AX, SI" "mov %rax,%rsi" main.go:40
+0x14007c90a 5 "MOV" "MOVQ 0x28(SP), AX" "mov 0x28(%rsp),%rax" main.go:39
+0x14007c90f 2 "JMP" "JMP 0x14007c8be" "jmp 0x14007c8be" main.go:40
+0x14007c911 3 "MOV" "MOVQ DX, AX" "mov %rdx,%rax" main.go:42
+0x14007c914 4 "ADD" "ADDQ $0x18, SP" "add $0x18,%rsp" main.go:42
+0x14007c918 1 "POP" "POPQ BP" "pop %rbp" main.go:42
+0x14007c919 1 "RET" "RET" "retq" main.go:42
+0x14007c91a 5 "MOV" "MOVQ AX, 0x8(SP)" "mov %rax,0x8(%rsp)" main.go:37
+0x14007c91f 5 "MOV" "MOVQ BX, 0x10(SP)" "mov %rbx,0x10(%rsp)" main.go:37
+0x14007c924 5 "MOV" "MOVQ CX, 0x18(SP)" "mov %rcx,0x18(%rsp)" main.go:37
+0x14007c929 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x140075ce0" main.go:37
+0x14007c92e 5 "MOV" "MOVQ 0x8(SP), AX" "mov 0x8(%rsp),%rax" main.go:37
+0x14007c933 5 "MOV" "MOVQ 0x10(SP), BX" "mov 0x10(%rsp),%rbx" main.go:37
+0x14007c938 5 "MOV" "MOVQ 0x18(SP), CX" "mov 0x18(%rsp),%rcx" main.go:37
+0x14007c93d 3 "NOP" "NOPL 0(AX)" "nopl (%rax)" main.go:37
+0x14007c940 5 "JMP" "JMP main.popcountAll(SB)" "jmpq 0x14007c8a0" main.go:37
+0x14007c945 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c946 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c947 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c948 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c949 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c94a 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c94b 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c94c 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c94d 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c94e 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c94f 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c950 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c951 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c952 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c953 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c954 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c955 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c956 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c957 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c958 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c959 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c95a 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c95b 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c95c 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c95d 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c95e 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c95f 1 "INT" "INT $0x3" "int3" .:-1
+== main.collatzSteps 0x14007c960 64 /Users/egon/code/gio/lensm/testdata/testprog/main.go
+0x14007c960 2 "XOR" "XORL CX, CX" "xor %ecx,%ecx" main.go:48
+0x14007c962 2 "JMP" "JMP 0x14007c967" "jmp 0x14007c967" main.go:48
+0x14007c964 3 "INC" "INCQ CX" "inc %rcx" main.go:54
+0x14007c967 4 "CMP" "CMPQ AX, $0x1" "cmp $0x1,%rax" main.go:48
+0x14007c96b 2 "JE" "JE 0x14007c98c" "je 0x14007c98c" main.go:48
+0x14007c96d 3 "MOV" "MOVQ AX, DX" "mov %rax,%rdx" main.go:49
+0x14007c970 4 "SHR" "SHRQ $0x3f, AX" "shr $0x3f,%rax" main.go:49
+0x14007c974 3 "ADD" "ADDQ DX, AX" "add %rdx,%rax" main.go:49
+0x14007c977 4 "BT" "BTL $0x0, DX" "bt $0x0,%edx" main.go:49
+0x14007c97b 2 "JB" "JB 0x14007c982" "jb 0x14007c982" main.go:49
+0x14007c97d 3 "SAR" "SARQ $0x1, AX" "sar %rax" main.go:49
+0x14007c980 2 "JMP" "JMP 0x14007c964" "jmp 0x14007c964" main.go:50
+0x14007c982 4 "LEA" "LEAQ 0(DX)(DX*2), AX" "lea (%rdx,%rdx,2),%rax" main.go:52
+0x14007c986 4 "LEA" "LEAQ 0x1(AX), AX" "lea 0x1(%rax),%rax" main.go:52
+0x14007c98a 2 "JMP" "JMP 0x14007c964" "jmp 0x14007c964" main.go:52
+0x14007c98c 3 "MOV" "MOVQ CX, AX" "mov %rcx,%rax" main.go:56
+0x14007c98f 1 "RET" "RET" "retq" main.go:56
+0x14007c990 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c991 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c992 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c993 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c994 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c995 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c996 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c997 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c998 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c999 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c99a 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c99b 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c99c 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c99d 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c99e 1 "INT" "INT $0x3" "int3" .:-1
+0x14007c99f 1 "INT" "INT $0x3" "int3" .:-1
+== main.mat4Mul 0x14007c9a0 352 /Users/egon/code/gio/lensm/testdata/testprog/main.go
+0x14007c9a0 5 "LEA" "LEAQ -0x8(SP), R12" "lea -0x8(%rsp),%r12" main.go:60
+0x14007c9a5 4 "CMP" "CMPQ R12, 0x10(R14)" "cmp 0x10(%r14),%r12" main.go:60
+0x14007c9a9 6 "JBE" "JBE 0x14007cabc" "jbe 0x14007cabc" main.go:60
+0x14007c9af 1 "PUSH" "PUSHQ BP" "push %rbp" main.go:60
+0x14007c9b0 3 "MOV" "MOVQ SP, BP" "mov %rsp,%rbp" main.go:60
+0x14007c9b3 4 "ADD" "ADDQ $-0x80, SP" "add $-0x80,%rsp" main.go:60
+0x14007c9b7 8 "LEA" "LEAQ 0x90(SP), CX" "lea 0x90(%rsp),%rcx" main.go:60
+0x14007c9bf 4 "MOVUPS" "MOVUPS X15, 0(CX)" "movups %xmm15,(%rcx)" main.go:60
+0x14007c9c3 5 "MOVUPS" "MOVUPS X15, 0x10(CX)" "movups %xmm15,0x10(%rcx)" main.go:60
+0x14007c9c8 5 "MOVUPS" "MOVUPS X15, 0x20(CX)" "movups %xmm15,0x20(%rcx)" main.go:60
+0x14007c9cd 5 "MOVUPS" "MOVUPS X15, 0x30(CX)" "movups %xmm15,0x30(%rcx)" main.go:60
+0x14007c9d2 5 "MOVUPS" "MOVUPS X15, 0x40(CX)" "movups %xmm15,0x40(%rcx)" main.go:60
+0x14007c9d7 5 "MOVUPS" "MOVUPS X15, 0x50(CX)" "movups %xmm15,0x50(%rcx)" main.go:60
+0x14007c9dc 5 "MOVUPS" "MOVUPS X15, 0x60(CX)" "movups %xmm15,0x60(%rcx)" main.go:60
+0x14007c9e1 5 "MOVUPS" "MOVUPS X15, 0x70(CX)" "movups %xmm15,0x70(%rcx)" main.go:60
+0x14007c9e6 4 "LEA" "LEAQ 0(SP), DX" "lea (%rsp),%rdx" main.go:61
+0x14007c9ea 4 "MOVUPS" "MOVUPS X15, 0(DX)" "movups %xmm15,(%rdx)" main.go:61
+0x14007c9ee 5 "MOVUPS" "MOVUPS X15, 0x10(DX)" "movups %xmm15,0x10(%rdx)" main.go:61
+0x14007c9f3 5 "MOVUPS" "MOVUPS X15, 0x20(DX)" "movups %xmm15,0x20(%rdx)" main.go:61
+0x14007c9f8 5 "MOVUPS" "MOVUPS X15, 0x30(DX)" "movups %xmm15,0x30(%rdx)" main.go:61
+0x14007c9fd 5 "MOVUPS" "MOVUPS X15, 0x40(DX)" "movups %xmm15,0x40(%rdx)" main.go:61
+0x14007ca02 5 "MOVUPS" "MOVUPS X15, 0x50(DX)" "movups %xmm15,0x50(%rdx)" main.go:61
+0x14007ca07 5 "MOVUPS" "MOVUPS X15, 0x60(DX)" "movups %xmm15,0x60(%rdx)" main.go:61
+0x14007ca0c 5 "MOVUPS" "MOVUPS X15, 0x70(DX)" "movups %xmm15,0x70(%rdx)" main.go:61
+0x14007ca11 2 "XOR" "XORL SI, SI" "xor %esi,%esi" main.go:62
+0x14007ca13 2 "JMP" "JMP 0x14007ca18" "jmp 0x14007ca18" main.go:62
+0x14007ca15 3 "INC" "INCQ SI" "inc %rsi" main.go:62
+0x14007ca18 4 "CMP" "CMPQ SI, $0x4" "cmp $0x4,%rsi" main.go:62
+0x14007ca1c 2 "JGE" "JGE 0x14007ca68" "jge 0x14007ca68" main.go:62
+0x14007ca1e 2 "XOR" "XORL DI, DI" "xor %edi,%edi" main.go:63
+0x14007ca20 2 "JMP" "JMP 0x14007ca25" "jmp 0x14007ca25" main.go:63
+0x14007ca22 3 "INC" "INCQ DI" "inc %rdi" main.go:63
+0x14007ca25 4 "CMP" "CMPQ DI, $0x4" "cmp $0x4,%rdi" main.go:63
+0x14007ca29 2 "JGE" "JGE 0x14007ca15" "jge 0x14007ca15" main.go:63
+0x14007ca2b 4 "LEA" "LEAQ 0(DI)(SI*4), R8" "lea (%rdi,%rsi,4),%r8" main.go:65
+0x14007ca2f 3 "XOR" "XORL R9, R9" "xor %r9d,%r9d" main.go:64
+0x14007ca32 2 "JMP" "JMP 0x14007ca60" "jmp 0x14007ca60" main.go:64
+0x14007ca34 2 "TEST" "TESTB AL, 0(AX)" "test %al,(%rax)" main.go:65
+0x14007ca36 2 "TEST" "TESTB AL, 0(BX)" "test %al,(%rbx)" main.go:65
+0x14007ca38 4 "LEA" "LEAQ 0(R9)(SI*4), R10" "lea (%r9,%rsi,4),%r10" main.go:65
+0x14007ca3c 6 "MOVSD_XMM" "MOVSD_XMM 0(AX)(R10*8), X0" "movsd (%rax,%r10,8),%xmm0" main.go:65
+0x14007ca42 4 "LEA" "LEAQ 0(DI)(R9*4), R10" "lea (%rdi,%r9,4),%r10" main.go:65
+0x14007ca46 6 "MULSD" "MULSD 0(BX)(R10*8), X0" "mulsd (%rbx,%r10,8),%xmm0" main.go:65
+0x14007ca4c 6 "ADDSD" "ADDSD 0(SP)(R8*8), X0" "addsd (%rsp,%r8,8),%xmm0" main.go:65
+0x14007ca52 6 "MOVSD_XMM" "MOVSD_XMM X0, 0(SP)(R8*8)" "movsd %xmm0,(%rsp,%r8,8)" main.go:65
+0x14007ca58 3 "INC" "INCQ R9" "inc %r9" main.go:64
+0x14007ca5b 5 "NOP" "NOPL 0(AX)(AX*1)" "nopl (%rax,%rax)" main.go:64
+0x14007ca60 4 "CMP" "CMPQ R9, $0x4" "cmp $0x4,%r9" main.go:64
+0x14007ca64 2 "JL" "JL 0x14007ca34" "jl 0x14007ca34" main.go:64
+0x14007ca66 2 "JMP" "JMP 0x14007ca22" "jmp 0x14007ca22" main.go:64
+0x14007ca68 4 "MOVUPS" "MOVUPS 0(DX), X14" "movups (%rdx),%xmm14" main.go:69
+0x14007ca6c 4 "MOVUPS" "MOVUPS X14, 0(CX)" "movups %xmm14,(%rcx)" main.go:69
+0x14007ca70 5 "MOVUPS" "MOVUPS 0x10(DX), X14" "movups 0x10(%rdx),%xmm14" main.go:69
+0x14007ca75 5 "MOVUPS" "MOVUPS X14, 0x10(CX)" "movups %xmm14,0x10(%rcx)" main.go:69
+0x14007ca7a 5 "MOVUPS" "MOVUPS 0x20(DX), X14" "movups 0x20(%rdx),%xmm14" main.go:69
+0x14007ca7f 5 "MOVUPS" "MOVUPS X14, 0x20(CX)" "movups %xmm14,0x20(%rcx)" main.go:69
+0x14007ca84 5 "MOVUPS" "MOVUPS 0x30(DX), X14" "movups 0x30(%rdx),%xmm14" main.go:69
+0x14007ca89 5 "MOVUPS" "MOVUPS X14, 0x30(CX)" "movups %xmm14,0x30(%rcx)" main.go:69
+0x14007ca8e 5 "MOVUPS" "MOVUPS 0x40(DX), X14" "movups 0x40(%rdx),%xmm14" main.go:69
+0x14007ca93 5 "MOVUPS" "MOVUPS X14, 0x40(CX)" "movups %xmm14,0x40(%rcx)" main.go:69
+0x14007ca98 5 "MOVUPS" "MOVUPS 0x50(DX), X14" "movups 0x50(%rdx),%xmm14" main.go:69
+0x14007ca9d 5 "MOVUPS" "MOVUPS X14, 0x50(CX)" "movups %xmm14,0x50(%rcx)" main.go:69
+0x14007caa2 5 "MOVUPS" "MOVUPS 0x60(DX), X14" "movups 0x60(%rdx),%xmm14" main.go:69
+0x14007caa7 5 "MOVUPS" "MOVUPS X14, 0x60(CX)" "movups %xmm14,0x60(%rcx)" main.go:69
+0x14007caac 5 "MOVUPS" "MOVUPS 0x70(DX), X14" "movups 0x70(%rdx),%xmm14" main.go:69
+0x14007cab1 5 "MOVUPS" "MOVUPS X14, 0x70(CX)" "movups %xmm14,0x70(%rcx)" main.go:69
+0x14007cab6 4 "SUB" "SUBQ $-0x80, SP" "sub $-0x80,%rsp" main.go:69
+0x14007caba 1 "POP" "POPQ BP" "pop %rbp" main.go:69
+0x14007cabb 1 "RET" "RET" "retq" main.go:69
+0x14007cabc 8 "MOV" "MOVQ AX, 0x88(SP)" "mov %rax,0x88(%rsp)" main.go:60
+0x14007cac4 8 "MOV" "MOVQ BX, 0x90(SP)" "mov %rbx,0x90(%rsp)" main.go:60
+0x14007cacc 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x140075ce0" main.go:60
+0x14007cad1 8 "MOV" "MOVQ 0x88(SP), AX" "mov 0x88(%rsp),%rax" main.go:60
+0x14007cad9 8 "MOV" "MOVQ 0x90(SP), BX" "mov 0x90(%rsp),%rbx" main.go:60
+0x14007cae1 5 "JMP" "JMP main.mat4Mul(SB)" "jmpq 0x14007c9a0" main.go:60
+0x14007cae6 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cae7 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cae8 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cae9 1 "INT" "INT $0x3" "int3" .:-1
+0x14007caea 1 "INT" "INT $0x3" "int3" .:-1
+0x14007caeb 1 "INT" "INT $0x3" "int3" .:-1
+0x14007caec 1 "INT" "INT $0x3" "int3" .:-1
+0x14007caed 1 "INT" "INT $0x3" "int3" .:-1
+0x14007caee 1 "INT" "INT $0x3" "int3" .:-1
+0x14007caef 1 "INT" "INT $0x3" "int3" .:-1
+0x14007caf0 1 "INT" "INT $0x3" "int3" .:-1
+0x14007caf1 1 "INT" "INT $0x3" "int3" .:-1
+0x14007caf2 1 "INT" "INT $0x3" "int3" .:-1
+0x14007caf3 1 "INT" "INT $0x3" "int3" .:-1
+0x14007caf4 1 "INT" "INT $0x3" "int3" .:-1
+0x14007caf5 1 "INT" "INT $0x3" "int3" .:-1
+0x14007caf6 1 "INT" "INT $0x3" "int3" .:-1
+0x14007caf7 1 "INT" "INT $0x3" "int3" .:-1
+0x14007caf8 1 "INT" "INT $0x3" "int3" .:-1
+0x14007caf9 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cafa 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cafb 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cafc 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cafd 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cafe 1 "INT" "INT $0x3" "int3" .:-1
+0x14007caff 1 "INT" "INT $0x3" "int3" .:-1
+== main.normalize 0x14007cb00 96 /Users/egon/code/gio/lensm/testdata/testprog/main.go
+0x14007cb00 5 "MOV" "MOVQ AX, 0x8(SP)" "mov %rax,0x8(%rsp)" main.go:73
+0x14007cb05 3 "XORPS" "XORPS X0, X0" "xorps %xmm0,%xmm0" main.go:75
+0x14007cb08 2 "XOR" "XORL CX, CX" "xor %ecx,%ecx" main.go:75
+0x14007cb0a 2 "JMP" "JMP 0x14007cb20" "jmp 0x14007cb20" main.go:75
+0x14007cb0c 5 "MOVSD_XMM" "MOVSD_XMM 0(AX)(CX*8), X1" "movsd (%rax,%rcx,8),%xmm1" main.go:75
+0x14007cb11 4 "MULSD" "MULSD X1, X1" "mulsd %xmm1,%xmm1" main.go:76
+0x14007cb15 4 "ADDSD" "ADDSD X1, X0" "addsd %xmm1,%xmm0" main.go:76
+0x14007cb19 3 "INC" "INCQ CX" "inc %rcx" main.go:75
+0x14007cb1c 4 "NOP" "NOPL 0(AX)" "nopl (%rax)" main.go:75
+0x14007cb20 3 "CMP" "CMPQ BX, CX" "cmp %rcx,%rbx" main.go:75
+0x14007cb23 2 "JG" "JG 0x14007cb0c" "jg 0x14007cb0c" main.go:75
+0x14007cb25 1 "NOP" "NOPL" "nop" main.go:78
+0x14007cb26 4 "SQRTSD" "SQRTSD X0, X0" "sqrtsd %xmm0,%xmm0" sqrt.go:94
+0x14007cb2a 2 "XOR" "XORL CX, CX" "xor %ecx,%ecx" main.go:79
+0x14007cb2c 2 "JMP" "JMP 0x14007cb40" "jmp 0x14007cb40" main.go:79
+0x14007cb2e 5 "MOVSD_XMM" "MOVSD_XMM 0(AX)(CX*8), X1" "movsd (%rax,%rcx,8),%xmm1" main.go:80
+0x14007cb33 4 "DIVSD" "DIVSD X0, X1" "divsd %xmm0,%xmm1" main.go:80
+0x14007cb37 5 "MOVSD_XMM" "MOVSD_XMM X1, 0(AX)(CX*8)" "movsd %xmm1,(%rax,%rcx,8)" main.go:80
+0x14007cb3c 3 "INC" "INCQ CX" "inc %rcx" main.go:79
+0x14007cb3f 1 "NOP" "NOPL" "nop" main.go:79
+0x14007cb40 3 "CMP" "CMPQ BX, CX" "cmp %rcx,%rbx" main.go:79
+0x14007cb43 2 "JG" "JG 0x14007cb2e" "jg 0x14007cb2e" main.go:79
+0x14007cb45 1 "RET" "RET" "retq" main.go:82
+0x14007cb46 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cb47 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cb48 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cb49 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cb4a 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cb4b 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cb4c 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cb4d 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cb4e 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cb4f 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cb50 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cb51 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cb52 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cb53 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cb54 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cb55 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cb56 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cb57 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cb58 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cb59 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cb5a 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cb5b 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cb5c 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cb5d 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cb5e 1 "INT" "INT $0x3" "int3" .:-1
+0x14007cb5f 1 "INT" "INT $0x3" "int3" .:-1
+== main.main 0x14007cb60 768 /Users/egon/code/gio/lensm/testdata/testprog/main.go
+0x14007cb60 8 "LEA" "LEAQ 0xfffffdc8(SP), R12" "lea 0xfffffdc8(%rsp),%r12" main.go:84
+0x14007cb68 4 "CMP" "CMPQ R12, 0x10(R14)" "cmp 0x10(%r14),%r12" main.go:84
+0x14007cb6c 6 "JBE" "JBE 0x14007ce46" "jbe 0x14007ce46" main.go:84
+0x14007cb72 1 "PUSH" "PUSHQ BP" "push %rbp" main.go:84
+0x14007cb73 3 "MOV" "MOVQ SP, BP" "mov %rsp,%rbp" main.go:84
+0x14007cb76 7 "SUB" "SUBQ $0x2b0, SP" "sub $0x2b0,%rsp" main.go:84
+0x14007cb7d 12 "MOV" "MOVQ $0x3, 0x270(SP)" "movq $0x3,0x270(%rsp)" main.go:85
+0x14007cb89 12 "MOV" "MOVQ $0x1, 0x278(SP)" "movq $0x1,0x278(%rsp)" main.go:85
+0x14007cb95 12 "MOV" "MOVQ $0x4, 0x280(SP)" "movq $0x4,0x280(%rsp)" main.go:85
+0x14007cba1 12 "MOV" "MOVQ $0x1, 0x288(SP)" "movq $0x1,0x288(%rsp)" main.go:85
+0x14007cbad 12 "MOV" "MOVQ $0x5, 0x290(SP)" "movq $0x5,0x290(%rsp)" main.go:85
+0x14007cbb9 12 "MOV" "MOVQ $0x9, 0x298(SP)" "movq $0x9,0x298(%rsp)" main.go:85
+0x14007cbc5 12 "MOV" "MOVQ $0x2, 0x2a0(SP)" "movq $0x2,0x2a0(%rsp)" main.go:85
+0x14007cbd1 12 "MOV" "MOVQ $0x6, 0x2a8(SP)" "movq $0x6,0x2a8(%rsp)" main.go:85
+0x14007cbdd 10 "MOV" "MOVQ $0x400599999999999a, CX" "mov $0x400599999999999a,%rcx" main.go:86
+0x14007cbe7 8 "MOV" "MOVQ CX, 0x250(SP)" "mov %rcx,0x250(%rsp)" main.go:86
+0x14007cbef 10 "MOV" "MOVQ $0x3ffccccccccccccd, CX" "mov $0x3ffccccccccccccd,%rcx" main.go:86
+0x14007cbf9 8 "MOV" "MOVQ CX, 0x258(SP)" "mov %rcx,0x258(%rsp)" main.go:86
+0x14007cc01 10 "MOV" "MOVQ $0x4006666666666666, DX" "mov $0x4006666666666666,%rdx" main.go:86
+0x14007cc0b 8 "MOV" "MOVQ DX, 0x260(SP)" "mov %rdx,0x260(%rsp)" main.go:86
+0x14007cc13 8 "MOV" "MOVQ CX, 0x268(SP)" "mov %rcx,0x268(%rsp)" main.go:86
+0x14007cc1b 5 "MOV" "MOVL $-0x21524111, CX" "mov $-0x21524111,%ecx" main.go:87
+0x14007cc20 8 "MOV" "MOVQ CX, 0x238(SP)" "mov %rcx,0x238(%rsp)" main.go:87
+0x14007cc28 5 "MOV" "MOVL $-0x35014542, CX" "mov $-0x35014542,%ecx" main.go:87
+0x14007cc2d 8 "MOV" "MOVQ CX, 0x240(SP)" "mov %rcx,0x240(%rsp)" main.go:87
+0x14007cc35 12 "MOV" "MOVQ $0xddba11, 0x248(SP)" "movq $0xddba11,0x248(%rsp)" main.go:87
+0x14007cc41 8 "LEA" "LEAQ 0x190(SP), AX" "lea 0x190(%rsp),%rax" main.go:89
+0x14007cc49 4 "MOVUPS" "MOVUPS X15, 0(AX)" "movups %xmm15,(%rax)" main.go:89
+0x14007cc4d 5 "MOVUPS" "MOVUPS X15, 0x10(AX)" "movups %xmm15,0x10(%rax)" main.go:89
+0x14007cc52 5 "MOVUPS" "MOVUPS X15, 0x20(AX)" "movups %xmm15,0x20(%rax)" main.go:89
+0x14007cc57 5 "MOVUPS" "MOVUPS X15, 0x30(AX)" "movups %xmm15,0x30(%rax)" main.go:89
+0x14007cc5c 5 "MOVUPS" "MOVUPS X15, 0x40(AX)" "movups %xmm15,0x40(%rax)" main.go:89
+0x14007cc61 5 "MOVUPS" "MOVUPS X15, 0x50(AX)" "movups %xmm15,0x50(%rax)" main.go:89
+0x14007cc66 5 "MOVUPS" "MOVUPS X15, 0x60(AX)" "movups %xmm15,0x60(%rax)" main.go:89
+0x14007cc6b 5 "MOVUPS" "MOVUPS X15, 0x70(AX)" "movups %xmm15,0x70(%rax)" main.go:89
+0x14007cc70 8 "LEA" "LEAQ 0x110(SP), BX" "lea 0x110(%rsp),%rbx" main.go:89
+0x14007cc78 4 "MOVUPS" "MOVUPS X15, 0(BX)" "movups %xmm15,(%rbx)" main.go:89
+0x14007cc7c 5 "MOVUPS" "MOVUPS X15, 0x10(BX)" "movups %xmm15,0x10(%rbx)" main.go:89
+0x14007cc81 5 "MOVUPS" "MOVUPS X15, 0x20(BX)" "movups %xmm15,0x20(%rbx)" main.go:89
+0x14007cc86 5 "MOVUPS" "MOVUPS X15, 0x30(BX)" "movups %xmm15,0x30(%rbx)" main.go:89
+0x14007cc8b 5 "MOVUPS" "MOVUPS X15, 0x40(BX)" "movups %xmm15,0x40(%rbx)" main.go:89
+0x14007cc90 5 "MOVUPS" "MOVUPS X15, 0x50(BX)" "movups %xmm15,0x50(%rbx)" main.go:89
+0x14007cc95 5 "MOVUPS" "MOVUPS X15, 0x60(BX)" "movups %xmm15,0x60(%rbx)" main.go:89
+0x14007cc9a 5 "MOVUPS" "MOVUPS X15, 0x70(BX)" "movups %xmm15,0x70(%rbx)" main.go:89
+0x14007cc9f 2 "XOR" "XORL CX, CX" "xor %ecx,%ecx" main.go:90
+0x14007cca1 2 "JMP" "JMP 0x14007cccf" "jmp 0x14007cccf" main.go:90
+0x14007cca3 3 "XORPS" "XORPS X0, X0" "xorps %xmm0,%xmm0" main.go:91
+0x14007cca6 5 "CVTSI2SD" "CVTSI2SDQ CX, X0" "cvtsi2sd %rcx,%xmm0" main.go:91
+0x14007ccab 9 "MOVSD_XMM" "MOVSD_XMM X0, 0x190(SP)(CX*8)" "movsd %xmm0,0x190(%rsp,%rcx,8)" main.go:91
+0x14007ccb4 4 "LEA" "LEAQ -0xf(CX), DX" "lea -0xf(%rcx),%rdx" main.go:92
+0x14007ccb8 3 "NEG" "NEGQ DX" "neg %rdx" main.go:92
+0x14007ccbb 3 "XORPS" "XORPS X0, X0" "xorps %xmm0,%xmm0" main.go:92
+0x14007ccbe 5 "CVTSI2SD" "CVTSI2SDQ DX, X0" "cvtsi2sd %rdx,%xmm0" main.go:92
+0x14007ccc3 9 "MOVSD_XMM" "MOVSD_XMM X0, 0x110(SP)(CX*8)" "movsd %xmm0,0x110(%rsp,%rcx,8)" main.go:92
+0x14007cccc 3 "INC" "INCQ CX" "inc %rcx" main.go:90
+0x14007cccf 4 "CMP" "CMPQ CX, $0x10" "cmp $0x10,%rcx" main.go:90
+0x14007ccd3 2 "JL" "JL 0x14007cca3" "jl 0x14007cca3" main.go:90
+0x14007ccd5 5 "CALL" "CALL main.mat4Mul(SB)" "callq 0x14007c9a0" main.go:94
+0x14007ccda 8 "LEA" "LEAQ 0x90(SP), CX" "lea 0x90(%rsp),%rcx" main.go:94
+0x14007cce2 3 "MOV" "MOVQ SP, DX" "mov %rsp,%rdx" main.go:94
+0x14007cce5 4 "MOVUPS" "MOVUPS 0(DX), X14" "movups (%rdx),%xmm14" main.go:94
+0x14007cce9 4 "MOVUPS" "MOVUPS X14, 0(CX)" "movups %xmm14,(%rcx)" main.go:94
+0x14007cced 5 "MOVUPS" "MOVUPS 0x10(DX), X14" "movups 0x10(%rdx),%xmm14" main.go:94
+0x14007ccf2 5 "MOVUPS" "MOVUPS X14, 0x10(CX)" "movups %xmm14,0x10(%rcx)" main.go:94
+0x14007ccf7 5 "MOVUPS" "MOVUPS 0x20(DX), X14" "movups 0x20(%rdx),%xmm14" main.go:94
+0x14007ccfc 5 "MOVUPS" "MOVUPS X14, 0x20(CX)" "movups %xmm14,0x20(%rcx)" main.go:94
+0x14007cd01 5 "MOVUPS" "MOVUPS 0x30(DX), X14" "movups 0x30(%rdx),%xmm14" main.go:94
+0x14007cd06 5 "MOVUPS" "MOVUPS X14, 0x30(CX)" "movups %xmm14,0x30(%rcx)" main.go:94
+0x14007cd0b 5 "MOVUPS" "MOVUPS 0x40(DX), X14" "movups 0x40(%rdx),%xmm14" main.go:94
+0x14007cd10 5 "MOVUPS" "MOVUPS X14, 0x40(CX)" "movups %xmm14,0x40(%rcx)" main.go:94
+0x14007cd15 5 "MOVUPS" "MOVUPS 0x50(DX), X14" "movups 0x50(%rdx),%xmm14" main.go:94
+0x14007cd1a 5 "MOVUPS" "MOVUPS X14, 0x50(CX)" "movups %xmm14,0x50(%rcx)" main.go:94
+0x14007cd1f 5 "MOVUPS" "MOVUPS 0x60(DX), X14" "movups 0x60(%rdx),%xmm14" main.go:94
+0x14007cd24 5 "MOVUPS" "MOVUPS X14, 0x60(CX)" "movups %xmm14,0x60(%rcx)" main.go:94
+0x14007cd29 5 "MOVUPS" "MOVUPS 0x70(DX), X14" "movups 0x70(%rdx),%xmm14" main.go:94
+0x14007cd2e 5 "MOVUPS" "MOVUPS X14, 0x70(CX)" "movups %xmm14,0x70(%rcx)" main.go:94
+0x14007cd33 8 "LEA" "LEAQ 0x250(SP), AX" "lea 0x250(%rsp),%rax" main.go:95
+0x14007cd3b 5 "MOV" "MOVL $0x4, BX" "mov $0x4,%ebx" main.go:95
+0x14007cd40 2 "MOV" "MOVL BX, CX" "mov %ebx,%ecx" main.go:95
+0x14007cd42 5 "CALL" "CALL main.normalize(SB)" "callq 0x14007cb00" main.go:95
+0x14007cd47 8 "LEA" "LEAQ 0x270(SP), AX" "lea 0x270(%rsp),%rax" main.go:97
+0x14007cd4f 5 "MOV" "MOVL $0x8, BX" "mov $0x8,%ebx" main.go:97
+0x14007cd54 2 "MOV" "MOVL BX, CX" "mov %ebx,%ecx" main.go:97
+0x14007cd56 5 "CALL" "CALL main.sumInts(SB)" "callq 0x14007c840" main.go:97
+0x14007cd5b 8 "MOV" "MOVQ AX, 0x230(SP)" "mov %rax,0x230(%rsp)" main.go:97
+0x14007cd63 8 "LEA" "LEAQ 0x250(SP), AX" "lea 0x250(%rsp),%rax" main.go:97
+0x14007cd6b 5 "MOV" "MOVL $0x4, BX" "mov $0x4,%ebx" main.go:97
+0x14007cd70 2 "MOV" "MOVL BX, CX" "mov %ebx,%ecx" main.go:97
+0x14007cd72 3 "MOV" "MOVQ AX, DI" "mov %rax,%rdi" main.go:97
+0x14007cd75 3 "MOV" "MOVQ CX, SI" "mov %rcx,%rsi" main.go:97
+0x14007cd78 3 "MOV" "MOVQ CX, R8" "mov %rcx,%r8" main.go:97
+0x14007cd7b 5 "NOP" "NOPL 0(AX)(AX*1)" "nopl (%rax,%rax)" main.go:97
+0x14007cd80 5 "CALL" "CALL main.dot(SB)" "callq 0x14007c860" main.go:97
+0x14007cd85 9 "MOVSD_XMM" "MOVSD_XMM X0, 0x228(SP)" "movsd %xmm0,0x228(%rsp)" main.go:97
+0x14007cd8e 8 "LEA" "LEAQ 0x238(SP), AX" "lea 0x238(%rsp),%rax" main.go:97
+0x14007cd96 5 "MOV" "MOVL $0x3, BX" "mov $0x3,%ebx" main.go:97
+0x14007cd9b 2 "MOV" "MOVL BX, CX" "mov %ebx,%ecx" main.go:97
+0x14007cd9d 3 "NOP" "NOPL 0(AX)" "nopl (%rax)" main.go:97
+0x14007cda0 5 "CALL" "CALL main.popcountAll(SB)" "callq 0x14007c8a0" main.go:97
+0x14007cda5 8 "MOV" "MOVQ AX, 0x220(SP)" "mov %rax,0x220(%rsp)" main.go:97
+0x14007cdad 5 "MOV" "MOVL $0x1b, AX" "mov $0x1b,%eax" main.go:97
+0x14007cdb2 5 "CALL" "CALL main.collatzSteps(SB)" "callq 0x14007c960" main.go:97
+0x14007cdb7 8 "MOV" "MOVQ AX, 0x218(SP)" "mov %rax,0x218(%rsp)" main.go:97
+0x14007cdbf 9 "MOVSD_XMM" "MOVSD_XMM 0xb8(SP), X0" "movsd 0xb8(%rsp),%xmm0" main.go:97
+0x14007cdc8 9 "MOVSD_XMM" "MOVSD_XMM X0, 0x210(SP)" "movsd %xmm0,0x210(%rsp)" main.go:97
+0x14007cdd1 5 "CALL" "CALL runtime.printlock(SB)" "callq 0x140042e80" main.go:97
+0x14007cdd6 8 "MOV" "MOVQ 0x230(SP), AX" "mov 0x230(%rsp),%rax" main.go:97
+0x14007cdde 2 "NOP" "NOPW" "data16 nop" main.go:97
+0x14007cde0 5 "CALL" "CALL runtime.printint(SB)" "callq 0x1400433c0" main.go:97
+0x14007cde5 5 "CALL" "CALL runtime.printsp(SB)" "callq 0x140043080" main.go:97
+0x14007cdea 9 "MOVSD_XMM" "MOVSD_XMM 0x228(SP), X0" "movsd 0x228(%rsp),%xmm0" main.go:97
+0x14007cdf3 5 "CALL" "CALL runtime.printfloat64(SB)" "callq 0x140043160" main.go:97
+0x14007cdf8 5 "CALL" "CALL runtime.printsp(SB)" "callq 0x140043080" main.go:97
+0x14007cdfd 8 "MOV" "MOVQ 0x220(SP), AX" "mov 0x220(%rsp),%rax" main.go:97
+0x14007ce05 5 "CALL" "CALL runtime.printint(SB)" "callq 0x1400433c0" main.go:97
+0x14007ce0a 5 "CALL" "CALL runtime.printsp(SB)" "callq 0x140043080" main.go:97
+0x14007ce0f 8 "MOV" "MOVQ 0x218(SP), AX" "mov 0x218(%rsp),%rax" main.go:97
+0x14007ce17 5 "CALL" "CALL runtime.printint(SB)" "callq 0x1400433c0" main.go:97
+0x14007ce1c 4 "NOP" "NOPL 0(AX)" "nopl (%rax)" main.go:97
+0x14007ce20 5 "CALL" "CALL runtime.printsp(SB)" "callq 0x140043080" main.go:97
+0x14007ce25 9 "MOVSD_XMM" "MOVSD_XMM 0x210(SP), X0" "movsd 0x210(%rsp),%xmm0" main.go:97
+0x14007ce2e 5 "CALL" "CALL runtime.printfloat64(SB)" "callq 0x140043160" main.go:97
+0x14007ce33 5 "CALL" "CALL runtime.printnl(SB)" "callq 0x1400430c0" main.go:97
+0x14007ce38 5 "CALL" "CALL runtime.printunlock(SB)" "callq 0x140042ee0" main.go:97
+0x14007ce3d 7 "ADD" "ADDQ $0x2b0, SP" "add $0x2b0,%rsp" main.go:98
+0x14007ce44 1 "POP" "POPQ BP" "pop %rbp" main.go:98
+0x14007ce45 1 "RET" "RET" "retq" main.go:98
+0x14007ce46 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x140075ce0" main.go:84
+0x14007ce4b 5 "JMP" "JMP main.main(SB)" "jmpq 0x14007cb60" main.go:84
+0x14007ce50 1 "INT" "INT $0x3" "int3" .:-1
+0x14007ce51 1 "INT" "INT $0x3" "int3" .:-1
+0x14007ce52 1 "INT" "INT $0x3" "int3" .:-1
+0x14007ce53 1 "INT" "INT $0x3" "int3" .:-1
+0x14007ce54 1 "INT" "INT $0x3" "int3" .:-1
+0x14007ce55 1 "INT" "INT $0x3" "int3" .:-1
+0x14007ce56 1 "INT" "INT $0x3" "int3" .:-1
+0x14007ce57 1 "INT" "INT $0x3" "int3" .:-1
+0x14007ce58 1 "INT" "INT $0x3" "int3" .:-1
+0x14007ce59 1 "INT" "INT $0x3" "int3" .:-1
+0x14007ce5a 1 "INT" "INT $0x3" "int3" .:-1
+0x14007ce5b 1 "INT" "INT $0x3" "int3" .:-1
+0x14007ce5c 1 "INT" "INT $0x3" "int3" .:-1
+0x14007ce5d 1 "INT" "INT $0x3" "int3" .:-1
+0x14007ce5e 1 "INT" "INT $0x3" "int3" .:-1
+0x14007ce5f 1 "INT" "INT $0x3" "int3" .:-1

@@ -59,7 +59,7 @@ type wasmModule struct {
 	debug     map[string][]byte
 	codeStart uint64 // offset of the code section payload in data
 	bodies    []codeRange
-	lines     *Lines
+	lines     *lines
 	linesOnce sync.Once
 }
 
@@ -275,7 +275,7 @@ func (m *wasmModule) lookup(index uint64) (string, uint64) {
 // or when the addresses do not line up with the functions: wasm-opt
 // and friends rewrite code without updating DWARF, and lines from a
 // stale table would be confidently wrong.
-func (m *wasmModule) lineTable() *Lines {
+func (m *wasmModule) lineTable() *lines {
 	m.linesOnce.Do(func() {
 		if m.debug[".debug_line"] == nil || m.debug[".debug_info"] == nil {
 			return

@@ -9,12 +9,12 @@ import (
 	"sync"
 )
 
-// Lines maps addresses to source positions, as DWARF records them for
+// lines maps addresses to source positions, as DWARF records them for
 // code the Go compiler didn't produce. Opening indexes only the address
 // ranges of each compilation unit; a unit's line program and subprogram
 // list are parsed the first time an address inside it is looked up, so
 // a large binary costs what its queries touch, not its debug info.
-type Lines struct {
+type lines struct {
 	data  *dwarf.Data
 	shift int64
 	// units is sorted by lo; a unit with several ranges appears once
@@ -47,12 +47,12 @@ type lineRow struct {
 	line int
 }
 
-// LinesFromDWARF indexes the compilation units. shift is added to each
+// linesFromDWARF indexes the compilation units. shift is added to each
 // address, for formats whose DWARF addresses are relative to something
 // other than the addresses used elsewhere — wasm counts from the start
 // of the code section. nil when there are no units.
-func LinesFromDWARF(data *dwarf.Data, shift int64) *Lines {
-	lines := &Lines{data: data, shift: shift, cache: map[dwarf.Offset]*unitLines{}}
+func LinesFromDWARF(data *dwarf.Data, shift int64) *lines {
+	lines := &lines{data: data, shift: shift, cache: map[dwarf.Offset]*unitLines{}}
 	reader := data.Reader()
 	for {
 		entry, err := reader.Next()
@@ -82,7 +82,7 @@ func LinesFromDWARF(data *dwarf.Data, shift int64) *Lines {
 }
 
 // unit parses the compilation unit at off, once.
-func (lines *Lines) unit(off dwarf.Offset) *unitLines {
+func (lines *lines) unit(off dwarf.Offset) *unitLines {
 	lines.mu.Lock()
 	defer lines.mu.Unlock()
 	if u, ok := lines.cache[off]; ok {
@@ -93,7 +93,7 @@ func (lines *Lines) unit(off dwarf.Offset) *unitLines {
 	return u
 }
 
-func (lines *Lines) parseUnit(off dwarf.Offset) *unitLines {
+func (lines *lines) parseUnit(off dwarf.Offset) *unitLines {
 	u := &unitLines{declared: map[uint64]string{}}
 	reader := lines.data.Reader()
 	reader.Seek(off)
@@ -154,7 +154,7 @@ func (lines *Lines) parseUnit(off dwarf.Offset) *unitLines {
 
 // lookup finds the unit covering addr and calls f with it; the first
 // unit for which f returns true wins. Unbounded units are tried last.
-func (lines *Lines) lookup(addr uint64, f func(*unitLines) bool) {
+func (lines *lines) lookup(addr uint64, f func(*unitLines) bool) {
 	// i is the first range starting after addr; ranges may nest across
 	// units, so walk back through those starting at or before it.
 	i, _ := slices.BinarySearchFunc(lines.units, addr, func(r unitRange, a uint64) int {
@@ -178,7 +178,7 @@ func (lines *Lines) lookup(addr uint64, f func(*unitLines) bool) {
 
 // DeclFile returns the file a function starting at addr was written in;
 // empty when the debug info doesn't say.
-func (lines *Lines) DeclFile(addr uint64) (file string) {
+func (lines *lines) DeclFile(addr uint64) (file string) {
 	if lines == nil {
 		return ""
 	}
@@ -191,7 +191,7 @@ func (lines *Lines) DeclFile(addr uint64) (file string) {
 
 // At returns the source position covering addr; zero values when no row
 // covers it.
-func (lines *Lines) At(addr uint64) (file string, line int) {
+func (lines *lines) At(addr uint64) (file string, line int) {
 	if lines == nil {
 		return "", 0
 	}

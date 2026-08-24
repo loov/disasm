@@ -57,7 +57,7 @@ type Binary struct {
 	// pclntab — binaries from clang, gcc and anything else that isn't
 	// Go — so a Go binary never pays for the DWARF it also carries.
 	dwarf     func() (*dwarf.Data, error)
-	lines     *Lines
+	lines     *lines
 	linesOnce sync.Once
 	// arm32 is the ARM mapping-symbol map: where ARM, Thumb and data
 	// regions begin within the text of a 32-bit ARM ELF. Empty for
@@ -161,7 +161,7 @@ func (b *Binary) FuncFile(addr uint64) string {
 }
 
 // lineTable indexes the DWARF on first use; nil when there is none.
-func (b *Binary) lineTable() *Lines {
+func (b *Binary) lineTable() *lines {
 	b.linesOnce.Do(func() {
 		if b.dwarf == nil {
 			return
@@ -248,7 +248,7 @@ type sym struct {
 }
 
 // Open maps the binary at path and parses it, detecting ELF, Mach-O,
-// PE, wasm and Go compile archives from the magic bytes.
+// PE, WebAssembly and Go compile archives from the magic bytes.
 func Open(path string) (*Binary, error) {
 	data, closeMapping, err := mmapFile(path)
 	if err != nil {
@@ -283,6 +283,8 @@ func parse(data []byte) (*Binary, error) {
 		bin, err = openPE(r, data)
 	case magic == "\x00asm":
 		bin, err = openWasm(data)
+	case bytes.HasPrefix(data, []byte("!<arch>\n")):
+		bin, err = openGoArchive(data)
 	default:
 		err = fmt.Errorf("unsupported binary format")
 	}

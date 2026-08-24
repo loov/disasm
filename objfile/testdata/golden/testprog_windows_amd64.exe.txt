@@ -1,4 +1,4 @@
-arch=amd64 funcs=1493 sha256=4be92a309ba47e52eb8d46e36d4044b745f22e3c3c2793ca8ff104f749e8e534
+arch=amd64 funcs=1493 sha256=e27dc75a7be551825fdbccf19d7c8fae7b76e08933836201427b261ed2c4d1d9
 == runtime.runGCProg 0x14001cd20 960 /usr/local/go/src/runtime/mbitmap.go
 0x14001cd20 1 "PUSH" "PUSHQ BP" "push %rbp" mbitmap.go:1565
 0x14001cd21 3 "MOV" "MOVQ SP, BP" "mov %rsp,%rbp" mbitmap.go:1565

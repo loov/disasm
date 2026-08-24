@@ -2,7 +2,6 @@ package objfile
 
 import (
 	"cmp"
-	"debug/elf"
 	"slices"
 )
 
@@ -17,49 +16,54 @@ type armRegions struct {
 	regions []armRegion // sorted by addr
 }
 
-// armRegionsFromMapping collects the mapping symbols inside the text
-// section; nil when there are none.
-func armRegionsFromMapping(syms []elf.Symbol, textStart, textEnd uint64) *armRegions {
-	var r armRegions
-	for _, s := range syms {
-		if len(s.Name) < 2 || s.Name[0] != '$' || s.Value < textStart || s.Value >= textEnd {
-			continue
-		}
-		switch s.Name[1] {
-		case 'a', 't', 'd':
-			if len(s.Name) == 2 || s.Name[2] == '.' {
-				r.regions = append(r.regions, armRegion{addr: s.Value, kind: s.Name[1]})
-			}
-		}
-	}
-	if len(r.regions) == 0 {
-		return nil
-	}
-	slices.SortStableFunc(r.regions, func(x, y armRegion) int { return cmp.Compare(x.addr, y.addr) })
-	return &r
+// armRegionsBuilder collects the two sources of regions while the
+// symbol table is walked: mapping symbols, and failing those, the Thumb
+// bit of function symbols.
+type armRegionsBuilder struct {
+	mapping []armRegion
+	funcs   []armRegion
+	thumb   bool
 }
 
-// armRegionsFromFuncs derives regions from the Thumb bit of function
-// symbols, for binaries without mapping symbols; nil when every function
-// is ARM.
-func armRegionsFromFuncs(syms []elf.Symbol) *armRegions {
-	var r armRegions
-	thumb := false
-	for _, s := range syms {
-		if elf.ST_TYPE(s.Info) != elf.STT_FUNC || s.Value == 0 {
-			continue
-		}
-		kind := byte('a')
-		if s.Value&1 != 0 {
-			kind, thumb = 't', true
-		}
-		r.regions = append(r.regions, armRegion{addr: s.Value &^ 1, kind: kind})
+// addMapping records a mapping symbol inside the text section.
+func (b *armRegionsBuilder) addMapping(name string, addr, textStart, textEnd uint64) {
+	if len(name) < 2 || name[0] != '$' || addr < textStart || addr >= textEnd {
+		return
 	}
-	if !thumb {
-		return nil
+	switch name[1] {
+	case 'a', 't', 'd':
+		if len(name) == 2 || name[2] == '.' {
+			b.mapping = append(b.mapping, armRegion{addr: addr, kind: name[1]})
+		}
 	}
-	slices.SortStableFunc(r.regions, func(x, y armRegion) int { return cmp.Compare(x.addr, y.addr) })
-	return &r
+}
+
+// addFunc records a function symbol's raw value, whose low bit marks a
+// Thumb function.
+func (b *armRegionsBuilder) addFunc(value uint64) {
+	if value == 0 {
+		return
+	}
+	kind := byte('a')
+	if value&1 != 0 {
+		kind, b.thumb = 't', true
+	}
+	b.funcs = append(b.funcs, armRegion{addr: value &^ 1, kind: kind})
+}
+
+// regions returns the mapping-symbol regions, or the function-derived
+// ones when there are no mapping symbols; nil when every function is
+// ARM.
+func (b *armRegionsBuilder) regions() *armRegions {
+	regions := b.mapping
+	if len(regions) == 0 {
+		if !b.thumb {
+			return nil
+		}
+		regions = b.funcs
+	}
+	slices.SortStableFunc(regions, func(x, y armRegion) int { return cmp.Compare(x.addr, y.addr) })
+	return &armRegions{regions: regions}
 }
 
 // at returns the kind of the region containing addr and where the next

@@ -1,4 +1,4 @@
-arch=arm64 funcs=1570 sha256=0e16dbf52d23fe0fcd125d67dd59310449645101cc98de675e8b0f1804272637
+arch=arm64 funcs=1570 sha256=ee9627988993daa5492980015b59be3c3da18b69603a7c658adda4f4ac50ec99
 == runtime.runGCProg 0x100019de0 1008 /usr/local/go/src/runtime/mbitmap.go
 0x100019de0 4 "LDR" "MOVD 16(R28), R16" "ldr x16, [x28,#16]" mbitmap.go:1565
 0x100019de4 4 "CMP" "CMP R16, RSP" "cmp sp, x16" mbitmap.go:1565

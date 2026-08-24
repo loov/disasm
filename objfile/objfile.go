@@ -1,9 +1,11 @@
 // Package objfile loads executables into a format-independent
 // representation: the architecture, the functions with their machine
-// code, a symbol lookup, and the Go pclntab for PC to line mapping.
+// code, symbol lookups, source positions from the Go pclntab or DWARF,
+// and a disassembler for the code.
 //
-// It is a trimmed port of github.com/loov/ixdiff/internal/objfile and
-// replaces vendored cmd/internal packages: only stdlib debug/* is used.
+// A binary is memory-mapped, and Open reads only its headers and symbol
+// tables; line tables are parsed per compilation unit on first use.
+// All methods are safe for concurrent use after Open.
 package objfile
 
 import (
@@ -16,20 +18,27 @@ import (
 	"debug/pe"
 	"encoding/binary"
 	"fmt"
-	"os"
 	"path/filepath"
 	"slices"
 	"strings"
 	"sync"
+	"unsafe"
 
 	"github.com/ianlancetaylor/demangle"
 )
 
-// Binary is a loaded executable.
+// Binary is a loaded executable, backed by a read-only memory mapping
+// of the file. Close releases the mapping; Func.Code slices become
+// invalid afterwards.
 type Binary struct {
 	Arch string // GOARCH name, e.g. "amd64"
-	// Funcs are the functions inside the text section, sorted by address.
-	Funcs []*Func
+	// Funcs are the functions inside the text section, sorted by
+	// address, then name.
+	Funcs []Func
+	// NoLayout reports that function addresses are deterministic
+	// pseudo-addresses (file offsets in a Go compile archive) rather
+	// than a memory layout: gaps between functions are not padding.
+	NoLayout bool
 
 	text     []byte
 	textAddr uint64
@@ -37,7 +46,11 @@ type Binary struct {
 	byteOrder binary.ByteOrder
 	// syms are all symbols sorted by address, used to resolve addresses to names.
 	syms []sym
-	pcln *gosym.Table
+	// ranges are the [start, end) virtual address ranges of the
+	// binary's loadable sections, used to recognize address-valued
+	// immediates.
+	ranges [][2]uint64
+	pcln   *gosym.Table
 	// lines is the DWARF line table, used when there is no pclntab:
 	// binaries from clang, gcc and anything else that isn't Go.
 	lines *Lines
@@ -50,6 +63,11 @@ type Binary struct {
 	// every function. Computed on first use.
 	xtensaLiterals     map[uint64]bool
 	xtensaLiteralsOnce sync.Once
+
+	byName     map[string]int
+	byNameOnce sync.Once
+
+	closeMapping func() error
 }
 
 // Func is a single function inside a binary.
@@ -62,13 +80,41 @@ type Func struct {
 }
 
 // Code returns the machine code of the function, or nil when it lies
-// outside the text section.
+// outside the text section. The slice aliases the file mapping and must
+// not be modified.
 func (f *Func) Code() []byte {
+	if f.Addr < f.bin.textAddr {
+		return nil
+	}
 	return sectionSlice(f.bin.text, f.Addr-f.bin.textAddr, f.Size)
 }
 
-// PCToLine maps a pc to its source location using the Go pclntab;
-// zero values when unknown.
+// Close releases the file mapping.
+func (b *Binary) Close() error {
+	if b.closeMapping == nil {
+		return nil
+	}
+	err := b.closeMapping()
+	b.closeMapping = nil
+	return err
+}
+
+// Func returns the function called name, or nil.
+func (b *Binary) Func(name string) *Func {
+	b.byNameOnce.Do(func() {
+		b.byName = make(map[string]int, len(b.Funcs))
+		for i, fn := range b.Funcs {
+			b.byName[fn.Name] = i
+		}
+	})
+	if i, ok := b.byName[name]; ok {
+		return &b.Funcs[i]
+	}
+	return nil
+}
+
+// PCToLine maps a pc to its source location using the Go pclntab, or
+// DWARF when there is none; zero values when unknown.
 func (b *Binary) PCToLine(pc uint64) (file string, line int) {
 	if b.pcln == nil {
 		return b.lines.At(pc)
@@ -83,43 +129,101 @@ func (b *Binary) FuncFile(addr uint64) string {
 	return b.lines.DeclFile(addr)
 }
 
-// Lookup resolves addr to the name and base of the symbol containing it,
-// matching the contract of the x/arch GoSyntax symname functions.
-func (b *Binary) Lookup(addr uint64) (name string, base uint64) {
-	// i is the first symbol at or after addr; unless addr hits a symbol
-	// start exactly, the containing one is the symbol before it.
-	i, found := slices.BinarySearchFunc(b.syms, addr, func(s sym, a uint64) int {
-		return cmp.Compare(s.addr, a)
-	})
-	if !found {
-		i--
-	}
-	if i >= 0 {
-		if s := b.syms[i]; addr < s.addr+s.size {
-			return s.name, s.addr
+// Contains reports whether addr falls inside any loadable section of
+// the binary.
+func (b *Binary) Contains(addr uint64) bool {
+	for _, r := range b.ranges {
+		if r[0] <= addr && addr < r[1] {
+			return true
 		}
+	}
+	return false
+}
+
+// Lookup resolves addr to the name and base of the symbol containing
+// it, text or data, matching the contract of the x/arch GoSyntax symname
+// functions.
+func (b *Binary) Lookup(addr uint64) (name string, base uint64) {
+	if s, ok := b.symAt(addr, symAny); ok {
+		return s.name, s.addr
 	}
 	return "", 0
 }
+
+// DataSym resolves addr to the name, base address, and size of the data
+// symbol containing it, or zero values when unknown.
+func (b *Binary) DataSym(addr uint64) (name string, base, size uint64) {
+	if s, ok := b.symAt(addr, symData); ok {
+		return s.name, s.addr, s.size
+	}
+	return "", 0, 0
+}
+
+// symAt finds the symbol of the given kind containing addr: the last
+// symbol at or before addr, skipping over other kinds so a data symbol
+// between two functions does not hide the function before it.
+func (b *Binary) symAt(addr uint64, kind symKind) (sym, bool) {
+	i, _ := slices.BinarySearchFunc(b.syms, addr, func(s sym, a uint64) int {
+		if s.addr > a {
+			return 1
+		}
+		return -1
+	})
+	for i--; i >= 0; i-- {
+		s := b.syms[i]
+		if kind != symAny && s.kind != kind {
+			continue
+		}
+		if addr < s.addr+s.size {
+			return s, true
+		}
+		return sym{}, false
+	}
+	return sym{}, false
+}
+
+type symKind uint8
+
+const (
+	symText symKind = iota
+	symData
+	symAny
+)
 
 type sym struct {
 	name string
 	addr uint64
 	size uint64 // zero when the format does not record sizes (Mach-O, PE)
+	kind symKind
 }
 
-// Open reads and parses the binary at path, detecting ELF, Mach-O and PE
-// from the magic bytes.
+// Open maps the binary at path and parses it, detecting ELF, Mach-O,
+// PE, wasm and Go compile archives from the magic bytes.
 func Open(path string) (*Binary, error) {
-	data, err := os.ReadFile(path)
+	data, closeMapping, err := mmapFile(path)
 	if err != nil {
 		return nil, err
 	}
+	bin, err := parse(data)
+	if err != nil {
+		_ = closeMapping()
+		return nil, fmt.Errorf("%q: %w", path, err)
+	}
+	bin.closeMapping = closeMapping
+	if bin.pcln == nil && bin.lines == nil {
+		bin.loadCompanionDWARF(path)
+	}
+	return bin, nil
+}
+
+// parse dispatches on the magic bytes of a mapped binary.
+func parse(data []byte) (*Binary, error) {
 	if len(data) < 4 {
-		return nil, fmt.Errorf("%q: too short to be a binary", path)
+		return nil, fmt.Errorf("too short to be a binary")
 	}
 	r := bytes.NewReader(data)
 	var bin *Binary
+	var err error
 	switch magic := string(data[:4]); {
 	case magic == elf.ELFMAG:
 		bin, err = openELF(r, data)
@@ -131,10 +235,7 @@ func Open(path string) (*Binary, error) {
 		err = fmt.Errorf("unsupported binary format")
 	}
 	if err != nil {
-		return nil, fmt.Errorf("%q: %w", path, err)
-	}
-	if bin.pcln == nil && bin.lines == nil {
-		bin.loadCompanionDWARF(path)
+		return nil, err
 	}
 	bin.finish()
 	return bin, nil
@@ -163,18 +264,39 @@ func sectionSlice(data []byte, off, size uint64) []byte {
 	return data[off : off+size]
 }
 
-// sectionMarkers are linker boundary symbols; they are not functions and
-// would shadow the first real symbol in Lookup.
+// sectionMarkers are linker boundary symbols; they are not functions or
+// variables and would shadow the real symbol at the same address.
 var sectionMarkers = map[string]bool{
 	"runtime.text": true, "text": true, "_text": true,
 	"runtime.etext": true, "etext": true, "_etext": true,
+	"runtime.rodata": true, "runtime.erodata": true,
+	"runtime.types": true, "runtime.etypes": true,
+	"runtime.data": true, "runtime.edata": true, "_data": true, "_edata": true,
+	"runtime.bss": true, "runtime.ebss": true, "_bss": true, "_ebss": true,
+	"runtime.noptrdata": true, "runtime.enoptrdata": true,
+	"runtime.noptrbss": true, "runtime.enoptrbss": true,
+	"runtime.end": true, "_end": true, "end": true,
 }
 
-func (b *Binary) addSym(name string, addr, size uint64) {
+func (b *Binary) addSym(name string, addr, size uint64, kind symKind) {
 	if sectionMarkers[name] || addr == 0 {
 		return
 	}
-	b.syms = append(b.syms, sym{name: Demangle(name), addr: addr, size: size})
+	b.syms = append(b.syms, sym{name: Demangle(name), addr: addr, size: size, kind: kind})
+}
+
+// addRange records a loadable section's virtual address range. An end
+// that would wrap past 2^64 is clamped to the top of the address space
+// so Contains stays correct for corrupt section headers.
+func (b *Binary) addRange(addr, size uint64) {
+	if size == 0 {
+		return
+	}
+	end := addr + size
+	if end < addr {
+		end = ^uint64(0)
+	}
+	b.ranges = append(b.ranges, [2]uint64{addr, end})
 }
 
 // Demangle turns a C++ or Rust symbol into the name it had in the
@@ -298,13 +420,14 @@ func scaleWasmEntries(tab []byte) bool {
 func (b *Binary) finish() {
 	if b.pcln != nil {
 		for _, fn := range b.pcln.Funcs {
-			b.addSym(fn.Name, fn.Entry, fn.End-fn.Entry)
+			b.addSym(fn.Name, fn.Entry, fn.End-fn.Entry, symText)
 		}
 	}
-	// Sort sized symbols last at equal addresses, so Lookup's "last
-	// symbol at or before addr" prefers the one with a real extent.
-	slices.SortStableFunc(b.syms, func(x, y sym) int {
-		return cmp.Or(cmp.Compare(x.addr, y.addr), cmp.Compare(x.size, y.size))
+	// The last symbol at or before an address wins a lookup; ties are
+	// broken by name so aliases (f and f.abi0) resolve the same way in
+	// every binary.
+	slices.SortFunc(b.syms, func(x, y sym) int {
+		return cmp.Or(cmp.Compare(x.addr, y.addr), cmp.Compare(x.name, y.name))
 	})
 	textEnd := b.textAddr + uint64(len(b.text))
 	for i := range b.syms {
@@ -313,13 +436,27 @@ func (b *Binary) finish() {
 			continue
 		}
 		for _, next := range b.syms[i+1:] {
-			if next.addr != s.addr {
+			if next.addr != s.addr && next.kind == s.kind {
 				s.size = next.addr - s.addr
 				break
 			}
 		}
-		if s.size == 0 && s.addr < textEnd {
-			s.size = textEnd - s.addr
+		if s.size == 0 {
+			// Last of its kind: bound it by its section instead of
+			// infinity, so unrelated high addresses don't resolve to it.
+			end := textEnd
+			if s.kind == symData {
+				end = 0
+				for _, r := range b.ranges {
+					if r[0] <= s.addr && s.addr < r[1] {
+						end = r[1]
+						break
+					}
+				}
+			}
+			if s.addr < end {
+				s.size = end - s.addr
+			}
 		}
 	}
 
@@ -329,7 +466,7 @@ func (b *Binary) finish() {
 			return
 		}
 		seen[name] = true
-		b.Funcs = append(b.Funcs, &Func{Name: name, Addr: addr, Size: size, bin: b})
+		b.Funcs = append(b.Funcs, Func{Name: name, Addr: addr, Size: size, bin: b})
 	}
 	if b.pcln != nil {
 		for _, fn := range b.pcln.Funcs {
@@ -337,9 +474,15 @@ func (b *Binary) finish() {
 		}
 	}
 	for _, s := range b.syms {
-		add(s.name, s.addr, s.size)
+		if s.kind == symText {
+			add(s.name, s.addr, s.size)
+		}
 	}
-	slices.SortFunc(b.Funcs, func(x, y *Func) int { return cmp.Compare(x.Addr, y.Addr) })
+	// Ties broken by name so aliased symbols (e.g. f and f.abi0 at the
+	// same address) come out in the same order in every binary.
+	slices.SortFunc(b.Funcs, func(x, y Func) int {
+		return cmp.Or(cmp.Compare(x.Addr, y.Addr), cmp.Compare(x.Name, y.Name))
+	})
 }
 
 // loadDWARF reads the line table a non-Go compiler left in the binary.
@@ -384,6 +527,115 @@ func findPclntab(data []byte) []byte {
 		}
 	}
 	return nil
+}
+
+// elfSym is one symbol table entry, read in place.
+type elfSym struct {
+	name  string // aliases the string table
+	value uint64
+	size  uint64
+	info  uint8
+	shndx elf.SectionIndex
+}
+
+// elfSymbols walks the symbol table without copying it: entries are
+// decoded from the mapping and names are views into .strtab. f returns
+// false to stop.
+func elfSymbols(ef *elf.File, data []byte, f func(elfSym) bool) error {
+	symtab := ef.SectionByType(elf.SHT_SYMTAB)
+	if symtab == nil {
+		return nil
+	}
+	if int(symtab.Link) >= len(ef.Sections) {
+		return fmt.Errorf("bad symtab link")
+	}
+	strtab := ef.Sections[symtab.Link]
+	if symtab.Flags&elf.SHF_COMPRESSED != 0 || strtab.Flags&elf.SHF_COMPRESSED != 0 {
+		return fmt.Errorf("compressed symbol table")
+	}
+	entries := sectionSlice(data, symtab.Offset, symtab.FileSize)
+	strs := sectionSlice(data, strtab.Offset, strtab.FileSize)
+	if entries == nil || strs == nil {
+		return fmt.Errorf("unreadable symbol table")
+	}
+	name := func(off uint32) string {
+		if off >= uint32(len(strs)) {
+			return ""
+		}
+		end := bytes.IndexByte(strs[off:], 0)
+		if end < 0 {
+			end = len(strs) - int(off)
+		}
+		return unsafe.String(&strs[off], end)
+	}
+	ord := ef.ByteOrder
+	entrySize := 16
+	if ef.Class == elf.ELFCLASS64 {
+		entrySize = 24
+	}
+	// The first entry is the reserved null symbol.
+	for off := entrySize; off+entrySize <= len(entries); off += entrySize {
+		e := entries[off:]
+		var s elfSym
+		if ef.Class == elf.ELFCLASS64 {
+			s = elfSym{
+				name:  name(ord.Uint32(e)),
+				info:  e[4],
+				shndx: elf.SectionIndex(ord.Uint16(e[6:])),
+				value: ord.Uint64(e[8:]),
+				size:  ord.Uint64(e[16:]),
+			}
+		} else {
+			s = elfSym{
+				name:  name(ord.Uint32(e)),
+				value: uint64(ord.Uint32(e[4:])),
+				size:  uint64(ord.Uint32(e[8:])),
+				info:  e[12],
+				shndx: elf.SectionIndex(ord.Uint16(e[14:])),
+			}
+		}
+		if !f(s) {
+			return nil
+		}
+	}
+	return nil
+}
+
+// elfSection returns a section's file-backed contents as a slice into
+// the mapping, or nil when it is absent, compressed, or out of range.
+func elfSection(ef *elf.File, data []byte, name string) []byte {
+	sec := ef.Section(name)
+	if sec == nil || sec.Type == elf.SHT_NOBITS || sec.Flags&elf.SHF_COMPRESSED != 0 {
+		return nil
+	}
+	return sectionSlice(data, sec.Offset, sec.FileSize)
+}
+
+// elfDWARF builds the DWARF reader over the mapping without copying the
+// debug sections. Compressed sections (SHF_COMPRESSED or .zdebug_*) fall
+// back to debug/elf, which decompresses into memory.
+func elfDWARF(ef *elf.File, data []byte) (*dwarf.Data, error) {
+	for _, sec := range ef.Sections {
+		if strings.HasPrefix(sec.Name, ".zdebug_") || (strings.HasPrefix(sec.Name, ".debug_") && sec.Flags&elf.SHF_COMPRESSED != 0) {
+			return ef.DWARF()
+		}
+	}
+	get := func(name string) []byte { return elfSection(ef, data, ".debug_"+name) }
+	if get("info") == nil {
+		return nil, fmt.Errorf("no DWARF")
+	}
+	d, err := dwarf.New(get("abbrev"), get("aranges"), get("frame"), get("info"), get("line"), get("pubnames"), get("ranges"), get("str"))
+	if err != nil {
+		return nil, err
+	}
+	for _, name := range []string{"addr", "line_str", "str_offsets", "rnglists", "loclists"} {
+		if s := get(name); s != nil {
+			if err := d.AddSection(".debug_"+name, s); err != nil {
+				return nil, err
+			}
+		}
+	}
+	return d, nil
 }
 
 func openELF(r *bytes.Reader, data []byte) (*Binary, error) {
@@ -432,48 +684,57 @@ func openELF(r *bytes.Reader, data []byte) (*Binary, error) {
 	if text == nil {
 		return nil, fmt.Errorf("no .text section")
 	}
-	bin.text = sectionSlice(data, text.Offset, text.FileSize)
-	if bin.text == nil || text.Flags&elf.SHF_COMPRESSED != 0 {
+	bin.text = elfSection(ef, data, ".text")
+	if bin.text == nil {
 		return nil, fmt.Errorf("unreadable .text section")
 	}
 	bin.textAddr = text.Addr
-
-	syms, err := ef.Symbols()
-	if err != nil && err != elf.ErrNoSymbols {
-		return nil, fmt.Errorf("reading symbols: %w", err)
+	for _, sec := range ef.Sections {
+		if sec.Flags&elf.SHF_ALLOC != 0 {
+			bin.addRange(sec.Addr, sec.Size)
+		}
 	}
-	for _, s := range syms {
-		switch elf.ST_TYPE(s.Info) {
-		case elf.STT_FUNC, elf.STT_OBJECT:
-			addr := s.Value
+
+	var arm32 armRegionsBuilder
+	err = elfSymbols(ef, data, func(s elfSym) bool {
+		switch elf.ST_TYPE(s.info) {
+		case elf.STT_FUNC:
+			addr := s.value
 			if bin.Arch == "arm" {
 				// A Thumb function's symbol value has bit 0 set to mark
 				// the instruction set; the code itself is at the even
 				// address.
 				addr &^= 1
+				arm32.addFunc(s.value)
 			}
-			bin.addSym(s.Name, addr, s.Size)
+			bin.addSym(s.name, addr, s.size, symText)
+		case elf.STT_OBJECT:
+			bin.addSym(s.name, s.value, s.size, symData)
+		case elf.STT_NOTYPE:
+			if bin.Arch == "arm" {
+				arm32.addMapping(s.name, s.value, bin.textAddr, bin.textAddr+uint64(len(bin.text)))
+			}
 		}
+		return true
+	})
+	if err != nil {
+		return nil, fmt.Errorf("reading symbols: %w", err)
 	}
 	if bin.Arch == "arm" {
-		bin.arm32 = armRegionsFromMapping(syms, bin.textAddr, bin.textAddr+uint64(len(bin.text)))
-		if bin.arm32 == nil {
-			// No mapping symbols: each function symbol's low bit says
-			// which instruction set it is in (odd = Thumb).
-			bin.arm32 = armRegionsFromFuncs(syms)
-		}
+		bin.arm32 = arm32.regions()
 	}
 
-	bin.loadDWARF(ef.DWARF)
-	if sec := ef.Section(".gopclntab"); sec != nil {
-		if tab, err := sec.Data(); err == nil {
-			bin.loadPclntab(tab)
-		}
-	} else {
+	bin.loadDWARF(func() (*dwarf.Data, error) { return elfDWARF(ef, data) })
+	if tab := elfSection(ef, data, ".gopclntab"); tab != nil {
+		bin.loadPclntab(tab)
+	} else if ef.Section(".gopclntab") == nil {
+		// The system linker (cgo, external linking) emits no dedicated
+		// section; the pclntab lands inside another data section,
+		// commonly .data.rel.ro. Scan them all.
 		for _, sec := range ef.Sections {
 			if sec.Type == elf.SHT_PROGBITS && sec.Flags&elf.SHF_ALLOC != 0 && sec.Flags&elf.SHF_EXECINSTR == 0 {
-				if d, err := sec.Data(); err == nil && findPclntab(d) != nil {
-					bin.loadPclntab(findPclntab(d))
+				if tab := findPclntab(elfSection(ef, data, sec.Name)); tab != nil {
+					bin.loadPclntab(tab)
 					break
 				}
 			}
@@ -506,6 +767,11 @@ func openMachO(r *bytes.Reader, data []byte) (*Binary, error) {
 		return nil, fmt.Errorf("unreadable __text section")
 	}
 	bin.textAddr = text.Addr
+	for _, seg := range mf.Loads {
+		if seg, ok := seg.(*macho.Segment); ok && seg.Name != "__PAGEZERO" {
+			bin.addRange(seg.Addr, seg.Memsz)
+		}
+	}
 
 	if mf.Symtab != nil {
 		for _, s := range mf.Symtab.Syms {
@@ -514,11 +780,15 @@ func openMachO(r *bytes.Reader, data []byte) (*Binary, error) {
 			if s.Type&0xe0 != 0 {
 				continue
 			}
-			bin.addSym(strings.TrimPrefix(s.Name, "_"), s.Value, 0)
+			kind := symData
+			if s.Value >= bin.textAddr && s.Value < bin.textAddr+uint64(len(bin.text)) {
+				kind = symText
+			}
+			bin.addSym(strings.TrimPrefix(s.Name, "_"), s.Value, 0, kind)
 		}
 	}
 	if sec := mf.Section("__gopclntab"); sec != nil {
-		if tab, err := sec.Data(); err == nil {
+		if tab := sectionSlice(data, uint64(sec.Offset), sec.Size); tab != nil {
 			bin.loadPclntab(tab)
 		}
 	}
@@ -563,6 +833,9 @@ func openPE(r *bytes.Reader, data []byte) (*Binary, error) {
 		return nil, fmt.Errorf("unreadable .text section")
 	}
 	bin.textAddr = imageBase + uint64(text.VirtualAddress)
+	for _, sec := range pf.Sections {
+		bin.addRange(imageBase+uint64(sec.VirtualAddress), uint64(sec.VirtualSize))
+	}
 
 	// COFF symbol values are offsets within their 1-based section.
 	for _, s := range pf.Symbols {
@@ -570,15 +843,20 @@ func openPE(r *bytes.Reader, data []byte) (*Binary, error) {
 			continue
 		}
 		sec := pf.Sections[s.SectionNumber-1]
-		bin.addSym(s.Name, imageBase+uint64(sec.VirtualAddress)+uint64(s.Value), 0)
+		kind := symData
+		if sec == text {
+			kind = symText
+		}
+		bin.addSym(s.Name, imageBase+uint64(sec.VirtualAddress)+uint64(s.Value), 0, kind)
 	}
 
 	bin.loadDWARF(pf.DWARF)
 	// PE has no pclntab section; scan the data sections for its header.
 	for _, name := range []string{".rdata", ".data"} {
 		if sec := pf.Section(name); sec != nil {
-			if d, err := sec.Data(); err == nil && findPclntab(d) != nil {
-				bin.loadPclntab(findPclntab(d))
+			raw := sectionSlice(data, uint64(sec.Offset), min(uint64(sec.Size), uint64(sec.VirtualSize)))
+			if tab := findPclntab(raw); tab != nil {
+				bin.loadPclntab(tab)
 				break
 			}
 		}

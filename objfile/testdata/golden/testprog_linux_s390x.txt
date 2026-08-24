@@ -1,4 +1,4 @@
-arch=s390x funcs=1419 sha256=107659121791da8036c203f8b7a7204ec2997100c3dfe5417c22adadba58ab6c
+arch=s390x funcs=1419 sha256=83f13c39dcd6c9b3743e71753bfddddb2270aa37d651335b353fb61ca6bc4417
 == runtime.runGCProg 0x33c00 1168 /usr/local/go/src/runtime/mbitmap.go
 0x33c00 6 "lg" "MOVD 16(R13), R10" "lg %r10,16(%r13)" mbitmap.go:1565
 0x33c06 6 "clgrj" "CMPUBGE R10, R15, 186(PC)" "clgrjnl %r10,%r15,0x34062" mbitmap.go:1565

@@ -1,4 +1,4 @@
-arch=xtensa funcs=22 sha256=368117a9b6cd1d128e894e358165e592f45d13006468c5dab902203427bdd5ed
+arch=xtensa funcs=22 sha256=cfa898128aa1453c1eaa834bccf440bcd2b7ecfa7fa0efab2fd89e632923e455
 == runtime.runtimePanicAt 0x4008043c 112 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/panic.go
 0x4008043c 3 "ENTRY" "entry a1, 48" "entry a1, 48" ref=0x0 call=false panic.go:0
 0x4008043f 2 "S32I.N" "s32i.n a4, a1, 4" "s32i.n a4, a1, 4" ref=0x0 call=false panic.go:0

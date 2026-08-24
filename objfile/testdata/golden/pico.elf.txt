@@ -1,8 +1,8 @@
-arch=arm funcs=146 sha256=b6009309116aa6c98b14e54c7acefb409d7de4975ede56b5272c3a286860917c
+arch=arm funcs=106 sha256=9c22dde01f94653bad574594a06c4c2f7d9e4993715cbeb92a687cfd85f2c0ec
 == runtime.runtimePanicAt 0x10001044 52 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/panic.go
 0x10001044 2 "MOV" "mov r4, r2" "mov r4, r2" ref=0x0 call=false .:0
-0x10001046 2 "MOV" "mov r5, r1" "mov r5, r1" ref=0x0 call=false panic.go:0
-0x10001048 2 "MOV" "mov r6, r0" "mov r6, r0" ref=0x0 call=false panic.go:0
+0x10001046 2 "MOV" "mov r5, r1" "mov r5, r1" ref=0x0 call=false .:0
+0x10001048 2 "MOV" "mov r6, r0" "mov r6, r0" ref=0x0 call=false .:0
 0x1000104a 2 "LDR" "ldr r0, 0x1000106c <runtime.runtimePanicAt+0x28>" "ldr r0, 0x1000106c <runtime.runtimePanicAt+0x28>" ref=0x0 call=false panic.go:99
 0x1000104c 2 "MOV" "movs r1, #0x18" "movs r1, #0x18" ref=0x0 call=false panic.go:99
 0x1000104e 2 "LDR" "ldr r7, 0x10001070 <runtime.runtimePanicAt+0x2c>" "ldr r7, 0x10001070 <runtime.runtimePanicAt+0x2c>" ref=0x0 call=false panic.go:99
@@ -22,13 +22,13 @@ arch=arm funcs=146 sha256=b6009309116aa6c98b14e54c7acefb409d7de4975ede56b5272c3a
 0x10001070 4 "" ".word 0x0010001079" ".word 0x0010001079" runtime_cortexm_abort.go:0
 0x10001074 4 "" ".word 0x0010001c6b" ".word 0x0010001c6b" runtime_cortexm_abort.go:0
 == runtime.runtimePanic 0x100011b2 12 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/panic.go
-0x100011b2 2 "MOV" "mov r3, r0" "mov r3, r0" ref=0x0 call=false .:0
+0x100011b2 2 "MOV" "mov r3, r0" "mov r3, r0" ref=0x0 call=false panic.go:0
 0x100011b4 2 "MOV" "movs r2, #0x18" "movs r2, #0x18" ref=0x0 call=false panic.go:0
 0x100011b6 2 "MOV" "mov r0, lr" "mov r0, lr" ref=0x0 call=false panic.go:88
 0x100011b8 2 "MOV" "mov r1, r3" "mov r1, r3" ref=0x0 call=false panic.go:88
 0x100011ba 4 "BL" "bl 0x10001044 <runtime.runtimePanicAt>" "bl 0x10001044 <runtime.runtimePanicAt>" ref=0x10001044 call=true panic.go:88
 == Reset_Handler 0x100017f4 244 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/runtime_rp2.go
-0x100017f4 2 "LDR" "ldr r0, 0x100018b4 <Reset_Handler+0xc0>" "ldr r0, 0x100018b4 <Reset_Handler+0xc0>" ref=0x0 call=false .:0
+0x100017f4 2 "LDR" "ldr r0, 0x100018b4 <Reset_Handler+0xc0>" "ldr r0, 0x100018b4 <Reset_Handler+0xc0>" ref=0x0 call=false runtime_rp2.go:0
 0x100017f6 2 "LDR" "ldr r1, 0x100018b8 <Reset_Handler+0xc4>" "ldr r1, 0x100018b8 <Reset_Handler+0xc4>" ref=0x0 call=false runtime_rp2.go:0
 0x100017f8 2 "CMP" "cmp r0, r1" "cmp r0, r1" ref=0x0 call=false runtime_rp2.go:0
 0x100017fa 2 "B" "beq 0x10001802 <Reset_Handler+0xe>" "beq 0x10001802 <Reset_Handler+0xe>" ref=0x10001802 call=false runtime_rp2.go:0
@@ -67,7 +67,7 @@ arch=arm funcs=146 sha256=b6009309116aa6c98b14e54c7acefb409d7de4975ede56b5272c3a
 0x10001842 2 "SUB" "subs r2, r0, r5" "subs r2, r0, r5" ref=0x0 call=false gc_blocks.go:371
 0x10001844 2 "MOV" "lsrs r2, r2, #4" "lsrs r2, r2, #4" ref=0x0 call=false gc_blocks.go:371
 0x10001846 2 "STR" "str r2, [r6, #0x38]" "str r2, [r6, #0x38]" ref=0x0 call=false gc_blocks.go:372
-0x10001848 4 "BL" "bl 0x100001dc <__aeabi_memclr>" "bl 0x100001dc <__aeabi_memclr>" ref=0x100001dc call=true runtime.go:53
+0x10001848 4 "BL" "bl 0x100001dc <__aeabi_memclr8>" "bl 0x100001dc <__aeabi_memclr8>" ref=0x100001dc call=true runtime.go:53
 0x1000184c 4 "BL" "bl 0x10001474 <runtime.buildFreeRanges>" "bl 0x10001474 <runtime.buildFreeRanges>" ref=0x10001474 call=true gc_blocks.go:321
 0x10001850 2 "LDR" "ldr r0, 0x100018d8 <Reset_Handler+0xe4>" "ldr r0, 0x100018d8 <Reset_Handler+0xe4>" ref=0x0 call=false scheduler_cooperative.go:248
 0x10001852 2 "LDR" "ldr r5, [r0]" "ldr r5, [r0]" ref=0x0 call=false scheduler_cooperative.go:248
@@ -128,8 +128,8 @@ arch=arm funcs=146 sha256=b6009309116aa6c98b14e54c7acefb409d7de4975ede56b5272c3a
 0x100018e4 4 "" ".word 0x00100001e9" ".word 0x00100001e9" task_stack_cortexm.go:0
 == runtime.run$1$gowrapper 0x100018e8 628 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/scheduler_cooperative.go
 0x100018e8 2 "PUSH" "push {r4, r5, r6, r7, lr}" "push {r4, r5, r6, r7, lr}" ref=0x0 call=false scheduler_cooperative.go:0
-0x100018ea 2 "SUB" "sub sp, #0x5c" "sub sp, #0x5c" ref=0x0 call=false .:0
-0x100018ec 2 "LDR" "ldr r2, 0x10001afc <runtime.run$1$gowrapper+0x214>" "ldr r2, 0x10001afc <runtime.run$1$gowrapper+0x214>" ref=0x0 call=false .:0
+0x100018ea 2 "SUB" "sub sp, #0x5c" "sub sp, #0x5c" ref=0x0 call=false scheduler_cooperative.go:0
+0x100018ec 2 "LDR" "ldr r2, 0x10001afc <runtime.run$1$gowrapper+0x214>" "ldr r2, 0x10001afc <runtime.run$1$gowrapper+0x214>" ref=0x0 call=false scheduler_cooperative.go:0
 0x100018ee 2 "LDR" "ldr r0, [r2]" "ldr r0, [r2]" ref=0x0 call=false volatile.go:25
 0x100018f0 2 "LDR" "ldr r1, 0x10001b00 <runtime.run$1$gowrapper+0x218>" "ldr r1, 0x10001b00 <runtime.run$1$gowrapper+0x218>" ref=0x0 call=false volatile.go:25
 0x100018f2 2 "ORR" "orrs r1, r0" "orrs r1, r0" ref=0x0 call=false register.go:161
@@ -342,7 +342,7 @@ arch=arm funcs=146 sha256=b6009309116aa6c98b14e54c7acefb409d7de4975ede56b5272c3a
 0x10001aa0 2 "ADD" "add r0, sp, #0x48" "add r0, sp, #0x48" ref=0x0 call=false print.go:0
 0x10001aa2 2 "MOV" "movs r1, #0x14" "movs r1, #0x14" ref=0x0 call=false print.go:0
 0x10001aa4 2 "STR" "str r1, [sp, #0x10]" "str r1, [sp, #0x10]" ref=0x0 call=false print.go:0
-0x10001aa6 4 "BL" "bl 0x100001dc <__aeabi_memclr>" "bl 0x100001dc <__aeabi_memclr>" ref=0x100001dc call=true print.go:77
+0x10001aa6 4 "BL" "bl 0x100001dc <__aeabi_memclr8>" "bl 0x100001dc <__aeabi_memclr8>" ref=0x100001dc call=true print.go:77
 0x10001aaa 2 "MOV" "movs r4, #0x13" "movs r4, #0x13" ref=0x0 call=false print.go:77
 0x10001aac 2 "MOV" "mov r5, r4" "mov r5, r4" ref=0x0 call=false print.go:77
 0x10001aae 2 "CMP" "cmp r5, #0" "cmp r5, #0" ref=0x0 call=false print.go:0
@@ -406,7 +406,7 @@ arch=arm funcs=146 sha256=b6009309116aa6c98b14e54c7acefb409d7de4975ede56b5272c3a
 0x10001b54 4 "" ".word 0x0000011010" ".word 0x0000011010" scheduler_cooperative.go:0
 0x10001b58 4 "" ".word 0x00200015b0" ".word 0x00200015b0" scheduler_cooperative.go:0
 == main.sumInts 0x10001b5c 20 /Users/egon/code/gio/lensm/testdata/tinygo/main.go
-0x10001b5c 2 "MOV" "movs r2, #0" "movs r2, #0" ref=0x0 call=false .:0
+0x10001b5c 2 "MOV" "movs r2, #0" "movs r2, #0" ref=0x0 call=false main.go:0
 0x10001b5e 2 "MOV" "mov r1, r2" "mov r1, r2" ref=0x0 call=false main.go:0
 0x10001b60 2 "CMP" "cmp r2, #0xc" "cmp r2, #0xc" ref=0x0 call=false main.go:0
 0x10001b62 2 "B" "beq 0x10001b6c <main.sumInts+0x10>" "beq 0x10001b6c <main.sumInts+0x10>" ref=0x10001b6c call=false main.go:0

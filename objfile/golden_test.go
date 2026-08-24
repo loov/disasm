@@ -18,7 +18,8 @@ var update = flag.Bool("update", false, "rewrite golden files")
 // behaviour of the package for one file.
 func dump(t *testing.T, bin *Binary, keep func(name string) bool) (full, kept []byte) {
 	var all, some bytes.Buffer
-	for _, fn := range bin.Funcs {
+	for i := range bin.Funcs {
+		fn := &bin.Funcs[i]
 		var b bytes.Buffer
 		fmt.Fprintf(&b, "== %s %#x %d %s\n", fn.Name, fn.Addr, fn.Size, bin.FuncFile(fn.Addr))
 		insts, err := bin.Disassemble(fn)
@@ -56,6 +57,7 @@ func TestGolden(t *testing.T) {
 			if err != nil {
 				t.Fatal(err)
 			}
+			defer bin.Close()
 			full, kept := dump(t, bin, keepFunc)
 			var out bytes.Buffer
 			fmt.Fprintf(&out, "arch=%s funcs=%d sha256=%x\n", bin.Arch, len(bin.Funcs), sha256.Sum256(full))

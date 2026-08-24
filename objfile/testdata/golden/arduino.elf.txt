@@ -1,6 +1,6 @@
-arch=avr funcs=20 sha256=a04b9d4da0e6cf76d54f9a91d612dec091f5c951c5a585d4d9382fd902f18691
+arch=avr funcs=20 sha256=bd7150ba7a1fe185a59060dd18262e32494fcfded376d5b981e960b3bd497f47
 == runtime.runtimePanicAt 0xaf6 40 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/panic.go
-0xaf6 2 "PUSH" "push r14" "push r14" ref=0x0 call=false .:0
+0xaf6 2 "PUSH" "push r14" "push r14" ref=0x0 call=false panic.go:0
 0xaf8 2 "PUSH" "push r15" "push r15" ref=0x0 call=false panic.go:0
 0xafa 2 "PUSH" "push r16" "push r16" ref=0x0 call=false panic.go:0
 0xafc 2 "PUSH" "push r17" "push r17" ref=0x0 call=false panic.go:0
@@ -17,7 +17,7 @@ arch=avr funcs=20 sha256=a04b9d4da0e6cf76d54f9a91d612dec091f5c951c5a585d4d9382fd
 0xb16 4 "CALL" "call 0xb86 <runtime.printnl>" "call 0xb86 <runtime.printnl>" ref=0xb86 call=true panic.go:106
 0xb1a 4 "CALL" "call 0xcc0 <runtime.abort>" "call 0xcc0 <runtime.abort>" ref=0xcc0 call=true panic.go:107
 == runtime.run 0xd6a 492 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/scheduler_none.go
-0xd6a 2 "PUSH" "push r2" "push r2" ref=0x0 call=false .:0
+0xd6a 2 "PUSH" "push r2" "push r2" ref=0x0 call=false scheduler_none.go:0
 0xd6c 2 "PUSH" "push r3" "push r3" ref=0x0 call=false scheduler_none.go:0
 0xd6e 2 "PUSH" "push r4" "push r4" ref=0x0 call=false scheduler_none.go:0
 0xd70 2 "PUSH" "push r5" "push r5" ref=0x0 call=false scheduler_none.go:0
@@ -250,7 +250,7 @@ arch=avr funcs=20 sha256=a04b9d4da0e6cf76d54f9a91d612dec091f5c951c5a585d4d9382fd
 0xf52 2 "POP" "pop r2" "pop r2" ref=0x0 call=false scheduler_none.go:29
 0xf54 2 "RET" "ret" "ret" ref=0x0 call=false scheduler_none.go:29
 == main.sumInts 0xf56 104 /Users/egon/code/gio/lensm/testdata/tinygo/main.go
-0xf56 2 "PUSH" "push r12" "push r12" ref=0x0 call=false .:0
+0xf56 2 "PUSH" "push r12" "push r12" ref=0x0 call=false main.go:0
 0xf58 2 "PUSH" "push r13" "push r13" ref=0x0 call=false main.go:0
 0xf5a 2 "PUSH" "push r14" "push r14" ref=0x0 call=false main.go:0
 0xf5c 2 "PUSH" "push r15" "push r15" ref=0x0 call=false main.go:0

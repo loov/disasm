@@ -1,4 +1,4 @@
-arch=loong64 funcs=1487 sha256=cf6b2195a2bfbdb0f82099fb366c2bf682213dec18d35c8ab6ddab8c48a9501d
+arch=loong64 funcs=1487 sha256=eb6baf75b0176520e639493f23fcbce38ad334634a0285799be7c4dd1f031077
 == runtime.runGCProg 0x2ebd0 1104 /usr/local/go/src/runtime/mbitmap.go
 0x2ebd0 4 "LD.D" "MOVV 16(R22), R20" "ld.d $t8, $fp, 16" mbitmap.go:1565
 0x2ebd4 4 "SLTU" "SGTU R3, R20" "sltu $t8, $t8, $sp" mbitmap.go:1565

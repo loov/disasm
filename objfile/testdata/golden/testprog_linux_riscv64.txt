@@ -1330,6 +1330,12 @@ arch=riscv64 funcs=1395 sha256=6fbce766c8cfb03478eab36d6ac4acc82d15ff961041fffa4
 0x6c6ae 2 "ADDI" "ADDI $-1, X12, X12" "addi x12,x12,-1" memmove_riscv64.s:315
 0x6c6b0 4 "JAL" "JMP -4(PC)" "j -18" memmove_riscv64.s:316
 0x6c6b4 4 "JALR" "RET" "ret" memmove_riscv64.s:319
+== main 0x6c7c8 16 /usr/local/go/src/runtime/rt0_linux_riscv64.s
+0x6c7c8 4 "AUIPC" "AUIPC $1048575, X5" "auipc x5,0xfffff" rt0_linux_riscv64.s:19
+0x6c7cc 4 "ADDI" "ADDI $1792, X5, X5" "addi x5,x5,1792" rt0_linux_riscv64.s:19
+0x6c7d0 4 "JALR" "JMP (X5)" "jr x5" rt0_linux_riscv64.s:20
+0x6c7d4 2 "CSRRW" "UNIMP" "unimp" .:-1
+0x6c7d6 2 "CSRRW" "UNIMP" "unimp" .:-1
 == main.sumInts 0x6d710 32 /Users/egon/code/gio/lensm/testdata/testprog/main.go
 0x6d710 2 "SD" "MOV X10, 8(X2)" "sd x10,8(x2)" main.go:19
 0x6d712 2 "ADDI" "MOV X0, X9" "li x9,0" main.go:21

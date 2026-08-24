@@ -45,6 +45,9 @@ type Inst struct {
 // BYTE pseudo-instructions so padding or data inside a function does
 // not abort decoding.
 func (b *Binary) Disassemble(fn *Func) ([]Inst, error) {
+	if fn.wasm != nil {
+		return b.disassembleWasm(fn)
+	}
 	decodeMu.Lock()
 	defer decodeMu.Unlock()
 

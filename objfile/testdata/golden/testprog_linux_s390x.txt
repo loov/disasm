@@ -1131,6 +1131,13 @@ arch=s390x funcs=1440 sha256=e439654953bde7c8219c06b0470cfea69a51815230614692b3b
 0x99d7a 2 "" "BYTE 0x0000" ".byte 0x0000" memmove_s390x.s:183
 0x99d7c 2 "" "BYTE 0x0000" ".byte 0x0000" memmove_s390x.s:183
 0x99d7e 2 "" "BYTE 0x0000" ".byte 0x0000" memmove_s390x.s:183
+== main 0x99e60 16 /usr/local/go/src/runtime/rt0_linux_s390x.s
+0x99e60 6 "larl" "MOVD runtime.rt0_go.abi0(SB), R1" "larl %r1,0x991b0" rt0_linux_s390x.s:22
+0x99e66 2 "bcr" "RET" "br %r1" rt0_linux_s390x.s:23
+0x99e68 2 "" "BYTE 0x0000" ".byte 0x0000" rt0_linux_s390x.s:23
+0x99e6a 2 "" "BYTE 0x0000" ".byte 0x0000" rt0_linux_s390x.s:23
+0x99e6c 2 "" "BYTE 0x0000" ".byte 0x0000" rt0_linux_s390x.s:23
+0x99e6e 2 "" "BYTE 0x0000" ".byte 0x0000" rt0_linux_s390x.s:23
 == main.sumInts 0x9b9a0 48 /Users/egon/code/gio/lensm/testdata/testprog/main.go
 0x9b9a0 6 "stg" "MOVD R2, 8(R15)" "stg %r2,8(%r15)" main.go:19
 0x9b9a6 4 "lghi" "MOVB $0, R0" "lghi %r0,0" main.go:21

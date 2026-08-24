@@ -72,6 +72,9 @@ type Binary struct {
 	byName     map[string]int
 	byNameOnce sync.Once
 
+	// wasm holds the core modules of a wasm file; nil otherwise.
+	wasm []*wasmModule
+
 	closeMapping func() error
 }
 
@@ -82,12 +85,19 @@ type Func struct {
 	Size uint64
 
 	bin *Binary
+	// code is the body for formats whose code is not address-sliced
+	// from a text section (wasm, Go archives); nil otherwise.
+	code []byte
+	wasm *wasmModule
 }
 
 // Code returns the machine code of the function, or nil when it lies
 // outside the text section. The slice aliases the file mapping and must
 // not be modified.
 func (f *Func) Code() []byte {
+	if f.code != nil {
+		return f.code
+	}
 	if f.Addr < f.bin.textAddr {
 		return nil
 	}
@@ -124,6 +134,11 @@ func (b *Binary) Func(name string) *Func {
 // PCToLine maps a pc to its source location using the Go pclntab, or
 // DWARF when there is none; zero values when unknown.
 func (b *Binary) PCToLine(pc uint64) (file string, line int) {
+	for _, m := range b.wasm {
+		if file, line = m.pcToLine(pc); file != "" {
+			return file, line
+		}
+	}
 	if b.pcln == nil {
 		return b.lineTable().At(pc)
 	}
@@ -133,6 +148,9 @@ func (b *Binary) PCToLine(pc uint64) (file string, line int) {
 // FuncFile returns the file a function starting at addr was written in,
 // from the debug info; empty when it isn't recorded.
 func (b *Binary) FuncFile(addr uint64) string {
+	if b.wasm != nil {
+		return ""
+	}
 	if b.pcln != nil {
 		// A Go function's entry instruction is on its declaration
 		// line; inlined bodies never own the entry.
@@ -172,6 +190,10 @@ func (b *Binary) Contains(addr uint64) bool {
 // it, text or data, matching the contract of the x/arch GoSyntax symname
 // functions.
 func (b *Binary) Lookup(addr uint64) (name string, base uint64) {
+	if b.wasm != nil {
+		// A function index; in a component, the first module's.
+		return b.wasm[0].lookup(addr)
+	}
 	if s, ok := b.symAt(addr, symAny); ok {
 		return s.name, s.addr
 	}
@@ -259,6 +281,8 @@ func parse(data []byte) (*Binary, error) {
 		bin, err = openMachO(r, data)
 	case magic[0] == 'M' && magic[1] == 'Z':
 		bin, err = openPE(r, data)
+	case magic == "\x00asm":
+		bin, err = openWasm(data)
 	default:
 		err = fmt.Errorf("unsupported binary format")
 	}
@@ -487,6 +511,14 @@ func (b *Binary) finish() {
 		}
 	}
 
+	if b.text == nil {
+		// Formats without a text section (wasm, Go archives) collect
+		// their functions while loading.
+		slices.SortFunc(b.Funcs, func(x, y Func) int {
+			return cmp.Or(cmp.Compare(x.Addr, y.Addr), cmp.Compare(x.Name, y.Name))
+		})
+		return
+	}
 	b.Funcs = make([]Func, 0, len(b.syms))
 	for _, s := range b.syms {
 		if s.kind == symText && s.addr >= b.textAddr && s.addr < textEnd {

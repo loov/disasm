@@ -1,0 +1,1077 @@
+arch=wasm funcs=60 sha256=d805f516115eeebbcb6e919a65104c14c3f4b39cef4c8f0b64435faceecb2761
+== runtime.runtimePanic 0x11 168 
+0xca5 2 "global.get" "global.get 1" "" .:0
+0xca7 2 "i32.const" "i32.const 2" "" .:0
+0xca9 1 "i32.eq" "i32.eq" "" .:0
+0xcaa 2 "if" "if" "" .:0
+0xcac 2 "global.get" "global.get 2" "" .:0
+0xcae 2 "global.get" "global.get 2" "" .:0
+0xcb0 3 "i32.load" "i32.load align=4" "" .:0
+0xcb3 2 "i32.const" "i32.const 8" "" .:0
+0xcb5 1 "i32.sub" "i32.sub" "" .:0
+0xcb6 3 "i32.store" "i32.store align=4" "" .:0
+0xcb9 2 "global.get" "global.get 2" "" .:0
+0xcbb 3 "i32.load" "i32.load align=4" "" .:0
+0xcbe 2 "local.tee" "local.tee 1" "" .:0
+0xcc0 3 "i32.load" "i32.load align=4" "" .:0
+0xcc3 2 "local.set" "local.set 0" "" .:0
+0xcc5 2 "local.get" "local.get 1" "" .:0
+0xcc7 3 "i32.load" "i32.load offset=4 align=4" "" .:0
+0xcca 2 "local.set" "local.set 1" "" .:0
+0xccc 1 "end" "end" "" .:0
+0xccd 2 "block" "block (result i32)" "" .:0
+0xccf 2 "global.get" "global.get 1" "" .:0
+0xcd1 1 "i32.eqz" "i32.eqz" "" .:0
+0xcd2 2 "global.get" "global.get 1" "" .:0
+0xcd4 2 "i32.const" "i32.const 2" "" .:0
+0xcd6 1 "i32.eq" "i32.eq" "" .:0
+0xcd7 2 "if" "if (result i32)" "" .:0
+0xcd9 2 "global.get" "global.get 2" "" .:0
+0xcdb 2 "global.get" "global.get 2" "" .:0
+0xcdd 3 "i32.load" "i32.load align=4" "" .:0
+0xce0 2 "i32.const" "i32.const 4" "" .:0
+0xce2 1 "i32.sub" "i32.sub" "" .:0
+0xce3 3 "i32.store" "i32.store align=4" "" .:0
+0xce6 2 "global.get" "global.get 2" "" .:0
+0xce8 3 "i32.load" "i32.load align=4" "" .:0
+0xceb 3 "i32.load" "i32.load align=4" "" .:0
+0xcee 1 "else" "else" "" .:0
+0xcef 2 "i32.const" "i32.const 0" "" .:0
+0xcf1 1 "end" "end" "" .:0
+0xcf2 1 "i32.eqz" "i32.eqz" "" .:0
+0xcf3 1 "i32.or" "i32.or" "" .:0
+0xcf4 2 "if" "if" "" .:0
+0xcf6 2 "local.get" "local.get 0" "" panic.go:88
+0xcf8 2 "local.get" "local.get 1" "" panic.go:88
+0xcfa 2 "call" "call runtime.runtimePanicAt" "" ref=0x15 call=true panic.go:88
+0xcfc 2 "i32.const" "i32.const 0" "" panic.go:88
+0xcfe 2 "global.get" "global.get 1" "" panic.go:88
+0xd00 2 "i32.const" "i32.const 1" "" panic.go:88
+0xd02 1 "i32.eq" "i32.eq" "" panic.go:88
+0xd03 2 "br_if" "br_if 1" "" panic.go:88
+0xd05 1 "drop" "drop" "" panic.go:88
+0xd06 1 "end" "end" "" panic.go:88
+0xd07 2 "global.get" "global.get 1" "" panic.go:88
+0xd09 1 "i32.eqz" "i32.eqz" "" panic.go:88
+0xd0a 2 "if" "if" "" panic.go:88
+0xd0c 1 "unreachable" "unreachable" "" panic.go:89
+0xd0d 1 "end" "end" "" panic.go:89
+0xd0e 1 "return" "return" "" panic.go:89
+0xd0f 1 "end" "end" "" panic.go:89
+0xd10 2 "local.set" "local.set 2" "" panic.go:89
+0xd12 2 "global.get" "global.get 2" "" panic.go:89
+0xd14 3 "i32.load" "i32.load align=4" "" panic.go:89
+0xd17 2 "local.get" "local.get 2" "" panic.go:89
+0xd19 3 "i32.store" "i32.store align=4" "" panic.go:89
+0xd1c 2 "global.get" "global.get 2" "" panic.go:89
+0xd1e 2 "global.get" "global.get 2" "" panic.go:89
+0xd20 3 "i32.load" "i32.load align=4" "" panic.go:89
+0xd23 2 "i32.const" "i32.const 4" "" panic.go:89
+0xd25 1 "i32.add" "i32.add" "" panic.go:89
+0xd26 3 "i32.store" "i32.store align=4" "" panic.go:89
+0xd29 2 "global.get" "global.get 2" "" panic.go:89
+0xd2b 3 "i32.load" "i32.load align=4" "" panic.go:89
+0xd2e 2 "local.tee" "local.tee 2" "" panic.go:89
+0xd30 2 "local.get" "local.get 0" "" panic.go:89
+0xd32 3 "i32.store" "i32.store align=4" "" panic.go:89
+0xd35 2 "local.get" "local.get 2" "" panic.go:89
+0xd37 2 "local.get" "local.get 1" "" panic.go:89
+0xd39 3 "i32.store" "i32.store offset=4 align=4" "" panic.go:89
+0xd3c 2 "global.get" "global.get 2" "" panic.go:89
+0xd3e 2 "global.get" "global.get 2" "" panic.go:89
+0xd40 3 "i32.load" "i32.load align=4" "" panic.go:89
+0xd43 2 "i32.const" "i32.const 8" "" panic.go:89
+0xd45 1 "i32.add" "i32.add" "" panic.go:89
+0xd46 3 "i32.store" "i32.store align=4" "" panic.go:89
+== runtime.runtimePanicAt 0x15 223 
+0xf65 2 "global.get" "global.get 1" "" .:0
+0xf67 2 "i32.const" "i32.const 2" "" .:0
+0xf69 1 "i32.eq" "i32.eq" "" .:0
+0xf6a 2 "if" "if" "" .:0
+0xf6c 2 "global.get" "global.get 2" "" .:0
+0xf6e 2 "global.get" "global.get 2" "" .:0
+0xf70 3 "i32.load" "i32.load align=4" "" .:0
+0xf73 2 "i32.const" "i32.const 8" "" .:0
+0xf75 1 "i32.sub" "i32.sub" "" .:0
+0xf76 3 "i32.store" "i32.store align=4" "" .:0
+0xf79 2 "global.get" "global.get 2" "" .:0
+0xf7b 3 "i32.load" "i32.load align=4" "" .:0
+0xf7e 2 "local.tee" "local.tee 1" "" .:0
+0xf80 3 "i32.load" "i32.load align=4" "" .:0
+0xf83 2 "local.set" "local.set 0" "" .:0
+0xf85 2 "local.get" "local.get 1" "" .:0
+0xf87 3 "i32.load" "i32.load offset=4 align=4" "" .:0
+0xf8a 2 "local.set" "local.set 1" "" .:0
+0xf8c 1 "end" "end" "" .:0
+0xf8d 2 "block" "block (result i32)" "" .:0
+0xf8f 2 "global.get" "global.get 1" "" .:0
+0xf91 2 "i32.const" "i32.const 2" "" .:0
+0xf93 1 "i32.eq" "i32.eq" "" .:0
+0xf94 2 "if" "if" "" .:0
+0xf96 2 "global.get" "global.get 2" "" .:0
+0xf98 2 "global.get" "global.get 2" "" .:0
+0xf9a 3 "i32.load" "i32.load align=4" "" .:0
+0xf9d 2 "i32.const" "i32.const 4" "" .:0
+0xf9f 1 "i32.sub" "i32.sub" "" .:0
+0xfa0 3 "i32.store" "i32.store align=4" "" .:0
+0xfa3 2 "global.get" "global.get 2" "" .:0
+0xfa5 3 "i32.load" "i32.load align=4" "" .:0
+0xfa8 3 "i32.load" "i32.load align=4" "" .:0
+0xfab 2 "local.set" "local.set 2" "" .:0
+0xfad 1 "end" "end" "" .:0
+0xfae 2 "global.get" "global.get 1" "" .:0
+0xfb0 1 "i32.eqz" "i32.eqz" "" .:0
+0xfb1 2 "local.get" "local.get 2" "" .:0
+0xfb3 1 "i32.eqz" "i32.eqz" "" .:0
+0xfb4 1 "i32.or" "i32.or" "" .:0
+0xfb5 2 "if" "if" "" .:0
+0xfb7 4 "i32.const" "i32.const 65652" "" panic.go:103
+0xfbb 2 "i32.const" "i32.const 22" "" panic.go:103
+0xfbd 2 "call" "call runtime.printstring" "" ref=0x17 call=true panic.go:103
+0xfbf 2 "i32.const" "i32.const 0" "" panic.go:103
+0xfc1 2 "global.get" "global.get 1" "" panic.go:103
+0xfc3 2 "i32.const" "i32.const 1" "" panic.go:103
+0xfc5 1 "i32.eq" "i32.eq" "" panic.go:103
+0xfc6 2 "br_if" "br_if 1" "" panic.go:103
+0xfc8 1 "drop" "drop" "" panic.go:103
+0xfc9 1 "end" "end" "" panic.go:103
+0xfca 2 "global.get" "global.get 1" "" panic.go:103
+0xfcc 1 "i32.eqz" "i32.eqz" "" panic.go:103
+0xfcd 2 "local.get" "local.get 2" "" panic.go:103
+0xfcf 2 "i32.const" "i32.const 1" "" panic.go:103
+0xfd1 1 "i32.eq" "i32.eq" "" panic.go:103
+0xfd2 1 "i32.or" "i32.or" "" panic.go:103
+0xfd3 2 "if" "if" "" panic.go:103
+0xfd5 2 "local.get" "local.get 0" "" panic.go:105
+0xfd7 2 "local.get" "local.get 1" "" panic.go:105
+0xfd9 2 "call" "call runtime.printstring" "" ref=0x17 call=true panic.go:105
+0xfdb 2 "i32.const" "i32.const 1" "" panic.go:105
+0xfdd 2 "global.get" "global.get 1" "" panic.go:105
+0xfdf 2 "i32.const" "i32.const 1" "" panic.go:105
+0xfe1 1 "i32.eq" "i32.eq" "" panic.go:105
+0xfe2 2 "br_if" "br_if 1" "" panic.go:105
+0xfe4 1 "drop" "drop" "" panic.go:105
+0xfe5 1 "end" "end" "" panic.go:105
+0xfe6 2 "global.get" "global.get 1" "" panic.go:105
+0xfe8 1 "i32.eqz" "i32.eqz" "" panic.go:105
+0xfe9 2 "local.get" "local.get 2" "" panic.go:105
+0xfeb 2 "i32.const" "i32.const 2" "" panic.go:105
+0xfed 1 "i32.eq" "i32.eq" "" panic.go:105
+0xfee 1 "i32.or" "i32.or" "" panic.go:105
+0xfef 2 "if" "if" "" panic.go:105
+0xff1 2 "call" "call runtime.printnl" "" ref=0x18 call=true panic.go:106
+0xff3 2 "i32.const" "i32.const 2" "" panic.go:106
+0xff5 2 "global.get" "global.get 1" "" panic.go:106
+0xff7 2 "i32.const" "i32.const 1" "" panic.go:106
+0xff9 1 "i32.eq" "i32.eq" "" panic.go:106
+0xffa 2 "br_if" "br_if 1" "" panic.go:106
+0xffc 1 "drop" "drop" "" panic.go:106
+0xffd 1 "end" "end" "" panic.go:106
+0xffe 2 "global.get" "global.get 1" "" panic.go:106
+0x1000 1 "i32.eqz" "i32.eqz" "" panic.go:106
+0x1001 2 "if" "if" "" panic.go:106
+0x1003 1 "unreachable" "unreachable" "" runtime_tinygowasm.go:78
+0x1004 1 "end" "end" "" runtime_tinygowasm.go:78
+0x1005 1 "return" "return" "" runtime_tinygowasm.go:78
+0x1006 1 "end" "end" "" runtime_tinygowasm.go:78
+0x1007 2 "local.set" "local.set 2" "" runtime_tinygowasm.go:78
+0x1009 2 "global.get" "global.get 2" "" runtime_tinygowasm.go:78
+0x100b 3 "i32.load" "i32.load align=4" "" runtime_tinygowasm.go:78
+0x100e 2 "local.get" "local.get 2" "" runtime_tinygowasm.go:78
+0x1010 3 "i32.store" "i32.store align=4" "" runtime_tinygowasm.go:78
+0x1013 2 "global.get" "global.get 2" "" runtime_tinygowasm.go:78
+0x1015 2 "global.get" "global.get 2" "" runtime_tinygowasm.go:78
+0x1017 3 "i32.load" "i32.load align=4" "" runtime_tinygowasm.go:78
+0x101a 2 "i32.const" "i32.const 4" "" runtime_tinygowasm.go:78
+0x101c 1 "i32.add" "i32.add" "" runtime_tinygowasm.go:78
+0x101d 3 "i32.store" "i32.store align=4" "" runtime_tinygowasm.go:78
+0x1020 2 "global.get" "global.get 2" "" runtime_tinygowasm.go:78
+0x1022 3 "i32.load" "i32.load align=4" "" runtime_tinygowasm.go:78
+0x1025 2 "local.tee" "local.tee 2" "" runtime_tinygowasm.go:78
+0x1027 2 "local.get" "local.get 0" "" runtime_tinygowasm.go:78
+0x1029 3 "i32.store" "i32.store align=4" "" runtime_tinygowasm.go:78
+0x102c 2 "local.get" "local.get 2" "" runtime_tinygowasm.go:78
+0x102e 2 "local.get" "local.get 1" "" runtime_tinygowasm.go:78
+0x1030 3 "i32.store" "i32.store offset=4 align=4" "" runtime_tinygowasm.go:78
+0x1033 2 "global.get" "global.get 2" "" runtime_tinygowasm.go:78
+0x1035 2 "global.get" "global.get 2" "" runtime_tinygowasm.go:78
+0x1037 3 "i32.load" "i32.load align=4" "" runtime_tinygowasm.go:78
+0x103a 2 "i32.const" "i32.const 8" "" runtime_tinygowasm.go:78
+0x103c 1 "i32.add" "i32.add" "" runtime_tinygowasm.go:78
+0x103d 3 "i32.store" "i32.store align=4" "" runtime_tinygowasm.go:78
+== _start 0x27 1046 
+0x2a2f 2 "global.get" "global.get 1" "" .:0
+0x2a31 2 "i32.const" "i32.const 2" "" .:0
+0x2a33 1 "i32.eq" "i32.eq" "" .:0
+0x2a34 2 "if" "if" "" .:0
+0x2a36 2 "global.get" "global.get 2" "" .:0
+0x2a38 2 "global.get" "global.get 2" "" .:0
+0x2a3a 3 "i32.load" "i32.load align=4" "" .:0
+0x2a3d 2 "i32.const" "i32.const 16" "" .:0
+0x2a3f 1 "i32.sub" "i32.sub" "" .:0
+0x2a40 3 "i32.store" "i32.store align=4" "" .:0
+0x2a43 2 "global.get" "global.get 2" "" .:0
+0x2a45 3 "i32.load" "i32.load align=4" "" .:0
+0x2a48 2 "local.tee" "local.tee 2" "" .:0
+0x2a4a 3 "i32.load" "i32.load align=4" "" .:0
+0x2a4d 2 "local.set" "local.set 0" "" .:0
+0x2a4f 2 "local.get" "local.get 2" "" .:0
+0x2a51 3 "i32.load" "i32.load offset=8 align=4" "" .:0
+0x2a54 2 "local.set" "local.set 3" "" .:0
+0x2a56 2 "local.get" "local.get 2" "" .:0
+0x2a58 3 "i32.load" "i32.load offset=12 align=4" "" .:0
+0x2a5b 2 "local.set" "local.set 5" "" .:0
+0x2a5d 2 "local.get" "local.get 2" "" .:0
+0x2a5f 3 "i32.load" "i32.load offset=4 align=4" "" .:0
+0x2a62 2 "local.set" "local.set 1" "" .:0
+0x2a64 1 "end" "end" "" .:0
+0x2a65 2 "block" "block (result i32)" "" .:0
+0x2a67 2 "global.get" "global.get 1" "" .:0
+0x2a69 2 "i32.const" "i32.const 2" "" .:0
+0x2a6b 1 "i32.eq" "i32.eq" "" .:0
+0x2a6c 2 "if" "if" "" .:0
+0x2a6e 2 "global.get" "global.get 2" "" .:0
+0x2a70 2 "global.get" "global.get 2" "" .:0
+0x2a72 3 "i32.load" "i32.load align=4" "" .:0
+0x2a75 2 "i32.const" "i32.const 4" "" .:0
+0x2a77 1 "i32.sub" "i32.sub" "" .:0
+0x2a78 3 "i32.store" "i32.store align=4" "" .:0
+0x2a7b 2 "global.get" "global.get 2" "" .:0
+0x2a7d 3 "i32.load" "i32.load align=4" "" .:0
+0x2a80 3 "i32.load" "i32.load align=4" "" .:0
+0x2a83 2 "local.set" "local.set 4" "" .:0
+0x2a85 1 "end" "end" "" .:0
+0x2a86 2 "global.get" "global.get 1" "" .:0
+0x2a88 1 "i32.eqz" "i32.eqz" "" .:0
+0x2a89 2 "if" "if" "" .:0
+0x2a8b 2 "global.get" "global.get 0" "" .:0
+0x2a8d 3 "i32.const" "i32.const 80" "" .:0
+0x2a90 1 "i32.sub" "i32.sub" "" .:0
+0x2a91 2 "local.tee" "local.tee 3" "" .:0
+0x2a93 2 "global.set" "global.set 0" "" .:0
+0x2a95 2 "local.get" "local.get 3" "" .:0
+0x2a97 2 "i32.const" "i32.const 16" "" .:0
+0x2a99 3 "i32.store" "i32.store offset=12 align=4" "" task_asyncify.go:108
+0x2a9c 2 "local.get" "local.get 3" "" task_asyncify.go:108
+0x2a9e 2 "i32.const" "i32.const 16" "" task_asyncify.go:108
+0x2aa0 1 "i32.add" "i32.add" "" task_asyncify.go:108
+0x2aa1 2 "i32.const" "i32.const 0" "" task_asyncify.go:108
+0x2aa3 3 "i32.const" "i32.const 64" "" task_asyncify.go:108
+0x2aa6 3 "memory.fill" "memory.fill" "" task_asyncify.go:108
+0x2aa9 2 "local.get" "local.get 3" "" task_asyncify.go:108
+0x2aab 4 "i32.const" "i32.const 66588" "" task_asyncify.go:108
+0x2aaf 3 "i32.load" "i32.load align=4" "" task_asyncify.go:108
+0x2ab2 2 "local.tee" "local.tee 5" "" task_asyncify.go:108
+0x2ab4 3 "i32.store" "i32.store offset=8 align=4" "" task_asyncify.go:108
+0x2ab7 4 "i32.const" "i32.const 66588" "" task_asyncify.go:108
+0x2abb 2 "local.get" "local.get 3" "" task_asyncify.go:108
+0x2abd 2 "i32.const" "i32.const 8" "" task_asyncify.go:108
+0x2abf 1 "i32.add" "i32.add" "" task_asyncify.go:108
+0x2ac0 3 "i32.store" "i32.store align=4" "" task_asyncify.go:108
+0x2ac3 4 "i32.const" "i32.const 66420" "" task_asyncify.go:108
+0x2ac7 2 "memory.size" "memory.size" "" runtime_wasmentry.go:19
+0x2ac9 2 "i32.const" "i32.const 16" "" runtime_wasmentry.go:19
+0x2acb 1 "i32.shl" "i32.shl" "" runtime_wasmentry.go:19
+0x2acc 2 "local.tee" "local.tee 0" "" runtime_wasmentry.go:19
+0x2ace 3 "i32.store" "i32.store align=4" "" runtime_wasmentry.go:19
+0x2ad1 1 "end" "end" "" runtime_wasmentry.go:19
+0x2ad2 2 "global.get" "global.get 1" "" runtime_wasmentry.go:19
+0x2ad4 1 "i32.eqz" "i32.eqz" "" runtime_wasmentry.go:19
+0x2ad5 2 "local.get" "local.get 4" "" runtime_wasmentry.go:19
+0x2ad7 1 "i32.eqz" "i32.eqz" "" runtime_wasmentry.go:19
+0x2ad8 1 "i32.or" "i32.or" "" runtime_wasmentry.go:19
+0x2ad9 2 "if" "if" "" runtime_wasmentry.go:19
+0x2adb 2 "call" "call arc4random" "" ref=0xc call=true runtime_tinygowasm.go:106
+0x2add 2 "i32.const" "i32.const 0" "" runtime_tinygowasm.go:106
+0x2adf 2 "global.get" "global.get 1" "" runtime_tinygowasm.go:106
+0x2ae1 2 "i32.const" "i32.const 1" "" runtime_tinygowasm.go:106
+0x2ae3 1 "i32.eq" "i32.eq" "" runtime_tinygowasm.go:106
+0x2ae4 2 "br_if" "br_if 1" "" runtime_tinygowasm.go:106
+0x2ae6 1 "drop" "drop" "" runtime_tinygowasm.go:106
+0x2ae7 2 "local.set" "local.set 0" "" runtime_tinygowasm.go:106
+0x2ae9 1 "end" "end" "" runtime_tinygowasm.go:106
+0x2aea 2 "global.get" "global.get 1" "" runtime_tinygowasm.go:106
+0x2aec 1 "i32.eqz" "i32.eqz" "" runtime_tinygowasm.go:106
+0x2aed 2 "local.get" "local.get 4" "" runtime_tinygowasm.go:106
+0x2aef 2 "i32.const" "i32.const 1" "" runtime_tinygowasm.go:106
+0x2af1 1 "i32.eq" "i32.eq" "" runtime_tinygowasm.go:106
+0x2af2 1 "i32.or" "i32.or" "" runtime_tinygowasm.go:106
+0x2af3 2 "if" "if" "" runtime_tinygowasm.go:106
+0x2af5 2 "call" "call arc4random" "" ref=0xc call=true runtime_tinygowasm.go:107
+0x2af7 2 "i32.const" "i32.const 1" "" runtime_tinygowasm.go:107
+0x2af9 2 "global.get" "global.get 1" "" runtime_tinygowasm.go:107
+0x2afb 2 "i32.const" "i32.const 1" "" runtime_tinygowasm.go:107
+0x2afd 1 "i32.eq" "i32.eq" "" runtime_tinygowasm.go:107
+0x2afe 2 "br_if" "br_if 1" "" runtime_tinygowasm.go:107
+0x2b00 1 "drop" "drop" "" runtime_tinygowasm.go:107
+0x2b01 2 "local.set" "local.set 1" "" runtime_tinygowasm.go:107
+0x2b03 1 "end" "end" "" runtime_tinygowasm.go:107
+0x2b04 2 "global.get" "global.get 1" "" runtime_tinygowasm.go:107
+0x2b06 1 "i32.eqz" "i32.eqz" "" runtime_tinygowasm.go:107
+0x2b07 2 "if" "if" "" runtime_tinygowasm.go:107
+0x2b09 4 "i32.const" "i32.const 65804" "" task_asyncify.go:108
+0x2b0d 2 "local.get" "local.get 0" "" task_asyncify.go:108
+0x2b0f 2 "i32.const" "i32.const 1" "" task_asyncify.go:108
+0x2b11 1 "i32.or" "i32.or" "" algorithm.go:29
+0x2b12 3 "i32.store" "i32.store align=4" "" algorithm.go:29
+0x2b15 2 "call" "call runtime.calculateHeapAddresses" "" ref=0x28 call=true gc_blocks.go:314
+0x2b17 2 "local.get" "local.get 3" "" task_asyncify.go:108
+0x2b19 4 "i32.const" "i32.const 66552" "" task_asyncify.go:108
+0x2b1d 3 "i32.load" "i32.load align=4" "" gc_blocks.go:317
+0x2b20 2 "local.tee" "local.tee 0" "" runtime.go:53
+0x2b22 3 "i32.store" "i32.store offset=20 align=4" "" runtime.go:53
+0x2b25 2 "local.get" "local.get 3" "" gc_blocks.go:317
+0x2b27 2 "local.get" "local.get 0" "" gc_blocks.go:317
+0x2b29 3 "i32.store" "i32.store offset=16 align=4" "" gc_blocks.go:317
+0x2b2c 4 "i32.const" "i32.const 66420" "" gc_blocks.go:317
+0x2b30 3 "i32.load" "i32.load align=4" "" gc_blocks.go:317
+0x2b33 2 "local.get" "local.get 0" "" gc_blocks.go:317
+0x2b35 1 "i32.sub" "i32.sub" "" gc_blocks.go:317
+0x2b36 2 "local.tee" "local.tee 1" "" runtime.go:53
+0x2b38 2 "if" "if" "" runtime.go:53
+0x2b3a 2 "local.get" "local.get 0" "" runtime.go:53
+0x2b3c 2 "i32.const" "i32.const 0" "" runtime.go:53
+0x2b3e 2 "local.get" "local.get 1" "" runtime.go:53
+0x2b40 3 "memory.fill" "memory.fill" "" runtime.go:53
+0x2b43 1 "end" "end" "" runtime.go:53
+0x2b44 1 "end" "end" "" runtime.go:53
+0x2b45 2 "global.get" "global.get 1" "" runtime.go:53
+0x2b47 1 "i32.eqz" "i32.eqz" "" runtime.go:53
+0x2b48 2 "local.get" "local.get 4" "" runtime.go:53
+0x2b4a 2 "i32.const" "i32.const 2" "" runtime.go:53
+0x2b4c 1 "i32.eq" "i32.eq" "" runtime.go:53
+0x2b4d 1 "i32.or" "i32.or" "" runtime.go:53
+0x2b4e 2 "if" "if" "" runtime.go:53
+0x2b50 2 "call" "call runtime.buildFreeRanges" "" ref=0x29 call=true gc_blocks.go:321
+0x2b52 2 "i32.const" "i32.const 2" "" gc_blocks.go:321
+0x2b54 2 "global.get" "global.get 1" "" gc_blocks.go:321
+0x2b56 2 "i32.const" "i32.const 1" "" gc_blocks.go:321
+0x2b58 1 "i32.eq" "i32.eq" "" gc_blocks.go:321
+0x2b59 2 "br_if" "br_if 1" "" gc_blocks.go:321
+0x2b5b 1 "drop" "drop" "" gc_blocks.go:321
+0x2b5c 2 "local.set" "local.set 0" "" gc_blocks.go:321
+0x2b5e 1 "end" "end" "" gc_blocks.go:321
+0x2b5f 2 "global.get" "global.get 1" "" gc_blocks.go:321
+0x2b61 1 "i32.eqz" "i32.eqz" "" gc_blocks.go:321
+0x2b62 2 "local.get" "local.get 4" "" gc_blocks.go:321
+0x2b64 2 "i32.const" "i32.const 3" "" gc_blocks.go:321
+0x2b66 1 "i32.eq" "i32.eq" "" gc_blocks.go:321
+0x2b67 1 "i32.or" "i32.or" "" gc_blocks.go:321
+0x2b68 2 "if" "if" "" gc_blocks.go:321
+0x2b6a 2 "i32.const" "i32.const 56" "" gc_blocks.go:321
+0x2b6c 4 "i32.const" "i32.const 324829" "" gc_blocks.go:321
+0x2b70 2 "call" "call runtime.alloc" "" ref=0x1b call=true task_asyncify.go:53
+0x2b72 2 "i32.const" "i32.const 3" "" task_asyncify.go:53
+0x2b74 2 "global.get" "global.get 1" "" task_asyncify.go:53
+0x2b76 2 "i32.const" "i32.const 1" "" task_asyncify.go:53
+0x2b78 1 "i32.eq" "i32.eq" "" task_asyncify.go:53
+0x2b79 2 "br_if" "br_if 1" "" task_asyncify.go:53
+0x2b7b 1 "drop" "drop" "" task_asyncify.go:53
+0x2b7c 2 "local.set" "local.set 0" "" task_asyncify.go:53
+0x2b7e 1 "end" "end" "" task_asyncify.go:53
+0x2b7f 2 "global.get" "global.get 1" "" task_asyncify.go:53
+0x2b81 1 "i32.eqz" "i32.eqz" "" task_asyncify.go:53
+0x2b82 2 "if" "if" "" task_asyncify.go:53
+0x2b84 2 "local.get" "local.get 0" "" task_asyncify.go:53
+0x2b86 2 "i32.const" "i32.const 0" "" task_asyncify.go:53
+0x2b88 3 "i32.store" "i32.store offset=24 align=4" "" task_asyncify.go:68
+0x2b8b 2 "local.get" "local.get 0" "" task_asyncify.go:67
+0x2b8d 2 "i32.const" "i32.const 1" "" task_asyncify.go:67
+0x2b8f 3 "i32.store" "i32.store offset=20 align=4" "" task_asyncify.go:67
+0x2b92 2 "local.get" "local.get 3" "" task_asyncify.go:54
+0x2b94 2 "local.get" "local.get 0" "" task_asyncify.go:54
+0x2b96 3 "i32.store" "i32.store offset=24 align=4" "" task_asyncify.go:54
+0x2b99 1 "end" "end" "" task_asyncify.go:54
+0x2b9a 2 "global.get" "global.get 1" "" task_asyncify.go:54
+0x2b9c 1 "i32.eqz" "i32.eqz" "" task_asyncify.go:54
+0x2b9d 2 "local.get" "local.get 4" "" task_asyncify.go:54
+0x2b9f 2 "i32.const" "i32.const 4" "" task_asyncify.go:54
+0x2ba1 1 "i32.eq" "i32.eq" "" task_asyncify.go:54
+0x2ba2 1 "i32.or" "i32.or" "" task_asyncify.go:54
+0x2ba3 2 "if" "if" "" task_asyncify.go:54
+0x2ba5 4 "i32.const" "i32.const 65536" "" task_asyncify.go:54
+0x2ba9 2 "i32.const" "i32.const 0" "" task_asyncify.go:54
+0x2bab 2 "call" "call runtime.alloc" "" ref=0x1b call=true task_asyncify.go:71
+0x2bad 2 "i32.const" "i32.const 4" "" task_asyncify.go:71
+0x2baf 2 "global.get" "global.get 1" "" task_asyncify.go:71
+0x2bb1 2 "i32.const" "i32.const 1" "" task_asyncify.go:71
+0x2bb3 1 "i32.eq" "i32.eq" "" task_asyncify.go:71
+0x2bb4 2 "br_if" "br_if 1" "" task_asyncify.go:71
+0x2bb6 1 "drop" "drop" "" task_asyncify.go:71
+0x2bb7 2 "local.set" "local.set 1" "" task_asyncify.go:77
+0x2bb9 1 "end" "end" "" task_asyncify.go:77
+0x2bba 2 "global.get" "global.get 1" "" task_asyncify.go:77
+0x2bbc 1 "i32.eqz" "i32.eqz" "" task_asyncify.go:77
+0x2bbd 2 "if" "if" "" task_asyncify.go:77
+0x2bbf 2 "local.get" "local.get 0" "" task_asyncify.go:77
+0x2bc1 2 "local.get" "local.get 1" "" task_asyncify.go:77
+0x2bc3 3 "i32.store" "i32.store offset=36 align=4" "" task_asyncify.go:77
+0x2bc6 2 "local.get" "local.get 1" "" task_asyncify.go:77
+0x2bc8 6 "i32.const" "i32.const -1204030091" "" task_asyncify.go:77
+0x2bce 3 "i32.store" "i32.store align=4" "" task_asyncify.go:78
+0x2bd1 2 "local.get" "local.get 0" "" task_asyncify.go:78
+0x2bd3 2 "local.get" "local.get 1" "" task_asyncify.go:78
+0x2bd5 4 "i32.const" "i32.const 65536" "" task_asyncify.go:78
+0x2bd9 1 "i32.add" "i32.add" "" task_asyncify.go:82
+0x2bda 3 "i32.store" "i32.store offset=32 align=4" "" task_asyncify.go:82
+0x2bdd 2 "local.get" "local.get 0" "" task_asyncify.go:82
+0x2bdf 2 "local.get" "local.get 1" "" task_asyncify.go:82
+0x2be1 2 "i32.const" "i32.const 4" "" task_asyncify.go:82
+0x2be3 1 "i32.add" "i32.add" "" task_asyncify.go:81
+0x2be4 3 "i32.store" "i32.store offset=28 align=4" "" task_asyncify.go:81
+0x2be7 2 "local.get" "local.get 3" "" task_asyncify.go:77
+0x2be9 2 "local.get" "local.get 1" "" task_asyncify.go:77
+0x2beb 3 "i32.store" "i32.store offset=32 align=4" "" task_asyncify.go:77
+0x2bee 2 "local.get" "local.get 3" "" task_asyncify.go:77
+0x2bf0 2 "local.get" "local.get 1" "" task_asyncify.go:77
+0x2bf2 3 "i32.store" "i32.store offset=36 align=4" "" task_asyncify.go:77
+0x2bf5 2 "local.get" "local.get 3" "" task_asyncify.go:77
+0x2bf7 2 "local.get" "local.get 1" "" task_asyncify.go:77
+0x2bf9 3 "i32.store" "i32.store offset=28 align=4" "" task_asyncify.go:77
+0x2bfc 2 "local.get" "local.get 3" "" task_asyncify.go:77
+0x2bfe 4 "i32.const" "i32.const 66604" "" task_asyncify.go:77
+0x2c02 3 "i32.load" "i32.load align=4" "" queue.go:20
+0x2c05 2 "local.tee" "local.tee 1" "" queue.go:20
+0x2c07 3 "i32.store" "i32.store offset=40 align=4" "" queue.go:20
+0x2c0a 2 "local.get" "local.get 1" "" queue.go:20
+0x2c0c 2 "if" "if" "" queue.go:20
+0x2c0e 2 "local.get" "local.get 3" "" queue.go:21
+0x2c10 2 "local.get" "local.get 1" "" queue.go:21
+0x2c12 3 "i32.store" "i32.store offset=44 align=4" "" queue.go:21
+0x2c15 2 "local.get" "local.get 1" "" queue.go:21
+0x2c17 2 "local.get" "local.get 0" "" queue.go:21
+0x2c19 3 "i32.store" "i32.store align=4" "" queue.go:21
+0x2c1c 1 "end" "end" "" queue.go:21
+0x2c1d 2 "local.get" "local.get 0" "" queue.go:23
+0x2c1f 2 "i32.const" "i32.const 0" "" queue.go:23
+0x2c21 3 "i32.store" "i32.store align=4" "" queue.go:24
+0x2c24 4 "i32.const" "i32.const 66604" "" queue.go:23
+0x2c28 2 "local.get" "local.get 0" "" queue.go:23
+0x2c2a 3 "i32.store" "i32.store align=4" "" queue.go:23
+0x2c2d 2 "local.get" "local.get 3" "" queue.go:23
+0x2c2f 4 "i32.const" "i32.const 66600" "" queue.go:23
+0x2c33 3 "i32.load" "i32.load align=4" "" queue.go:25
+0x2c36 2 "local.tee" "local.tee 1" "" queue.go:25
+0x2c38 3 "i32.store" "i32.store offset=48 align=4" "" queue.go:25
+0x2c3b 2 "local.get" "local.get 1" "" queue.go:25
+0x2c3d 1 "i32.eqz" "i32.eqz" "" queue.go:25
+0x2c3e 2 "if" "if" "" queue.go:25
+0x2c40 4 "i32.const" "i32.const 66600" "" queue.go:25
+0x2c44 2 "local.get" "local.get 0" "" queue.go:26
+0x2c46 3 "i32.store" "i32.store align=4" "" queue.go:26
+0x2c49 1 "end" "end" "" queue.go:26
+0x2c4a 1 "end" "end" "" queue.go:26
+0x2c4b 2 "loop" "loop" "" queue.go:26
+0x2c4d 2 "global.get" "global.get 1" "" queue.go:26
+0x2c4f 1 "i32.eqz" "i32.eqz" "" queue.go:26
+0x2c50 2 "if" "if" "" queue.go:26
+0x2c52 4 "i32.const" "i32.const 66596" "" queue.go:26
+0x2c56 3 "i32.load8_u" "i32.load8_u" "" scheduler_cooperative.go:141
+0x2c59 2 "local.set" "local.set 0" "" scheduler_cooperative.go:141
+0x2c5b 1 "end" "end" "" scheduler_cooperative.go:141
+0x2c5c 2 "block" "block" "" scheduler_cooperative.go:141
+0x2c5e 2 "block" "block" "" scheduler_cooperative.go:141
+0x2c60 2 "global.get" "global.get 1" "" scheduler_cooperative.go:141
+0x2c62 1 "i32.eqz" "i32.eqz" "" scheduler_cooperative.go:141
+0x2c63 2 "if" "if" "" scheduler_cooperative.go:141
+0x2c65 2 "local.get" "local.get 0" "" scheduler_cooperative.go:141
+0x2c67 1 "i32.eqz" "i32.eqz" "" scheduler_cooperative.go:141
+0x2c68 2 "if" "if" "" scheduler_cooperative.go:141
+0x2c6a 2 "local.get" "local.get 3" "" scheduler_cooperative.go:141
+0x2c6c 4 "i32.const" "i32.const 66600" "" scheduler_cooperative.go:141
+0x2c70 3 "i32.load" "i32.load align=4" "" queue.go:34
+0x2c73 2 "local.tee" "local.tee 0" "" queue.go:35
+0x2c75 3 "i32.store" "i32.store offset=64 align=4" "" queue.go:35
+0x2c78 2 "local.get" "local.get 3" "" queue.go:35
+0x2c7a 2 "local.get" "local.get 0" "" queue.go:35
+0x2c7c 3 "i32.store" "i32.store offset=52 align=4" "" queue.go:35
+0x2c7f 2 "local.get" "local.get 0" "" queue.go:35
+0x2c81 1 "i32.eqz" "i32.eqz" "" queue.go:35
+0x2c82 2 "local.tee" "local.tee 1" "" queue.go:35
+0x2c84 2 "br_if" "br_if 2" "" queue.go:35
+0x2c86 4 "i32.const" "i32.const 66600" "" queue.go:35
+0x2c8a 2 "local.get" "local.get 0" "" queue.go:39
+0x2c8c 3 "i32.load" "i32.load align=4" "" queue.go:39
+0x2c8f 2 "local.tee" "local.tee 1" "" queue.go:39
+0x2c91 3 "i32.store" "i32.store align=4" "" queue.go:39
+0x2c94 2 "local.get" "local.get 3" "" queue.go:39
+0x2c96 2 "local.get" "local.get 1" "" queue.go:39
+0x2c98 3 "i32.store" "i32.store offset=56 align=4" "" queue.go:39
+0x2c9b 2 "local.get" "local.get 3" "" queue.go:39
+0x2c9d 4 "i32.const" "i32.const 66604" "" queue.go:39
+0x2ca1 3 "i32.load" "i32.load align=4" "" queue.go:40
+0x2ca4 2 "local.tee" "local.tee 1" "" queue.go:40
+0x2ca6 3 "i32.store" "i32.store offset=60 align=4" "" queue.go:40
+0x2ca9 2 "local.get" "local.get 0" "" queue.go:40
+0x2cab 2 "local.get" "local.get 1" "" queue.go:40
+0x2cad 1 "i32.eq" "i32.eq" "" queue.go:40
+0x2cae 2 "if" "if" "" queue.go:40
+0x2cb0 4 "i32.const" "i32.const 66604" "" queue.go:40
+0x2cb4 2 "i32.const" "i32.const 0" "" queue.go:40
+0x2cb6 3 "i32.store" "i32.store align=4" "" queue.go:41
+0x2cb9 1 "end" "end" "" queue.go:41
+0x2cba 2 "local.get" "local.get 0" "" queue.go:41
+0x2cbc 2 "i32.const" "i32.const 0" "" queue.go:41
+0x2cbe 3 "i32.store" "i32.store align=4" "" queue.go:43
+0x2cc1 2 "local.get" "local.get 3" "" queue.go:43
+0x2cc3 4 "i32.const" "i32.const 66416" "" queue.go:43
+0x2cc7 3 "i32.load" "i32.load align=4" "" task_asyncify.go:110
+0x2cca 2 "local.tee" "local.tee 1" "" task_asyncify.go:111
+0x2ccc 3 "i32.store" "i32.store offset=68 align=4" "" task_asyncify.go:111
+0x2ccf 2 "local.get" "local.get 1" "" task_asyncify.go:111
+0x2cd1 1 "i32.eqz" "i32.eqz" "" task_asyncify.go:111
+0x2cd2 2 "if" "if" "" task_asyncify.go:111
+0x2cd4 4 "i32.const" "i32.const 66548" "" task_asyncify.go:111
+0x2cd8 2 "call" "call tinygo_getCurrentStackPointer" "" ref=0x4 call=true arch_tinygowasm.go:81
+0x2cda 3 "i32.store" "i32.store align=4" "" arch_tinygowasm.go:81
+0x2cdd 1 "end" "end" "" arch_tinygowasm.go:81
+0x2cde 4 "i32.const" "i32.const 66416" "" arch_tinygowasm.go:81
+0x2ce2 2 "local.get" "local.get 0" "" task_asyncify.go:116
+0x2ce4 3 "i32.store" "i32.store align=4" "" task_asyncify.go:116
+0x2ce7 2 "local.get" "local.get 0" "" gc_stack_portable.go:65
+0x2ce9 3 "i32.load" "i32.load offset=16 align=4" "" gc_stack_portable.go:65
+0x2cec 2 "local.set" "local.set 2" "" gc_stack_portable.go:65
+0x2cee 2 "local.get" "local.get 0" "" gc_stack_portable.go:65
+0x2cf0 4 "i32.const" "i32.const 66588" "" gc_stack_portable.go:65
+0x2cf4 3 "i32.load" "i32.load align=4" "" gc_stack_portable.go:65
+0x2cf7 3 "i32.store" "i32.store offset=16 align=4" "" gc_stack_portable.go:65
+0x2cfa 4 "i32.const" "i32.const 66588" "" gc_stack_portable.go:65
+0x2cfe 2 "local.get" "local.get 2" "" gc_stack_portable.go:65
+0x2d00 3 "i32.store" "i32.store align=4" "" gc_stack_portable.go:65
+0x2d03 2 "local.get" "local.get 0" "" gc_stack_portable.go:65
+0x2d05 2 "i32.const" "i32.const 20" "" gc_stack_portable.go:65
+0x2d07 1 "i32.add" "i32.add" "" gc_stack_portable.go:65
+0x2d08 2 "local.set" "local.set 2" "" gc_stack_portable.go:65
+0x2d0a 2 "local.get" "local.get 0" "" gc_stack_portable.go:65
+0x2d0c 3 "i32.load8_u" "i32.load8_u offset=40" "" gc_stack_portable.go:65
+0x2d0f 2 "if" "if" "" gc_stack_portable.go:65
+0x2d11 2 "local.get" "local.get 2" "" task_asyncify.go:121
+0x2d13 2 "call" "call tinygo_rewind" "" ref=0x7 call=true task_asyncify.go:121
+0x2d15 2 "br" "br 4" "" task_asyncify.go:121
+0x2d17 1 "end" "end" "" task_asyncify.go:121
+0x2d18 2 "local.get" "local.get 2" "" task_asyncify.go:118
+0x2d1a 2 "call" "call tinygo_launch" "" ref=0x6 call=true task_asyncify.go:118
+0x2d1c 2 "local.get" "local.get 0" "" task_asyncify.go:118
+0x2d1e 2 "i32.const" "i32.const 1" "" task_asyncify.go:118
+0x2d20 3 "i32.store8" "i32.store8 offset=40" "" task_asyncify.go:119
+0x2d23 2 "br" "br 3" "" task_asyncify.go:119
+0x2d25 1 "end" "end" "" task_asyncify.go:119
+0x2d26 2 "call" "call dummy" "" ref=0x8 call=true runtime_tinygowasm.go:84
+0x2d28 1 "end" "end" "" runtime_tinygowasm.go:84
+0x2d29 2 "global.get" "global.get 1" "" runtime_tinygowasm.go:84
+0x2d2b 1 "i32.eqz" "i32.eqz" "" runtime_tinygowasm.go:84
+0x2d2c 2 "local.get" "local.get 4" "" runtime_tinygowasm.go:84
+0x2d2e 2 "i32.const" "i32.const 5" "" runtime_tinygowasm.go:84
+0x2d30 1 "i32.eq" "i32.eq" "" runtime_tinygowasm.go:84
+0x2d31 1 "i32.or" "i32.or" "" runtime_tinygowasm.go:84
+0x2d32 2 "if" "if" "" runtime_tinygowasm.go:84
+0x2d34 2 "i32.const" "i32.const 0" "" runtime_wasmentry.go:25
+0x2d36 2 "call" "call wasi_snapshot_preview1.proc_exit" "" ref=0x1 call=true runtime_tinygowasm.go:87
+0x2d38 2 "i32.const" "i32.const 5" "" runtime_tinygowasm.go:87
+0x2d3a 2 "global.get" "global.get 1" "" runtime_tinygowasm.go:87
+0x2d3c 2 "i32.const" "i32.const 1" "" runtime_tinygowasm.go:87
+0x2d3e 1 "i32.eq" "i32.eq" "" runtime_tinygowasm.go:87
+0x2d3f 2 "br_if" "br_if 4" "" runtime_tinygowasm.go:87
+0x2d41 1 "drop" "drop" "" runtime_tinygowasm.go:87
+0x2d42 1 "end" "end" "" runtime_tinygowasm.go:87
+0x2d43 2 "global.get" "global.get 1" "" runtime_tinygowasm.go:87
+0x2d45 1 "i32.eqz" "i32.eqz" "" runtime_tinygowasm.go:87
+0x2d46 2 "if" "if" "" runtime_tinygowasm.go:87
+0x2d48 4 "i32.const" "i32.const 66588" "" runtime_wasmentry.go:25
+0x2d4c 2 "local.get" "local.get 5" "" runtime_wasmentry.go:25
+0x2d4e 3 "i32.store" "i32.store align=4" "" runtime_wasmentry.go:25
+0x2d51 2 "local.get" "local.get 3" "" runtime_wasmentry.go:25
+0x2d53 3 "i32.const" "i32.const 80" "" runtime_wasmentry.go:25
+0x2d56 1 "i32.add" "i32.add" "" runtime_wasmentry.go:25
+0x2d57 2 "global.set" "global.set 0" "" runtime_wasmentry.go:25
+0x2d59 1 "return" "return" "" runtime_wasmentry.go:25
+0x2d5a 1 "end" "end" "" runtime_wasmentry.go:25
+0x2d5b 1 "end" "end" "" runtime_wasmentry.go:25
+0x2d5c 2 "global.get" "global.get 1" "" runtime_wasmentry.go:25
+0x2d5e 1 "i32.eqz" "i32.eqz" "" runtime_wasmentry.go:25
+0x2d5f 2 "local.get" "local.get 4" "" runtime_wasmentry.go:25
+0x2d61 2 "i32.const" "i32.const 6" "" runtime_wasmentry.go:25
+0x2d63 1 "i32.eq" "i32.eq" "" runtime_wasmentry.go:25
+0x2d64 1 "i32.or" "i32.or" "" runtime_wasmentry.go:25
+0x2d65 2 "if" "if" "" runtime_wasmentry.go:25
+0x2d67 2 "call" "call runtime.waitForEvents" "" ref=0x2b call=true scheduler_cooperative.go:181
+0x2d69 2 "i32.const" "i32.const 6" "" scheduler_cooperative.go:181
+0x2d6b 2 "global.get" "global.get 1" "" scheduler_cooperative.go:181
+0x2d6d 2 "i32.const" "i32.const 1" "" scheduler_cooperative.go:181
+0x2d6f 1 "i32.eq" "i32.eq" "" scheduler_cooperative.go:181
+0x2d70 2 "br_if" "br_if 3" "" scheduler_cooperative.go:181
+0x2d72 1 "drop" "drop" "" scheduler_cooperative.go:181
+0x2d73 1 "end" "end" "" scheduler_cooperative.go:181
+0x2d74 2 "global.get" "global.get 1" "" scheduler_cooperative.go:181
+0x2d76 1 "i32.eqz" "i32.eqz" "" scheduler_cooperative.go:181
+0x2d77 2 "if" "if" "" scheduler_cooperative.go:181
+0x2d79 1 "unreachable" "unreachable" "" scheduler_cooperative.go:181
+0x2d7a 1 "end" "end" "" scheduler_cooperative.go:181
+0x2d7b 1 "end" "end" "" scheduler_cooperative.go:181
+0x2d7c 2 "global.get" "global.get 1" "" scheduler_cooperative.go:181
+0x2d7e 1 "i32.eqz" "i32.eqz" "" scheduler_cooperative.go:181
+0x2d7f 2 "if" "if" "" scheduler_cooperative.go:181
+0x2d81 2 "local.get" "local.get 0" "" gc_stack_portable.go:65
+0x2d83 3 "i32.load" "i32.load offset=16 align=4" "" gc_stack_portable.go:65
+0x2d86 2 "local.set" "local.set 2" "" gc_stack_portable.go:65
+0x2d88 2 "local.get" "local.get 0" "" gc_stack_portable.go:65
+0x2d8a 4 "i32.const" "i32.const 66588" "" gc_stack_portable.go:65
+0x2d8e 3 "i32.load" "i32.load align=4" "" gc_stack_portable.go:65
+0x2d91 3 "i32.store" "i32.store offset=16 align=4" "" gc_stack_portable.go:65
+0x2d94 4 "i32.const" "i32.const 66416" "" gc_stack_portable.go:65
+0x2d98 2 "local.get" "local.get 1" "" task_asyncify.go:123
+0x2d9a 3 "i32.store" "i32.store align=4" "" task_asyncify.go:123
+0x2d9d 4 "i32.const" "i32.const 66588" "" task_asyncify.go:123
+0x2da1 2 "local.get" "local.get 2" "" gc_stack_portable.go:65
+0x2da3 3 "i32.store" "i32.store align=4" "" gc_stack_portable.go:65
+0x2da6 2 "local.get" "local.get 3" "" task_asyncify.go:125
+0x2da8 2 "local.get" "local.get 0" "" task_asyncify.go:125
+0x2daa 3 "i32.load" "i32.load offset=28 align=4" "" task_asyncify.go:125
+0x2dad 2 "local.tee" "local.tee 1" "" task_asyncify.go:125
+0x2daf 3 "i32.store" "i32.store offset=72 align=4" "" task_asyncify.go:125
+0x2db2 2 "local.get" "local.get 3" "" task_asyncify.go:125
+0x2db4 2 "local.get" "local.get 0" "" task_asyncify.go:125
+0x2db6 3 "i32.load" "i32.load offset=32 align=4" "" task_asyncify.go:125
+0x2db9 2 "local.tee" "local.tee 0" "" task_asyncify.go:125
+0x2dbb 3 "i32.store" "i32.store offset=76 align=4" "" task_asyncify.go:125
+0x2dbe 2 "local.get" "local.get 0" "" task_asyncify.go:125
+0x2dc0 2 "local.get" "local.get 1" "" task_asyncify.go:125
+0x2dc2 1 "i32.ge_u" "i32.ge_u" "" task_asyncify.go:125
+0x2dc3 2 "local.tee" "local.tee 0" "" task_asyncify.go:125
+0x2dc5 2 "br_if" "br_if 1" "" task_asyncify.go:125
+0x2dc7 1 "end" "end" "" task_asyncify.go:125
+0x2dc8 1 "end" "end" "" task_asyncify.go:125
+0x2dc9 2 "global.get" "global.get 1" "" task_asyncify.go:125
+0x2dcb 1 "i32.eqz" "i32.eqz" "" task_asyncify.go:125
+0x2dcc 2 "local.get" "local.get 4" "" task_asyncify.go:125
+0x2dce 2 "i32.const" "i32.const 7" "" task_asyncify.go:125
+0x2dd0 1 "i32.eq" "i32.eq" "" task_asyncify.go:125
+0x2dd1 1 "i32.or" "i32.or" "" task_asyncify.go:125
+0x2dd2 2 "if" "if" "" task_asyncify.go:125
+0x2dd4 4 "i32.const" "i32.const 65552" "" .:0
+0x2dd8 2 "i32.const" "i32.const 14" "" .:0
+0x2dda 2 "call" "call runtime.runtimePanic" "" ref=0x11 call=true .:0
+0x2ddc 2 "i32.const" "i32.const 7" "" .:0
+0x2dde 2 "global.get" "global.get 1" "" .:0
+0x2de0 2 "i32.const" "i32.const 1" "" .:0
+0x2de2 1 "i32.eq" "i32.eq" "" .:0
+0x2de3 2 "br_if" "br_if 1" "" .:0
+0x2de5 1 "drop" "drop" "" .:0
+0x2de6 1 "end" "end" "" .:0
+0x2de7 2 "global.get" "global.get 1" "" .:0
+0x2de9 1 "i32.eqz" "i32.eqz" "" .:0
+0x2dea 2 "if" "if" "" .:0
+0x2dec 1 "unreachable" "unreachable" "" .:0
+0x2ded 1 "end" "end" "" .:0
+0x2dee 1 "return" "return" "" .:0
+0x2def 1 "end" "end" "" .:0
+0x2df0 2 "local.set" "local.set 2" "" .:0
+0x2df2 2 "global.get" "global.get 2" "" .:0
+0x2df4 3 "i32.load" "i32.load align=4" "" .:0
+0x2df7 2 "local.get" "local.get 2" "" .:0
+0x2df9 3 "i32.store" "i32.store align=4" "" .:0
+0x2dfc 2 "global.get" "global.get 2" "" .:0
+0x2dfe 2 "global.get" "global.get 2" "" .:0
+0x2e00 3 "i32.load" "i32.load align=4" "" .:0
+0x2e03 2 "i32.const" "i32.const 4" "" .:0
+0x2e05 1 "i32.add" "i32.add" "" .:0
+0x2e06 3 "i32.store" "i32.store align=4" "" .:0
+0x2e09 2 "global.get" "global.get 2" "" .:0
+0x2e0b 3 "i32.load" "i32.load align=4" "" .:0
+0x2e0e 2 "local.tee" "local.tee 2" "" .:0
+0x2e10 2 "local.get" "local.get 0" "" .:0
+0x2e12 3 "i32.store" "i32.store align=4" "" .:0
+0x2e15 2 "local.get" "local.get 2" "" .:0
+0x2e17 2 "local.get" "local.get 1" "" .:0
+0x2e19 3 "i32.store" "i32.store offset=4 align=4" "" .:0
+0x2e1c 2 "local.get" "local.get 2" "" .:0
+0x2e1e 2 "local.get" "local.get 3" "" .:0
+0x2e20 3 "i32.store" "i32.store offset=8 align=4" "" .:0
+0x2e23 2 "local.get" "local.get 2" "" .:0
+0x2e25 2 "local.get" "local.get 5" "" .:0
+0x2e27 3 "i32.store" "i32.store offset=12 align=4" "" .:0
+0x2e2a 2 "global.get" "global.get 2" "" .:0
+0x2e2c 2 "global.get" "global.get 2" "" .:0
+0x2e2e 3 "i32.load" "i32.load align=4" "" .:0
+0x2e31 2 "i32.const" "i32.const 16" "" .:0
+0x2e33 1 "i32.add" "i32.add" "" .:0
+0x2e34 3 "i32.store" "i32.store align=4" "" .:0
+== runtime.run$1$gowrapper 0x2a 117 
+0x30c8 2 "block" "block (result i32)" "" .:0
+0x30ca 2 "global.get" "global.get 1" "" .:0
+0x30cc 2 "i32.const" "i32.const 2" "" .:0
+0x30ce 1 "i32.eq" "i32.eq" "" .:0
+0x30cf 2 "if" "if" "" .:0
+0x30d1 2 "global.get" "global.get 2" "" .:0
+0x30d3 2 "global.get" "global.get 2" "" .:0
+0x30d5 3 "i32.load" "i32.load align=4" "" .:0
+0x30d8 2 "i32.const" "i32.const 4" "" .:0
+0x30da 1 "i32.sub" "i32.sub" "" .:0
+0x30db 3 "i32.store" "i32.store align=4" "" .:0
+0x30de 2 "global.get" "global.get 2" "" .:0
+0x30e0 3 "i32.load" "i32.load align=4" "" .:0
+0x30e3 3 "i32.load" "i32.load align=4" "" .:0
+0x30e6 2 "local.set" "local.set 1" "" .:0
+0x30e8 1 "end" "end" "" .:0
+0x30e9 2 "global.get" "global.get 1" "" .:0
+0x30eb 1 "i32.eqz" "i32.eqz" "" .:0
+0x30ec 2 "local.get" "local.get 1" "" .:0
+0x30ee 1 "i32.eqz" "i32.eqz" "" .:0
+0x30ef 1 "i32.or" "i32.or" "" .:0
+0x30f0 2 "if" "if" "" .:0
+0x30f2 2 "call" "call runtime.run$1" "" ref=0x2c call=true scheduler_cooperative.go:248
+0x30f4 2 "i32.const" "i32.const 0" "" scheduler_cooperative.go:248
+0x30f6 2 "global.get" "global.get 1" "" scheduler_cooperative.go:248
+0x30f8 2 "i32.const" "i32.const 1" "" scheduler_cooperative.go:248
+0x30fa 1 "i32.eq" "i32.eq" "" scheduler_cooperative.go:248
+0x30fb 2 "br_if" "br_if 1" "" scheduler_cooperative.go:248
+0x30fd 1 "drop" "drop" "" scheduler_cooperative.go:248
+0x30fe 1 "end" "end" "" scheduler_cooperative.go:248
+0x30ff 2 "global.get" "global.get 1" "" scheduler_cooperative.go:248
+0x3101 1 "i32.eqz" "i32.eqz" "" scheduler_cooperative.go:248
+0x3102 2 "local.get" "local.get 1" "" scheduler_cooperative.go:248
+0x3104 2 "i32.const" "i32.const 1" "" scheduler_cooperative.go:248
+0x3106 1 "i32.eq" "i32.eq" "" scheduler_cooperative.go:248
+0x3107 1 "i32.or" "i32.or" "" scheduler_cooperative.go:248
+0x3108 2 "if" "if" "" scheduler_cooperative.go:248
+0x310a 2 "call" "call runtime.deadlock" "" ref=0x2d call=true scheduler_cooperative.go:248
+0x310c 2 "i32.const" "i32.const 1" "" scheduler_cooperative.go:248
+0x310e 2 "global.get" "global.get 1" "" scheduler_cooperative.go:248
+0x3110 2 "i32.const" "i32.const 1" "" scheduler_cooperative.go:248
+0x3112 1 "i32.eq" "i32.eq" "" scheduler_cooperative.go:248
+0x3113 2 "br_if" "br_if 1" "" scheduler_cooperative.go:248
+0x3115 1 "drop" "drop" "" scheduler_cooperative.go:248
+0x3116 1 "end" "end" "" scheduler_cooperative.go:248
+0x3117 2 "global.get" "global.get 1" "" scheduler_cooperative.go:248
+0x3119 1 "i32.eqz" "i32.eqz" "" scheduler_cooperative.go:248
+0x311a 2 "if" "if" "" scheduler_cooperative.go:248
+0x311c 1 "unreachable" "unreachable" "" scheduler_cooperative.go:248
+0x311d 1 "end" "end" "" scheduler_cooperative.go:248
+0x311e 1 "return" "return" "" scheduler_cooperative.go:248
+0x311f 1 "end" "end" "" scheduler_cooperative.go:248
+0x3120 2 "local.set" "local.set 0" "" scheduler_cooperative.go:248
+0x3122 2 "global.get" "global.get 2" "" scheduler_cooperative.go:248
+0x3124 3 "i32.load" "i32.load align=4" "" scheduler_cooperative.go:248
+0x3127 2 "local.get" "local.get 0" "" scheduler_cooperative.go:248
+0x3129 3 "i32.store" "i32.store align=4" "" scheduler_cooperative.go:248
+0x312c 2 "global.get" "global.get 2" "" scheduler_cooperative.go:248
+0x312e 2 "global.get" "global.get 2" "" scheduler_cooperative.go:248
+0x3130 3 "i32.load" "i32.load align=4" "" scheduler_cooperative.go:248
+0x3133 2 "i32.const" "i32.const 4" "" scheduler_cooperative.go:248
+0x3135 1 "i32.add" "i32.add" "" scheduler_cooperative.go:248
+0x3136 3 "i32.store" "i32.store align=4" "" scheduler_cooperative.go:248
+== runtime.run$1 0x2c 566 
+0x31b0 2 "global.get" "global.get 1" "" .:0
+0x31b2 2 "i32.const" "i32.const 2" "" .:0
+0x31b4 1 "i32.eq" "i32.eq" "" .:0
+0x31b5 2 "if" "if" "" .:0
+0x31b7 2 "global.get" "global.get 2" "" .:0
+0x31b9 2 "global.get" "global.get 2" "" .:0
+0x31bb 3 "i32.load" "i32.load align=4" "" .:0
+0x31be 2 "i32.const" "i32.const 24" "" .:0
+0x31c0 1 "i32.sub" "i32.sub" "" .:0
+0x31c1 3 "i32.store" "i32.store align=4" "" .:0
+0x31c4 2 "global.get" "global.get 2" "" .:0
+0x31c6 3 "i32.load" "i32.load align=4" "" .:0
+0x31c9 2 "local.tee" "local.tee 2" "" .:0
+0x31cb 3 "i32.load" "i32.load align=4" "" .:0
+0x31ce 2 "local.set" "local.set 0" "" .:0
+0x31d0 2 "local.get" "local.get 2" "" .:0
+0x31d2 3 "i32.load" "i32.load offset=8 align=4" "" .:0
+0x31d5 2 "local.set" "local.set 3" "" .:0
+0x31d7 2 "local.get" "local.get 2" "" .:0
+0x31d9 3 "i32.load" "i32.load offset=12 align=4" "" .:0
+0x31dc 2 "local.set" "local.set 4" "" .:0
+0x31de 2 "local.get" "local.get 2" "" .:0
+0x31e0 3 "i64.load" "i64.load offset=16 align=4" "" .:0
+0x31e3 2 "local.set" "local.set 5" "" .:0
+0x31e5 2 "local.get" "local.get 2" "" .:0
+0x31e7 3 "i32.load" "i32.load offset=4 align=4" "" .:0
+0x31ea 2 "local.set" "local.set 1" "" .:0
+0x31ec 1 "end" "end" "" .:0
+0x31ed 2 "block" "block (result i32)" "" .:0
+0x31ef 2 "global.get" "global.get 1" "" .:0
+0x31f1 2 "i32.const" "i32.const 2" "" .:0
+0x31f3 1 "i32.eq" "i32.eq" "" .:0
+0x31f4 2 "if" "if" "" .:0
+0x31f6 2 "global.get" "global.get 2" "" .:0
+0x31f8 2 "global.get" "global.get 2" "" .:0
+0x31fa 3 "i32.load" "i32.load align=4" "" .:0
+0x31fd 2 "i32.const" "i32.const 4" "" .:0
+0x31ff 1 "i32.sub" "i32.sub" "" .:0
+0x3200 3 "i32.store" "i32.store align=4" "" .:0
+0x3203 2 "global.get" "global.get 2" "" .:0
+0x3205 3 "i32.load" "i32.load align=4" "" .:0
+0x3208 3 "i32.load" "i32.load align=4" "" .:0
+0x320b 2 "local.set" "local.set 6" "" .:0
+0x320d 1 "end" "end" "" .:0
+0x320e 2 "global.get" "global.get 1" "" .:0
+0x3210 1 "i32.eqz" "i32.eqz" "" .:0
+0x3211 2 "if" "if" "" .:0
+0x3213 2 "global.get" "global.get 0" "" .:0
+0x3215 2 "i32.const" "i32.const 48" "" .:0
+0x3217 1 "i32.sub" "i32.sub" "" .:0
+0x3218 2 "local.tee" "local.tee 3" "" .:0
+0x321a 2 "global.set" "global.set 0" "" .:0
+0x321c 4 "i32.const" "i32.const 66420" "" scheduler_cooperative.go:249
+0x3220 2 "memory.size" "memory.size" "" scheduler_cooperative.go:249
+0x3222 2 "i32.const" "i32.const 16" "" scheduler_cooperative.go:249
+0x3224 1 "i32.shl" "i32.shl" "" scheduler_cooperative.go:249
+0x3225 3 "i32.store" "i32.store align=4" "" scheduler_cooperative.go:249
+0x3228 2 "call" "call __wasm_call_ctors" "" ref=0x3 call=true scheduler_cooperative.go:249
+0x322a 2 "local.get" "local.get 3" "" scheduler_cooperative.go:249
+0x322c 2 "i32.const" "i32.const 3" "" scheduler_cooperative.go:249
+0x322e 3 "i32.store" "i32.store offset=20 align=4" "" main.go:13
+0x3231 2 "local.get" "local.get 3" "" main.go:13
+0x3233 6 "i64.const" "i64.const 8589934593" "" main.go:13
+0x3239 3 "i64.store" "i64.store offset=12 align=4" "" main.go:13
+0x323c 2 "local.get" "local.get 3" "" main.go:13
+0x323e 2 "i32.const" "i32.const 12" "" main.go:13
+0x3240 1 "i32.add" "i32.add" "" main.go:13
+0x3241 2 "call" "call main.sumInts" "" ref=0x33 call=true main.go:13
+0x3243 2 "local.tee" "local.tee 0" "" main.go:13
+0x3245 2 "i32.const" "i32.const 0" "" main.go:13
+0x3247 1 "i32.ge_s" "i32.ge_s" "" print.go:68
+0x3248 2 "local.set" "local.set 1" "" print.go:68
+0x324a 1 "end" "end" "" print.go:68
+0x324b 2 "global.get" "global.get 1" "" print.go:68
+0x324d 2 "i32.const" "i32.const 1" "" print.go:68
+0x324f 2 "local.get" "local.get 1" "" print.go:68
+0x3251 1 "select" "select" "" print.go:68
+0x3252 2 "if" "if" "" print.go:68
+0x3254 2 "global.get" "global.get 1" "" print.go:68
+0x3256 1 "i32.eqz" "i32.eqz" "" print.go:68
+0x3257 2 "local.get" "local.get 6" "" print.go:68
+0x3259 1 "i32.eqz" "i32.eqz" "" print.go:68
+0x325a 1 "i32.or" "i32.or" "" print.go:68
+0x325b 2 "if" "if" "" print.go:68
+0x325d 2 "i32.const" "i32.const 45" "" print.go:68
+0x325f 2 "call" "call runtime.putchar" "" ref=0x19 call=true print.go:69
+0x3261 2 "i32.const" "i32.const 0" "" print.go:69
+0x3263 2 "global.get" "global.get 1" "" print.go:69
+0x3265 2 "i32.const" "i32.const 1" "" print.go:69
+0x3267 1 "i32.eq" "i32.eq" "" print.go:69
+0x3268 2 "br_if" "br_if 2" "" print.go:69
+0x326a 1 "drop" "drop" "" print.go:69
+0x326b 1 "end" "end" "" print.go:69
+0x326c 2 "local.get" "local.get 0" "" print.go:69
+0x326e 2 "i32.const" "i32.const 0" "" print.go:69
+0x3270 2 "local.get" "local.get 0" "" print.go:70
+0x3272 1 "i32.sub" "i32.sub" "" print.go:70
+0x3273 2 "global.get" "global.get 1" "" print.go:70
+0x3275 1 "select" "select" "" print.go:70
+0x3276 2 "local.set" "local.set 0" "" print.go:70
+0x3278 1 "end" "end" "" print.go:70
+0x3279 2 "global.get" "global.get 1" "" print.go:70
+0x327b 1 "i32.eqz" "i32.eqz" "" print.go:70
+0x327c 2 "if" "if" "" print.go:70
+0x327e 2 "local.get" "local.get 3" "" print.go:76
+0x3280 2 "i32.const" "i32.const 40" "" print.go:76
+0x3282 1 "i32.add" "i32.add" "" print.go:76
+0x3283 2 "i32.const" "i32.const 0" "" print.go:76
+0x3285 3 "i32.store" "i32.store align=4" "" print.go:76
+0x3288 2 "local.get" "local.get 3" "" print.go:76
+0x328a 2 "i32.const" "i32.const 32" "" print.go:76
+0x328c 1 "i32.add" "i32.add" "" print.go:76
+0x328d 2 "i64.const" "i64.const 0" "" print.go:76
+0x328f 3 "i64.store" "i64.store align=8" "" print.go:76
+0x3292 2 "local.get" "local.get 3" "" print.go:76
+0x3294 2 "i64.const" "i64.const 0" "" print.go:76
+0x3296 3 "i64.store" "i64.store offset=24 align=8" "" print.go:76
+0x3299 2 "local.get" "local.get 0" "" print.go:62
+0x329b 1 "i64.extend_i32_u" "i64.extend_i32_u" "" print.go:62
+0x329c 2 "local.set" "local.set 5" "" print.go:62
+0x329e 2 "i32.const" "i32.const 19" "" print.go:62
+0x32a0 2 "local.set" "local.set 1" "" print.go:62
+0x32a2 2 "i32.const" "i32.const 19" "" print.go:62
+0x32a4 2 "local.set" "local.set 0" "" print.go:62
+0x32a6 1 "end" "end" "" print.go:62
+0x32a7 2 "loop" "loop" "" print.go:62
+0x32a9 2 "local.get" "local.get 4" "" print.go:62
+0x32ab 2 "local.get" "local.get 1" "" print.go:62
+0x32ad 2 "i32.const" "i32.const 0" "" print.go:62
+0x32af 1 "i32.ge_s" "i32.ge_s" "" print.go:80
+0x32b0 2 "global.get" "global.get 1" "" print.go:80
+0x32b2 1 "select" "select" "" print.go:80
+0x32b3 2 "local.set" "local.set 4" "" print.go:80
+0x32b5 2 "block" "block" "" print.go:80
+0x32b7 2 "global.get" "global.get 1" "" print.go:80
+0x32b9 1 "i32.eqz" "i32.eqz" "" print.go:80
+0x32ba 2 "if" "if" "" print.go:80
+0x32bc 2 "local.get" "local.get 4" "" print.go:80
+0x32be 2 "br_if" "br_if 1" "" print.go:80
+0x32c0 2 "i32.const" "i32.const 20" "" print.go:80
+0x32c2 2 "local.get" "local.get 0" "" print.go:80
+0x32c4 2 "local.get" "local.get 0" "" print.go:80
+0x32c6 2 "i32.const" "i32.const 20" "" print.go:80
+0x32c8 1 "i32.le_s" "i32.le_s" "" print.go:80
+0x32c9 1 "select" "select" "" print.go:80
+0x32ca 2 "local.set" "local.set 1" "" print.go:80
+0x32cc 1 "end" "end" "" print.go:80
+0x32cd 2 "loop" "loop" "" print.go:80
+0x32cf 2 "block" "block" "" print.go:89
+0x32d1 2 "global.get" "global.get 1" "" print.go:89
+0x32d3 1 "i32.eqz" "i32.eqz" "" print.go:89
+0x32d4 2 "if" "if" "" print.go:89
+0x32d6 2 "local.get" "local.get 0" "" print.go:89
+0x32d8 2 "local.get" "local.get 1" "" print.go:89
+0x32da 1 "i32.eq" "i32.eq" "" print.go:89
+0x32db 2 "br_if" "br_if 1" "" print.go:89
+0x32dd 2 "local.get" "local.get 3" "" print.go:90
+0x32df 2 "i32.const" "i32.const 24" "" print.go:90
+0x32e1 1 "i32.add" "i32.add" "" print.go:90
+0x32e2 2 "local.get" "local.get 0" "" print.go:90
+0x32e4 1 "i32.add" "i32.add" "" print.go:90
+0x32e5 3 "i32.load8_u" "i32.load8_u" "" print.go:90
+0x32e8 2 "local.set" "local.set 4" "" print.go:90
+0x32ea 1 "end" "end" "" print.go:90
+0x32eb 2 "global.get" "global.get 1" "" print.go:90
+0x32ed 1 "i32.eqz" "i32.eqz" "" print.go:90
+0x32ee 2 "local.get" "local.get 6" "" print.go:90
+0x32f0 2 "i32.const" "i32.const 1" "" print.go:90
+0x32f2 1 "i32.eq" "i32.eq" "" print.go:90
+0x32f3 1 "i32.or" "i32.or" "" print.go:90
+0x32f4 2 "if" "if" "" print.go:90
+0x32f6 2 "local.get" "local.get 4" "" print.go:90
+0x32f8 2 "call" "call runtime.putchar" "" ref=0x19 call=true print.go:90
+0x32fa 2 "i32.const" "i32.const 1" "" print.go:90
+0x32fc 2 "global.get" "global.get 1" "" print.go:90
+0x32fe 2 "i32.const" "i32.const 1" "" print.go:90
+0x3300 1 "i32.eq" "i32.eq" "" print.go:90
+0x3301 2 "br_if" "br_if 5" "" print.go:90
+0x3303 1 "drop" "drop" "" print.go:90
+0x3304 1 "end" "end" "" print.go:90
+0x3305 2 "global.get" "global.get 1" "" print.go:90
+0x3307 1 "i32.eqz" "i32.eqz" "" print.go:90
+0x3308 2 "if" "if" "" print.go:90
+0x330a 2 "local.get" "local.get 0" "" print.go:90
+0x330c 2 "i32.const" "i32.const 1" "" print.go:90
+0x330e 1 "i32.add" "i32.add" "" print.go:89
+0x330f 2 "local.set" "local.set 0" "" print.go:89
+0x3311 2 "br" "br 2" "" print.go:89
+0x3313 1 "end" "end" "" print.go:89
+0x3314 1 "end" "end" "" print.go:89
+0x3315 1 "end" "end" "" print.go:89
+0x3316 2 "global.get" "global.get 1" "" print.go:89
+0x3318 1 "i32.eqz" "i32.eqz" "" print.go:89
+0x3319 2 "local.get" "local.get 6" "" print.go:89
+0x331b 2 "i32.const" "i32.const 2" "" print.go:89
+0x331d 1 "i32.eq" "i32.eq" "" print.go:89
+0x331e 1 "i32.or" "i32.or" "" print.go:89
+0x331f 2 "if" "if" "" print.go:89
+0x3321 2 "call" "call runtime.printnl" "" ref=0x18 call=true main.go:13
+0x3323 2 "i32.const" "i32.const 2" "" main.go:13
+0x3325 2 "global.get" "global.get 1" "" main.go:13
+0x3327 2 "i32.const" "i32.const 1" "" main.go:13
+0x3329 1 "i32.eq" "i32.eq" "" main.go:13
+0x332a 2 "br_if" "br_if 3" "" main.go:13
+0x332c 1 "drop" "drop" "" main.go:13
+0x332d 1 "end" "end" "" main.go:13
+0x332e 2 "global.get" "global.get 1" "" main.go:13
+0x3330 1 "i32.eqz" "i32.eqz" "" main.go:13
+0x3331 2 "if" "if" "" main.go:13
+0x3333 4 "i32.const" "i32.const 66596" "" scheduler_cooperative.go:251
+0x3337 2 "i32.const" "i32.const 1" "" scheduler_cooperative.go:251
+0x3339 3 "i32.store8" "i32.store8" "" scheduler_cooperative.go:251
+0x333c 2 "local.get" "local.get 3" "" scheduler_cooperative.go:252
+0x333e 2 "i32.const" "i32.const 48" "" scheduler_cooperative.go:252
+0x3340 1 "i32.add" "i32.add" "" scheduler_cooperative.go:252
+0x3341 2 "global.set" "global.set 0" "" scheduler_cooperative.go:252
+0x3343 1 "return" "return" "" scheduler_cooperative.go:252
+0x3344 1 "end" "end" "" scheduler_cooperative.go:252
+0x3345 1 "end" "end" "" scheduler_cooperative.go:252
+0x3346 2 "global.get" "global.get 1" "" scheduler_cooperative.go:252
+0x3348 1 "i32.eqz" "i32.eqz" "" scheduler_cooperative.go:252
+0x3349 2 "if" "if" "" scheduler_cooperative.go:252
+0x334b 2 "local.get" "local.get 3" "" print.go:82
+0x334d 2 "i32.const" "i32.const 24" "" print.go:82
+0x334f 1 "i32.add" "i32.add" "" print.go:82
+0x3350 2 "local.get" "local.get 1" "" print.go:82
+0x3352 1 "i32.add" "i32.add" "" print.go:82
+0x3353 2 "local.get" "local.get 5" "" print.go:82
+0x3355 2 "local.get" "local.get 5" "" print.go:82
+0x3357 2 "i64.const" "i64.const 10" "" print.go:82
+0x3359 1 "i64.div_u" "i64.div_u" "" print.go:86
+0x335a 2 "local.tee" "local.tee 7" "" print.go:86
+0x335c 2 "i64.const" "i64.const 10" "" print.go:86
+0x335e 1 "i64.mul" "i64.mul" "" print.go:81
+0x335f 1 "i64.sub" "i64.sub" "" print.go:81
+0x3360 2 "local.tee" "local.tee 5" "" print.go:81
+0x3362 1 "i32.wrap_i64" "i32.wrap_i64" "" print.go:81
+0x3363 2 "i32.const" "i32.const 48" "" print.go:81
+0x3365 1 "i32.or" "i32.or" "" print.go:81
+0x3366 3 "i32.store8" "i32.store8" "" print.go:82
+0x3369 2 "local.get" "local.get 0" "" print.go:83
+0x336b 2 "local.get" "local.get 1" "" print.go:83
+0x336d 2 "local.get" "local.get 5" "" print.go:83
+0x336f 1 "i64.eqz" "i64.eqz" "" print.go:83
+0x3370 2 "local.tee" "local.tee 4" "" print.go:83
+0x3372 1 "select" "select" "" print.go:83
+0x3373 2 "local.set" "local.set 0" "" print.go:83
+0x3375 2 "local.get" "local.get 1" "" print.go:83
+0x3377 2 "i32.const" "i32.const 1" "" print.go:83
+0x3379 1 "i32.sub" "i32.sub" "" .:0
+0x337a 2 "local.set" "local.set 1" "" .:0
+0x337c 2 "local.get" "local.get 7" "" .:0
+0x337e 2 "local.set" "local.set 5" "" .:0
+0x3380 2 "br" "br 1" "" .:0
+0x3382 1 "end" "end" "" .:0
+0x3383 1 "end" "end" "" .:0
+0x3384 1 "return" "return" "" .:0
+0x3385 1 "end" "end" "" .:0
+0x3386 2 "local.set" "local.set 2" "" .:0
+0x3388 2 "global.get" "global.get 2" "" .:0
+0x338a 3 "i32.load" "i32.load align=4" "" .:0
+0x338d 2 "local.get" "local.get 2" "" .:0
+0x338f 3 "i32.store" "i32.store align=4" "" .:0
+0x3392 2 "global.get" "global.get 2" "" .:0
+0x3394 2 "global.get" "global.get 2" "" .:0
+0x3396 3 "i32.load" "i32.load align=4" "" .:0
+0x3399 2 "i32.const" "i32.const 4" "" .:0
+0x339b 1 "i32.add" "i32.add" "" .:0
+0x339c 3 "i32.store" "i32.store align=4" "" .:0
+0x339f 2 "global.get" "global.get 2" "" .:0
+0x33a1 3 "i32.load" "i32.load align=4" "" .:0
+0x33a4 2 "local.tee" "local.tee 2" "" .:0
+0x33a6 2 "local.get" "local.get 0" "" .:0
+0x33a8 3 "i32.store" "i32.store align=4" "" .:0
+0x33ab 2 "local.get" "local.get 2" "" .:0
+0x33ad 2 "local.get" "local.get 1" "" .:0
+0x33af 3 "i32.store" "i32.store offset=4 align=4" "" .:0
+0x33b2 2 "local.get" "local.get 2" "" .:0
+0x33b4 2 "local.get" "local.get 3" "" .:0
+0x33b6 3 "i32.store" "i32.store offset=8 align=4" "" .:0
+0x33b9 2 "local.get" "local.get 2" "" .:0
+0x33bb 2 "local.get" "local.get 4" "" .:0
+0x33bd 3 "i32.store" "i32.store offset=12 align=4" "" .:0
+0x33c0 2 "local.get" "local.get 2" "" .:0
+0x33c2 2 "local.get" "local.get 5" "" .:0
+0x33c4 3 "i64.store" "i64.store offset=16 align=4" "" .:0
+0x33c7 2 "global.get" "global.get 2" "" .:0
+0x33c9 2 "global.get" "global.get 2" "" .:0
+0x33cb 3 "i32.load" "i32.load align=4" "" .:0
+0x33ce 2 "i32.const" "i32.const 24" "" .:0
+0x33d0 1 "i32.add" "i32.add" "" .:0
+0x33d1 3 "i32.store" "i32.store align=4" "" .:0
+== main.sumInts 0x33 42 
+0x3cb9 2 "loop" "loop" "" .:0
+0x3cbb 2 "local.get" "local.get 1" "" .:0
+0x3cbd 2 "i32.const" "i32.const 12" "" .:0
+0x3cbf 1 "i32.eq" "i32.eq" "" .:0
+0x3cc0 1 "i32.eqz" "i32.eqz" "" .:0
+0x3cc1 2 "if" "if" "" .:0
+0x3cc3 2 "local.get" "local.get 0" "" .:0
+0x3cc5 2 "local.get" "local.get 1" "" .:0
+0x3cc7 1 "i32.add" "i32.add" "" .:0
+0x3cc8 3 "i32.load" "i32.load align=4" "" .:0
+0x3ccb 2 "local.get" "local.get 2" "" main.go:7
+0x3ccd 1 "i32.add" "i32.add" "" main.go:7
+0x3cce 2 "local.set" "local.set 2" "" main.go:7
+0x3cd0 2 "local.get" "local.get 1" "" main.go:7
+0x3cd2 2 "i32.const" "i32.const 4" "" main.go:7
+0x3cd4 1 "i32.add" "i32.add" "" main.go:7
+0x3cd5 2 "local.set" "local.set 1" "" main.go:7
+0x3cd7 2 "br" "br 1" "" main.go:7
+0x3cd9 1 "end" "end" "" main.go:7
+0x3cda 1 "end" "end" "" main.go:7
+0x3cdb 2 "local.get" "local.get 2" "" main.go:9

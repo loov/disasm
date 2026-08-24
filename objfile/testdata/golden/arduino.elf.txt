@@ -1,4 +1,9 @@
 arch=avr funcs=20 sha256=bd7150ba7a1fe185a59060dd18262e32494fcfded376d5b981e960b3bd497f47
+== main 0x8c 16 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/runtime_avr.go
+0x8c 4 "CALL" "call 0xcc6 <runtime.preinit>" "call 0xcc6 <runtime.preinit>" ref=0xcc6 call=true atomics_critical.go:224
+0x90 4 "CALL" "call 0xcda <runtime.initHardware>" "call 0xcda <runtime.initHardware>" ref=0xcda call=true float.go:153
+0x94 4 "CALL" "call 0xd6a <runtime.run>" "call 0xd6a <runtime.run>" ref=0xd6a call=true runtime_avr.go:43
+0x98 4 "CALL" "call 0xcc0 <runtime.abort>" "call 0xcc0 <runtime.abort>" ref=0xcc0 call=true float.go:156
 == runtime.runtimePanicAt 0xaf6 40 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/panic.go
 0xaf6 2 "PUSH" "push r14" "push r14" ref=0x0 call=false panic.go:0
 0xaf8 2 "PUSH" "push r15" "push r15" ref=0x0 call=false panic.go:0

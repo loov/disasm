@@ -48,6 +48,121 @@ arch=xtensa funcs=22 sha256=cfa898128aa1453c1eaa834bccf440bcd2b7ecfa7fa0efab2fd8
 0x40080680 2 "MOV.N" "mov.n a11, a2" "mov.n a11, a2" ref=0x0 call=false panic.go:88
 0x40080682 2 "MOV.N" "mov.n a12, a3" "mov.n a12, a3" ref=0x0 call=false panic.go:88
 0x40080684 3 "CALLX8" "callx8 a8" "callx8 a8" ref=0x0 call=true panic.go:88
+== main 0x400807a4 304 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/runtime_esp32.go
+0x400807a4 3 "ENTRY" "entry a1, 32" "entry a1, 32" ref=0x0 call=false runtime_esp32.go:0
+0x400807a7 3 "L32R" "l32r a8, 0x40080714" "l32r a8, 0x40080714" ref=0x0 call=false runtime_esp32.go:0
+0x400807aa 3 "L32R" "l32r a9, 0x40080718" "l32r a9, 0x40080718" ref=0x0 call=false runtime_esp32.go:0
+0x400807ad 3 "MEMW" "memw" "memw" ref=0x0 call=false volatile.go:37
+0x400807b0 2 "S32I.N" "s32i.n a9, a8, 0" "s32i.n a9, a8, 0" ref=0x0 call=false volatile.go:37
+0x400807b2 3 "L32R" "l32r a8, 0x4008071c" "l32r a8, 0x4008071c" ref=0x0 call=false volatile.go:37
+0x400807b5 2 "MOVI.N" "movi.n a7, 0" "movi.n a7, 0" ref=0x0 call=false volatile.go:37
+0x400807b7 3 "MEMW" "memw" "memw" ref=0x0 call=false volatile.go:37
+0x400807ba 2 "S32I.N" "s32i.n a7, a8, 0" "s32i.n a7, a8, 0" ref=0x0 call=false volatile.go:37
+0x400807bc 3 "L32R" "l32r a8, 0x40080720" "l32r a8, 0x40080720" ref=0x0 call=false volatile.go:37
+0x400807bf 3 "MEMW" "memw" "memw" ref=0x0 call=false volatile.go:37
+0x400807c2 2 "S32I.N" "s32i.n a7, a8, 0" "s32i.n a7, a8, 0" ref=0x0 call=false volatile.go:37
+0x400807c4 3 "L32R" "l32r a8, 0x40080724" "l32r a8, 0x40080724" ref=0x0 call=false volatile.go:37
+0x400807c7 3 "L32R" "l32r a9, 0x40080728" "l32r a9, 0x40080728" ref=0x0 call=false volatile.go:37
+0x400807ca 3 "MEMW" "memw" "memw" ref=0x0 call=false volatile.go:37
+0x400807cd 2 "S32I.N" "s32i.n a9, a8, 0" "s32i.n a9, a8, 0" ref=0x0 call=false volatile.go:37
+0x400807cf 3 "L32R" "l32r a8, 0x4008072c" "l32r a8, 0x4008072c" ref=0x0 call=false volatile.go:37
+0x400807d2 2 "MOVI.N" "movi.n a9, 1" "movi.n a9, 1" ref=0x0 call=false volatile.go:37
+0x400807d4 3 "MEMW" "memw" "memw" ref=0x0 call=false volatile.go:37
+0x400807d7 2 "S32I.N" "s32i.n a9, a8, 0" "s32i.n a9, a8, 0" ref=0x0 call=false volatile.go:37
+0x400807d9 3 "L32R" "l32r a8, 0x40080730" "l32r a8, 0x40080730" ref=0x0 call=false volatile.go:37
+0x400807dc 3 "L32R" "l32r a9, 0x40080734" "l32r a9, 0x40080734" ref=0x0 call=false volatile.go:37
+0x400807df 3 "BEQ" "beq a8, a9, 0x400807e9 <main+0x45>" "beq a8, a9, 0x400807e9 <main+0x45>" ref=0x400807e9 call=false runtime_esp32xx.go:0
+0x400807e2 2 "S32I.N" "s32i.n a7, a8, 0" "s32i.n a7, a8, 0" ref=0x0 call=false runtime_esp32xx.go:16
+0x400807e4 2 "ADDI.N" "addi.n a8, a8, 4" "addi.n a8, a8, 4" ref=0x0 call=false runtime_esp32xx.go:17
+0x400807e6 3 "BNE" "bne a8, a9, 0x400807e2 <main+0x3e>" "bne a8, a9, 0x400807e2 <main+0x3e>" ref=0x400807e2 call=false runtime_esp32xx.go:0
+0x400807e9 3 "L32R" "l32r a8, 0x40080738" "l32r a8, 0x40080738" ref=0x0 call=false runtime_esp32xx.go:0
+0x400807ec 3 "MOVI" "movi a9, 0x2b6" "movi a9, 0x2b6" ref=0x0 call=false runtime_esp32xx.go:0
+0x400807ef 3 "MEMW" "memw" "memw" ref=0x0 call=false volatile.go:37
+0x400807f2 2 "S32I.N" "s32i.n a9, a8, 0" "s32i.n a9, a8, 0" ref=0x0 call=false volatile.go:37
+0x400807f4 3 "L32R" "l32r a8, 0x4008073c" "l32r a8, 0x4008073c" ref=0x0 call=false volatile.go:37
+0x400807f7 3 "L32R" "l32r a9, 0x40080740" "l32r a9, 0x40080740" ref=0x0 call=false volatile.go:37
+0x400807fa 3 "MEMW" "memw" "memw" ref=0x0 call=false volatile.go:37
+0x400807fd 2 "S32I.N" "s32i.n a9, a8, 0" "s32i.n a9, a8, 0" ref=0x0 call=false volatile.go:37
+0x400807ff 3 "L32R" "l32r a8, 0x40080744" "l32r a8, 0x40080744" ref=0x0 call=false volatile.go:37
+0x40080802 3 "MEMW" "memw" "memw" ref=0x0 call=false volatile.go:37
+0x40080805 2 "S32I.N" "s32i.n a7, a8, 0" "s32i.n a7, a8, 0" ref=0x0 call=false volatile.go:37
+0x40080807 3 "L32R" "l32r a8, 0x40080748" "l32r a8, 0x40080748" ref=0x0 call=false volatile.go:37
+0x4008080a 3 "MEMW" "memw" "memw" ref=0x0 call=false volatile.go:37
+0x4008080d 2 "S32I.N" "s32i.n a7, a8, 0" "s32i.n a7, a8, 0" ref=0x0 call=false volatile.go:37
+0x4008080f 3 "L32R" "l32r a8, 0x4008074c" "l32r a8, 0x4008074c" ref=0x0 call=false volatile.go:37
+0x40080812 3 "MEMW" "memw" "memw" ref=0x0 call=false volatile.go:37
+0x40080815 2 "S32I.N" "s32i.n a7, a8, 0" "s32i.n a7, a8, 0" ref=0x0 call=false volatile.go:37
+0x40080817 3 "L32R" "l32r a8, 0x40080750" "l32r a8, 0x40080750" ref=0x0 call=false volatile.go:37
+0x4008081a 3 "L32R" "l32r a9, 0x40080754" "l32r a9, 0x40080754" ref=0x0 call=false volatile.go:0
+0x4008081d 3 "SUB" "sub a10, a9, a8" "sub a10, a9, a8" ref=0x0 call=false gc_blocks.go:367
+0x40080820 3 "ADDI" "addi a10, a10, 64" "addi a10, a10, 64" ref=0x0 call=false gc_blocks.go:367
+0x40080823 2 "MOVI.N" "movi.n a11, 65" "movi.n a11, 65" ref=0x0 call=false gc_blocks.go:0
+0x40080825 3 "QUOU" "quou a12, a10, a11" "quou a12, a10, a11" ref=0x0 call=false gc_blocks.go:367
+0x40080828 3 "SUB" "sub a10, a9, a12" "sub a10, a9, a12" ref=0x0 call=false gc_blocks.go:368
+0x4008082b 3 "L32R" "l32r a9, 0x40080758" "l32r a9, 0x40080758" ref=0x0 call=false gc_blocks.go:368
+0x4008082e 2 "S32I.N" "s32i.n a10, a9, 0" "s32i.n a10, a9, 0" ref=0x0 call=false gc_blocks.go:368
+0x40080830 3 "SUB" "sub a8, a10, a8" "sub a8, a10, a8" ref=0x0 call=false gc_blocks.go:371
+0x40080833 3 "SRLI" "srli a8, a8, 4" "srli a8, a8, 4" ref=0x0 call=false gc_blocks.go:371
+0x40080836 3 "L32R" "l32r a9, 0x4008075c" "l32r a9, 0x4008075c" ref=0x0 call=false gc_blocks.go:0
+0x40080839 2 "S32I.N" "s32i.n a8, a9, 0" "s32i.n a8, a9, 0" ref=0x0 call=false gc_blocks.go:372
+0x4008083b 3 "L32R" "l32r a8, 0x40080760" "l32r a8, 0x40080760" ref=0x0 call=false gc_blocks.go:0
+0x4008083e 2 "MOV.N" "mov.n a11, a7" "mov.n a11, a7" ref=0x0 call=false runtime.go:53
+0x40080840 3 "CALLX8" "callx8 a8" "callx8 a8" ref=0x0 call=true runtime.go:53
+0x40080843 3 "L32R" "l32r a8, 0x40080764" "l32r a8, 0x40080764" ref=0x0 call=false runtime.go:0
+0x40080846 3 "CALLX8" "callx8 a8" "callx8 a8" ref=0x0 call=true gc_blocks.go:321
+0x40080849 2 "MOVI.N" "movi.n a10, 32" "movi.n a10, 32" ref=0x0 call=false gc_blocks.go:0
+0x4008084b 3 "L32R" "l32r a4, 0x40080768" "l32r a4, 0x40080768" ref=0x0 call=false gc_blocks.go:0
+0x4008084e 3 "CALLX8" "callx8 a4" "callx8 a4" ref=0x0 call=true task_stack.go:75
+0x40080851 2 "MOV.N" "mov.n a6, a10" "mov.n a6, a10" ref=0x0 call=false task_stack.go:75
+0x40080853 3 "L32R" "l32r a5, 0x4008076c" "l32r a5, 0x4008076c" ref=0x0 call=false task_stack.go:0
+0x40080856 2 "MOV.N" "mov.n a10, a5" "mov.n a10, a5" ref=0x0 call=false task_stack.go:43
+0x40080858 3 "CALLX8" "callx8 a4" "callx8 a4" ref=0x0 call=true task_stack.go:43
+0x4008085b 2 "S32I.N" "s32i.n a10, a6, 20" "s32i.n a10, a6, 20" ref=0x0 call=false task_stack.go:49
+0x4008085d 3 "L32R" "l32r a8, 0x40080770" "l32r a8, 0x40080770" ref=0x0 call=false task_stack.go:49
+0x40080860 2 "S32I.N" "s32i.n a8, a10, 0" "s32i.n a8, a10, 0" ref=0x0 call=false task_stack.go:50
+0x40080862 3 "MOVI" "movi a8, 0x7f0" "movi a8, 0x7f0" ref=0x0 call=false task_stack.go:50
+0x40080865 2 "ADD.N" "add.n a8, a10, a8" "add.n a8, a10, a8" ref=0x0 call=false task_stack_esp32.go:41
+0x40080867 2 "S32I.N" "s32i.n a8, a6, 16" "s32i.n a8, a6, 16" ref=0x0 call=false task_stack_esp32.go:41
+0x40080869 3 "MOVI" "movi a9, 0x7ec" "movi a9, 0x7ec" ref=0x0 call=false task_stack_esp32.go:41
+0x4008086c 2 "ADD.N" "add.n a9, a10, a9" "add.n a9, a10, a9" ref=0x0 call=false task_stack_esp32.go:58
+0x4008086e 3 "L32R" "l32r a11, 0x40080774" "l32r a11, 0x40080774" ref=0x0 call=false task_stack_esp32.go:58
+0x40080871 2 "S32I.N" "s32i.n a11, a9, 0" "s32i.n a11, a9, 0" ref=0x0 call=false task_stack_esp32.go:58
+0x40080873 3 "MOVI" "movi a9, 0x7e4" "movi a9, 0x7e4" ref=0x0 call=false task_stack_esp32.go:58
+0x40080876 2 "ADD.N" "add.n a9, a10, a9" "add.n a9, a10, a9" ref=0x0 call=false task_stack_esp32.go:53
+0x40080878 2 "ADD.N" "add.n a11, a10, a5" "add.n a11, a10, a5" ref=0x0 call=false task_stack_esp32.go:53
+0x4008087a 2 "S32I.N" "s32i.n a11, a9, 0" "s32i.n a11, a9, 0" ref=0x0 call=false task_stack_esp32.go:53
+0x4008087c 3 "MOVI" "movi a9, 0x7e8" "movi a9, 0x7e8" ref=0x0 call=false task_stack_esp32.go:53
+0x4008087f 2 "ADD.N" "add.n a9, a10, a9" "add.n a9, a10, a9" ref=0x0 call=false task_stack_esp32.go:59
+0x40080881 2 "S32I.N" "s32i.n a7, a9, 0" "s32i.n a7, a9, 0" ref=0x0 call=false task_stack_esp32.go:59
+0x40080883 3 "L32R" "l32r a9, 0x40080778" "l32r a9, 0x40080778" ref=0x0 call=false task_stack_esp32.go:59
+0x40080886 3 "L32R" "l32r a10, 0x4008077c" "l32r a10, 0x4008077c" ref=0x0 call=false task_stack_esp32.go:59
+0x40080889 3 "AND" "and a9, a10, a9" "and a9, a10, a9" ref=0x0 call=false task_stack_esp32.go:48
+0x4008088c 3 "L32R" "l32r a10, 0x40080780" "l32r a10, 0x40080780" ref=0x0 call=false task_stack_esp32.go:48
+0x4008088f 3 "OR" "or a9, a9, a10" "or a9, a9, a10" ref=0x0 call=false task_stack_esp32.go:48
+0x40080892 2 "S32I.N" "s32i.n a9, a8, 0" "s32i.n a9, a8, 0" ref=0x0 call=false task_stack_esp32.go:48
+0x40080894 3 "L32R" "l32r a10, 0x40080784" "l32r a10, 0x40080784" ref=0x0 call=false task_stack_esp32.go:0
+0x40080897 3 "L32R" "l32r a8, 0x40080788" "l32r a8, 0x40080788" ref=0x0 call=false task_stack_esp32.go:0
+0x4008089a 2 "MOV.N" "mov.n a11, a6" "mov.n a11, a6" ref=0x0 call=false scheduler_cooperative.go:59
+0x4008089c 3 "CALLX8" "callx8 a8" "callx8 a8" ref=0x0 call=true scheduler_cooperative.go:59
+0x4008089f 3 "L32R" "l32r a5, 0x4008078c" "l32r a5, 0x4008078c" ref=0x0 call=false scheduler_cooperative.go:59
+0x400808a2 3 "L32R" "l32r a4, 0x40080790" "l32r a4, 0x40080790" ref=0x0 call=false scheduler_cooperative.go:59
+0x400808a5 3 "L32R" "l32r a3, 0x40080794" "l32r a3, 0x40080794" ref=0x0 call=false scheduler_cooperative.go:59
+0x400808a8 3 "L32R" "l32r a6, 0x40080798" "l32r a6, 0x40080798" ref=0x0 call=false scheduler_cooperative.go:59
+0x400808ab 3 "L8UI" "l8ui a8, a5, 0" "l8ui a8, a5, 0" ref=0x0 call=false scheduler_cooperative.go:141
+0x400808ae 3 "BNEZ" "bnez a8, 0x400808c8 <main+0x124>" "bnez a8, 0x400808c8 <main+0x124>" ref=0x400808c8 call=false scheduler_cooperative.go:0
+0x400808b1 3 "CALLX8" "callx8 a4" "callx8 a4" ref=0x0 call=true scheduler_cooperative.go:171
+0x400808b4 3 "BEQZ" "beqz a10, 0x400808ce <main+0x12a>" "beqz a10, 0x400808ce <main+0x12a>" ref=0x400808ce call=false scheduler_cooperative.go:0
+0x400808b7 2 "S32I.N" "s32i.n a10, a3, 0" "s32i.n a10, a3, 0" ref=0x0 call=false task_stack_unicore.go:32
+0x400808b9 2 "L32I.N" "l32i.n a10, a10, 16" "l32i.n a10, a10, 16" ref=0x0 call=false task_stack_esp32.go:63
+0x400808bb 3 "L32R" "l32r a8, 0x4008079c" "l32r a8, 0x4008079c" ref=0x0 call=false task_stack_esp32.go:0
+0x400808be 2 "MOV.N" "mov.n a11, a6" "mov.n a11, a6" ref=0x0 call=false task_stack_esp32.go:63
+0x400808c0 3 "CALLX8" "callx8 a8" "callx8 a8" ref=0x0 call=true task_stack_esp32.go:63
+0x400808c3 2 "S32I.N" "s32i.n a7, a3, 0" "s32i.n a7, a3, 0" ref=0x0 call=false task_stack_unicore.go:36
+0x400808c5 3 "J" "j 0x400808ab <main+0x107>" "j 0x400808ab <main+0x107>" ref=0x400808ab call=false scheduler_cooperative.go:0
+0x400808c8 3 "WAITI" "waiti 0" "waiti 0" ref=0x0 call=false runtime_esp32.go:78
+0x400808cb 3 "J" "j 0x400808c8 <main+0x124>" "j 0x400808c8 <main+0x124>" ref=0x400808c8 call=false runtime_esp32.go:0
+0x400808ce 3 "L32R" "l32r a8, 0x400807a0" "l32r a8, 0x400807a0" ref=0x0 call=false runtime_esp32.go:0
+0x400808d1 3 "CALLX8" "callx8 a8" "callx8 a8" ref=0x0 call=true scheduler_cooperative.go:181
 == runtime.run$1$gowrapper 0x400808e8 142 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/scheduler_cooperative.go
 0x400808e8 3 "ENTRY" "entry a1, 80" "entry a1, 80" ref=0x0 call=false scheduler_cooperative.go:0
 0x400808eb 2 "MOVI.N" "movi.n a8, 3" "movi.n a8, 3" ref=0x0 call=false scheduler_cooperative.go:0

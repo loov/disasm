@@ -1539,6 +1539,11 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x92d44 4 "Op(0)" "WORD $0" ".long 0x0" .:-1
 0x92d48 4 "Op(0)" "WORD $0" ".long 0x0" .:-1
 0x92d4c 4 "Op(0)" "WORD $0" ".long 0x0" .:-1
+== main 0x92fc0 16 /usr/local/go/src/runtime/rt0_linux_ppc64x.s
+0x92fc0 4 "lis" "ADDIS $0,$9,R12" "lis r12,9" rt0_linux_ppc64x.s:62
+0x92fc4 4 "addi" "ADD R12,$-320,R12" "addi r12,r12,-320" rt0_linux_ppc64x.s:62
+0x92fc8 4 "mtspr" "MOVD R12,CTR" "mtctr r12" rt0_linux_ppc64x.s:63
+0x92fcc 4 "bcctr" "BR (CTR)" "bctr" rt0_linux_ppc64x.s:64
 == main.sumInts 0x94d10 48 /Users/egon/code/gio/lensm/testdata/testprog/main.go
 0x94d10 4 "std" "MOVD R3,32(R1)" "std r3,32(r1)" main.go:19
 0x94d14 4 "li" "MOVD $0,R5" "li r5,0" main.go:21

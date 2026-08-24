@@ -1,0 +1,1 @@
+arch=wasm funcs=2 sha256=ddec1c510fb268dac06eefc5743d98ef6466048474ea27def0e051499d1d45a0

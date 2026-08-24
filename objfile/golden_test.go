@@ -87,7 +87,7 @@ func TestGolden(t *testing.T) {
 }
 
 func keepFunc(name string) bool {
-	return strings.HasPrefix(name, "main.") || strings.HasPrefix(name, "_start") ||
+	return strings.HasPrefix(name, "main.") || strings.HasPrefix(name, "main/") || name == "main" || strings.HasPrefix(name, "_start") ||
 		strings.HasPrefix(name, "Reset_Handler") || strings.HasPrefix(name, "runtime.memmove") ||
 		strings.HasPrefix(name, "runtime.run")
 }

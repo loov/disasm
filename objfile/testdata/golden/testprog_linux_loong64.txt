@@ -1975,6 +1975,11 @@ arch=loong64 funcs=1508 sha256=734d740682f7b942ab1addf13476ce9223987713e741d4f96
 0x90e64 4 "BNEZ" "BNE R6, -385(PC)" "bnez $a2, -1540" memmove_loong64.s:537
 0x90e68 4 "JIRL" "RET" "ret" memmove_loong64.s:538
 0x90e6c 4 "BREAK" "BREAK" "break 0x0" .:-1
+== main 0x91370 16 /usr/local/go/src/runtime/rt0_linux_loong64.s
+0x91370 4 "PCALAU12I" "PCALAU12I $-4, R19" "pcalau12i $t7, -4" rt0_linux_loong64.s:25
+0x91374 4 "ADDI.D" "ADDV $688, R19" "addi.d $t7, $t7, 688" rt0_linux_loong64.s:25
+0x91378 4 "JIRL" "JMP (R19)" "jr $t7" rt0_linux_loong64.s:26
+0x9137c 4 "BREAK" "BREAK" "break 0x0" .:-1
 == main.sumInts 0x92b60 48 /Users/egon/code/gio/lensm/testdata/testprog/main.go
 0x92b60 4 "ST.D" "MOVV R4, 8(R3)" "st.d $a0, $sp, 8" main.go:19
 0x92b64 4 "OR" "MOVV R0, R6" "move $a2, $zero" main.go:21

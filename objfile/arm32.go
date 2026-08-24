@@ -25,9 +25,10 @@ type armRegionsBuilder struct {
 	thumb   bool
 }
 
-// addMapping records a mapping symbol inside the text section.
-func (b *armRegionsBuilder) addMapping(name string, addr, textStart, textEnd uint64) {
-	if len(name) < 2 || name[0] != '$' || addr < textStart || addr >= textEnd {
+// addMapping records a mapping symbol; the caller checks it lies in a
+// text section.
+func (b *armRegionsBuilder) addMapping(name string, addr uint64) {
+	if len(name) < 2 || name[0] != '$' {
 		return
 	}
 	switch name[1] {

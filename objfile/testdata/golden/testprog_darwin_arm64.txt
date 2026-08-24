@@ -1,42 +1,42 @@
-arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f9488d72d31bf2aa
+arch=arm64 funcs=1592 sha256=7274bdc05b1d8ae5f76a58e703c37c7e1bfc46abccc23fbe629340dbfa8ddc2c
 == runtime.runGCProg 0x100019de0 1008 /usr/local/go/src/runtime/mbitmap.go
 0x100019de0 4 "LDR" "MOVD 16(R28), R16" "ldr x16, [x28,#16]" mbitmap.go:1565
 0x100019de4 4 "CMP" "CMP R16, RSP" "cmp sp, x16" mbitmap.go:1565
-0x100019de8 4 "B" "BLS 244(PC)" "b.ls .+0x3d0" mbitmap.go:1565
+0x100019de8 4 "B" "BLS 244(PC)" "b.ls .+0x3d0 <runtime.runGCProg+0x3d8>" mbitmap.go:1565
 0x100019dec 4 "STR" "MOVD.W R30, -16(RSP)" "str x30, [sp,#-16]!" mbitmap.go:1565
 0x100019df0 4 "STUR" "MOVD R29, -8(RSP)" "stur x29, [sp,#-8]" mbitmap.go:1565
 0x100019df4 4 "SUB" "SUB $8, RSP, R29" "sub x29, sp, #0x8" mbitmap.go:1565
 0x100019df8 4 "MOV" "MOVD ZR, R2" "mov x2, xzr" mbitmap.go:1577
 0x100019dfc 4 "MOV" "MOVD R1, R3" "mov x3, x1" mbitmap.go:1577
 0x100019e00 4 "MOV" "MOVD ZR, R4" "mov x4, xzr" mbitmap.go:1577
-0x100019e04 4 "B" "JMP 10(PC)" "b .+0x28" mbitmap.go:1577
+0x100019e04 4 "B" "JMP 10(PC)" "b .+0x28 <runtime.runGCProg+0x4c>" mbitmap.go:1577
 0x100019e08 4 "MOV" "MOVD R7, R0" "mov x0, x7" mbitmap.go:1577
 0x100019e0c 4 "MOV" "MOVD R5, R4" "mov x4, x5" mbitmap.go:1577
 0x100019e10 4 "MOV" "MOVD R9, R1" "mov x1, x9" mbitmap.go:1577
-0x100019e14 4 "B" "JMP 6(PC)" "b .+0x18" mbitmap.go:1577
+0x100019e14 4 "B" "JMP 6(PC)" "b .+0x18 <runtime.runGCProg+0x4c>" mbitmap.go:1577
 0x100019e18 4 "STRB" "MOVB R2, (R1)" "strb w2, [x1]" mbitmap.go:1578
 0x100019e1c 4 "NOP" "NOOP" "nop " mbitmap.go:1579
 0x100019e20 4 "SUB" "SUB $8, R4, R4" "sub x4, x4, #0x8" mbitmap.go:1577
 0x100019e24 4 "LSR" "LSR $8, R2, R2" "lsr x2, x2, #8" mbitmap.go:1580
 0x100019e28 4 "ADD" "ADD $1, R1, R1" "add x1, x1, #0x1" mbitmap.go:1056
 0x100019e2c 4 "CMP" "CMP $8, R4" "cmp x4, #0x8" mbitmap.go:1577
-0x100019e30 4 "B" "BCS -6(PC)" "b.cs .+0xffffffffffffffe8" mbitmap.go:1577
+0x100019e30 4 "B" "BCS -6(PC)" "b.cs .+0xffffffffffffffe8 <runtime.runGCProg+0x38>" mbitmap.go:1577
 0x100019e34 4 "LDRB" "MOVBU (R0), R5" "ldrb w5, [x0]" mbitmap.go:1584
 0x100019e38 4 "NOP" "NOOP" "nop " mbitmap.go:1585
 0x100019e3c 4 "AND" "AND $127, R5, R6" "and x6, x5, #0x7f" mbitmap.go:1586
 0x100019e40 4 "ADD" "ADD $1, R0, R7" "add x7, x0, #0x1" mbitmap.go:1056
 0x100019e44 4 "MOV" "MOVD R5, R8" "mov x8, x5" mbitmap.go:1584
-0x100019e48 4 "TBNZ" "TBNZ $7, R8, 4(PC)" "tbnz w8, #7, .+0x10" mbitmap.go:1587
-0x100019e4c 4 "CBZ" "CBZ R6, 78(PC)" "cbz x6, .+0x138" mbitmap.go:1589
+0x100019e48 4 "TBNZ" "TBNZ $7, R8, 4(PC)" "tbnz w8, #7, .+0x10 <runtime.runGCProg+0x78>" mbitmap.go:1587
+0x100019e4c 4 "CBZ" "CBZ R6, 78(PC)" "cbz x6, .+0x138 <runtime.runGCProg+0x1a4>" mbitmap.go:1589
 0x100019e50 4 "MOV" "MOVD ZR, R8" "mov x8, xzr" mbitmap.go:1594
-0x100019e54 4 "B" "JMP 202(PC)" "b .+0x328" mbitmap.go:1594
-0x100019e58 4 "CBNZ" "CBNZ R6, 4(PC)" "cbnz x6, .+0x10" mbitmap.go:1610
+0x100019e54 4 "B" "JMP 202(PC)" "b .+0x328 <runtime.runGCProg+0x39c>" mbitmap.go:1594
+0x100019e58 4 "CBNZ" "CBNZ R6, 4(PC)" "cbnz x6, .+0x10 <runtime.runGCProg+0x88>" mbitmap.go:1610
 0x100019e5c 4 "MOV" "MOVD ZR, R5" "mov x5, xzr" mbitmap.go:1610
 0x100019e60 4 "MOV" "MOVD ZR, R6" "mov x6, xzr" mbitmap.go:1610
-0x100019e64 4 "B" "JMP 168(PC)" "b .+0x2a0" mbitmap.go:1610
+0x100019e64 4 "B" "JMP 168(PC)" "b .+0x2a0 <runtime.runGCProg+0x324>" mbitmap.go:1610
 0x100019e68 4 "MOV" "MOVD ZR, R5" "mov x5, xzr" mbitmap.go:1624
 0x100019e6c 4 "MOV" "MOVD ZR, R8" "mov x8, xzr" mbitmap.go:1624
-0x100019e70 4 "B" "JMP 2(PC)" "b .+0x8" mbitmap.go:1624
+0x100019e70 4 "B" "JMP 2(PC)" "b .+0x8 <runtime.runGCProg+0x98>" mbitmap.go:1624
 0x100019e74 4 "ADD" "ADD $7, R8, R8" "add x8, x8, #0x7" mbitmap.go:1623
 0x100019e78 4 "LDRB" "MOVBU (R7), R9" "ldrb w9, [x7]" mbitmap.go:1624
 0x100019e7c 4 "AND" "AND $127, R9, R10" "and x10, x9, #0x7f" mbitmap.go:1626
@@ -46,22 +46,22 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x100019e8c 4 "CMP" "CMP $64, R8" "cmp x8, #0x40" mbitmap.go:1626
 0x100019e90 4 "CSEL" "CSEL LO, R10, ZR, R10" "csel x10, x10, xzr, cc" mbitmap.go:1626
 0x100019e94 4 "ORR" "ORR R10, R5, R5" "orr x5, x5, x10" mbitmap.go:1626
-0x100019e98 4 "TBNZ" "TBNZ $7, R9, -9(PC)" "tbnz w9, #7, .+0xffffffffffffffdc" mbitmap.go:1627
+0x100019e98 4 "TBNZ" "TBNZ $7, R9, -9(PC)" "tbnz w9, #7, .+0xffffffffffffffdc <runtime.runGCProg+0x94>" mbitmap.go:1627
 0x100019e9c 4 "MUL" "MUL R5, R6, R5" "mul x5, x6, x5" mbitmap.go:1631
 0x100019ea0 4 "CMP" "CMP $57, R6" "cmp x6, #0x39" mbitmap.go:1642
-0x100019ea4 4 "B" "BHI 6(PC)" "b.hi .+0x18" mbitmap.go:1642
+0x100019ea4 4 "B" "BHI 6(PC)" "b.hi .+0x18 <runtime.runGCProg+0xdc>" mbitmap.go:1642
 0x100019ea8 4 "NOP" "NOOP" "nop " mbitmap.go:1648
 0x100019eac 4 "SUB" "SUB $1, R1, R8" "sub x8, x1, #0x1" mbitmap.go:1069
 0x100019eb0 4 "MOV" "MOVD R4, R0" "mov x0, x4" mbitmap.go:1577
 0x100019eb4 4 "MOV" "MOVD R2, R9" "mov x9, x2" mbitmap.go:1577
-0x100019eb8 4 "B" "JMP 63(PC)" "b .+0xfc" mbitmap.go:1649
+0x100019eb8 4 "B" "JMP 63(PC)" "b .+0xfc <runtime.runGCProg+0x1d4>" mbitmap.go:1649
 0x100019ebc 4 "SUB" "SUB R4, R6, R6" "sub x6, x6, x4" mbitmap.go:1723
 0x100019ec0 4 "ADD" "ADD $7, R6, R8" "add x8, x6, #0x7" mbitmap.go:1725
 0x100019ec4 4 "MOV" "MOVD R1, R9" "mov x9, x1" mbitmap.go:1045
 0x100019ec8 4 "SUB" "SUB R8>>3, R1, R1" "sub x1, x1, x8, lsr #3" mbitmap.go:1045
 0x100019ecc 4 "MOV" "MOVD R1, R8" "mov x8, x1" mbitmap.go:1045
 0x100019ed0 4 "AND" "AND $7, R6, R6" "and x6, x6, #0x7" mbitmap.go:1726
-0x100019ed4 4 "CBZ" "CBZ R6, 12(PC)" "cbz x6, .+0x30" mbitmap.go:1726
+0x100019ed4 4 "CBZ" "CBZ R6, 12(PC)" "cbz x6, .+0x30 <runtime.runGCProg+0x124>" mbitmap.go:1726
 0x100019ed8 4 "LDRB" "MOVBU (R1), R10" "ldrb w10, [x1]" mbitmap.go:1727
 0x100019edc 4 "ORR" "ORR $8, ZR, R11" "orr x11, xzr, #0x8" mbitmap.go:1727
 0x100019ee0 4 "SUB" "SUB R6, R11, R12" "sub x12, x11, x6" mbitmap.go:1727
@@ -72,10 +72,10 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x100019ef4 4 "NOP" "NOOP" "nop " mbitmap.go:1728
 0x100019ef8 4 "ADD" "ADD R4, R6, R4" "add x4, x6, x4" mbitmap.go:1729
 0x100019efc 4 "SUB" "SUB R6, R5, R5" "sub x5, x5, x6" mbitmap.go:1730
-0x100019f00 4 "B" "JMP 2(PC)" "b .+0x8" mbitmap.go:1730
+0x100019f00 4 "B" "JMP 2(PC)" "b .+0x8 <runtime.runGCProg+0x128>" mbitmap.go:1730
 0x100019f04 4 "ORR" "ORR $8, ZR, R11" "orr x11, xzr, #0x8" mbitmap.go:1730
 0x100019f08 4 "LSR" "LSR $3, R5, R6" "lsr x6, x5, #3" mbitmap.go:1734
-0x100019f0c 4 "B" "JMP 13(PC)" "b .+0x34" mbitmap.go:1734
+0x100019f0c 4 "B" "JMP 13(PC)" "b .+0x34 <runtime.runGCProg+0x160>" mbitmap.go:1734
 0x100019f10 4 "LDRB" "MOVBU (R1), R8" "ldrb w8, [x1]" mbitmap.go:1735
 0x100019f14 4 "LSL" "LSL R4, R8, R8" "lsl x8, x8, x4" mbitmap.go:1735
 0x100019f18 4 "NOP" "NOOP" "nop " mbitmap.go:1736
@@ -88,9 +88,9 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x100019f34 4 "SUB" "SUB $1, R6, R6" "sub x6, x6, #0x1" mbitmap.go:1734
 0x100019f38 4 "ADD" "ADD $1, R1, R1" "add x1, x1, #0x1" mbitmap.go:1056
 0x100019f3c 4 "ADD" "ADD $1, R9, R9" "add x9, x9, #0x1" mbitmap.go:1056
-0x100019f40 4 "CBNZ" "CBNZ R6, -12(PC)" "cbnz x6, .+0xffffffffffffffd0" mbitmap.go:1734
+0x100019f40 4 "CBNZ" "CBNZ R6, -12(PC)" "cbnz x6, .+0xffffffffffffffd0 <runtime.runGCProg+0x130>" mbitmap.go:1734
 0x100019f44 4 "AND" "AND $7, R5, R5" "and x5, x5, #0x7" mbitmap.go:1742
-0x100019f48 4 "CBZ" "CBZ R5, 12(PC)" "cbz x5, .+0x30" mbitmap.go:1742
+0x100019f48 4 "CBZ" "CBZ R5, 12(PC)" "cbz x5, .+0x30 <runtime.runGCProg+0x198>" mbitmap.go:1742
 0x100019f4c 4 "LDRB" "MOVBU (R1), R1" "ldrb w1, [x1]" mbitmap.go:1743
 0x100019f50 4 "ORR" "ORR $1, ZR, R6" "orr x6, xzr, #0x1" mbitmap.go:1743
 0x100019f54 4 "LSL" "LSL R5, R6, R8" "lsl x8, x6, x5" mbitmap.go:1743
@@ -101,67 +101,67 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x100019f68 4 "CMP" "CMP $64, R4" "cmp x4, #0x40" mbitmap.go:1743
 0x100019f6c 4 "CSEL" "CSEL LO, R1, ZR, R1" "csel x1, x1, xzr, cc" mbitmap.go:1743
 0x100019f70 4 "ORR" "ORR R1, R2, R2" "orr x2, x2, x1" mbitmap.go:1743
-0x100019f74 4 "B" "JMP -91(PC)" "b .+0xfffffffffffffe94" mbitmap.go:1744
+0x100019f74 4 "B" "JMP -91(PC)" "b .+0xfffffffffffffe94 <runtime.runGCProg+0x28>" mbitmap.go:1744
 0x100019f78 4 "ORR" "ORR $1, ZR, R6" "orr x6, xzr, #0x1" mbitmap.go:1744
 0x100019f7c 4 "MOV" "MOVD R4, R5" "mov x5, x4" mbitmap.go:1744
-0x100019f80 4 "B" "JMP -94(PC)" "b .+0xfffffffffffffe88" mbitmap.go:1742
+0x100019f80 4 "B" "JMP -94(PC)" "b .+0xfffffffffffffe88 <runtime.runGCProg+0x28>" mbitmap.go:1742
 0x100019f84 4 "MOV" "MOVD R1, R5" "mov x5, x1" mbitmap.go:1749
 0x100019f88 4 "SUB" "SUB R3, R5, R3" "sub x3, x5, x3" mbitmap.go:1749
 0x100019f8c 4 "NEG" "NEG R4, R5" "neg x5, x4" mbitmap.go:1750
 0x100019f90 4 "AND" "AND $7, R5, R5" "and x5, x5, #0x7" mbitmap.go:1750
 0x100019f94 4 "ADD" "ADD R3<<3, R4, R0" "add x0, x4, x3, lsl #3" mbitmap.go:1749
 0x100019f98 4 "ADD" "ADD R4, R5, R3" "add x3, x5, x4" mbitmap.go:1750
-0x100019f9c 4 "B" "JMP 106(PC)" "b .+0x1a8" mbitmap.go:1751
+0x100019f9c 4 "B" "JMP 106(PC)" "b .+0x1a8 <runtime.runGCProg+0x364>" mbitmap.go:1751
 0x100019fa0 4 "LDRB" "MOVBU (R8), R10" "ldrb w10, [x8]" mbitmap.go:1651
 0x100019fa4 4 "ORR" "ORR R2<<8, R10, R2" "orr x2, x10, x2, lsl #8" mbitmap.go:1651
 0x100019fa8 4 "NOP" "NOOP" "nop " mbitmap.go:1652
 0x100019fac 4 "ADD" "ADD $8, R4, R4" "add x4, x4, #0x8" mbitmap.go:1653
 0x100019fb0 4 "SUB" "SUB $1, R8, R8" "sub x8, x8, #0x1" mbitmap.go:1069
 0x100019fb4 4 "CMP" "CMP R6, R4" "cmp x4, x6" mbitmap.go:1649
-0x100019fb8 4 "B" "BCC -6(PC)" "b.cc .+0xffffffffffffffe8" mbitmap.go:1649
-0x100019fbc 4 "B" "BLS 6(PC)" "b.ls .+0x18" mbitmap.go:1660
+0x100019fb8 4 "B" "BCC -6(PC)" "b.cc .+0xffffffffffffffe8 <runtime.runGCProg+0x1c0>" mbitmap.go:1649
+0x100019fbc 4 "B" "BLS 6(PC)" "b.ls .+0x18 <runtime.runGCProg+0x1f4>" mbitmap.go:1660
 0x100019fc0 4 "SUB" "SUB R6, R4, R8" "sub x8, x4, x6" mbitmap.go:1661
 0x100019fc4 4 "LSR" "LSR R8, R2, R10" "lsr x10, x2, x8" mbitmap.go:1661
 0x100019fc8 4 "CMP" "CMP $64, R8" "cmp x8, #0x40" mbitmap.go:1661
 0x100019fcc 4 "CSEL" "CSEL LO, R10, ZR, R2" "csel x2, x10, xzr, cc" mbitmap.go:1661
-0x100019fd0 4 "B" "JMP 2(PC)" "b .+0x8" mbitmap.go:1662
+0x100019fd0 4 "B" "JMP 2(PC)" "b .+0x8 <runtime.runGCProg+0x1f8>" mbitmap.go:1662
 0x100019fd4 4 "MOV" "MOVD R4, R6" "mov x6, x4" mbitmap.go:1666
 0x100019fd8 4 "CMP" "CMP $1, R6" "cmp x6, #0x1" mbitmap.go:1666
-0x100019fdc 4 "B" "BNE 8(PC)" "b.ne .+0x20" mbitmap.go:1666
+0x100019fdc 4 "B" "BNE 8(PC)" "b.ne .+0x20 <runtime.runGCProg+0x21c>" mbitmap.go:1666
 0x100019fe0 4 "CMP" "CMP $1, R2" "cmp x2, #0x1" mbitmap.go:1673
-0x100019fe4 4 "B" "BNE 4(PC)" "b.ne .+0x10" mbitmap.go:1673
+0x100019fe4 4 "B" "BNE 4(PC)" "b.ne .+0x10 <runtime.runGCProg+0x214>" mbitmap.go:1673
 0x100019fe8 4 "MOV" "MOVD $144115188075855871, R2" "mov x2, #0x1ffffffffffffff" mbitmap.go:1673
 0x100019fec 4 "MOV" "MOVD $57, R4" "mov x4, #0x39" mbitmap.go:1673
-0x100019ff0 4 "B" "JMP 13(PC)" "b .+0x34" mbitmap.go:1673
+0x100019ff0 4 "B" "JMP 13(PC)" "b .+0x34 <runtime.runGCProg+0x244>" mbitmap.go:1673
 0x100019ff4 4 "MOV" "MOVD R5, R4" "mov x4, x5" mbitmap.go:1673
-0x100019ff8 4 "B" "JMP 11(PC)" "b .+0x2c" mbitmap.go:1677
+0x100019ff8 4 "B" "JMP 11(PC)" "b .+0x2c <runtime.runGCProg+0x244>" mbitmap.go:1677
 0x100019ffc 4 "ADD" "ADD R6, R6, R4" "add x4, x6, x6" mbitmap.go:1682
 0x10001a000 4 "CMP" "CMP $57, R4" "cmp x4, #0x39" mbitmap.go:1682
-0x10001a004 4 "B" "BHI 3(PC)" "b.hi .+0xc" mbitmap.go:1682
+0x10001a004 4 "B" "BHI 3(PC)" "b.hi .+0xc <runtime.runGCProg+0x230>" mbitmap.go:1682
 0x10001a008 4 "MOV" "MOVD R6, R4" "mov x4, x6" mbitmap.go:1666
-0x10001a00c 4 "B" "JMP 47(PC)" "b .+0xbc" mbitmap.go:1682
+0x10001a00c 4 "B" "JMP 47(PC)" "b .+0xbc <runtime.runGCProg+0x2e8>" mbitmap.go:1682
 0x10001a010 4 "MOV" "MOVD R6, R4" "mov x4, x6" mbitmap.go:1700
-0x10001a014 4 "B" "JMP 4(PC)" "b .+0x10" mbitmap.go:1700
+0x10001a014 4 "B" "JMP 4(PC)" "b .+0x10 <runtime.runGCProg+0x244>" mbitmap.go:1700
 0x10001a018 4 "SUB" "SUB R4, R5, R5" "sub x5, x5, x4" mbitmap.go:1700
 0x10001a01c 4 "MOV" "MOVD R8, R0" "mov x0, x8" mbitmap.go:1700
 0x10001a020 4 "MOV" "MOVD R6, R9" "mov x9, x6" mbitmap.go:1700
 0x10001a024 4 "CMP" "CMP R5, R4" "cmp x4, x5" mbitmap.go:1700
-0x10001a028 4 "B" "BHI 15(PC)" "b.hi .+0x3c" mbitmap.go:1700
+0x10001a028 4 "B" "BHI 15(PC)" "b.hi .+0x3c <runtime.runGCProg+0x284>" mbitmap.go:1700
 0x10001a02c 4 "LSL" "LSL R0, R2, R6" "lsl x6, x2, x0" mbitmap.go:1701
 0x10001a030 4 "ADD" "ADD R0, R4, R8" "add x8, x4, x0" mbitmap.go:1702
 0x10001a034 4 "CMP" "CMP $64, R0" "cmp x0, #0x40" mbitmap.go:1701
 0x10001a038 4 "CSEL" "CSEL LO, R6, ZR, R6" "csel x6, x6, xzr, cc" mbitmap.go:1701
 0x10001a03c 4 "ORR" "ORR R6, R9, R6" "orr x6, x9, x6" mbitmap.go:1701
-0x10001a040 4 "B" "JMP 6(PC)" "b .+0x18" mbitmap.go:1703
+0x10001a040 4 "B" "JMP 6(PC)" "b .+0x18 <runtime.runGCProg+0x278>" mbitmap.go:1703
 0x10001a044 4 "STRB" "MOVB R6, (R1)" "strb w6, [x1]" mbitmap.go:1704
 0x10001a048 4 "NOP" "NOOP" "nop " mbitmap.go:1705
 0x10001a04c 4 "LSR" "LSR $8, R6, R6" "lsr x6, x6, #8" mbitmap.go:1706
 0x10001a050 4 "SUB" "SUB $8, R8, R8" "sub x8, x8, #0x8" mbitmap.go:1707
 0x10001a054 4 "ADD" "ADD $1, R1, R1" "add x1, x1, #0x1" mbitmap.go:1056
 0x10001a058 4 "CMP" "CMP $8, R8" "cmp x8, #0x8" mbitmap.go:1703
-0x10001a05c 4 "B" "BCS -6(PC)" "b.cs .+0xffffffffffffffe8" mbitmap.go:1703
-0x10001a060 4 "B" "JMP -18(PC)" "b .+0xffffffffffffffb8" mbitmap.go:1703
-0x10001a064 4 "CBZ" "CBZ R5, 13(PC)" "cbz x5, .+0x34" mbitmap.go:1712
+0x10001a05c 4 "B" "BCS -6(PC)" "b.cs .+0xffffffffffffffe8 <runtime.runGCProg+0x264>" mbitmap.go:1703
+0x10001a060 4 "B" "JMP -18(PC)" "b .+0xffffffffffffffb8 <runtime.runGCProg+0x238>" mbitmap.go:1703
+0x10001a064 4 "CBZ" "CBZ R5, 13(PC)" "cbz x5, .+0x34 <runtime.runGCProg+0x2b8>" mbitmap.go:1712
 0x10001a068 4 "ORR" "ORR $1, ZR, R4" "orr x4, xzr, #0x1" mbitmap.go:1713
 0x10001a06c 4 "LSL" "LSL R5, R4, R6" "lsl x6, x4, x5" mbitmap.go:1713
 0x10001a070 4 "ADD" "ADD R5, R0, R8" "add x8, x0, x5" mbitmap.go:1715
@@ -173,7 +173,7 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10001a088 4 "CMP" "CMP $64, R0" "cmp x0, #0x40" mbitmap.go:1714
 0x10001a08c 4 "CSEL" "CSEL LO, R2, ZR, R2" "csel x2, x2, xzr, cc" mbitmap.go:1714
 0x10001a090 4 "ORR" "ORR R2, R9, R9" "orr x9, x9, x2" mbitmap.go:1714
-0x10001a094 4 "B" "JMP 3(PC)" "b .+0xc" mbitmap.go:1715
+0x10001a094 4 "B" "JMP 3(PC)" "b .+0xc <runtime.runGCProg+0x2c0>" mbitmap.go:1715
 0x10001a098 4 "ORR" "ORR $1, ZR, R4" "orr x4, xzr, #0x1" mbitmap.go:1715
 0x10001a09c 4 "MOV" "MOVD R0, R8" "mov x8, x0" mbitmap.go:1717
 0x10001a0a0 4 "ORR" "ORR $1, ZR, R6" "orr x6, xzr, #0x1" mbitmap.go:1717
@@ -181,14 +181,14 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10001a0a8 4 "MOV" "MOVD R8, R5" "mov x5, x8" mbitmap.go:1577
 0x10001a0ac 4 "MOV" "MOVD R9, R2" "mov x2, x9" mbitmap.go:1577
 0x10001a0b0 4 "MOV" "MOVD R1, R9" "mov x9, x1" mbitmap.go:1577
-0x10001a0b4 4 "B" "JMP -171(PC)" "b .+0xfffffffffffffd54" mbitmap.go:1717
+0x10001a0b4 4 "B" "JMP -171(PC)" "b .+0xfffffffffffffd54 <runtime.runGCProg+0x28>" mbitmap.go:1717
 0x10001a0b8 4 "LSL" "LSL R6, R2, R8" "lsl x8, x2, x6" mbitmap.go:1685
 0x10001a0bc 4 "CSEL" "CSEL LO, R8, ZR, R8" "csel x8, x8, xzr, cc" mbitmap.go:1685
 0x10001a0c0 4 "ORR" "ORR R8, R2, R2" "orr x2, x2, x8" mbitmap.go:1685
 0x10001a0c4 4 "ADD" "ADD R6, R6, R6" "add x6, x6, x6" mbitmap.go:1686
 0x10001a0c8 4 "CMP" "CMP $64, R6" "cmp x6, #0x40" mbitmap.go:1684
-0x10001a0cc 4 "B" "BLS -5(PC)" "b.ls .+0xffffffffffffffec" mbitmap.go:1684
-0x10001a0d0 4 "CBZ" "CBZ R4, 11(PC)" "cbz x4, .+0x2c" mbitmap.go:1690
+0x10001a0cc 4 "B" "BLS -5(PC)" "b.ls .+0xffffffffffffffec <runtime.runGCProg+0x2d8>" mbitmap.go:1684
+0x10001a0d0 4 "CBZ" "CBZ R4, 11(PC)" "cbz x4, .+0x2c <runtime.runGCProg+0x31c>" mbitmap.go:1690
 0x10001a0d4 4 "MOV" "MOVD $57, R8" "mov x8, #0x39" mbitmap.go:1690
 0x10001a0d8 4 "UDIV" "UDIV R4, R8, R10" "udiv x10, x8, x4" mbitmap.go:1690
 0x10001a0dc 4 "MUL" "MUL R4, R10, R6" "mul x6, x10, x4" mbitmap.go:1690
@@ -198,8 +198,8 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10001a0ec 4 "CSEL" "CSEL LO, R10, ZR, R10" "csel x10, x10, xzr, cc" mbitmap.go:1691
 0x10001a0f0 4 "SUB" "SUB $1, R10, R10" "sub x10, x10, #0x1" mbitmap.go:1691
 0x10001a0f4 4 "AND" "AND R10, R2, R2" "and x2, x2, x10" mbitmap.go:1691
-0x10001a0f8 4 "B" "JMP -58(PC)" "b .+0xffffffffffffff18" mbitmap.go:1693
-0x10001a0fc 4 "BL" "CALL runtime.panicdivide(SB)" "bl .+0x1fbf4" mbitmap.go:1690
+0x10001a0f8 4 "B" "JMP -58(PC)" "b .+0xffffffffffffff18 <runtime.runGCProg+0x230>" mbitmap.go:1693
+0x10001a0fc 4 "BL" "CALL runtime.panicdivide(SB)" "bl .+0x1fbf4 <runtime.panicdivide>" mbitmap.go:1690
 0x10001a100 4 "ADD" "ADD $7, R6, R6" "add x6, x6, #0x7" mbitmap.go:1611
 0x10001a104 4 "LDRB" "MOVBU (R7), R8" "ldrb w8, [x7]" mbitmap.go:1612
 0x10001a108 4 "AND" "AND $127, R8, R9" "and x9, x8, #0x7f" mbitmap.go:1614
@@ -209,15 +209,15 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10001a118 4 "CMP" "CMP $64, R6" "cmp x6, #0x40" mbitmap.go:1614
 0x10001a11c 4 "CSEL" "CSEL LO, R9, ZR, R9" "csel x9, x9, xzr, cc" mbitmap.go:1614
 0x10001a120 4 "ORR" "ORR R9, R5, R5" "orr x5, x5, x9" mbitmap.go:1614
-0x10001a124 4 "TBNZ" "TBNZ $7, R8, -9(PC)" "tbnz w8, #7, .+0xffffffffffffffdc" mbitmap.go:1615
+0x10001a124 4 "TBNZ" "TBNZ $7, R8, -9(PC)" "tbnz w8, #7, .+0xffffffffffffffdc <runtime.runGCProg+0x320>" mbitmap.go:1615
 0x10001a128 4 "MOV" "MOVD R5, R6" "mov x6, x5" mbitmap.go:1622
-0x10001a12c 4 "B" "JMP -177(PC)" "b .+0xfffffffffffffd3c" mbitmap.go:1616
+0x10001a12c 4 "B" "JMP -177(PC)" "b .+0xfffffffffffffd3c <runtime.runGCProg+0x88>" mbitmap.go:1616
 0x10001a130 4 "STRB" "MOVB R2, (R1)" "strb w2, [x1]" mbitmap.go:1752
 0x10001a134 4 "NOP" "NOOP" "nop " mbitmap.go:1753
 0x10001a138 4 "SUB" "SUB $8, R3, R3" "sub x3, x3, #0x8" mbitmap.go:1751
 0x10001a13c 4 "LSR" "LSR $8, R2, R2" "lsr x2, x2, #8" mbitmap.go:1754
 0x10001a140 4 "ADD" "ADD $1, R1, R1" "add x1, x1, #0x1" mbitmap.go:1056
-0x10001a144 4 "CBNZ" "CBNZ R3, -5(PC)" "cbnz x3, .+0xffffffffffffffec" mbitmap.go:1751
+0x10001a144 4 "CBNZ" "CBNZ R3, -5(PC)" "cbnz x3, .+0xffffffffffffffec <runtime.runGCProg+0x350>" mbitmap.go:1751
 0x10001a148 4 "LDUR" "MOVD -8(RSP), R29" "ldur x29, [sp,#-8]" mbitmap.go:1756
 0x10001a14c 4 "LDR" "MOVD.P 16(RSP), R30" "ldr x30, [sp],#16" mbitmap.go:1756
 0x10001a150 4 "RET" "RET" "ret" mbitmap.go:1756
@@ -232,9 +232,9 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10001a174 4 "ADD" "ADD $1, R7, R7" "add x7, x7, #0x1" mbitmap.go:1056
 0x10001a178 4 "ADD" "ADD $1, R1, R1" "add x1, x1, #0x1" mbitmap.go:1056
 0x10001a17c 4 "CMP" "CMP R6>>3, R8" "cmp x8, x6, lsr #3" mbitmap.go:1594
-0x10001a180 4 "B" "BCC -11(PC)" "b.cc .+0xffffffffffffffd4" mbitmap.go:1594
+0x10001a180 4 "B" "BCC -11(PC)" "b.cc .+0xffffffffffffffd4 <runtime.runGCProg+0x374>" mbitmap.go:1594
 0x10001a184 4 "AND" "AND $7, R5, R5" "and x5, x5, #0x7" mbitmap.go:1601
-0x10001a188 4 "CBZ" "CBZ R5, 7(PC)" "cbz x5, .+0x1c" mbitmap.go:1601
+0x10001a188 4 "CBZ" "CBZ R5, 7(PC)" "cbz x5, .+0x1c <runtime.runGCProg+0x3c4>" mbitmap.go:1601
 0x10001a18c 4 "LDRB" "MOVBU (R7), R6" "ldrb w6, [x7]" mbitmap.go:1602
 0x10001a190 4 "LSL" "LSL R4, R6, R6" "lsl x6, x6, x4" mbitmap.go:1602
 0x10001a194 4 "ORR" "ORR R6, R2, R2" "orr x2, x2, x6" mbitmap.go:1602
@@ -245,28 +245,28 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10001a1a8 4 "ORR" "ORR $8, ZR, R11" "orr x11, xzr, #0x8" mbitmap.go:1606
 0x10001a1ac 4 "MOV" "MOVD R4, R5" "mov x5, x4" mbitmap.go:1577
 0x10001a1b0 4 "MOV" "MOVD R1, R9" "mov x9, x1" mbitmap.go:1577
-0x10001a1b4 4 "B" "JMP -235(PC)" "b .+0xfffffffffffffc54" mbitmap.go:1606
+0x10001a1b4 4 "B" "JMP -235(PC)" "b .+0xfffffffffffffc54 <runtime.runGCProg+0x28>" mbitmap.go:1606
 0x10001a1b8 4 "STP" "STP (R0, R1), 8(RSP)" "stp x0, x1, [sp,#8]" mbitmap.go:1565
 0x10001a1bc 4 "MOV" "MOVD R30, R3" "mov x3, x30" mbitmap.go:1565
-0x10001a1c0 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl .+0x564d0" mbitmap.go:1565
+0x10001a1c0 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl .+0x564d0 <runtime.morestack_noctxt.abi0>" mbitmap.go:1565
 0x10001a1c4 4 "LDP" "LDP 8(RSP), (R0, R1)" "ldp x0, x1, [sp,#8]" mbitmap.go:1565
-0x10001a1c8 4 "B" "JMP runtime.runGCProg(SB)" "b .+0xfffffffffffffc18" mbitmap.go:1565
+0x10001a1c8 4 "B" "JMP runtime.runGCProg(SB)" "b .+0xfffffffffffffc18 <runtime.runGCProg>" mbitmap.go:1565
 0x10001a1cc 4 "" "BYTE 0x00000000" ".byte 0x00000000" mbitmap.go:1565
 == runtime.runCheckmark 0x10001b500 192 /usr/local/go/src/runtime/mcheckmark.go
 0x10001b500 4 "LDR" "MOVD 16(R28), R16" "ldr x16, [x28,#16]" mcheckmark.go:126
 0x10001b504 4 "CMP" "CMP R16, RSP" "cmp sp, x16" mcheckmark.go:126
-0x10001b508 4 "B" "BLS 39(PC)" "b.ls .+0x9c" mcheckmark.go:126
+0x10001b508 4 "B" "BLS 39(PC)" "b.ls .+0x9c <runtime.runCheckmark+0xa4>" mcheckmark.go:126
 0x10001b50c 4 "STR" "MOVD.W R30, -48(RSP)" "str x30, [sp,#-48]!" mcheckmark.go:126
 0x10001b510 4 "STUR" "MOVD R29, -8(RSP)" "stur x29, [sp,#-8]" mcheckmark.go:126
 0x10001b514 4 "SUB" "SUB $8, RSP, R29" "sub x29, sp, #0x8" mcheckmark.go:126
 0x10001b518 4 "STR" "MOVD R0, 56(RSP)" "str x0, [sp,#56]" mcheckmark.go:144
 0x10001b51c 4 "NOP" "NOOP" "nop " mcheckmark.go:134
 0x10001b520 4 "NOP" "NOOP" "nop " types.go:179
-0x10001b524 4 "ADRP" "ADRP 1056768(PC), R0" "adrp x0, .+0x102000" types.go:131
+0x10001b524 4 "ADRP" "ADRP 1056768(PC), R0" "adrp x0, .+0x102000 <runtime.sched+0x604>" types.go:131
 0x10001b528 4 "ADD" "ADD $40, R0, R0" "add x0, x0, #0x28" types.go:131
 0x10001b52c 4 "STLRB" "STLRB ZR, (R0)" "stlrb wzr, [x0]" types.go:131
-0x10001b530 4 "BL" "CALL runtime.startCheckmarks(SB)" "bl .+0xfffffffffffffc10" mcheckmark.go:135
-0x10001b534 4 "BL" "CALL runtime.gcResetMarkState(SB)" "bl .+0x54fc" mcheckmark.go:136
+0x10001b530 4 "BL" "CALL runtime.startCheckmarks(SB)" "bl .+0xfffffffffffffc10 <runtime.startCheckmarks>" mcheckmark.go:135
+0x10001b534 4 "BL" "CALL runtime.gcResetMarkState(SB)" "bl .+0x54fc <runtime.gcResetMarkState>" mcheckmark.go:136
 0x10001b538 4 "LDR" "MOVD 48(R28), R0" "ldr x0, [x28,#48]" mcheckmark.go:137
 0x10001b53c 4 "LDR" "MOVD 208(R0), R0" "ldr x0, [x0,#208]" mcheckmark.go:137
 0x10001b540 4 "LDR" "MOVD 56(RSP), R26" "ldr x26, [sp,#56]" mcheckmark.go:138
@@ -278,17 +278,17 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10001b558 4 "BLR" "CALL (R1)" "blr x1" mcheckmark.go:138
 0x10001b55c 4 "LDR" "MOVD 32(RSP), R0" "ldr x0, [sp,#32]" mcheckmark.go:139
 0x10001b560 4 "MOV" "MOVD ZR, R1" "mov x1, xzr" mcheckmark.go:139
-0x10001b564 4 "BL" "CALL runtime.gcDrain(SB)" "bl .+0x87cc" mcheckmark.go:139
+0x10001b564 4 "BL" "CALL runtime.gcDrain(SB)" "bl .+0x87cc <runtime.gcDrain>" mcheckmark.go:139
 0x10001b568 4 "LDR" "MOVD 48(R28), R0" "ldr x0, [x28,#48]" mcheckmark.go:140
 0x10001b56c 4 "LDR" "MOVD 208(R0), R0" "ldr x0, [x0,#208]" mcheckmark.go:140
-0x10001b570 4 "BL" "CALL runtime.wbBufFlush1(SB)" "bl .+0x1ced0" mcheckmark.go:140
+0x10001b570 4 "BL" "CALL runtime.wbBufFlush1(SB)" "bl .+0x1ced0 <runtime.wbBufFlush1>" mcheckmark.go:140
 0x10001b574 4 "LDR" "MOVD 32(RSP), R0" "ldr x0, [sp,#32]" mcheckmark.go:141
-0x10001b578 4 "BL" "CALL runtime.(*gcWork).dispose(SB)" "bl .+0x123e8" mcheckmark.go:141
-0x10001b57c 4 "BL" "CALL runtime.endCheckmarks(SB)" "bl .+0xfffffffffffffca4" mcheckmark.go:142
+0x10001b578 4 "BL" "CALL runtime.(*gcWork).dispose(SB)" "bl .+0x123e8 <runtime.(*gcWork).dispose>" mcheckmark.go:141
+0x10001b57c 4 "BL" "CALL runtime.endCheckmarks(SB)" "bl .+0xfffffffffffffca4 <runtime.endCheckmarks>" mcheckmark.go:142
 0x10001b580 4 "NOP" "NOOP" "nop " mcheckmark.go:143
 0x10001b584 4 "NOP" "NOOP" "nop " types.go:179
 0x10001b588 4 "ORR" "ORR $1, ZR, R0" "orr x0, xzr, #0x1" types.go:131
-0x10001b58c 4 "ADRP" "ADRP 1056768(PC), R1" "adrp x1, .+0x102000" types.go:131
+0x10001b58c 4 "ADRP" "ADRP 1056768(PC), R1" "adrp x1, .+0x102000 <runtime.sched+0x66c>" types.go:131
 0x10001b590 4 "ADD" "ADD $40, R1, R1" "add x1, x1, #0x28" types.go:131
 0x10001b594 4 "STLRB" "STLRB R0, (R1)" "stlrb w0, [x1]" types.go:131
 0x10001b598 4 "LDUR" "MOVD -8(RSP), R29" "ldur x29, [sp,#-8]" mcheckmark.go:144
@@ -296,16 +296,16 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10001b5a0 4 "RET" "RET" "ret" mcheckmark.go:144
 0x10001b5a4 4 "STR" "MOVD R0, 8(RSP)" "str x0, [sp,#8]" mcheckmark.go:126
 0x10001b5a8 4 "MOV" "MOVD R30, R3" "mov x3, x30" mcheckmark.go:126
-0x10001b5ac 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl .+0x550e4" mcheckmark.go:126
+0x10001b5ac 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl .+0x550e4 <runtime.morestack_noctxt.abi0>" mcheckmark.go:126
 0x10001b5b0 4 "LDR" "MOVD 8(RSP), R0" "ldr x0, [sp,#8]" mcheckmark.go:126
-0x10001b5b4 4 "B" "JMP runtime.runCheckmark(SB)" "b .+0xffffffffffffff4c" mcheckmark.go:126
+0x10001b5b4 4 "B" "JMP runtime.runCheckmark(SB)" "b .+0xffffffffffffff4c <runtime.runCheckmark>" mcheckmark.go:126
 0x10001b5b8 4 "" "BYTE 0x00000000" ".byte 0x00000000" mcheckmark.go:126
 0x10001b5bc 4 "" "BYTE 0x00000000" ".byte 0x00000000" mcheckmark.go:126
 == runtime.runFinalizers 0x10001cd80 1280 /usr/local/go/src/runtime/mfinal.go
 0x10001cd80 4 "LDR" "MOVD 16(R28), R16" "ldr x16, [x28,#16]" mfinal.go:193
 0x10001cd84 4 "SUB" "SUB $464, RSP, R17" "sub x17, sp, #0x1d0" mfinal.go:193
 0x10001cd88 4 "CMP" "CMP R16, R17" "cmp x17, x16" mfinal.go:193
-0x10001cd8c 4 "B" "BLS 312(PC)" "b.ls .+0x4e0" mfinal.go:193
+0x10001cd8c 4 "B" "BLS 312(PC)" "b.ls .+0x4e0 <runtime.runFinalizers+0x4ec>" mfinal.go:193
 0x10001cd90 4 "SUB" "SUB $592, RSP, R20" "sub x20, sp, #0x250" mfinal.go:193
 0x10001cd94 4 "STP" "STP (R29, R30), -8(R20)" "stp x29, x30, [x20,#-8]" mfinal.go:193
 0x10001cd98 4 "MOV" "MOVD R20, RSP" "mov sp, x20" mfinal.go:193
@@ -313,62 +313,62 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10001cda0 4 "STR" "MOVD R28, 536(RSP)" "str x28, [sp,#536]" mfinal.go:200
 0x10001cda4 4 "NOP" "NOOP" "nop " mfinal.go:201
 0x10001cda8 4 "NOP" "NOOP" "nop " lock_spinbit.go:161
-0x10001cdac 4 "ADRP" "ADRP 1200128(PC), R0" "adrp x0, .+0x125000" lockrank_off.go:24
+0x10001cdac 4 "ADRP" "ADRP 1200128(PC), R0" "adrp x0, .+0x125000 <runtime.fwdSig+0x2c>" lockrank_off.go:24
 0x10001cdb0 4 "ADD" "ADD $1912, R0, R0" "add x0, x0, #0x778" lockrank_off.go:24
-0x10001cdb4 4 "BL" "CALL runtime.lock2(SB)" "bl .+0xffffffffffff550c" lockrank_off.go:24
-0x10001cdb8 4 "ADRP" "ADRP 1200128(PC), R27" "adrp x27, .+0x125000" mfinal.go:202
+0x10001cdb4 4 "BL" "CALL runtime.lock2(SB)" "bl .+0xffffffffffff550c <runtime.lock2>" lockrank_off.go:24
+0x10001cdb8 4 "ADRP" "ADRP 1200128(PC), R27" "adrp x27, .+0x125000 <runtime.fwdSig+0x38>" mfinal.go:202
 0x10001cdbc 4 "LDR" "MOVWU 2288(R27), R1" "ldr w1, [x27,#2288]" mfinal.go:202
-0x10001cdc0 4 "CBNZ" "CBNZW R1, 3(PC)" "cbnz w1, .+0xc" mfinal.go:202
+0x10001cdc0 4 "CBNZ" "CBNZW R1, 3(PC)" "cbnz w1, .+0xc <runtime.runFinalizers+0x4c>" mfinal.go:202
 0x10001cdc4 4 "LDR" "MOVD 536(RSP), R2" "ldr x2, [sp,#536]" mfinal.go:202
-0x10001cdc8 4 "B" "JMP 6(PC)" "b .+0x18" mfinal.go:202
-0x10001cdcc 4 "ADRP" "ADRP 1040384(PC), R27" "adrp x27, .+0xfe000" mfinal.go:202
+0x10001cdc8 4 "B" "JMP 6(PC)" "b .+0x18 <runtime.runFinalizers+0x60>" mfinal.go:202
+0x10001cdcc 4 "ADRP" "ADRP 1040384(PC), R27" "adrp x27, .+0xfe000 <runtime.itabTableInit+0xfac>" mfinal.go:202
 0x10001cdd0 4 "LDR" "MOVD 3688(R27), R1" "ldr x1, [x27,#3688]" mfinal.go:202
-0x10001cdd4 4 "BL" "CALL runtime.gcWriteBarrier2(SB)" "bl .+0x556fc" mfinal.go:202
+0x10001cdd4 4 "BL" "CALL runtime.gcWriteBarrier2(SB)" "bl .+0x556fc <runtime.gcWriteBarrier2>" mfinal.go:202
 0x10001cdd8 4 "LDR" "MOVD 536(RSP), R2" "ldr x2, [sp,#536]" mfinal.go:202
 0x10001cddc 4 "STP" "STP (R2, R1), (R25)" "stp x2, x1, [x25]" mfinal.go:202
-0x10001cde0 4 "ADRP" "ADRP 1040384(PC), R27" "adrp x27, .+0xfe000" mfinal.go:202
+0x10001cde0 4 "ADRP" "ADRP 1040384(PC), R27" "adrp x27, .+0xfe000 <runtime.itabTableInit+0xfc0>" mfinal.go:202
 0x10001cde4 4 "STR" "MOVD R2, 3688(R27)" "str x2, [x27,#3688]" mfinal.go:202
 0x10001cde8 4 "NOP" "NOOP" "nop " mfinal.go:203
 0x10001cdec 4 "NOP" "NOOP" "nop " lock_spinbit.go:270
-0x10001cdf0 4 "ADRP" "ADRP 1200128(PC), R0" "adrp x0, .+0x125000" lockrank_off.go:36
+0x10001cdf0 4 "ADRP" "ADRP 1200128(PC), R0" "adrp x0, .+0x125000 <runtime.fwdSig+0x70>" lockrank_off.go:36
 0x10001cdf4 4 "ADD" "ADD $1912, R0, R0" "add x0, x0, #0x778" lockrank_off.go:36
-0x10001cdf8 4 "BL" "CALL runtime.unlock2(SB)" "bl .+0xffffffffffff59d8" lockrank_off.go:36
+0x10001cdf8 4 "BL" "CALL runtime.unlock2(SB)" "bl .+0xffffffffffff59d8 <runtime.unlock2>" lockrank_off.go:36
 0x10001cdfc 4 "MOV" "MOVD ZR, R0" "mov x0, xzr" lockrank_off.go:36
 0x10001ce00 4 "MOV" "MOVD ZR, R1" "mov x1, xzr" lockrank_off.go:36
 0x10001ce04 4 "STR" "MOVD R1, 544(RSP)" "str x1, [sp,#544]" lockrank_off.go:36
 0x10001ce08 4 "STR" "MOVD R0, 64(RSP)" "str x0, [sp,#64]" lockrank_off.go:36
 0x10001ce0c 4 "NOP" "NOOP" "nop " lock_spinbit.go:161
-0x10001ce10 4 "ADRP" "ADRP 1200128(PC), R0" "adrp x0, .+0x125000" lockrank_off.go:24
+0x10001ce10 4 "ADRP" "ADRP 1200128(PC), R0" "adrp x0, .+0x125000 <runtime.fwdSig+0x90>" lockrank_off.go:24
 0x10001ce14 4 "ADD" "ADD $1912, R0, R0" "add x0, x0, #0x778" lockrank_off.go:24
-0x10001ce18 4 "BL" "CALL runtime.lock2(SB)" "bl .+0xffffffffffff54a8" lockrank_off.go:24
-0x10001ce1c 4 "ADRP" "ADRP 1200128(PC), R27" "adrp x27, .+0x125000" mfinal.go:207
+0x10001ce18 4 "BL" "CALL runtime.lock2(SB)" "bl .+0xffffffffffff54a8 <runtime.lock2>" lockrank_off.go:24
+0x10001ce1c 4 "ADRP" "ADRP 1200128(PC), R27" "adrp x27, .+0x125000 <runtime.fwdSig+0x9c>" mfinal.go:207
 0x10001ce20 4 "LDR" "MOVD 1920(R27), R1" "ldr x1, [x27,#1920]" mfinal.go:207
-0x10001ce24 4 "ADRP" "ADRP 1200128(PC), R27" "adrp x27, .+0x125000" mfinal.go:208
+0x10001ce24 4 "ADRP" "ADRP 1200128(PC), R27" "adrp x27, .+0x125000 <runtime.fwdSig+0xa4>" mfinal.go:208
 0x10001ce28 4 "STR" "MOVD ZR, 1920(R27)" "str xzr, [x27,#1920]" mfinal.go:208
-0x10001ce2c 4 "CBZ" "CBZ R1, 13(PC)" "cbz x1, .+0x34" mfinal.go:209
+0x10001ce2c 4 "CBZ" "CBZ R1, 13(PC)" "cbz x1, .+0x34 <runtime.runFinalizers+0xe0>" mfinal.go:209
 0x10001ce30 4 "STR" "MOVD R1, 72(RSP)" "str x1, [sp,#72]" mfinal.go:207
-0x10001ce34 4 "ADRP" "ADRP 1015808(PC), R27" "adrp x27, .+0xf8000" mfinal.go:213
+0x10001ce34 4 "ADRP" "ADRP 1015808(PC), R27" "adrp x27, .+0xf8000 <internal/strconv.pow10Tab+0x194>" mfinal.go:213
 0x10001ce38 4 "LDR" "MOVD 1312(R27), R1" "ldr x1, [x27,#1312]" mfinal.go:213
 0x10001ce3c 4 "STR" "MOVD R1, 80(RSP)" "str x1, [sp,#80]" mfinal.go:213
 0x10001ce40 4 "NOP" "NOOP" "nop " mfinal.go:214
-0x10001ce44 4 "ADRP" "ADRP 1200128(PC), R0" "adrp x0, .+0x125000" lockrank_off.go:36
+0x10001ce44 4 "ADRP" "ADRP 1200128(PC), R0" "adrp x0, .+0x125000 <runtime.fwdSig+0xc4>" lockrank_off.go:36
 0x10001ce48 4 "ADD" "ADD $1912, R0, R0" "add x0, x0, #0x778" lockrank_off.go:36
-0x10001ce4c 4 "BL" "CALL runtime.unlock2(SB)" "bl .+0xffffffffffff5984" lockrank_off.go:36
+0x10001ce4c 4 "BL" "CALL runtime.unlock2(SB)" "bl .+0xffffffffffff5984 <runtime.unlock2>" lockrank_off.go:36
 0x10001ce50 4 "LDR" "MOVD 72(RSP), R0" "ldr x0, [sp,#72]" mfinal.go:218
 0x10001ce54 4 "LDR" "MOVD 64(RSP), R1" "ldr x1, [sp,#64]" mfinal.go:218
 0x10001ce58 4 "LDR" "MOVD 544(RSP), R2" "ldr x2, [sp,#544]" mfinal.go:218
-0x10001ce5c 4 "B" "JMP 43(PC)" "b .+0xac" lock_spinbit.go:270
-0x10001ce60 4 "ADRP" "ADRP 995328(PC), R0" "adrp x0, .+0xf3000" mfinal.go:210
+0x10001ce5c 4 "B" "JMP 43(PC)" "b .+0xac <runtime.runFinalizers+0x188>" lock_spinbit.go:270
+0x10001ce60 4 "ADRP" "ADRP 995328(PC), R0" "adrp x0, .+0xf3000 <go:funcdesc+0x70>" mfinal.go:210
 0x10001ce64 4 "ADD" "ADD $3888, R0, R0" "add x0, x0, #0xf30" mfinal.go:210
-0x10001ce68 4 "ADRP" "ADRP 1200128(PC), R1" "adrp x1, .+0x125000" mfinal.go:210
+0x10001ce68 4 "ADRP" "ADRP 1200128(PC), R1" "adrp x1, .+0x125000 <runtime.fwdSig+0xe8>" mfinal.go:210
 0x10001ce6c 4 "ADD" "ADD $1912, R1, R1" "add x1, x1, #0x778" mfinal.go:210
 0x10001ce70 4 "MOV" "MOVD $10, R2" "mov x2, #0xa" mfinal.go:210
 0x10001ce74 4 "MOV" "MOVD $10, R3" "mov x3, #0xa" mfinal.go:210
 0x10001ce78 4 "ORR" "ORR $1, ZR, R4" "orr x4, xzr, #0x1" mfinal.go:210
-0x10001ce7c 4 "BL" "CALL runtime.gopark(SB)" "bl .+0x50754" mfinal.go:210
+0x10001ce7c 4 "BL" "CALL runtime.gopark(SB)" "bl .+0x50754 <runtime.gopark>" mfinal.go:210
 0x10001ce80 4 "LDR" "MOVD 64(RSP), R0" "ldr x0, [sp,#64]" mfinal.go:206
 0x10001ce84 4 "LDR" "MOVD 544(RSP), R1" "ldr x1, [sp,#544]" mfinal.go:206
-0x10001ce88 4 "B" "JMP -33(PC)" "b .+0xffffffffffffff7c" mfinal.go:211
+0x10001ce88 4 "B" "JMP -33(PC)" "b .+0xffffffffffffff7c <runtime.runFinalizers+0x84>" mfinal.go:211
 0x10001ce8c 4 "STR" "MOVD R2, 560(RSP)" "str x2, [sp,#560]" mfinal.go:220
 0x10001ce90 4 "STR" "MOVD R1, 104(RSP)" "str x1, [sp,#104]" mfinal.go:220
 0x10001ce94 4 "MOV" "MOVD R4, R1" "mov x1, x4" mfinal.go:286
@@ -377,35 +377,35 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10001cea0 4 "STR" "MOVD R1, 88(RSP)" "str x1, [sp,#88]" mfinal.go:284
 0x10001cea4 4 "NOP" "NOOP" "nop " mfinal.go:285
 0x10001cea8 4 "NOP" "NOOP" "nop " lock_spinbit.go:161
-0x10001ceac 4 "ADRP" "ADRP 1200128(PC), R0" "adrp x0, .+0x125000" lockrank_off.go:24
+0x10001ceac 4 "ADRP" "ADRP 1200128(PC), R0" "adrp x0, .+0x125000 <internal/cpu.ARM64+0x2c>" lockrank_off.go:24
 0x10001ceb0 4 "ADD" "ADD $1912, R0, R0" "add x0, x0, #0x778" lockrank_off.go:24
-0x10001ceb4 4 "BL" "CALL runtime.lock2(SB)" "bl .+0xffffffffffff540c" lockrank_off.go:24
-0x10001ceb8 4 "ADRP" "ADRP 1200128(PC), R27" "adrp x27, .+0x125000" mfinal.go:286
+0x10001ceb4 4 "BL" "CALL runtime.lock2(SB)" "bl .+0xffffffffffff540c <runtime.lock2>" lockrank_off.go:24
+0x10001ceb8 4 "ADRP" "ADRP 1200128(PC), R27" "adrp x27, .+0x125000 <internal/cpu.ARM64+0x38>" mfinal.go:286
 0x10001cebc 4 "LDR" "MOVD 1944(R27), R1" "ldr x1, [x27,#1944]" mfinal.go:286
 0x10001cec0 4 "LDR" "MOVD 96(RSP), R2" "ldr x2, [sp,#96]" mfinal.go:286
 0x10001cec4 4 "ADD" "ADD R2, R1, R1" "add x1, x1, x2" mfinal.go:286
-0x10001cec8 4 "ADRP" "ADRP 1200128(PC), R27" "adrp x27, .+0x125000" mfinal.go:286
+0x10001cec8 4 "ADRP" "ADRP 1200128(PC), R27" "adrp x27, .+0x125000 <internal/cpu.ARM64+0x48>" mfinal.go:286
 0x10001cecc 4 "STR" "MOVD R1, 1944(R27)" "str x1, [x27,#1944]" mfinal.go:286
-0x10001ced0 4 "ADRP" "ADRP 1200128(PC), R27" "adrp x27, .+0x125000" mfinal.go:287
+0x10001ced0 4 "ADRP" "ADRP 1200128(PC), R27" "adrp x27, .+0x125000 <internal/cpu.ARM64+0x50>" mfinal.go:287
 0x10001ced4 4 "LDR" "MOVD 1928(R27), R1" "ldr x1, [x27,#1928]" mfinal.go:287
 0x10001ced8 4 "LDR" "MOVD 72(RSP), R2" "ldr x2, [sp,#72]" mfinal.go:287
 0x10001cedc 4 "STR" "MOVD R1, 8(R2)" "str x1, [x2,#8]" mfinal.go:287
-0x10001cee0 4 "ADRP" "ADRP 1200128(PC), R27" "adrp x27, .+0x125000" mfinal.go:288
+0x10001cee0 4 "ADRP" "ADRP 1200128(PC), R27" "adrp x27, .+0x125000 <internal/cpu.ARM64+0x60>" mfinal.go:288
 0x10001cee4 4 "STR" "MOVD R2, 1928(R27)" "str x2, [x27,#1928]" mfinal.go:288
 0x10001cee8 4 "NOP" "NOOP" "nop " mfinal.go:289
 0x10001ceec 4 "NOP" "NOOP" "nop " lock_spinbit.go:270
-0x10001cef0 4 "ADRP" "ADRP 1200128(PC), R0" "adrp x0, .+0x125000" lockrank_off.go:36
+0x10001cef0 4 "ADRP" "ADRP 1200128(PC), R0" "adrp x0, .+0x125000 <internal/cpu.ARM64+0x70>" lockrank_off.go:36
 0x10001cef4 4 "ADD" "ADD $1912, R0, R0" "add x0, x0, #0x778" lockrank_off.go:36
-0x10001cef8 4 "BL" "CALL runtime.unlock2(SB)" "bl .+0xffffffffffff58d8" lockrank_off.go:36
+0x10001cef8 4 "BL" "CALL runtime.unlock2(SB)" "bl .+0xffffffffffff58d8 <runtime.unlock2>" lockrank_off.go:36
 0x10001cefc 4 "LDR" "MOVD 88(RSP), R0" "ldr x0, [sp,#88]" mfinal.go:218
 0x10001cf00 4 "LDR" "MOVD 104(RSP), R1" "ldr x1, [sp,#104]" mfinal.go:218
 0x10001cf04 4 "LDR" "MOVD 560(RSP), R2" "ldr x2, [sp,#560]" mfinal.go:218
-0x10001cf08 4 "CBZ" "CBZ R0, 185(PC)" "cbz x0, .+0x2e4" mfinal.go:218
+0x10001cf08 4 "CBZ" "CBZ R0, 185(PC)" "cbz x0, .+0x2e4 <runtime.runFinalizers+0x46c>" mfinal.go:218
 0x10001cf0c 4 "STR" "MOVD R0, 72(RSP)" "str x0, [sp,#72]" mfinal.go:218
 0x10001cf10 4 "LDR" "MOVWU 16(R0), R3" "ldr w3, [x0,#16]" mfinal.go:219
 0x10001cf14 4 "STR" "MOVW R3, 56(RSP)" "str w3, [sp,#56]" mfinal.go:219
 0x10001cf18 4 "MOV" "MOVD R3, R4" "mov x4, x3" mfinal.go:219
-0x10001cf1c 4 "B" "JMP 11(PC)" "b .+0x2c" mfinal.go:220
+0x10001cf1c 4 "B" "JMP 11(PC)" "b .+0x2c <runtime.runFinalizers+0x1c8>" mfinal.go:220
 0x10001cf20 4 "STR" "MOVD ZR, (R4)(R3)" "str xzr, [x4,x3]" mfinal.go:279
 0x10001cf24 4 "STR" "MOVD ZR, 8(R6)" "str xzr, [x6,#8]" mfinal.go:280
 0x10001cf28 4 "STR" "MOVD ZR, 32(R6)" "str xzr, [x6,#32]" mfinal.go:281
@@ -416,11 +416,11 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10001cf3c 4 "LDR" "MOVWU 56(RSP), R4" "ldr w4, [sp,#56]" mfinal.go:286
 0x10001cf40 4 "LDR" "MOVD 112(RSP), R1" "ldr x1, [sp,#112]" mfinal.go:220
 0x10001cf44 4 "LDR" "MOVD 568(RSP), R2" "ldr x2, [sp,#568]" mfinal.go:220
-0x10001cf48 4 "CBZ" "CBZW R3, -47(PC)" "cbz w3, .+0xffffffffffffff44" mfinal.go:220
+0x10001cf48 4 "CBZ" "CBZW R3, -47(PC)" "cbz w3, .+0xffffffffffffff44 <runtime.runFinalizers+0x10c>" mfinal.go:220
 0x10001cf4c 4 "SUB" "SUB $1, R3, R3" "sub x3, x3, #0x1" mfinal.go:221
 0x10001cf50 4 "MOV" "MOVW R3, R5" "mov w5, w3" mfinal.go:221
 0x10001cf54 4 "CMP" "CMP $101, R5" "cmp x5, #0x65" mfinal.go:221
-0x10001cf58 4 "B" "BCS 194(PC)" "b.cs .+0x308" mfinal.go:221
+0x10001cf58 4 "B" "BCS 194(PC)" "b.cs .+0x308 <runtime.runFinalizers+0x4e0>" mfinal.go:221
 0x10001cf5c 4 "STR" "MOVW R3, 60(RSP)" "str w3, [sp,#60]" mfinal.go:221
 0x10001cf60 4 "ADD" "ADD $24, R0, R5" "add x5, x0, #0x18" mfinal.go:221
 0x10001cf64 4 "STR" "MOVD R5, 576(RSP)" "str x5, [sp,#576]" mfinal.go:221
@@ -436,17 +436,17 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10001cf8c 4 "STP" "STP.P (ZR, ZR), 16(R8)" "stp xzr, xzr, [x8],#16" mfinal.go:223
 0x10001cf90 4 "STP" "STP.P (ZR, ZR), 16(R8)" "stp xzr, xzr, [x8],#16" mfinal.go:223
 0x10001cf94 4 "SUB" "SUB $1, R9, R9" "sub x9, x9, #0x1" mfinal.go:223
-0x10001cf98 4 "CBNZ" "CBNZ R9, -5(PC)" "cbnz x9, .+0xffffffffffffffec" mfinal.go:223
+0x10001cf98 4 "CBNZ" "CBNZ R9, -5(PC)" "cbnz x9, .+0xffffffffffffffec <runtime.runFinalizers+0x204>" mfinal.go:223
 0x10001cf9c 4 "STR" "MOVD ZR, (R8)" "str xzr, [x8]" mfinal.go:223
 0x10001cfa0 4 "LDR" "MOVD 16(R7), R8" "ldr x8, [x7,#16]" mfinal.go:232
 0x10001cfa4 4 "ADD" "ADD $16, R8, R8" "add x8, x8, #0x10" mfinal.go:232
 0x10001cfa8 4 "STR" "MOVD R8, 64(RSP)" "str x8, [sp,#64]" mfinal.go:232
 0x10001cfac 4 "CMP" "CMP R8, R1" "cmp x1, x8" mfinal.go:233
-0x10001cfb0 4 "B" "BCS 14(PC)" "b.cs .+0x38" mfinal.go:233
+0x10001cfb0 4 "B" "BCS 14(PC)" "b.cs .+0x38 <runtime.runFinalizers+0x268>" mfinal.go:233
 0x10001cfb4 4 "MOV" "MOVD R8, R0" "mov x0, x8" mfinal.go:238
 0x10001cfb8 4 "MOV" "MOVD ZR, R1" "mov x1, xzr" mfinal.go:238
 0x10001cfbc 4 "ORR" "ORR $1, ZR, R2" "orr x2, xzr, #0x1" mfinal.go:238
-0x10001cfc0 4 "BL" "CALL runtime.mallocgc(SB)" "bl .+0x4fa90" mfinal.go:238
+0x10001cfc0 4 "BL" "CALL runtime.mallocgc(SB)" "bl .+0x4fa90 <runtime.mallocgc>" mfinal.go:238
 0x10001cfc4 4 "LDR" "MOVWU 60(RSP), R3" "ldr w3, [sp,#60]" mfinal.go:282
 0x10001cfc8 4 "LDR" "MOVWU 56(RSP), R4" "ldr w4, [sp,#56]" mfinal.go:286
 0x10001cfcc 4 "LDR" "MOVD 576(RSP), R5" "ldr x5, [sp,#576]" mfinal.go:272
@@ -457,12 +457,12 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10001cfe0 4 "MOV" "MOVD R8, R1" "mov x1, x8" mfinal.go:241
 0x10001cfe4 4 "LDR" "MOVD 72(RSP), R0" "ldr x0, [sp,#72]" mfinal.go:282
 0x10001cfe8 4 "LDR" "MOVD 24(R7), R9" "ldr x9, [x7,#24]" mfinal.go:241
-0x10001cfec 4 "CBZ" "CBZ R9, 153(PC)" "cbz x9, .+0x264" mfinal.go:241
+0x10001cfec 4 "CBZ" "CBZ R9, 153(PC)" "cbz x9, .+0x264 <runtime.runFinalizers+0x4d0>" mfinal.go:241
 0x10001cff0 4 "LDR" "MOVD 80(RSP), R9" "ldr x9, [sp,#80]" mfinal.go:245
 0x10001cff4 4 "CMP" "CMP $0, R9" "cmp x9, #0x0" mfinal.go:245
-0x10001cff8 4 "B" "BLE 3(PC)" "b.le .+0xc" mfinal.go:245
+0x10001cff8 4 "B" "BLE 3(PC)" "b.le .+0xc <runtime.runFinalizers+0x284>" mfinal.go:245
 0x10001cffc 4 "ADD" "ADD $136, RSP, R10" "add x10, sp, #0x88" mfinal.go:246
-0x10001d000 4 "B" "JMP 3(PC)" "b .+0xc" mfinal.go:246
+0x10001d000 4 "B" "JMP 3(PC)" "b .+0xc <runtime.runFinalizers+0x28c>" mfinal.go:246
 0x10001d004 4 "STP" "STP (ZR, ZR), (R2)" "stp xzr, xzr, [x2]" mfinal.go:252
 0x10001d008 4 "MOV" "MOVD R2, R10" "mov x10, x2" mfinal.go:254
 0x10001d00c 4 "STR" "MOVD R2, 568(RSP)" "str x2, [sp,#568]" mfinal.go:241
@@ -470,40 +470,40 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10001d014 4 "LDP" "LDP 24(R7), (R11, R12)" "ldp x11, x12, [x7,#24]" mfinal.go:254
 0x10001d018 4 "LDRB" "MOVBU 23(R11), R13" "ldrb w13, [x11,#23]" type.go:197
 0x10001d01c 4 "CMP" "CMPW $20, R13" "cmp w13, #0x14" mfinal.go:258
-0x10001d020 4 "B" "BNE 47(PC)" "b.ne .+0xbc" mfinal.go:258
+0x10001d020 4 "B" "BNE 47(PC)" "b.ne .+0xbc <runtime.runFinalizers+0x35c>" mfinal.go:258
 0x10001d024 4 "LDRSB" "MOVB (R10), R27" "ldrsb x27, [x10]" mfinal.go:261
 0x10001d028 4 "LDRSB" "MOVB (R12), R27" "ldrsb x27, [x12]" mfinal.go:261
-0x10001d02c 4 "ADRP" "ADRP 1196032(PC), R27" "adrp x27, .+0x124000" mfinal.go:261
+0x10001d02c 4 "ADRP" "ADRP 1196032(PC), R27" "adrp x27, .+0x124000 <runtime.mheap_+0x1892c>" mfinal.go:261
 0x10001d030 4 "LDR" "MOVWU 2288(R27), R13" "ldr w13, [x27,#2288]" mfinal.go:261
-0x10001d034 4 "CBZ" "CBZW R13, 4(PC)" "cbz w13, .+0x10" mfinal.go:261
+0x10001d034 4 "CBZ" "CBZW R13, 4(PC)" "cbz w13, .+0x10 <runtime.runFinalizers+0x2c4>" mfinal.go:261
 0x10001d038 4 "LDR" "MOVD (R10), R13" "ldr x13, [x10]" mfinal.go:261
-0x10001d03c 4 "BL" "CALL runtime.gcWriteBarrier2(SB)" "bl .+0x55494" mfinal.go:261
+0x10001d03c 4 "BL" "CALL runtime.gcWriteBarrier2(SB)" "bl .+0x55494 <runtime.gcWriteBarrier2>" mfinal.go:261
 0x10001d040 4 "STP" "STP (R12, R13), (R25)" "stp x12, x13, [x25]" mfinal.go:261
 0x10001d044 4 "STR" "MOVD R12, (R10)" "str x12, [x10]" mfinal.go:261
 0x10001d048 4 "LDR" "MOVD 8(R7), R13" "ldr x13, [x7,#8]" mfinal.go:262
-0x10001d04c 4 "ADRP" "ADRP 1196032(PC), R27" "adrp x27, .+0x124000" mfinal.go:262
+0x10001d04c 4 "ADRP" "ADRP 1196032(PC), R27" "adrp x27, .+0x124000 <runtime.mheap_+0x1894c>" mfinal.go:262
 0x10001d050 4 "LDR" "MOVWU 2288(R27), R14" "ldr w14, [x27,#2288]" mfinal.go:262
-0x10001d054 4 "CBZ" "CBZW R14, 4(PC)" "cbz w14, .+0x10" mfinal.go:262
+0x10001d054 4 "CBZ" "CBZW R14, 4(PC)" "cbz w14, .+0x10 <runtime.runFinalizers+0x2e4>" mfinal.go:262
 0x10001d058 4 "LDR" "MOVD 8(R10), R14" "ldr x14, [x10,#8]" mfinal.go:262
-0x10001d05c 4 "BL" "CALL runtime.gcWriteBarrier2(SB)" "bl .+0x55474" mfinal.go:262
+0x10001d05c 4 "BL" "CALL runtime.gcWriteBarrier2(SB)" "bl .+0x55474 <runtime.gcWriteBarrier2>" mfinal.go:262
 0x10001d060 4 "STP" "STP (R13, R14), (R25)" "stp x13, x14, [x25]" mfinal.go:262
 0x10001d064 4 "STR" "MOVD R13, 8(R10)" "str x13, [x10,#8]" mfinal.go:262
 0x10001d068 4 "LDR" "MOVD 64(R11), R13" "ldr x13, [x11,#64]" mfinal.go:263
-0x10001d06c 4 "CBZ" "CBZ R13, 38(PC)" "cbz x13, .+0x98" mfinal.go:263
-0x10001d070 4 "CBZ" "CBZ R12, 102(PC)" "cbz x12, .+0x198" iface.go:468
+0x10001d06c 4 "CBZ" "CBZ R13, 38(PC)" "cbz x13, .+0x98 <runtime.runFinalizers+0x384>" mfinal.go:263
+0x10001d070 4 "CBZ" "CBZ R12, 102(PC)" "cbz x12, .+0x198 <runtime.runFinalizers+0x488>" iface.go:468
 0x10001d074 4 "STR" "MOVD R10, 528(RSP)" "str x10, [sp,#528]" mfinal.go:254
 0x10001d078 4 "MOV" "MOVD R11, R0" "mov x0, x11" iface.go:472
 0x10001d07c 4 "MOV" "MOVD R12, R1" "mov x1, x12" iface.go:472
 0x10001d080 4 "MOV" "MOVD ZR, R2" "mov x2, xzr" iface.go:472
-0x10001d084 4 "BL" "CALL runtime.getitab(SB)" "bl .+0x4f6ac" iface.go:472
-0x10001d088 4 "ADRP" "ADRP 1196032(PC), R27" "adrp x27, .+0x124000" mfinal.go:266
+0x10001d084 4 "BL" "CALL runtime.getitab(SB)" "bl .+0x4f6ac <runtime.getitab>" iface.go:472
+0x10001d088 4 "ADRP" "ADRP 1196032(PC), R27" "adrp x27, .+0x124000 <runtime.mheap_+0x18988>" mfinal.go:266
 0x10001d08c 4 "LDR" "MOVWU 2288(R27), R3" "ldr w3, [x27,#2288]" mfinal.go:266
-0x10001d090 4 "CBNZ" "CBNZW R3, 3(PC)" "cbnz w3, .+0xc" mfinal.go:266
+0x10001d090 4 "CBNZ" "CBNZW R3, 3(PC)" "cbnz w3, .+0xc <runtime.runFinalizers+0x31c>" mfinal.go:266
 0x10001d094 4 "LDR" "MOVD 528(RSP), R1" "ldr x1, [sp,#528]" mfinal.go:266
-0x10001d098 4 "B" "JMP 5(PC)" "b .+0x14" mfinal.go:266
+0x10001d098 4 "B" "JMP 5(PC)" "b .+0x14 <runtime.runFinalizers+0x32c>" mfinal.go:266
 0x10001d09c 4 "LDR" "MOVD 528(RSP), R1" "ldr x1, [sp,#528]" mfinal.go:266
 0x10001d0a0 4 "LDR" "MOVD (R1), R2" "ldr x2, [x1]" mfinal.go:266
-0x10001d0a4 4 "BL" "CALL runtime.gcWriteBarrier2(SB)" "bl .+0x5542c" mfinal.go:266
+0x10001d0a4 4 "BL" "CALL runtime.gcWriteBarrier2(SB)" "bl .+0x5542c <runtime.gcWriteBarrier2>" mfinal.go:266
 0x10001d0a8 4 "STP" "STP (R0, R2), (R25)" "stp x0, x2, [x25]" mfinal.go:266
 0x10001d0ac 4 "STR" "MOVD R0, (R1)" "str x0, [x1]" mfinal.go:266
 0x10001d0b0 4 "LDR" "MOVD 72(RSP), R0" "ldr x0, [sp,#72]" mfinal.go:282
@@ -516,33 +516,33 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10001d0cc 4 "LDR" "MOVD 552(RSP), R7" "ldr x7, [sp,#552]" mfinal.go:280
 0x10001d0d0 4 "LDR" "MOVD 64(RSP), R8" "ldr x8, [sp,#64]" mfinal.go:272
 0x10001d0d4 4 "LDR" "MOVD 80(RSP), R9" "ldr x9, [sp,#80]" mfinal.go:245
-0x10001d0d8 4 "B" "JMP 11(PC)" "b .+0x2c" mfinal.go:266
+0x10001d0d8 4 "B" "JMP 11(PC)" "b .+0x2c <runtime.runFinalizers+0x384>" mfinal.go:266
 0x10001d0dc 4 "CMP" "CMPW $22, R13" "cmp w13, #0x16" mfinal.go:255
-0x10001d0e0 4 "B" "BNE 70(PC)" "b.ne .+0x118" mfinal.go:255
+0x10001d0e0 4 "B" "BNE 70(PC)" "b.ne .+0x118 <runtime.runFinalizers+0x478>" mfinal.go:255
 0x10001d0e4 4 "LDR" "MOVD 8(R7), R11" "ldr x11, [x7,#8]" mfinal.go:257
-0x10001d0e8 4 "ADRP" "ADRP 1196032(PC), R27" "adrp x27, .+0x124000" mfinal.go:257
+0x10001d0e8 4 "ADRP" "ADRP 1196032(PC), R27" "adrp x27, .+0x124000 <runtime.mheap_+0x189e8>" mfinal.go:257
 0x10001d0ec 4 "LDR" "MOVWU 2288(R27), R12" "ldr w12, [x27,#2288]" mfinal.go:257
-0x10001d0f0 4 "CBZ" "CBZW R12, 4(PC)" "cbz w12, .+0x10" mfinal.go:257
+0x10001d0f0 4 "CBZ" "CBZW R12, 4(PC)" "cbz w12, .+0x10 <runtime.runFinalizers+0x380>" mfinal.go:257
 0x10001d0f4 4 "LDR" "MOVD (R10), R12" "ldr x12, [x10]" mfinal.go:257
-0x10001d0f8 4 "BL" "CALL runtime.gcWriteBarrier2(SB)" "bl .+0x553d8" mfinal.go:257
+0x10001d0f8 4 "BL" "CALL runtime.gcWriteBarrier2(SB)" "bl .+0x553d8 <runtime.gcWriteBarrier2>" mfinal.go:257
 0x10001d0fc 4 "STP" "STP (R11, R12), (R25)" "stp x11, x12, [x25]" mfinal.go:257
 0x10001d100 4 "STR" "MOVD R11, (R10)" "str x11, [x10]" mfinal.go:257
 0x10001d104 4 "NOP" "NOOP" "nop " mfinal.go:271
-0x10001d108 4 "ADRP" "ADRP 1196032(PC), R27" "adrp x27, .+0x124000" types.go:280
+0x10001d108 4 "ADRP" "ADRP 1196032(PC), R27" "adrp x27, .+0x124000 <runtime.mheap_+0x18a08>" types.go:280
 0x10001d10c 4 "LDRB" "MOVBU 1705(R27), R10" "ldrb w10, [x27,#1705]" types.go:280
-0x10001d110 4 "TBZ" "TBZ $0, R10, 6(PC)" "tbz w10, #0, .+0x18" types.go:280
+0x10001d110 4 "TBZ" "TBZ $0, R10, 6(PC)" "tbz w10, #0, .+0x18 <runtime.runFinalizers+0x3a8>" types.go:280
 0x10001d114 4 "ORR" "ORR $2, ZR, R10" "orr x10, xzr, #0x2" types.go:280
-0x10001d118 4 "ADRP" "ADRP 1196032(PC), R11" "adrp x11, .+0x124000" types.go:280
+0x10001d118 4 "ADRP" "ADRP 1196032(PC), R11" "adrp x11, .+0x124000 <runtime.mheap_+0x18a18>" types.go:280
 0x10001d11c 4 "ADD" "ADD $1728, R11, R11" "add x11, x11, #0x6c0" types.go:280
 0x10001d120 4 "" "BYTE 0x6c31eab8" ".byte 0x6c31eab8" types.go:280
-0x10001d124 4 "B" "JMP 8(PC)" "b .+0x20" types.go:280
+0x10001d124 4 "B" "JMP 8(PC)" "b .+0x20 <runtime.runFinalizers+0x3c4>" types.go:280
 0x10001d128 4 "ORR" "ORR $2, ZR, R10" "orr x10, xzr, #0x2" types.go:280
-0x10001d12c 4 "ADRP" "ADRP 1196032(PC), R11" "adrp x11, .+0x124000" types.go:280
+0x10001d12c 4 "ADRP" "ADRP 1196032(PC), R11" "adrp x11, .+0x124000 <runtime.mheap_+0x18a2c>" types.go:280
 0x10001d130 4 "ADD" "ADD $1728, R11, R11" "add x11, x11, #0x6c0" types.go:280
 0x10001d134 4 "LDAXR" "LDAXRW (R11), R13" "ldaxr w13, [x11]" types.go:280
 0x10001d138 4 "ORR" "ORR R10, R13, R12" "orr x12, x13, x10" types.go:280
 0x10001d13c 4 "STLXR" "STLXRW R12, (R11), R27" "stlxr w27, w12, [x11]" types.go:280
-0x10001d140 4 "CBNZ" "CBNZ R27, -3(PC)" "cbnz x27, .+0xfffffffffffffff4" types.go:280
+0x10001d140 4 "CBNZ" "CBNZ R27, -3(PC)" "cbnz x27, .+0xfffffffffffffff4 <runtime.runFinalizers+0x3b4>" types.go:280
 0x10001d144 4 "LDR" "MOVD (R5)(R6), R0" "ldr x0, [x5,x6]" mfinal.go:272
 0x10001d148 4 "STP" "STP (ZR, R0), 8(RSP)" "stp xzr, x0, [sp,#8]" mfinal.go:272
 0x10001d14c 4 "STR" "MOVD R2, 24(RSP)" "str x2, [sp,#24]" mfinal.go:272
@@ -550,82 +550,82 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10001d154 4 "STR" "MOVW R8, 40(RSP)" "str w8, [sp,#40]" mfinal.go:272
 0x10001d158 4 "ADD" "ADD $136, RSP, R0" "add x0, sp, #0x88" mfinal.go:272
 0x10001d15c 4 "STR" "MOVD R0, 48(RSP)" "str x0, [sp,#48]" mfinal.go:272
-0x10001d160 4 "BL" "CALL runtime.reflectcall.abi0(SB)" "bl .+0x535e0" mfinal.go:272
+0x10001d160 4 "BL" "CALL runtime.reflectcall.abi0(SB)" "bl .+0x535e0 <runtime.reflectcall.abi0>" mfinal.go:272
 0x10001d164 4 "NOP" "NOOP" "nop " mfinal.go:273
-0x10001d168 4 "ADRP" "ADRP 1196032(PC), R27" "adrp x27, .+0x124000" types.go:269
+0x10001d168 4 "ADRP" "ADRP 1196032(PC), R27" "adrp x27, .+0x124000 <runtime.mheap_+0x18a68>" types.go:269
 0x10001d16c 4 "LDRB" "MOVBU 1705(R27), R0" "ldrb w0, [x27,#1705]" types.go:269
-0x10001d170 4 "TBZ" "TBZ $0, R0, 7(PC)" "tbz w0, #0, .+0x1c" types.go:269
+0x10001d170 4 "TBZ" "TBZ $0, R0, 7(PC)" "tbz w0, #0, .+0x1c <runtime.runFinalizers+0x40c>" types.go:269
 0x10001d174 4 "MOV" "MOVD $-3, R3" "mov x3, #0xfffffffffffffffd" types.go:269
-0x10001d178 4 "ADRP" "ADRP 1196032(PC), R4" "adrp x4, .+0x124000" types.go:269
+0x10001d178 4 "ADRP" "ADRP 1196032(PC), R4" "adrp x4, .+0x124000 <runtime.mheap_+0x18a78>" types.go:269
 0x10001d17c 4 "ADD" "ADD $1728, R4, R4" "add x4, x4, #0x6c0" types.go:269
 0x10001d180 4 "MVN" "MVN R3, R27" "mvn x27, x3" types.go:269
 0x10001d184 4 "" "BYTE 0x8510fbb8" ".byte 0x8510fbb8" types.go:269
-0x10001d188 4 "B" "JMP 8(PC)" "b .+0x20" types.go:269
+0x10001d188 4 "B" "JMP 8(PC)" "b .+0x20 <runtime.runFinalizers+0x428>" types.go:269
 0x10001d18c 4 "MOV" "MOVD $-3, R3" "mov x3, #0xfffffffffffffffd" types.go:269
-0x10001d190 4 "ADRP" "ADRP 1196032(PC), R4" "adrp x4, .+0x124000" types.go:269
+0x10001d190 4 "ADRP" "ADRP 1196032(PC), R4" "adrp x4, .+0x124000 <runtime.mheap_+0x18a90>" types.go:269
 0x10001d194 4 "ADD" "ADD $1728, R4, R4" "add x4, x4, #0x6c0" types.go:269
 0x10001d198 4 "LDAXR" "LDAXRW (R4), R6" "ldaxr w6, [x4]" types.go:269
 0x10001d19c 4 "AND" "AND R3, R6, R5" "and x5, x6, x3" types.go:269
 0x10001d1a0 4 "STLXR" "STLXRW R5, (R4), R27" "stlxr w27, w5, [x4]" types.go:269
-0x10001d1a4 4 "CBNZ" "CBNZ R27, -3(PC)" "cbnz x27, .+0xfffffffffffffff4" types.go:269
-0x10001d1a8 4 "ADRP" "ADRP 1196032(PC), R27" "adrp x27, .+0x124000" mfinal.go:279
+0x10001d1a4 4 "CBNZ" "CBNZ R27, -3(PC)" "cbnz x27, .+0xfffffffffffffff4 <runtime.runFinalizers+0x418>" types.go:269
+0x10001d1a8 4 "ADRP" "ADRP 1196032(PC), R27" "adrp x27, .+0x124000 <runtime.mheap_+0x18aa8>" mfinal.go:279
 0x10001d1ac 4 "LDR" "MOVWU 2288(R27), R3" "ldr w3, [x27,#2288]" mfinal.go:279
-0x10001d1b0 4 "CBNZ" "CBNZW R3, 5(PC)" "cbnz w3, .+0x14" mfinal.go:279
+0x10001d1b0 4 "CBNZ" "CBNZW R3, 5(PC)" "cbnz w3, .+0x14 <runtime.runFinalizers+0x444>" mfinal.go:279
 0x10001d1b4 4 "LDR" "MOVD 120(RSP), R3" "ldr x3, [sp,#120]" mfinal.go:279
 0x10001d1b8 4 "LDR" "MOVD 576(RSP), R4" "ldr x4, [sp,#576]" mfinal.go:279
 0x10001d1bc 4 "LDR" "MOVD 552(RSP), R6" "ldr x6, [sp,#552]" mfinal.go:280
-0x10001d1c0 4 "B" "JMP -168(PC)" "b .+0xfffffffffffffd60" mfinal.go:279
+0x10001d1c0 4 "B" "JMP -168(PC)" "b .+0xfffffffffffffd60 <runtime.runFinalizers+0x1a0>" mfinal.go:279
 0x10001d1c4 4 "LDR" "MOVD 120(RSP), R3" "ldr x3, [sp,#120]" mfinal.go:279
 0x10001d1c8 4 "LDR" "MOVD 576(RSP), R4" "ldr x4, [sp,#576]" mfinal.go:279
 0x10001d1cc 4 "LDR" "MOVD (R4)(R3), R5" "ldr x5, [x4,x3]" mfinal.go:279
 0x10001d1d0 4 "LDR" "MOVD 552(RSP), R6" "ldr x6, [sp,#552]" mfinal.go:280
 0x10001d1d4 4 "LDR" "MOVD 8(R6), R7" "ldr x7, [x6,#8]" mfinal.go:280
 0x10001d1d8 4 "LDR" "MOVD 32(R6), R8" "ldr x8, [x6,#32]" mfinal.go:281
-0x10001d1dc 4 "BL" "CALL runtime.gcWriteBarrier3(SB)" "bl .+0x55304" mfinal.go:279
+0x10001d1dc 4 "BL" "CALL runtime.gcWriteBarrier3(SB)" "bl .+0x55304 <runtime.gcWriteBarrier3>" mfinal.go:279
 0x10001d1e0 4 "STP" "STP (R5, R7), (R25)" "stp x5, x7, [x25]" mfinal.go:279
 0x10001d1e4 4 "STR" "MOVD R8, 16(R25)" "str x8, [x25,#16]" mfinal.go:281
-0x10001d1e8 4 "B" "JMP -178(PC)" "b .+0xfffffffffffffd38" mfinal.go:279
+0x10001d1e8 4 "B" "JMP -178(PC)" "b .+0xfffffffffffffd38 <runtime.runFinalizers+0x1a0>" mfinal.go:279
 0x10001d1ec 4 "MOV" "MOVD R1, R0" "mov x0, x1" mfinal.go:206
 0x10001d1f0 4 "MOV" "MOVD R2, R1" "mov x1, x2" mfinal.go:206
-0x10001d1f4 4 "B" "JMP -252(PC)" "b .+0xfffffffffffffc10" mfinal.go:206
-0x10001d1f8 4 "ADRP" "ADRP 368640(PC), R0" "adrp x0, .+0x5a000" mfinal.go:269
+0x10001d1f4 4 "B" "JMP -252(PC)" "b .+0xfffffffffffffc10 <runtime.runFinalizers+0x84>" mfinal.go:206
+0x10001d1f8 4 "ADRP" "ADRP 368640(PC), R0" "adrp x0, .+0x5a000 <go:string.*+0x2618>" mfinal.go:269
 0x10001d1fc 4 "ADD" "ADD $3211, R0, R0" "add x0, x0, #0xc8b" mfinal.go:269
 0x10001d200 4 "MOV" "MOVD $26, R1" "mov x1, #0x1a" mfinal.go:269
-0x10001d204 4 "BL" "CALL runtime.throw(SB)" "bl .+0x5037c" mfinal.go:269
+0x10001d204 4 "BL" "CALL runtime.throw(SB)" "bl .+0x5037c <runtime.throw>" mfinal.go:269
 0x10001d208 4 "STR" "MOVD R11, 128(RSP)" "str x11, [sp,#128]" mfinal.go:254
-0x10001d20c 4 "ADRP" "ADRP 974848(PC), R0" "adrp x0, .+0xee000" iface.go:470
+0x10001d20c 4 "ADRP" "ADRP 974848(PC), R0" "adrp x0, .+0xee000 <type:*+0xe704>" iface.go:470
 0x10001d210 4 "ADD" "ADD $1496, R0, R0" "add x0, x0, #0x5d8" iface.go:470
-0x10001d214 4 "BL" "CALL runtime.newobject(SB)" "bl .+0xffffffffffff76bc" iface.go:470
-0x10001d218 4 "ADRP" "ADRP 1196032(PC), R27" "adrp x27, .+0x124000" iface.go:470
+0x10001d214 4 "BL" "CALL runtime.newobject(SB)" "bl .+0xffffffffffff76bc <runtime.newobject>" iface.go:470
+0x10001d218 4 "ADRP" "ADRP 1196032(PC), R27" "adrp x27, .+0x124000 <runtime.mheap_+0x18b18>" iface.go:470
 0x10001d21c 4 "LDR" "MOVWU 2288(R27), R1" "ldr w1, [x27,#2288]" iface.go:470
-0x10001d220 4 "CBNZ" "CBNZW R1, 8(PC)" "cbnz w1, .+0x20" iface.go:470
+0x10001d220 4 "CBNZ" "CBNZW R1, 8(PC)" "cbnz w1, .+0x20 <runtime.runFinalizers+0x4c0>" iface.go:470
 0x10001d224 4 "LDR" "MOVD 128(RSP), R2" "ldr x2, [sp,#128]" iface.go:470
 0x10001d228 4 "STR" "MOVD R2, 16(R0)" "str x2, [x0,#16]" iface.go:470
 0x10001d22c 4 "STP" "STP (ZR, ZR), 24(R0)" "stp xzr, xzr, [x0,#24]" iface.go:470
 0x10001d230 4 "MOV" "MOVD R0, R1" "mov x1, x0" iface.go:470
-0x10001d234 4 "ADRP" "ADRP 921600(PC), R0" "adrp x0, .+0xe1000" iface.go:470
+0x10001d234 4 "ADRP" "ADRP 921600(PC), R0" "adrp x0, .+0xe1000 <type:*+0x172c>" iface.go:470
 0x10001d238 4 "ADD" "ADD $128, R0, R0" "add x0, x0, #0x80" iface.go:470
-0x10001d23c 4 "BL" "CALL runtime.gopanic(SB)" "bl .+0x50034" iface.go:470
-0x10001d240 4 "BL" "CALL runtime.gcWriteBarrier1(SB)" "bl .+0x55280" iface.go:470
+0x10001d23c 4 "BL" "CALL runtime.gopanic(SB)" "bl .+0x50034 <runtime.gopanic>" iface.go:470
+0x10001d240 4 "BL" "CALL runtime.gcWriteBarrier1(SB)" "bl .+0x55280 <runtime.gcWriteBarrier1>" iface.go:470
 0x10001d244 4 "LDR" "MOVD 128(RSP), R2" "ldr x2, [sp,#128]" iface.go:470
 0x10001d248 4 "STR" "MOVD R2, (R25)" "str x2, [x25]" iface.go:470
-0x10001d24c 4 "B" "JMP -10(PC)" "b .+0xffffffffffffffd8" iface.go:470
-0x10001d250 4 "ADRP" "ADRP 368640(PC), R0" "adrp x0, .+0x5a000" mfinal.go:242
+0x10001d24c 4 "B" "JMP -10(PC)" "b .+0xffffffffffffffd8 <runtime.runFinalizers+0x4a4>" iface.go:470
+0x10001d250 4 "ADRP" "ADRP 368640(PC), R0" "adrp x0, .+0x5a000 <go:string.*+0x2670>" mfinal.go:242
 0x10001d254 4 "ADD" "ADD $2556, R0, R0" "add x0, x0, #0x9fc" mfinal.go:242
 0x10001d258 4 "MOV" "MOVD $25, R1" "mov x1, #0x19" mfinal.go:242
-0x10001d25c 4 "BL" "CALL runtime.throw(SB)" "bl .+0x50324" mfinal.go:242
+0x10001d25c 4 "BL" "CALL runtime.throw(SB)" "bl .+0x50324 <runtime.throw>" mfinal.go:242
 0x10001d260 4 "MOV" "MOVD $101, R0" "mov x0, #0x65" mfinal.go:221
-0x10001d264 4 "BL" "CALL runtime.panicBounds(SB)" "bl .+0x5553c" mfinal.go:221
+0x10001d264 4 "BL" "CALL runtime.panicBounds(SB)" "bl .+0x5553c <runtime.panicBounds>" mfinal.go:221
 0x10001d268 4 "NOP" "NOOP" "nop " mfinal.go:221
 0x10001d26c 4 "MOV" "MOVD R30, R3" "mov x3, x30" mfinal.go:193
-0x10001d270 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl .+0x53420" mfinal.go:193
-0x10001d274 4 "B" "JMP runtime.runFinalizers(SB)" "b .+0xfffffffffffffb0c" mfinal.go:193
+0x10001d270 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl .+0x53420 <runtime.morestack_noctxt.abi0>" mfinal.go:193
+0x10001d274 4 "B" "JMP runtime.runFinalizers(SB)" "b .+0xfffffffffffffb0c <runtime.runFinalizers>" mfinal.go:193
 0x10001d278 4 "" "BYTE 0x00000000" ".byte 0x00000000" mfinal.go:193
 0x10001d27c 4 "" "BYTE 0x00000000" ".byte 0x00000000" mfinal.go:193
 == runtime.runSafePointFn 0x1000419f0 240 /usr/local/go/src/runtime/proc.go
 0x1000419f0 4 "LDR" "MOVD 16(R28), R16" "ldr x16, [x28,#16]" proc.go:2250
 0x1000419f4 4 "CMP" "CMP R16, RSP" "cmp sp, x16" proc.go:2250
-0x1000419f8 4 "B" "BLS 55(PC)" "b.ls .+0xdc" proc.go:2250
+0x1000419f8 4 "B" "BLS 55(PC)" "b.ls .+0xdc <runtime.runSafePointFn+0xe4>" proc.go:2250
 0x1000419fc 4 "STR" "MOVD.W R30, -32(RSP)" "str x30, [sp,#-32]!" proc.go:2250
 0x100041a00 4 "STUR" "MOVD R29, -8(RSP)" "stur x29, [sp,#-8]" proc.go:2250
 0x100041a04 4 "SUB" "SUB $8, RSP, R29" "sub x29, sp, #0x8" proc.go:2250
@@ -634,46 +634,46 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x100041a10 4 "LDRSB" "MOVB (R0), R27" "ldrsb x27, [x0]" proc.go:2255
 0x100041a14 4 "MOV" "MOVD $13664, R1" "mov x1, #0x3560" proc.go:2255
 0x100041a18 4 "ADD" "ADD R1, R0, R1" "add x1, x0, x1" proc.go:2255
-0x100041a1c 4 "ADRP" "ADRP 1048576(PC), R27" "adrp x27, .+0x100000" proc.go:2255
+0x100041a1c 4 "ADRP" "ADRP 1048576(PC), R27" "adrp x27, .+0x100000 <runtime.gcBitsArenas+0x1c>" proc.go:2255
 0x100041a20 4 "LDRB" "MOVBU 1705(R27), R2" "ldrb w2, [x27,#1705]" proc.go:2255
-0x100041a24 4 "TBZ" "TBZ $0, R2, 7(PC)" "tbz w2, #0, .+0x1c" proc.go:2255
+0x100041a24 4 "TBZ" "TBZ $0, R2, 7(PC)" "tbz w2, #0, .+0x1c <runtime.runSafePointFn+0x50>" proc.go:2255
 0x100041a28 4 "ORR" "ORR $1, ZR, R2" "orr x2, xzr, #0x1" proc.go:2255
 0x100041a2c 4 "SXTW" "SXTW R2, R27" "sxtw x27, w2" proc.go:2255
 0x100041a30 4 "" "BYTE 0x3ffcfb88" ".byte 0x3ffcfb88" proc.go:2255
 0x100041a34 4 "CMP" "CMPW R2, R27" "cmp w27, w2" proc.go:2255
 0x100041a38 4 "CSET" "CSET EQ, R3" "cset x3, eq" proc.go:2255
-0x100041a3c 4 "B" "JMP 8(PC)" "b .+0x20" proc.go:2255
+0x100041a3c 4 "B" "JMP 8(PC)" "b .+0x20 <runtime.runSafePointFn+0x6c>" proc.go:2255
 0x100041a40 4 "ORR" "ORR $1, ZR, R2" "orr x2, xzr, #0x1" proc.go:2255
 0x100041a44 4 "LDAXR" "LDAXRW (R1), R27" "ldaxr w27, [x1]" proc.go:2255
 0x100041a48 4 "CMP" "CMPW R2, R27" "cmp w27, w2" proc.go:2255
-0x100041a4c 4 "B" "BNE 3(PC)" "b.ne .+0xc" proc.go:2255
+0x100041a4c 4 "B" "BNE 3(PC)" "b.ne .+0xc <runtime.runSafePointFn+0x68>" proc.go:2255
 0x100041a50 4 "STLXR" "STLXRW ZR, (R1), R27" "stlxr w27, wzr, [x1]" proc.go:2255
-0x100041a54 4 "CBNZ" "CBNZ R27, -4(PC)" "cbnz x27, .+0xfffffffffffffff0" proc.go:2255
+0x100041a54 4 "CBNZ" "CBNZ R27, -4(PC)" "cbnz x27, .+0xfffffffffffffff0 <runtime.runSafePointFn+0x54>" proc.go:2255
 0x100041a58 4 "CSET" "CSET EQ, R3" "cset x3, eq" proc.go:2255
-0x100041a5c 4 "TBZ" "TBZ $0, R3, 27(PC)" "tbz w3, #0, .+0x6c" proc.go:2255
-0x100041a60 4 "ADRP" "ADRP 901120(PC), R27" "adrp x27, .+0xdc000" proc.go:2258
+0x100041a5c 4 "TBZ" "TBZ $0, R3, 27(PC)" "tbz w3, #0, .+0x6c <runtime.runSafePointFn+0xd8>" proc.go:2255
+0x100041a60 4 "ADRP" "ADRP 901120(PC), R27" "adrp x27, .+0xdc000 <runtime.sched+0xb40>" proc.go:2258
 0x100041a64 4 "LDR" "MOVD 72(R27), R26" "ldr x26, [x27,#72]" proc.go:2258
 0x100041a68 4 "LDR" "MOVD (R26), R1" "ldr x1, [x26]" proc.go:2258
 0x100041a6c 4 "BLR" "CALL (R1)" "blr x1" proc.go:2258
 0x100041a70 4 "NOP" "NOOP" "nop " proc.go:2259
 0x100041a74 4 "NOP" "NOOP" "nop " lock_spinbit.go:161
-0x100041a78 4 "ADRP" "ADRP 897024(PC), R0" "adrp x0, .+0xdb000" lockrank_off.go:24
+0x100041a78 4 "ADRP" "ADRP 897024(PC), R0" "adrp x0, .+0xdb000 <runtime.trace+0x518>" lockrank_off.go:24
 0x100041a7c 4 "ADD" "ADD $3904, R0, R0" "add x0, x0, #0xf40" lockrank_off.go:24
-0x100041a80 4 "BL" "CALL runtime.lock2(SB)" "bl .+0xfffffffffffd0840" lockrank_off.go:24
-0x100041a84 4 "ADRP" "ADRP 901120(PC), R27" "adrp x27, .+0xdc000" proc.go:2260
+0x100041a80 4 "BL" "CALL runtime.lock2(SB)" "bl .+0xfffffffffffd0840 <runtime.lock2>" lockrank_off.go:24
+0x100041a84 4 "ADRP" "ADRP 901120(PC), R27" "adrp x27, .+0xdc000 <runtime.sched+0xb64>" proc.go:2260
 0x100041a88 4 "LDRSW" "MOVW 80(R27), R1" "ldrsw x1, [x27,#80]" proc.go:2260
 0x100041a8c 4 "SUB" "SUB $1, R1, R1" "sub x1, x1, #0x1" proc.go:2260
-0x100041a90 4 "ADRP" "ADRP 901120(PC), R27" "adrp x27, .+0xdc000" proc.go:2260
+0x100041a90 4 "ADRP" "ADRP 901120(PC), R27" "adrp x27, .+0xdc000 <runtime.sched+0xb70>" proc.go:2260
 0x100041a94 4 "STR" "MOVW R1, 80(R27)" "str w1, [x27,#80]" proc.go:2260
-0x100041a98 4 "CBNZ" "CBNZW R1, 4(PC)" "cbnz w1, .+0x10" proc.go:2261
-0x100041a9c 4 "ADRP" "ADRP 901120(PC), R0" "adrp x0, .+0xdc000" proc.go:2262
+0x100041a98 4 "CBNZ" "CBNZW R1, 4(PC)" "cbnz w1, .+0x10 <runtime.runSafePointFn+0xb8>" proc.go:2261
+0x100041a9c 4 "ADRP" "ADRP 901120(PC), R0" "adrp x0, .+0xdc000 <runtime.sched+0xb7c>" proc.go:2262
 0x100041aa0 4 "ADD" "ADD $88, R0, R0" "add x0, x0, #0x58" proc.go:2262
-0x100041aa4 4 "BL" "CALL runtime.notewakeup(SB)" "bl .+0xfffffffffffd016c" proc.go:2262
+0x100041aa4 4 "BL" "CALL runtime.notewakeup(SB)" "bl .+0xfffffffffffd016c <runtime.notewakeup>" proc.go:2262
 0x100041aa8 4 "NOP" "NOOP" "nop " proc.go:2264
 0x100041aac 4 "NOP" "NOOP" "nop " lock_spinbit.go:270
-0x100041ab0 4 "ADRP" "ADRP 897024(PC), R0" "adrp x0, .+0xdb000" lockrank_off.go:36
+0x100041ab0 4 "ADRP" "ADRP 897024(PC), R0" "adrp x0, .+0xdb000 <runtime.trace+0x550>" lockrank_off.go:36
 0x100041ab4 4 "ADD" "ADD $3904, R0, R0" "add x0, x0, #0xf40" lockrank_off.go:36
-0x100041ab8 4 "BL" "CALL runtime.unlock2(SB)" "bl .+0xfffffffffffd0d18" lockrank_off.go:36
+0x100041ab8 4 "BL" "CALL runtime.unlock2(SB)" "bl .+0xfffffffffffd0d18 <runtime.unlock2>" lockrank_off.go:36
 0x100041abc 4 "LDUR" "MOVD -8(RSP), R29" "ldur x29, [sp,#-8]" proc.go:2265
 0x100041ac0 4 "LDR" "MOVD.P 32(RSP), R30" "ldr x30, [sp],#32" proc.go:2265
 0x100041ac4 4 "RET" "RET" "ret" proc.go:2265
@@ -681,20 +681,20 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x100041acc 4 "LDR" "MOVD.P 32(RSP), R30" "ldr x30, [sp],#32" proc.go:2256
 0x100041ad0 4 "RET" "RET" "ret" proc.go:2256
 0x100041ad4 4 "MOV" "MOVD R30, R3" "mov x3, x30" proc.go:2250
-0x100041ad8 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl .+0x2ebb8" proc.go:2250
-0x100041adc 4 "B" "JMP runtime.runSafePointFn(SB)" "b .+0xffffffffffffff14" proc.go:2250
+0x100041ad8 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl .+0x2ebb8 <runtime.morestack_noctxt.abi0>" proc.go:2250
+0x100041adc 4 "B" "JMP runtime.runSafePointFn(SB)" "b .+0xffffffffffffff14 <runtime.runSafePointFn>" proc.go:2250
 == runtime.runqput 0x10004c5f0 272 /usr/local/go/src/runtime/proc.go
 0x10004c5f0 4 "LDR" "MOVD 16(R28), R16" "ldr x16, [x28,#16]" proc.go:7529
 0x10004c5f4 4 "CMP" "CMP R16, RSP" "cmp sp, x16" proc.go:7529
-0x10004c5f8 4 "B" "BLS 57(PC)" "b.ls .+0xe4" proc.go:7529
+0x10004c5f8 4 "B" "BLS 57(PC)" "b.ls .+0xe4 <runtime.runqput+0xec>" proc.go:7529
 0x10004c5fc 4 "STR" "MOVD.W R30, -48(RSP)" "str x30, [sp,#-48]!" proc.go:7529
 0x10004c600 4 "STUR" "MOVD R29, -8(RSP)" "stur x29, [sp,#-8]" proc.go:7529
 0x10004c604 4 "SUB" "SUB $8, RSP, R29" "sub x29, sp, #0x8" proc.go:7529
-0x10004c608 4 "TBZ" "TBZ $0, R2, 2(PC)" "tbz w2, #0, .+0x8" proc.go:7545
-0x10004c60c 4 "B" "JMP 28(PC)" "b .+0x70" proc.go:7545
+0x10004c608 4 "TBZ" "TBZ $0, R2, 2(PC)" "tbz w2, #0, .+0x8 <runtime.runqput+0x20>" proc.go:7545
+0x10004c60c 4 "B" "JMP 28(PC)" "b .+0x70 <runtime.runqput+0x8c>" proc.go:7545
 0x10004c610 4 "STR" "MOVD R0, 56(RSP)" "str x0, [sp,#56]" proc.go:7545
 0x10004c614 4 "STR" "MOVD R1, 32(RSP)" "str x1, [sp,#32]" proc.go:7558
-0x10004c618 4 "B" "JMP 3(PC)" "b .+0xc" proc.go:7559
+0x10004c618 4 "B" "JMP 3(PC)" "b .+0xc <runtime.runqput+0x34>" proc.go:7559
 0x10004c61c 4 "LDR" "MOVD 56(RSP), R0" "ldr x0, [sp,#56]" proc.go:7559
 0x10004c620 4 "LDR" "MOVD 32(RSP), R1" "ldr x1, [sp,#32]" proc.go:7566
 0x10004c624 4 "LDRSB" "MOVB (R0), R27" "ldrsb x27, [x0]" proc.go:7559
@@ -703,9 +703,9 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10004c630 4 "LDR" "MOVWU 404(R0), R3" "ldr w3, [x0,#404]" proc.go:7560
 0x10004c634 4 "SUB" "SUB R2, R3, R4" "sub x4, x3, x2" proc.go:7561
 0x10004c638 4 "CMP" "CMPW $256, R4" "cmp w4, #0x100" proc.go:7561
-0x10004c63c 4 "B" "BCC 6(PC)" "b.cc .+0x18" proc.go:7561
-0x10004c640 4 "BL" "CALL runtime.runqputslow(SB)" "bl .+0xc0" proc.go:7566
-0x10004c644 4 "TBZ" "TBZ $0, R0, -10(PC)" "tbz w0, #0, .+0xffffffffffffffd8" proc.go:7566
+0x10004c63c 4 "B" "BCC 6(PC)" "b.cc .+0x18 <runtime.runqput+0x64>" proc.go:7561
+0x10004c640 4 "BL" "CALL runtime.runqputslow(SB)" "bl .+0xc0 <runtime.runqputslow>" proc.go:7566
+0x10004c644 4 "TBZ" "TBZ $0, R0, -10(PC)" "tbz w0, #0, .+0xffffffffffffffd8 <runtime.runqput+0x2c>" proc.go:7566
 0x10004c648 4 "LDUR" "MOVD -8(RSP), R29" "ldur x29, [sp,#-8]" proc.go:7567
 0x10004c64c 4 "LDR" "MOVD.P 48(RSP), R30" "ldr x30, [sp],#48" proc.go:7567
 0x10004c650 4 "RET" "RET" "ret" proc.go:7567
@@ -722,41 +722,41 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10004c67c 4 "LDR" "MOVD 2456(R0), R4" "ldr x4, [x0,#2456]" proc.go:7547
 0x10004c680 4 "ADD" "ADD $2456, R0, R5" "add x5, x0, #0x998" proc.go:7547
 0x10004c684 4 "MOV" "MOVD R1, R6" "mov x6, x1" proc.go:7548
-0x10004c688 4 "ADRP" "ADRP 1003520(PC), R27" "adrp x27, .+0xf5000" runtime2.go:252
+0x10004c688 4 "ADRP" "ADRP 1003520(PC), R27" "adrp x27, .+0xf5000 <runtime.mheap_+0x18f88>" runtime2.go:252
 0x10004c68c 4 "LDRB" "MOVBU 1705(R27), R7" "ldrb w7, [x27,#1705]" runtime2.go:252
-0x10004c690 4 "TBZ" "TBZ $0, R7, 6(PC)" "tbz w7, #0, .+0x18" runtime2.go:252
+0x10004c690 4 "TBZ" "TBZ $0, R7, 6(PC)" "tbz w7, #0, .+0x18 <runtime.runqput+0xb8>" runtime2.go:252
 0x10004c694 4 "MOV" "MOVD R4, R27" "mov x27, x4" runtime2.go:252
 0x10004c698 4 "" "BYTE 0xa1fcfbc8" ".byte 0xa1fcfbc8" runtime2.go:252
 0x10004c69c 4 "CMP" "CMP R4, R27" "cmp x27, x4" runtime2.go:252
 0x10004c6a0 4 "CSET" "CSET EQ, R7" "cset x7, eq" runtime2.go:252
-0x10004c6a4 4 "B" "JMP 7(PC)" "b .+0x1c" runtime2.go:252
+0x10004c6a4 4 "B" "JMP 7(PC)" "b .+0x1c <runtime.runqput+0xd0>" runtime2.go:252
 0x10004c6a8 4 "LDAXR" "LDAXR (R5), R27" "ldaxr x27, [x5]" runtime2.go:252
 0x10004c6ac 4 "CMP" "CMP R4, R27" "cmp x27, x4" runtime2.go:252
-0x10004c6b0 4 "B" "BNE 3(PC)" "b.ne .+0xc" runtime2.go:252
+0x10004c6b0 4 "B" "BNE 3(PC)" "b.ne .+0xc <runtime.runqput+0xcc>" runtime2.go:252
 0x10004c6b4 4 "STLXR" "STLXR R1, (R5), R27" "stlxr w27, x1, [x5]" runtime2.go:252
-0x10004c6b8 4 "CBNZ" "CBNZ R27, -4(PC)" "cbnz x27, .+0xfffffffffffffff0" runtime2.go:252
+0x10004c6b8 4 "CBNZ" "CBNZ R27, -4(PC)" "cbnz x27, .+0xfffffffffffffff0 <runtime.runqput+0xb8>" runtime2.go:252
 0x10004c6bc 4 "CSET" "CSET EQ, R7" "cset x7, eq" runtime2.go:252
-0x10004c6c0 4 "TBZ" "TBZ $0, R7, -18(PC)" "tbz w7, #0, .+0xffffffffffffffb8" proc.go:7548
-0x10004c6c4 4 "CBZ" "CBZ R4, 3(PC)" "cbz x4, .+0xc" proc.go:7551
+0x10004c6c0 4 "TBZ" "TBZ $0, R7, -18(PC)" "tbz w7, #0, .+0xffffffffffffffb8 <runtime.runqput+0x88>" proc.go:7548
+0x10004c6c4 4 "CBZ" "CBZ R4, 3(PC)" "cbz x4, .+0xc <runtime.runqput+0xe0>" proc.go:7551
 0x10004c6c8 4 "MOV" "MOVD R4, R1" "mov x1, x4" proc.go:7558
-0x10004c6cc 4 "B" "JMP -47(PC)" "b .+0xffffffffffffff44" proc.go:7555
+0x10004c6cc 4 "B" "JMP -47(PC)" "b .+0xffffffffffffff44 <runtime.runqput+0x20>" proc.go:7555
 0x10004c6d0 4 "LDUR" "MOVD -8(RSP), R29" "ldur x29, [sp,#-8]" proc.go:7552
 0x10004c6d4 4 "LDR" "MOVD.P 48(RSP), R30" "ldr x30, [sp],#48" proc.go:7552
 0x10004c6d8 4 "RET" "RET" "ret" proc.go:7552
 0x10004c6dc 4 "STP" "STP (R0, R1), 8(RSP)" "stp x0, x1, [sp,#8]" proc.go:7529
 0x10004c6e0 4 "STRB" "MOVB R2, 24(RSP)" "strb w2, [sp,#24]" proc.go:7529
 0x10004c6e4 4 "MOV" "MOVD R30, R3" "mov x3, x30" proc.go:7529
-0x10004c6e8 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl .+0x23fa8" proc.go:7529
+0x10004c6e8 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl .+0x23fa8 <runtime.morestack_noctxt.abi0>" proc.go:7529
 0x10004c6ec 4 "LDP" "LDP 8(RSP), (R0, R1)" "ldp x0, x1, [sp,#8]" proc.go:7529
 0x10004c6f0 4 "LDRB" "MOVBU 24(RSP), R2" "ldrb w2, [sp,#24]" proc.go:7529
-0x10004c6f4 4 "B" "JMP runtime.runqput(SB)" "b .+0xfffffffffffffefc" proc.go:7529
+0x10004c6f4 4 "B" "JMP runtime.runqput(SB)" "b .+0xfffffffffffffefc <runtime.runqput>" proc.go:7529
 0x10004c6f8 4 "" "BYTE 0x00000000" ".byte 0x00000000" proc.go:7529
 0x10004c6fc 4 "" "BYTE 0x00000000" ".byte 0x00000000" proc.go:7529
 == runtime.runqputslow 0x10004c700 496 /usr/local/go/src/runtime/proc.go
 0x10004c700 4 "LDR" "MOVD 16(R28), R16" "ldr x16, [x28,#16]" proc.go:7575
 0x10004c704 4 "SUB" "SUB $960, RSP, R17" "sub x17, sp, #0x3c0" proc.go:7575
 0x10004c708 4 "CMP" "CMP R16, R17" "cmp x17, x16" proc.go:7575
-0x10004c70c 4 "B" "BLS 111(PC)" "b.ls .+0x1bc" proc.go:7575
+0x10004c70c 4 "B" "BLS 111(PC)" "b.ls .+0x1bc <runtime.runqputslow+0x1c8>" proc.go:7575
 0x10004c710 4 "SUB" "SUB $1088, RSP, R20" "sub x20, sp, #0x440" proc.go:7575
 0x10004c714 4 "STP" "STP (R29, R30), -8(R20)" "stp x29, x30, [x20,#-8]" proc.go:7575
 0x10004c718 4 "MOV" "MOVD R20, RSP" "mov sp, x20" proc.go:7575
@@ -768,14 +768,14 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10004c730 4 "STP" "STP.P (ZR, ZR), 16(R4)" "stp xzr, xzr, [x4],#16" proc.go:7576
 0x10004c734 4 "STP" "STP.P (ZR, ZR), 16(R4)" "stp xzr, xzr, [x4],#16" proc.go:7576
 0x10004c738 4 "SUB" "SUB $1, R5, R5" "sub x5, x5, #0x1" proc.go:7576
-0x10004c73c 4 "CBNZ" "CBNZ R5, -5(PC)" "cbnz x5, .+0xffffffffffffffec" proc.go:7576
+0x10004c73c 4 "CBNZ" "CBNZ R5, -5(PC)" "cbnz x5, .+0xffffffffffffffec <runtime.runqputslow+0x28>" proc.go:7576
 0x10004c740 4 "STR" "MOVD ZR, (R4)" "str xzr, [x4]" proc.go:7576
 0x10004c744 4 "SUB" "SUB R2, R3, R3" "sub x3, x3, x2" proc.go:7579
 0x10004c748 4 "UBFX" "UBFX $1, R3, $31, R3" "ubfx x3, x3, #1, #31" proc.go:7580
 0x10004c74c 4 "CMP" "CMPW $128, R3" "cmp w3, #0x80" proc.go:7581
-0x10004c750 4 "B" "BNE 89(PC)" "b.ne .+0x164" proc.go:7581
+0x10004c750 4 "B" "BNE 89(PC)" "b.ne .+0x164 <runtime.runqputslow+0x1b4>" proc.go:7581
 0x10004c754 4 "MOV" "MOVD ZR, R3" "mov x3, xzr" proc.go:7581
-0x10004c758 4 "B" "JMP 10(PC)" "b .+0x28" proc.go:7581
+0x10004c758 4 "B" "JMP 10(PC)" "b .+0x28 <runtime.runqputslow+0x80>" proc.go:7581
 0x10004c75c 4 "LDRSB" "MOVB (R0), R27" "ldrsb x27, [x0]" proc.go:7585
 0x10004c760 4 "MOV" "MOVW R3, R4" "mov w4, w3" proc.go:7585
 0x10004c764 4 "ADD" "ADD $408, R0, R5" "add x5, x0, #0x198" proc.go:7585
@@ -786,28 +786,28 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10004c778 4 "STR" "MOVD R5, (R6)(R4<<3)" "str x5, [x6,x4,lsl #3]" proc.go:7585
 0x10004c77c 4 "ADD" "ADD $1, R3, R3" "add x3, x3, #0x1" proc.go:7584
 0x10004c780 4 "CMP" "CMPW $128, R3" "cmp w3, #0x80" proc.go:7584
-0x10004c784 4 "B" "BCC -10(PC)" "b.cc .+0xffffffffffffffd8" proc.go:7584
+0x10004c784 4 "B" "BCC -10(PC)" "b.cc .+0xffffffffffffffd8 <runtime.runqputslow+0x5c>" proc.go:7584
 0x10004c788 4 "LDRSB" "MOVB (R0), R27" "ldrsb x27, [x0]" proc.go:7587
 0x10004c78c 4 "ADD" "ADD $400, R0, R3" "add x3, x0, #0x190" proc.go:7587
 0x10004c790 4 "ADD" "ADD $128, R2, R4" "add x4, x2, #0x80" proc.go:7587
-0x10004c794 4 "ADRP" "ADRP 1003520(PC), R27" "adrp x27, .+0xf5000" proc.go:7587
+0x10004c794 4 "ADRP" "ADRP 1003520(PC), R27" "adrp x27, .+0xf5000 <runtime.finqueued+0x4>" proc.go:7587
 0x10004c798 4 "LDRB" "MOVBU 1705(R27), R5" "ldrb w5, [x27,#1705]" proc.go:7587
-0x10004c79c 4 "TBZ" "TBZ $0, R5, 6(PC)" "tbz w5, #0, .+0x18" proc.go:7587
+0x10004c79c 4 "TBZ" "TBZ $0, R5, 6(PC)" "tbz w5, #0, .+0x18 <runtime.runqputslow+0xb4>" proc.go:7587
 0x10004c7a0 4 "SXTW" "SXTW R2, R27" "sxtw x27, w2" proc.go:7587
 0x10004c7a4 4 "" "BYTE 0x64fcfb88" ".byte 0x64fcfb88" proc.go:7587
 0x10004c7a8 4 "CMP" "CMPW R2, R27" "cmp w27, w2" proc.go:7587
 0x10004c7ac 4 "CSET" "CSET EQ, R5" "cset x5, eq" proc.go:7587
-0x10004c7b0 4 "B" "JMP 7(PC)" "b .+0x1c" proc.go:7587
+0x10004c7b0 4 "B" "JMP 7(PC)" "b .+0x1c <runtime.runqputslow+0xcc>" proc.go:7587
 0x10004c7b4 4 "LDAXR" "LDAXRW (R3), R27" "ldaxr w27, [x3]" proc.go:7587
 0x10004c7b8 4 "CMP" "CMPW R2, R27" "cmp w27, w2" proc.go:7587
-0x10004c7bc 4 "B" "BNE 3(PC)" "b.ne .+0xc" proc.go:7587
+0x10004c7bc 4 "B" "BNE 3(PC)" "b.ne .+0xc <runtime.runqputslow+0xc8>" proc.go:7587
 0x10004c7c0 4 "STLXR" "STLXRW R4, (R3), R27" "stlxr w27, w4, [x3]" proc.go:7587
-0x10004c7c4 4 "CBNZ" "CBNZ R27, -4(PC)" "cbnz x27, .+0xfffffffffffffff0" proc.go:7587
+0x10004c7c4 4 "CBNZ" "CBNZ R27, -4(PC)" "cbnz x27, .+0xfffffffffffffff0 <runtime.runqputslow+0xb4>" proc.go:7587
 0x10004c7c8 4 "CSET" "CSET EQ, R5" "cset x5, eq" proc.go:7587
-0x10004c7cc 4 "TBZ" "TBZ $0, R5, 4(PC)" "tbz w5, #0, .+0x10" proc.go:7587
+0x10004c7cc 4 "TBZ" "TBZ $0, R5, 4(PC)" "tbz w5, #0, .+0x10 <runtime.runqputslow+0xdc>" proc.go:7587
 0x10004c7d0 4 "STR" "MOVD R1, 1072(RSP)" "str x1, [sp,#1072]" proc.go:7590
 0x10004c7d4 4 "MOV" "MOVD ZR, R1" "mov x1, xzr" proc.go:7600
-0x10004c7d8 4 "B" "JMP 12(PC)" "b .+0x30" proc.go:7600
+0x10004c7d8 4 "B" "JMP 12(PC)" "b .+0x30 <runtime.runqputslow+0x108>" proc.go:7600
 0x10004c7dc 4 "MOV" "MOVD ZR, R0" "mov x0, xzr" proc.go:7588
 0x10004c7e0 4 "LDP" "LDP -8(RSP), (R29, R30)" "ldp x29, x30, [sp,#-8]" proc.go:7588
 0x10004c7e4 4 "ADD" "ADD $1088, RSP, RSP" "add sp, sp, #0x440" proc.go:7588
@@ -820,7 +820,7 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10004c800 4 "LDR" "MOVD (R3)(R4<<3), R4" "ldr x4, [x3,x4,lsl #3]" proc.go:7601
 0x10004c804 4 "STR" "MOVD R4, 160(R2)" "str x4, [x2,#160]" proc.go:7601
 0x10004c808 4 "CMP" "CMPW $128, R1" "cmp w1, #0x80" proc.go:7600
-0x10004c80c 4 "B" "BCC -8(PC)" "b.cc .+0xffffffffffffffe0" proc.go:7600
+0x10004c80c 4 "B" "BCC -8(PC)" "b.cc .+0xffffffffffffffe0 <runtime.runqputslow+0xec>" proc.go:7600
 0x10004c810 4 "LDR" "MOVD 48(RSP), R1" "ldr x1, [sp,#48]" proc.go:7604
 0x10004c814 4 "LDR" "MOVD 1072(RSP), R2" "ldr x2, [sp,#1072]" proc.go:7604
 0x10004c818 4 "STP" "STP (R1, R2), 24(RSP)" "stp x1, x2, [sp,#24]" proc.go:7604
@@ -828,85 +828,85 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10004c820 4 "STR" "MOVW R1, 40(RSP)" "str w1, [sp,#40]" proc.go:7604
 0x10004c824 4 "NOP" "NOOP" "nop " proc.go:7607
 0x10004c828 4 "NOP" "NOOP" "nop " lock_spinbit.go:161
-0x10004c82c 4 "ADRP" "ADRP 851968(PC), R0" "adrp x0, .+0xd0000" lockrank_off.go:24
+0x10004c82c 4 "ADRP" "ADRP 851968(PC), R0" "adrp x0, .+0xd0000 <runtime.trace+0x2cc>" lockrank_off.go:24
 0x10004c830 4 "ADD" "ADD $3904, R0, R0" "add x0, x0, #0xf40" lockrank_off.go:24
-0x10004c834 4 "BL" "CALL runtime.lock2(SB)" "bl .+0xfffffffffffc5a8c" lockrank_off.go:24
+0x10004c834 4 "BL" "CALL runtime.lock2(SB)" "bl .+0xfffffffffffc5a8c <runtime.lock2>" lockrank_off.go:24
 0x10004c838 4 "NOP" "NOOP" "nop " proc.go:7608
 0x10004c83c 4 "LDRSW" "MOVW 40(RSP), R1" "ldrsw x1, [sp,#40]" proc.go:7326
 0x10004c840 4 "LDP" "LDP 24(RSP), (R2, R3)" "ldp x2, x3, [sp,#24]" proc.go:7326
-0x10004c844 4 "CBZ" "CBZ R3, 17(PC)" "cbz x3, .+0x44" proc.go:7838
+0x10004c844 4 "CBZ" "CBZ R3, 17(PC)" "cbz x3, .+0x44 <runtime.runqputslow+0x188>" proc.go:7838
 0x10004c848 4 "MOV" "MOVD R3, R4" "mov x4, x3" runtime2.go:245
 0x10004c84c 4 "STR" "MOVD ZR, 160(R3)" "str xzr, [x3,#160]" proc.go:7841
-0x10004c850 4 "ADRP" "ADRP 851968(PC), R27" "adrp x27, .+0xd0000" proc.go:7842
+0x10004c850 4 "ADRP" "ADRP 851968(PC), R27" "adrp x27, .+0xd0000 <runtime.trace+0x2f0>" proc.go:7842
 0x10004c854 4 "LDR" "MOVD 4008(R27), R3" "ldr x3, [x27,#4008]" proc.go:7842
-0x10004c858 4 "CBZ" "CBZ R3, 3(PC)" "cbz x3, .+0xc" proc.go:7842
+0x10004c858 4 "CBZ" "CBZ R3, 3(PC)" "cbz x3, .+0xc <runtime.runqputslow+0x164>" proc.go:7842
 0x10004c85c 4 "STR" "MOVD R2, 160(R3)" "str x2, [x3,#160]" proc.go:7843
-0x10004c860 4 "B" "JMP 3(PC)" "b .+0xc" proc.go:7843
-0x10004c864 4 "ADRP" "ADRP 851968(PC), R27" "adrp x27, .+0xd0000" proc.go:7845
+0x10004c860 4 "B" "JMP 3(PC)" "b .+0xc <runtime.runqputslow+0x16c>" proc.go:7843
+0x10004c864 4 "ADRP" "ADRP 851968(PC), R27" "adrp x27, .+0xd0000 <runtime.trace+0x304>" proc.go:7845
 0x10004c868 4 "STR" "MOVD R2, 4000(R27)" "str x2, [x27,#4000]" proc.go:7845
-0x10004c86c 4 "ADRP" "ADRP 851968(PC), R27" "adrp x27, .+0xd0000" proc.go:7847
+0x10004c86c 4 "ADRP" "ADRP 851968(PC), R27" "adrp x27, .+0xd0000 <runtime.trace+0x30c>" proc.go:7847
 0x10004c870 4 "STR" "MOVD R4, 4008(R27)" "str x4, [x27,#4008]" proc.go:7847
-0x10004c874 4 "ADRP" "ADRP 851968(PC), R27" "adrp x27, .+0xd0000" proc.go:7848
+0x10004c874 4 "ADRP" "ADRP 851968(PC), R27" "adrp x27, .+0xd0000 <runtime.trace+0x314>" proc.go:7848
 0x10004c878 4 "LDRSW" "MOVW 4016(R27), R2" "ldrsw x2, [x27,#4016]" proc.go:7848
 0x10004c87c 4 "ADD" "ADD R1, R2, R1" "add x1, x2, x1" proc.go:7848
-0x10004c880 4 "ADRP" "ADRP 851968(PC), R27" "adrp x27, .+0xd0000" proc.go:7848
+0x10004c880 4 "ADRP" "ADRP 851968(PC), R27" "adrp x27, .+0xd0000 <runtime.trace+0x320>" proc.go:7848
 0x10004c884 4 "STR" "MOVW R1, 4016(R27)" "str w1, [x27,#4016]" proc.go:7848
 0x10004c888 4 "STP" "STP (ZR, ZR), 24(RSP)" "stp xzr, xzr, [sp,#24]" proc.go:7327
 0x10004c88c 4 "STR" "MOVW ZR, 40(RSP)" "str wzr, [sp,#40]" proc.go:7327
 0x10004c890 4 "NOP" "NOOP" "nop " proc.go:7609
 0x10004c894 4 "NOP" "NOOP" "nop " lock_spinbit.go:270
-0x10004c898 4 "ADRP" "ADRP 851968(PC), R0" "adrp x0, .+0xd0000" lockrank_off.go:36
+0x10004c898 4 "ADRP" "ADRP 851968(PC), R0" "adrp x0, .+0xd0000 <runtime.trace+0x338>" lockrank_off.go:36
 0x10004c89c 4 "ADD" "ADD $3904, R0, R0" "add x0, x0, #0xf40" lockrank_off.go:36
-0x10004c8a0 4 "BL" "CALL runtime.unlock2(SB)" "bl .+0xfffffffffffc5f30" lockrank_off.go:36
+0x10004c8a0 4 "BL" "CALL runtime.unlock2(SB)" "bl .+0xfffffffffffc5f30 <runtime.unlock2>" lockrank_off.go:36
 0x10004c8a4 4 "ORR" "ORR $1, ZR, R0" "orr x0, xzr, #0x1" proc.go:7610
 0x10004c8a8 4 "LDP" "LDP -8(RSP), (R29, R30)" "ldp x29, x30, [sp,#-8]" proc.go:7610
 0x10004c8ac 4 "ADD" "ADD $1088, RSP, RSP" "add sp, sp, #0x440" proc.go:7610
 0x10004c8b0 4 "RET" "RET" "ret" proc.go:7610
-0x10004c8b4 4 "ADRP" "ADRP 180224(PC), R0" "adrp x0, .+0x2c000" proc.go:7582
+0x10004c8b4 4 "ADRP" "ADRP 180224(PC), R0" "adrp x0, .+0x2c000 <go:string.*+0x3cd4>" proc.go:7582
 0x10004c8b8 4 "ADD" "ADD $2399, R0, R0" "add x0, x0, #0x95f" proc.go:7582
 0x10004c8bc 4 "ORR" "ORR $30, ZR, R1" "orr x1, xzr, #0x1e" proc.go:7582
-0x10004c8c0 4 "BL" "CALL runtime.throw(SB)" "bl .+0x20cc0" proc.go:7582
+0x10004c8c0 4 "BL" "CALL runtime.throw(SB)" "bl .+0x20cc0 <runtime.throw>" proc.go:7582
 0x10004c8c4 4 "NOP" "NOOP" "nop " proc.go:7582
 0x10004c8c8 4 "STP" "STP (R0, R1), 8(RSP)" "stp x0, x1, [sp,#8]" proc.go:7575
 0x10004c8cc 4 "STP" "STPW (R2, R3), 24(RSP)" "stp w2, w3, [sp,#24]" proc.go:7575
 0x10004c8d0 4 "MOV" "MOVD R30, R3" "mov x3, x30" proc.go:7575
-0x10004c8d4 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl .+0x23dbc" proc.go:7575
+0x10004c8d4 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl .+0x23dbc <runtime.morestack_noctxt.abi0>" proc.go:7575
 0x10004c8d8 4 "LDP" "LDP 8(RSP), (R0, R1)" "ldp x0, x1, [sp,#8]" proc.go:7575
 0x10004c8dc 4 "LDP" "LDPW 24(RSP), (R2, R3)" "ldp w2, w3, [sp,#24]" proc.go:7575
-0x10004c8e0 4 "B" "JMP runtime.runqputslow(SB)" "b .+0xfffffffffffffe20" proc.go:7575
+0x10004c8e0 4 "B" "JMP runtime.runqputslow(SB)" "b .+0xfffffffffffffe20 <runtime.runqputslow>" proc.go:7575
 0x10004c8e4 4 "" "BYTE 0x00000000" ".byte 0x00000000" proc.go:7575
 0x10004c8e8 4 "" "BYTE 0x00000000" ".byte 0x00000000" proc.go:7575
 0x10004c8ec 4 "" "BYTE 0x00000000" ".byte 0x00000000" proc.go:7575
 == runtime.runqputbatch 0x10004c8f0 128 /usr/local/go/src/runtime/proc.go
 0x10004c8f0 4 "NOP" "NOOP" "nop " proc.go:7616
 0x10004c8f4 4 "LDR" "MOVD (R1), R2" "ldr x2, [x1]" proc.go:7810
-0x10004c8f8 4 "CBZ" "CBZ R2, 6(PC)" "cbz x2, .+0x18" proc.go:7617
+0x10004c8f8 4 "CBZ" "CBZ R2, 6(PC)" "cbz x2, .+0x18 <runtime.runqputbatch+0x20>" proc.go:7617
 0x10004c8fc 4 "LDRSB" "MOVB (R0), R27" "ldrsb x27, [x0]" proc.go:7620
 0x10004c900 4 "ADD" "ADD $400, R0, R2" "add x2, x0, #0x190" proc.go:7620
 0x10004c904 4 "LDAR" "LDARW (R2), R2" "ldar w2, [x2]" proc.go:7620
 0x10004c908 4 "LDR" "MOVWU 404(R0), R3" "ldr w3, [x0,#404]" proc.go:7621
-0x10004c90c 4 "B" "JMP 6(PC)" "b .+0x18" proc.go:7623
+0x10004c90c 4 "B" "JMP 6(PC)" "b .+0x18 <runtime.runqputbatch+0x34>" proc.go:7623
 0x10004c910 4 "RET" "RET" "ret" proc.go:7618
 0x10004c914 4 "ADD" "ADD $408, R0, R5" "add x5, x0, #0x198" proc.go:7625
 0x10004c918 4 "UBFX" "UBFX $0, R3, $8, R6" "ubfx x6, x3, #0, #8" proc.go:7625
 0x10004c91c 4 "STR" "MOVD R4, (R5)(R6<<3)" "str x4, [x5,x6,lsl #3]" runtime2.go:248
 0x10004c920 4 "ADD" "ADD $1, R3, R3" "add x3, x3, #0x1" proc.go:7626
 0x10004c924 4 "LDR" "MOVD (R1), R4" "ldr x4, [x1]" proc.go:7810
-0x10004c928 4 "CBZ" "CBZ R4, 15(PC)" "cbz x4, .+0x3c" proc.go:7623
+0x10004c928 4 "CBZ" "CBZ R4, 15(PC)" "cbz x4, .+0x3c <runtime.runqputbatch+0x74>" proc.go:7623
 0x10004c92c 4 "SUB" "SUB R2, R3, R5" "sub x5, x3, x2" proc.go:7623
 0x10004c930 4 "CMP" "CMPW $256, R5" "cmp w5, #0x100" proc.go:7623
-0x10004c934 4 "B" "BCS 12(PC)" "b.cs .+0x30" proc.go:7623
+0x10004c934 4 "B" "BCS 12(PC)" "b.cs .+0x30 <runtime.runqputbatch+0x74>" proc.go:7623
 0x10004c938 4 "NOP" "NOOP" "nop " proc.go:7624
 0x10004c93c 4 "NOP" "NOOP" "nop " proc.go:7854
-0x10004c940 4 "CBZ" "CBZ R4, -11(PC)" "cbz x4, .+0xffffffffffffffd4" proc.go:7855
+0x10004c940 4 "CBZ" "CBZ R4, -11(PC)" "cbz x4, .+0xffffffffffffffd4 <runtime.runqputbatch+0x24>" proc.go:7855
 0x10004c944 4 "LDR" "MOVD 160(R4), R5" "ldr x5, [x4,#160]" proc.go:7856
 0x10004c948 4 "STR" "MOVD R5, (R1)" "str x5, [x1]" proc.go:7856
-0x10004c94c 4 "CBNZ" "CBNZ R5, 2(PC)" "cbnz x5, .+0x8" proc.go:7857
+0x10004c94c 4 "CBNZ" "CBNZ R5, 2(PC)" "cbnz x5, .+0x8 <runtime.runqputbatch+0x64>" proc.go:7857
 0x10004c950 4 "STR" "MOVD ZR, 8(R1)" "str xzr, [x1,#8]" proc.go:7858
 0x10004c954 4 "LDRSW" "MOVW 16(R1), R5" "ldrsw x5, [x1,#16]" proc.go:7860
 0x10004c958 4 "SUB" "SUB $1, R5, R5" "sub x5, x5, #0x1" proc.go:7860
 0x10004c95c 4 "STR" "MOVW R5, 16(R1)" "str w5, [x1,#16]" proc.go:7860
-0x10004c960 4 "B" "JMP -19(PC)" "b .+0xffffffffffffffb4" proc.go:7860
+0x10004c960 4 "B" "JMP -19(PC)" "b .+0xffffffffffffffb4 <runtime.runqputbatch+0x24>" proc.go:7860
 0x10004c964 4 "ADD" "ADD $404, R0, R0" "add x0, x0, #0x194" proc.go:7640
 0x10004c968 4 "STLR" "STLRW R3, (R0)" "stlr w3, [x0]" proc.go:7640
 0x10004c96c 4 "RET" "RET" "ret" proc.go:7642
@@ -917,31 +917,31 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10004c97c 4 "STP" "STP (ZR, ZR), 16(RSP)" "stp xzr, xzr, [sp,#16]" proc.go:7674
 0x10004c980 4 "STR" "MOVW ZR, 32(RSP)" "str wzr, [sp,#32]" proc.go:7674
 0x10004c984 4 "LDR" "MOVD 2456(R0), R3" "ldr x3, [x0,#2456]" proc.go:7675
-0x10004c988 4 "CBZ" "CBZ R3, 34(PC)" "cbz x3, .+0x88" proc.go:7676
+0x10004c988 4 "CBZ" "CBZ R3, 34(PC)" "cbz x3, .+0x88 <runtime.runqdrain+0xa0>" proc.go:7676
 0x10004c98c 4 "ADD" "ADD $2456, R0, R4" "add x4, x0, #0x998" proc.go:7675
-0x10004c990 4 "ADRP" "ADRP 1003520(PC), R27" "adrp x27, .+0xf5000" runtime2.go:252
+0x10004c990 4 "ADRP" "ADRP 1003520(PC), R27" "adrp x27, .+0xf5000 <runtime.stopTheWorldContext+0x10>" runtime2.go:252
 0x10004c994 4 "LDRB" "MOVBU 1705(R27), R5" "ldrb w5, [x27,#1705]" runtime2.go:252
-0x10004c998 4 "TBZ" "TBZ $0, R5, 6(PC)" "tbz w5, #0, .+0x18" runtime2.go:252
+0x10004c998 4 "TBZ" "TBZ $0, R5, 6(PC)" "tbz w5, #0, .+0x18 <runtime.runqdrain+0x40>" runtime2.go:252
 0x10004c99c 4 "MOV" "MOVD R3, R27" "mov x27, x3" runtime2.go:252
 0x10004c9a0 4 "" "BYTE 0x9ffcfbc8" ".byte 0x9ffcfbc8" runtime2.go:252
 0x10004c9a4 4 "CMP" "CMP R3, R27" "cmp x27, x3" runtime2.go:252
 0x10004c9a8 4 "CSET" "CSET EQ, R5" "cset x5, eq" runtime2.go:252
-0x10004c9ac 4 "B" "JMP 7(PC)" "b .+0x1c" runtime2.go:252
+0x10004c9ac 4 "B" "JMP 7(PC)" "b .+0x1c <runtime.runqdrain+0x58>" runtime2.go:252
 0x10004c9b0 4 "LDAXR" "LDAXR (R4), R27" "ldaxr x27, [x4]" runtime2.go:252
 0x10004c9b4 4 "CMP" "CMP R3, R27" "cmp x27, x3" runtime2.go:252
-0x10004c9b8 4 "B" "BNE 3(PC)" "b.ne .+0xc" runtime2.go:252
+0x10004c9b8 4 "B" "BNE 3(PC)" "b.ne .+0xc <runtime.runqdrain+0x54>" runtime2.go:252
 0x10004c9bc 4 "STLXR" "STLXR ZR, (R4), R27" "stlxr w27, xzr, [x4]" runtime2.go:252
-0x10004c9c0 4 "CBNZ" "CBNZ R27, -4(PC)" "cbnz x27, .+0xfffffffffffffff0" runtime2.go:252
+0x10004c9c0 4 "CBNZ" "CBNZ R27, -4(PC)" "cbnz x27, .+0xfffffffffffffff0 <runtime.runqdrain+0x40>" runtime2.go:252
 0x10004c9c4 4 "CSET" "CSET EQ, R5" "cset x5, eq" runtime2.go:252
-0x10004c9c8 4 "TBZ" "TBZ $0, R5, 18(PC)" "tbz w5, #0, .+0x48" proc.go:7676
+0x10004c9c8 4 "TBZ" "TBZ $0, R5, 18(PC)" "tbz w5, #0, .+0x48 <runtime.runqdrain+0xa0>" proc.go:7676
 0x10004c9cc 4 "NOP" "NOOP" "nop " proc.go:7677
 0x10004c9d0 4 "NOP" "NOOP" "nop " proc.go:7677
 0x10004c9d4 4 "STR" "MOVD ZR, 160(R3)" "str xzr, [x3,#160]" proc.go:7825
 0x10004c9d8 4 "LDR" "MOVD 24(RSP), R4" "ldr x4, [sp,#24]" proc.go:7826
-0x10004c9dc 4 "CBZ" "CBZ R4, 4(PC)" "cbz x4, .+0x10" proc.go:7826
+0x10004c9dc 4 "CBZ" "CBZ R4, 4(PC)" "cbz x4, .+0x10 <runtime.runqdrain+0x7c>" proc.go:7826
 0x10004c9e0 4 "MOV" "MOVD R3, R5" "mov x5, x3" runtime2.go:248
 0x10004c9e4 4 "STR" "MOVD R3, 160(R4)" "str x3, [x4,#160]" proc.go:7827
-0x10004c9e8 4 "B" "JMP 5(PC)" "b .+0x14" proc.go:7827
+0x10004c9e8 4 "B" "JMP 5(PC)" "b .+0x14 <runtime.runqdrain+0x8c>" proc.go:7827
 0x10004c9ec 4 "MOV" "MOVD R3, R4" "mov x4, x3" runtime2.go:248
 0x10004c9f0 4 "NOP" "NOOP" "nop " proc.go:7829
 0x10004c9f4 4 "STR" "MOVD R3, 16(RSP)" "str x3, [sp,#16]" runtime2.go:248
@@ -955,26 +955,26 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10004ca14 4 "LDAR" "LDARW (R3), R4" "ldar w4, [x3]" proc.go:7681
 0x10004ca18 4 "LDR" "MOVWU 404(R0), R5" "ldr w5, [x0,#404]" proc.go:7682
 0x10004ca1c 4 "SUB" "SUB R4, R5, R6" "sub x6, x5, x4" proc.go:7683
-0x10004ca20 4 "CBZ" "CBZW R6, 20(PC)" "cbz w6, .+0x50" proc.go:7684
+0x10004ca20 4 "CBZ" "CBZW R6, 20(PC)" "cbz w6, .+0x50 <runtime.runqdrain+0x100>" proc.go:7684
 0x10004ca24 4 "CMP" "CMPW $256, R6" "cmp w6, #0x100" proc.go:7687
-0x10004ca28 4 "B" "BHI -6(PC)" "b.hi .+0xffffffffffffffe8" proc.go:7687
-0x10004ca2c 4 "ADRP" "ADRP 1003520(PC), R27" "adrp x27, .+0xf5000" proc.go:7691
+0x10004ca28 4 "B" "BHI -6(PC)" "b.hi .+0xffffffffffffffe8 <runtime.runqdrain+0xa0>" proc.go:7687
+0x10004ca2c 4 "ADRP" "ADRP 1003520(PC), R27" "adrp x27, .+0xf5000 <runtime.gcBitsArenas+0x2c>" proc.go:7691
 0x10004ca30 4 "LDRB" "MOVBU 1705(R27), R7" "ldrb w7, [x27,#1705]" proc.go:7691
-0x10004ca34 4 "TBZ" "TBZ $0, R7, 6(PC)" "tbz w7, #0, .+0x18" proc.go:7691
+0x10004ca34 4 "TBZ" "TBZ $0, R7, 6(PC)" "tbz w7, #0, .+0x18 <runtime.runqdrain+0xdc>" proc.go:7691
 0x10004ca38 4 "SXTW" "SXTW R4, R27" "sxtw x27, w4" proc.go:7691
 0x10004ca3c 4 "" "BYTE 0x65fcfb88" ".byte 0x65fcfb88" proc.go:7691
 0x10004ca40 4 "CMP" "CMPW R4, R27" "cmp w27, w4" proc.go:7691
 0x10004ca44 4 "CSET" "CSET EQ, R7" "cset x7, eq" proc.go:7691
-0x10004ca48 4 "B" "JMP 7(PC)" "b .+0x1c" proc.go:7691
+0x10004ca48 4 "B" "JMP 7(PC)" "b .+0x1c <runtime.runqdrain+0xf4>" proc.go:7691
 0x10004ca4c 4 "LDAXR" "LDAXRW (R3), R27" "ldaxr w27, [x3]" proc.go:7691
 0x10004ca50 4 "CMP" "CMPW R4, R27" "cmp w27, w4" proc.go:7691
-0x10004ca54 4 "B" "BNE 3(PC)" "b.ne .+0xc" proc.go:7691
+0x10004ca54 4 "B" "BNE 3(PC)" "b.ne .+0xc <runtime.runqdrain+0xf0>" proc.go:7691
 0x10004ca58 4 "STLXR" "STLXRW R5, (R3), R27" "stlxr w27, w5, [x3]" proc.go:7691
-0x10004ca5c 4 "CBNZ" "CBNZ R27, -4(PC)" "cbnz x27, .+0xfffffffffffffff0" proc.go:7691
+0x10004ca5c 4 "CBNZ" "CBNZ R27, -4(PC)" "cbnz x27, .+0xfffffffffffffff0 <runtime.runqdrain+0xdc>" proc.go:7691
 0x10004ca60 4 "CSET" "CSET EQ, R7" "cset x7, eq" proc.go:7691
-0x10004ca64 4 "TBZ" "TBZ $0, R7, -21(PC)" "tbz w7, #0, .+0xffffffffffffffac" proc.go:7691
+0x10004ca64 4 "TBZ" "TBZ $0, R7, -21(PC)" "tbz w7, #0, .+0xffffffffffffffac <runtime.runqdrain+0xa0>" proc.go:7691
 0x10004ca68 4 "MOV" "MOVD ZR, R3" "mov x3, xzr" proc.go:7691
-0x10004ca6c 4 "B" "JMP 12(PC)" "b .+0x30" proc.go:7691
+0x10004ca6c 4 "B" "JMP 12(PC)" "b .+0x30 <runtime.runqdrain+0x12c>" proc.go:7691
 0x10004ca70 4 "LDP" "LDP 16(RSP), (R0, R1)" "ldp x0, x1, [sp,#16]" proc.go:7685
 0x10004ca74 4 "LDRSW" "MOVW 32(RSP), R2" "ldrsw x2, [sp,#32]" proc.go:7685
 0x10004ca78 4 "ADD" "ADD $40, RSP, R29" "add x29, sp, #0x28" proc.go:7685
@@ -987,7 +987,7 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10004ca94 4 "STR" "MOVW R5, 32(RSP)" "str w5, [sp,#32]" proc.go:7832
 0x10004ca98 4 "ADD" "ADD $1, R3, R3" "add x3, x3, #0x1" proc.go:7702
 0x10004ca9c 4 "CMP" "CMPW R6, R3" "cmp w3, w6" proc.go:7702
-0x10004caa0 4 "B" "BCS 16(PC)" "b.cs .+0x40" proc.go:7702
+0x10004caa0 4 "B" "BCS 16(PC)" "b.cs .+0x40 <runtime.runqdrain+0x170>" proc.go:7702
 0x10004caa4 4 "ADD" "ADD $408, R0, R5" "add x5, x0, #0x198" proc.go:7703
 0x10004caa8 4 "ADD" "ADD R4, R3, R7" "add x7, x3, x4" proc.go:7703
 0x10004caac 4 "UBFX" "UBFX $0, R7, $8, R7" "ubfx x7, x7, #0, #8" proc.go:7703
@@ -995,14 +995,14 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10004cab4 4 "NOP" "NOOP" "nop " proc.go:7704
 0x10004cab8 4 "STR" "MOVD ZR, 160(R5)" "str xzr, [x5,#160]" proc.go:7825
 0x10004cabc 4 "LDR" "MOVD 24(RSP), R7" "ldr x7, [sp,#24]" proc.go:7826
-0x10004cac0 4 "CBZ" "CBZ R7, 4(PC)" "cbz x7, .+0x10" proc.go:7826
+0x10004cac0 4 "CBZ" "CBZ R7, 4(PC)" "cbz x7, .+0x10 <runtime.runqdrain+0x160>" proc.go:7826
 0x10004cac4 4 "MOV" "MOVD R5, R8" "mov x8, x5" runtime2.go:248
 0x10004cac8 4 "STR" "MOVD R5, 160(R7)" "str x5, [x7,#160]" proc.go:7827
-0x10004cacc 4 "B" "JMP -18(PC)" "b .+0xffffffffffffffb8" proc.go:7827
+0x10004cacc 4 "B" "JMP -18(PC)" "b .+0xffffffffffffffb8 <runtime.runqdrain+0x114>" proc.go:7827
 0x10004cad0 4 "MOV" "MOVD R5, R7" "mov x7, x5" runtime2.go:248
 0x10004cad4 4 "STR" "MOVD R5, 16(RSP)" "str x5, [sp,#16]" runtime2.go:248
 0x10004cad8 4 "MOV" "MOVD R7, R8" "mov x8, x7" runtime2.go:248
-0x10004cadc 4 "B" "JMP -22(PC)" "b .+0xffffffffffffffa8" proc.go:7829
+0x10004cadc 4 "B" "JMP -22(PC)" "b .+0xffffffffffffffa8 <runtime.runqdrain+0x114>" proc.go:7829
 0x10004cae0 4 "LDP" "LDP 16(RSP), (R0, R1)" "ldp x0, x1, [sp,#16]" proc.go:7706
 0x10004cae4 4 "LDRSW" "MOVW 32(RSP), R2" "ldrsw x2, [sp,#32]" proc.go:7706
 0x10004cae8 4 "ADD" "ADD $40, RSP, R29" "add x29, sp, #0x28" proc.go:7706
@@ -1014,7 +1014,7 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 == runtime.runqgrab 0x10004cb00 480 /usr/local/go/src/runtime/proc.go
 0x10004cb00 4 "LDR" "MOVD 16(R28), R16" "ldr x16, [x28,#16]" proc.go:7713
 0x10004cb04 4 "CMP" "CMP R16, RSP" "cmp sp, x16" proc.go:7713
-0x10004cb08 4 "B" "BLS 107(PC)" "b.ls .+0x1ac" proc.go:7713
+0x10004cb08 4 "B" "BLS 107(PC)" "b.ls .+0x1ac <runtime.runqgrab+0x1b4>" proc.go:7713
 0x10004cb0c 4 "STR" "MOVD.W R30, -32(RSP)" "str x30, [sp,#-32]!" proc.go:7713
 0x10004cb10 4 "STUR" "MOVD R29, -8(RSP)" "stur x29, [sp,#-8]" proc.go:7713
 0x10004cb14 4 "SUB" "SUB $8, RSP, R29" "sub x29, sp, #0x8" proc.go:7713
@@ -1031,53 +1031,53 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10004cb40 4 "MOV" "MOVW R7, R7" "mov w7, w7" proc.go:7718
 0x10004cb44 4 "ADD" "ADD R7>>1, R5, R7" "add x7, x5, x7, lsr #1" proc.go:7718
 0x10004cb48 4 "SUB" "SUB R7, R6, R6" "sub x6, x6, x7" proc.go:7718
-0x10004cb4c 4 "CBNZ" "CBNZW R6, 43(PC)" "cbnz w6, .+0xac" proc.go:7719
-0x10004cb50 4 "TBZ" "TBZ $0, R3, 81(PC)" "tbz w3, #0, .+0x144" proc.go:7720
+0x10004cb4c 4 "CBNZ" "CBNZW R6, 43(PC)" "cbnz w6, .+0xac <runtime.runqgrab+0xf8>" proc.go:7719
+0x10004cb50 4 "TBZ" "TBZ $0, R3, 81(PC)" "tbz w3, #0, .+0x144 <runtime.runqgrab+0x194>" proc.go:7720
 0x10004cb54 4 "LDR" "MOVD 2456(R0), R4" "ldr x4, [x0,#2456]" proc.go:7722
-0x10004cb58 4 "CBZ" "CBZ R4, 79(PC)" "cbz x4, .+0x13c" proc.go:7722
+0x10004cb58 4 "CBZ" "CBZ R4, 79(PC)" "cbz x4, .+0x13c <runtime.runqgrab+0x194>" proc.go:7722
 0x10004cb5c 4 "LDR" "MOVWU 4(R0), R5" "ldr w5, [x0,#4]" proc.go:7723
 0x10004cb60 4 "CMP" "CMPW $1, R5" "cmp w5, #0x1" proc.go:7723
-0x10004cb64 4 "B" "BNE 20(PC)" "b.ne .+0x50" proc.go:7723
+0x10004cb64 4 "B" "BNE 20(PC)" "b.ne .+0x50 <runtime.runqgrab+0xb4>" proc.go:7723
 0x10004cb68 4 "LDR" "MOVD 48(R0), R5" "ldr x5, [x0,#48]" proc.go:7724
-0x10004cb6c 4 "CBZ" "CBZ R5, 18(PC)" "cbz x5, .+0x48" proc.go:7724
+0x10004cb6c 4 "CBZ" "CBZ R5, 18(PC)" "cbz x5, .+0x48 <runtime.runqgrab+0xb4>" proc.go:7724
 0x10004cb70 4 "STR" "MOVD R4, 16(RSP)" "str x4, [sp,#16]" proc.go:7722
 0x10004cb74 4 "LDR" "MOVD 184(R5), R5" "ldr x5, [x5,#184]" proc.go:7725
-0x10004cb78 4 "CBZ" "CBZ R5, 7(PC)" "cbz x5, .+0x1c" proc.go:7725
+0x10004cb78 4 "CBZ" "CBZ R5, 7(PC)" "cbz x5, .+0x1c <runtime.runqgrab+0x94>" proc.go:7725
 0x10004cb7c 4 "ADD" "ADD $144, R5, R5" "add x5, x5, #0x90" types.go:194
 0x10004cb80 4 "NOP" "NOOP" "nop " proc.go:1221
 0x10004cb84 4 "LDAR" "LDARW (R5), R5" "ldar w5, [x5]" types.go:194
 0x10004cb88 4 "AND" "AND $-4097, R5, R5" "and x5, x5, #0xffffffffffffefff" proc.go:7725
 0x10004cb8c 4 "CMP" "CMPW $3, R5" "cmp w5, #0x3" proc.go:7725
-0x10004cb90 4 "B" "BEQ 9(PC)" "b.eq .+0x24" proc.go:7725
+0x10004cb90 4 "B" "BEQ 9(PC)" "b.eq .+0x24 <runtime.runqgrab+0xb4>" proc.go:7725
 0x10004cb94 4 "ORR" "ORR $3, ZR, R0" "orr x0, xzr, #0x3" proc.go:7746
 0x10004cb98 4 "STR" "MOVW R0, 8(RSP)" "str w0, [sp,#8]" proc.go:7746
-0x10004cb9c 4 "BL" "CALL runtime.usleep.abi0(SB)" "bl .+0xc314" proc.go:7746
+0x10004cb9c 4 "BL" "CALL runtime.usleep.abi0(SB)" "bl .+0xc314 <runtime.usleep.abi0>" proc.go:7746
 0x10004cba0 4 "LDR" "MOVD 40(RSP), R0" "ldr x0, [sp,#40]" proc.go:7756
 0x10004cba4 4 "LDR" "MOVD 48(RSP), R1" "ldr x1, [sp,#48]" proc.go:7770
 0x10004cba8 4 "LDR" "MOVWU 56(RSP), R2" "ldr w2, [sp,#56]" proc.go:7770
 0x10004cbac 4 "LDRB" "MOVBU 60(RSP), R3" "ldrb w3, [sp,#60]" proc.go:7720
 0x10004cbb0 4 "LDR" "MOVD 16(RSP), R4" "ldr x4, [sp,#16]" runtime2.go:252
 0x10004cbb4 4 "ADD" "ADD $2456, R0, R5" "add x5, x0, #0x998" proc.go:7756
-0x10004cbb8 4 "ADRP" "ADRP 1003520(PC), R27" "adrp x27, .+0xf5000" runtime2.go:252
+0x10004cbb8 4 "ADRP" "ADRP 1003520(PC), R27" "adrp x27, .+0xf5000 <runtime.gcCPULimiter+0x38>" runtime2.go:252
 0x10004cbbc 4 "LDRB" "MOVBU 1705(R27), R6" "ldrb w6, [x27,#1705]" runtime2.go:252
-0x10004cbc0 4 "TBZ" "TBZ $0, R6, 6(PC)" "tbz w6, #0, .+0x18" runtime2.go:252
+0x10004cbc0 4 "TBZ" "TBZ $0, R6, 6(PC)" "tbz w6, #0, .+0x18 <runtime.runqgrab+0xd8>" runtime2.go:252
 0x10004cbc4 4 "MOV" "MOVD R4, R27" "mov x27, x4" runtime2.go:252
 0x10004cbc8 4 "" "BYTE 0xbffcfbc8" ".byte 0xbffcfbc8" runtime2.go:252
 0x10004cbcc 4 "CMP" "CMP R4, R27" "cmp x27, x4" runtime2.go:252
 0x10004cbd0 4 "CSET" "CSET EQ, R6" "cset x6, eq" runtime2.go:252
-0x10004cbd4 4 "B" "JMP 7(PC)" "b .+0x1c" runtime2.go:252
+0x10004cbd4 4 "B" "JMP 7(PC)" "b .+0x1c <runtime.runqgrab+0xf0>" runtime2.go:252
 0x10004cbd8 4 "LDAXR" "LDAXR (R5), R27" "ldaxr x27, [x5]" runtime2.go:252
 0x10004cbdc 4 "CMP" "CMP R4, R27" "cmp x27, x4" runtime2.go:252
-0x10004cbe0 4 "B" "BNE 3(PC)" "b.ne .+0xc" runtime2.go:252
+0x10004cbe0 4 "B" "BNE 3(PC)" "b.ne .+0xc <runtime.runqgrab+0xec>" runtime2.go:252
 0x10004cbe4 4 "STLXR" "STLXR ZR, (R5), R27" "stlxr w27, xzr, [x5]" runtime2.go:252
-0x10004cbe8 4 "CBNZ" "CBNZ R27, -4(PC)" "cbnz x27, .+0xfffffffffffffff0" runtime2.go:252
+0x10004cbe8 4 "CBNZ" "CBNZ R27, -4(PC)" "cbnz x27, .+0xfffffffffffffff0 <runtime.runqgrab+0xd8>" runtime2.go:252
 0x10004cbec 4 "CSET" "CSET EQ, R6" "cset x6, eq" runtime2.go:252
-0x10004cbf0 4 "TBZ" "TBZ $0, R6, -50(PC)" "tbz w6, #0, .+0xffffffffffffff38" proc.go:7756
-0x10004cbf4 4 "B" "JMP 33(PC)" "b .+0x84" proc.go:7756
+0x10004cbf0 4 "TBZ" "TBZ $0, R6, -50(PC)" "tbz w6, #0, .+0xffffffffffffff38 <runtime.runqgrab+0x28>" proc.go:7756
+0x10004cbf4 4 "B" "JMP 33(PC)" "b .+0x84 <runtime.runqgrab+0x178>" proc.go:7756
 0x10004cbf8 4 "CMP" "CMPW $128, R6" "cmp w6, #0x80" proc.go:7765
-0x10004cbfc 4 "B" "BHI -53(PC)" "b.hi .+0xffffffffffffff2c" proc.go:7765
+0x10004cbfc 4 "B" "BHI -53(PC)" "b.hi .+0xffffffffffffff2c <runtime.runqgrab+0x28>" proc.go:7765
 0x10004cc00 4 "MOV" "MOVD ZR, R7" "mov x7, xzr" proc.go:7765
-0x10004cc04 4 "B" "JMP 10(PC)" "b .+0x28" proc.go:7765
+0x10004cc04 4 "B" "JMP 10(PC)" "b .+0x28 <runtime.runqgrab+0x12c>" proc.go:7765
 0x10004cc08 4 "LDRSB" "MOVB (R1), R27" "ldrsb x27, [x1]" proc.go:7770
 0x10004cc0c 4 "ADD" "ADD $408, R0, R8" "add x8, x0, #0x198" proc.go:7769
 0x10004cc10 4 "ADD" "ADD R5, R7, R9" "add x9, x7, x5" proc.go:7769
@@ -1088,24 +1088,24 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10004cc24 4 "STR" "MOVD R8, (R1)(R9<<3)" "str x8, [x1,x9,lsl #3]" proc.go:7770
 0x10004cc28 4 "ADD" "ADD $1, R7, R7" "add x7, x7, #0x1" proc.go:7768
 0x10004cc2c 4 "CMP" "CMPW R6, R7" "cmp w7, w6" proc.go:7768
-0x10004cc30 4 "B" "BCC -10(PC)" "b.cc .+0xffffffffffffffd8" proc.go:7768
+0x10004cc30 4 "B" "BCC -10(PC)" "b.cc .+0xffffffffffffffd8 <runtime.runqgrab+0x108>" proc.go:7768
 0x10004cc34 4 "ADD" "ADD R5, R6, R7" "add x7, x6, x5" proc.go:7772
-0x10004cc38 4 "ADRP" "ADRP 1003520(PC), R27" "adrp x27, .+0xf5000" proc.go:7772
+0x10004cc38 4 "ADRP" "ADRP 1003520(PC), R27" "adrp x27, .+0xf5000 <runtime.handlingSig+0x58>" proc.go:7772
 0x10004cc3c 4 "LDRB" "MOVBU 1705(R27), R8" "ldrb w8, [x27,#1705]" proc.go:7772
-0x10004cc40 4 "TBZ" "TBZ $0, R8, 6(PC)" "tbz w8, #0, .+0x18" proc.go:7772
+0x10004cc40 4 "TBZ" "TBZ $0, R8, 6(PC)" "tbz w8, #0, .+0x18 <runtime.runqgrab+0x158>" proc.go:7772
 0x10004cc44 4 "SXTW" "SXTW R5, R27" "sxtw x27, w5" proc.go:7772
 0x10004cc48 4 "" "BYTE 0x87fcfb88" ".byte 0x87fcfb88" proc.go:7772
 0x10004cc4c 4 "CMP" "CMPW R5, R27" "cmp w27, w5" proc.go:7772
 0x10004cc50 4 "CSET" "CSET EQ, R8" "cset x8, eq" proc.go:7772
-0x10004cc54 4 "B" "JMP 7(PC)" "b .+0x1c" proc.go:7772
+0x10004cc54 4 "B" "JMP 7(PC)" "b .+0x1c <runtime.runqgrab+0x170>" proc.go:7772
 0x10004cc58 4 "LDAXR" "LDAXRW (R4), R27" "ldaxr w27, [x4]" proc.go:7772
 0x10004cc5c 4 "CMP" "CMPW R5, R27" "cmp w27, w5" proc.go:7772
-0x10004cc60 4 "B" "BNE 3(PC)" "b.ne .+0xc" proc.go:7772
+0x10004cc60 4 "B" "BNE 3(PC)" "b.ne .+0xc <runtime.runqgrab+0x16c>" proc.go:7772
 0x10004cc64 4 "STLXR" "STLXRW R7, (R4), R27" "stlxr w27, w7, [x4]" proc.go:7772
-0x10004cc68 4 "CBNZ" "CBNZ R27, -4(PC)" "cbnz x27, .+0xfffffffffffffff0" proc.go:7772
+0x10004cc68 4 "CBNZ" "CBNZ R27, -4(PC)" "cbnz x27, .+0xfffffffffffffff0 <runtime.runqgrab+0x158>" proc.go:7772
 0x10004cc6c 4 "CSET" "CSET EQ, R8" "cset x8, eq" proc.go:7772
-0x10004cc70 4 "TBZ" "TBZ $0, R8, -82(PC)" "tbz w8, #0, .+0xfffffffffffffeb8" proc.go:7772
-0x10004cc74 4 "B" "JMP 12(PC)" "b .+0x30" proc.go:7772
+0x10004cc70 4 "TBZ" "TBZ $0, R8, -82(PC)" "tbz w8, #0, .+0xfffffffffffffeb8 <runtime.runqgrab+0x28>" proc.go:7772
+0x10004cc74 4 "B" "JMP 12(PC)" "b .+0x30 <runtime.runqgrab+0x1a4>" proc.go:7772
 0x10004cc78 4 "LDRSB" "MOVB (R1), R27" "ldrsb x27, [x1]" proc.go:7759
 0x10004cc7c 4 "UBFX" "UBFX $0, R2, $8, R2" "ubfx x2, x2, #0, #8" proc.go:7759
 0x10004cc80 4 "STR" "MOVD R4, (R1)(R2<<3)" "str x4, [x1,x2,lsl #3]" proc.go:7759
@@ -1125,17 +1125,17 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10004ccb8 4 "STR" "MOVW R2, 24(RSP)" "str w2, [sp,#24]" proc.go:7713
 0x10004ccbc 4 "STRB" "MOVB R3, 28(RSP)" "strb w3, [sp,#28]" proc.go:7713
 0x10004ccc0 4 "MOV" "MOVD R30, R3" "mov x3, x30" proc.go:7713
-0x10004ccc4 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl .+0x239cc" proc.go:7713
+0x10004ccc4 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl .+0x239cc <runtime.morestack_noctxt.abi0>" proc.go:7713
 0x10004ccc8 4 "LDP" "LDP 8(RSP), (R0, R1)" "ldp x0, x1, [sp,#8]" proc.go:7713
 0x10004cccc 4 "LDR" "MOVWU 24(RSP), R2" "ldr w2, [sp,#24]" proc.go:7713
 0x10004ccd0 4 "LDRB" "MOVBU 28(RSP), R3" "ldrb w3, [sp,#28]" proc.go:7713
-0x10004ccd4 4 "B" "JMP runtime.runqgrab(SB)" "b .+0xfffffffffffffe2c" proc.go:7713
+0x10004ccd4 4 "B" "JMP runtime.runqgrab(SB)" "b .+0xfffffffffffffe2c <runtime.runqgrab>" proc.go:7713
 0x10004ccd8 4 "" "BYTE 0x00000000" ".byte 0x00000000" proc.go:7713
 0x10004ccdc 4 "" "BYTE 0x00000000" ".byte 0x00000000" proc.go:7713
 == runtime.runqsteal 0x10004cce0 240 /usr/local/go/src/runtime/proc.go
 0x10004cce0 4 "LDR" "MOVD 16(R28), R16" "ldr x16, [x28,#16]" proc.go:7781
 0x10004cce4 4 "CMP" "CMP R16, RSP" "cmp sp, x16" proc.go:7781
-0x10004cce8 4 "B" "BLS 50(PC)" "b.ls .+0xc8" proc.go:7781
+0x10004cce8 4 "B" "BLS 50(PC)" "b.ls .+0xc8 <runtime.runqsteal+0xd0>" proc.go:7781
 0x10004ccec 4 "STR" "MOVD.W R30, -64(RSP)" "str x30, [sp,#-64]!" proc.go:7781
 0x10004ccf0 4 "STUR" "MOVD R29, -8(RSP)" "stur x29, [sp,#-8]" proc.go:7781
 0x10004ccf4 4 "SUB" "SUB $8, RSP, R29" "sub x29, sp, #0x8" proc.go:7781
@@ -1148,8 +1148,8 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10004cd10 4 "MOV" "MOVD R5, R1" "mov x1, x5" proc.go:7783
 0x10004cd14 4 "MOV" "MOVD R2, R3" "mov x3, x2" proc.go:7783
 0x10004cd18 4 "MOV" "MOVD R4, R2" "mov x2, x4" proc.go:7783
-0x10004cd1c 4 "BL" "CALL runtime.runqgrab(SB)" "bl .+0xfffffffffffffde4" proc.go:7783
-0x10004cd20 4 "CBZ" "CBZW R0, 27(PC)" "cbz w0, .+0x6c" proc.go:7784
+0x10004cd1c 4 "BL" "CALL runtime.runqgrab(SB)" "bl .+0xfffffffffffffde4 <runtime.runqgrab>" proc.go:7783
+0x10004cd20 4 "CBZ" "CBZW R0, 27(PC)" "cbz w0, .+0x6c <runtime.runqsteal+0xac>" proc.go:7784
 0x10004cd24 4 "LDR" "MOVWU 44(RSP), R2" "ldr w2, [sp,#44]" proc.go:7788
 0x10004cd28 4 "ADD" "ADD R2, R0, R3" "add x3, x0, x2" proc.go:7788
 0x10004cd2c 4 "SUB" "SUB $1, R3, R3" "sub x3, x3, #0x1" proc.go:7788
@@ -1157,7 +1157,7 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10004cd34 4 "LDR" "MOVD 48(RSP), R5" "ldr x5, [sp,#48]" proc.go:7788
 0x10004cd38 4 "LDR" "MOVD (R5)(R4<<3), R4" "ldr x4, [x5,x4,lsl #3]" proc.go:7788
 0x10004cd3c 4 "CMP" "CMPW $1, R0" "cmp w0, #0x1" proc.go:7789
-0x10004cd40 4 "B" "BEQ 15(PC)" "b.eq .+0x3c" proc.go:7789
+0x10004cd40 4 "B" "BEQ 15(PC)" "b.eq .+0x3c <runtime.runqsteal+0x9c>" proc.go:7789
 0x10004cd44 4 "LDR" "MOVD 72(RSP), R5" "ldr x5, [sp,#72]" proc.go:7792
 0x10004cd48 4 "ADD" "ADD $400, R5, R6" "add x6, x5, #0x190" proc.go:7792
 0x10004cd4c 4 "LDAR" "LDARW (R6), R6" "ldar w6, [x6]" proc.go:7792
@@ -1165,7 +1165,7 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10004cd54 4 "ADD" "ADD R0, R2, R2" "add x2, x2, x0" proc.go:7793
 0x10004cd58 4 "SUB" "SUB $1, R2, R2" "sub x2, x2, #0x1" proc.go:7793
 0x10004cd5c 4 "CMP" "CMPW $256, R2" "cmp w2, #0x100" proc.go:7793
-0x10004cd60 4 "B" "BCS 15(PC)" "b.cs .+0x3c" proc.go:7793
+0x10004cd60 4 "B" "BCS 15(PC)" "b.cs .+0x3c <runtime.runqsteal+0xbc>" proc.go:7793
 0x10004cd64 4 "ADD" "ADD $404, R5, R1" "add x1, x5, #0x194" proc.go:7796
 0x10004cd68 4 "STLR" "STLRW R3, (R1)" "stlr w3, [x1]" proc.go:7796
 0x10004cd6c 4 "MOV" "MOVD R4, R0" "mov x0, x4" proc.go:7797
@@ -1180,27 +1180,27 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10004cd90 4 "LDUR" "MOVD -8(RSP), R29" "ldur x29, [sp,#-8]" proc.go:7785
 0x10004cd94 4 "LDR" "MOVD.P 64(RSP), R30" "ldr x30, [sp],#64" proc.go:7785
 0x10004cd98 4 "RET" "RET" "ret" proc.go:7785
-0x10004cd9c 4 "ADRP" "ADRP 176128(PC), R0" "adrp x0, .+0x2b000" proc.go:7794
+0x10004cd9c 4 "ADRP" "ADRP 176128(PC), R0" "adrp x0, .+0x2b000 <go:string.*+0x31bc>" proc.go:7794
 0x10004cda0 4 "ADD" "ADD $2139, R0, R0" "add x0, x0, #0x85b" proc.go:7794
 0x10004cda4 4 "ORR" "ORR $24, ZR, R1" "orr x1, xzr, #0x18" proc.go:7794
-0x10004cda8 4 "BL" "CALL runtime.throw(SB)" "bl .+0x207d8" proc.go:7794
+0x10004cda8 4 "BL" "CALL runtime.throw(SB)" "bl .+0x207d8 <runtime.throw>" proc.go:7794
 0x10004cdac 4 "NOP" "NOOP" "nop " proc.go:7794
 0x10004cdb0 4 "STP" "STP (R0, R1), 8(RSP)" "stp x0, x1, [sp,#8]" proc.go:7781
 0x10004cdb4 4 "STRB" "MOVB R2, 24(RSP)" "strb w2, [sp,#24]" proc.go:7781
 0x10004cdb8 4 "MOV" "MOVD R30, R3" "mov x3, x30" proc.go:7781
-0x10004cdbc 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl .+0x238d4" proc.go:7781
+0x10004cdbc 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl .+0x238d4 <runtime.morestack_noctxt.abi0>" proc.go:7781
 0x10004cdc0 4 "LDP" "LDP 8(RSP), (R0, R1)" "ldp x0, x1, [sp,#8]" proc.go:7781
 0x10004cdc4 4 "LDRB" "MOVBU 24(RSP), R2" "ldrb w2, [sp,#24]" proc.go:7781
-0x10004cdc8 4 "B" "JMP runtime.runqsteal(SB)" "b .+0xffffffffffffff18" proc.go:7781
+0x10004cdc8 4 "B" "JMP runtime.runqsteal(SB)" "b .+0xffffffffffffff18 <runtime.runqsteal>" proc.go:7781
 0x10004cdcc 4 "" "BYTE 0x00000000" ".byte 0x00000000" proc.go:7781
 == runtime.memmove 0x1000729b0 624 /usr/local/go/src/runtime/memmove_arm64.s
-0x1000729b0 4 "CBZ" "CBZ R2, 37(PC)" "cbz x2, .+0x94" memmove_arm64.s:30
+0x1000729b0 4 "CBZ" "CBZ R2, 37(PC)" "cbz x2, .+0x94 <runtime.memmove+0x94>" memmove_arm64.s:30
 0x1000729b4 4 "CMP" "CMP $16, R2" "cmp x2, #0x10" memmove_arm64.s:33
-0x1000729b8 4 "B" "BLE 12(PC)" "b.le .+0x30" memmove_arm64.s:34
+0x1000729b8 4 "B" "BLE 12(PC)" "b.le .+0x30 <runtime.memmove+0x38>" memmove_arm64.s:34
 0x1000729bc 4 "CMP" "CMP $128, R2" "cmp x2, #0x80" memmove_arm64.s:37
-0x1000729c0 4 "B" "BHI 62(PC)" "b.hi .+0xf8" memmove_arm64.s:38
+0x1000729c0 4 "B" "BHI 62(PC)" "b.hi .+0xf8 <runtime.memmove+0x108>" memmove_arm64.s:38
 0x1000729c4 4 "CMP" "CMP $32, R2" "cmp x2, #0x20" memmove_arm64.s:39
-0x1000729c8 4 "B" "BHI 32(PC)" "b.hi .+0x80" memmove_arm64.s:40
+0x1000729c8 4 "B" "BHI 32(PC)" "b.hi .+0x80 <runtime.memmove+0x98>" memmove_arm64.s:40
 0x1000729cc 4 "LDP" "LDP (R1), (R6, R7)" "ldp x6, x7, [x1]" memmove_arm64.s:43
 0x1000729d0 4 "ADD" "ADD R1, R2, R4" "add x4, x2, x1" memmove_arm64.s:44
 0x1000729d4 4 "LDP" "LDP -16(R4), (R12, R13)" "ldp x12, x13, [x4,#-16]" memmove_arm64.s:45
@@ -1211,19 +1211,19 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x1000729e8 4 "ADD" "ADD R1, R2, R4" "add x4, x2, x1" memmove_arm64.s:53
 0x1000729ec 4 "ADD" "ADD R0, R2, R5" "add x5, x2, x0" memmove_arm64.s:54
 0x1000729f0 4 "CMP" "CMP $8, R2" "cmp x2, #0x8" memmove_arm64.s:55
-0x1000729f4 4 "B" "BLT 6(PC)" "b.lt .+0x18" memmove_arm64.s:56
+0x1000729f4 4 "B" "BLT 6(PC)" "b.lt .+0x18 <runtime.memmove+0x5c>" memmove_arm64.s:56
 0x1000729f8 4 "LDR" "MOVD (R1), R6" "ldr x6, [x1]" memmove_arm64.s:57
 0x1000729fc 4 "LDUR" "MOVD -8(R4), R7" "ldur x7, [x4,#-8]" memmove_arm64.s:58
 0x100072a00 4 "STR" "MOVD R6, (R0)" "str x6, [x0]" memmove_arm64.s:59
 0x100072a04 4 "STUR" "MOVD R7, -8(R5)" "stur x7, [x5,#-8]" memmove_arm64.s:60
 0x100072a08 4 "RET" "RET" "ret" memmove_arm64.s:61
-0x100072a0c 4 "TBZ" "TBZ $2, R2, 6(PC)" "tbz w2, #2, .+0x18" memmove_arm64.s:64
+0x100072a0c 4 "TBZ" "TBZ $2, R2, 6(PC)" "tbz w2, #2, .+0x18 <runtime.memmove+0x74>" memmove_arm64.s:64
 0x100072a10 4 "LDR" "MOVWU (R1), R6" "ldr w6, [x1]" memmove_arm64.s:65
 0x100072a14 4 "LDUR" "MOVWU -4(R4), R7" "ldur w7, [x4,#-4]" memmove_arm64.s:66
 0x100072a18 4 "STR" "MOVW R6, (R0)" "str w6, [x0]" memmove_arm64.s:67
 0x100072a1c 4 "STUR" "MOVW R7, -4(R5)" "stur w7, [x5,#-4]" memmove_arm64.s:68
 0x100072a20 4 "RET" "RET" "ret" memmove_arm64.s:69
-0x100072a24 4 "TBZ" "TBZ $1, R2, 6(PC)" "tbz w2, #1, .+0x18" memmove_arm64.s:72
+0x100072a24 4 "TBZ" "TBZ $1, R2, 6(PC)" "tbz w2, #1, .+0x18 <runtime.memmove+0x8c>" memmove_arm64.s:72
 0x100072a28 4 "LDRH" "MOVHU (R1), R6" "ldrh w6, [x1]" memmove_arm64.s:73
 0x100072a2c 4 "LDURH" "LDURHW -2(R4), R7" "ldurh w7, [x4,#-2]" memmove_arm64.s:74
 0x100072a30 4 "STRH" "MOVH R6, (R0)" "strh w6, [x0]" memmove_arm64.s:75
@@ -1239,7 +1239,7 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x100072a58 4 "LDP" "LDP -32(R4), (R10, R11)" "ldp x10, x11, [x4,#-32]" memmove_arm64.s:92
 0x100072a5c 4 "LDP" "LDP -16(R4), (R12, R13)" "ldp x12, x13, [x4,#-16]" memmove_arm64.s:93
 0x100072a60 4 "CMP" "CMP $64, R2" "cmp x2, #0x40" memmove_arm64.s:94
-0x100072a64 4 "B" "BHI 6(PC)" "b.hi .+0x18" memmove_arm64.s:95
+0x100072a64 4 "B" "BHI 6(PC)" "b.hi .+0x18 <runtime.memmove+0xcc>" memmove_arm64.s:95
 0x100072a68 4 "STP" "STP (R6, R7), (R0)" "stp x6, x7, [x0]" memmove_arm64.s:96
 0x100072a6c 4 "STP" "STP (R8, R9), 16(R0)" "stp x8, x9, [x0,#16]" memmove_arm64.s:97
 0x100072a70 4 "STP" "STP (R10, R11), -32(R5)" "stp x10, x11, [x5,#-32]" memmove_arm64.s:98
@@ -1248,7 +1248,7 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x100072a7c 4 "LDP" "LDP 32(R1), (R14, R15)" "ldp x14, x15, [x1,#32]" memmove_arm64.s:104
 0x100072a80 4 "LDP" "LDP 48(R1), (R16, R17)" "ldp x16, x17, [x1,#48]" memmove_arm64.s:105
 0x100072a84 4 "CMP" "CMP $96, R2" "cmp x2, #0x60" memmove_arm64.s:106
-0x100072a88 4 "B" "BLS 5(PC)" "b.ls .+0x14" memmove_arm64.s:107
+0x100072a88 4 "B" "BLS 5(PC)" "b.ls .+0x14 <runtime.memmove+0xec>" memmove_arm64.s:107
 0x100072a8c 4 "LDP" "LDP -64(R4), (R2, R3)" "ldp x2, x3, [x4,#-64]" memmove_arm64.s:108
 0x100072a90 4 "LDP" "LDP -48(R4), (R1, R4)" "ldp x1, x4, [x4,#-48]" memmove_arm64.s:109
 0x100072a94 4 "STP" "STP (R2, R3), -64(R5)" "stp x2, x3, [x5,#-64]" memmove_arm64.s:110
@@ -1265,19 +1265,19 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x100072ac0 4 "MOV" "MOVD ZR, R7" "mov x7, xzr" memmove_arm64.s:126
 0x100072ac4 4 "MOV" "MOVD ZR, R8" "mov x8, xzr" memmove_arm64.s:127
 0x100072ac8 4 "CMP" "CMP $1024, R2" "cmp x2, #0x400" memmove_arm64.s:129
-0x100072acc 4 "B" "BLT 9(PC)" "b.lt .+0x24" memmove_arm64.s:130
-0x100072ad0 4 "ADRP" "ADRP 847872(PC), R27" "adrp x27, .+0xcf000" memmove_arm64.s:132
+0x100072acc 4 "B" "BLT 9(PC)" "b.lt .+0x24 <runtime.memmove+0x140>" memmove_arm64.s:130
+0x100072ad0 4 "ADRP" "ADRP 847872(PC), R27" "adrp x27, .+0xcf000 <runtime.allocmLock+0x10>" memmove_arm64.s:132
 0x100072ad4 4 "LDRB" "MOVBU 1706(R27), R6" "ldrb w6, [x27,#1706]" memmove_arm64.s:132
-0x100072ad8 4 "CBNZ" "CBNZ R6, 4(PC)" "cbnz x6, .+0x10" memmove_arm64.s:133
+0x100072ad8 4 "CBNZ" "CBNZ R6, 4(PC)" "cbnz x6, .+0x10 <runtime.memmove+0x138>" memmove_arm64.s:133
 0x100072adc 4 "MOV" "MOVD R0, R7" "mov x7, x0" memmove_arm64.s:134
 0x100072ae0 4 "MOV" "MOVD R5, R8" "mov x8, x5" memmove_arm64.s:135
-0x100072ae4 4 "B" "JMP 3(PC)" "b .+0xc" memmove_arm64.s:136
+0x100072ae4 4 "B" "JMP 3(PC)" "b .+0xc <runtime.memmove+0x140>" memmove_arm64.s:136
 0x100072ae8 4 "MOV" "MOVD R1, R7" "mov x7, x1" memmove_arm64.s:138
 0x100072aec 4 "MOV" "MOVD R4, R8" "mov x8, x4" memmove_arm64.s:139
 0x100072af0 4 "SUB" "SUB R1, R0, R14" "sub x14, x0, x1" memmove_arm64.s:148
-0x100072af4 4 "CBZ" "CBZ R14, -44(PC)" "cbz x14, .+0xffffffffffffff50" memmove_arm64.s:149
+0x100072af4 4 "CBZ" "CBZ R14, -44(PC)" "cbz x14, .+0xffffffffffffff50 <runtime.memmove+0x94>" memmove_arm64.s:149
 0x100072af8 4 "CMP" "CMP R2, R14" "cmp x14, x2" memmove_arm64.s:150
-0x100072afc 4 "B" "BCC 36(PC)" "b.cc .+0x90" memmove_arm64.s:151
+0x100072afc 4 "B" "BCC 36(PC)" "b.cc .+0x90 <runtime.memmove+0x1dc>" memmove_arm64.s:151
 0x100072b00 4 "LDP" "LDP (R1), (R12, R13)" "ldp x12, x13, [x1]" memmove_arm64.s:154
 0x100072b04 4 "AND" "AND $15, R7, R14" "and x14, x7, #0xf" memmove_arm64.s:155
 0x100072b08 4 "SUB" "SUB R14, R1, R1" "sub x1, x1, x14" memmove_arm64.s:156
@@ -1289,7 +1289,7 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x100072b20 4 "LDP" "LDP 48(R1), (R10, R11)" "ldp x10, x11, [x1,#48]" memmove_arm64.s:162
 0x100072b24 4 "LDP" "LDP.W 64(R1), (R12, R13)" "ldp x12, x13, [x1,#64]!" memmove_arm64.s:163
 0x100072b28 4 "SUBS" "SUBS $144, R2, R2" "subs x2, x2, #0x90" memmove_arm64.s:165
-0x100072b2c 4 "B" "BLS 11(PC)" "b.ls .+0x2c" memmove_arm64.s:166
+0x100072b2c 4 "B" "BLS 11(PC)" "b.ls .+0x2c <runtime.memmove+0x1a8>" memmove_arm64.s:166
 0x100072b30 4 "STP" "STP (R6, R7), 16(R3)" "stp x6, x7, [x3,#16]" memmove_arm64.s:169
 0x100072b34 4 "LDP" "LDP 16(R1), (R6, R7)" "ldp x6, x7, [x1,#16]" memmove_arm64.s:170
 0x100072b38 4 "STP" "STP (R8, R9), 32(R3)" "stp x8, x9, [x3,#32]" memmove_arm64.s:171
@@ -1299,7 +1299,7 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x100072b48 4 "STP" "STP.W (R12, R13), 64(R3)" "stp x12, x13, [x3,#64]!" memmove_arm64.s:175
 0x100072b4c 4 "LDP" "LDP.W 64(R1), (R12, R13)" "ldp x12, x13, [x1,#64]!" memmove_arm64.s:176
 0x100072b50 4 "SUBS" "SUBS $64, R2, R2" "subs x2, x2, #0x40" memmove_arm64.s:177
-0x100072b54 4 "B" "BHI -9(PC)" "b.hi .+0xffffffffffffffdc" memmove_arm64.s:178
+0x100072b54 4 "B" "BHI -9(PC)" "b.hi .+0xffffffffffffffdc <runtime.memmove+0x180>" memmove_arm64.s:178
 0x100072b58 4 "LDP" "LDP -64(R4), (R14, R15)" "ldp x14, x15, [x4,#-64]" memmove_arm64.s:182
 0x100072b5c 4 "STP" "STP (R6, R7), 16(R3)" "stp x6, x7, [x3,#16]" memmove_arm64.s:183
 0x100072b60 4 "LDP" "LDP -48(R4), (R6, R7)" "ldp x6, x7, [x4,#-48]" memmove_arm64.s:184
@@ -1324,7 +1324,7 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x100072bac 4 "LDP" "LDP.W -64(R4), (R12, R13)" "ldp x12, x13, [x4,#-64]!" memmove_arm64.s:207
 0x100072bb0 4 "SUB" "SUB R14, R5, R5" "sub x5, x5, x14" memmove_arm64.s:208
 0x100072bb4 4 "SUBS" "SUBS $128, R2, R2" "subs x2, x2, #0x80" memmove_arm64.s:209
-0x100072bb8 4 "B" "BLS 11(PC)" "b.ls .+0x2c" memmove_arm64.s:210
+0x100072bb8 4 "B" "BLS 11(PC)" "b.ls .+0x2c <runtime.memmove+0x234>" memmove_arm64.s:210
 0x100072bbc 4 "STP" "STP (R6, R7), -16(R5)" "stp x6, x7, [x5,#-16]" memmove_arm64.s:213
 0x100072bc0 4 "LDP" "LDP -16(R4), (R6, R7)" "ldp x6, x7, [x4,#-16]" memmove_arm64.s:214
 0x100072bc4 4 "STP" "STP (R8, R9), -32(R5)" "stp x8, x9, [x5,#-32]" memmove_arm64.s:215
@@ -1334,7 +1334,7 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x100072bd4 4 "STP" "STP.W (R12, R13), -64(R5)" "stp x12, x13, [x5,#-64]!" memmove_arm64.s:219
 0x100072bd8 4 "LDP" "LDP.W -64(R4), (R12, R13)" "ldp x12, x13, [x4,#-64]!" memmove_arm64.s:220
 0x100072bdc 4 "SUBS" "SUBS $64, R2, R2" "subs x2, x2, #0x40" memmove_arm64.s:221
-0x100072be0 4 "B" "BHI -9(PC)" "b.hi .+0xffffffffffffffdc" memmove_arm64.s:222
+0x100072be0 4 "B" "BHI -9(PC)" "b.hi .+0xffffffffffffffdc <runtime.memmove+0x20c>" memmove_arm64.s:222
 0x100072be4 4 "LDP" "LDP 48(R1), (R2, R3)" "ldp x2, x3, [x1,#48]" memmove_arm64.s:226
 0x100072be8 4 "STP" "STP (R6, R7), -16(R5)" "stp x6, x7, [x5,#-16]" memmove_arm64.s:227
 0x100072bec 4 "LDP" "LDP 32(R1), (R6, R7)" "ldp x6, x7, [x1,#32]" memmove_arm64.s:228
@@ -1354,19 +1354,19 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x100074500 4 "STR" "MOVD R0, 8(RSP)" "str x0, [sp,#8]" main.go:19
 0x100074504 4 "MOV" "MOVD ZR, R2" "mov x2, xzr" main.go:21
 0x100074508 4 "MOV" "MOVD ZR, R3" "mov x3, xzr" main.go:21
-0x10007450c 4 "B" "JMP 4(PC)" "b .+0x10" main.go:21
+0x10007450c 4 "B" "JMP 4(PC)" "b .+0x10 <main.sumInts+0x1c>" main.go:21
 0x100074510 4 "LDR" "MOVD (R0)(R2<<3), R4" "ldr x4, [x0,x2,lsl #3]" main.go:21
 0x100074514 4 "ADD" "ADD R3, R4, R3" "add x3, x4, x3" main.go:22
 0x100074518 4 "ADD" "ADD $1, R2, R2" "add x2, x2, #0x1" main.go:21
 0x10007451c 4 "CMP" "CMP R2, R1" "cmp x1, x2" main.go:21
-0x100074520 4 "B" "BGT -4(PC)" "b.gt .+0xfffffffffffffff0" main.go:21
+0x100074520 4 "B" "BGT -4(PC)" "b.gt .+0xfffffffffffffff0 <main.sumInts+0x10>" main.go:21
 0x100074524 4 "MOV" "MOVD R3, R0" "mov x0, x3" main.go:24
 0x100074528 4 "RET" "RET" "ret" main.go:24
 0x10007452c 4 "" "BYTE 0x00000000" ".byte 0x00000000" main.go:24
 == main.dot 0x100074530 144 /Users/egon/code/gio/lensm/testdata/testprog/main.go
 0x100074530 4 "LDR" "MOVD 16(R28), R16" "ldr x16, [x28,#16]" main.go:28
 0x100074534 4 "CMP" "CMP R16, RSP" "cmp sp, x16" main.go:28
-0x100074538 4 "B" "BLS 24(PC)" "b.ls .+0x60" main.go:28
+0x100074538 4 "B" "BLS 24(PC)" "b.ls .+0x60 <main.dot+0x68>" main.go:28
 0x10007453c 4 "STR" "MOVD.W R30, -16(RSP)" "str x30, [sp,#-16]!" main.go:28
 0x100074540 4 "STUR" "MOVD R29, -8(RSP)" "stur x29, [sp,#-8]" main.go:28
 0x100074544 4 "SUB" "SUB $8, RSP, R29" "sub x29, sp, #0x8" main.go:28
@@ -1374,37 +1374,37 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10007454c 4 "STR" "MOVD R3, 48(RSP)" "str x3, [sp,#48]" main.go:28
 0x100074550 4 "FMOV" "FMOVD ZR, F1" "fmov d1, xzr" main.go:30
 0x100074554 4 "MOV" "MOVD ZR, R2" "mov x2, xzr" main.go:30
-0x100074558 4 "B" "JMP 4(PC)" "b .+0x10" main.go:30
+0x100074558 4 "B" "JMP 4(PC)" "b .+0x10 <main.dot+0x38>" main.go:30
 0x10007455c 4 "LDR" "FMOVD (R3)(R2<<3), F2" "ldr d2, [x3,x2,lsl #3]" main.go:31
 0x100074560 4 "FMADD" "FMADDD F0, F1, F2, F1" "fmadd d1, d2, d0, d1" main.go:31
 0x100074564 4 "ADD" "ADD $1, R2, R2" "add x2, x2, #0x1" main.go:30
 0x100074568 4 "CMP" "CMP R2, R1" "cmp x1, x2" main.go:30
-0x10007456c 4 "B" "BLE 5(PC)" "b.le .+0x14" main.go:30
+0x10007456c 4 "B" "BLE 5(PC)" "b.le .+0x14 <main.dot+0x50>" main.go:30
 0x100074570 4 "LDR" "FMOVD (R0)(R2<<3), F0" "ldr d0, [x0,x2,lsl #3]" main.go:31
 0x100074574 4 "CMP" "CMP R2, R4" "cmp x4, x2" main.go:31
-0x100074578 4 "B" "BHI -7(PC)" "b.hi .+0xffffffffffffffe4" main.go:31
-0x10007457c 4 "B" "JMP 5(PC)" "b .+0x14" main.go:31
+0x100074578 4 "B" "BHI -7(PC)" "b.hi .+0xffffffffffffffe4 <main.dot+0x2c>" main.go:31
+0x10007457c 4 "B" "JMP 5(PC)" "b .+0x14 <main.dot+0x60>" main.go:31
 0x100074580 4 "FMOV" "FMOVD F1, F0" "fmov d0, d1" main.go:33
 0x100074584 4 "LDUR" "MOVD -8(RSP), R29" "ldur x29, [sp,#-8]" main.go:33
 0x100074588 4 "LDR" "MOVD.P 16(RSP), R30" "ldr x30, [sp],#16" main.go:33
 0x10007458c 4 "RET" "RET" "ret" main.go:33
-0x100074590 4 "BL" "CALL runtime.panicBounds(SB)" "bl .+0xffffffffffffe210" main.go:31
+0x100074590 4 "BL" "CALL runtime.panicBounds(SB)" "bl .+0xffffffffffffe210 <runtime.panicBounds>" main.go:31
 0x100074594 4 "NOP" "NOOP" "nop " main.go:31
 0x100074598 4 "STP" "STP (R0, R1), 8(RSP)" "stp x0, x1, [sp,#8]" main.go:28
 0x10007459c 4 "STP" "STP (R2, R3), 24(RSP)" "stp x2, x3, [sp,#24]" main.go:28
 0x1000745a0 4 "STP" "STP (R4, R5), 40(RSP)" "stp x4, x5, [sp,#40]" main.go:28
 0x1000745a4 4 "MOV" "MOVD R30, R3" "mov x3, x30" main.go:28
-0x1000745a8 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl .+0xffffffffffffc0e8" main.go:28
+0x1000745a8 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl .+0xffffffffffffc0e8 <runtime.morestack_noctxt.abi0>" main.go:28
 0x1000745ac 4 "LDP" "LDP 8(RSP), (R0, R1)" "ldp x0, x1, [sp,#8]" main.go:28
 0x1000745b0 4 "LDP" "LDP 24(RSP), (R2, R3)" "ldp x2, x3, [sp,#24]" main.go:28
 0x1000745b4 4 "LDP" "LDP 40(RSP), (R4, R5)" "ldp x4, x5, [sp,#40]" main.go:28
-0x1000745b8 4 "B" "JMP main.dot(SB)" "b .+0xffffffffffffff78" main.go:28
+0x1000745b8 4 "B" "JMP main.dot(SB)" "b .+0xffffffffffffff78 <main.dot>" main.go:28
 0x1000745bc 4 "" "BYTE 0x00000000" ".byte 0x00000000" main.go:28
 == main.popcountAll 0x1000745c0 64 /Users/egon/code/gio/lensm/testdata/testprog/main.go
 0x1000745c0 4 "STR" "MOVD R0, 8(RSP)" "str x0, [sp,#8]" main.go:37
 0x1000745c4 4 "MOV" "MOVD ZR, R2" "mov x2, xzr" main.go:39
 0x1000745c8 4 "MOV" "MOVD ZR, R3" "mov x3, xzr" main.go:39
-0x1000745cc 4 "B" "JMP 8(PC)" "b .+0x20" main.go:39
+0x1000745cc 4 "B" "JMP 8(PC)" "b .+0x20 <main.popcountAll+0x2c>" main.go:39
 0x1000745d0 4 "LDR" "MOVD (R0)(R2<<3), R4" "ldr x4, [x0,x2,lsl #3]" main.go:39
 0x1000745d4 4 "FMOV" "FMOVD R4, F0" "fmov d0, x4" main.go:40
 0x1000745d8 4 "CNT" "VCNT V0.B8, V0.B8" "cnt v0.8b, v0.8b" main.go:40
@@ -1413,23 +1413,23 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x1000745e4 4 "ADD" "ADD R3, R4, R3" "add x3, x4, x3" main.go:40
 0x1000745e8 4 "ADD" "ADD $1, R2, R2" "add x2, x2, #0x1" main.go:39
 0x1000745ec 4 "CMP" "CMP R2, R1" "cmp x1, x2" main.go:39
-0x1000745f0 4 "B" "BGT -8(PC)" "b.gt .+0xffffffffffffffe0" main.go:39
+0x1000745f0 4 "B" "BGT -8(PC)" "b.gt .+0xffffffffffffffe0 <main.popcountAll+0x10>" main.go:39
 0x1000745f4 4 "MOV" "MOVD R3, R0" "mov x0, x3" main.go:42
 0x1000745f8 4 "RET" "RET" "ret" main.go:42
 0x1000745fc 4 "" "BYTE 0x00000000" ".byte 0x00000000" main.go:42
 == main.collatzSteps 0x100074600 64 /Users/egon/code/gio/lensm/testdata/testprog/main.go
 0x100074600 4 "MOV" "MOVD ZR, R1" "mov x1, xzr" main.go:48
-0x100074604 4 "B" "JMP 2(PC)" "b .+0x8" main.go:48
+0x100074604 4 "B" "JMP 2(PC)" "b .+0x8 <main.collatzSteps+0xc>" main.go:48
 0x100074608 4 "ADD" "ADD $1, R1, R1" "add x1, x1, #0x1" main.go:54
 0x10007460c 4 "CMP" "CMP $1, R0" "cmp x0, #0x1" main.go:48
-0x100074610 4 "B" "BEQ 8(PC)" "b.eq .+0x20" main.go:48
-0x100074614 4 "TBNZ" "TBNZ $0, R0, 4(PC)" "tbnz w0, #0, .+0x10" main.go:49
+0x100074610 4 "B" "BEQ 8(PC)" "b.eq .+0x20 <main.collatzSteps+0x30>" main.go:48
+0x100074614 4 "TBNZ" "TBNZ $0, R0, 4(PC)" "tbnz w0, #0, .+0x10 <main.collatzSteps+0x24>" main.go:49
 0x100074618 4 "ADD" "ADD R0>>63, R0, R0" "add x0, x0, x0, lsr #63" main.go:49
 0x10007461c 4 "ASR" "ASR $1, R0, R0" "asr x0, x0, #1" main.go:49
-0x100074620 4 "B" "JMP -6(PC)" "b .+0xffffffffffffffe8" main.go:50
+0x100074620 4 "B" "JMP -6(PC)" "b .+0xffffffffffffffe8 <main.collatzSteps+0x8>" main.go:50
 0x100074624 4 "ADD" "ADD R0<<1, R0, R2" "add x2, x0, x0, lsl #1" main.go:52
 0x100074628 4 "ADD" "ADD $1, R2, R0" "add x0, x2, #0x1" main.go:52
-0x10007462c 4 "B" "JMP -9(PC)" "b .+0xffffffffffffffdc" main.go:52
+0x10007462c 4 "B" "JMP -9(PC)" "b .+0xffffffffffffffdc <main.collatzSteps+0x8>" main.go:52
 0x100074630 4 "MOV" "MOVD R1, R0" "mov x0, x1" main.go:56
 0x100074634 4 "RET" "RET" "ret" main.go:56
 0x100074638 4 "" "BYTE 0x00000000" ".byte 0x00000000" main.go:56
@@ -1438,7 +1438,7 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x100074640 4 "LDR" "MOVD 16(R28), R16" "ldr x16, [x28,#16]" main.go:60
 0x100074644 4 "SUB" "SUB $16, RSP, R17" "sub x17, sp, #0x10" main.go:60
 0x100074648 4 "CMP" "CMP R16, R17" "cmp x17, x16" main.go:60
-0x10007464c 4 "B" "BLS 59(PC)" "b.ls .+0xec" main.go:60
+0x10007464c 4 "B" "BLS 59(PC)" "b.ls .+0xec <main.mat4Mul+0xf8>" main.go:60
 0x100074650 4 "STR" "MOVD.W R30, -144(RSP)" "str x30, [sp,#-144]!" main.go:60
 0x100074654 4 "STUR" "MOVD R29, -8(RSP)" "stur x29, [sp,#-8]" main.go:60
 0x100074658 4 "SUB" "SUB $8, RSP, R29" "sub x29, sp, #0x8" main.go:60
@@ -1461,18 +1461,18 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x10007469c 4 "STP" "STP (ZR, ZR), 96(R3)" "stp xzr, xzr, [x3,#96]" main.go:61
 0x1000746a0 4 "STP" "STP (ZR, ZR), 112(R3)" "stp xzr, xzr, [x3,#112]" main.go:61
 0x1000746a4 4 "MOV" "MOVD ZR, R4" "mov x4, xzr" main.go:62
-0x1000746a8 4 "B" "JMP 2(PC)" "b .+0x8" main.go:62
+0x1000746a8 4 "B" "JMP 2(PC)" "b .+0x8 <main.mat4Mul+0x70>" main.go:62
 0x1000746ac 4 "ADD" "ADD $1, R4, R4" "add x4, x4, #0x1" main.go:62
 0x1000746b0 4 "CMP" "CMP $4, R4" "cmp x4, #0x4" main.go:62
-0x1000746b4 4 "B" "BGE 22(PC)" "b.ge .+0x58" main.go:62
+0x1000746b4 4 "B" "BGE 22(PC)" "b.ge .+0x58 <main.mat4Mul+0xcc>" main.go:62
 0x1000746b8 4 "MOV" "MOVD ZR, R5" "mov x5, xzr" main.go:63
-0x1000746bc 4 "B" "JMP 2(PC)" "b .+0x8" main.go:63
+0x1000746bc 4 "B" "JMP 2(PC)" "b .+0x8 <main.mat4Mul+0x84>" main.go:63
 0x1000746c0 4 "ADD" "ADD $1, R5, R5" "add x5, x5, #0x1" main.go:63
 0x1000746c4 4 "CMP" "CMP $4, R5" "cmp x5, #0x4" main.go:63
-0x1000746c8 4 "B" "BGE -7(PC)" "b.ge .+0xffffffffffffffe4" main.go:63
+0x1000746c8 4 "B" "BGE -7(PC)" "b.ge .+0xffffffffffffffe4 <main.mat4Mul+0x6c>" main.go:63
 0x1000746cc 4 "ADD" "ADD R4<<2, R5, R6" "add x6, x5, x4, lsl #2" main.go:65
 0x1000746d0 4 "MOV" "MOVD ZR, R7" "mov x7, xzr" main.go:64
-0x1000746d4 4 "B" "JMP 11(PC)" "b .+0x2c" main.go:64
+0x1000746d4 4 "B" "JMP 11(PC)" "b .+0x2c <main.mat4Mul+0xc0>" main.go:64
 0x1000746d8 4 "LDRSB" "MOVB (R0), R27" "ldrsb x27, [x0]" main.go:65
 0x1000746dc 4 "LDRSB" "MOVB (R1), R27" "ldrsb x27, [x1]" main.go:65
 0x1000746e0 4 "LDR" "FMOVD (R3)(R6<<3), F0" "ldr d0, [x3,x6,lsl #3]" main.go:65
@@ -1484,8 +1484,8 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x1000746f8 4 "STR" "FMOVD F0, (R3)(R6<<3)" "str d0, [x3,x6,lsl #3]" main.go:65
 0x1000746fc 4 "ADD" "ADD $1, R7, R7" "add x7, x7, #0x1" main.go:64
 0x100074700 4 "CMP" "CMP $4, R7" "cmp x7, #0x4" main.go:64
-0x100074704 4 "B" "BLT -11(PC)" "b.lt .+0xffffffffffffffd4" main.go:64
-0x100074708 4 "B" "JMP -18(PC)" "b .+0xffffffffffffffb8" main.go:64
+0x100074704 4 "B" "BLT -11(PC)" "b.lt .+0xffffffffffffffd4 <main.mat4Mul+0x98>" main.go:64
+0x100074708 4 "B" "JMP -18(PC)" "b .+0xffffffffffffffb8 <main.mat4Mul+0x80>" main.go:64
 0x10007470c 4 "LDP" "FLDPQ (R3), (F16, F17)" "ldp q16, q17, [x3]" main.go:69
 0x100074710 4 "STP" "FSTPQ (F16, F17), (R2)" "stp q16, q17, [x2]" main.go:69
 0x100074714 4 "LDP" "FLDPQ 32(R3), (F16, F17)" "ldp q16, q17, [x3,#32]" main.go:69
@@ -1499,36 +1499,36 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x100074734 4 "RET" "RET" "ret" main.go:69
 0x100074738 4 "STP" "STP (R0, R1), 136(RSP)" "stp x0, x1, [sp,#136]" main.go:60
 0x10007473c 4 "MOV" "MOVD R30, R3" "mov x3, x30" main.go:60
-0x100074740 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl .+0xffffffffffffbf50" main.go:60
+0x100074740 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl .+0xffffffffffffbf50 <runtime.morestack_noctxt.abi0>" main.go:60
 0x100074744 4 "LDP" "LDP 136(RSP), (R0, R1)" "ldp x0, x1, [sp,#136]" main.go:60
-0x100074748 4 "B" "JMP main.mat4Mul(SB)" "b .+0xfffffffffffffef8" main.go:60
+0x100074748 4 "B" "JMP main.mat4Mul(SB)" "b .+0xfffffffffffffef8 <main.mat4Mul>" main.go:60
 0x10007474c 4 "" "BYTE 0x00000000" ".byte 0x00000000" main.go:60
 == main.normalize 0x100074750 80 /Users/egon/code/gio/lensm/testdata/testprog/main.go
 0x100074750 4 "STR" "MOVD R0, 8(RSP)" "str x0, [sp,#8]" main.go:73
 0x100074754 4 "FMOV" "FMOVD ZR, F0" "fmov d0, xzr" main.go:75
 0x100074758 4 "MOV" "MOVD ZR, R2" "mov x2, xzr" main.go:75
-0x10007475c 4 "B" "JMP 4(PC)" "b .+0x10" main.go:75
+0x10007475c 4 "B" "JMP 4(PC)" "b .+0x10 <main.normalize+0x1c>" main.go:75
 0x100074760 4 "LDR" "FMOVD (R0)(R2<<3), F1" "ldr d1, [x0,x2,lsl #3]" main.go:75
 0x100074764 4 "FMADD" "FMADDD F1, F0, F1, F0" "fmadd d0, d1, d1, d0" main.go:76
 0x100074768 4 "ADD" "ADD $1, R2, R2" "add x2, x2, #0x1" main.go:75
 0x10007476c 4 "CMP" "CMP R2, R1" "cmp x1, x2" main.go:75
-0x100074770 4 "B" "BGT -4(PC)" "b.gt .+0xfffffffffffffff0" main.go:75
+0x100074770 4 "B" "BGT -4(PC)" "b.gt .+0xfffffffffffffff0 <main.normalize+0x10>" main.go:75
 0x100074774 4 "NOP" "NOOP" "nop " main.go:78
 0x100074778 4 "FSQRT" "FSQRTD F0, F0" "fsqrt d0, d0" sqrt.go:94
 0x10007477c 4 "MOV" "MOVD ZR, R2" "mov x2, xzr" main.go:79
-0x100074780 4 "B" "JMP 5(PC)" "b .+0x14" main.go:79
+0x100074780 4 "B" "JMP 5(PC)" "b .+0x14 <main.normalize+0x44>" main.go:79
 0x100074784 4 "LDR" "FMOVD (R0)(R2<<3), F1" "ldr d1, [x0,x2,lsl #3]" main.go:80
 0x100074788 4 "FDIV" "FDIVD F0, F1, F1" "fdiv d1, d1, d0" main.go:80
 0x10007478c 4 "STR" "FMOVD F1, (R0)(R2<<3)" "str d1, [x0,x2,lsl #3]" main.go:80
 0x100074790 4 "ADD" "ADD $1, R2, R2" "add x2, x2, #0x1" main.go:79
 0x100074794 4 "CMP" "CMP R2, R1" "cmp x1, x2" main.go:79
-0x100074798 4 "B" "BGT -5(PC)" "b.gt .+0xffffffffffffffec" main.go:79
+0x100074798 4 "B" "BGT -5(PC)" "b.gt .+0xffffffffffffffec <main.normalize+0x34>" main.go:79
 0x10007479c 4 "RET" "RET" "ret" main.go:82
 == main.main 0x1000747a0 528 /Users/egon/code/gio/lensm/testdata/testprog/main.go
 0x1000747a0 4 "LDR" "MOVD 16(R28), R16" "ldr x16, [x28,#16]" main.go:84
 0x1000747a4 4 "SUB" "SUB $576, RSP, R17" "sub x17, sp, #0x240" main.go:84
 0x1000747a8 4 "CMP" "CMP R16, R17" "cmp x17, x16" main.go:84
-0x1000747ac 4 "B" "BLS 126(PC)" "b.ls .+0x1f8" main.go:84
+0x1000747ac 4 "B" "BLS 126(PC)" "b.ls .+0x1f8 <main.main+0x204>" main.go:84
 0x1000747b0 4 "SUB" "SUB $704, RSP, R20" "sub x20, sp, #0x2c0" main.go:84
 0x1000747b4 4 "STP" "STP (R29, R30), -8(R20)" "stp x29, x30, [x20,#-8]" main.go:84
 0x1000747b8 4 "MOV" "MOVD R20, RSP" "mov sp, x20" main.go:84
@@ -1548,13 +1548,13 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x1000747f0 4 "ORR" "ORR $6, ZR, R3" "orr x3, xzr, #0x6" main.go:85
 0x1000747f4 4 "ADD" "ADD $680, RSP, R27" "add x27, sp, #0x2a8" main.go:85
 0x1000747f8 4 "STP" "STP (R2, R3), (R27)" "stp x2, x3, [x27]" main.go:85
-0x1000747fc 4 "ADRP" "ADRP 32768(PC), R27" "adrp x27, .+0x8000" main.go:86
+0x1000747fc 4 "ADRP" "ADRP 32768(PC), R27" "adrp x27, .+0x8000 <runtime.modinfo.str+0x3c>" main.go:86
 0x100074800 4 "LDR" "FMOVD 1568(R27), F0" "ldr d0, [x27,#1568]" main.go:86
-0x100074804 4 "ADRP" "ADRP 32768(PC), R27" "adrp x27, .+0x8000" main.go:86
+0x100074804 4 "ADRP" "ADRP 32768(PC), R27" "adrp x27, .+0x8000 <runtime.modinfo.str+0x44>" main.go:86
 0x100074808 4 "LDR" "FMOVD 1560(R27), F1" "ldr d1, [x27,#1560]" main.go:86
 0x10007480c 4 "ADD" "ADD $600, RSP, R27" "add x27, sp, #0x258" main.go:86
 0x100074810 4 "STP" "FSTPD (F0, F1), (R27)" "stp d0, d1, [x27]" main.go:86
-0x100074814 4 "ADRP" "ADRP 32768(PC), R27" "adrp x27, .+0x8000" main.go:86
+0x100074814 4 "ADRP" "ADRP 32768(PC), R27" "adrp x27, .+0x8000 <runtime.modinfo.str+0x54>" main.go:86
 0x100074818 4 "LDR" "FMOVD 1576(R27), F0" "ldr d0, [x27,#1576]" main.go:86
 0x10007481c 4 "ADD" "ADD $616, RSP, R27" "add x27, sp, #0x268" main.go:86
 0x100074820 4 "STP" "FSTPD (F0, F1), (R27)" "stp d0, d1, [x27]" main.go:86
@@ -1586,7 +1586,7 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x100074888 4 "STP" "STP (ZR, ZR), 96(R1)" "stp xzr, xzr, [x1,#96]" main.go:89
 0x10007488c 4 "STP" "STP (ZR, ZR), 112(R1)" "stp xzr, xzr, [x1,#112]" main.go:89
 0x100074890 4 "MOV" "MOVD ZR, R2" "mov x2, xzr" main.go:90
-0x100074894 4 "B" "JMP 8(PC)" "b .+0x20" main.go:90
+0x100074894 4 "B" "JMP 8(PC)" "b .+0x20 <main.main+0x114>" main.go:90
 0x100074898 4 "SCVTF" "SCVTFD R2, F0" "scvtf d0, x2" main.go:91
 0x10007489c 4 "STR" "FMOVD F0, (R0)(R2<<3)" "str d0, [x0,x2,lsl #3]" main.go:91
 0x1000748a0 4 "ORR" "ORR $15, ZR, R3" "orr x3, xzr, #0xf" main.go:92
@@ -1595,8 +1595,8 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x1000748ac 4 "STR" "FMOVD F0, (R1)(R2<<3)" "str d0, [x1,x2,lsl #3]" main.go:92
 0x1000748b0 4 "ADD" "ADD $1, R2, R2" "add x2, x2, #0x1" main.go:90
 0x1000748b4 4 "CMP" "CMP $16, R2" "cmp x2, #0x10" main.go:90
-0x1000748b8 4 "B" "BLT -8(PC)" "b.lt .+0xffffffffffffffe0" main.go:90
-0x1000748bc 4 "BL" "CALL main.mat4Mul(SB)" "bl .+0xfffffffffffffd84" main.go:94
+0x1000748b8 4 "B" "BLT -8(PC)" "b.lt .+0xffffffffffffffe0 <main.main+0xf8>" main.go:90
+0x1000748bc 4 "BL" "CALL main.mat4Mul(SB)" "bl .+0xfffffffffffffd84 <main.mat4Mul>" main.go:94
 0x1000748c0 4 "ADD" "ADD $152, RSP, R2" "add x2, sp, #0x98" main.go:94
 0x1000748c4 4 "ADD" "ADD $8, RSP, R3" "add x3, sp, #0x8" main.go:94
 0x1000748c8 4 "LDP" "FLDPQ (R3), (F16, F17)" "ldp q16, q17, [x3]" main.go:94
@@ -1610,11 +1610,11 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x1000748e8 4 "ADD" "ADD $600, RSP, R0" "add x0, sp, #0x258" main.go:95
 0x1000748ec 4 "ORR" "ORR $4, ZR, R1" "orr x1, xzr, #0x4" main.go:95
 0x1000748f0 4 "MOV" "MOVD R1, R2" "mov x2, x1" main.go:95
-0x1000748f4 4 "BL" "CALL main.normalize(SB)" "bl .+0xfffffffffffffe5c" main.go:95
+0x1000748f4 4 "BL" "CALL main.normalize(SB)" "bl .+0xfffffffffffffe5c <main.normalize>" main.go:95
 0x1000748f8 4 "ADD" "ADD $632, RSP, R0" "add x0, sp, #0x278" main.go:97
 0x1000748fc 4 "ORR" "ORR $8, ZR, R1" "orr x1, xzr, #0x8" main.go:97
 0x100074900 4 "MOV" "MOVD R1, R2" "mov x2, x1" main.go:97
-0x100074904 4 "BL" "CALL main.sumInts(SB)" "bl .+0xfffffffffffffbfc" main.go:97
+0x100074904 4 "BL" "CALL main.sumInts(SB)" "bl .+0xfffffffffffffbfc <main.sumInts>" main.go:97
 0x100074908 4 "STR" "MOVD R0, 568(RSP)" "str x0, [sp,#568]" main.go:97
 0x10007490c 4 "ADD" "ADD $600, RSP, R0" "add x0, sp, #0x258" main.go:97
 0x100074910 4 "ORR" "ORR $4, ZR, R1" "orr x1, xzr, #0x4" main.go:97
@@ -1622,38 +1622,38 @@ arch=arm64 funcs=1593 sha256=f6b4e3d266c9f4382b0e65a30649e9786a3d8364ea58eac6f94
 0x100074918 4 "MOV" "MOVD R0, R3" "mov x3, x0" main.go:97
 0x10007491c 4 "MOV" "MOVD R1, R4" "mov x4, x1" main.go:97
 0x100074920 4 "MOV" "MOVD R1, R5" "mov x5, x1" main.go:97
-0x100074924 4 "BL" "CALL main.dot(SB)" "bl .+0xfffffffffffffc0c" main.go:97
+0x100074924 4 "BL" "CALL main.dot(SB)" "bl .+0xfffffffffffffc0c <main.dot>" main.go:97
 0x100074928 4 "STR" "FMOVD F0, 560(RSP)" "str d0, [sp,#560]" main.go:97
 0x10007492c 4 "ADD" "ADD $576, RSP, R0" "add x0, sp, #0x240" main.go:97
 0x100074930 4 "ORR" "ORR $3, ZR, R1" "orr x1, xzr, #0x3" main.go:97
 0x100074934 4 "MOV" "MOVD R1, R2" "mov x2, x1" main.go:97
-0x100074938 4 "BL" "CALL main.popcountAll(SB)" "bl .+0xfffffffffffffc88" main.go:97
+0x100074938 4 "BL" "CALL main.popcountAll(SB)" "bl .+0xfffffffffffffc88 <main.popcountAll>" main.go:97
 0x10007493c 4 "STR" "MOVD R0, 552(RSP)" "str x0, [sp,#552]" main.go:97
 0x100074940 4 "MOV" "MOVD $27, R0" "mov x0, #0x1b" main.go:97
-0x100074944 4 "BL" "CALL main.collatzSteps(SB)" "bl .+0xfffffffffffffcbc" main.go:97
+0x100074944 4 "BL" "CALL main.collatzSteps(SB)" "bl .+0xfffffffffffffcbc <main.collatzSteps>" main.go:97
 0x100074948 4 "STR" "MOVD R0, 544(RSP)" "str x0, [sp,#544]" main.go:97
 0x10007494c 4 "LDR" "FMOVD 192(RSP), F0" "ldr d0, [sp,#192]" main.go:97
 0x100074950 4 "STR" "FMOVD F0, 536(RSP)" "str d0, [sp,#536]" main.go:97
-0x100074954 4 "BL" "CALL runtime.printlock(SB)" "bl .+0xfffffffffffc892c" main.go:97
+0x100074954 4 "BL" "CALL runtime.printlock(SB)" "bl .+0xfffffffffffc892c <runtime.printlock>" main.go:97
 0x100074958 4 "LDR" "MOVD 568(RSP), R0" "ldr x0, [sp,#568]" main.go:97
-0x10007495c 4 "BL" "CALL runtime.printint(SB)" "bl .+0xfffffffffffc8e24" main.go:97
-0x100074960 4 "BL" "CALL runtime.printsp(SB)" "bl .+0xfffffffffffc8b00" main.go:97
+0x10007495c 4 "BL" "CALL runtime.printint(SB)" "bl .+0xfffffffffffc8e24 <runtime.printint>" main.go:97
+0x100074960 4 "BL" "CALL runtime.printsp(SB)" "bl .+0xfffffffffffc8b00 <runtime.printsp>" main.go:97
 0x100074964 4 "LDR" "FMOVD 560(RSP), F0" "ldr d0, [sp,#560]" main.go:97
-0x100074968 4 "BL" "CALL runtime.printfloat64(SB)" "bl .+0xfffffffffffc8bd8" main.go:97
-0x10007496c 4 "BL" "CALL runtime.printsp(SB)" "bl .+0xfffffffffffc8af4" main.go:97
+0x100074968 4 "BL" "CALL runtime.printfloat64(SB)" "bl .+0xfffffffffffc8bd8 <runtime.printfloat64>" main.go:97
+0x10007496c 4 "BL" "CALL runtime.printsp(SB)" "bl .+0xfffffffffffc8af4 <runtime.printsp>" main.go:97
 0x100074970 4 "LDR" "MOVD 552(RSP), R0" "ldr x0, [sp,#552]" main.go:97
-0x100074974 4 "BL" "CALL runtime.printint(SB)" "bl .+0xfffffffffffc8e0c" main.go:97
-0x100074978 4 "BL" "CALL runtime.printsp(SB)" "bl .+0xfffffffffffc8ae8" main.go:97
+0x100074974 4 "BL" "CALL runtime.printint(SB)" "bl .+0xfffffffffffc8e0c <runtime.printint>" main.go:97
+0x100074978 4 "BL" "CALL runtime.printsp(SB)" "bl .+0xfffffffffffc8ae8 <runtime.printsp>" main.go:97
 0x10007497c 4 "LDR" "MOVD 544(RSP), R0" "ldr x0, [sp,#544]" main.go:97
-0x100074980 4 "BL" "CALL runtime.printint(SB)" "bl .+0xfffffffffffc8e00" main.go:97
-0x100074984 4 "BL" "CALL runtime.printsp(SB)" "bl .+0xfffffffffffc8adc" main.go:97
+0x100074980 4 "BL" "CALL runtime.printint(SB)" "bl .+0xfffffffffffc8e00 <runtime.printint>" main.go:97
+0x100074984 4 "BL" "CALL runtime.printsp(SB)" "bl .+0xfffffffffffc8adc <runtime.printsp>" main.go:97
 0x100074988 4 "LDR" "FMOVD 536(RSP), F0" "ldr d0, [sp,#536]" main.go:97
-0x10007498c 4 "BL" "CALL runtime.printfloat64(SB)" "bl .+0xfffffffffffc8bb4" main.go:97
-0x100074990 4 "BL" "CALL runtime.printnl(SB)" "bl .+0xfffffffffffc8b10" main.go:97
-0x100074994 4 "BL" "CALL runtime.printunlock(SB)" "bl .+0xfffffffffffc896c" main.go:97
+0x10007498c 4 "BL" "CALL runtime.printfloat64(SB)" "bl .+0xfffffffffffc8bb4 <runtime.printfloat64>" main.go:97
+0x100074990 4 "BL" "CALL runtime.printnl(SB)" "bl .+0xfffffffffffc8b10 <runtime.printnl>" main.go:97
+0x100074994 4 "BL" "CALL runtime.printunlock(SB)" "bl .+0xfffffffffffc896c <runtime.printunlock>" main.go:97
 0x100074998 4 "LDP" "LDP -8(RSP), (R29, R30)" "ldp x29, x30, [sp,#-8]" main.go:98
 0x10007499c 4 "ADD" "ADD $704, RSP, RSP" "add sp, sp, #0x2c0" main.go:98
 0x1000749a0 4 "RET" "RET" "ret" main.go:98
 0x1000749a4 4 "MOV" "MOVD R30, R3" "mov x3, x30" main.go:84
-0x1000749a8 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl .+0xffffffffffffbce8" main.go:84
-0x1000749ac 4 "B" "JMP main.main(SB)" "b .+0xfffffffffffffdf4" main.go:84
+0x1000749a8 4 "BL" "CALL runtime.morestack_noctxt.abi0(SB)" "bl .+0xffffffffffffbce8 <runtime.morestack_noctxt.abi0>" main.go:84
+0x1000749ac 4 "B" "JMP main.main(SB)" "b .+0xfffffffffffffdf4 <main.main>" main.go:84

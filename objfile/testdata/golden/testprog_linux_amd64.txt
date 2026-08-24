@@ -1,43 +1,43 @@
-arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f4366734af8c5f
+arch=amd64 funcs=1605 sha256=5a7e9cb965c2f3200d32e64d5c270d14fcb92c7504bcb16e1e002291bc66733d
 == runtime.runGCProg 0x41c6e0 960 /usr/local/go/src/runtime/mbitmap.go
 0x41c6e0 1 "PUSH" "PUSHQ BP" "push %rbp" mbitmap.go:1563
 0x41c6e1 3 "MOV" "MOVQ SP, BP" "mov %rsp,%rbp" mbitmap.go:1563
 0x41c6e4 3 "MOV" "MOVQ BX, CX" "mov %rbx,%rcx" mbitmap.go:1575
 0x41c6e7 2 "XOR" "XORL DX, DX" "xor %edx,%edx" mbitmap.go:1575
 0x41c6e9 2 "XOR" "XORL SI, SI" "xor %esi,%esi" mbitmap.go:1575
-0x41c6eb 2 "JMP" "JMP 0x41c709" "jmp 0x41c709" mbitmap.go:1575
+0x41c6eb 2 "JMP" "JMP 0x41c709" "jmp 0x41c709 <runtime.runGCProg+0x29>" mbitmap.go:1575
 0x41c6ed 3 "MOV" "MOVQ R12, CX" "mov %r12,%rcx" mbitmap.go:1747
 0x41c6f0 3 "MOV" "MOVQ R9, AX" "mov %r9,%rax" mbitmap.go:1747
 0x41c6f3 3 "MOV" "MOVQ BX, SI" "mov %rbx,%rsi" mbitmap.go:1747
 0x41c6f6 3 "MOV" "MOVQ R11, BX" "mov %r11,%rbx" mbitmap.go:1747
-0x41c6f9 2 "JMP" "JMP 0x41c709" "jmp 0x41c709" mbitmap.go:1575
+0x41c6f9 2 "JMP" "JMP 0x41c709" "jmp 0x41c709 <runtime.runGCProg+0x29>" mbitmap.go:1575
 0x41c6fb 2 "MOV" "MOVB DL, 0(BX)" "mov %dl,(%rbx)" mbitmap.go:1576
 0x41c6fd 1 "NOP" "NOPL" "nop" mbitmap.go:1577
 0x41c6fe 4 "ADD" "ADDQ $-0x8, SI" "add $-0x8,%rsi" mbitmap.go:1575
 0x41c702 4 "SHR" "SHRQ $0x8, DX" "shr $0x8,%rdx" mbitmap.go:1578
 0x41c706 3 "INC" "INCQ BX" "inc %rbx" mbitmap.go:1054
 0x41c709 4 "CMP" "CMPQ SI, $0x8" "cmp $0x8,%rsi" mbitmap.go:1575
-0x41c70d 2 "JAE" "JAE 0x41c6fb" "jae 0x41c6fb" mbitmap.go:1575
+0x41c70d 2 "JAE" "JAE 0x41c6fb" "jae 0x41c6fb <runtime.runGCProg+0x1b>" mbitmap.go:1575
 0x41c70f 3 "MOVZX" "MOVZX 0(AX), DI" "movzbl (%rax),%edi" mbitmap.go:1582
 0x41c712 1 "NOP" "NOPL" "nop" mbitmap.go:1583
 0x41c713 3 "MOV" "MOVQ DI, R8" "mov %rdi,%r8" mbitmap.go:1584
 0x41c716 3 "AND" "ANDL $0x7f, DI" "and $0x7f,%edi" mbitmap.go:1584
 0x41c719 4 "LEA" "LEAQ 0x1(AX), R9" "lea 0x1(%rax),%r9" mbitmap.go:1054
 0x41c71d 5 "BT" "BTL $0x7, R8" "bt $0x7,%r8d" mbitmap.go:1585
-0x41c722 2 "JB" "JB 0x41c738" "jb 0x41c738" mbitmap.go:1585
+0x41c722 2 "JB" "JB 0x41c738" "jb 0x41c738 <runtime.runGCProg+0x58>" mbitmap.go:1585
 0x41c724 3 "TEST" "TESTQ DI, DI" "test %rdi,%rdi" mbitmap.go:1587
-0x41c727 6 "JE" "JE 0x41c85d" "je 0x41c85d" mbitmap.go:1587
+0x41c727 6 "JE" "JE 0x41c85d" "je 0x41c85d <runtime.runGCProg+0x17d>" mbitmap.go:1587
 0x41c72d 4 "SHR" "SHRQ $0x3, DI" "shr $0x3,%rdi" mbitmap.go:1591
 0x41c731 2 "XOR" "XORL AX, AX" "xor %eax,%eax" mbitmap.go:1591
-0x41c733 5 "JMP" "JMP 0x41ca60" "jmpq 0x41ca60" mbitmap.go:1592
+0x41c733 5 "JMP" "JMP 0x41ca60" "jmpq 0x41ca60 <runtime.runGCProg+0x380>" mbitmap.go:1592
 0x41c738 3 "TEST" "TESTQ DI, DI" "test %rdi,%rdi" mbitmap.go:1608
-0x41c73b 2 "JNE" "JNE 0x41c746" "jne 0x41c746" mbitmap.go:1608
+0x41c73b 2 "JNE" "JNE 0x41c746" "jne 0x41c746 <runtime.runGCProg+0x66>" mbitmap.go:1608
 0x41c73d 2 "XOR" "XORL AX, AX" "xor %eax,%eax" mbitmap.go:1608
 0x41c73f 2 "XOR" "XORL DI, DI" "xor %edi,%edi" mbitmap.go:1608
-0x41c741 5 "JMP" "JMP 0x41c9ec" "jmpq 0x41c9ec" mbitmap.go:1608
+0x41c741 5 "JMP" "JMP 0x41c9ec" "jmpq 0x41c9ec <runtime.runGCProg+0x30c>" mbitmap.go:1608
 0x41c746 2 "XOR" "XORL AX, AX" "xor %eax,%eax" mbitmap.go:1620
 0x41c748 3 "XOR" "XORL R8, R8" "xor %r8d,%r8d" mbitmap.go:1620
-0x41c74b 2 "JMP" "JMP 0x41c754" "jmp 0x41c754" mbitmap.go:1622
+0x41c74b 2 "JMP" "JMP 0x41c754" "jmp 0x41c754 <runtime.runGCProg+0x74>" mbitmap.go:1622
 0x41c74d 4 "ADD" "ADDQ $0x7, AX" "add $0x7,%rax" mbitmap.go:1621
 0x41c751 3 "MOV" "MOVQ R12, CX" "mov %r12,%rcx" mbitmap.go:1747
 0x41c754 4 "MOVZX" "MOVZX 0(R9), R10" "movzbl (%r9),%r10d" mbitmap.go:1622
@@ -54,15 +54,15 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x41c776 3 "OR" "ORQ R10, R8" "or %r10,%r8" mbitmap.go:1624
 0x41c779 5 "BT" "BTL $0x7, R11" "bt $0x7,%r11d" mbitmap.go:1625
 0x41c77e 2 "NOP" "NOPW" "data16 nop" mbitmap.go:1625
-0x41c780 2 "JB" "JB 0x41c74d" "jb 0x41c74d" mbitmap.go:1625
+0x41c780 2 "JB" "JB 0x41c74d" "jb 0x41c74d <runtime.runGCProg+0x6d>" mbitmap.go:1625
 0x41c782 4 "IMUL" "IMULQ DI, R8" "imul %rdi,%r8" mbitmap.go:1629
 0x41c786 4 "CMP" "CMPQ DI, $0x39" "cmp $0x39,%rdi" mbitmap.go:1640
-0x41c78a 2 "JA" "JA 0x41c79c" "ja 0x41c79c" mbitmap.go:1640
+0x41c78a 2 "JA" "JA 0x41c79c" "ja 0x41c79c <runtime.runGCProg+0xbc>" mbitmap.go:1640
 0x41c78c 1 "NOP" "NOPL" "nop" mbitmap.go:1646
 0x41c78d 4 "LEA" "LEAQ -0x1(BX), R10" "lea -0x1(%rbx),%r10" mbitmap.go:1067
 0x41c791 3 "MOV" "MOVQ SI, AX" "mov %rsi,%rax" mbitmap.go:1575
 0x41c794 3 "MOV" "MOVQ DX, CX" "mov %rdx,%rcx" mbitmap.go:1575
-0x41c797 5 "JMP" "JMP 0x41c88b" "jmpq 0x41c88b" mbitmap.go:1647
+0x41c797 5 "JMP" "JMP 0x41c88b" "jmpq 0x41c88b <runtime.runGCProg+0x1ab>" mbitmap.go:1647
 0x41c79c 3 "SUB" "SUBQ SI, DI" "sub %rsi,%rdi" mbitmap.go:1721
 0x41c79f 4 "LEA" "LEAQ 0x7(DI), R10" "lea 0x7(%rdi),%r10" mbitmap.go:1723
 0x41c7a3 4 "SHR" "SHRQ $0x3, R10" "shr $0x3,%r10" mbitmap.go:1723
@@ -71,7 +71,7 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x41c7ad 3 "SUB" "SUBQ R10, BX" "sub %r10,%rbx" mbitmap.go:1043
 0x41c7b0 3 "MOV" "MOVQ BX, R10" "mov %rbx,%r10" mbitmap.go:1043
 0x41c7b3 3 "TEST" "TESTQ DI, DI" "test %rdi,%rdi" mbitmap.go:1724
-0x41c7b6 2 "JE" "JE 0x41c7db" "je 0x41c7db" mbitmap.go:1724
+0x41c7b6 2 "JE" "JE 0x41c7db" "je 0x41c7db <runtime.runGCProg+0xfb>" mbitmap.go:1724
 0x41c7b8 4 "MOVZX" "MOVZX 0(BX), R13" "movzbl (%rbx),%r13d" mbitmap.go:1725
 0x41c7bc 4 "LEA" "LEAQ -0x8(DI), CX" "lea -0x8(%rdi),%rcx" mbitmap.go:1725
 0x41c7c0 3 "NEG" "NEGQ CX" "neg %rcx" mbitmap.go:1725
@@ -85,7 +85,7 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x41c7d8 3 "SUB" "SUBQ DI, R8" "sub %rdi,%r8" mbitmap.go:1728
 0x41c7db 3 "MOV" "MOVQ R8, CX" "mov %r8,%rcx" mbitmap.go:1732
 0x41c7de 4 "SHR" "SHRQ $0x3, R8" "shr $0x3,%r8" mbitmap.go:1732
-0x41c7e2 2 "JMP" "JMP 0x41c816" "jmp 0x41c816" mbitmap.go:1732
+0x41c7e2 2 "JMP" "JMP 0x41c816" "jmp 0x41c816 <runtime.runGCProg+0x136>" mbitmap.go:1732
 0x41c7e4 3 "MOVZX" "MOVZX 0(BX), DI" "movzbl (%rbx),%edi" mbitmap.go:1733
 0x41c7e7 3 "MOV" "MOVQ CX, AX" "mov %rcx,%rax" mbitmap.go:1732
 0x41c7ea 3 "MOV" "MOVQ SI, CX" "mov %rsi,%rcx" mbitmap.go:1733
@@ -104,11 +104,11 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x41c810 3 "MOV" "MOVQ AX, CX" "mov %rax,%rcx" mbitmap.go:1740
 0x41c813 3 "MOV" "MOVQ R10, R11" "mov %r10,%r11" mbitmap.go:1732
 0x41c816 3 "TEST" "TESTQ R8, R8" "test %r8,%r8" mbitmap.go:1732
-0x41c819 2 "JA" "JA 0x41c7e4" "ja 0x41c7e4" mbitmap.go:1732
+0x41c819 2 "JA" "JA 0x41c7e4" "ja 0x41c7e4 <runtime.runGCProg+0x104>" mbitmap.go:1732
 0x41c81b 3 "AND" "ANDL $0x7, CX" "and $0x7,%ecx" mbitmap.go:1740
 0x41c81e 2 "NOP" "NOPW" "data16 nop" mbitmap.go:1740
 0x41c820 3 "TEST" "TESTQ CX, CX" "test %rcx,%rcx" mbitmap.go:1740
-0x41c823 2 "JBE" "JBE 0x41c855" "jbe 0x41c855" mbitmap.go:1740
+0x41c823 2 "JBE" "JBE 0x41c855" "jbe 0x41c855 <runtime.runGCProg+0x175>" mbitmap.go:1740
 0x41c825 3 "MOVZX" "MOVZX 0(BX), BX" "movzbl (%rbx),%ebx" mbitmap.go:1741
 0x41c828 5 "MOV" "MOVL $0x1, DI" "mov $0x1,%edi" mbitmap.go:1741
 0x41c82d 3 "SHL" "SHLQ CL, DI" "shl %cl,%rdi" mbitmap.go:1741
@@ -122,9 +122,9 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x41c847 3 "SBB" "SBBQ R8, R8" "sbb %r8,%r8" mbitmap.go:1741
 0x41c84a 3 "AND" "ANDQ R8, DI" "and %r8,%rdi" mbitmap.go:1741
 0x41c84d 3 "OR" "ORQ DI, DX" "or %rdi,%rdx" mbitmap.go:1741
-0x41c850 5 "JMP" "JMP 0x41c6ed" "jmpq 0x41c6ed" mbitmap.go:1742
+0x41c850 5 "JMP" "JMP 0x41c6ed" "jmpq 0x41c6ed <runtime.runGCProg+0xd>" mbitmap.go:1742
 0x41c855 3 "MOV" "MOVQ SI, BX" "mov %rsi,%rbx" mbitmap.go:1742
-0x41c858 5 "JMP" "JMP 0x41c6ed" "jmpq 0x41c6ed" mbitmap.go:1740
+0x41c858 5 "JMP" "JMP 0x41c6ed" "jmpq 0x41c6ed <runtime.runGCProg+0xd>" mbitmap.go:1740
 0x41c85d 3 "MOV" "MOVQ BX, DI" "mov %rbx,%rdi" mbitmap.go:1747
 0x41c860 3 "SUB" "SUBQ CX, DI" "sub %rcx,%rdi" mbitmap.go:1747
 0x41c863 3 "MOV" "MOVQ SI, CX" "mov %rsi,%rcx" mbitmap.go:1748
@@ -132,7 +132,7 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x41c869 3 "AND" "ANDL $0x7, SI" "and $0x7,%esi" mbitmap.go:1748
 0x41c86c 4 "LEA" "LEAQ 0(CX)(DI*8), AX" "lea (%rcx,%rdi,8),%rax" mbitmap.go:1747
 0x41c870 3 "ADD" "ADDQ SI, CX" "add %rsi,%rcx" mbitmap.go:1748
-0x41c873 5 "JMP" "JMP 0x41ca33" "jmpq 0x41ca33" mbitmap.go:1749
+0x41c873 5 "JMP" "JMP 0x41ca33" "jmpq 0x41ca33 <runtime.runGCProg+0x353>" mbitmap.go:1749
 0x41c878 4 "SHL" "SHLQ $0x8, DX" "shl $0x8,%rdx" mbitmap.go:1648
 0x41c87c 4 "MOVZX" "MOVZX 0(R10), R11" "movzbl (%r10),%r11d" mbitmap.go:1649
 0x41c880 3 "OR" "ORQ R11, DX" "or %r11,%rdx" mbitmap.go:1649
@@ -140,8 +140,8 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x41c884 4 "ADD" "ADDQ $0x8, SI" "add $0x8,%rsi" mbitmap.go:1651
 0x41c888 3 "DEC" "DECQ R10" "dec %r10" mbitmap.go:1067
 0x41c88b 3 "CMP" "CMPQ SI, DI" "cmp %rdi,%rsi" mbitmap.go:1647
-0x41c88e 2 "JB" "JB 0x41c878" "jb 0x41c878" mbitmap.go:1647
-0x41c890 2 "JBE" "JBE 0x41c8aa" "jbe 0x41c8aa" mbitmap.go:1658
+0x41c88e 2 "JB" "JB 0x41c878" "jb 0x41c878 <runtime.runGCProg+0x198>" mbitmap.go:1647
+0x41c890 2 "JBE" "JBE 0x41c8aa" "jbe 0x41c8aa <runtime.runGCProg+0x1ca>" mbitmap.go:1658
 0x41c892 3 "SUB" "SUBQ DI, SI" "sub %rdi,%rsi" mbitmap.go:1659
 0x41c895 3 "MOV" "MOVQ CX, R10" "mov %rcx,%r10" mbitmap.go:1575
 0x41c898 3 "MOV" "MOVQ SI, CX" "mov %rsi,%rcx" mbitmap.go:1659
@@ -149,32 +149,32 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x41c89e 4 "CMP" "CMPQ CX, $0x40" "cmp $0x40,%rcx" mbitmap.go:1659
 0x41c8a2 3 "SBB" "SBBQ R11, R11" "sbb %r11,%r11" mbitmap.go:1659
 0x41c8a5 3 "AND" "ANDQ R11, DX" "and %r11,%rdx" mbitmap.go:1659
-0x41c8a8 2 "JMP" "JMP 0x41c8b0" "jmp 0x41c8b0" mbitmap.go:1660
+0x41c8a8 2 "JMP" "JMP 0x41c8b0" "jmp 0x41c8b0 <runtime.runGCProg+0x1d0>" mbitmap.go:1660
 0x41c8aa 3 "MOV" "MOVQ CX, R10" "mov %rcx,%r10" mbitmap.go:1698
 0x41c8ad 3 "MOV" "MOVQ SI, DI" "mov %rsi,%rdi" mbitmap.go:1664
 0x41c8b0 4 "CMP" "CMPQ DI, $0x1" "cmp $0x1,%rdi" mbitmap.go:1664
-0x41c8b4 2 "JNE" "JNE 0x41c8d2" "jne 0x41c8d2" mbitmap.go:1664
+0x41c8b4 2 "JNE" "JNE 0x41c8d2" "jne 0x41c8d2 <runtime.runGCProg+0x1f2>" mbitmap.go:1664
 0x41c8b6 4 "CMP" "CMPQ DX, $0x1" "cmp $0x1,%rdx" mbitmap.go:1671
-0x41c8ba 2 "JNE" "JNE 0x41c8cd" "jne 0x41c8cd" mbitmap.go:1671
+0x41c8ba 2 "JNE" "JNE 0x41c8cd" "jne 0x41c8cd <runtime.runGCProg+0x1ed>" mbitmap.go:1671
 0x41c8bc 10 "MOV" "MOVQ $0x1ffffffffffffff, DX" "mov $0x1ffffffffffffff,%rdx" mbitmap.go:1671
 0x41c8c6 5 "MOV" "MOVL $0x39, CX" "mov $0x39,%ecx" mbitmap.go:1671
-0x41c8cb 2 "JMP" "JMP 0x41c8f6" "jmp 0x41c8f6" mbitmap.go:1671
+0x41c8cb 2 "JMP" "JMP 0x41c8f6" "jmp 0x41c8f6 <runtime.runGCProg+0x216>" mbitmap.go:1671
 0x41c8cd 3 "MOV" "MOVQ R8, CX" "mov %r8,%rcx" mbitmap.go:1671
-0x41c8d0 2 "JMP" "JMP 0x41c8f6" "jmp 0x41c8f6" mbitmap.go:1675
+0x41c8d0 2 "JMP" "JMP 0x41c8f6" "jmp 0x41c8f6 <runtime.runGCProg+0x216>" mbitmap.go:1675
 0x41c8d2 4 "LEA" "LEAQ 0(DI)(DI*1), SI" "lea (%rdi,%rdi),%rsi" mbitmap.go:1680
 0x41c8d6 4 "CMP" "CMPQ SI, $0x39" "cmp $0x39,%rsi" mbitmap.go:1680
-0x41c8da 2 "JA" "JA 0x41c8e5" "ja 0x41c8e5" mbitmap.go:1680
+0x41c8da 2 "JA" "JA 0x41c8e5" "ja 0x41c8e5 <runtime.runGCProg+0x205>" mbitmap.go:1680
 0x41c8dc 3 "MOV" "MOVQ DI, CX" "mov %rdi,%rcx" mbitmap.go:1664
 0x41c8df 1 "NOP" "NOPL" "nop" mbitmap.go:1664
-0x41c8e0 5 "JMP" "JMP 0x41c997" "jmpq 0x41c997" mbitmap.go:1680
+0x41c8e0 5 "JMP" "JMP 0x41c997" "jmpq 0x41c997 <runtime.runGCProg+0x2b7>" mbitmap.go:1680
 0x41c8e5 3 "MOV" "MOVQ DI, CX" "mov %rdi,%rcx" mbitmap.go:1698
-0x41c8e8 2 "JMP" "JMP 0x41c8f6" "jmp 0x41c8f6" mbitmap.go:1698
+0x41c8e8 2 "JMP" "JMP 0x41c8f6" "jmp 0x41c8f6 <runtime.runGCProg+0x216>" mbitmap.go:1698
 0x41c8ea 3 "SUB" "SUBQ SI, R8" "sub %rsi,%r8" mbitmap.go:1698
 0x41c8ed 3 "MOV" "MOVQ SI, CX" "mov %rsi,%rcx" mbitmap.go:1698
 0x41c8f0 3 "MOV" "MOVQ DI, DX" "mov %rdi,%rdx" mbitmap.go:1699
 0x41c8f3 3 "MOV" "MOVQ R11, AX" "mov %r11,%rax" mbitmap.go:1698
 0x41c8f6 3 "CMP" "CMPQ CX, R8" "cmp %r8,%rcx" mbitmap.go:1698
-0x41c8f9 2 "JA" "JA 0x41c931" "ja 0x41c931" mbitmap.go:1698
+0x41c8f9 2 "JA" "JA 0x41c931" "ja 0x41c931 <runtime.runGCProg+0x251>" mbitmap.go:1698
 0x41c8fb 3 "MOV" "MOVQ CX, SI" "mov %rcx,%rsi" mbitmap.go:1698
 0x41c8fe 3 "MOV" "MOVQ AX, CX" "mov %rax,%rcx" mbitmap.go:1699
 0x41c901 3 "MOV" "MOVQ DX, DI" "mov %rdx,%rdi" mbitmap.go:1699
@@ -184,17 +184,17 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x41c90f 3 "SBB" "SBBQ R13, R13" "sbb %r13,%r13" mbitmap.go:1699
 0x41c912 3 "AND" "ANDQ R13, DX" "and %r13,%rdx" mbitmap.go:1699
 0x41c915 3 "OR" "ORQ DX, R10" "or %rdx,%r10" mbitmap.go:1699
-0x41c918 2 "JMP" "JMP 0x41c929" "jmp 0x41c929" mbitmap.go:1701
+0x41c918 2 "JMP" "JMP 0x41c929" "jmp 0x41c929 <runtime.runGCProg+0x249>" mbitmap.go:1701
 0x41c91a 3 "MOV" "MOVB R10, 0(BX)" "mov %r10b,(%rbx)" mbitmap.go:1702
 0x41c91d 1 "NOP" "NOPL" "nop" mbitmap.go:1703
 0x41c91e 4 "SHR" "SHRQ $0x8, R10" "shr $0x8,%r10" mbitmap.go:1704
 0x41c922 4 "ADD" "ADDQ $-0x8, R11" "add $-0x8,%r11" mbitmap.go:1705
 0x41c926 3 "INC" "INCQ BX" "inc %rbx" mbitmap.go:1054
 0x41c929 4 "CMP" "CMPQ R11, $0x8" "cmp $0x8,%r11" mbitmap.go:1701
-0x41c92d 2 "JAE" "JAE 0x41c91a" "jae 0x41c91a" mbitmap.go:1701
-0x41c92f 2 "JMP" "JMP 0x41c8ea" "jmp 0x41c8ea" mbitmap.go:1701
+0x41c92d 2 "JAE" "JAE 0x41c91a" "jae 0x41c91a <runtime.runGCProg+0x23a>" mbitmap.go:1701
+0x41c92f 2 "JMP" "JMP 0x41c8ea" "jmp 0x41c8ea <runtime.runGCProg+0x20a>" mbitmap.go:1701
 0x41c931 3 "TEST" "TESTQ R8, R8" "test %r8,%r8" mbitmap.go:1710
-0x41c934 2 "JBE" "JBE 0x41c96a" "jbe 0x41c96a" mbitmap.go:1710
+0x41c934 2 "JBE" "JBE 0x41c96a" "jbe 0x41c96a <runtime.runGCProg+0x28a>" mbitmap.go:1710
 0x41c936 3 "MOV" "MOVQ R8, CX" "mov %r8,%rcx" mbitmap.go:1711
 0x41c939 5 "MOV" "MOVL $0x1, SI" "mov $0x1,%esi" mbitmap.go:1711
 0x41c93e 3 "SHL" "SHLQ CL, SI" "shl %cl,%rsi" mbitmap.go:1711
@@ -210,12 +210,12 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x41c95f 3 "SBB" "SBBQ SI, SI" "sbb %rsi,%rsi" mbitmap.go:1712
 0x41c962 3 "AND" "ANDQ SI, DX" "and %rsi,%rdx" mbitmap.go:1712
 0x41c965 3 "OR" "ORQ DX, R10" "or %rdx,%r10" mbitmap.go:1712
-0x41c968 2 "JMP" "JMP 0x41c96d" "jmp 0x41c96d" mbitmap.go:1713
+0x41c968 2 "JMP" "JMP 0x41c96d" "jmp 0x41c96d <runtime.runGCProg+0x28d>" mbitmap.go:1713
 0x41c96a 3 "MOV" "MOVQ AX, DI" "mov %rax,%rdi" mbitmap.go:1715
 0x41c96d 3 "MOV" "MOVQ BX, R11" "mov %rbx,%r11" mbitmap.go:1575
 0x41c970 3 "MOV" "MOVQ R10, DX" "mov %r10,%rdx" mbitmap.go:1575
 0x41c973 3 "MOV" "MOVQ DI, BX" "mov %rdi,%rbx" mbitmap.go:1575
-0x41c976 5 "JMP" "JMP 0x41c6ed" "jmpq 0x41c6ed" mbitmap.go:1715
+0x41c976 5 "JMP" "JMP 0x41c6ed" "jmpq 0x41c6ed <runtime.runGCProg+0xd>" mbitmap.go:1715
 0x41c97b 3 "SBB" "SBBQ SI, SI" "sbb %rsi,%rsi" mbitmap.go:1683
 0x41c97e 3 "MOV" "MOVQ CX, R11" "mov %rcx,%r11" mbitmap.go:1664
 0x41c981 3 "MOV" "MOVQ DI, CX" "mov %rdi,%rcx" mbitmap.go:1683
@@ -226,10 +226,10 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x41c990 4 "LEA" "LEAQ 0(CX)(CX*1), DI" "lea (%rcx,%rcx),%rdi" mbitmap.go:1684
 0x41c994 3 "MOV" "MOVQ R11, CX" "mov %r11,%rcx" mbitmap.go:1688
 0x41c997 4 "CMP" "CMPQ DI, $0x40" "cmp $0x40,%rdi" mbitmap.go:1682
-0x41c99b 2 "JBE" "JBE 0x41c97b" "jbe 0x41c97b" mbitmap.go:1682
+0x41c99b 2 "JBE" "JBE 0x41c97b" "jbe 0x41c97b <runtime.runGCProg+0x29b>" mbitmap.go:1682
 0x41c99d 3 "NOP" "NOPL 0(AX)" "nopl (%rax)" mbitmap.go:1682
 0x41c9a0 3 "TEST" "TESTQ CX, CX" "test %rcx,%rcx" mbitmap.go:1688
-0x41c9a3 2 "JE" "JE 0x41c9dc" "je 0x41c9dc" mbitmap.go:1688
+0x41c9a3 2 "JE" "JE 0x41c9dc" "je 0x41c9dc <runtime.runGCProg+0x2fc>" mbitmap.go:1688
 0x41c9a5 3 "MOV" "MOVQ AX, SI" "mov %rax,%rsi" mbitmap.go:1575
 0x41c9a8 5 "MOV" "MOVL $0x39, AX" "mov $0x39,%eax" mbitmap.go:1688
 0x41c9ad 3 "MOV" "MOVQ DX, DI" "mov %rdx,%rdi" mbitmap.go:1682
@@ -245,9 +245,9 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x41c9ce 3 "AND" "ANDQ DI, DX" "and %rdi,%rdx" mbitmap.go:1689
 0x41c9d1 3 "MOV" "MOVQ SI, AX" "mov %rsi,%rax" mbitmap.go:1698
 0x41c9d4 3 "MOV" "MOVQ CX, DI" "mov %rcx,%rdi" mbitmap.go:1698
-0x41c9d7 5 "JMP" "JMP 0x41c8e5" "jmpq 0x41c8e5" mbitmap.go:1691
+0x41c9d7 5 "JMP" "JMP 0x41c8e5" "jmpq 0x41c8e5 <runtime.runGCProg+0x205>" mbitmap.go:1691
 0x41c9dc 4 "NOP" "NOPL 0(AX)" "nopl (%rax)" mbitmap.go:1688
-0x41c9e0 5 "CALL" "CALL runtime.panicdivide(SB)" "callq 0x43f400" mbitmap.go:1688
+0x41c9e0 5 "CALL" "CALL runtime.panicdivide(SB)" "callq 0x43f400 <runtime.panicdivide>" mbitmap.go:1688
 0x41c9e5 4 "ADD" "ADDQ $0x7, AX" "add $0x7,%rax" mbitmap.go:1609
 0x41c9e9 3 "MOV" "MOVQ R11, CX" "mov %r11,%rcx" mbitmap.go:1747
 0x41c9ec 4 "MOVZX" "MOVZX 0(R9), R8" "movzbl (%r9),%r8d" mbitmap.go:1610
@@ -263,17 +263,17 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x41ca0b 3 "AND" "ANDQ R12, R8" "and %r12,%r8" mbitmap.go:1612
 0x41ca0e 3 "OR" "ORQ R8, DI" "or %r8,%rdi" mbitmap.go:1612
 0x41ca11 5 "BT" "BTL $0x7, R10" "bt $0x7,%r10d" mbitmap.go:1613
-0x41ca16 2 "JB" "JB 0x41c9e5" "jb 0x41c9e5" mbitmap.go:1613
+0x41ca16 2 "JB" "JB 0x41c9e5" "jb 0x41c9e5 <runtime.runGCProg+0x305>" mbitmap.go:1613
 0x41ca18 3 "MOV" "MOVQ R11, CX" "mov %r11,%rcx" mbitmap.go:1747
 0x41ca1b 5 "NOP" "NOPL 0(AX)(AX*1)" "nopl (%rax,%rax)" mbitmap.go:1747
-0x41ca20 5 "JMP" "JMP 0x41c746" "jmpq 0x41c746" mbitmap.go:1614
+0x41ca20 5 "JMP" "JMP 0x41c746" "jmpq 0x41c746 <runtime.runGCProg+0x66>" mbitmap.go:1614
 0x41ca25 2 "MOV" "MOVB DL, 0(BX)" "mov %dl,(%rbx)" mbitmap.go:1750
 0x41ca27 1 "NOP" "NOPL" "nop" mbitmap.go:1751
 0x41ca28 4 "ADD" "ADDQ $-0x8, CX" "add $-0x8,%rcx" mbitmap.go:1749
 0x41ca2c 4 "SHR" "SHRQ $0x8, DX" "shr $0x8,%rdx" mbitmap.go:1752
 0x41ca30 3 "INC" "INCQ BX" "inc %rbx" mbitmap.go:1054
 0x41ca33 3 "TEST" "TESTQ CX, CX" "test %rcx,%rcx" mbitmap.go:1749
-0x41ca36 2 "JA" "JA 0x41ca25" "ja 0x41ca25" mbitmap.go:1749
+0x41ca36 2 "JA" "JA 0x41ca25" "ja 0x41ca25 <runtime.runGCProg+0x345>" mbitmap.go:1749
 0x41ca38 1 "POP" "POPQ BP" "pop %rbp" mbitmap.go:1754
 0x41ca39 1 "RET" "RET" "retq" mbitmap.go:1754
 0x41ca3a 4 "MOVZX" "MOVZX 0(R9), R10" "movzbl (%r9),%r10d" mbitmap.go:1593
@@ -291,10 +291,10 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x41ca5b 3 "MOV" "MOVQ R11, CX" "mov %r11,%rcx" mbitmap.go:1747
 0x41ca5e 2 "NOP" "NOPW" "data16 nop" mbitmap.go:1747
 0x41ca60 3 "CMP" "CMPQ AX, DI" "cmp %rdi,%rax" mbitmap.go:1592
-0x41ca63 2 "JB" "JB 0x41ca3a" "jb 0x41ca3a" mbitmap.go:1592
+0x41ca63 2 "JB" "JB 0x41ca3a" "jb 0x41ca3a <runtime.runGCProg+0x35a>" mbitmap.go:1592
 0x41ca65 4 "AND" "ANDL $0x7, R8" "and $0x7,%r8d" mbitmap.go:1599
 0x41ca69 3 "TEST" "TESTQ R8, R8" "test %r8,%r8" mbitmap.go:1599
-0x41ca6c 2 "JBE" "JBE 0x41ca88" "jbe 0x41ca88" mbitmap.go:1599
+0x41ca6c 2 "JBE" "JBE 0x41ca88" "jbe 0x41ca88 <runtime.runGCProg+0x3a8>" mbitmap.go:1599
 0x41ca6e 4 "MOVZX" "MOVZX 0(R9), DI" "movzbl (%r9),%edi" mbitmap.go:1600
 0x41ca72 3 "MOV" "MOVQ CX, AX" "mov %rcx,%rax" mbitmap.go:1575
 0x41ca75 3 "MOV" "MOVQ SI, CX" "mov %rsi,%rcx" mbitmap.go:1600
@@ -303,12 +303,12 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x41ca7e 1 "NOP" "NOPL" "nop" mbitmap.go:1601
 0x41ca7f 4 "LEA" "LEAQ 0(R8)(CX*1), SI" "lea (%r8,%rcx),%rsi" mbitmap.go:1602
 0x41ca83 3 "INC" "INCQ R9" "inc %r9" mbitmap.go:1054
-0x41ca86 2 "JMP" "JMP 0x41ca8b" "jmp 0x41ca8b" mbitmap.go:1602
+0x41ca86 2 "JMP" "JMP 0x41ca8b" "jmp 0x41ca8b <runtime.runGCProg+0x3ab>" mbitmap.go:1602
 0x41ca88 3 "MOV" "MOVQ CX, AX" "mov %rcx,%rax" mbitmap.go:1747
 0x41ca8b 3 "MOV" "MOVQ AX, R12" "mov %rax,%r12" mbitmap.go:1747
 0x41ca8e 3 "MOV" "MOVQ BX, R11" "mov %rbx,%r11" mbitmap.go:1575
 0x41ca91 3 "MOV" "MOVQ SI, BX" "mov %rsi,%rbx" mbitmap.go:1575
-0x41ca94 5 "JMP" "JMP 0x41c6ed" "jmpq 0x41c6ed" mbitmap.go:1604
+0x41ca94 5 "JMP" "JMP 0x41c6ed" "jmpq 0x41c6ed <runtime.runGCProg+0xd>" mbitmap.go:1604
 0x41ca99 1 "INT" "INT $0x3" "int3" .:-1
 0x41ca9a 1 "INT" "INT $0x3" "int3" .:-1
 0x41ca9b 1 "INT" "INT $0x3" "int3" .:-1
@@ -318,7 +318,7 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x41ca9f 1 "INT" "INT $0x3" "int3" .:-1
 == runtime.runCheckmark 0x41dd00 192 /usr/local/go/src/runtime/mcheckmark.go
 0x41dd00 4 "CMP" "CMPQ SP, 0x10(R14)" "cmp 0x10(%r14),%rsp" mcheckmark.go:126
-0x41dd04 6 "JBE" "JBE 0x41dd91" "jbe 0x41dd91" mcheckmark.go:126
+0x41dd04 6 "JBE" "JBE 0x41dd91" "jbe 0x41dd91 <runtime.runCheckmark+0x91>" mcheckmark.go:126
 0x41dd0a 1 "PUSH" "PUSHQ BP" "push %rbp" mcheckmark.go:126
 0x41dd0b 3 "MOV" "MOVQ SP, BP" "mov %rsp,%rbp" mcheckmark.go:126
 0x41dd0e 4 "SUB" "SUBQ $0x18, SP" "sub $0x18,%rsp" mcheckmark.go:126
@@ -326,10 +326,10 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x41dd17 1 "NOP" "NOPL" "nop" mcheckmark.go:134
 0x41dd18 1 "NOP" "NOPL" "nop" types.go:179
 0x41dd19 2 "XOR" "XORL AX, AX" "xor %eax,%eax" types.go:131
-0x41dd1b 7 "LEA" "LEAQ runtime.sched+264(SB), CX" "lea 0x109226(%rip),%rcx" types.go:131
+0x41dd1b 7 "LEA" "LEAQ runtime.sched+264(SB), CX" "lea 0x109226(%rip),%rcx <runtime.sched+0x108>" types.go:131
 0x41dd22 2 "XCHG" "XCHGB AL, 0(CX)" "xchg %al,(%rcx)" types.go:131
-0x41dd24 5 "CALL" "CALL runtime.startCheckmarks(SB)" "callq 0x41d940" mcheckmark.go:135
-0x41dd29 5 "CALL" "CALL runtime.gcResetMarkState(SB)" "callq 0x424500" mcheckmark.go:136
+0x41dd24 5 "CALL" "CALL runtime.startCheckmarks(SB)" "callq 0x41d940 <runtime.startCheckmarks>" mcheckmark.go:135
+0x41dd29 5 "CALL" "CALL runtime.gcResetMarkState(SB)" "callq 0x424500 <runtime.gcResetMarkState>" mcheckmark.go:136
 0x41dd2e 4 "MOV" "MOVQ 0x30(R14), AX" "mov 0x30(%r14),%rax" mcheckmark.go:137
 0x41dd32 7 "MOV" "MOVQ 0xd0(AX), AX" "mov 0xd0(%rax),%rax" mcheckmark.go:137
 0x41dd39 5 "MOV" "MOVQ 0x28(SP), DX" "mov 0x28(%rsp),%rdx" mcheckmark.go:138
@@ -340,25 +340,25 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x41dd4e 2 "CALL" "CALL CX" "call *%rcx" mcheckmark.go:138
 0x41dd50 5 "MOV" "MOVQ 0x10(SP), AX" "mov 0x10(%rsp),%rax" mcheckmark.go:139
 0x41dd55 2 "XOR" "XORL BX, BX" "xor %ebx,%ebx" mcheckmark.go:139
-0x41dd57 5 "CALL" "CALL runtime.gcDrain(SB)" "callq 0x4278e0" mcheckmark.go:139
+0x41dd57 5 "CALL" "CALL runtime.gcDrain(SB)" "callq 0x4278e0 <runtime.gcDrain>" mcheckmark.go:139
 0x41dd5c 4 "MOV" "MOVQ 0x30(R14), AX" "mov 0x30(%r14),%rax" mcheckmark.go:140
 0x41dd60 7 "MOV" "MOVQ 0xd0(AX), AX" "mov 0xd0(%rax),%rax" mcheckmark.go:140
-0x41dd67 5 "CALL" "CALL runtime.wbBufFlush1(SB)" "callq 0x43d0c0" mcheckmark.go:140
+0x41dd67 5 "CALL" "CALL runtime.wbBufFlush1(SB)" "callq 0x43d0c0 <runtime.wbBufFlush1>" mcheckmark.go:140
 0x41dd6c 5 "MOV" "MOVQ 0x10(SP), AX" "mov 0x10(%rsp),%rax" mcheckmark.go:141
-0x41dd71 5 "CALL" "CALL runtime.(*gcWork).dispose(SB)" "callq 0x431ae0" mcheckmark.go:141
-0x41dd76 5 "CALL" "CALL runtime.endCheckmarks(SB)" "callq 0x41da20" mcheckmark.go:142
+0x41dd71 5 "CALL" "CALL runtime.(*gcWork).dispose(SB)" "callq 0x431ae0 <runtime.(*gcWork).dispose>" mcheckmark.go:141
+0x41dd76 5 "CALL" "CALL runtime.endCheckmarks(SB)" "callq 0x41da20 <runtime.endCheckmarks>" mcheckmark.go:142
 0x41dd7b 1 "NOP" "NOPL" "nop" mcheckmark.go:143
 0x41dd7c 1 "NOP" "NOPL" "nop" types.go:179
 0x41dd7d 5 "MOV" "MOVL $0x1, AX" "mov $0x1,%eax" types.go:131
-0x41dd82 7 "LEA" "LEAQ runtime.sched+264(SB), CX" "lea 0x1091bf(%rip),%rcx" types.go:131
+0x41dd82 7 "LEA" "LEAQ runtime.sched+264(SB), CX" "lea 0x1091bf(%rip),%rcx <runtime.sched+0x108>" types.go:131
 0x41dd89 2 "XCHG" "XCHGB AL, 0(CX)" "xchg %al,(%rcx)" types.go:131
 0x41dd8b 4 "ADD" "ADDQ $0x18, SP" "add $0x18,%rsp" mcheckmark.go:144
 0x41dd8f 1 "POP" "POPQ BP" "pop %rbp" mcheckmark.go:144
 0x41dd90 1 "RET" "RET" "retq" mcheckmark.go:144
 0x41dd91 5 "MOV" "MOVQ AX, 0x8(SP)" "mov %rax,0x8(%rsp)" mcheckmark.go:126
-0x41dd96 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x475ca0" mcheckmark.go:126
+0x41dd96 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x475ca0 <runtime.morestack_noctxt.abi0>" mcheckmark.go:126
 0x41dd9b 5 "MOV" "MOVQ 0x8(SP), AX" "mov 0x8(%rsp),%rax" mcheckmark.go:126
-0x41dda0 5 "JMP" "JMP runtime.runCheckmark(SB)" "jmpq 0x41dd00" mcheckmark.go:126
+0x41dda0 5 "JMP" "JMP runtime.runCheckmark(SB)" "jmpq 0x41dd00 <runtime.runCheckmark>" mcheckmark.go:126
 0x41dda5 1 "INT" "INT $0x3" "int3" .:-1
 0x41dda6 1 "INT" "INT $0x3" "int3" .:-1
 0x41dda7 1 "INT" "INT $0x3" "int3" .:-1
@@ -389,89 +389,89 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 == runtime.runFinalizers 0x41fe40 1280 /usr/local/go/src/runtime/mfinal.go
 0x41fe40 8 "LEA" "LEAQ 0xfffffec8(SP), R12" "lea 0xfffffec8(%rsp),%r12" mfinal.go:193
 0x41fe48 4 "CMP" "CMPQ R12, 0x10(R14)" "cmp 0x10(%r14),%r12" mfinal.go:193
-0x41fe4c 6 "JBE" "JBE 0x420318" "jbe 0x420318" mfinal.go:193
+0x41fe4c 6 "JBE" "JBE 0x420318" "jbe 0x420318 <runtime.runFinalizers+0x4d8>" mfinal.go:193
 0x41fe52 1 "PUSH" "PUSHQ BP" "push %rbp" mfinal.go:193
 0x41fe53 3 "MOV" "MOVQ SP, BP" "mov %rsp,%rbp" mfinal.go:193
 0x41fe56 7 "SUB" "SUBQ $0x1b0, SP" "sub $0x1b0,%rsp" mfinal.go:193
 0x41fe5d 8 "MOV" "MOVQ R14, 0x190(SP)" "mov %r14,0x190(%rsp)" mfinal.go:200
 0x41fe65 1 "NOP" "NOPL" "nop" mfinal.go:201
 0x41fe66 1 "NOP" "NOPL" "nop" lock_spinbit.go:152
-0x41fe67 7 "LEA" "LEAQ runtime.finlock(SB), AX" "lea 0x1256fa(%rip),%rax" lockrank_off.go:24
-0x41fe6e 5 "CALL" "CALL runtime.lock2(SB)" "callq 0x417c80" lockrank_off.go:24
-0x41fe73 7 "CMP" "CMPL runtime.writeBarrier(SB), $0x0" "cmpl $0x0,0x125886(%rip)" mfinal.go:202
-0x41fe7a 2 "JNE" "JNE 0x41fe86" "jne 0x41fe86" mfinal.go:202
+0x41fe67 7 "LEA" "LEAQ runtime.finlock(SB), AX" "lea 0x1256fa(%rip),%rax <runtime.finlock>" lockrank_off.go:24
+0x41fe6e 5 "CALL" "CALL runtime.lock2(SB)" "callq 0x417c80 <runtime.lock2>" lockrank_off.go:24
+0x41fe73 7 "CMP" "CMPL runtime.writeBarrier(SB), $0x0" "cmpl $0x0,0x125886(%rip) <runtime.writeBarrier>" mfinal.go:202
+0x41fe7a 2 "JNE" "JNE 0x41fe86" "jne 0x41fe86 <runtime.runFinalizers+0x46>" mfinal.go:202
 0x41fe7c 8 "MOV" "MOVQ 0x190(SP), DX" "mov 0x190(%rsp),%rdx" mfinal.go:202
-0x41fe84 2 "JMP" "JMP 0x41fea1" "jmp 0x41fea1" mfinal.go:202
-0x41fe86 7 "MOV" "MOVQ runtime.fing(SB), CX" "mov 0x105403(%rip),%rcx" mfinal.go:202
-0x41fe8d 5 "CALL" "CALL runtime.gcWriteBarrier2(SB)" "callq 0x4775e0" mfinal.go:202
+0x41fe84 2 "JMP" "JMP 0x41fea1" "jmp 0x41fea1 <runtime.runFinalizers+0x61>" mfinal.go:202
+0x41fe86 7 "MOV" "MOVQ runtime.fing(SB), CX" "mov 0x105403(%rip),%rcx <runtime.fing>" mfinal.go:202
+0x41fe8d 5 "CALL" "CALL runtime.gcWriteBarrier2(SB)" "callq 0x4775e0 <runtime.gcWriteBarrier2>" mfinal.go:202
 0x41fe92 8 "MOV" "MOVQ 0x190(SP), DX" "mov 0x190(%rsp),%rdx" mfinal.go:202
 0x41fe9a 3 "MOV" "MOVQ DX, 0(R11)" "mov %rdx,(%r11)" mfinal.go:202
 0x41fe9d 4 "MOV" "MOVQ CX, 0x8(R11)" "mov %rcx,0x8(%r11)" mfinal.go:202
-0x41fea1 7 "MOV" "MOVQ DX, runtime.fing(SB)" "mov %rdx,0x1053e8(%rip)" mfinal.go:202
+0x41fea1 7 "MOV" "MOVQ DX, runtime.fing(SB)" "mov %rdx,0x1053e8(%rip) <runtime.fing>" mfinal.go:202
 0x41fea8 1 "NOP" "NOPL" "nop" mfinal.go:203
 0x41fea9 1 "NOP" "NOPL" "nop" lock_spinbit.go:261
-0x41feaa 7 "LEA" "LEAQ runtime.finlock(SB), AX" "lea 0x1256b7(%rip),%rax" lockrank_off.go:35
-0x41feb1 5 "CALL" "CALL runtime.unlock2(SB)" "callq 0x4180e0" lockrank_off.go:35
+0x41feaa 7 "LEA" "LEAQ runtime.finlock(SB), AX" "lea 0x1256b7(%rip),%rax <runtime.finlock>" lockrank_off.go:35
+0x41feb1 5 "CALL" "CALL runtime.unlock2(SB)" "callq 0x4180e0 <runtime.unlock2>" lockrank_off.go:35
 0x41feb6 2 "XOR" "XORL AX, AX" "xor %eax,%eax" lockrank_off.go:35
 0x41feb8 2 "XOR" "XORL CX, CX" "xor %ecx,%ecx" lockrank_off.go:35
 0x41feba 8 "MOV" "MOVQ CX, 0x198(SP)" "mov %rcx,0x198(%rsp)" lockrank_off.go:35
 0x41fec2 5 "MOV" "MOVQ AX, 0x38(SP)" "mov %rax,0x38(%rsp)" lockrank_off.go:35
 0x41fec7 1 "NOP" "NOPL" "nop" lock_spinbit.go:152
-0x41fec8 7 "LEA" "LEAQ runtime.finlock(SB), AX" "lea 0x125699(%rip),%rax" lockrank_off.go:24
-0x41fecf 5 "CALL" "CALL runtime.lock2(SB)" "callq 0x417c80" lockrank_off.go:24
-0x41fed4 7 "MOV" "MOVQ runtime.finq(SB), CX" "mov 0x125695(%rip),%rcx" mfinal.go:207
-0x41fedb 11 "MOV" "MOVQ $0x0, runtime.finq(SB)" "movq $0x0,0x12568a(%rip)" mfinal.go:208
+0x41fec8 7 "LEA" "LEAQ runtime.finlock(SB), AX" "lea 0x125699(%rip),%rax <runtime.finlock>" lockrank_off.go:24
+0x41fecf 5 "CALL" "CALL runtime.lock2(SB)" "callq 0x417c80 <runtime.lock2>" lockrank_off.go:24
+0x41fed4 7 "MOV" "MOVQ runtime.finq(SB), CX" "mov 0x125695(%rip),%rcx <runtime.finq>" mfinal.go:207
+0x41fedb 11 "MOV" "MOVQ $0x0, runtime.finq(SB)" "movq $0x0,0x12568a(%rip) <runtime.finq>" mfinal.go:208
 0x41fee6 3 "TEST" "TESTQ CX, CX" "test %rcx,%rcx" mfinal.go:209
-0x41fee9 2 "JE" "JE 0x41ff25" "je 0x41ff25" mfinal.go:209
+0x41fee9 2 "JE" "JE 0x41ff25" "je 0x41ff25 <runtime.runFinalizers+0xe5>" mfinal.go:209
 0x41feeb 5 "MOV" "MOVQ CX, 0x40(SP)" "mov %rcx,0x40(%rsp)" mfinal.go:207
 0x41fef0 1 "NOP" "NOPL" "nop" mfinal.go:214
-0x41fef1 7 "MOV" "MOVQ runtime.intArgRegs(SB), CX" "mov 0xfe620(%rip),%rcx" mfinal.go:213
+0x41fef1 7 "MOV" "MOVQ runtime.intArgRegs(SB), CX" "mov 0xfe620(%rip),%rcx <runtime.intArgRegs>" mfinal.go:213
 0x41fef8 5 "MOV" "MOVQ CX, 0x68(SP)" "mov %rcx,0x68(%rsp)" mfinal.go:213
-0x41fefd 7 "LEA" "LEAQ runtime.finlock(SB), AX" "lea 0x125664(%rip),%rax" lockrank_off.go:35
-0x41ff04 5 "CALL" "CALL runtime.unlock2(SB)" "callq 0x4180e0" lockrank_off.go:35
+0x41fefd 7 "LEA" "LEAQ runtime.finlock(SB), AX" "lea 0x125664(%rip),%rax <runtime.finlock>" lockrank_off.go:35
+0x41ff04 5 "CALL" "CALL runtime.unlock2(SB)" "callq 0x4180e0 <runtime.unlock2>" lockrank_off.go:35
 0x41ff09 5 "MOV" "MOVQ 0x40(SP), AX" "mov 0x40(%rsp),%rax" mfinal.go:218
 0x41ff0e 5 "MOV" "MOVQ 0x38(SP), CX" "mov 0x38(%rsp),%rcx" mfinal.go:218
 0x41ff13 8 "MOV" "MOVQ 0x198(SP), DX" "mov 0x198(%rsp),%rdx" mfinal.go:218
 0x41ff1b 5 "NOP" "NOPL 0(AX)(AX*1)" "nopl (%rax,%rax)" mfinal.go:218
-0x41ff20 5 "JMP" "JMP 0x41ffc0" "jmpq 0x41ffc0" lock_spinbit.go:261
-0x41ff25 7 "LEA" "LEAQ go:funcdesc+328(SB), AX" "lea 0x776fc(%rip),%rax" mfinal.go:210
-0x41ff2c 7 "LEA" "LEAQ runtime.finlock(SB), BX" "lea 0x125635(%rip),%rbx" mfinal.go:210
+0x41ff20 5 "JMP" "JMP 0x41ffc0" "jmpq 0x41ffc0 <runtime.runFinalizers+0x180>" lock_spinbit.go:261
+0x41ff25 7 "LEA" "LEAQ go:funcdesc+328(SB), AX" "lea 0x776fc(%rip),%rax <go:funcdesc+0x148>" mfinal.go:210
+0x41ff2c 7 "LEA" "LEAQ runtime.finlock(SB), BX" "lea 0x125635(%rip),%rbx <runtime.finlock>" mfinal.go:210
 0x41ff33 5 "MOV" "MOVL $0xa, CX" "mov $0xa,%ecx" mfinal.go:210
 0x41ff38 5 "MOV" "MOVL $0xa, DI" "mov $0xa,%edi" mfinal.go:210
 0x41ff3d 5 "MOV" "MOVL $0x1, SI" "mov $0x1,%esi" mfinal.go:210
-0x41ff42 5 "CALL" "CALL runtime.gopark(SB)" "callq 0x4721e0" mfinal.go:210
+0x41ff42 5 "CALL" "CALL runtime.gopark(SB)" "callq 0x4721e0 <runtime.gopark>" mfinal.go:210
 0x41ff47 5 "MOV" "MOVQ 0x38(SP), AX" "mov 0x38(%rsp),%rax" mfinal.go:206
 0x41ff4c 8 "MOV" "MOVQ 0x198(SP), CX" "mov 0x198(%rsp),%rcx" mfinal.go:206
-0x41ff54 5 "JMP" "JMP 0x41feba" "jmpq 0x41feba" mfinal.go:211
+0x41ff54 5 "JMP" "JMP 0x41feba" "jmpq 0x41feba <runtime.runFinalizers+0x7a>" mfinal.go:211
 0x41ff59 8 "MOV" "MOVQ DX, 0x1a0(SP)" "mov %rdx,0x1a0(%rsp)" mfinal.go:220
 0x41ff61 5 "MOV" "MOVQ CX, 0x50(SP)" "mov %rcx,0x50(%rsp)" mfinal.go:220
 0x41ff66 4 "MOV" "MOVQ 0x8(AX), CX" "mov 0x8(%rax),%rcx" mfinal.go:284
 0x41ff6a 5 "MOV" "MOVQ CX, 0x48(SP)" "mov %rcx,0x48(%rsp)" mfinal.go:284
 0x41ff6f 1 "NOP" "NOPL" "nop" mfinal.go:285
 0x41ff70 1 "NOP" "NOPL" "nop" lock_spinbit.go:152
-0x41ff71 7 "LEA" "LEAQ runtime.finlock(SB), AX" "lea 0x1255f0(%rip),%rax" lockrank_off.go:24
-0x41ff78 5 "CALL" "CALL runtime.lock2(SB)" "callq 0x417c80" lockrank_off.go:24
+0x41ff71 7 "LEA" "LEAQ runtime.finlock(SB), AX" "lea 0x1255f0(%rip),%rax <runtime.finlock>" lockrank_off.go:24
+0x41ff78 5 "CALL" "CALL runtime.lock2(SB)" "callq 0x417c80 <runtime.lock2>" lockrank_off.go:24
 0x41ff7d 4 "MOV" "MOVL 0x30(SP), CX" "mov 0x30(%rsp),%ecx" mfinal.go:286
-0x41ff81 7 "ADD" "ADDQ CX, runtime.finexecuted(SB)" "add %rcx,0x125600(%rip)" mfinal.go:286
-0x41ff88 7 "MOV" "MOVQ runtime.finc(SB), CX" "mov 0x1255e9(%rip),%rcx" mfinal.go:287
+0x41ff81 7 "ADD" "ADDQ CX, runtime.finexecuted(SB)" "add %rcx,0x125600(%rip) <runtime.finexecuted>" mfinal.go:286
+0x41ff88 7 "MOV" "MOVQ runtime.finc(SB), CX" "mov 0x1255e9(%rip),%rcx <runtime.finc>" mfinal.go:287
 0x41ff8f 5 "MOV" "MOVQ 0x40(SP), DX" "mov 0x40(%rsp),%rdx" mfinal.go:287
 0x41ff94 4 "MOV" "MOVQ CX, 0x8(DX)" "mov %rcx,0x8(%rdx)" mfinal.go:287
-0x41ff98 7 "MOV" "MOVQ DX, runtime.finc(SB)" "mov %rdx,0x1255d9(%rip)" mfinal.go:288
+0x41ff98 7 "MOV" "MOVQ DX, runtime.finc(SB)" "mov %rdx,0x1255d9(%rip) <runtime.finc>" mfinal.go:288
 0x41ff9f 1 "NOP" "NOPL" "nop" mfinal.go:289
 0x41ffa0 1 "NOP" "NOPL" "nop" lock_spinbit.go:261
-0x41ffa1 7 "LEA" "LEAQ runtime.finlock(SB), AX" "lea 0x1255c0(%rip),%rax" lockrank_off.go:35
-0x41ffa8 5 "CALL" "CALL runtime.unlock2(SB)" "callq 0x4180e0" lockrank_off.go:35
+0x41ffa1 7 "LEA" "LEAQ runtime.finlock(SB), AX" "lea 0x1255c0(%rip),%rax <runtime.finlock>" lockrank_off.go:35
+0x41ffa8 5 "CALL" "CALL runtime.unlock2(SB)" "callq 0x4180e0 <runtime.unlock2>" lockrank_off.go:35
 0x41ffad 5 "MOV" "MOVQ 0x48(SP), AX" "mov 0x48(%rsp),%rax" mfinal.go:218
 0x41ffb2 5 "MOV" "MOVQ 0x50(SP), CX" "mov 0x50(%rsp),%rcx" mfinal.go:218
 0x41ffb7 8 "MOV" "MOVQ 0x1a0(SP), DX" "mov 0x1a0(%rsp),%rdx" mfinal.go:218
 0x41ffbf 1 "NOP" "NOPL" "nop" mfinal.go:218
 0x41ffc0 3 "TEST" "TESTQ AX, AX" "test %rax,%rax" mfinal.go:218
-0x41ffc3 6 "JE" "JE 0x420297" "je 0x420297" mfinal.go:218
+0x41ffc3 6 "JE" "JE 0x420297" "je 0x420297 <runtime.runFinalizers+0x457>" mfinal.go:218
 0x41ffc9 5 "MOV" "MOVQ AX, 0x40(SP)" "mov %rax,0x40(%rsp)" mfinal.go:218
 0x41ffce 3 "MOV" "MOVL 0x10(AX), SI" "mov 0x10(%rax),%esi" mfinal.go:219
 0x41ffd1 4 "MOV" "MOVL SI, 0x30(SP)" "mov %esi,0x30(%rsp)" mfinal.go:219
 0x41ffd5 2 "MOV" "MOVL SI, BX" "mov %esi,%ebx" mfinal.go:219
-0x41ffd7 2 "JMP" "JMP 0x420003" "jmp 0x420003" mfinal.go:220
+0x41ffd7 2 "JMP" "JMP 0x420003" "jmp 0x420003 <runtime.runFinalizers+0x1c3>" mfinal.go:220
 0x41ffd9 4 "MOVUPS" "MOVUPS X15, 0(DX)" "movups %xmm15,(%rdx)" mfinal.go:279
 0x41ffdd 9 "MOV" "MOVQ $0x0, 0x38(CX)(AX*8)" "movq $0x0,0x38(%rcx,%rax,8)" mfinal.go:281
 0x41ffe6 4 "MOV" "MOVL 0x34(SP), SI" "mov 0x34(%rsp),%esi" mfinal.go:282
@@ -482,10 +482,10 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x41fff6 5 "MOV" "MOVQ 0x58(SP), CX" "mov 0x58(%rsp),%rcx" mfinal.go:220
 0x41fffb 8 "MOV" "MOVQ 0x1a8(SP), DX" "mov 0x1a8(%rsp),%rdx" mfinal.go:220
 0x420003 2 "TEST" "TESTL SI, SI" "test %esi,%esi" mfinal.go:220
-0x420005 6 "JBE" "JBE 0x41ff59" "jbe 0x41ff59" mfinal.go:220
+0x420005 6 "JBE" "JBE 0x41ff59" "jbe 0x41ff59 <runtime.runFinalizers+0x119>" mfinal.go:220
 0x42000b 2 "DEC" "DECL SI" "dec %esi" mfinal.go:221
 0x42000d 4 "CMP" "CMPQ SI, $0x65" "cmp $0x65,%rsi" mfinal.go:221
-0x420011 6 "JAE" "JAE 0x42030b" "jae 0x42030b" mfinal.go:221
+0x420011 6 "JAE" "JAE 0x42030b" "jae 0x42030b <runtime.runFinalizers+0x4cb>" mfinal.go:221
 0x420017 4 "MOV" "MOVL SI, 0x34(SP)" "mov %esi,0x34(%rsp)" mfinal.go:221
 0x42001b 4 "LEA" "LEAQ 0(SI)(SI*4), DI" "lea (%rsi,%rsi,4),%rdi" mfinal.go:221
 0x42001f 5 "MOV" "MOVQ DI, 0x60(SP)" "mov %rdi,0x60(%rsp)" mfinal.go:221
@@ -497,18 +497,18 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x42003d 5 "MOVUPS" "MOVUPS X15, 0x30(R8)" "movups %xmm15,0x30(%r8)" mfinal.go:223
 0x420042 4 "ADD" "ADDQ $0x40, R8" "add $0x40,%r8" mfinal.go:223
 0x420046 3 "DEC" "DECL R9" "dec %r9d" mfinal.go:223
-0x420049 2 "JNE" "JNE 0x42002f" "jne 0x42002f" mfinal.go:223
+0x420049 2 "JNE" "JNE 0x42002f" "jne 0x42002f <runtime.runFinalizers+0x1ef>" mfinal.go:223
 0x42004b 4 "MOVUPS" "MOVUPS X15, 0(R8)" "movups %xmm15,(%r8)" mfinal.go:223
 0x42004f 5 "MOV" "MOVQ 0x28(AX)(DI*8), R8" "mov 0x28(%rax,%rdi,8),%r8" mfinal.go:232
 0x420054 4 "ADD" "ADDQ $0x10, R8" "add $0x10,%r8" mfinal.go:232
 0x420058 5 "MOV" "MOVQ R8, 0x38(SP)" "mov %r8,0x38(%rsp)" mfinal.go:232
 0x42005d 3 "NOP" "NOPL 0(AX)" "nopl (%rax)" mfinal.go:232
 0x420060 3 "CMP" "CMPQ CX, R8" "cmp %r8,%rcx" mfinal.go:233
-0x420063 2 "JAE" "JAE 0x420091" "jae 0x420091" mfinal.go:233
+0x420063 2 "JAE" "JAE 0x420091" "jae 0x420091 <runtime.runFinalizers+0x251>" mfinal.go:233
 0x420065 3 "MOV" "MOVQ R8, AX" "mov %r8,%rax" mfinal.go:238
 0x420068 2 "XOR" "XORL BX, BX" "xor %ebx,%ebx" mfinal.go:238
 0x42006a 5 "MOV" "MOVL $0x1, CX" "mov $0x1,%ecx" mfinal.go:238
-0x42006f 5 "CALL" "CALL runtime.mallocgc(SB)" "callq 0x471620" mfinal.go:238
+0x42006f 5 "CALL" "CALL runtime.mallocgc(SB)" "callq 0x471620 <runtime.mallocgc>" mfinal.go:238
 0x420074 4 "MOV" "MOVL 0x30(SP), BX" "mov 0x30(%rsp),%ebx" mfinal.go:286
 0x420078 4 "MOV" "MOVL 0x34(SP), SI" "mov 0x34(%rsp),%esi" mfinal.go:282
 0x42007c 5 "MOV" "MOVQ 0x60(SP), DI" "mov 0x60(%rsp),%rdi" mfinal.go:241
@@ -518,12 +518,12 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x42008c 5 "MOV" "MOVQ 0x40(SP), AX" "mov 0x40(%rsp),%rax" mfinal.go:241
 0x420091 5 "MOV" "MOVQ 0x30(AX)(DI*8), R9" "mov 0x30(%rax,%rdi,8),%r9" mfinal.go:241
 0x420096 3 "TEST" "TESTQ R9, R9" "test %r9,%r9" mfinal.go:241
-0x420099 6 "JE" "JE 0x4202fa" "je 0x4202fa" mfinal.go:241
+0x420099 6 "JE" "JE 0x4202fa" "je 0x4202fa <runtime.runFinalizers+0x4ba>" mfinal.go:241
 0x42009f 5 "MOV" "MOVQ 0x68(SP), R9" "mov 0x68(%rsp),%r9" mfinal.go:213
 0x4200a4 3 "TEST" "TESTQ R9, R9" "test %r9,%r9" mfinal.go:213
-0x4200a7 2 "JLE" "JLE 0x4200b0" "jle 0x4200b0" mfinal.go:245
+0x4200a7 2 "JLE" "JLE 0x4200b0" "jle 0x4200b0 <runtime.runFinalizers+0x270>" mfinal.go:245
 0x4200a9 5 "LEA" "LEAQ 0x78(SP), R10" "lea 0x78(%rsp),%r10" mfinal.go:246
-0x4200ae 2 "JMP" "JMP 0x4200b7" "jmp 0x4200b7" mfinal.go:246
+0x4200ae 2 "JMP" "JMP 0x4200b7" "jmp 0x4200b7 <runtime.runFinalizers+0x277>" mfinal.go:246
 0x4200b0 4 "MOVUPS" "MOVUPS X15, 0(DX)" "movups %xmm15,(%rdx)" mfinal.go:252
 0x4200b4 3 "MOV" "MOVQ DX, R10" "mov %rdx,%r10" mfinal.go:254
 0x4200b7 8 "MOV" "MOVQ DX, 0x1a8(SP)" "mov %rdx,0x1a8(%rsp)" mfinal.go:241
@@ -531,48 +531,48 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x4200c4 5 "MOV" "MOVQ 0x30(AX)(DI*8), R11" "mov 0x30(%rax,%rdi,8),%r11" mfinal.go:254
 0x4200c9 5 "MOVZX" "MOVZX 0x17(R11), R12" "movzbl 0x17(%r11),%r12d" type.go:196
 0x4200ce 4 "CMP" "CMPL R12, $0x14" "cmp $0x14,%r12b" mfinal.go:258
-0x4200d2 6 "JNE" "JNE 0x4201c0" "jne 0x4201c0" mfinal.go:258
+0x4200d2 6 "JNE" "JNE 0x4201c0" "jne 0x4201c0 <runtime.runFinalizers+0x380>" mfinal.go:258
 0x4200d8 3 "TEST" "TESTB AL, 0(R10)" "test %al,(%r10)" mfinal.go:261
 0x4200db 5 "MOV" "MOVQ 0x38(AX)(DI*8), R12" "mov 0x38(%rax,%rdi,8),%r12" mfinal.go:261
 0x4200e0 4 "TEST" "TESTB AL, 0(R12)" "test %al,(%r12,%riz)" mfinal.go:261
-0x4200e4 7 "CMP" "CMPL runtime.writeBarrier(SB), $0x0" "cmpl $0x0,0x125615(%rip)" mfinal.go:261
-0x4200eb 2 "JE" "JE 0x420102" "je 0x420102" mfinal.go:261
+0x4200e4 7 "CMP" "CMPL runtime.writeBarrier(SB), $0x0" "cmpl $0x0,0x125615(%rip) <runtime.writeBarrier>" mfinal.go:261
+0x4200eb 2 "JE" "JE 0x420102" "je 0x420102 <runtime.runFinalizers+0x2c2>" mfinal.go:261
 0x4200ed 3 "MOV" "MOVQ 0(R10), R13" "mov (%r10),%r13" mfinal.go:261
 0x4200f0 3 "MOV" "MOVQ R11, R15" "mov %r11,%r15" mfinal.go:254
-0x4200f3 5 "CALL" "CALL runtime.gcWriteBarrier2(SB)" "callq 0x4775e0" mfinal.go:261
+0x4200f3 5 "CALL" "CALL runtime.gcWriteBarrier2(SB)" "callq 0x4775e0 <runtime.gcWriteBarrier2>" mfinal.go:261
 0x4200f8 3 "MOV" "MOVQ R12, 0(R11)" "mov %r12,(%r11)" mfinal.go:261
 0x4200fb 4 "MOV" "MOVQ R13, 0x8(R11)" "mov %r13,0x8(%r11)" mfinal.go:261
 0x4200ff 3 "MOV" "MOVQ R15, R11" "mov %r15,%r11" mfinal.go:263
 0x420102 5 "MOV" "MOVQ R11, 0x70(SP)" "mov %r11,0x70(%rsp)" mfinal.go:254
 0x420107 3 "MOV" "MOVQ R12, 0(R10)" "mov %r12,(%r10)" mfinal.go:261
 0x42010a 5 "MOV" "MOVQ 0x20(AX)(DI*8), R13" "mov 0x20(%rax,%rdi,8),%r13" mfinal.go:262
-0x42010f 7 "CMP" "CMPL runtime.writeBarrier(SB), $0x0" "cmpl $0x0,0x1255ea(%rip)" mfinal.go:262
-0x420116 2 "JE" "JE 0x420131" "je 0x420131" mfinal.go:262
+0x42010f 7 "CMP" "CMPL runtime.writeBarrier(SB), $0x0" "cmpl $0x0,0x1255ea(%rip) <runtime.writeBarrier>" mfinal.go:262
+0x420116 2 "JE" "JE 0x420131" "je 0x420131 <runtime.runFinalizers+0x2f1>" mfinal.go:262
 0x420118 4 "MOV" "MOVQ 0x8(R10), R15" "mov 0x8(%r10),%r15" mfinal.go:262
 0x42011c 4 "NOP" "NOPL 0(AX)" "nopl (%rax)" mfinal.go:262
-0x420120 5 "CALL" "CALL runtime.gcWriteBarrier2(SB)" "callq 0x4775e0" mfinal.go:262
+0x420120 5 "CALL" "CALL runtime.gcWriteBarrier2(SB)" "callq 0x4775e0 <runtime.gcWriteBarrier2>" mfinal.go:262
 0x420125 3 "MOV" "MOVQ R13, 0(R11)" "mov %r13,(%r11)" mfinal.go:262
 0x420128 4 "MOV" "MOVQ R15, 0x8(R11)" "mov %r15,0x8(%r11)" mfinal.go:262
 0x42012c 5 "MOV" "MOVQ 0x70(SP), R11" "mov 0x70(%rsp),%r11" mfinal.go:263
 0x420131 4 "MOV" "MOVQ R13, 0x8(R10)" "mov %r13,0x8(%r10)" mfinal.go:262
 0x420135 5 "CMP" "CMPQ 0x40(R11), $0x0" "cmpq $0x0,0x40(%r11)" mfinal.go:263
 0x42013a 6 "NOP" "NOPW 0(AX)(AX*1)" "nopw (%rax,%rax)" mfinal.go:263
-0x420140 6 "JE" "JE 0x4201f2" "je 0x4201f2" mfinal.go:263
+0x420140 6 "JE" "JE 0x4201f2" "je 0x4201f2 <runtime.runFinalizers+0x3b2>" mfinal.go:263
 0x420146 3 "TEST" "TESTQ R12, R12" "test %r12,%r12" iface.go:450
-0x420149 6 "JE" "JE 0x4202b6" "je 0x4202b6" iface.go:450
+0x420149 6 "JE" "JE 0x4202b6" "je 0x4202b6 <runtime.runFinalizers+0x476>" iface.go:450
 0x42014f 8 "MOV" "MOVQ R10, 0x188(SP)" "mov %r10,0x188(%rsp)" mfinal.go:254
 0x420157 3 "MOV" "MOVQ R11, AX" "mov %r11,%rax" iface.go:454
 0x42015a 3 "MOV" "MOVQ R12, BX" "mov %r12,%rbx" iface.go:454
 0x42015d 2 "XOR" "XORL CX, CX" "xor %ecx,%ecx" iface.go:454
 0x42015f 1 "NOP" "NOPL" "nop" iface.go:454
-0x420160 5 "CALL" "CALL runtime.getitab(SB)" "callq 0x4712c0" iface.go:454
-0x420165 7 "CMP" "CMPL runtime.writeBarrier(SB), $0x0" "cmpl $0x0,0x125594(%rip)" mfinal.go:266
-0x42016c 2 "JNE" "JNE 0x420178" "jne 0x420178" mfinal.go:266
+0x420160 5 "CALL" "CALL runtime.getitab(SB)" "callq 0x4712c0 <runtime.getitab>" iface.go:454
+0x420165 7 "CMP" "CMPL runtime.writeBarrier(SB), $0x0" "cmpl $0x0,0x125594(%rip) <runtime.writeBarrier>" mfinal.go:266
+0x42016c 2 "JNE" "JNE 0x420178" "jne 0x420178 <runtime.runFinalizers+0x338>" mfinal.go:266
 0x42016e 8 "MOV" "MOVQ 0x188(SP), CX" "mov 0x188(%rsp),%rcx" mfinal.go:266
-0x420176 2 "JMP" "JMP 0x42018f" "jmp 0x42018f" mfinal.go:266
+0x420176 2 "JMP" "JMP 0x42018f" "jmp 0x42018f <runtime.runFinalizers+0x34f>" mfinal.go:266
 0x420178 8 "MOV" "MOVQ 0x188(SP), CX" "mov 0x188(%rsp),%rcx" mfinal.go:266
 0x420180 3 "MOV" "MOVQ 0(CX), DX" "mov (%rcx),%rdx" mfinal.go:266
-0x420183 5 "CALL" "CALL runtime.gcWriteBarrier2(SB)" "callq 0x4775e0" mfinal.go:266
+0x420183 5 "CALL" "CALL runtime.gcWriteBarrier2(SB)" "callq 0x4775e0 <runtime.gcWriteBarrier2>" mfinal.go:266
 0x420188 3 "MOV" "MOVQ AX, 0(R11)" "mov %rax,(%r11)" mfinal.go:266
 0x42018b 4 "MOV" "MOVQ DX, 0x8(R11)" "mov %rdx,0x8(%r11)" mfinal.go:266
 0x42018f 3 "MOV" "MOVQ AX, 0(CX)" "mov %rax,(%rcx)" mfinal.go:266
@@ -584,24 +584,24 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x4201ac 5 "MOV" "MOVQ 0x60(SP), DI" "mov 0x60(%rsp),%rdi" mfinal.go:272
 0x4201b1 5 "MOV" "MOVQ 0x38(SP), R8" "mov 0x38(%rsp),%r8" mfinal.go:272
 0x4201b6 5 "MOV" "MOVQ 0x68(SP), R9" "mov 0x68(%rsp),%r9" mfinal.go:213
-0x4201bb 2 "JMP" "JMP 0x4201f2" "jmp 0x4201f2" mfinal.go:266
+0x4201bb 2 "JMP" "JMP 0x4201f2" "jmp 0x4201f2 <runtime.runFinalizers+0x3b2>" mfinal.go:266
 0x4201bd 3 "NOP" "NOPL 0(AX)" "nopl (%rax)" mfinal.go:266
 0x4201c0 4 "CMP" "CMPL R12, $0x16" "cmp $0x16,%r12b" mfinal.go:255
-0x4201c4 6 "JNE" "JNE 0x4202a5" "jne 0x4202a5" mfinal.go:255
+0x4201c4 6 "JNE" "JNE 0x4202a5" "jne 0x4202a5 <runtime.runFinalizers+0x465>" mfinal.go:255
 0x4201ca 5 "MOV" "MOVQ 0x20(AX)(DI*8), R11" "mov 0x20(%rax,%rdi,8),%r11" mfinal.go:257
-0x4201cf 7 "CMP" "CMPL runtime.writeBarrier(SB), $0x0" "cmpl $0x0,0x12552a(%rip)" mfinal.go:257
-0x4201d6 2 "JE" "JE 0x4201ef" "je 0x4201ef" mfinal.go:257
+0x4201cf 7 "CMP" "CMPL runtime.writeBarrier(SB), $0x0" "cmpl $0x0,0x12552a(%rip) <runtime.writeBarrier>" mfinal.go:257
+0x4201d6 2 "JE" "JE 0x4201ef" "je 0x4201ef <runtime.runFinalizers+0x3af>" mfinal.go:257
 0x4201d8 3 "MOV" "MOVQ 0(R10), R12" "mov (%r10),%r12" mfinal.go:257
 0x4201db 3 "MOV" "MOVQ R11, R13" "mov %r11,%r13" mfinal.go:257
 0x4201de 2 "NOP" "NOPW" "data16 nop" mfinal.go:257
-0x4201e0 5 "CALL" "CALL runtime.gcWriteBarrier2(SB)" "callq 0x4775e0" mfinal.go:257
+0x4201e0 5 "CALL" "CALL runtime.gcWriteBarrier2(SB)" "callq 0x4775e0 <runtime.gcWriteBarrier2>" mfinal.go:257
 0x4201e5 3 "MOV" "MOVQ R13, 0(R11)" "mov %r13,(%r11)" mfinal.go:257
 0x4201e8 4 "MOV" "MOVQ R12, 0x8(R11)" "mov %r12,0x8(%r11)" mfinal.go:257
 0x4201ec 3 "MOV" "MOVQ R13, R11" "mov %r13,%r11" mfinal.go:257
 0x4201ef 3 "MOV" "MOVQ R11, 0(R10)" "mov %r11,(%r10)" mfinal.go:257
 0x4201f2 1 "NOP" "NOPL" "nop" mfinal.go:271
 0x4201f3 5 "MOV" "MOVL $0x2, CX" "mov $0x2,%ecx" types.go:280
-0x4201f8 7 "LEA" "LEAQ runtime.fingStatus(SB), BX" "lea 0x1252b1(%rip),%rbx" types.go:280
+0x4201f8 7 "LEA" "LEAQ runtime.fingStatus(SB), BX" "lea 0x1252b1(%rip),%rbx <runtime.fingStatus>" types.go:280
 0x4201ff 3 "OR" "LOCK ORL CX, 0(BX)" "lock or %ecx,(%rbx)" types.go:280
 0x420202 5 "MOV" "MOVQ 0x18(AX)(DI*8), AX" "mov 0x18(%rax,%rdi,8),%rax" mfinal.go:272
 0x420207 8 "MOV" "MOVQ $0x0, 0(SP)" "movq $0x0,(%rsp)" mfinal.go:272
@@ -612,58 +612,58 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x420223 5 "MOV" "MOVL R8, 0x20(SP)" "mov %r8d,0x20(%rsp)" mfinal.go:272
 0x420228 5 "LEA" "LEAQ 0x78(SP), AX" "lea 0x78(%rsp),%rax" mfinal.go:272
 0x42022d 5 "MOV" "MOVQ AX, 0x28(SP)" "mov %rax,0x28(%rsp)" mfinal.go:272
-0x420232 5 "CALL" "CALL runtime.reflectcall.abi0(SB)" "callq 0x475e40" mfinal.go:272
+0x420232 5 "CALL" "CALL runtime.reflectcall.abi0(SB)" "callq 0x475e40 <runtime.reflectcall.abi0>" mfinal.go:272
 0x420237 4 "XORPS" "XORPS X15, X15" "xorps %xmm15,%xmm15" mfinal.go:272
 0x42023b 9 "MOV" "MOVQ FS:0xfffffff8, R14" "mov %fs:0xfffffff8,%r14" mfinal.go:272
 0x420244 1 "NOP" "NOPL" "nop" mfinal.go:273
 0x420245 5 "MOV" "MOVL $-0x3, AX" "mov $-0x3,%eax" types.go:269
-0x42024a 7 "LEA" "LEAQ runtime.fingStatus(SB), CX" "lea 0x12525f(%rip),%rcx" types.go:269
+0x42024a 7 "LEA" "LEAQ runtime.fingStatus(SB), CX" "lea 0x12525f(%rip),%rcx <runtime.fingStatus>" types.go:269
 0x420251 3 "AND" "LOCK ANDL AX, 0(CX)" "lock and %eax,(%rcx)" types.go:269
 0x420254 5 "MOV" "MOVQ 0x60(SP), AX" "mov 0x60(%rsp),%rax" mfinal.go:279
 0x420259 5 "MOV" "MOVQ 0x40(SP), CX" "mov 0x40(%rsp),%rcx" mfinal.go:279
 0x42025e 4 "LEA" "LEAQ 0(CX)(AX*8), DX" "lea (%rcx,%rax,8),%rdx" mfinal.go:279
 0x420262 4 "LEA" "LEAQ 0x18(DX), DX" "lea 0x18(%rdx),%rdx" mfinal.go:279
-0x420266 7 "CMP" "CMPL runtime.writeBarrier(SB), $0x0" "cmpl $0x0,0x125493(%rip)" mfinal.go:279
-0x42026d 6 "JE" "JE 0x41ffd9" "je 0x41ffd9" mfinal.go:279
+0x420266 7 "CMP" "CMPL runtime.writeBarrier(SB), $0x0" "cmpl $0x0,0x125493(%rip) <runtime.writeBarrier>" mfinal.go:279
+0x42026d 6 "JE" "JE 0x41ffd9" "je 0x41ffd9 <runtime.runFinalizers+0x199>" mfinal.go:279
 0x420273 5 "MOV" "MOVQ 0x18(CX)(AX*8), SI" "mov 0x18(%rcx,%rax,8),%rsi" mfinal.go:279
 0x420278 5 "MOV" "MOVQ 0x20(CX)(AX*8), DI" "mov 0x20(%rcx,%rax,8),%rdi" mfinal.go:280
 0x42027d 5 "MOV" "MOVQ 0x38(CX)(AX*8), R8" "mov 0x38(%rcx,%rax,8),%r8" mfinal.go:281
-0x420282 5 "CALL" "CALL runtime.gcWriteBarrier3(SB)" "callq 0x477600" mfinal.go:279
+0x420282 5 "CALL" "CALL runtime.gcWriteBarrier3(SB)" "callq 0x477600 <runtime.gcWriteBarrier3>" mfinal.go:279
 0x420287 3 "MOV" "MOVQ SI, 0(R11)" "mov %rsi,(%r11)" mfinal.go:279
 0x42028a 4 "MOV" "MOVQ DI, 0x8(R11)" "mov %rdi,0x8(%r11)" mfinal.go:280
 0x42028e 4 "MOV" "MOVQ R8, 0x10(R11)" "mov %r8,0x10(%r11)" mfinal.go:281
-0x420292 5 "JMP" "JMP 0x41ffd9" "jmpq 0x41ffd9" mfinal.go:279
+0x420292 5 "JMP" "JMP 0x41ffd9" "jmpq 0x41ffd9 <runtime.runFinalizers+0x199>" mfinal.go:279
 0x420297 3 "MOV" "MOVQ CX, AX" "mov %rcx,%rax" mfinal.go:206
 0x42029a 3 "MOV" "MOVQ DX, CX" "mov %rdx,%rcx" mfinal.go:206
 0x42029d 3 "NOP" "NOPL 0(AX)" "nopl (%rax)" mfinal.go:206
-0x4202a0 5 "JMP" "JMP 0x41feba" "jmpq 0x41feba" mfinal.go:206
-0x4202a5 7 "LEA" "LEAQ go:string.*+13156(SB), AX" "lea 0x72b48(%rip),%rax" mfinal.go:269
+0x4202a0 5 "JMP" "JMP 0x41feba" "jmpq 0x41feba <runtime.runFinalizers+0x7a>" mfinal.go:206
+0x4202a5 7 "LEA" "LEAQ go:string.*+13156(SB), AX" "lea 0x72b48(%rip),%rax <go:string.*+0x3364>" mfinal.go:269
 0x4202ac 5 "MOV" "MOVL $0x1a, BX" "mov $0x1a,%ebx" mfinal.go:269
-0x4202b1 5 "CALL" "CALL runtime.throw(SB)" "callq 0x472180" mfinal.go:269
-0x4202b6 7 "LEA" "LEAQ type:*+60768(SB), AX" "lea 0x69aa3(%rip),%rax" iface.go:452
+0x4202b1 5 "CALL" "CALL runtime.throw(SB)" "callq 0x472180 <runtime.throw>" mfinal.go:269
+0x4202b6 7 "LEA" "LEAQ type:*+60768(SB), AX" "lea 0x69aa3(%rip),%rax <type:*+0xed60>" iface.go:452
 0x4202bd 3 "NOP" "NOPL 0(AX)" "nopl (%rax)" iface.go:452
-0x4202c0 5 "CALL" "CALL runtime.newobject(SB)" "callq 0x41a6c0" iface.go:452
-0x4202c5 7 "CMP" "CMPL runtime.writeBarrier(SB), $0x0" "cmpl $0x0,0x125434(%rip)" iface.go:452
-0x4202cc 2 "JNE" "JNE 0x4202eb" "jne 0x4202eb" iface.go:452
+0x4202c0 5 "CALL" "CALL runtime.newobject(SB)" "callq 0x41a6c0 <runtime.newobject>" iface.go:452
+0x4202c5 7 "CMP" "CMPL runtime.writeBarrier(SB), $0x0" "cmpl $0x0,0x125434(%rip) <runtime.writeBarrier>" iface.go:452
+0x4202cc 2 "JNE" "JNE 0x4202eb" "jne 0x4202eb <runtime.runFinalizers+0x4ab>" iface.go:452
 0x4202ce 5 "MOV" "MOVQ 0x70(SP), CX" "mov 0x70(%rsp),%rcx" iface.go:452
 0x4202d3 4 "MOV" "MOVQ CX, 0x10(AX)" "mov %rcx,0x10(%rax)" iface.go:452
 0x4202d7 5 "MOVUPS" "MOVUPS X15, 0x18(AX)" "movups %xmm15,0x18(%rax)" iface.go:452
 0x4202dc 3 "MOV" "MOVQ AX, BX" "mov %rax,%rbx" iface.go:452
-0x4202df 7 "LEA" "LEAQ type:*+38016(SB), AX" "lea 0x6419a(%rip),%rax" iface.go:452
-0x4202e6 5 "CALL" "CALL runtime.gopanic(SB)" "callq 0x471da0" iface.go:452
-0x4202eb 5 "CALL" "CALL runtime.gcWriteBarrier1(SB)" "callq 0x4775c0" iface.go:452
+0x4202df 7 "LEA" "LEAQ type:*+38016(SB), AX" "lea 0x6419a(%rip),%rax <type:*+0x9480>" iface.go:452
+0x4202e6 5 "CALL" "CALL runtime.gopanic(SB)" "callq 0x471da0 <runtime.gopanic>" iface.go:452
+0x4202eb 5 "CALL" "CALL runtime.gcWriteBarrier1(SB)" "callq 0x4775c0 <runtime.gcWriteBarrier1>" iface.go:452
 0x4202f0 5 "MOV" "MOVQ 0x70(SP), CX" "mov 0x70(%rsp),%rcx" iface.go:452
 0x4202f5 3 "MOV" "MOVQ CX, 0(R11)" "mov %rcx,(%r11)" iface.go:452
-0x4202f8 2 "JMP" "JMP 0x4202ce" "jmp 0x4202ce" iface.go:452
-0x4202fa 7 "LEA" "LEAQ go:string.*+12500(SB), AX" "lea 0x72863(%rip),%rax" mfinal.go:242
+0x4202f8 2 "JMP" "JMP 0x4202ce" "jmp 0x4202ce <runtime.runFinalizers+0x48e>" iface.go:452
+0x4202fa 7 "LEA" "LEAQ go:string.*+12500(SB), AX" "lea 0x72863(%rip),%rax <go:string.*+0x30d4>" mfinal.go:242
 0x420301 5 "MOV" "MOVL $0x19, BX" "mov $0x19,%ebx" mfinal.go:242
-0x420306 5 "CALL" "CALL runtime.throw(SB)" "callq 0x472180" mfinal.go:242
+0x420306 5 "CALL" "CALL runtime.throw(SB)" "callq 0x472180 <runtime.throw>" mfinal.go:242
 0x42030b 7 "MOV" "MOVQ $0x65, AX" "mov $0x65,%rax" mfinal.go:221
-0x420312 5 "CALL" "CALL runtime.panicBounds(SB)" "callq 0x477980" mfinal.go:221
+0x420312 5 "CALL" "CALL runtime.panicBounds(SB)" "callq 0x477980 <runtime.panicBounds>" mfinal.go:221
 0x420317 1 "NOP" "NOPL" "nop" mfinal.go:221
-0x420318 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x475ca0" mfinal.go:193
+0x420318 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x475ca0 <runtime.morestack_noctxt.abi0>" mfinal.go:193
 0x42031d 3 "NOP" "NOPL 0(AX)" "nopl (%rax)" mfinal.go:193
-0x420320 5 "JMP" "JMP runtime.runFinalizers(SB)" "jmpq 0x41fe40" mfinal.go:193
+0x420320 5 "JMP" "JMP runtime.runFinalizers(SB)" "jmpq 0x41fe40 <runtime.runFinalizers>" mfinal.go:193
 0x420325 1 "INT" "INT $0x3" "int3" .:-1
 0x420326 1 "INT" "INT $0x3" "int3" .:-1
 0x420327 1 "INT" "INT $0x3" "int3" .:-1
@@ -698,10 +698,10 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x43edeb 4 "MOV" "MOVQ 0x30(R14), DX" "mov 0x30(%r14),%rdx" os_linux.go:891
 0x43edef 6 "MOV" "MOVB 0x525(DX), DL" "mov 0x525(%rdx),%dl" types.go:124
 0x43edf5 2 "TEST" "TESTL DL, DL" "test %dl,%dl" os_linux.go:892
-0x43edf7 6 "JE" "JE 0x43f10d" "je 0x43f10d" os_linux.go:892
+0x43edf7 6 "JE" "JE 0x43f10d" "je 0x43f10d <runtime.runPerThreadSyscall+0x32d>" os_linux.go:892
 0x43edfd 8 "MOV" "MOVQ R14, 0xd0(SP)" "mov %r14,0xd0(%rsp)" os_linux.go:891
 0x43ee05 5 "LEA" "LEAQ 0x50(SP), DX" "lea 0x50(%rsp),%rdx" os_linux.go:896
-0x43ee0a 7 "LEA" "LEAQ runtime.perThreadSyscall(SB), R10" "lea 0x106bcf(%rip),%r10" os_linux.go:896
+0x43ee0a 7 "LEA" "LEAQ runtime.perThreadSyscall(SB), R10" "lea 0x106bcf(%rip),%r10 <runtime.perThreadSyscall>" os_linux.go:896
 0x43ee11 4 "MOVUPS" "MOVUPS 0(R10), X14" "movups (%r10),%xmm14" os_linux.go:896
 0x43ee15 4 "MOVUPS" "MOVUPS X14, 0(DX)" "movups %xmm14,(%rdx)" os_linux.go:896
 0x43ee19 5 "MOVUPS" "MOVUPS 0x10(R10), X14" "movups 0x10(%r10),%xmm14" os_linux.go:896
@@ -719,17 +719,17 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x43ee55 5 "MOV" "MOVQ 0x70(SP), SI" "mov 0x70(%rsp),%rsi" os_linux.go:897
 0x43ee5a 5 "MOV" "MOVQ 0x78(SP), R8" "mov 0x78(%rsp),%r8" os_linux.go:897
 0x43ee5f 8 "MOV" "MOVQ 0x80(SP), R9" "mov 0x80(%rsp),%r9" os_linux.go:897
-0x43ee67 5 "CALL" "CALL internal/runtime/syscall/linux.Syscall6(SB)" "callq 0x407f80" os_linux.go:897
+0x43ee67 5 "CALL" "CALL internal/runtime/syscall/linux.Syscall6(SB)" "callq 0x407f80 <internal/runtime/syscall/linux.Syscall6>" os_linux.go:897
 0x43ee6c 5 "MOV" "MOVQ CX, 0x48(SP)" "mov %rcx,0x48(%rsp)" os_linux.go:897
 0x43ee71 5 "MOV" "MOVQ AX, 0x40(SP)" "mov %rax,0x40(%rsp)" os_linux.go:897
 0x43ee76 5 "MOV" "MOVQ BX, 0x38(SP)" "mov %rbx,0x38(%rsp)" os_linux.go:897
 0x43ee7b 5 "NOP" "NOPL 0(AX)(AX*1)" "nopl (%rax,%rax)" os_linux.go:897
 0x43ee80 3 "TEST" "TESTQ CX, CX" "test %rcx,%rcx" os_linux.go:902
-0x43ee83 2 "JNE" "JNE 0x43ee9d" "jne 0x43ee9d" os_linux.go:902
+0x43ee83 2 "JNE" "JNE 0x43ee9d" "jne 0x43ee9d <runtime.runPerThreadSyscall+0xbd>" os_linux.go:902
 0x43ee85 8 "CMP" "CMPQ 0x88(SP), AX" "cmp %rax,0x88(%rsp)" os_linux.go:902
-0x43ee8d 2 "JNE" "JNE 0x43ee9d" "jne 0x43ee9d" os_linux.go:902
+0x43ee8d 2 "JNE" "JNE 0x43ee9d" "jne 0x43ee9d <runtime.runPerThreadSyscall+0xbd>" os_linux.go:902
 0x43ee8f 8 "CMP" "CMPQ 0x90(SP), BX" "cmp %rbx,0x90(%rsp)" os_linux.go:902
-0x43ee97 6 "JE" "JE 0x43f0ec" "je 0x43f0ec" os_linux.go:902
+0x43ee97 6 "JE" "JE 0x43f0ec" "je 0x43f0ec <runtime.runPerThreadSyscall+0x30c>" os_linux.go:902
 0x43ee9d 5 "MOV" "MOVQ 0x50(SP), AX" "mov 0x50(%rsp),%rax" os_linux.go:903
 0x43eea2 8 "MOV" "MOVQ AX, 0xc8(SP)" "mov %rax,0xc8(%rsp)" os_linux.go:903
 0x43eeaa 5 "MOV" "MOVQ 0x58(SP), AX" "mov 0x58(%rsp),%rax" os_linux.go:903
@@ -745,96 +745,96 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x43eeeb 8 "MOV" "MOVQ 0x80(SP), AX" "mov 0x80(%rsp),%rax" os_linux.go:903
 0x43eef3 8 "MOV" "MOVQ AX, 0x98(SP)" "mov %rax,0x98(%rsp)" os_linux.go:903
 0x43eefb 5 "NOP" "NOPL 0(AX)(AX*1)" "nopl (%rax,%rax)" os_linux.go:903
-0x43ef00 5 "CALL" "CALL runtime.printlock(SB)" "callq 0x443060" os_linux.go:903
-0x43ef05 7 "LEA" "LEAQ go:string.*+544(SB), AX" "lea 0x50da4(%rip),%rax" os_linux.go:903
+0x43ef00 5 "CALL" "CALL runtime.printlock(SB)" "callq 0x443060 <runtime.printlock>" os_linux.go:903
+0x43ef05 7 "LEA" "LEAQ go:string.*+544(SB), AX" "lea 0x50da4(%rip),%rax <go:string.*+0x220>" os_linux.go:903
 0x43ef0c 5 "MOV" "MOVL $0x5, BX" "mov $0x5,%ebx" os_linux.go:903
-0x43ef11 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00" os_linux.go:903
+0x43ef11 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00 <runtime.printstring>" os_linux.go:903
 0x43ef16 8 "MOV" "MOVQ 0xc8(SP), AX" "mov 0xc8(%rsp),%rax" os_linux.go:903
 0x43ef1e 2 "NOP" "NOPW" "data16 nop" os_linux.go:903
-0x43ef20 5 "CALL" "CALL runtime.printuint(SB)" "callq 0x443520" os_linux.go:903
-0x43ef25 7 "LEA" "LEAQ go:string.*+3389(SB), AX" "lea 0x518a1(%rip),%rax" os_linux.go:903
+0x43ef20 5 "CALL" "CALL runtime.printuint(SB)" "callq 0x443520 <runtime.printuint>" os_linux.go:903
+0x43ef25 7 "LEA" "LEAQ go:string.*+3389(SB), AX" "lea 0x518a1(%rip),%rax <go:string.*+0xd3d>" os_linux.go:903
 0x43ef2c 5 "MOV" "MOVL $0xb, BX" "mov $0xb,%ebx" os_linux.go:903
-0x43ef31 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00" os_linux.go:903
+0x43ef31 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00 <runtime.printstring>" os_linux.go:903
 0x43ef36 8 "MOV" "MOVQ 0xc0(SP), AX" "mov 0xc0(%rsp),%rax" os_linux.go:903
 0x43ef3e 2 "NOP" "NOPW" "data16 nop" os_linux.go:903
-0x43ef40 5 "CALL" "CALL runtime.printuint(SB)" "callq 0x443520" os_linux.go:903
-0x43ef45 7 "LEA" "LEAQ go:string.*+11(SB), AX" "lea 0x50b4f(%rip),%rax" os_linux.go:903
+0x43ef40 5 "CALL" "CALL runtime.printuint(SB)" "callq 0x443520 <runtime.printuint>" os_linux.go:903
+0x43ef45 7 "LEA" "LEAQ go:string.*+11(SB), AX" "lea 0x50b4f(%rip),%rax <go:string.*+0xb>" os_linux.go:903
 0x43ef4c 5 "MOV" "MOVL $0x1, BX" "mov $0x1,%ebx" os_linux.go:903
-0x43ef51 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00" os_linux.go:903
+0x43ef51 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00 <runtime.printstring>" os_linux.go:903
 0x43ef56 8 "MOV" "MOVQ 0xb8(SP), AX" "mov 0xb8(%rsp),%rax" os_linux.go:903
 0x43ef5e 2 "NOP" "NOPW" "data16 nop" os_linux.go:903
-0x43ef60 5 "CALL" "CALL runtime.printuint(SB)" "callq 0x443520" os_linux.go:903
-0x43ef65 7 "LEA" "LEAQ go:string.*+11(SB), AX" "lea 0x50b2f(%rip),%rax" os_linux.go:903
+0x43ef60 5 "CALL" "CALL runtime.printuint(SB)" "callq 0x443520 <runtime.printuint>" os_linux.go:903
+0x43ef65 7 "LEA" "LEAQ go:string.*+11(SB), AX" "lea 0x50b2f(%rip),%rax <go:string.*+0xb>" os_linux.go:903
 0x43ef6c 5 "MOV" "MOVL $0x1, BX" "mov $0x1,%ebx" os_linux.go:903
-0x43ef71 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00" os_linux.go:903
+0x43ef71 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00 <runtime.printstring>" os_linux.go:903
 0x43ef76 8 "MOV" "MOVQ 0xb0(SP), AX" "mov 0xb0(%rsp),%rax" os_linux.go:903
 0x43ef7e 2 "NOP" "NOPW" "data16 nop" os_linux.go:903
-0x43ef80 5 "CALL" "CALL runtime.printuint(SB)" "callq 0x443520" os_linux.go:903
-0x43ef85 7 "LEA" "LEAQ go:string.*+11(SB), AX" "lea 0x50b0f(%rip),%rax" os_linux.go:903
+0x43ef80 5 "CALL" "CALL runtime.printuint(SB)" "callq 0x443520 <runtime.printuint>" os_linux.go:903
+0x43ef85 7 "LEA" "LEAQ go:string.*+11(SB), AX" "lea 0x50b0f(%rip),%rax <go:string.*+0xb>" os_linux.go:903
 0x43ef8c 5 "MOV" "MOVL $0x1, BX" "mov $0x1,%ebx" os_linux.go:903
-0x43ef91 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00" os_linux.go:903
+0x43ef91 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00 <runtime.printstring>" os_linux.go:903
 0x43ef96 8 "MOV" "MOVQ 0xa8(SP), AX" "mov 0xa8(%rsp),%rax" os_linux.go:903
 0x43ef9e 2 "NOP" "NOPW" "data16 nop" os_linux.go:903
-0x43efa0 5 "CALL" "CALL runtime.printuint(SB)" "callq 0x443520" os_linux.go:903
-0x43efa5 7 "LEA" "LEAQ go:string.*+11(SB), AX" "lea 0x50aef(%rip),%rax" os_linux.go:903
+0x43efa0 5 "CALL" "CALL runtime.printuint(SB)" "callq 0x443520 <runtime.printuint>" os_linux.go:903
+0x43efa5 7 "LEA" "LEAQ go:string.*+11(SB), AX" "lea 0x50aef(%rip),%rax <go:string.*+0xb>" os_linux.go:903
 0x43efac 5 "MOV" "MOVL $0x1, BX" "mov $0x1,%ebx" os_linux.go:903
-0x43efb1 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00" os_linux.go:903
+0x43efb1 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00 <runtime.printstring>" os_linux.go:903
 0x43efb6 8 "MOV" "MOVQ 0xa0(SP), AX" "mov 0xa0(%rsp),%rax" os_linux.go:903
 0x43efbe 2 "NOP" "NOPW" "data16 nop" os_linux.go:903
-0x43efc0 5 "CALL" "CALL runtime.printuint(SB)" "callq 0x443520" os_linux.go:903
-0x43efc5 7 "LEA" "LEAQ go:string.*+11(SB), AX" "lea 0x50acf(%rip),%rax" os_linux.go:903
+0x43efc0 5 "CALL" "CALL runtime.printuint(SB)" "callq 0x443520 <runtime.printuint>" os_linux.go:903
+0x43efc5 7 "LEA" "LEAQ go:string.*+11(SB), AX" "lea 0x50acf(%rip),%rax <go:string.*+0xb>" os_linux.go:903
 0x43efcc 5 "MOV" "MOVL $0x1, BX" "mov $0x1,%ebx" os_linux.go:903
-0x43efd1 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00" os_linux.go:903
+0x43efd1 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00 <runtime.printstring>" os_linux.go:903
 0x43efd6 8 "MOV" "MOVQ 0x98(SP), AX" "mov 0x98(%rsp),%rax" os_linux.go:903
 0x43efde 2 "NOP" "NOPW" "data16 nop" os_linux.go:903
-0x43efe0 5 "CALL" "CALL runtime.printuint(SB)" "callq 0x443520" os_linux.go:903
-0x43efe5 7 "LEA" "LEAQ go:string.*+59(SB), AX" "lea 0x50adf(%rip),%rax" os_linux.go:903
+0x43efe0 5 "CALL" "CALL runtime.printuint(SB)" "callq 0x443520 <runtime.printuint>" os_linux.go:903
+0x43efe5 7 "LEA" "LEAQ go:string.*+59(SB), AX" "lea 0x50adf(%rip),%rax <go:string.*+0x3b>" os_linux.go:903
 0x43efec 5 "MOV" "MOVL $0x2, BX" "mov $0x2,%ebx" os_linux.go:903
-0x43eff1 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00" os_linux.go:903
-0x43eff6 5 "CALL" "CALL runtime.printunlock(SB)" "callq 0x4430c0" os_linux.go:903
+0x43eff1 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00 <runtime.printstring>" os_linux.go:903
+0x43eff6 5 "CALL" "CALL runtime.printunlock(SB)" "callq 0x4430c0 <runtime.printunlock>" os_linux.go:903
 0x43effb 8 "MOV" "MOVQ 0x88(SP), AX" "mov 0x88(%rsp),%rax" os_linux.go:904
 0x43f003 8 "MOV" "MOVQ AX, 0xc8(SP)" "mov %rax,0xc8(%rsp)" os_linux.go:904
 0x43f00b 8 "MOV" "MOVQ 0x90(SP), AX" "mov 0x90(%rsp),%rax" os_linux.go:904
 0x43f013 8 "MOV" "MOVQ AX, 0xc0(SP)" "mov %rax,0xc0(%rsp)" os_linux.go:904
 0x43f01b 5 "NOP" "NOPL 0(AX)(AX*1)" "nopl (%rax,%rax)" os_linux.go:904
-0x43f020 5 "CALL" "CALL runtime.printlock(SB)" "callq 0x443060" os_linux.go:904
-0x43f025 7 "LEA" "LEAQ go:string.*+7511(SB), AX" "lea 0x527bb(%rip),%rax" os_linux.go:904
+0x43f020 5 "CALL" "CALL runtime.printlock(SB)" "callq 0x443060 <runtime.printlock>" os_linux.go:904
+0x43f025 7 "LEA" "LEAQ go:string.*+7511(SB), AX" "lea 0x527bb(%rip),%rax <go:string.*+0x1d57>" os_linux.go:904
 0x43f02c 5 "MOV" "MOVL $0x11, BX" "mov $0x11,%ebx" os_linux.go:904
-0x43f031 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00" os_linux.go:904
+0x43f031 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00 <runtime.printstring>" os_linux.go:904
 0x43f036 5 "MOV" "MOVQ 0x40(SP), AX" "mov 0x40(%rsp),%rax" os_linux.go:904
 0x43f03b 5 "NOP" "NOPL 0(AX)(AX*1)" "nopl (%rax,%rax)" os_linux.go:904
-0x43f040 5 "CALL" "CALL runtime.printuint(SB)" "callq 0x443520" os_linux.go:904
-0x43f045 7 "LEA" "LEAQ go:string.*+296(SB), AX" "lea 0x50b6c(%rip),%rax" os_linux.go:904
+0x43f040 5 "CALL" "CALL runtime.printuint(SB)" "callq 0x443520 <runtime.printuint>" os_linux.go:904
+0x43f045 7 "LEA" "LEAQ go:string.*+296(SB), AX" "lea 0x50b6c(%rip),%rax <go:string.*+0x128>" os_linux.go:904
 0x43f04c 5 "MOV" "MOVL $0x4, BX" "mov $0x4,%ebx" os_linux.go:904
-0x43f051 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00" os_linux.go:904
+0x43f051 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00 <runtime.printstring>" os_linux.go:904
 0x43f056 5 "MOV" "MOVQ 0x38(SP), AX" "mov 0x38(%rsp),%rax" os_linux.go:904
 0x43f05b 5 "NOP" "NOPL 0(AX)(AX*1)" "nopl (%rax,%rax)" os_linux.go:904
-0x43f060 5 "CALL" "CALL runtime.printuint(SB)" "callq 0x443520" os_linux.go:904
-0x43f065 7 "LEA" "LEAQ go:string.*+1087(SB), AX" "lea 0x50e63(%rip),%rax" os_linux.go:904
+0x43f060 5 "CALL" "CALL runtime.printuint(SB)" "callq 0x443520 <runtime.printuint>" os_linux.go:904
+0x43f065 7 "LEA" "LEAQ go:string.*+1087(SB), AX" "lea 0x50e63(%rip),%rax <go:string.*+0x43f>" os_linux.go:904
 0x43f06c 5 "MOV" "MOVL $0x7, BX" "mov $0x7,%ebx" os_linux.go:904
-0x43f071 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00" os_linux.go:904
+0x43f071 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00 <runtime.printstring>" os_linux.go:904
 0x43f076 5 "MOV" "MOVQ 0x48(SP), AX" "mov 0x48(%rsp),%rax" os_linux.go:904
 0x43f07b 5 "NOP" "NOPL 0(AX)(AX*1)" "nopl (%rax,%rax)" os_linux.go:904
-0x43f080 5 "CALL" "CALL runtime.printuint(SB)" "callq 0x443520" os_linux.go:904
-0x43f085 7 "LEA" "LEAQ go:string.*+4099(SB), AX" "lea 0x51a07(%rip),%rax" os_linux.go:904
+0x43f080 5 "CALL" "CALL runtime.printuint(SB)" "callq 0x443520 <runtime.printuint>" os_linux.go:904
+0x43f085 7 "LEA" "LEAQ go:string.*+4099(SB), AX" "lea 0x51a07(%rip),%rax <go:string.*+0x1003>" os_linux.go:904
 0x43f08c 5 "MOV" "MOVL $0xc, BX" "mov $0xc,%ebx" os_linux.go:904
-0x43f091 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00" os_linux.go:904
+0x43f091 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00 <runtime.printstring>" os_linux.go:904
 0x43f096 8 "MOV" "MOVQ 0xc8(SP), AX" "mov 0xc8(%rsp),%rax" os_linux.go:904
 0x43f09e 2 "NOP" "NOPW" "data16 nop" os_linux.go:904
-0x43f0a0 5 "CALL" "CALL runtime.printuint(SB)" "callq 0x443520" os_linux.go:904
-0x43f0a5 7 "LEA" "LEAQ go:string.*+296(SB), AX" "lea 0x50b0c(%rip),%rax" os_linux.go:904
+0x43f0a0 5 "CALL" "CALL runtime.printuint(SB)" "callq 0x443520 <runtime.printuint>" os_linux.go:904
+0x43f0a5 7 "LEA" "LEAQ go:string.*+296(SB), AX" "lea 0x50b0c(%rip),%rax <go:string.*+0x128>" os_linux.go:904
 0x43f0ac 5 "MOV" "MOVL $0x4, BX" "mov $0x4,%ebx" os_linux.go:904
-0x43f0b1 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00" os_linux.go:904
+0x43f0b1 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00 <runtime.printstring>" os_linux.go:904
 0x43f0b6 8 "MOV" "MOVQ 0xc0(SP), AX" "mov 0xc0(%rsp),%rax" os_linux.go:904
 0x43f0be 2 "NOP" "NOPW" "data16 nop" os_linux.go:904
-0x43f0c0 5 "CALL" "CALL runtime.printuint(SB)" "callq 0x443520" os_linux.go:904
-0x43f0c5 7 "LEA" "LEAQ go:string.*+2862(SB), AX" "lea 0x514f2(%rip),%rax" os_linux.go:904
+0x43f0c0 5 "CALL" "CALL runtime.printuint(SB)" "callq 0x443520 <runtime.printuint>" os_linux.go:904
+0x43f0c5 7 "LEA" "LEAQ go:string.*+2862(SB), AX" "lea 0x514f2(%rip),%rax <go:string.*+0xb2e>" os_linux.go:904
 0x43f0cc 5 "MOV" "MOVL $0xa, BX" "mov $0xa,%ebx" os_linux.go:904
-0x43f0d1 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00" os_linux.go:904
-0x43f0d6 5 "CALL" "CALL runtime.printunlock(SB)" "callq 0x4430c0" os_linux.go:904
-0x43f0db 7 "LEA" "LEAQ go:string.*+30556(SB), AX" "lea 0x5810a(%rip),%rax" os_linux.go:905
+0x43f0d1 5 "CALL" "CALL runtime.printstring(SB)" "callq 0x443b00 <runtime.printstring>" os_linux.go:904
+0x43f0d6 5 "CALL" "CALL runtime.printunlock(SB)" "callq 0x4430c0 <runtime.printunlock>" os_linux.go:904
+0x43f0db 7 "LEA" "LEAQ go:string.*+30556(SB), AX" "lea 0x5810a(%rip),%rax <go:string.*+0x775c>" os_linux.go:905
 0x43f0e2 5 "MOV" "MOVL $0x44, BX" "mov $0x44,%ebx" os_linux.go:905
-0x43f0e7 5 "CALL" "CALL runtime.fatal(SB)" "callq 0x4405e0" os_linux.go:905
+0x43f0e7 5 "CALL" "CALL runtime.fatal(SB)" "callq 0x4405e0 <runtime.fatal>" os_linux.go:905
 0x43f0ec 8 "MOV" "MOVQ 0xd0(SP), AX" "mov 0xd0(%rsp),%rax" os_linux.go:908
 0x43f0f4 4 "MOV" "MOVQ 0x30(AX), AX" "mov 0x30(%rax),%rax" os_linux.go:908
 0x43f0f8 2 "TEST" "TESTB AL, 0(AX)" "test %al,(%rax)" os_linux.go:908
@@ -859,7 +859,7 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x43f11f 1 "INT" "INT $0x3" "int3" .:-1
 == runtime.runSafePointFn 0x447be0 160 /usr/local/go/src/runtime/proc.go
 0x447be0 4 "CMP" "CMPQ SP, 0x10(R14)" "cmp 0x10(%r14),%rsp" proc.go:2232
-0x447be4 6 "JBE" "JBE 0x447c71" "jbe 0x447c71" proc.go:2232
+0x447be4 6 "JBE" "JBE 0x447c71" "jbe 0x447c71 <runtime.runSafePointFn+0x91>" proc.go:2232
 0x447bea 1 "PUSH" "PUSHQ BP" "push %rbp" proc.go:2232
 0x447beb 3 "MOV" "MOVQ SP, BP" "mov %rsp,%rbp" proc.go:2232
 0x447bee 4 "SUB" "SUBQ $0x8, SP" "sub $0x8,%rsp" proc.go:2232
@@ -871,35 +871,35 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x447c06 8 "CMPXCHG" "LOCK CMPXCHGL BX, 0x3560(CX)" "lock cmpxchg %ebx,0x3560(%rcx)" proc.go:2237
 0x447c0e 3 "SETE" "SETE BL" "sete %bl" proc.go:2237
 0x447c11 2 "TEST" "TESTL BL, BL" "test %bl,%bl" proc.go:2237
-0x447c13 2 "JE" "JE 0x447c6b" "je 0x447c6b" proc.go:2237
-0x447c15 7 "MOV" "MOVQ runtime.sched+296(SB), DX" "mov 0xdf34c(%rip),%rdx" proc.go:2240
+0x447c13 2 "JE" "JE 0x447c6b" "je 0x447c6b <runtime.runSafePointFn+0x8b>" proc.go:2237
+0x447c15 7 "MOV" "MOVQ runtime.sched+296(SB), DX" "mov 0xdf34c(%rip),%rdx <runtime.sched+0x128>" proc.go:2240
 0x447c1c 3 "MOV" "MOVQ 0(DX), BX" "mov (%rdx),%rbx" proc.go:2240
 0x447c1f 3 "MOV" "MOVQ CX, AX" "mov %rcx,%rax" proc.go:2240
 0x447c22 2 "CALL" "CALL BX" "call *%rbx" proc.go:2240
 0x447c24 1 "NOP" "NOPL" "nop" proc.go:2241
 0x447c25 1 "NOP" "NOPL" "nop" lock_spinbit.go:152
-0x447c26 7 "LEA" "LEAQ runtime.sched+32(SB), AX" "lea 0xdf233(%rip),%rax" lockrank_off.go:24
-0x447c2d 5 "CALL" "CALL runtime.lock2(SB)" "callq 0x417c80" lockrank_off.go:24
-0x447c32 6 "MOV" "MOVL runtime.sched+304(SB), CX" "mov 0xdf338(%rip),%ecx" proc.go:2242
+0x447c26 7 "LEA" "LEAQ runtime.sched+32(SB), AX" "lea 0xdf233(%rip),%rax <runtime.sched+0x20>" lockrank_off.go:24
+0x447c2d 5 "CALL" "CALL runtime.lock2(SB)" "callq 0x417c80 <runtime.lock2>" lockrank_off.go:24
+0x447c32 6 "MOV" "MOVL runtime.sched+304(SB), CX" "mov 0xdf338(%rip),%ecx <runtime.sched+0x130>" proc.go:2242
 0x447c38 3 "LEA" "LEAL -0x1(CX), BX" "lea -0x1(%rcx),%ebx" proc.go:2242
-0x447c3b 6 "MOV" "MOVL BX, runtime.sched+304(SB)" "mov %ebx,0xdf32f(%rip)" proc.go:2242
+0x447c3b 6 "MOV" "MOVL BX, runtime.sched+304(SB)" "mov %ebx,0xdf32f(%rip) <runtime.sched+0x130>" proc.go:2242
 0x447c41 3 "CMP" "CMPL CX, $0x1" "cmp $0x1,%ecx" proc.go:2243
-0x447c44 2 "JNE" "JNE 0x447c52" "jne 0x447c52" proc.go:2243
-0x447c46 7 "LEA" "LEAQ runtime.sched+312(SB), AX" "lea 0xdf32b(%rip),%rax" proc.go:2244
-0x447c4d 5 "CALL" "CALL runtime.notewakeup(SB)" "callq 0x417660" proc.go:2244
+0x447c44 2 "JNE" "JNE 0x447c52" "jne 0x447c52 <runtime.runSafePointFn+0x72>" proc.go:2243
+0x447c46 7 "LEA" "LEAQ runtime.sched+312(SB), AX" "lea 0xdf32b(%rip),%rax <runtime.sched+0x138>" proc.go:2244
+0x447c4d 5 "CALL" "CALL runtime.notewakeup(SB)" "callq 0x417660 <runtime.notewakeup>" proc.go:2244
 0x447c52 1 "NOP" "NOPL" "nop" proc.go:2246
 0x447c53 1 "NOP" "NOPL" "nop" lock_spinbit.go:261
-0x447c54 7 "LEA" "LEAQ runtime.sched+32(SB), AX" "lea 0xdf205(%rip),%rax" lockrank_off.go:35
+0x447c54 7 "LEA" "LEAQ runtime.sched+32(SB), AX" "lea 0xdf205(%rip),%rax <runtime.sched+0x20>" lockrank_off.go:35
 0x447c5b 5 "NOP" "NOPL 0(AX)(AX*1)" "nopl (%rax,%rax)" lockrank_off.go:35
-0x447c60 5 "CALL" "CALL runtime.unlock2(SB)" "callq 0x4180e0" lockrank_off.go:35
+0x447c60 5 "CALL" "CALL runtime.unlock2(SB)" "callq 0x4180e0 <runtime.unlock2>" lockrank_off.go:35
 0x447c65 4 "ADD" "ADDQ $0x8, SP" "add $0x8,%rsp" proc.go:2247
 0x447c69 1 "POP" "POPQ BP" "pop %rbp" proc.go:2247
 0x447c6a 1 "RET" "RET" "retq" proc.go:2247
 0x447c6b 4 "ADD" "ADDQ $0x8, SP" "add $0x8,%rsp" proc.go:2238
 0x447c6f 1 "POP" "POPQ BP" "pop %rbp" proc.go:2238
 0x447c70 1 "RET" "RET" "retq" proc.go:2238
-0x447c71 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x475ca0" proc.go:2232
-0x447c76 5 "JMP" "JMP runtime.runSafePointFn(SB)" "jmpq 0x447be0" proc.go:2232
+0x447c71 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x475ca0 <runtime.morestack_noctxt.abi0>" proc.go:2232
+0x447c76 5 "JMP" "JMP runtime.runSafePointFn(SB)" "jmpq 0x447be0 <runtime.runSafePointFn>" proc.go:2232
 0x447c7b 1 "INT" "INT $0x3" "int3" .:-1
 0x447c7c 1 "INT" "INT $0x3" "int3" .:-1
 0x447c7d 1 "INT" "INT $0x3" "int3" .:-1
@@ -907,15 +907,15 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x447c7f 1 "INT" "INT $0x3" "int3" .:-1
 == runtime.runqput 0x452ea0 224 /usr/local/go/src/runtime/proc.go
 0x452ea0 4 "CMP" "CMPQ SP, 0x10(R14)" "cmp 0x10(%r14),%rsp" proc.go:7478
-0x452ea4 6 "JBE" "JBE 0x452f50" "jbe 0x452f50" proc.go:7478
+0x452ea4 6 "JBE" "JBE 0x452f50" "jbe 0x452f50 <runtime.runqput+0xb0>" proc.go:7478
 0x452eaa 1 "PUSH" "PUSHQ BP" "push %rbp" proc.go:7478
 0x452eab 3 "MOV" "MOVQ SP, BP" "mov %rsp,%rbp" proc.go:7478
 0x452eae 4 "SUB" "SUBQ $0x20, SP" "sub $0x20,%rsp" proc.go:7478
 0x452eb2 2 "TEST" "TESTL CL, CL" "test %cl,%cl" proc.go:7494
-0x452eb4 2 "JNE" "JNE 0x452f18" "jne 0x452f18" proc.go:7494
+0x452eb4 2 "JNE" "JNE 0x452f18" "jne 0x452f18 <runtime.runqput+0x78>" proc.go:7494
 0x452eb6 5 "MOV" "MOVQ AX, 0x30(SP)" "mov %rax,0x30(%rsp)" proc.go:7494
 0x452ebb 5 "MOV" "MOVQ BX, 0x18(SP)" "mov %rbx,0x18(%rsp)" proc.go:7507
-0x452ec0 2 "JMP" "JMP 0x452ecc" "jmp 0x452ecc" proc.go:7508
+0x452ec0 2 "JMP" "JMP 0x452ecc" "jmp 0x452ecc <runtime.runqput+0x2c>" proc.go:7508
 0x452ec2 5 "MOV" "MOVQ 0x30(SP), AX" "mov 0x30(%rsp),%rax" proc.go:7508
 0x452ec7 5 "MOV" "MOVQ 0x18(SP), BX" "mov 0x18(%rsp),%rbx" proc.go:7515
 0x452ecc 6 "MOV" "MOVL 0x190(AX), CX" "mov 0x190(%rax),%ecx" proc.go:7508
@@ -924,10 +924,10 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x452eda 2 "SUB" "SUBL CX, DX" "sub %ecx,%edx" proc.go:7510
 0x452edc 4 "NOP" "NOPL 0(AX)" "nopl (%rax)" proc.go:7510
 0x452ee0 6 "CMP" "CMPL DX, $0x100" "cmp $0x100,%edx" proc.go:7510
-0x452ee6 2 "JB" "JB 0x452ef7" "jb 0x452ef7" proc.go:7510
-0x452ee8 5 "CALL" "CALL runtime.runqputslow(SB)" "callq 0x452f80" proc.go:7515
+0x452ee6 2 "JB" "JB 0x452ef7" "jb 0x452ef7 <runtime.runqput+0x57>" proc.go:7510
+0x452ee8 5 "CALL" "CALL runtime.runqputslow(SB)" "callq 0x452f80 <runtime.runqputslow>" proc.go:7515
 0x452eed 2 "TEST" "TESTL AL, AL" "test %al,%al" proc.go:7515
-0x452eef 2 "JE" "JE 0x452ec2" "je 0x452ec2" proc.go:7515
+0x452eef 2 "JE" "JE 0x452ec2" "je 0x452ec2 <runtime.runqput+0x22>" proc.go:7515
 0x452ef1 4 "ADD" "ADDQ $0x20, SP" "add $0x20,%rsp" proc.go:7516
 0x452ef5 1 "POP" "POPQ BP" "pop %rbp" proc.go:7516
 0x452ef6 1 "RET" "RET" "retq" proc.go:7516
@@ -947,12 +947,12 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x452f28 9 "CMPXCHG" "LOCK CMPXCHGQ BX, 0x998(CX)" "lock cmpxchg %rbx,0x998(%rcx)" runtime2.go:252
 0x452f31 4 "SETE" "SETE R8" "sete %r8b" runtime2.go:252
 0x452f35 3 "TEST" "TESTL R8, R8" "test %r8b,%r8b" runtime2.go:252
-0x452f38 2 "JE" "JE 0x452f12" "je 0x452f12" proc.go:7497
+0x452f38 2 "JE" "JE 0x452f12" "je 0x452f12 <runtime.runqput+0x72>" proc.go:7497
 0x452f3a 3 "TEST" "TESTQ DX, DX" "test %rdx,%rdx" proc.go:7500
-0x452f3d 2 "JE" "JE 0x452f4a" "je 0x452f4a" proc.go:7500
+0x452f3d 2 "JE" "JE 0x452f4a" "je 0x452f4a <runtime.runqput+0xaa>" proc.go:7500
 0x452f3f 3 "MOV" "MOVQ CX, AX" "mov %rcx,%rax" proc.go:7508
 0x452f42 3 "MOV" "MOVQ DX, BX" "mov %rdx,%rbx" proc.go:7507
-0x452f45 5 "JMP" "JMP 0x452eb6" "jmpq 0x452eb6" proc.go:7504
+0x452f45 5 "JMP" "JMP 0x452eb6" "jmpq 0x452eb6 <runtime.runqput+0x16>" proc.go:7504
 0x452f4a 4 "ADD" "ADDQ $0x20, SP" "add $0x20,%rsp" proc.go:7501
 0x452f4e 1 "POP" "POPQ BP" "pop %rbp" proc.go:7501
 0x452f4f 1 "RET" "RET" "retq" proc.go:7501
@@ -960,11 +960,11 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x452f55 5 "MOV" "MOVQ BX, 0x10(SP)" "mov %rbx,0x10(%rsp)" proc.go:7478
 0x452f5a 4 "MOV" "MOVB CL, 0x18(SP)" "mov %cl,0x18(%rsp)" proc.go:7478
 0x452f5e 2 "NOP" "NOPW" "data16 nop" proc.go:7478
-0x452f60 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x475ca0" proc.go:7478
+0x452f60 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x475ca0 <runtime.morestack_noctxt.abi0>" proc.go:7478
 0x452f65 5 "MOV" "MOVQ 0x8(SP), AX" "mov 0x8(%rsp),%rax" proc.go:7478
 0x452f6a 5 "MOV" "MOVQ 0x10(SP), BX" "mov 0x10(%rsp),%rbx" proc.go:7478
 0x452f6f 5 "MOVZX" "MOVZX 0x18(SP), CX" "movzbl 0x18(%rsp),%ecx" proc.go:7478
-0x452f74 5 "JMP" "JMP runtime.runqput(SB)" "jmpq 0x452ea0" proc.go:7478
+0x452f74 5 "JMP" "JMP runtime.runqput(SB)" "jmpq 0x452ea0 <runtime.runqput>" proc.go:7478
 0x452f79 1 "INT" "INT $0x3" "int3" .:-1
 0x452f7a 1 "INT" "INT $0x3" "int3" .:-1
 0x452f7b 1 "INT" "INT $0x3" "int3" .:-1
@@ -975,7 +975,7 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 == runtime.runqputslow 0x452f80 448 /usr/local/go/src/runtime/proc.go
 0x452f80 8 "LEA" "LEAQ 0xfffffc48(SP), R12" "lea 0xfffffc48(%rsp),%r12" proc.go:7524
 0x452f88 4 "CMP" "CMPQ R12, 0x10(R14)" "cmp 0x10(%r14),%r12" proc.go:7524
-0x452f8c 6 "JBE" "JBE 0x4530fe" "jbe 0x4530fe" proc.go:7524
+0x452f8c 6 "JBE" "JBE 0x4530fe" "jbe 0x4530fe <runtime.runqputslow+0x17e>" proc.go:7524
 0x452f92 1 "PUSH" "PUSHQ BP" "push %rbp" proc.go:7524
 0x452f93 3 "MOV" "MOVQ SP, BP" "mov %rsp,%rbp" proc.go:7524
 0x452f96 7 "SUB" "SUBQ $0x430, SP" "sub $0x430,%rsp" proc.go:7524
@@ -988,14 +988,14 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x452fba 4 "ADD" "ADDQ $0x40, DX" "add $0x40,%rdx" proc.go:7525
 0x452fbe 2 "NOP" "NOPW" "data16 nop" proc.go:7525
 0x452fc0 2 "DEC" "DECL SI" "dec %esi" proc.go:7525
-0x452fc2 2 "JNE" "JNE 0x452fa7" "jne 0x452fa7" proc.go:7525
+0x452fc2 2 "JNE" "JNE 0x452fa7" "jne 0x452fa7 <runtime.runqputslow+0x27>" proc.go:7525
 0x452fc4 5 "MOVUPS" "MOVUPS X15, -0x8(DX)" "movups %xmm15,-0x8(%rdx)" proc.go:7525
 0x452fc9 2 "SUB" "SUBL CX, DI" "sub %ecx,%edi" proc.go:7528
 0x452fcb 2 "SHR" "SHRL $0x1, DI" "shr %edi" proc.go:7529
 0x452fcd 6 "CMP" "CMPL DI, $0x80" "cmp $0x80,%edi" proc.go:7530
-0x452fd3 6 "JNE" "JNE 0x4530ec" "jne 0x4530ec" proc.go:7530
+0x452fd3 6 "JNE" "JNE 0x4530ec" "jne 0x4530ec <runtime.runqputslow+0x16c>" proc.go:7530
 0x452fd9 2 "XOR" "XORL DX, DX" "xor %edx,%edx" proc.go:7530
-0x452fdb 2 "JMP" "JMP 0x452ff5" "jmp 0x452ff5" proc.go:7530
+0x452fdb 2 "JMP" "JMP 0x452ff5" "jmp 0x452ff5 <runtime.runqputslow+0x75>" proc.go:7530
 0x452fdd 2 "TEST" "TESTB AL, 0(AX)" "test %al,(%rax)" proc.go:7534
 0x452fdf 3 "LEA" "LEAL 0(DX)(CX*1), SI" "lea (%rdx,%rcx),%esi" proc.go:7534
 0x452fe2 4 "MOVZX" "MOVZX SI, SI" "movzbl %sil,%esi" proc.go:7534
@@ -1003,17 +1003,17 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x452fee 5 "MOV" "MOVQ SI, 0x28(SP)(DX*8)" "mov %rsi,0x28(%rsp,%rdx,8)" proc.go:7534
 0x452ff3 2 "INC" "INCL DX" "inc %edx" proc.go:7533
 0x452ff5 6 "CMP" "CMPL DX, $0x80" "cmp $0x80,%edx" proc.go:7533
-0x452ffb 2 "JB" "JB 0x452fdd" "jb 0x452fdd" proc.go:7533
+0x452ffb 2 "JB" "JB 0x452fdd" "jb 0x452fdd <runtime.runqputslow+0x5d>" proc.go:7533
 0x452ffd 6 "LEA" "LEAL 0x80(CX), DX" "lea 0x80(%rcx),%edx" proc.go:7536
 0x453003 3 "MOV" "MOVQ AX, SI" "mov %rax,%rsi" proc.go:7530
 0x453006 2 "MOV" "MOVL CX, AX" "mov %ecx,%eax" proc.go:7536
 0x453008 8 "CMPXCHG" "LOCK CMPXCHGL DX, 0x190(SI)" "lock cmpxchg %edx,0x190(%rsi)" proc.go:7536
 0x453010 3 "SETE" "SETE CL" "sete %cl" proc.go:7536
 0x453013 2 "TEST" "TESTL CL, CL" "test %cl,%cl" proc.go:7536
-0x453015 2 "JE" "JE 0x453023" "je 0x453023" proc.go:7536
+0x453015 2 "JE" "JE 0x453023" "je 0x453023 <runtime.runqputslow+0xa3>" proc.go:7536
 0x453017 8 "MOV" "MOVQ BX, 0x428(SP)" "mov %rbx,0x428(%rsp)" proc.go:7539
 0x45301f 2 "XOR" "XORL AX, AX" "xor %eax,%eax" proc.go:7539
-0x453021 2 "JMP" "JMP 0x453041" "jmp 0x453041" proc.go:7549
+0x453021 2 "JMP" "JMP 0x453041" "jmp 0x453041 <runtime.runqputslow+0xc1>" proc.go:7549
 0x453023 2 "XOR" "XORL AX, AX" "xor %eax,%eax" proc.go:7537
 0x453025 7 "ADD" "ADDQ $0x430, SP" "add $0x430,%rsp" proc.go:7537
 0x45302c 1 "POP" "POPQ BP" "pop %rbp" proc.go:7537
@@ -1023,7 +1023,7 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x453035 5 "MOV" "MOVQ 0x28(SP)(AX*8), DX" "mov 0x28(%rsp,%rax,8),%rdx" proc.go:7550
 0x45303a 7 "MOV" "MOVQ DX, 0xa0(CX)" "mov %rdx,0xa0(%rcx)" runtime2.go:248
 0x453041 5 "CMP" "CMPL AX, $0x80" "cmp $0x80,%eax" proc.go:7549
-0x453046 2 "JB" "JB 0x45302e" "jb 0x45302e" proc.go:7549
+0x453046 2 "JB" "JB 0x45302e" "jb 0x45302e <runtime.runqputslow+0xae>" proc.go:7549
 0x453048 5 "MOV" "MOVQ 0x28(SP), CX" "mov 0x28(%rsp),%rcx" proc.go:7553
 0x45304d 8 "MOV" "MOVQ 0x428(SP), DX" "mov 0x428(%rsp),%rdx" proc.go:7553
 0x453055 5 "MOV" "MOVQ CX, 0x10(SP)" "mov %rcx,0x10(%rsp)" proc.go:7553
@@ -1031,50 +1031,50 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x45305f 8 "MOV" "MOVL $0x81, 0x20(SP)" "movl $0x81,0x20(%rsp)" proc.go:7553
 0x453067 1 "NOP" "NOPL" "nop" proc.go:7556
 0x453068 1 "NOP" "NOPL" "nop" lock_spinbit.go:152
-0x453069 7 "LEA" "LEAQ runtime.sched+32(SB), AX" "lea 0xd3df0(%rip),%rax" lockrank_off.go:24
-0x453070 5 "CALL" "CALL runtime.lock2(SB)" "callq 0x417c80" lockrank_off.go:24
+0x453069 7 "LEA" "LEAQ runtime.sched+32(SB), AX" "lea 0xd3df0(%rip),%rax <runtime.sched+0x20>" lockrank_off.go:24
+0x453070 5 "CALL" "CALL runtime.lock2(SB)" "callq 0x417c80 <runtime.lock2>" lockrank_off.go:24
 0x453075 5 "MOV" "MOVQ 0x18(SP), CX" "mov 0x18(%rsp),%rcx" proc.go:7275
 0x45307a 1 "NOP" "NOPL" "nop" proc.go:7557
 0x45307b 4 "MOV" "MOVL 0x20(SP), DX" "mov 0x20(%rsp),%edx" proc.go:7275
 0x45307f 1 "NOP" "NOPL" "nop" proc.go:7275
 0x453080 3 "TEST" "TESTQ CX, CX" "test %rcx,%rcx" proc.go:7787
-0x453083 2 "JE" "JE 0x4530c2" "je 0x4530c2" proc.go:7787
+0x453083 2 "JE" "JE 0x4530c2" "je 0x4530c2 <runtime.runqputslow+0x142>" proc.go:7787
 0x453085 3 "MOV" "MOVQ CX, BX" "mov %rcx,%rbx" runtime2.go:245
 0x453088 5 "MOV" "MOVQ 0x10(SP), SI" "mov 0x10(%rsp),%rsi" proc.go:7275
 0x45308d 11 "MOV" "MOVQ $0x0, 0xa0(CX)" "movq $0x0,0xa0(%rcx)" proc.go:7790
-0x453098 7 "MOV" "MOVQ runtime.sched+136(SB), CX" "mov 0xd3e29(%rip),%rcx" proc.go:7791
+0x453098 7 "MOV" "MOVQ runtime.sched+136(SB), CX" "mov 0xd3e29(%rip),%rcx <runtime.sched+0x88>" proc.go:7791
 0x45309f 1 "NOP" "NOPL" "nop" proc.go:7791
 0x4530a0 3 "TEST" "TESTQ CX, CX" "test %rcx,%rcx" proc.go:7791
-0x4530a3 2 "JE" "JE 0x4530ae" "je 0x4530ae" proc.go:7791
+0x4530a3 2 "JE" "JE 0x4530ae" "je 0x4530ae <runtime.runqputslow+0x12e>" proc.go:7791
 0x4530a5 7 "MOV" "MOVQ SI, 0xa0(CX)" "mov %rsi,0xa0(%rcx)" proc.go:7792
-0x4530ac 2 "JMP" "JMP 0x4530b5" "jmp 0x4530b5" proc.go:7792
-0x4530ae 7 "MOV" "MOVQ SI, runtime.sched+128(SB)" "mov %rsi,0xd3e0b(%rip)" proc.go:7794
-0x4530b5 7 "MOV" "MOVQ BX, runtime.sched+136(SB)" "mov %rbx,0xd3e0c(%rip)" proc.go:7796
-0x4530bc 6 "ADD" "ADDL DX, runtime.sched+144(SB)" "add %edx,0xd3e0e(%rip)" proc.go:7797
+0x4530ac 2 "JMP" "JMP 0x4530b5" "jmp 0x4530b5 <runtime.runqputslow+0x135>" proc.go:7792
+0x4530ae 7 "MOV" "MOVQ SI, runtime.sched+128(SB)" "mov %rsi,0xd3e0b(%rip) <runtime.sched+0x80>" proc.go:7794
+0x4530b5 7 "MOV" "MOVQ BX, runtime.sched+136(SB)" "mov %rbx,0xd3e0c(%rip) <runtime.sched+0x88>" proc.go:7796
+0x4530bc 6 "ADD" "ADDL DX, runtime.sched+144(SB)" "add %edx,0xd3e0e(%rip) <runtime.sched+0x90>" proc.go:7797
 0x4530c2 6 "MOVUPS" "MOVUPS X15, 0x10(SP)" "movups %xmm15,0x10(%rsp)" proc.go:7276
 0x4530c8 8 "MOV" "MOVL $0x0, 0x20(SP)" "movl $0x0,0x20(%rsp)" proc.go:7276
 0x4530d0 1 "NOP" "NOPL" "nop" proc.go:7558
 0x4530d1 1 "NOP" "NOPL" "nop" lock_spinbit.go:261
-0x4530d2 7 "LEA" "LEAQ runtime.sched+32(SB), AX" "lea 0xd3d87(%rip),%rax" lockrank_off.go:35
-0x4530d9 5 "CALL" "CALL runtime.unlock2(SB)" "callq 0x4180e0" lockrank_off.go:35
+0x4530d2 7 "LEA" "LEAQ runtime.sched+32(SB), AX" "lea 0xd3d87(%rip),%rax <runtime.sched+0x20>" lockrank_off.go:35
+0x4530d9 5 "CALL" "CALL runtime.unlock2(SB)" "callq 0x4180e0 <runtime.unlock2>" lockrank_off.go:35
 0x4530de 5 "MOV" "MOVL $0x1, AX" "mov $0x1,%eax" proc.go:7559
 0x4530e3 7 "ADD" "ADDQ $0x430, SP" "add $0x430,%rsp" proc.go:7559
 0x4530ea 1 "POP" "POPQ BP" "pop %rbp" proc.go:7559
 0x4530eb 1 "RET" "RET" "retq" proc.go:7559
-0x4530ec 7 "LEA" "LEAQ go:string.*+16506(SB), AX" "lea 0x40a17(%rip),%rax" proc.go:7531
+0x4530ec 7 "LEA" "LEAQ go:string.*+16506(SB), AX" "lea 0x40a17(%rip),%rax <go:string.*+0x407a>" proc.go:7531
 0x4530f3 5 "MOV" "MOVL $0x1e, BX" "mov $0x1e,%ebx" proc.go:7531
-0x4530f8 5 "CALL" "CALL runtime.throw(SB)" "callq 0x472180" proc.go:7531
+0x4530f8 5 "CALL" "CALL runtime.throw(SB)" "callq 0x472180 <runtime.throw>" proc.go:7531
 0x4530fd 1 "NOP" "NOPL" "nop" proc.go:7531
 0x4530fe 5 "MOV" "MOVQ AX, 0x8(SP)" "mov %rax,0x8(%rsp)" proc.go:7524
 0x453103 5 "MOV" "MOVQ BX, 0x10(SP)" "mov %rbx,0x10(%rsp)" proc.go:7524
 0x453108 4 "MOV" "MOVL CX, 0x18(SP)" "mov %ecx,0x18(%rsp)" proc.go:7524
 0x45310c 4 "MOV" "MOVL DI, 0x1c(SP)" "mov %edi,0x1c(%rsp)" proc.go:7524
-0x453110 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x475ca0" proc.go:7524
+0x453110 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x475ca0 <runtime.morestack_noctxt.abi0>" proc.go:7524
 0x453115 5 "MOV" "MOVQ 0x8(SP), AX" "mov 0x8(%rsp),%rax" proc.go:7524
 0x45311a 5 "MOV" "MOVQ 0x10(SP), BX" "mov 0x10(%rsp),%rbx" proc.go:7524
 0x45311f 4 "MOV" "MOVL 0x18(SP), CX" "mov 0x18(%rsp),%ecx" proc.go:7524
 0x453123 4 "MOV" "MOVL 0x1c(SP), DI" "mov 0x1c(%rsp),%edi" proc.go:7524
-0x453127 5 "JMP" "JMP runtime.runqputslow(SB)" "jmpq 0x452f80" proc.go:7524
+0x453127 5 "JMP" "JMP runtime.runqputslow(SB)" "jmpq 0x452f80 <runtime.runqputslow>" proc.go:7524
 0x45312c 1 "INT" "INT $0x3" "int3" .:-1
 0x45312d 1 "INT" "INT $0x3" "int3" .:-1
 0x45312e 1 "INT" "INT $0x3" "int3" .:-1
@@ -1098,34 +1098,34 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 == runtime.runqputbatch 0x453140 128 /usr/local/go/src/runtime/proc.go
 0x453140 1 "NOP" "NOPL" "nop" proc.go:7565
 0x453141 4 "CMP" "CMPQ 0(BX), $0x0" "cmpq $0x0,(%rbx)" proc.go:7759
-0x453145 2 "JE" "JE 0x453155" "je 0x453155" proc.go:7566
+0x453145 2 "JE" "JE 0x453155" "je 0x453155 <runtime.runqputbatch+0x15>" proc.go:7566
 0x453147 6 "MOV" "MOVL 0x190(AX), CX" "mov 0x190(%rax),%ecx" proc.go:7569
 0x45314d 6 "MOV" "MOVL 0x194(AX), DX" "mov 0x194(%rax),%edx" proc.go:7570
-0x453153 2 "JMP" "JMP 0x453165" "jmp 0x453165" proc.go:7572
+0x453153 2 "JMP" "JMP 0x453165" "jmp 0x453165 <runtime.runqputbatch+0x25>" proc.go:7572
 0x453155 1 "RET" "RET" "retq" proc.go:7567
 0x453156 4 "MOVZX" "MOVZX DI, R8" "movzbl %dil,%r8d" proc.go:7574
 0x45315a 8 "MOV" "MOVQ SI, 0x198(AX)(R8*8)" "mov %rsi,0x198(%rax,%r8,8)" runtime2.go:248
 0x453162 3 "LEA" "LEAL 0x1(DI), DX" "lea 0x1(%rdi),%edx" proc.go:7575
 0x453165 3 "MOV" "MOVQ 0(BX), SI" "mov (%rbx),%rsi" proc.go:7759
 0x453168 3 "TEST" "TESTQ SI, SI" "test %rsi,%rsi" proc.go:7759
-0x45316b 2 "JE" "JE 0x4531a2" "je 0x4531a2" proc.go:7572
+0x45316b 2 "JE" "JE 0x4531a2" "je 0x4531a2 <runtime.runqputbatch+0x62>" proc.go:7572
 0x45316d 2 "MOV" "MOVL DX, DI" "mov %edx,%edi" proc.go:7572
 0x45316f 2 "SUB" "SUBL CX, DX" "sub %ecx,%edx" proc.go:7572
 0x453171 6 "CMP" "CMPL DX, $0x100" "cmp $0x100,%edx" proc.go:7572
-0x453177 2 "JAE" "JAE 0x4531a4" "jae 0x4531a4" proc.go:7572
+0x453177 2 "JAE" "JAE 0x4531a4" "jae 0x4531a4 <runtime.runqputbatch+0x64>" proc.go:7572
 0x453179 1 "NOP" "NOPL" "nop" proc.go:7573
 0x45317a 1 "NOP" "NOPL" "nop" proc.go:7803
 0x45317b 5 "NOP" "NOPL 0(AX)(AX*1)" "nopl (%rax,%rax)" proc.go:7803
 0x453180 3 "TEST" "TESTQ SI, SI" "test %rsi,%rsi" proc.go:7804
-0x453183 2 "JE" "JE 0x453156" "je 0x453156" proc.go:7804
+0x453183 2 "JE" "JE 0x453156" "je 0x453156 <runtime.runqputbatch+0x16>" proc.go:7804
 0x453185 7 "MOV" "MOVQ 0xa0(SI), DX" "mov 0xa0(%rsi),%rdx" proc.go:7805
 0x45318c 3 "MOV" "MOVQ DX, 0(BX)" "mov %rdx,(%rbx)" proc.go:7805
 0x45318f 3 "TEST" "TESTQ DX, DX" "test %rdx,%rdx" proc.go:7806
-0x453192 2 "JNE" "JNE 0x45319c" "jne 0x45319c" proc.go:7806
+0x453192 2 "JNE" "JNE 0x45319c" "jne 0x45319c <runtime.runqputbatch+0x5c>" proc.go:7806
 0x453194 8 "MOV" "MOVQ $0x0, 0x8(BX)" "movq $0x0,0x8(%rbx)" proc.go:7807
 0x45319c 3 "DEC" "DECL 0x10(BX)" "decl 0x10(%rbx)" proc.go:7809
 0x45319f 1 "NOP" "NOPL" "nop" proc.go:7809
-0x4531a0 2 "JMP" "JMP 0x453156" "jmp 0x453156" proc.go:7809
+0x4531a0 2 "JMP" "JMP 0x453156" "jmp 0x453156 <runtime.runqputbatch+0x16>" proc.go:7809
 0x4531a2 2 "MOV" "MOVL DX, DI" "mov %edx,%edi" proc.go:7589
 0x4531a4 6 "XCHG" "XCHGL DI, 0x194(AX)" "xchg %edi,0x194(%rax)" proc.go:7589
 0x4531aa 1 "RET" "RET" "retq" proc.go:7591
@@ -1159,22 +1159,22 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x4531d6 7 "MOV" "MOVQ 0x998(AX), DX" "mov 0x998(%rax),%rdx" proc.go:7624
 0x4531dd 3 "NOP" "NOPL 0(AX)" "nopl (%rax)" proc.go:7624
 0x4531e0 3 "TEST" "TESTQ DX, DX" "test %rdx,%rdx" proc.go:7625
-0x4531e3 2 "JE" "JE 0x45323a" "je 0x45323a" proc.go:7625
+0x4531e3 2 "JE" "JE 0x45323a" "je 0x45323a <runtime.runqdrain+0x7a>" proc.go:7625
 0x4531e5 3 "MOV" "MOVQ AX, CX" "mov %rax,%rcx" proc.go:7625
 0x4531e8 3 "MOV" "MOVQ DX, AX" "mov %rdx,%rax" runtime2.go:252
 0x4531eb 2 "XOR" "XORL SI, SI" "xor %esi,%esi" runtime2.go:252
 0x4531ed 9 "CMPXCHG" "LOCK CMPXCHGQ SI, 0x998(CX)" "lock cmpxchg %rsi,0x998(%rcx)" runtime2.go:252
 0x4531f6 4 "SETE" "SETE SI" "sete %sil" runtime2.go:252
 0x4531fa 3 "TEST" "TESTL SI, SI" "test %sil,%sil" runtime2.go:252
-0x4531fd 2 "JE" "JE 0x45323d" "je 0x45323d" proc.go:7625
+0x4531fd 2 "JE" "JE 0x45323d" "je 0x45323d <runtime.runqdrain+0x7d>" proc.go:7625
 0x4531ff 11 "MOV" "MOVQ $0x0, 0xa0(DX)" "movq $0x0,0xa0(%rdx)" proc.go:7774
 0x45320a 5 "MOV" "MOVQ 0x10(SP), SI" "mov 0x10(%rsp),%rsi" proc.go:7775
 0x45320f 3 "TEST" "TESTQ SI, SI" "test %rsi,%rsi" proc.go:7775
-0x453212 2 "JE" "JE 0x453222" "je 0x453222" proc.go:7775
+0x453212 2 "JE" "JE 0x453222" "je 0x453222 <runtime.runqdrain+0x62>" proc.go:7775
 0x453214 3 "MOV" "MOVQ DX, DI" "mov %rdx,%rdi" runtime2.go:248
 0x453217 7 "MOV" "MOVQ DX, 0xa0(SI)" "mov %rdx,0xa0(%rsi)" runtime2.go:248
 0x45321e 2 "NOP" "NOPW" "data16 nop" runtime2.go:248
-0x453220 2 "JMP" "JMP 0x45322e" "jmp 0x45322e" proc.go:7776
+0x453220 2 "JMP" "JMP 0x45322e" "jmp 0x45322e <runtime.runqdrain+0x6e>" proc.go:7776
 0x453222 3 "MOV" "MOVQ DX, SI" "mov %rdx,%rsi" runtime2.go:248
 0x453225 1 "NOP" "NOPL" "nop" proc.go:7778
 0x453226 5 "MOV" "MOVQ DX, 0x8(SP)" "mov %rdx,0x8(%rsp)" runtime2.go:248
@@ -1182,24 +1182,24 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x45322e 1 "NOP" "NOPL" "nop" proc.go:7780
 0x45322f 5 "MOV" "MOVQ DI, 0x10(SP)" "mov %rdi,0x10(%rsp)" runtime2.go:248
 0x453234 4 "INC" "INCL 0x18(SP)" "incl 0x18(%rsp)" proc.go:7781
-0x453238 2 "JMP" "JMP 0x45323d" "jmp 0x45323d" proc.go:7626
+0x453238 2 "JMP" "JMP 0x45323d" "jmp 0x45323d <runtime.runqdrain+0x7d>" proc.go:7626
 0x45323a 3 "MOV" "MOVQ AX, CX" "mov %rax,%rcx" proc.go:7630
 0x45323d 6 "MOV" "MOVL 0x190(CX), AX" "mov 0x190(%rcx),%eax" proc.go:7630
 0x453243 6 "MOV" "MOVL 0x194(CX), DX" "mov 0x194(%rcx),%edx" proc.go:7631
 0x453249 2 "MOV" "MOVL DX, SI" "mov %edx,%esi" proc.go:7632
 0x45324b 2 "SUB" "SUBL AX, DX" "sub %eax,%edx" proc.go:7632
 0x45324d 2 "TEST" "TESTL DX, DX" "test %edx,%edx" proc.go:7633
-0x45324f 2 "JE" "JE 0x453276" "je 0x453276" proc.go:7633
+0x45324f 2 "JE" "JE 0x453276" "je 0x453276 <runtime.runqdrain+0xb6>" proc.go:7633
 0x453251 6 "CMP" "CMPL DX, $0x100" "cmp $0x100,%edx" proc.go:7636
-0x453257 2 "JA" "JA 0x45323d" "ja 0x45323d" proc.go:7636
+0x453257 2 "JA" "JA 0x45323d" "ja 0x45323d <runtime.runqdrain+0x7d>" proc.go:7636
 0x453259 4 "MOV" "MOVL AX, 0x4(SP)" "mov %eax,0x4(%rsp)" proc.go:7630
 0x45325d 8 "CMPXCHG" "LOCK CMPXCHGL SI, 0x190(CX)" "lock cmpxchg %esi,0x190(%rcx)" proc.go:7640
 0x453265 4 "SETE" "SETE SI" "sete %sil" proc.go:7640
 0x453269 3 "TEST" "TESTL SI, SI" "test %sil,%sil" proc.go:7640
-0x45326c 2 "JE" "JE 0x45323d" "je 0x45323d" proc.go:7640
+0x45326c 2 "JE" "JE 0x45323d" "je 0x45323d <runtime.runqdrain+0x7d>" proc.go:7640
 0x45326e 4 "MOV" "MOVL 0x4(SP), SI" "mov 0x4(%rsp),%esi" proc.go:7640
 0x453272 2 "XOR" "XORL AX, AX" "xor %eax,%eax" proc.go:7640
-0x453274 2 "JMP" "JMP 0x453296" "jmp 0x453296" proc.go:7640
+0x453274 2 "JMP" "JMP 0x453296" "jmp 0x453296 <runtime.runqdrain+0xd6>" proc.go:7640
 0x453276 5 "MOV" "MOVQ 0x8(SP), AX" "mov 0x8(%rsp),%rax" proc.go:7634
 0x45327b 5 "MOV" "MOVQ 0x10(SP), BX" "mov 0x10(%rsp),%rbx" proc.go:7634
 0x453280 4 "MOV" "MOVL 0x18(SP), CX" "mov 0x18(%rsp),%ecx" proc.go:7634
@@ -1211,7 +1211,7 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x453290 4 "INC" "INCL 0x18(SP)" "incl 0x18(%rsp)" proc.go:7781
 0x453294 2 "INC" "INCL AX" "inc %eax" proc.go:7651
 0x453296 2 "CMP" "CMPL AX, DX" "cmp %edx,%eax" proc.go:7651
-0x453298 2 "JAE" "JAE 0x4532d8" "jae 0x4532d8" proc.go:7651
+0x453298 2 "JAE" "JAE 0x4532d8" "jae 0x4532d8 <runtime.runqdrain+0x118>" proc.go:7651
 0x45329a 3 "LEA" "LEAL 0(AX)(SI*1), DI" "lea (%rax,%rsi),%edi" proc.go:7652
 0x45329d 4 "MOVZX" "MOVZX DI, DI" "movzbl %dil,%edi" proc.go:7652
 0x4532a1 8 "MOV" "MOVQ 0x198(CX)(DI*8), DI" "mov 0x198(%rcx,%rdi,8),%rdi" proc.go:7652
@@ -1219,14 +1219,14 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x4532aa 11 "MOV" "MOVQ $0x0, 0xa0(DI)" "movq $0x0,0xa0(%rdi)" proc.go:7774
 0x4532b5 5 "MOV" "MOVQ 0x10(SP), R8" "mov 0x10(%rsp),%r8" proc.go:7775
 0x4532ba 3 "TEST" "TESTQ R8, R8" "test %r8,%r8" proc.go:7775
-0x4532bd 2 "JE" "JE 0x4532cb" "je 0x4532cb" proc.go:7775
+0x4532bd 2 "JE" "JE 0x4532cb" "je 0x4532cb <runtime.runqdrain+0x10b>" proc.go:7775
 0x4532bf 3 "MOV" "MOVQ DI, R9" "mov %rdi,%r9" runtime2.go:248
 0x4532c2 7 "MOV" "MOVQ DI, 0xa0(R8)" "mov %rdi,0xa0(%r8)" runtime2.go:248
-0x4532c9 2 "JMP" "JMP 0x45328a" "jmp 0x45328a" proc.go:7776
+0x4532c9 2 "JMP" "JMP 0x45328a" "jmp 0x45328a <runtime.runqdrain+0xca>" proc.go:7776
 0x4532cb 3 "MOV" "MOVQ DI, R8" "mov %rdi,%r8" runtime2.go:248
 0x4532ce 5 "MOV" "MOVQ DI, 0x8(SP)" "mov %rdi,0x8(%rsp)" runtime2.go:248
 0x4532d3 3 "MOV" "MOVQ R8, R9" "mov %r8,%r9" runtime2.go:248
-0x4532d6 2 "JMP" "JMP 0x45328a" "jmp 0x45328a" proc.go:7778
+0x4532d6 2 "JMP" "JMP 0x45328a" "jmp 0x45328a <runtime.runqdrain+0xca>" proc.go:7778
 0x4532d8 5 "MOV" "MOVQ 0x8(SP), AX" "mov 0x8(%rsp),%rax" proc.go:7655
 0x4532dd 5 "MOV" "MOVQ 0x10(SP), BX" "mov 0x10(%rsp),%rbx" proc.go:7655
 0x4532e2 4 "MOV" "MOVL 0x18(SP), CX" "mov 0x18(%rsp),%ecx" proc.go:7655
@@ -1255,7 +1255,7 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x4532ff 1 "INT" "INT $0x3" "int3" .:-1
 == runtime.runqgrab 0x453300 448 /usr/local/go/src/runtime/proc.go
 0x453300 4 "CMP" "CMPQ SP, 0x10(R14)" "cmp 0x10(%r14),%rsp" proc.go:7662
-0x453304 6 "JBE" "JBE 0x453477" "jbe 0x453477" proc.go:7662
+0x453304 6 "JBE" "JBE 0x453477" "jbe 0x453477 <runtime.runqgrab+0x177>" proc.go:7662
 0x45330a 1 "PUSH" "PUSHQ BP" "push %rbp" proc.go:7662
 0x45330b 3 "MOV" "MOVQ SP, BP" "mov %rsp,%rbp" proc.go:7662
 0x45330e 4 "SUB" "SUBQ $0x10, SP" "sub $0x10,%rsp" proc.go:7662
@@ -1263,7 +1263,7 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x453317 5 "MOV" "MOVQ BX, 0x28(SP)" "mov %rbx,0x28(%rsp)" proc.go:7663
 0x45331c 4 "MOV" "MOVL CX, 0x30(SP)" "mov %ecx,0x30(%rsp)" proc.go:7663
 0x453320 5 "MOV" "MOVB DI, 0x34(SP)" "mov %dil,0x34(%rsp)" proc.go:7663
-0x453325 2 "JMP" "JMP 0x45332a" "jmp 0x45332a" proc.go:7663
+0x453325 2 "JMP" "JMP 0x45332a" "jmp 0x45332a <runtime.runqgrab+0x2a>" proc.go:7663
 0x453327 3 "MOV" "MOVQ SI, AX" "mov %rsi,%rax" proc.go:7664
 0x45332a 6 "MOV" "MOVL 0x190(AX), DX" "mov 0x190(%rax),%edx" proc.go:7664
 0x453330 6 "MOV" "MOVL 0x194(AX), SI" "mov 0x194(%rax),%esi" proc.go:7665
@@ -1272,29 +1272,29 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x45333b 2 "SHR" "SHRL $0x1, SI" "shr %esi" proc.go:7667
 0x45333d 3 "SUB" "SUBL SI, R8" "sub %esi,%r8d" proc.go:7667
 0x453340 3 "TEST" "TESTL R8, R8" "test %r8d,%r8d" proc.go:7668
-0x453343 6 "JNE" "JNE 0x4533ed" "jne 0x4533ed" proc.go:7668
+0x453343 6 "JNE" "JNE 0x4533ed" "jne 0x4533ed <runtime.runqgrab+0xed>" proc.go:7668
 0x453349 3 "TEST" "TESTL DI, DI" "test %dil,%dil" proc.go:7663
-0x45334c 6 "JE" "JE 0x453466" "je 0x453466" proc.go:7669
+0x45334c 6 "JE" "JE 0x453466" "je 0x453466 <runtime.runqgrab+0x166>" proc.go:7669
 0x453352 7 "MOV" "MOVQ 0x998(AX), DX" "mov 0x998(%rax),%rdx" proc.go:7671
 0x453359 7 "NOP" "NOPL 0(AX)" "nopl (%rax)" proc.go:7671
 0x453360 3 "TEST" "TESTQ DX, DX" "test %rdx,%rdx" proc.go:7671
-0x453363 6 "JE" "JE 0x453466" "je 0x453466" proc.go:7671
+0x453363 6 "JE" "JE 0x453466" "je 0x453466 <runtime.runqgrab+0x166>" proc.go:7671
 0x453369 4 "CMP" "CMPL 0x4(AX), $0x1" "cmpl $0x1,0x4(%rax)" proc.go:7672
-0x45336d 2 "JNE" "JNE 0x4533cc" "jne 0x4533cc" proc.go:7672
+0x45336d 2 "JNE" "JNE 0x4533cc" "jne 0x4533cc <runtime.runqgrab+0xcc>" proc.go:7672
 0x45336f 4 "MOV" "MOVQ 0x30(AX), SI" "mov 0x30(%rax),%rsi" proc.go:7673
 0x453373 3 "TEST" "TESTQ SI, SI" "test %rsi,%rsi" proc.go:7673
-0x453376 2 "JE" "JE 0x4533cc" "je 0x4533cc" proc.go:7673
+0x453376 2 "JE" "JE 0x4533cc" "je 0x4533cc <runtime.runqgrab+0xcc>" proc.go:7673
 0x453378 5 "MOV" "MOVQ DX, 0x8(SP)" "mov %rdx,0x8(%rsp)" proc.go:7671
 0x45337d 7 "MOV" "MOVQ 0xb8(SI), SI" "mov 0xb8(%rsi),%rsi" proc.go:7674
 0x453384 3 "TEST" "TESTQ SI, SI" "test %rsi,%rsi" proc.go:7674
-0x453387 2 "JE" "JE 0x45339b" "je 0x45339b" proc.go:7674
+0x453387 2 "JE" "JE 0x45339b" "je 0x45339b <runtime.runqgrab+0x9b>" proc.go:7674
 0x453389 1 "NOP" "NOPL" "nop" proc.go:1208
 0x45338a 6 "MOV" "MOVL 0x90(SI), SI" "mov 0x90(%rsi),%esi" types.go:194
 0x453390 6 "AND" "ANDL $-0x1001, SI" "and $-0x1001,%esi" proc.go:7674
 0x453396 3 "CMP" "CMPL SI, $0x3" "cmp $0x3,%esi" proc.go:7674
-0x453399 2 "JE" "JE 0x4533cc" "je 0x4533cc" proc.go:7674
+0x453399 2 "JE" "JE 0x4533cc" "je 0x4533cc <runtime.runqgrab+0xcc>" proc.go:7674
 0x45339b 7 "MOV" "MOVL $0x3, 0(SP)" "movl $0x3,(%rsp)" proc.go:7695
-0x4533a2 5 "CALL" "CALL runtime.usleep.abi0(SB)" "callq 0x478ac0" proc.go:7695
+0x4533a2 5 "CALL" "CALL runtime.usleep.abi0(SB)" "callq 0x478ac0 <runtime.usleep.abi0>" proc.go:7695
 0x4533a7 4 "XORPS" "XORPS X15, X15" "xorps %xmm15,%xmm15" proc.go:7695
 0x4533ab 9 "MOV" "MOVQ FS:0xfffffff8, R14" "mov %fs:0xfffffff8,%r14" proc.go:7695
 0x4533b4 5 "MOV" "MOVQ 0x20(SP), AX" "mov 0x20(%rsp),%rax" runtime2.go:252
@@ -1308,16 +1308,16 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x4533d5 9 "CMPXCHG" "LOCK CMPXCHGQ R8, 0x998(SI)" "lock cmpxchg %r8,0x998(%rsi)" runtime2.go:252
 0x4533de 4 "SETE" "SETE R9" "sete %r9b" runtime2.go:252
 0x4533e2 3 "TEST" "TESTL R9, R9" "test %r9b,%r9b" runtime2.go:252
-0x4533e5 6 "JE" "JE 0x453327" "je 0x453327" proc.go:7705
-0x4533eb 2 "JMP" "JMP 0x453452" "jmp 0x453452" proc.go:7705
+0x4533e5 6 "JE" "JE 0x453327" "je 0x453327 <runtime.runqgrab+0x27>" proc.go:7705
+0x4533eb 2 "JMP" "JMP 0x453452" "jmp 0x453452 <runtime.runqgrab+0x152>" proc.go:7705
 0x4533ed 7 "CMP" "CMPL R8, $0x80" "cmp $0x80,%r8d" proc.go:7714
-0x4533f4 2 "JBE" "JBE 0x453405" "jbe 0x453405" proc.go:7714
+0x4533f4 2 "JBE" "JBE 0x453405" "jbe 0x453405 <runtime.runqgrab+0x105>" proc.go:7714
 0x4533f6 3 "MOV" "MOVQ AX, SI" "mov %rax,%rsi" proc.go:7664
 0x4533f9 3 "XOR" "XORL R8, R8" "xor %r8d,%r8d" proc.go:7664
 0x4533fc 4 "NOP" "NOPL 0(AX)" "nopl (%rax)" proc.go:7664
-0x453400 5 "JMP" "JMP 0x453327" "jmpq 0x453327" proc.go:7715
+0x453400 5 "JMP" "JMP 0x453327" "jmpq 0x453327 <runtime.runqgrab+0x27>" proc.go:7715
 0x453405 2 "XOR" "XORL SI, SI" "xor %esi,%esi" proc.go:7715
-0x453407 2 "JMP" "JMP 0x453429" "jmp 0x453429" proc.go:7714
+0x453407 2 "JMP" "JMP 0x453429" "jmp 0x453429 <runtime.runqgrab+0x129>" proc.go:7714
 0x453409 2 "TEST" "TESTB AL, 0(BX)" "test %al,(%rbx)" proc.go:7719
 0x45340b 4 "LEA" "LEAL 0(SI)(DX*1), R9" "lea (%rsi,%rdx),%r9d" proc.go:7718
 0x45340f 4 "MOVZX" "MOVZX R9, R9" "movzbl %r9b,%r9d" proc.go:7718
@@ -1327,17 +1327,17 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x453423 4 "MOV" "MOVQ R9, 0(BX)(R10*8)" "mov %r9,(%rbx,%r10,8)" proc.go:7719
 0x453427 2 "INC" "INCL SI" "inc %esi" proc.go:7717
 0x453429 3 "CMP" "CMPL SI, R8" "cmp %r8d,%esi" proc.go:7717
-0x45342c 2 "JB" "JB 0x453409" "jb 0x453409" proc.go:7717
+0x45342c 2 "JB" "JB 0x453409" "jb 0x453409 <runtime.runqgrab+0x109>" proc.go:7717
 0x45342e 4 "LEA" "LEAL 0(R8)(DX*1), SI" "lea (%r8,%rdx),%esi" proc.go:7721
 0x453432 3 "MOV" "MOVQ AX, R9" "mov %rax,%r9" proc.go:7663
 0x453435 2 "MOV" "MOVL DX, AX" "mov %edx,%eax" proc.go:7721
 0x453437 9 "CMPXCHG" "LOCK CMPXCHGL SI, 0x190(R9)" "lock cmpxchg %esi,0x190(%r9)" proc.go:7721
 0x453440 3 "SETE" "SETE DL" "sete %dl" proc.go:7721
 0x453443 2 "TEST" "TESTL DL, DL" "test %dl,%dl" proc.go:7721
-0x453445 2 "JNE" "JNE 0x45346e" "jne 0x45346e" proc.go:7721
+0x453445 2 "JNE" "JNE 0x45346e" "jne 0x45346e <runtime.runqgrab+0x16e>" proc.go:7721
 0x453447 3 "MOV" "MOVQ R9, SI" "mov %r9,%rsi" proc.go:7664
 0x45344a 3 "XOR" "XORL R8, R8" "xor %r8d,%r8d" proc.go:7664
-0x45344d 5 "JMP" "JMP 0x453327" "jmpq 0x453327" proc.go:7721
+0x45344d 5 "JMP" "JMP 0x453327" "jmpq 0x453327 <runtime.runqgrab+0x27>" proc.go:7721
 0x453452 2 "TEST" "TESTB AL, 0(BX)" "test %al,(%rbx)" proc.go:7708
 0x453454 3 "MOVZX" "MOVZX CL, CX" "movzbl %cl,%ecx" proc.go:7708
 0x453457 4 "MOV" "MOVQ DX, 0(BX)(CX*8)" "mov %rdx,(%rbx,%rcx,8)" proc.go:7708
@@ -1357,12 +1357,12 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x45347c 5 "MOV" "MOVQ BX, 0x10(SP)" "mov %rbx,0x10(%rsp)" proc.go:7662
 0x453481 4 "MOV" "MOVL CX, 0x18(SP)" "mov %ecx,0x18(%rsp)" proc.go:7662
 0x453485 5 "MOV" "MOVB DI, 0x1c(SP)" "mov %dil,0x1c(%rsp)" proc.go:7662
-0x45348a 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x475ca0" proc.go:7662
+0x45348a 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x475ca0 <runtime.morestack_noctxt.abi0>" proc.go:7662
 0x45348f 5 "MOV" "MOVQ 0x8(SP), AX" "mov 0x8(%rsp),%rax" proc.go:7662
 0x453494 5 "MOV" "MOVQ 0x10(SP), BX" "mov 0x10(%rsp),%rbx" proc.go:7662
 0x453499 4 "MOV" "MOVL 0x18(SP), CX" "mov 0x18(%rsp),%ecx" proc.go:7662
 0x45349d 5 "MOVZX" "MOVZX 0x1c(SP), DI" "movzbl 0x1c(%rsp),%edi" proc.go:7662
-0x4534a2 5 "JMP" "JMP runtime.runqgrab(SB)" "jmpq 0x453300" proc.go:7662
+0x4534a2 5 "JMP" "JMP runtime.runqgrab(SB)" "jmpq 0x453300 <runtime.runqgrab>" proc.go:7662
 0x4534a7 1 "INT" "INT $0x3" "int3" .:-1
 0x4534a8 1 "INT" "INT $0x3" "int3" .:-1
 0x4534a9 1 "INT" "INT $0x3" "int3" .:-1
@@ -1390,7 +1390,7 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x4534bf 1 "INT" "INT $0x3" "int3" .:-1
 == runtime.runqsteal 0x4534c0 224 /usr/local/go/src/runtime/proc.go
 0x4534c0 4 "CMP" "CMPQ SP, 0x10(R14)" "cmp 0x10(%r14),%rsp" proc.go:7730
-0x4534c4 6 "JBE" "JBE 0x453566" "jbe 0x453566" proc.go:7730
+0x4534c4 6 "JBE" "JBE 0x453566" "jbe 0x453566 <runtime.runqsteal+0xa6>" proc.go:7730
 0x4534ca 1 "PUSH" "PUSHQ BP" "push %rbp" proc.go:7730
 0x4534cb 3 "MOV" "MOVQ SP, BP" "mov %rsp,%rbp" proc.go:7730
 0x4534ce 4 "SUB" "SUBQ $0x20, SP" "sub $0x20,%rsp" proc.go:7730
@@ -1402,9 +1402,9 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x4534eb 3 "MOV" "MOVQ SI, BX" "mov %rsi,%rbx" proc.go:7732
 0x4534ee 2 "MOV" "MOVL CX, DI" "mov %ecx,%edi" proc.go:7732
 0x4534f0 2 "MOV" "MOVL DX, CX" "mov %edx,%ecx" proc.go:7732
-0x4534f2 5 "CALL" "CALL runtime.runqgrab(SB)" "callq 0x453300" proc.go:7732
+0x4534f2 5 "CALL" "CALL runtime.runqgrab(SB)" "callq 0x453300 <runtime.runqgrab>" proc.go:7732
 0x4534f7 2 "TEST" "TESTL AX, AX" "test %eax,%eax" proc.go:7733
-0x4534f9 2 "JE" "JE 0x45354a" "je 0x45354a" proc.go:7733
+0x4534f9 2 "JE" "JE 0x45354a" "je 0x45354a <runtime.runqsteal+0x8a>" proc.go:7733
 0x4534fb 4 "MOV" "MOVL 0x1c(SP), CX" "mov 0x1c(%rsp),%ecx" proc.go:7737
 0x4534ff 3 "LEA" "LEAL 0(AX)(CX*1), DX" "lea (%rax,%rcx),%edx" proc.go:7737
 0x453502 3 "LEA" "LEAL -0x1(DX), DX" "lea -0x1(%rdx),%edx" proc.go:7737
@@ -1412,13 +1412,13 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x453508 5 "MOV" "MOVQ 0x30(SP), DI" "mov 0x30(%rsp),%rdi" proc.go:7737
 0x45350d 8 "MOV" "MOVQ 0x198(DI)(SI*8), SI" "mov 0x198(%rdi,%rsi,8),%rsi" proc.go:7737
 0x453515 3 "CMP" "CMPL AX, $0x1" "cmp $0x1,%eax" proc.go:7738
-0x453518 2 "JE" "JE 0x453541" "je 0x453541" proc.go:7738
+0x453518 2 "JE" "JE 0x453541" "je 0x453541 <runtime.runqsteal+0x81>" proc.go:7738
 0x45351a 7 "MOV" "MOVL 0x190(DI), R8" "mov 0x190(%rdi),%r8d" proc.go:7741
 0x453521 3 "SUB" "SUBL R8, CX" "sub %r8d,%ecx" proc.go:7742
 0x453524 3 "LEA" "LEAL 0(CX)(AX*1), CX" "lea (%rcx,%rax),%ecx" proc.go:7742
 0x453527 3 "LEA" "LEAL -0x1(CX), CX" "lea -0x1(%rcx),%ecx" proc.go:7742
 0x45352a 6 "CMP" "CMPL CX, $0x100" "cmp $0x100,%ecx" proc.go:7742
-0x453530 2 "JAE" "JAE 0x453552" "jae 0x453552" proc.go:7742
+0x453530 2 "JAE" "JAE 0x453552" "jae 0x453552 <runtime.runqsteal+0x92>" proc.go:7742
 0x453532 6 "XCHG" "XCHGL DX, 0x194(DI)" "xchg %edx,0x194(%rdi)" proc.go:7745
 0x453538 3 "MOV" "MOVQ SI, AX" "mov %rsi,%rax" proc.go:7746
 0x45353b 4 "ADD" "ADDQ $0x20, SP" "add $0x20,%rsp" proc.go:7746
@@ -1432,19 +1432,19 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x45354c 4 "ADD" "ADDQ $0x20, SP" "add $0x20,%rsp" proc.go:7734
 0x453550 1 "POP" "POPQ BP" "pop %rbp" proc.go:7734
 0x453551 1 "RET" "RET" "retq" proc.go:7734
-0x453552 7 "LEA" "LEAQ go:string.*+12106(SB), AX" "lea 0x3f481(%rip),%rax" proc.go:7743
+0x453552 7 "LEA" "LEAQ go:string.*+12106(SB), AX" "lea 0x3f481(%rip),%rax <go:string.*+0x2f4a>" proc.go:7743
 0x453559 5 "MOV" "MOVL $0x18, BX" "mov $0x18,%ebx" proc.go:7743
 0x45355e 2 "NOP" "NOPW" "data16 nop" proc.go:7743
-0x453560 5 "CALL" "CALL runtime.throw(SB)" "callq 0x472180" proc.go:7743
+0x453560 5 "CALL" "CALL runtime.throw(SB)" "callq 0x472180 <runtime.throw>" proc.go:7743
 0x453565 1 "NOP" "NOPL" "nop" proc.go:7743
 0x453566 5 "MOV" "MOVQ AX, 0x8(SP)" "mov %rax,0x8(%rsp)" proc.go:7730
 0x45356b 5 "MOV" "MOVQ BX, 0x10(SP)" "mov %rbx,0x10(%rsp)" proc.go:7730
 0x453570 4 "MOV" "MOVB CL, 0x18(SP)" "mov %cl,0x18(%rsp)" proc.go:7730
-0x453574 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x475ca0" proc.go:7730
+0x453574 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x475ca0 <runtime.morestack_noctxt.abi0>" proc.go:7730
 0x453579 5 "MOV" "MOVQ 0x8(SP), AX" "mov 0x8(%rsp),%rax" proc.go:7730
 0x45357e 5 "MOV" "MOVQ 0x10(SP), BX" "mov 0x10(%rsp),%rbx" proc.go:7730
 0x453583 5 "MOVZX" "MOVZX 0x18(SP), CX" "movzbl 0x18(%rsp),%ecx" proc.go:7730
-0x453588 5 "JMP" "JMP runtime.runqsteal(SB)" "jmpq 0x4534c0" proc.go:7730
+0x453588 5 "JMP" "JMP runtime.runqsteal(SB)" "jmpq 0x4534c0 <runtime.runqsteal>" proc.go:7730
 0x45358d 1 "INT" "INT $0x3" "int3" .:-1
 0x45358e 1 "INT" "INT $0x3" "int3" .:-1
 0x45358f 1 "INT" "INT $0x3" "int3" .:-1
@@ -1469,44 +1469,44 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x477d23 3 "MOV" "MOVQ BX, SI" "mov %rbx,%rsi" memmove_amd64.s:40
 0x477d26 3 "MOV" "MOVQ CX, BX" "mov %rcx,%rbx" memmove_amd64.s:41
 0x477d29 3 "TEST" "TESTQ BX, BX" "test %rbx,%rbx" memmove_amd64.s:54
-0x477d2c 6 "JE" "JE 0x477e4d" "je 0x477e4d" memmove_amd64.s:55
+0x477d2c 6 "JE" "JE 0x477e4d" "je 0x477e4d <runtime.memmove+0x12d>" memmove_amd64.s:55
 0x477d32 4 "CMP" "CMPQ BX, $0x2" "cmp $0x2,%rbx" memmove_amd64.s:56
-0x477d36 6 "JBE" "JBE 0x477e40" "jbe 0x477e40" memmove_amd64.s:57
+0x477d36 6 "JBE" "JBE 0x477e40" "jbe 0x477e40 <runtime.memmove+0x120>" memmove_amd64.s:57
 0x477d3c 4 "CMP" "CMPQ BX, $0x4" "cmp $0x4,%rbx" memmove_amd64.s:58
-0x477d40 6 "JB" "JB 0x477e53" "jb 0x477e53" memmove_amd64.s:59
-0x477d46 6 "JBE" "JBE 0x477e4e" "jbe 0x477e4e" memmove_amd64.s:60
+0x477d40 6 "JB" "JB 0x477e53" "jb 0x477e53 <runtime.memmove+0x133>" memmove_amd64.s:59
+0x477d46 6 "JBE" "JBE 0x477e4e" "jbe 0x477e4e <runtime.memmove+0x12e>" memmove_amd64.s:60
 0x477d4c 4 "CMP" "CMPQ BX, $0x8" "cmp $0x8,%rbx" memmove_amd64.s:61
-0x477d50 6 "JB" "JB 0x477e60" "jb 0x477e60" memmove_amd64.s:62
-0x477d56 6 "JE" "JE 0x477e6d" "je 0x477e6d" memmove_amd64.s:63
+0x477d50 6 "JB" "JB 0x477e60" "jb 0x477e60 <runtime.memmove+0x140>" memmove_amd64.s:62
+0x477d56 6 "JE" "JE 0x477e6d" "je 0x477e6d <runtime.memmove+0x14d>" memmove_amd64.s:63
 0x477d5c 4 "CMP" "CMPQ BX, $0x10" "cmp $0x10,%rbx" memmove_amd64.s:64
-0x477d60 6 "JBE" "JBE 0x477e74" "jbe 0x477e74" memmove_amd64.s:65
+0x477d60 6 "JBE" "JBE 0x477e74" "jbe 0x477e74 <runtime.memmove+0x154>" memmove_amd64.s:65
 0x477d66 4 "CMP" "CMPQ BX, $0x20" "cmp $0x20,%rbx" memmove_amd64.s:66
-0x477d6a 6 "JBE" "JBE 0x477e85" "jbe 0x477e85" memmove_amd64.s:67
+0x477d6a 6 "JBE" "JBE 0x477e85" "jbe 0x477e85 <runtime.memmove+0x165>" memmove_amd64.s:67
 0x477d70 4 "CMP" "CMPQ BX, $0x40" "cmp $0x40,%rbx" memmove_amd64.s:68
-0x477d74 6 "JBE" "JBE 0x477e9a" "jbe 0x477e9a" memmove_amd64.s:69
+0x477d74 6 "JBE" "JBE 0x477e9a" "jbe 0x477e9a <runtime.memmove+0x17a>" memmove_amd64.s:69
 0x477d7a 7 "CMP" "CMPQ BX, $0x80" "cmp $0x80,%rbx" memmove_amd64.s:70
-0x477d81 6 "JBE" "JBE 0x477ec5" "jbe 0x477ec5" memmove_amd64.s:71
+0x477d81 6 "JBE" "JBE 0x477ec5" "jbe 0x477ec5 <runtime.memmove+0x1a5>" memmove_amd64.s:71
 0x477d87 7 "CMP" "CMPQ BX, $0x100" "cmp $0x100,%rbx" memmove_amd64.s:72
-0x477d8e 6 "JBE" "JBE 0x477f1c" "jbe 0x477f1c" memmove_amd64.s:73
-0x477d94 6 "MOV" "MOVB runtime.memmoveBits(SB), AL" "mov 0xcd6f7(%rip),%al" memmove_amd64.s:75
+0x477d8e 6 "JBE" "JBE 0x477f1c" "jbe 0x477f1c <runtime.memmove+0x1fc>" memmove_amd64.s:73
+0x477d94 6 "MOV" "MOVB runtime.memmoveBits(SB), AL" "mov 0xcd6f7(%rip),%al <runtime.memmoveBits>" memmove_amd64.s:75
 0x477d9a 2 "CMP" "CMPL AL, $0x1" "cmp $0x1,%al" memmove_amd64.s:77
-0x477d9c 6 "JE" "JE 0x4780ea" "je 0x4780ea" memmove_amd64.s:78
+0x477d9c 6 "JE" "JE 0x4780ea" "je 0x4780ea <runtime.memmove+0x3ca>" memmove_amd64.s:78
 0x477da2 3 "CMP" "CMPQ SI, DI" "cmp %rdi,%rsi" memmove_amd64.s:82
-0x477da5 2 "JBE" "JBE 0x477dfc" "jbe 0x477dfc" memmove_amd64.s:83
+0x477da5 2 "JBE" "JBE 0x477dfc" "jbe 0x477dfc <runtime.memmove+0xdc>" memmove_amd64.s:83
 0x477da7 7 "CMP" "CMPQ BX, $0x800" "cmp $0x800,%rbx" memmove_amd64.s:89
-0x477dae 2 "JL" "JL 0x477dbd" "jl 0x477dbd" memmove_amd64.s:90
+0x477dae 2 "JL" "JL 0x477dbd" "jl 0x477dbd <runtime.memmove+0x9d>" memmove_amd64.s:90
 0x477db0 7 "TEST" "TESTQ $0xf, DI" "test $0xf,%rdi" memmove_amd64.s:92
-0x477db7 2 "JNE" "JNE 0x477dbd" "jne 0x477dbd" memmove_amd64.s:93
+0x477db7 2 "JNE" "JNE 0x477dbd" "jne 0x477dbd <runtime.memmove+0x9d>" memmove_amd64.s:93
 0x477db9 2 "TEST" "TESTL $0x2, AL" "test $0x2,%al" memmove_amd64.s:94
-0x477dbb 2 "JNE" "JNE 0x477de3" "jne 0x477de3" memmove_amd64.s:95
+0x477dbb 2 "JNE" "JNE 0x477de3" "jne 0x477de3 <runtime.memmove+0xc3>" memmove_amd64.s:95
 0x477dbd 2 "TEST" "TESTL $0x1, AL" "test $0x1,%al" memmove_amd64.s:98
-0x477dbf 6 "JNE" "JNE 0x4780ea" "jne 0x4780ea" memmove_amd64.s:99
+0x477dbf 6 "JNE" "JNE 0x4780ea" "jne 0x4780ea <runtime.memmove+0x3ca>" memmove_amd64.s:99
 0x477dc5 7 "CMP" "CMPQ BX, $0x800" "cmp $0x800,%rbx" memmove_amd64.s:101
-0x477dcc 6 "JBE" "JBE 0x477fe0" "jbe 0x477fe0" memmove_amd64.s:102
+0x477dcc 6 "JBE" "JBE 0x477fe0" "jbe 0x477fe0 <runtime.memmove+0x2c0>" memmove_amd64.s:102
 0x477dd2 2 "MOV" "MOVL SI, AX" "mov %esi,%eax" memmove_amd64.s:104
 0x477dd4 2 "OR" "ORL DI, AX" "or %edi,%eax" memmove_amd64.s:105
 0x477dd6 5 "TEST" "TESTL $0x7, AX" "test $0x7,%eax" memmove_amd64.s:106
-0x477ddb 2 "JE" "JE 0x477de3" "je 0x477de3" memmove_amd64.s:107
+0x477ddb 2 "JE" "JE 0x477de3" "je 0x477de3 <runtime.memmove+0xc3>" memmove_amd64.s:107
 0x477ddd 3 "MOV" "MOVQ BX, CX" "mov %rbx,%rcx" memmove_amd64.s:110
 0x477de0 2 "MOVSB" "REP; MOVSB DS:0(SI), ES:0(DI)" "rep movsb %ds:(%rsi),%es:(%rdi)" memmove_amd64.s:111
 0x477de2 1 "RET" "RET" "retq" memmove_amd64.s:112
@@ -1520,9 +1520,9 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x477dfc 3 "MOV" "MOVQ SI, CX" "mov %rsi,%rcx" memmove_amd64.s:130
 0x477dff 3 "ADD" "ADDQ BX, CX" "add %rbx,%rcx" memmove_amd64.s:131
 0x477e02 3 "CMP" "CMPQ CX, DI" "cmp %rdi,%rcx" memmove_amd64.s:132
-0x477e05 2 "JBE" "JBE 0x477da7" "jbe 0x477da7" memmove_amd64.s:133
+0x477e05 2 "JBE" "JBE 0x477da7" "jbe 0x477da7 <runtime.memmove+0x87>" memmove_amd64.s:133
 0x477e07 2 "TEST" "TESTL $0x1, AL" "test $0x1,%al" memmove_amd64.s:135
-0x477e09 6 "JNE" "JNE 0x4780ea" "jne 0x4780ea" memmove_amd64.s:136
+0x477e09 6 "JNE" "JNE 0x4780ea" "jne 0x4780ea <runtime.memmove+0x3ca>" memmove_amd64.s:136
 0x477e0f 3 "ADD" "ADDQ BX, DI" "add %rbx,%rdi" memmove_amd64.s:141
 0x477e12 3 "ADD" "ADDQ BX, SI" "add %rbx,%rsi" memmove_amd64.s:142
 0x477e15 1 "STD" "STD" "std" memmove_amd64.s:143
@@ -1537,7 +1537,7 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x477e31 4 "ADD" "ADDQ $0x8, SI" "add $0x8,%rsi" memmove_amd64.s:158
 0x477e35 3 "SUB" "SUBQ BX, DI" "sub %rbx,%rdi" memmove_amd64.s:159
 0x477e38 3 "SUB" "SUBQ BX, SI" "sub %rbx,%rsi" memmove_amd64.s:160
-0x477e3b 5 "JMP" "JMP 0x477d29" "jmpq 0x477d29" memmove_amd64.s:161
+0x477e3b 5 "JMP" "JMP 0x477d29" "jmpq 0x477d29 <runtime.memmove+0x9>" memmove_amd64.s:161
 0x477e40 2 "MOV" "MOVB 0(SI), AL" "mov (%rsi),%al" memmove_amd64.s:164
 0x477e42 4 "MOV" "MOVB -0x1(SI)(BX*1), CL" "mov -0x1(%rsi,%rbx),%cl" memmove_amd64.s:165
 0x477e46 2 "MOV" "MOVB AL, 0(DI)" "mov %al,(%rdi)" memmove_amd64.s:166
@@ -1666,15 +1666,15 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x4780c5 7 "CMP" "CMPQ BX, $0x100" "cmp $0x100,%rbx" memmove_amd64.s:302
 0x4780cc 7 "LEA" "LEAQ 0x100(SI), SI" "lea 0x100(%rsi),%rsi" memmove_amd64.s:303
 0x4780d3 7 "LEA" "LEAQ 0x100(DI), DI" "lea 0x100(%rdi),%rdi" memmove_amd64.s:304
-0x4780da 6 "JGE" "JGE 0x477fe0" "jge 0x477fe0" memmove_amd64.s:305
+0x4780da 6 "JGE" "JGE 0x477fe0" "jge 0x477fe0 <runtime.memmove+0x2c0>" memmove_amd64.s:305
 0x4780e0 5 "PXOR" "PXOR X15, X15" "pxor %xmm15,%xmm15" memmove_amd64.s:307
-0x4780e5 5 "JMP" "JMP 0x477d29" "jmpq 0x477d29" memmove_amd64.s:308
+0x4780e5 5 "JMP" "JMP 0x477d29" "jmpq 0x477d29 <runtime.memmove+0x9>" memmove_amd64.s:308
 0x4780ea 3 "MOV" "MOVQ DI, CX" "mov %rdi,%rcx" memmove_amd64.s:314
 0x4780ed 3 "SUB" "SUBQ SI, CX" "sub %rsi,%rcx" memmove_amd64.s:315
 0x4780f0 3 "CMP" "CMPQ CX, BX" "cmp %rbx,%rcx" memmove_amd64.s:317
-0x4780f3 6 "JB" "JB 0x4782a5" "jb 0x4782a5" memmove_amd64.s:319
+0x4780f3 6 "JB" "JB 0x4782a5" "jb 0x4782a5 <runtime.memmove+0x585>" memmove_amd64.s:319
 0x4780f9 7 "CMP" "CMPQ BX, $0x100000" "cmp $0x100000,%rbx" memmove_amd64.s:322
-0x478100 6 "JAE" "JAE 0x4781c9" "jae 0x4781c9" memmove_amd64.s:323
+0x478100 6 "JAE" "JAE 0x4781c9" "jae 0x4781c9 <runtime.memmove+0x4a9>" memmove_amd64.s:323
 0x478106 4 "LEA" "LEAQ 0(SI)(BX*1), CX" "lea (%rsi,%rbx),%rcx" memmove_amd64.s:351
 0x47810a 3 "MOV" "MOVQ DI, R10" "mov %rdi,%r10" memmove_amd64.s:352
 0x47810d 5 "MOVDQU" "MOVDQU -0x80(CX), X5" "movdqu -0x80(%rcx),%xmm5" memmove_amd64.s:354
@@ -1705,7 +1705,7 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x478180 5 "VMOVDQA" "VMOVDQA Y3, 0x60(DI)" "vmovdqa %ymm3,0x60(%rdi)" memmove_amd64.s:390
 0x478185 3 "ADD" "ADDQ AX, DI" "add %rax,%rdi" memmove_amd64.s:391
 0x478188 3 "SUB" "SUBQ AX, BX" "sub %rax,%rbx" memmove_amd64.s:392
-0x47818b 2 "JA" "JA 0x47815c" "ja 0x47815c" memmove_amd64.s:393
+0x47818b 2 "JA" "JA 0x47815c" "ja 0x47815c <runtime.memmove+0x43c>" memmove_amd64.s:393
 0x47818d 3 "ADD" "ADDQ AX, BX" "add %rax,%rbx" memmove_amd64.s:395
 0x478190 3 "ADD" "ADDQ DI, BX" "add %rdi,%rbx" memmove_amd64.s:396
 0x478193 5 "VMOVDQU" "VMOVDQU Y4, 0(R10)" "vmovdqu %ymm4,(%r10)" memmove_amd64.s:397
@@ -1751,7 +1751,7 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x478257 5 "VMOVNTDQ" "VMOVNTDQ Y3, 0x60(DI)" "vmovntdq %ymm3,0x60(%rdi)" memmove_amd64.s:447
 0x47825c 7 "ADD" "ADDQ $0x80, DI" "add $0x80,%rdi" memmove_amd64.s:448
 0x478263 7 "SUB" "SUBQ $0x80, BX" "sub $0x80,%rbx" memmove_amd64.s:449
-0x47826a 2 "JA" "JA 0x478221" "ja 0x478221" memmove_amd64.s:450
+0x47826a 2 "JA" "JA 0x478221" "ja 0x478221 <runtime.memmove+0x501>" memmove_amd64.s:450
 0x47826c 3 "SFENCE" "SFENCE" "sfence" memmove_amd64.s:453
 0x47826f 5 "VMOVDQU" "VMOVDQU Y4, 0(R8)" "vmovdqu %ymm4,(%r8)" memmove_amd64.s:454
 0x478274 4 "VZEROUPPER" "VZEROUPPER" "vzeroupper" memmove_amd64.s:455
@@ -1783,7 +1783,7 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x4782ed 3 "SUB" "SUBQ R11, SI" "sub %r11,%rsi" memmove_amd64.s:487
 0x4782f0 3 "SUB" "SUBQ R11, BX" "sub %r11,%rbx" memmove_amd64.s:488
 0x4782f3 7 "CMP" "CMPQ BX, $0x100000" "cmp $0x100000,%rbx" memmove_amd64.s:490
-0x4782fa 2 "JA" "JA 0x478377" "ja 0x478377" memmove_amd64.s:491
+0x4782fa 2 "JA" "JA 0x478377" "ja 0x478377 <runtime.memmove+0x657>" memmove_amd64.s:491
 0x4782fc 7 "SUB" "SUBQ $0x80, BX" "sub $0x80,%rbx" memmove_amd64.s:492
 0x478303 5 "VMOVDQU" "VMOVDQU -0x20(SI), Y0" "vmovdqu -0x20(%rsi),%ymm0" memmove_amd64.s:494
 0x478308 5 "VMOVDQU" "VMOVDQU -0x40(SI), Y1" "vmovdqu -0x40(%rsi),%ymm1" memmove_amd64.s:495
@@ -1796,7 +1796,7 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x47832d 5 "VMOVDQA" "VMOVDQA Y3, -0x80(DI)" "vmovdqa %ymm3,-0x80(%rdi)" memmove_amd64.s:502
 0x478332 7 "SUB" "SUBQ $0x80, DI" "sub $0x80,%rdi" memmove_amd64.s:503
 0x478339 7 "SUB" "SUBQ $0x80, BX" "sub $0x80,%rbx" memmove_amd64.s:504
-0x478340 2 "JA" "JA 0x478303" "ja 0x478303" memmove_amd64.s:505
+0x478340 2 "JA" "JA 0x478303" "ja 0x478303 <runtime.memmove+0x5e3>" memmove_amd64.s:505
 0x478342 5 "VMOVDQU" "VMOVDQU Y4, 0(R10)" "vmovdqu %ymm4,(%r10)" memmove_amd64.s:507
 0x478347 4 "VZEROUPPER" "VZEROUPPER" "vzeroupper" memmove_amd64.s:508
 0x47834b 3 "MOVQ" "MOVQ M5, 0(AX)" "movq %mm5,(%rax)" memmove_amd64.s:509
@@ -1822,7 +1822,7 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x4783b6 5 "VMOVNTDQ" "VMOVNTDQ Y3, -0x80(DI)" "vmovntdq %ymm3,-0x80(%rdi)" memmove_amd64.s:532
 0x4783bb 7 "SUB" "SUBQ $0x80, DI" "sub $0x80,%rdi" memmove_amd64.s:533
 0x4783c2 7 "SUB" "SUBQ $0x80, BX" "sub $0x80,%rbx" memmove_amd64.s:534
-0x4783c9 2 "JA" "JA 0x47837e" "ja 0x47837e" memmove_amd64.s:535
+0x4783c9 2 "JA" "JA 0x47837e" "ja 0x47837e <runtime.memmove+0x65e>" memmove_amd64.s:535
 0x4783cb 3 "SFENCE" "SFENCE" "sfence" memmove_amd64.s:536
 0x4783ce 5 "VMOVDQU" "VMOVDQU Y4, 0(R10)" "vmovdqu %ymm4,(%r10)" memmove_amd64.s:537
 0x4783d3 4 "VZEROUPPER" "VZEROUPPER" "vzeroupper" memmove_amd64.s:538
@@ -1868,11 +1868,11 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x47a820 5 "MOV" "MOVQ AX, 0x8(SP)" "mov %rax,0x8(%rsp)" main.go:19
 0x47a825 2 "XOR" "XORL CX, CX" "xor %ecx,%ecx" main.go:21
 0x47a827 2 "XOR" "XORL DX, DX" "xor %edx,%edx" main.go:21
-0x47a829 2 "JMP" "JMP 0x47a832" "jmp 0x47a832" main.go:21
+0x47a829 2 "JMP" "JMP 0x47a832" "jmp 0x47a832 <main.sumInts+0x12>" main.go:21
 0x47a82b 4 "ADD" "ADDQ 0(AX)(CX*8), DX" "add (%rax,%rcx,8),%rdx" main.go:22
 0x47a82f 3 "INC" "INCQ CX" "inc %rcx" main.go:21
 0x47a832 3 "CMP" "CMPQ BX, CX" "cmp %rcx,%rbx" main.go:21
-0x47a835 2 "JG" "JG 0x47a82b" "jg 0x47a82b" main.go:21
+0x47a835 2 "JG" "JG 0x47a82b" "jg 0x47a82b <main.sumInts+0xb>" main.go:21
 0x47a837 3 "MOV" "MOVQ DX, AX" "mov %rdx,%rax" main.go:24
 0x47a83a 1 "RET" "RET" "retq" main.go:24
 0x47a83b 1 "INT" "INT $0x3" "int3" .:-1
@@ -1887,19 +1887,19 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x47a849 5 "MOV" "MOVQ DI, 0x28(SP)" "mov %rdi,0x28(%rsp)" main.go:28
 0x47a84e 2 "XOR" "XORL CX, CX" "xor %ecx,%ecx" main.go:30
 0x47a850 3 "XORPS" "XORPS X0, X0" "xorps %xmm0,%xmm0" main.go:30
-0x47a853 2 "JMP" "JMP 0x47a861" "jmp 0x47a861" main.go:30
+0x47a853 2 "JMP" "JMP 0x47a861" "jmp 0x47a861 <main.dot+0x21>" main.go:30
 0x47a855 5 "MULSD" "MULSD 0(DI)(CX*8), X1" "mulsd (%rdi,%rcx,8),%xmm1" main.go:31
 0x47a85a 4 "ADDSD" "ADDSD X1, X0" "addsd %xmm1,%xmm0" main.go:31
 0x47a85e 3 "INC" "INCQ CX" "inc %rcx" main.go:30
 0x47a861 3 "CMP" "CMPQ BX, CX" "cmp %rcx,%rbx" main.go:30
-0x47a864 2 "JLE" "JLE 0x47a872" "jle 0x47a872" main.go:30
+0x47a864 2 "JLE" "JLE 0x47a872" "jle 0x47a872 <main.dot+0x32>" main.go:30
 0x47a866 5 "MOVSD_XMM" "MOVSD_XMM 0(AX)(CX*8), X1" "movsd (%rax,%rcx,8),%xmm1" main.go:31
 0x47a86b 3 "CMP" "CMPQ SI, CX" "cmp %rcx,%rsi" main.go:31
-0x47a86e 2 "JA" "JA 0x47a855" "ja 0x47a855" main.go:31
-0x47a870 2 "JMP" "JMP 0x47a874" "jmp 0x47a874" main.go:31
+0x47a86e 2 "JA" "JA 0x47a855" "ja 0x47a855 <main.dot+0x15>" main.go:31
+0x47a870 2 "JMP" "JMP 0x47a874" "jmp 0x47a874 <main.dot+0x34>" main.go:31
 0x47a872 1 "POP" "POPQ BP" "pop %rbp" main.go:33
 0x47a873 1 "RET" "RET" "retq" main.go:33
-0x47a874 5 "CALL" "CALL runtime.panicBounds(SB)" "callq 0x477980" main.go:31
+0x47a874 5 "CALL" "CALL runtime.panicBounds(SB)" "callq 0x477980 <runtime.panicBounds>" main.go:31
 0x47a879 1 "NOP" "NOPL" "nop" main.go:31
 0x47a87a 1 "INT" "INT $0x3" "int3" .:-1
 0x47a87b 1 "INT" "INT $0x3" "int3" .:-1
@@ -1909,7 +1909,7 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x47a87f 1 "INT" "INT $0x3" "int3" .:-1
 == main.popcountAll 0x47a880 192 /Users/egon/code/gio/lensm/testdata/testprog/main.go
 0x47a880 4 "CMP" "CMPQ SP, 0x10(R14)" "cmp 0x10(%r14),%rsp" main.go:37
-0x47a884 2 "JBE" "JBE 0x47a8fa" "jbe 0x47a8fa" main.go:37
+0x47a884 2 "JBE" "JBE 0x47a8fa" "jbe 0x47a8fa <main.popcountAll+0x7a>" main.go:37
 0x47a886 1 "PUSH" "PUSHQ BP" "push %rbp" main.go:37
 0x47a887 3 "MOV" "MOVQ SP, BP" "mov %rsp,%rbp" main.go:37
 0x47a88a 4 "SUB" "SUBQ $0x18, SP" "sub $0x18,%rsp" main.go:37
@@ -1917,28 +1917,28 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x47a893 5 "MOV" "MOVQ BX, 0x30(SP)" "mov %rbx,0x30(%rsp)" main.go:39
 0x47a898 2 "XOR" "XORL CX, CX" "xor %ecx,%ecx" main.go:39
 0x47a89a 2 "XOR" "XORL DX, DX" "xor %edx,%edx" main.go:39
-0x47a89c 2 "JMP" "JMP 0x47a8a4" "jmp 0x47a8a4" main.go:39
+0x47a89c 2 "JMP" "JMP 0x47a8a4" "jmp 0x47a8a4 <main.popcountAll+0x24>" main.go:39
 0x47a89e 3 "ADD" "ADDQ SI, DX" "add %rsi,%rdx" main.go:40
 0x47a8a1 3 "INC" "INCQ CX" "inc %rcx" main.go:39
 0x47a8a4 3 "CMP" "CMPQ BX, CX" "cmp %rcx,%rbx" main.go:39
-0x47a8a7 2 "JLE" "JLE 0x47a8f1" "jle 0x47a8f1" main.go:39
+0x47a8a7 2 "JLE" "JLE 0x47a8f1" "jle 0x47a8f1 <main.popcountAll+0x71>" main.go:39
 0x47a8a9 4 "MOV" "MOVQ 0(AX)(CX*8), SI" "mov (%rax,%rcx,8),%rsi" main.go:39
-0x47a8ad 7 "MOVZX" "MOVZX runtime.x86HasPOPCNT(SB), DI" "movzbl 0xcabdb(%rip),%edi" main.go:39
+0x47a8ad 7 "MOVZX" "MOVZX runtime.x86HasPOPCNT(SB), DI" "movzbl 0xcabdb(%rip),%edi <runtime.x86HasPOPCNT>" main.go:39
 0x47a8b4 2 "TEST" "TESTL DI, DI" "test %edi,%edi" main.go:39
-0x47a8b6 2 "JE" "JE 0x47a8bf" "je 0x47a8bf" main.go:40
+0x47a8b6 2 "JE" "JE 0x47a8bf" "je 0x47a8bf <main.popcountAll+0x3f>" main.go:40
 0x47a8b8 5 "POPCNT" "POPCNTQ SI, SI" "popcnt %rsi,%rsi" main.go:40
-0x47a8bd 2 "JMP" "JMP 0x47a89e" "jmp 0x47a89e" main.go:40
+0x47a8bd 2 "JMP" "JMP 0x47a89e" "jmp 0x47a89e <main.popcountAll+0x1e>" main.go:40
 0x47a8bf 5 "MOV" "MOVQ CX, 0x10(SP)" "mov %rcx,0x10(%rsp)" main.go:39
 0x47a8c4 5 "MOV" "MOVQ DX, 0x8(SP)" "mov %rdx,0x8(%rsp)" main.go:39
 0x47a8c9 3 "MOV" "MOVQ SI, AX" "mov %rsi,%rax" main.go:40
-0x47a8cc 5 "CALL" "CALL math/bits.OnesCount64(SB)" "callq 0x47a780" main.go:40
+0x47a8cc 5 "CALL" "CALL math/bits.OnesCount64(SB)" "callq 0x47a780 <math/bits.OnesCount64>" main.go:40
 0x47a8d1 5 "MOV" "MOVQ 0x10(SP), CX" "mov 0x10(%rsp),%rcx" main.go:39
 0x47a8d6 5 "MOV" "MOVQ 0x8(SP), DX" "mov 0x8(%rsp),%rdx" main.go:40
 0x47a8db 5 "MOV" "MOVQ 0x30(SP), BX" "mov 0x30(%rsp),%rbx" main.go:39
-0x47a8e0 7 "MOVZX" "MOVZX runtime.x86HasPOPCNT(SB), DI" "movzbl 0xcaba8(%rip),%edi" main.go:39
+0x47a8e0 7 "MOVZX" "MOVZX runtime.x86HasPOPCNT(SB), DI" "movzbl 0xcaba8(%rip),%edi <runtime.x86HasPOPCNT>" main.go:39
 0x47a8e7 3 "MOV" "MOVQ AX, SI" "mov %rax,%rsi" main.go:40
 0x47a8ea 5 "MOV" "MOVQ 0x28(SP), AX" "mov 0x28(%rsp),%rax" main.go:39
-0x47a8ef 2 "JMP" "JMP 0x47a89e" "jmp 0x47a89e" main.go:40
+0x47a8ef 2 "JMP" "JMP 0x47a89e" "jmp 0x47a89e <main.popcountAll+0x1e>" main.go:40
 0x47a8f1 3 "MOV" "MOVQ DX, AX" "mov %rdx,%rax" main.go:42
 0x47a8f4 4 "ADD" "ADDQ $0x18, SP" "add $0x18,%rsp" main.go:42
 0x47a8f8 1 "POP" "POPQ BP" "pop %rbp" main.go:42
@@ -1946,12 +1946,12 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x47a8fa 5 "MOV" "MOVQ AX, 0x8(SP)" "mov %rax,0x8(%rsp)" main.go:37
 0x47a8ff 5 "MOV" "MOVQ BX, 0x10(SP)" "mov %rbx,0x10(%rsp)" main.go:37
 0x47a904 5 "MOV" "MOVQ CX, 0x18(SP)" "mov %rcx,0x18(%rsp)" main.go:37
-0x47a909 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x475ca0" main.go:37
+0x47a909 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x475ca0 <runtime.morestack_noctxt.abi0>" main.go:37
 0x47a90e 5 "MOV" "MOVQ 0x8(SP), AX" "mov 0x8(%rsp),%rax" main.go:37
 0x47a913 5 "MOV" "MOVQ 0x10(SP), BX" "mov 0x10(%rsp),%rbx" main.go:37
 0x47a918 5 "MOV" "MOVQ 0x18(SP), CX" "mov 0x18(%rsp),%rcx" main.go:37
 0x47a91d 3 "NOP" "NOPL 0(AX)" "nopl (%rax)" main.go:37
-0x47a920 5 "JMP" "JMP main.popcountAll(SB)" "jmpq 0x47a880" main.go:37
+0x47a920 5 "JMP" "JMP main.popcountAll(SB)" "jmpq 0x47a880 <main.popcountAll>" main.go:37
 0x47a925 1 "INT" "INT $0x3" "int3" .:-1
 0x47a926 1 "INT" "INT $0x3" "int3" .:-1
 0x47a927 1 "INT" "INT $0x3" "int3" .:-1
@@ -1981,22 +1981,22 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x47a93f 1 "INT" "INT $0x3" "int3" .:-1
 == main.collatzSteps 0x47a940 64 /Users/egon/code/gio/lensm/testdata/testprog/main.go
 0x47a940 2 "XOR" "XORL CX, CX" "xor %ecx,%ecx" main.go:48
-0x47a942 2 "JMP" "JMP 0x47a94a" "jmp 0x47a94a" main.go:48
+0x47a942 2 "JMP" "JMP 0x47a94a" "jmp 0x47a94a <main.collatzSteps+0xa>" main.go:48
 0x47a944 3 "INC" "INCQ CX" "inc %rcx" main.go:54
 0x47a947 3 "MOV" "MOVQ BX, AX" "mov %rbx,%rax" main.go:48
 0x47a94a 4 "CMP" "CMPQ AX, $0x1" "cmp $0x1,%rax" main.go:48
-0x47a94e 2 "JE" "JE 0x47a971" "je 0x47a971" main.go:48
+0x47a94e 2 "JE" "JE 0x47a971" "je 0x47a971 <main.collatzSteps+0x31>" main.go:48
 0x47a950 3 "MOV" "MOVQ AX, DX" "mov %rax,%rdx" main.go:49
 0x47a953 4 "SHR" "SHRQ $0x3f, AX" "shr $0x3f,%rax" main.go:49
 0x47a957 4 "LEA" "LEAQ 0(DX)(AX*1), BX" "lea (%rdx,%rax),%rbx" main.go:49
 0x47a95b 4 "BT" "BTL $0x0, DX" "bt $0x0,%edx" main.go:49
 0x47a95f 1 "NOP" "NOPL" "nop" main.go:49
-0x47a960 2 "JB" "JB 0x47a967" "jb 0x47a967" main.go:49
+0x47a960 2 "JB" "JB 0x47a967" "jb 0x47a967 <main.collatzSteps+0x27>" main.go:49
 0x47a962 3 "SAR" "SARQ $0x1, BX" "sar %rbx" main.go:49
-0x47a965 2 "JMP" "JMP 0x47a944" "jmp 0x47a944" main.go:50
+0x47a965 2 "JMP" "JMP 0x47a944" "jmp 0x47a944 <main.collatzSteps+0x4>" main.go:50
 0x47a967 4 "LEA" "LEAQ 0(DX)(DX*2), BX" "lea (%rdx,%rdx,2),%rbx" main.go:52
 0x47a96b 4 "LEA" "LEAQ 0x1(BX), BX" "lea 0x1(%rbx),%rbx" main.go:52
-0x47a96f 2 "JMP" "JMP 0x47a944" "jmp 0x47a944" main.go:52
+0x47a96f 2 "JMP" "JMP 0x47a944" "jmp 0x47a944 <main.collatzSteps+0x4>" main.go:52
 0x47a971 3 "MOV" "MOVQ CX, AX" "mov %rcx,%rax" main.go:56
 0x47a974 1 "RET" "RET" "retq" main.go:56
 0x47a975 1 "INT" "INT $0x3" "int3" .:-1
@@ -2013,7 +2013,7 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 == main.mat4Mul 0x47a980 352 /Users/egon/code/gio/lensm/testdata/testprog/main.go
 0x47a980 5 "LEA" "LEAQ -0x8(SP), R12" "lea -0x8(%rsp),%r12" main.go:60
 0x47a985 4 "CMP" "CMPQ R12, 0x10(R14)" "cmp 0x10(%r14),%r12" main.go:60
-0x47a989 6 "JBE" "JBE 0x47aa9c" "jbe 0x47aa9c" main.go:60
+0x47a989 6 "JBE" "JBE 0x47aa9c" "jbe 0x47aa9c <main.mat4Mul+0x11c>" main.go:60
 0x47a98f 1 "PUSH" "PUSHQ BP" "push %rbp" main.go:60
 0x47a990 3 "MOV" "MOVQ SP, BP" "mov %rsp,%rbp" main.go:60
 0x47a993 4 "ADD" "ADDQ $-0x80, SP" "add $-0x80,%rsp" main.go:60
@@ -2036,17 +2036,17 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x47a9e7 5 "MOVUPS" "MOVUPS X15, 0x60(DX)" "movups %xmm15,0x60(%rdx)" main.go:61
 0x47a9ec 5 "MOVUPS" "MOVUPS X15, 0x70(DX)" "movups %xmm15,0x70(%rdx)" main.go:61
 0x47a9f1 2 "XOR" "XORL SI, SI" "xor %esi,%esi" main.go:61
-0x47a9f3 2 "JMP" "JMP 0x47a9f8" "jmp 0x47a9f8" main.go:62
+0x47a9f3 2 "JMP" "JMP 0x47a9f8" "jmp 0x47a9f8 <main.mat4Mul+0x78>" main.go:62
 0x47a9f5 3 "INC" "INCQ SI" "inc %rsi" main.go:62
 0x47a9f8 4 "CMP" "CMPQ SI, $0x4" "cmp $0x4,%rsi" main.go:62
-0x47a9fc 2 "JGE" "JGE 0x47aa48" "jge 0x47aa48" main.go:62
+0x47a9fc 2 "JGE" "JGE 0x47aa48" "jge 0x47aa48 <main.mat4Mul+0xc8>" main.go:62
 0x47a9fe 2 "XOR" "XORL DI, DI" "xor %edi,%edi" main.go:62
-0x47aa00 2 "JMP" "JMP 0x47aa05" "jmp 0x47aa05" main.go:63
+0x47aa00 2 "JMP" "JMP 0x47aa05" "jmp 0x47aa05 <main.mat4Mul+0x85>" main.go:63
 0x47aa02 3 "INC" "INCQ DI" "inc %rdi" main.go:63
 0x47aa05 4 "CMP" "CMPQ DI, $0x4" "cmp $0x4,%rdi" main.go:63
-0x47aa09 2 "JGE" "JGE 0x47a9f5" "jge 0x47a9f5" main.go:63
+0x47aa09 2 "JGE" "JGE 0x47a9f5" "jge 0x47a9f5 <main.mat4Mul+0x75>" main.go:63
 0x47aa0b 3 "XOR" "XORL R8, R8" "xor %r8d,%r8d" main.go:63
-0x47aa0e 2 "JMP" "JMP 0x47aa40" "jmp 0x47aa40" main.go:64
+0x47aa0e 2 "JMP" "JMP 0x47aa40" "jmp 0x47aa40 <main.mat4Mul+0xc0>" main.go:64
 0x47aa10 2 "TEST" "TESTB AL, 0(AX)" "test %al,(%rax)" main.go:65
 0x47aa12 2 "TEST" "TESTB AL, 0(BX)" "test %al,(%rbx)" main.go:65
 0x47aa14 4 "LEA" "LEAQ 0(DI)(SI*4), R9" "lea (%rdi,%rsi,4),%r9" main.go:65
@@ -2059,8 +2059,8 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x47aa38 3 "INC" "INCQ R8" "inc %r8" main.go:64
 0x47aa3b 5 "NOP" "NOPL 0(AX)(AX*1)" "nopl (%rax,%rax)" main.go:64
 0x47aa40 4 "CMP" "CMPQ R8, $0x4" "cmp $0x4,%r8" main.go:64
-0x47aa44 2 "JL" "JL 0x47aa10" "jl 0x47aa10" main.go:64
-0x47aa46 2 "JMP" "JMP 0x47aa02" "jmp 0x47aa02" main.go:64
+0x47aa44 2 "JL" "JL 0x47aa10" "jl 0x47aa10 <main.mat4Mul+0x90>" main.go:64
+0x47aa46 2 "JMP" "JMP 0x47aa02" "jmp 0x47aa02 <main.mat4Mul+0x82>" main.go:64
 0x47aa48 4 "MOVUPS" "MOVUPS 0(DX), X14" "movups (%rdx),%xmm14" main.go:69
 0x47aa4c 4 "MOVUPS" "MOVUPS X14, 0(CX)" "movups %xmm14,(%rcx)" main.go:69
 0x47aa50 5 "MOVUPS" "MOVUPS 0x10(DX), X14" "movups 0x10(%rdx),%xmm14" main.go:69
@@ -2082,10 +2082,10 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x47aa9b 1 "RET" "RET" "retq" main.go:69
 0x47aa9c 8 "MOV" "MOVQ AX, 0x88(SP)" "mov %rax,0x88(%rsp)" main.go:60
 0x47aaa4 8 "MOV" "MOVQ BX, 0x90(SP)" "mov %rbx,0x90(%rsp)" main.go:60
-0x47aaac 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x475ca0" main.go:60
+0x47aaac 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x475ca0 <runtime.morestack_noctxt.abi0>" main.go:60
 0x47aab1 8 "MOV" "MOVQ 0x88(SP), AX" "mov 0x88(%rsp),%rax" main.go:60
 0x47aab9 8 "MOV" "MOVQ 0x90(SP), BX" "mov 0x90(%rsp),%rbx" main.go:60
-0x47aac1 5 "JMP" "JMP main.mat4Mul(SB)" "jmpq 0x47a980" main.go:60
+0x47aac1 5 "JMP" "JMP main.mat4Mul(SB)" "jmpq 0x47a980 <main.mat4Mul>" main.go:60
 0x47aac6 1 "INT" "INT $0x3" "int3" .:-1
 0x47aac7 1 "INT" "INT $0x3" "int3" .:-1
 0x47aac8 1 "INT" "INT $0x3" "int3" .:-1
@@ -2116,25 +2116,25 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x47aae0 5 "MOV" "MOVQ AX, 0x8(SP)" "mov %rax,0x8(%rsp)" main.go:73
 0x47aae5 2 "XOR" "XORL CX, CX" "xor %ecx,%ecx" main.go:75
 0x47aae7 3 "XORPS" "XORPS X0, X0" "xorps %xmm0,%xmm0" main.go:75
-0x47aaea 2 "JMP" "JMP 0x47ab00" "jmp 0x47ab00" main.go:75
+0x47aaea 2 "JMP" "JMP 0x47ab00" "jmp 0x47ab00 <main.normalize+0x20>" main.go:75
 0x47aaec 5 "MOVSD_XMM" "MOVSD_XMM 0(AX)(CX*8), X1" "movsd (%rax,%rcx,8),%xmm1" main.go:75
 0x47aaf1 4 "MULSD" "MULSD X1, X1" "mulsd %xmm1,%xmm1" main.go:76
 0x47aaf5 4 "ADDSD" "ADDSD X1, X0" "addsd %xmm1,%xmm0" main.go:76
 0x47aaf9 3 "INC" "INCQ CX" "inc %rcx" main.go:75
 0x47aafc 4 "NOP" "NOPL 0(AX)" "nopl (%rax)" main.go:75
 0x47ab00 3 "CMP" "CMPQ BX, CX" "cmp %rcx,%rbx" main.go:75
-0x47ab03 2 "JG" "JG 0x47aaec" "jg 0x47aaec" main.go:75
+0x47ab03 2 "JG" "JG 0x47aaec" "jg 0x47aaec <main.normalize+0xc>" main.go:75
 0x47ab05 1 "NOP" "NOPL" "nop" main.go:78
 0x47ab06 4 "SQRTSD" "SQRTSD X0, X0" "sqrtsd %xmm0,%xmm0" sqrt.go:94
 0x47ab0a 2 "XOR" "XORL CX, CX" "xor %ecx,%ecx" sqrt.go:94
-0x47ab0c 2 "JMP" "JMP 0x47ab20" "jmp 0x47ab20" main.go:79
+0x47ab0c 2 "JMP" "JMP 0x47ab20" "jmp 0x47ab20 <main.normalize+0x40>" main.go:79
 0x47ab0e 5 "MOVSD_XMM" "MOVSD_XMM 0(AX)(CX*8), X1" "movsd (%rax,%rcx,8),%xmm1" main.go:80
 0x47ab13 4 "DIVSD" "DIVSD X0, X1" "divsd %xmm0,%xmm1" main.go:80
 0x47ab17 5 "MOVSD_XMM" "MOVSD_XMM X1, 0(AX)(CX*8)" "movsd %xmm1,(%rax,%rcx,8)" main.go:80
 0x47ab1c 3 "INC" "INCQ CX" "inc %rcx" main.go:79
 0x47ab1f 1 "NOP" "NOPL" "nop" main.go:79
 0x47ab20 3 "CMP" "CMPQ BX, CX" "cmp %rcx,%rbx" main.go:79
-0x47ab23 2 "JG" "JG 0x47ab0e" "jg 0x47ab0e" main.go:79
+0x47ab23 2 "JG" "JG 0x47ab0e" "jg 0x47ab0e <main.normalize+0x2e>" main.go:79
 0x47ab25 1 "RET" "RET" "retq" main.go:82
 0x47ab26 1 "INT" "INT $0x3" "int3" .:-1
 0x47ab27 1 "INT" "INT $0x3" "int3" .:-1
@@ -2165,7 +2165,7 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 == main.main 0x47ab40 768 /Users/egon/code/gio/lensm/testdata/testprog/main.go
 0x47ab40 8 "LEA" "LEAQ 0xfffffdc8(SP), R12" "lea 0xfffffdc8(%rsp),%r12" main.go:84
 0x47ab48 4 "CMP" "CMPQ R12, 0x10(R14)" "cmp 0x10(%r14),%r12" main.go:84
-0x47ab4c 6 "JBE" "JBE 0x47ae26" "jbe 0x47ae26" main.go:84
+0x47ab4c 6 "JBE" "JBE 0x47ae26" "jbe 0x47ae26 <main.main+0x2e6>" main.go:84
 0x47ab52 1 "PUSH" "PUSHQ BP" "push %rbp" main.go:84
 0x47ab53 3 "MOV" "MOVQ SP, BP" "mov %rsp,%rbp" main.go:84
 0x47ab56 7 "SUB" "SUBQ $0x2b0, SP" "sub $0x2b0,%rsp" main.go:84
@@ -2208,7 +2208,7 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x47ac75 5 "MOVUPS" "MOVUPS X15, 0x60(BX)" "movups %xmm15,0x60(%rbx)" main.go:89
 0x47ac7a 5 "MOVUPS" "MOVUPS X15, 0x70(BX)" "movups %xmm15,0x70(%rbx)" main.go:89
 0x47ac7f 2 "XOR" "XORL CX, CX" "xor %ecx,%ecx" main.go:89
-0x47ac81 2 "JMP" "JMP 0x47acaf" "jmp 0x47acaf" main.go:90
+0x47ac81 2 "JMP" "JMP 0x47acaf" "jmp 0x47acaf <main.main+0x16f>" main.go:90
 0x47ac83 3 "XORPS" "XORPS X0, X0" "xorps %xmm0,%xmm0" main.go:91
 0x47ac86 5 "CVTSI2SD" "CVTSI2SDQ CX, X0" "cvtsi2sd %rcx,%xmm0" main.go:91
 0x47ac8b 9 "MOVSD_XMM" "MOVSD_XMM X0, 0x190(SP)(CX*8)" "movsd %xmm0,0x190(%rsp,%rcx,8)" main.go:91
@@ -2219,8 +2219,8 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x47aca3 9 "MOVSD_XMM" "MOVSD_XMM X0, 0x110(SP)(CX*8)" "movsd %xmm0,0x110(%rsp,%rcx,8)" main.go:92
 0x47acac 3 "INC" "INCQ CX" "inc %rcx" main.go:90
 0x47acaf 4 "CMP" "CMPQ CX, $0x10" "cmp $0x10,%rcx" main.go:90
-0x47acb3 2 "JL" "JL 0x47ac83" "jl 0x47ac83" main.go:90
-0x47acb5 5 "CALL" "CALL main.mat4Mul(SB)" "callq 0x47a980" main.go:94
+0x47acb3 2 "JL" "JL 0x47ac83" "jl 0x47ac83 <main.main+0x143>" main.go:90
+0x47acb5 5 "CALL" "CALL main.mat4Mul(SB)" "callq 0x47a980 <main.mat4Mul>" main.go:94
 0x47acba 8 "LEA" "LEAQ 0x90(SP), CX" "lea 0x90(%rsp),%rcx" main.go:94
 0x47acc2 3 "MOV" "MOVQ SP, DX" "mov %rsp,%rdx" main.go:94
 0x47acc5 4 "MOVUPS" "MOVUPS 0(DX), X14" "movups (%rdx),%xmm14" main.go:94
@@ -2242,11 +2242,11 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x47ad13 8 "LEA" "LEAQ 0x250(SP), AX" "lea 0x250(%rsp),%rax" main.go:95
 0x47ad1b 5 "MOV" "MOVL $0x4, BX" "mov $0x4,%ebx" main.go:95
 0x47ad20 3 "MOV" "MOVQ BX, CX" "mov %rbx,%rcx" main.go:95
-0x47ad23 5 "CALL" "CALL main.normalize(SB)" "callq 0x47aae0" main.go:95
+0x47ad23 5 "CALL" "CALL main.normalize(SB)" "callq 0x47aae0 <main.normalize>" main.go:95
 0x47ad28 8 "LEA" "LEAQ 0x270(SP), AX" "lea 0x270(%rsp),%rax" main.go:97
 0x47ad30 5 "MOV" "MOVL $0x8, BX" "mov $0x8,%ebx" main.go:97
 0x47ad35 3 "MOV" "MOVQ BX, CX" "mov %rbx,%rcx" main.go:97
-0x47ad38 5 "CALL" "CALL main.sumInts(SB)" "callq 0x47a820" main.go:97
+0x47ad38 5 "CALL" "CALL main.sumInts(SB)" "callq 0x47a820 <main.sumInts>" main.go:97
 0x47ad3d 8 "MOV" "MOVQ AX, 0x230(SP)" "mov %rax,0x230(%rsp)" main.go:97
 0x47ad45 8 "LEA" "LEAQ 0x250(SP), AX" "lea 0x250(%rsp),%rax" main.go:97
 0x47ad4d 5 "MOV" "MOVL $0x4, BX" "mov $0x4,%ebx" main.go:97
@@ -2255,43 +2255,43 @@ arch=amd64 funcs=1605 sha256=02b55132b05bf06f2e0a9e2588475b53df9f7fc508d0b84969f
 0x47ad58 3 "MOV" "MOVQ CX, SI" "mov %rcx,%rsi" main.go:97
 0x47ad5b 3 "MOV" "MOVQ CX, R8" "mov %rcx,%r8" main.go:97
 0x47ad5e 2 "NOP" "NOPW" "data16 nop" main.go:97
-0x47ad60 5 "CALL" "CALL main.dot(SB)" "callq 0x47a840" main.go:97
+0x47ad60 5 "CALL" "CALL main.dot(SB)" "callq 0x47a840 <main.dot>" main.go:97
 0x47ad65 9 "MOVSD_XMM" "MOVSD_XMM X0, 0x228(SP)" "movsd %xmm0,0x228(%rsp)" main.go:97
 0x47ad6e 8 "LEA" "LEAQ 0x238(SP), AX" "lea 0x238(%rsp),%rax" main.go:97
 0x47ad76 5 "MOV" "MOVL $0x3, BX" "mov $0x3,%ebx" main.go:97
 0x47ad7b 3 "MOV" "MOVQ BX, CX" "mov %rbx,%rcx" main.go:97
 0x47ad7e 2 "NOP" "NOPW" "data16 nop" main.go:97
-0x47ad80 5 "CALL" "CALL main.popcountAll(SB)" "callq 0x47a880" main.go:97
+0x47ad80 5 "CALL" "CALL main.popcountAll(SB)" "callq 0x47a880 <main.popcountAll>" main.go:97
 0x47ad85 8 "MOV" "MOVQ AX, 0x220(SP)" "mov %rax,0x220(%rsp)" main.go:97
 0x47ad8d 5 "MOV" "MOVL $0x1b, AX" "mov $0x1b,%eax" main.go:97
-0x47ad92 5 "CALL" "CALL main.collatzSteps(SB)" "callq 0x47a940" main.go:97
+0x47ad92 5 "CALL" "CALL main.collatzSteps(SB)" "callq 0x47a940 <main.collatzSteps>" main.go:97
 0x47ad97 8 "MOV" "MOVQ AX, 0x218(SP)" "mov %rax,0x218(%rsp)" main.go:97
 0x47ad9f 9 "MOVSD_XMM" "MOVSD_XMM 0xb8(SP), X0" "movsd 0xb8(%rsp),%xmm0" main.go:97
 0x47ada8 9 "MOVSD_XMM" "MOVSD_XMM X0, 0x210(SP)" "movsd %xmm0,0x210(%rsp)" main.go:97
-0x47adb1 5 "CALL" "CALL runtime.printlock(SB)" "callq 0x443060" main.go:97
+0x47adb1 5 "CALL" "CALL runtime.printlock(SB)" "callq 0x443060 <runtime.printlock>" main.go:97
 0x47adb6 8 "MOV" "MOVQ 0x230(SP), AX" "mov 0x230(%rsp),%rax" main.go:97
 0x47adbe 2 "NOP" "NOPW" "data16 nop" main.go:97
-0x47adc0 5 "CALL" "CALL runtime.printint(SB)" "callq 0x4435a0" main.go:97
-0x47adc5 5 "CALL" "CALL runtime.printsp(SB)" "callq 0x443260" main.go:97
+0x47adc0 5 "CALL" "CALL runtime.printint(SB)" "callq 0x4435a0 <runtime.printint>" main.go:97
+0x47adc5 5 "CALL" "CALL runtime.printsp(SB)" "callq 0x443260 <runtime.printsp>" main.go:97
 0x47adca 9 "MOVSD_XMM" "MOVSD_XMM 0x228(SP), X0" "movsd 0x228(%rsp),%xmm0" main.go:97
-0x47add3 5 "CALL" "CALL runtime.printfloat64(SB)" "callq 0x443340" main.go:97
-0x47add8 5 "CALL" "CALL runtime.printsp(SB)" "callq 0x443260" main.go:97
+0x47add3 5 "CALL" "CALL runtime.printfloat64(SB)" "callq 0x443340 <runtime.printfloat64>" main.go:97
+0x47add8 5 "CALL" "CALL runtime.printsp(SB)" "callq 0x443260 <runtime.printsp>" main.go:97
 0x47addd 8 "MOV" "MOVQ 0x220(SP), AX" "mov 0x220(%rsp),%rax" main.go:97
-0x47ade5 5 "CALL" "CALL runtime.printint(SB)" "callq 0x4435a0" main.go:97
-0x47adea 5 "CALL" "CALL runtime.printsp(SB)" "callq 0x443260" main.go:97
+0x47ade5 5 "CALL" "CALL runtime.printint(SB)" "callq 0x4435a0 <runtime.printint>" main.go:97
+0x47adea 5 "CALL" "CALL runtime.printsp(SB)" "callq 0x443260 <runtime.printsp>" main.go:97
 0x47adef 8 "MOV" "MOVQ 0x218(SP), AX" "mov 0x218(%rsp),%rax" main.go:97
-0x47adf7 5 "CALL" "CALL runtime.printint(SB)" "callq 0x4435a0" main.go:97
+0x47adf7 5 "CALL" "CALL runtime.printint(SB)" "callq 0x4435a0 <runtime.printint>" main.go:97
 0x47adfc 4 "NOP" "NOPL 0(AX)" "nopl (%rax)" main.go:97
-0x47ae00 5 "CALL" "CALL runtime.printsp(SB)" "callq 0x443260" main.go:97
+0x47ae00 5 "CALL" "CALL runtime.printsp(SB)" "callq 0x443260 <runtime.printsp>" main.go:97
 0x47ae05 9 "MOVSD_XMM" "MOVSD_XMM 0x210(SP), X0" "movsd 0x210(%rsp),%xmm0" main.go:97
-0x47ae0e 5 "CALL" "CALL runtime.printfloat64(SB)" "callq 0x443340" main.go:97
-0x47ae13 5 "CALL" "CALL runtime.printnl(SB)" "callq 0x4432a0" main.go:97
-0x47ae18 5 "CALL" "CALL runtime.printunlock(SB)" "callq 0x4430c0" main.go:97
+0x47ae0e 5 "CALL" "CALL runtime.printfloat64(SB)" "callq 0x443340 <runtime.printfloat64>" main.go:97
+0x47ae13 5 "CALL" "CALL runtime.printnl(SB)" "callq 0x4432a0 <runtime.printnl>" main.go:97
+0x47ae18 5 "CALL" "CALL runtime.printunlock(SB)" "callq 0x4430c0 <runtime.printunlock>" main.go:97
 0x47ae1d 7 "ADD" "ADDQ $0x2b0, SP" "add $0x2b0,%rsp" main.go:98
 0x47ae24 1 "POP" "POPQ BP" "pop %rbp" main.go:98
 0x47ae25 1 "RET" "RET" "retq" main.go:98
-0x47ae26 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x475ca0" main.go:84
-0x47ae2b 5 "JMP" "JMP main.main(SB)" "jmpq 0x47ab40" main.go:84
+0x47ae26 5 "CALL" "CALL runtime.morestack_noctxt.abi0(SB)" "callq 0x475ca0 <runtime.morestack_noctxt.abi0>" main.go:84
+0x47ae2b 5 "JMP" "JMP main.main(SB)" "jmpq 0x47ab40 <main.main>" main.go:84
 0x47ae30 1 "INT" "INT $0x3" "int3" .:-1
 0x47ae31 1 "INT" "INT $0x3" "int3" .:-1
 0x47ae32 1 "INT" "INT $0x3" "int3" .:-1

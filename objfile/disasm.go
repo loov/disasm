@@ -4,6 +4,7 @@ import (
 	"encoding/binary"
 	"fmt"
 	"io"
+	"slices"
 	"sync"
 
 	"golang.org/x/arch/arm/armasm"
@@ -53,8 +54,29 @@ func (b *Binary) Disassemble(fn *Func) ([]Inst, error) {
 
 	code, addr := fn.Code(), fn.Addr
 	lookup := b.Lookup
+	// The x/arch native renderers print bare addresses; resolve records
+	// what their Go renderers resolved so the same symbols are appended
+	// to the native text, objdump style: "call 0x475ca0 <runtime.f>".
+	var refs []string
+	resolve := func(a uint64) (string, uint64) {
+		name, base := lookup(a)
+		if name != "" {
+			ref := name
+			if a != base {
+				ref = fmt.Sprintf("%s+%#x", name, a-base)
+			}
+			if !slices.Contains(refs, ref) {
+				refs = append(refs, ref)
+			}
+		}
+		return name, base
+	}
 	var insts []Inst
 	emit := func(n int, op, text, gnu string) {
+		for _, ref := range refs {
+			gnu += " <" + ref + ">"
+		}
+		refs = refs[:0]
 		insts = append(insts, Inst{Addr: addr, Len: n, Op: op, Text: text, GNU: gnu})
 		code, addr = code[n:], addr+uint64(n)
 	}
@@ -73,7 +95,7 @@ func (b *Binary) Disassemble(fn *Func) ([]Inst, error) {
 				undecodable(1)
 				continue
 			}
-			emit(inst.Len, inst.Op.String(), x86asm.GoSyntax(inst, addr, lookup), x86asm.GNUSyntax(inst, addr, nil))
+			emit(inst.Len, inst.Op.String(), x86asm.GoSyntax(inst, addr, resolve), x86asm.GNUSyntax(inst, addr, nil))
 		}
 	case "arm64":
 		for len(code) > 0 {
@@ -82,7 +104,7 @@ func (b *Binary) Disassemble(fn *Func) ([]Inst, error) {
 				undecodable(4)
 				continue
 			}
-			emit(4, inst.Op.String(), arm64asm.GoSyntax(inst, addr, lookup, reader), arm64asm.GNUSyntax(inst))
+			emit(4, inst.Op.String(), arm64asm.GoSyntax(inst, addr, resolve, reader), arm64asm.GNUSyntax(inst))
 		}
 	case "arm":
 		// Mapping symbols split the text into ARM, Thumb and data
@@ -146,7 +168,7 @@ func (b *Binary) Disassemble(fn *Func) ([]Inst, error) {
 						undecodable(4)
 						continue
 					}
-					emit(inst.Len, inst.Op.String(), armasm.GoSyntax(inst, addr, lookup, reader), armasm.GNUSyntax(inst))
+					emit(inst.Len, inst.Op.String(), armasm.GoSyntax(inst, addr, resolve, reader), armasm.GNUSyntax(inst))
 				}
 			}
 		}
@@ -212,7 +234,7 @@ func (b *Binary) Disassemble(fn *Func) ([]Inst, error) {
 				undecodable(4)
 				continue
 			}
-			emit(4, inst.Op.String(), loong64asm.GoSyntax(inst, addr, lookup), loong64asm.GNUSyntax(inst))
+			emit(4, inst.Op.String(), loong64asm.GoSyntax(inst, addr, resolve), loong64asm.GNUSyntax(inst))
 		}
 	case "ppc64", "ppc64le":
 		for len(code) > 0 {
@@ -221,7 +243,7 @@ func (b *Binary) Disassemble(fn *Func) ([]Inst, error) {
 				undecodable(4)
 				continue
 			}
-			emit(inst.Len, inst.Op.String(), ppc64asm.GoSyntax(inst, addr, lookup), ppc64asm.GNUSyntax(inst, addr))
+			emit(inst.Len, inst.Op.String(), ppc64asm.GoSyntax(inst, addr, resolve), ppc64asm.GNUSyntax(inst, addr))
 		}
 	case "riscv64", "riscv32":
 		for len(code) > 0 {
@@ -230,7 +252,7 @@ func (b *Binary) Disassemble(fn *Func) ([]Inst, error) {
 				undecodable(2)
 				continue
 			}
-			emit(inst.Len, inst.Op.String(), riscv64asm.GoSyntax(inst, addr, lookup, reader), riscv64asm.GNUSyntax(inst))
+			emit(inst.Len, inst.Op.String(), riscv64asm.GoSyntax(inst, addr, resolve, reader), riscv64asm.GNUSyntax(inst))
 		}
 	case "s390x":
 		for len(code) > 0 {
@@ -239,7 +261,7 @@ func (b *Binary) Disassemble(fn *Func) ([]Inst, error) {
 				undecodable(2)
 				continue
 			}
-			emit(inst.Len, inst.Op.String(), s390xasm.GoSyntax(inst, addr, lookup), s390xasm.GNUSyntax(inst, addr))
+			emit(inst.Len, inst.Op.String(), s390xasm.GoSyntax(inst, addr, resolve), s390xasm.GNUSyntax(inst, addr))
 		}
 	default:
 		return nil, fmt.Errorf("unsupported architecture %q", b.Arch)
@@ -267,6 +289,9 @@ func (r textReader) ReadAt(p []byte, off int64) (int, error) {
 
 // literalPools finds the words L32R loads from by decoding every
 // function once; they are data inside .text and are rendered as such.
+// This is the one pass over the whole binary the package makes, on the
+// first Disassemble of an Xtensa binary: a pool is only known to be
+// data by being loaded from, possibly by a function far away.
 func (b *Binary) literalPools() map[uint64]bool {
 	b.xtensaLiteralsOnce.Do(func() {
 		b.xtensaLiterals = map[uint64]bool{}

@@ -1,51 +1,51 @@
-arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fbcc7b416c57e9429
+arch=ppc64le funcs=1545 sha256=9e918a7274ef89fced133e260f3deaf908d4f9484f9a4a3aa685e682a1c64c13
 == runtime.runGCProg 0x2f4d0 1056 /usr/local/go/src/runtime/mbitmap.go
 0x2f4d0 4 "ld" "MOVD 16(R30),R22" "ld r22,16(r30)" mbitmap.go:1565
 0x2f4d4 4 "cmpld" "CMPU R22,R1" "cmpld r22,r1" mbitmap.go:1565
-0x2f4d8 4 "bc" "BLT 0x2f4f8" "blt 0x2f4f8" mbitmap.go:1565
+0x2f4d8 4 "bc" "BLT 0x2f4f8" "blt 0x2f4f8 <runtime.runGCProg+0x28>" mbitmap.go:1565
 0x2f4dc 4 "std" "MOVD R3,32(R1)" "std r3,32(r1)" mbitmap.go:1565
 0x2f4e0 4 "std" "MOVD R4,40(R1)" "std r4,40(r1)" mbitmap.go:1565
 0x2f4e4 4 "mfspr" "MOVD LR,R5" "mflr r5" mbitmap.go:1565
-0x2f4e8 4 "bl" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 0x90220" mbitmap.go:1565
+0x2f4e8 4 "bl" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 0x90220 <runtime.morestack_noctxt.abi0>" mbitmap.go:1565
 0x2f4ec 4 "ld" "MOVD 32(R1),R3" "ld r3,32(r1)" mbitmap.go:1565
 0x2f4f0 4 "ld" "MOVD 40(R1),R4" "ld r4,40(r1)" mbitmap.go:1565
-0x2f4f4 4 "b" "BR runtime.runGCProg(SB)" "b 0x2f4d0" mbitmap.go:1565
+0x2f4f4 4 "b" "BR runtime.runGCProg(SB)" "b 0x2f4d0 <runtime.runGCProg>" mbitmap.go:1565
 0x2f4f8 4 "mfspr" "MOVD LR,R31" "mflr r31" mbitmap.go:1565
 0x2f4fc 4 "stdu" "MOVDU R31,-32(R1)" "stdu r31,-32(r1)" mbitmap.go:1565
 0x2f500 4 "li" "MOVD $0,R5" "li r5,0" mbitmap.go:1577
 0x2f504 4 "or" "OR R4,R4,R6" "or r6,r4,r4" mbitmap.go:1577
 0x2f508 4 "li" "MOVD $0,R7" "li r7,0" mbitmap.go:1577
-0x2f50c 4 "b" "BR 0x2f534" "b 0x2f534" mbitmap.go:1577
+0x2f50c 4 "b" "BR 0x2f534" "b 0x2f534 <runtime.runGCProg+0x64>" mbitmap.go:1577
 0x2f510 4 "or" "OR R10,R10,R3" "or r3,r10,r10" mbitmap.go:1577
 0x2f514 4 "or" "OR R8,R8,R7" "or r7,r8,r8" mbitmap.go:1577
 0x2f518 4 "or" "OR R12,R12,R4" "or r4,r12,r12" mbitmap.go:1577
-0x2f51c 4 "b" "BR 0x2f534" "b 0x2f534" mbitmap.go:1577
+0x2f51c 4 "b" "BR 0x2f534" "b 0x2f534 <runtime.runGCProg+0x64>" mbitmap.go:1577
 0x2f520 4 "stb" "MOVB R5,0(R4)" "stb r5,0(r4)" mbitmap.go:1578
 0x2f524 4 "nop" "NOP" "nop" mbitmap.go:1579
 0x2f528 4 "addi" "ADD R7,$-8,R7" "addi r7,r7,-8" mbitmap.go:1577
 0x2f52c 4 "rldicl" "RLDICL R5,$56,$8,R5" "rldicl r5,r5,56,8" mbitmap.go:1580
 0x2f530 4 "addi" "ADD R4,$1,R4" "addi r4,r4,1" mbitmap.go:1056
 0x2f534 4 "cmpldi" "CMPU R7,$8" "cmpldi r7,8" mbitmap.go:1577
-0x2f538 4 "bc" "BGE 0x2f520" "bge 0x2f520" mbitmap.go:1577
+0x2f538 4 "bc" "BGE 0x2f520" "bge 0x2f520 <runtime.runGCProg+0x50>" mbitmap.go:1577
 0x2f53c 4 "lbz" "MOVBZ 0(R3),R8" "lbz r8,0(r3)" mbitmap.go:1584
 0x2f540 4 "nop" "NOP" "nop" mbitmap.go:1585
 0x2f544 4 "rldicl" "RLDICL R8,$0,$57,R9" "rldicl r9,r8,0,57" mbitmap.go:1586
 0x2f548 4 "addi" "ADD R3,$1,R10" "addi r10,r3,1" mbitmap.go:1056
 0x2f54c 4 "andi." "ANDCC R8,$128,R11" "andi. r11,r8,128" mbitmap.go:1587
-0x2f550 4 "bc" "BNE 0x2f568" "bne 0x2f568" mbitmap.go:1587
+0x2f550 4 "bc" "BNE 0x2f568" "bne 0x2f568 <runtime.runGCProg+0x98>" mbitmap.go:1587
 0x2f554 4 "cmpdi" "CMP R9,$0" "cmpdi r9,0" mbitmap.go:1589
-0x2f558 4 "bc" "BEQ 0x2f698" "beq 0x2f698" mbitmap.go:1589
+0x2f558 4 "bc" "BEQ 0x2f698" "beq 0x2f698 <runtime.runGCProg+0x1c8>" mbitmap.go:1589
 0x2f55c 4 "rldicl" "RLDICL R9,$61,$3,R9" "rldicl r9,r9,61,3" mbitmap.go:1593
 0x2f560 4 "li" "MOVD $0,R11" "li r11,0" mbitmap.go:1594
-0x2f564 4 "b" "BR 0x2f8ac" "b 0x2f8ac" mbitmap.go:1594
+0x2f564 4 "b" "BR 0x2f8ac" "b 0x2f8ac <runtime.runGCProg+0x3dc>" mbitmap.go:1594
 0x2f568 4 "cmpdi" "CMP R9,$0" "cmpdi r9,0" mbitmap.go:1610
-0x2f56c 4 "bc" "BNE 0x2f57c" "bne 0x2f57c" mbitmap.go:1610
+0x2f56c 4 "bc" "BNE 0x2f57c" "bne 0x2f57c <runtime.runGCProg+0xac>" mbitmap.go:1610
 0x2f570 4 "li" "MOVD $0,R8" "li r8,0" mbitmap.go:1610
 0x2f574 4 "li" "MOVD $0,R9" "li r9,0" mbitmap.go:1610
-0x2f578 4 "b" "BR 0x2f828" "b 0x2f828" mbitmap.go:1610
+0x2f578 4 "b" "BR 0x2f828" "b 0x2f828 <runtime.runGCProg+0x358>" mbitmap.go:1610
 0x2f57c 4 "li" "MOVD $0,R8" "li r8,0" mbitmap.go:1624
 0x2f580 4 "li" "MOVD $0,R11" "li r11,0" mbitmap.go:1624
-0x2f584 4 "b" "BR 0x2f58c" "b 0x2f58c" mbitmap.go:1624
+0x2f584 4 "b" "BR 0x2f58c" "b 0x2f58c <runtime.runGCProg+0xbc>" mbitmap.go:1624
 0x2f588 4 "addi" "ADD R11,$7,R11" "addi r11,r11,7" mbitmap.go:1623
 0x2f58c 4 "lbz" "MOVBZ 0(R10),R12" "lbz r12,0(r10)" mbitmap.go:1624
 0x2f590 4 "rldicl" "RLDICL R12,$0,$57,R14" "rldicl r14,r12,0,57" mbitmap.go:1626
@@ -56,15 +56,15 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x2f5a4 4 "isel" "ISEL $0,R14,R0,R14" "isel r14,r14,r0,lt" mbitmap.go:1626
 0x2f5a8 4 "or" "OR R14,R8,R8" "or r8,r8,r14" mbitmap.go:1626
 0x2f5ac 4 "andi." "ANDCC R12,$128,R12" "andi. r12,r12,128" mbitmap.go:1627
-0x2f5b0 4 "bc" "BNE 0x2f588" "bne 0x2f588" mbitmap.go:1627
+0x2f5b0 4 "bc" "BNE 0x2f588" "bne 0x2f588 <runtime.runGCProg+0xb8>" mbitmap.go:1627
 0x2f5b4 4 "mulld" "MULLD R8,R9,R8" "mulld r8,r9,r8" mbitmap.go:1631
 0x2f5b8 4 "cmpldi" "CMPU R9,$57" "cmpldi r9,57" mbitmap.go:1642
-0x2f5bc 4 "bc" "BGT 0x2f5d4" "bgt 0x2f5d4" mbitmap.go:1642
+0x2f5bc 4 "bc" "BGT 0x2f5d4" "bgt 0x2f5d4 <runtime.runGCProg+0x104>" mbitmap.go:1642
 0x2f5c0 4 "nop" "NOP" "nop" mbitmap.go:1648
 0x2f5c4 4 "addi" "ADD R4,$-1,R11" "addi r11,r4,-1" mbitmap.go:1069
 0x2f5c8 4 "or" "OR R7,R7,R3" "or r3,r7,r7" mbitmap.go:1577
 0x2f5cc 4 "or" "OR R5,R5,R12" "or r12,r5,r5" mbitmap.go:1577
-0x2f5d0 4 "b" "BR 0x2f6d0" "b 0x2f6d0" mbitmap.go:1649
+0x2f5d0 4 "b" "BR 0x2f6d0" "b 0x2f6d0 <runtime.runGCProg+0x200>" mbitmap.go:1649
 0x2f5d4 4 "subf" "SUB R7,R9,R9" "subf r9,r7,r9" mbitmap.go:1723
 0x2f5d8 4 "addi" "ADD R9,$7,R11" "addi r11,r9,7" mbitmap.go:1725
 0x2f5dc 4 "rldicl" "RLDICL R11,$61,$3,R11" "rldicl r11,r11,61,3" mbitmap.go:1725
@@ -72,7 +72,7 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x2f5e4 4 "subf" "SUB R11,R4,R4" "subf r4,r11,r4" mbitmap.go:1045
 0x2f5e8 4 "or" "OR R4,R4,R11" "or r11,r4,r4" mbitmap.go:1045
 0x2f5ec 4 "andi." "ANDCC R9,$7,R9" "andi. r9,r9,7" mbitmap.go:1726
-0x2f5f0 4 "bc" "BEQ 0x2f618" "beq 0x2f618" mbitmap.go:1726
+0x2f5f0 4 "bc" "BEQ 0x2f618" "beq 0x2f618 <runtime.runGCProg+0x148>" mbitmap.go:1726
 0x2f5f4 4 "lbz" "MOVBZ 0(R4),R14" "lbz r14,0(r4)" mbitmap.go:1727
 0x2f5f8 4 "subfic" "SUBFIC R9,$8,R15" "subfic r15,r9,8" mbitmap.go:1727
 0x2f5fc 4 "srd" "SRD R15,R14,R14" "srd r14,r14,r15" mbitmap.go:1727
@@ -83,7 +83,7 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x2f610 4 "add" "ADD R7,R9,R7" "add r7,r9,r7" mbitmap.go:1729
 0x2f614 4 "subf" "SUB R9,R8,R8" "subf r8,r9,r8" mbitmap.go:1730
 0x2f618 4 "rldicl" "RLDICL R8,$61,$3,R9" "rldicl r9,r8,61,3" mbitmap.go:1734
-0x2f61c 4 "b" "BR 0x2f650" "b 0x2f650" mbitmap.go:1734
+0x2f61c 4 "b" "BR 0x2f650" "b 0x2f650 <runtime.runGCProg+0x180>" mbitmap.go:1734
 0x2f620 4 "lbz" "MOVBZ 0(R4),R11" "lbz r11,0(r4)" mbitmap.go:1735
 0x2f624 4 "sld" "SLD R7,R11,R11" "sld r11,r11,r7" mbitmap.go:1735
 0x2f628 4 "nop" "NOP" "nop" mbitmap.go:1736
@@ -97,9 +97,9 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x2f648 4 "addi" "ADD R4,$1,R4" "addi r4,r4,1" mbitmap.go:1056
 0x2f64c 4 "addi" "ADD R12,$1,R12" "addi r12,r12,1" mbitmap.go:1056
 0x2f650 4 "cmpldi" "CMPU R9,$0" "cmpldi r9,0" mbitmap.go:1734
-0x2f654 4 "bc" "BGT 0x2f620" "bgt 0x2f620" mbitmap.go:1734
+0x2f654 4 "bc" "BGT 0x2f620" "bgt 0x2f620 <runtime.runGCProg+0x150>" mbitmap.go:1734
 0x2f658 4 "andi." "ANDCC R8,$7,R8" "andi. r8,r8,7" mbitmap.go:1742
-0x2f65c 4 "bc" "BLE 0x2f68c" "ble 0x2f68c" mbitmap.go:1742
+0x2f65c 4 "bc" "BLE 0x2f68c" "ble 0x2f68c <runtime.runGCProg+0x1bc>" mbitmap.go:1742
 0x2f660 4 "lbz" "MOVBZ 0(R4),R4" "lbz r4,0(r4)" mbitmap.go:1743
 0x2f664 4 "li" "MOVD $1,R9" "li r9,1" mbitmap.go:1743
 0x2f668 4 "sld" "SLD R8,R9,R11" "sld r11,r9,r8" mbitmap.go:1743
@@ -110,10 +110,10 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x2f67c 4 "cmpldi" "CMPU R7,$64" "cmpldi r7,64" mbitmap.go:1743
 0x2f680 4 "isel" "ISEL $0,R4,R0,R4" "isel r4,r4,r0,lt" mbitmap.go:1743
 0x2f684 4 "or" "OR R4,R5,R5" "or r5,r5,r4" mbitmap.go:1743
-0x2f688 4 "b" "BR 0x2f510" "b 0x2f510" mbitmap.go:1744
+0x2f688 4 "b" "BR 0x2f510" "b 0x2f510 <runtime.runGCProg+0x40>" mbitmap.go:1744
 0x2f68c 4 "li" "MOVD $1,R9" "li r9,1" mbitmap.go:1744
 0x2f690 4 "or" "OR R7,R7,R8" "or r8,r7,r7" mbitmap.go:1744
-0x2f694 4 "b" "BR 0x2f510" "b 0x2f510" mbitmap.go:1742
+0x2f694 4 "b" "BR 0x2f510" "b 0x2f510 <runtime.runGCProg+0x40>" mbitmap.go:1742
 0x2f698 4 "or" "OR R4,R4,R8" "or r8,r4,r4" mbitmap.go:1749
 0x2f69c 4 "subf" "SUB R6,R8,R6" "subf r6,r6,r8" mbitmap.go:1749
 0x2f6a0 4 "rldicr" "RLDICR R6,$3,$60,R6" "rldicr r6,r6,3,60" mbitmap.go:1749
@@ -121,7 +121,7 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x2f6a8 4 "rldicl" "RLDICL R8,$0,$61,R8" "rldicl r8,r8,0,61" mbitmap.go:1750
 0x2f6ac 4 "add" "ADD R7,R6,R3" "add r3,r6,r7" mbitmap.go:1749
 0x2f6b0 4 "add" "ADD R7,R8,R6" "add r6,r8,r7" mbitmap.go:1750
-0x2f6b4 4 "b" "BR 0x2f86c" "b 0x2f86c" mbitmap.go:1751
+0x2f6b4 4 "b" "BR 0x2f86c" "b 0x2f86c <runtime.runGCProg+0x39c>" mbitmap.go:1751
 0x2f6b8 4 "rldicr" "RLDICR R5,$8,$55,R14" "rldicr r14,r5,8,55" mbitmap.go:1650
 0x2f6bc 4 "lbz" "MOVBZ 0(R11),R15" "lbz r15,0(r11)" mbitmap.go:1651
 0x2f6c0 4 "or" "OR R15,R14,R5" "or r5,r14,r15" mbitmap.go:1651
@@ -129,52 +129,52 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x2f6c8 4 "addi" "ADD R7,$8,R7" "addi r7,r7,8" mbitmap.go:1653
 0x2f6cc 4 "addi" "ADD R11,$-1,R11" "addi r11,r11,-1" mbitmap.go:1069
 0x2f6d0 4 "cmpld" "CMPU R7,R9" "cmpld r7,r9" mbitmap.go:1649
-0x2f6d4 4 "bc" "BLT 0x2f6b8" "blt 0x2f6b8" mbitmap.go:1649
-0x2f6d8 4 "bc" "BLE 0x2f6f0" "ble 0x2f6f0" mbitmap.go:1660
+0x2f6d4 4 "bc" "BLT 0x2f6b8" "blt 0x2f6b8 <runtime.runGCProg+0x1e8>" mbitmap.go:1649
+0x2f6d8 4 "bc" "BLE 0x2f6f0" "ble 0x2f6f0 <runtime.runGCProg+0x220>" mbitmap.go:1660
 0x2f6dc 4 "subf" "SUB R9,R7,R11" "subf r11,r9,r7" mbitmap.go:1661
 0x2f6e0 4 "srd" "SRD R11,R5,R14" "srd r14,r5,r11" mbitmap.go:1661
 0x2f6e4 4 "cmpldi" "CMPU R11,$64" "cmpldi r11,64" mbitmap.go:1661
 0x2f6e8 4 "isel" "ISEL $0,R14,R0,R5" "isel r5,r14,r0,lt" mbitmap.go:1661
-0x2f6ec 4 "b" "BR 0x2f6f4" "b 0x2f6f4" mbitmap.go:1662
+0x2f6ec 4 "b" "BR 0x2f6f4" "b 0x2f6f4 <runtime.runGCProg+0x224>" mbitmap.go:1662
 0x2f6f0 4 "or" "OR R7,R7,R9" "or r9,r7,r7" mbitmap.go:1666
 0x2f6f4 4 "cmpdi" "CMP R9,$1" "cmpdi r9,1" mbitmap.go:1666
-0x2f6f8 4 "bc" "BNE 0x2f71c" "bne 0x2f71c" mbitmap.go:1666
+0x2f6f8 4 "bc" "BNE 0x2f71c" "bne 0x2f71c <runtime.runGCProg+0x24c>" mbitmap.go:1666
 0x2f6fc 4 "cmpdi" "CMP R5,$1" "cmpdi r5,1" mbitmap.go:1673
-0x2f700 4 "bc" "BNE 0x2f714" "bne 0x2f714" mbitmap.go:1673
+0x2f700 4 "bc" "BNE 0x2f714" "bne 0x2f714 <runtime.runGCProg+0x244>" mbitmap.go:1673
 0x2f704 4 "li" "MOVD $-1,R5" "li r5,-1" mbitmap.go:1673
 0x2f708 4 "rldic" "RLDIC R5,$0,$7,R5" "rldic r5,r5,0,7" mbitmap.go:1673
 0x2f70c 4 "li" "MOVD $57,R7" "li r7,57" mbitmap.go:1673
-0x2f710 4 "b" "BR 0x2f744" "b 0x2f744" mbitmap.go:1673
+0x2f710 4 "b" "BR 0x2f744" "b 0x2f744 <runtime.runGCProg+0x274>" mbitmap.go:1673
 0x2f714 4 "or" "OR R8,R8,R7" "or r7,r8,r8" mbitmap.go:1673
-0x2f718 4 "b" "BR 0x2f744" "b 0x2f744" mbitmap.go:1677
+0x2f718 4 "b" "BR 0x2f744" "b 0x2f744 <runtime.runGCProg+0x274>" mbitmap.go:1677
 0x2f71c 4 "rldicr" "RLDICR R9,$1,$62,R7" "rldicr r7,r9,1,62" mbitmap.go:1682
 0x2f720 4 "cmpldi" "CMPU R7,$57" "cmpldi r7,57" mbitmap.go:1682
-0x2f724 4 "bc" "BGT 0x2f730" "bgt 0x2f730" mbitmap.go:1682
+0x2f724 4 "bc" "BGT 0x2f730" "bgt 0x2f730 <runtime.runGCProg+0x260>" mbitmap.go:1682
 0x2f728 4 "or" "OR R9,R9,R7" "or r7,r9,r9" mbitmap.go:1666
-0x2f72c 4 "b" "BR 0x2f7e8" "b 0x2f7e8" mbitmap.go:1682
+0x2f72c 4 "b" "BR 0x2f7e8" "b 0x2f7e8 <runtime.runGCProg+0x318>" mbitmap.go:1682
 0x2f730 4 "or" "OR R9,R9,R7" "or r7,r9,r9" mbitmap.go:1700
-0x2f734 4 "b" "BR 0x2f744" "b 0x2f744" mbitmap.go:1700
+0x2f734 4 "b" "BR 0x2f744" "b 0x2f744 <runtime.runGCProg+0x274>" mbitmap.go:1700
 0x2f738 4 "subf" "SUB R7,R8,R8" "subf r8,r7,r8" mbitmap.go:1700
 0x2f73c 4 "or" "OR R11,R11,R3" "or r3,r11,r11" mbitmap.go:1700
 0x2f740 4 "or" "OR R9,R9,R12" "or r12,r9,r9" mbitmap.go:1700
 0x2f744 4 "cmpld" "CMPU R7,R8" "cmpld r7,r8" mbitmap.go:1700
-0x2f748 4 "bc" "BGT 0x2f784" "bgt 0x2f784" mbitmap.go:1700
+0x2f748 4 "bc" "BGT 0x2f784" "bgt 0x2f784 <runtime.runGCProg+0x2b4>" mbitmap.go:1700
 0x2f74c 4 "sld" "SLD R3,R5,R9" "sld r9,r5,r3" mbitmap.go:1701
 0x2f750 4 "add" "ADD R3,R7,R11" "add r11,r7,r3" mbitmap.go:1702
 0x2f754 4 "cmpldi" "CMPU R3,$64" "cmpldi r3,64" mbitmap.go:1701
 0x2f758 4 "isel" "ISEL $0,R9,R0,R9" "isel r9,r9,r0,lt" mbitmap.go:1701
 0x2f75c 4 "or" "OR R9,R12,R9" "or r9,r12,r9" mbitmap.go:1701
-0x2f760 4 "b" "BR 0x2f778" "b 0x2f778" mbitmap.go:1703
+0x2f760 4 "b" "BR 0x2f778" "b 0x2f778 <runtime.runGCProg+0x2a8>" mbitmap.go:1703
 0x2f764 4 "stb" "MOVB R9,0(R4)" "stb r9,0(r4)" mbitmap.go:1704
 0x2f768 4 "nop" "NOP" "nop" mbitmap.go:1705
 0x2f76c 4 "rldicl" "RLDICL R9,$56,$8,R9" "rldicl r9,r9,56,8" mbitmap.go:1706
 0x2f770 4 "addi" "ADD R11,$-8,R11" "addi r11,r11,-8" mbitmap.go:1707
 0x2f774 4 "addi" "ADD R4,$1,R4" "addi r4,r4,1" mbitmap.go:1056
 0x2f778 4 "cmpldi" "CMPU R11,$8" "cmpldi r11,8" mbitmap.go:1703
-0x2f77c 4 "bc" "BGE 0x2f764" "bge 0x2f764" mbitmap.go:1703
-0x2f780 4 "b" "BR 0x2f738" "b 0x2f738" mbitmap.go:1703
+0x2f77c 4 "bc" "BGE 0x2f764" "bge 0x2f764 <runtime.runGCProg+0x294>" mbitmap.go:1703
+0x2f780 4 "b" "BR 0x2f738" "b 0x2f738 <runtime.runGCProg+0x268>" mbitmap.go:1703
 0x2f784 4 "cmpldi" "CMPU R8,$0" "cmpldi r8,0" mbitmap.go:1712
-0x2f788 4 "bc" "BLE 0x2f7bc" "ble 0x2f7bc" mbitmap.go:1712
+0x2f788 4 "bc" "BLE 0x2f7bc" "ble 0x2f7bc <runtime.runGCProg+0x2ec>" mbitmap.go:1712
 0x2f78c 4 "li" "MOVD $1,R7" "li r7,1" mbitmap.go:1713
 0x2f790 4 "sld" "SLD R8,R7,R9" "sld r9,r7,r8" mbitmap.go:1713
 0x2f794 4 "add" "ADD R8,R3,R11" "add r11,r3,r8" mbitmap.go:1715
@@ -186,22 +186,22 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x2f7ac 4 "cmpldi" "CMPU R3,$64" "cmpldi r3,64" mbitmap.go:1714
 0x2f7b0 4 "isel" "ISEL $0,R5,R0,R5" "isel r5,r5,r0,lt" mbitmap.go:1714
 0x2f7b4 4 "or" "OR R5,R12,R12" "or r12,r12,r5" mbitmap.go:1714
-0x2f7b8 4 "b" "BR 0x2f7c4" "b 0x2f7c4" mbitmap.go:1715
+0x2f7b8 4 "b" "BR 0x2f7c4" "b 0x2f7c4 <runtime.runGCProg+0x2f4>" mbitmap.go:1715
 0x2f7bc 4 "li" "MOVD $1,R7" "li r7,1" mbitmap.go:1715
 0x2f7c0 4 "or" "OR R3,R3,R11" "or r11,r3,r3" mbitmap.go:1717
 0x2f7c4 4 "li" "MOVD $1,R9" "li r9,1" mbitmap.go:1717
 0x2f7c8 4 "or" "OR R11,R11,R8" "or r8,r11,r11" mbitmap.go:1577
 0x2f7cc 4 "or" "OR R12,R12,R5" "or r5,r12,r12" mbitmap.go:1577
 0x2f7d0 4 "or" "OR R4,R4,R12" "or r12,r4,r4" mbitmap.go:1577
-0x2f7d4 4 "b" "BR 0x2f510" "b 0x2f510" mbitmap.go:1717
+0x2f7d4 4 "b" "BR 0x2f510" "b 0x2f510 <runtime.runGCProg+0x40>" mbitmap.go:1717
 0x2f7d8 4 "sld" "SLD R9,R5,R11" "sld r11,r5,r9" mbitmap.go:1685
 0x2f7dc 4 "isel" "ISEL $0,R11,R0,R11" "isel r11,r11,r0,lt" mbitmap.go:1685
 0x2f7e0 4 "or" "OR R11,R5,R5" "or r5,r5,r11" mbitmap.go:1685
 0x2f7e4 4 "rldicr" "RLDICR R9,$1,$62,R9" "rldicr r9,r9,1,62" mbitmap.go:1686
 0x2f7e8 4 "cmpldi" "CMPU R9,$64" "cmpldi r9,64" mbitmap.go:1684
-0x2f7ec 4 "bc" "BLE 0x2f7d8" "ble 0x2f7d8" mbitmap.go:1684
+0x2f7ec 4 "bc" "BLE 0x2f7d8" "ble 0x2f7d8 <runtime.runGCProg+0x308>" mbitmap.go:1684
 0x2f7f0 4 "cmpdi" "CMP R7,$0" "cmpdi r7,0" mbitmap.go:1690
-0x2f7f4 4 "bc" "BEQ 0x2f820" "beq 0x2f820" mbitmap.go:1690
+0x2f7f4 4 "bc" "BEQ 0x2f820" "beq 0x2f820 <runtime.runGCProg+0x350>" mbitmap.go:1690
 0x2f7f8 4 "li" "MOVD $57,R11" "li r11,57" mbitmap.go:1690
 0x2f7fc 4 "divdu" "DIVDU R7,R11,R14" "divdu r14,r11,r7" mbitmap.go:1690
 0x2f800 4 "mulld" "MULLD R7,R14,R9" "mulld r9,r14,r7" mbitmap.go:1690
@@ -211,8 +211,8 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x2f810 4 "isel" "ISEL $0,R14,R0,R14" "isel r14,r14,r0,lt" mbitmap.go:1691
 0x2f814 4 "addi" "ADD R14,$-1,R14" "addi r14,r14,-1" mbitmap.go:1691
 0x2f818 4 "and" "AND R14,R5,R5" "and r5,r5,r14" mbitmap.go:1691
-0x2f81c 4 "b" "BR 0x2f730" "b 0x2f730" mbitmap.go:1693
-0x2f820 4 "bl" "CALL runtime.panicdivide(SB)" "bl 0x53850" mbitmap.go:1690
+0x2f81c 4 "b" "BR 0x2f730" "b 0x2f730 <runtime.runGCProg+0x260>" mbitmap.go:1693
+0x2f820 4 "bl" "CALL runtime.panicdivide(SB)" "bl 0x53850 <runtime.panicdivide>" mbitmap.go:1690
 0x2f824 4 "addi" "ADD R9,$7,R9" "addi r9,r9,7" mbitmap.go:1611
 0x2f828 4 "lbz" "MOVBZ 0(R10),R11" "lbz r11,0(r10)" mbitmap.go:1612
 0x2f82c 4 "rldicl" "RLDICL R11,$0,$57,R12" "rldicl r12,r11,0,57" mbitmap.go:1614
@@ -223,16 +223,16 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x2f840 4 "isel" "ISEL $0,R12,R0,R12" "isel r12,r12,r0,lt" mbitmap.go:1614
 0x2f844 4 "or" "OR R12,R8,R8" "or r8,r8,r12" mbitmap.go:1614
 0x2f848 4 "andi." "ANDCC R11,$128,R11" "andi. r11,r11,128" mbitmap.go:1615
-0x2f84c 4 "bc" "BNE 0x2f824" "bne 0x2f824" mbitmap.go:1615
+0x2f84c 4 "bc" "BNE 0x2f824" "bne 0x2f824 <runtime.runGCProg+0x354>" mbitmap.go:1615
 0x2f850 4 "or" "OR R8,R8,R9" "or r9,r8,r8" mbitmap.go:1622
-0x2f854 4 "b" "BR 0x2f57c" "b 0x2f57c" mbitmap.go:1616
+0x2f854 4 "b" "BR 0x2f57c" "b 0x2f57c <runtime.runGCProg+0xac>" mbitmap.go:1616
 0x2f858 4 "stb" "MOVB R5,0(R4)" "stb r5,0(r4)" mbitmap.go:1752
 0x2f85c 4 "nop" "NOP" "nop" mbitmap.go:1753
 0x2f860 4 "addi" "ADD R6,$-8,R6" "addi r6,r6,-8" mbitmap.go:1751
 0x2f864 4 "rldicl" "RLDICL R5,$56,$8,R5" "rldicl r5,r5,56,8" mbitmap.go:1754
 0x2f868 4 "addi" "ADD R4,$1,R4" "addi r4,r4,1" mbitmap.go:1056
 0x2f86c 4 "cmpldi" "CMPU R6,$0" "cmpldi r6,0" mbitmap.go:1751
-0x2f870 4 "bc" "BGT 0x2f858" "bgt 0x2f858" mbitmap.go:1751
+0x2f870 4 "bc" "BGT 0x2f858" "bgt 0x2f858 <runtime.runGCProg+0x388>" mbitmap.go:1751
 0x2f874 4 "ld" "MOVD 0(R1),R31" "ld r31,0(r1)" mbitmap.go:1756
 0x2f878 4 "mtspr" "MOVD R31,LR" "mtlr r31" mbitmap.go:1756
 0x2f87c 4 "addi" "ADD R1,$32,R1" "addi r1,r1,32" mbitmap.go:1756
@@ -248,9 +248,9 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x2f8a4 4 "addi" "ADD R10,$1,R10" "addi r10,r10,1" mbitmap.go:1056
 0x2f8a8 4 "addi" "ADD R4,$1,R4" "addi r4,r4,1" mbitmap.go:1056
 0x2f8ac 4 "cmpld" "CMPU R11,R9" "cmpld r11,r9" mbitmap.go:1594
-0x2f8b0 4 "bc" "BLT 0x2f884" "blt 0x2f884" mbitmap.go:1594
+0x2f8b0 4 "bc" "BLT 0x2f884" "blt 0x2f884 <runtime.runGCProg+0x3b4>" mbitmap.go:1594
 0x2f8b4 4 "andi." "ANDCC R8,$7,R8" "andi. r8,r8,7" mbitmap.go:1601
-0x2f8b8 4 "bc" "BLE 0x2f8d4" "ble 0x2f8d4" mbitmap.go:1601
+0x2f8b8 4 "bc" "BLE 0x2f8d4" "ble 0x2f8d4 <runtime.runGCProg+0x404>" mbitmap.go:1601
 0x2f8bc 4 "lbz" "MOVBZ 0(R10),R9" "lbz r9,0(r10)" mbitmap.go:1602
 0x2f8c0 4 "sld" "SLD R7,R9,R9" "sld r9,r9,r7" mbitmap.go:1602
 0x2f8c4 4 "or" "OR R9,R5,R5" "or r5,r5,r9" mbitmap.go:1602
@@ -260,19 +260,19 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x2f8d4 4 "li" "MOVD $1,R9" "li r9,1" mbitmap.go:1606
 0x2f8d8 4 "or" "OR R7,R7,R8" "or r8,r7,r7" mbitmap.go:1577
 0x2f8dc 4 "or" "OR R4,R4,R12" "or r12,r4,r4" mbitmap.go:1577
-0x2f8e0 4 "b" "BR 0x2f510" "b 0x2f510" mbitmap.go:1606
+0x2f8e0 4 "b" "BR 0x2f510" "b 0x2f510 <runtime.runGCProg+0x40>" mbitmap.go:1606
 0x2f8e4 4 "Op(0)" "WORD $0" ".long 0x0" .:-1
 0x2f8e8 4 "Op(0)" "WORD $0" ".long 0x0" .:-1
 0x2f8ec 4 "Op(0)" "WORD $0" ".long 0x0" .:-1
 == runtime.runCheckmark 0x30d50 208 /usr/local/go/src/runtime/mcheckmark.go
 0x30d50 4 "ld" "MOVD 16(R30),R22" "ld r22,16(r30)" mcheckmark.go:126
 0x30d54 4 "cmpld" "CMPU R22,R1" "cmpld r22,r1" mcheckmark.go:126
-0x30d58 4 "bc" "BLT 0x30d70" "blt 0x30d70" mcheckmark.go:126
+0x30d58 4 "bc" "BLT 0x30d70" "blt 0x30d70 <runtime.runCheckmark+0x20>" mcheckmark.go:126
 0x30d5c 4 "std" "MOVD R3,32(R1)" "std r3,32(r1)" mcheckmark.go:126
 0x30d60 4 "mfspr" "MOVD LR,R5" "mflr r5" mcheckmark.go:126
-0x30d64 4 "bl" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 0x90220" mcheckmark.go:126
+0x30d64 4 "bl" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 0x90220 <runtime.morestack_noctxt.abi0>" mcheckmark.go:126
 0x30d68 4 "ld" "MOVD 32(R1),R3" "ld r3,32(r1)" mcheckmark.go:126
-0x30d6c 4 "b" "BR runtime.runCheckmark(SB)" "b 0x30d50" mcheckmark.go:126
+0x30d6c 4 "b" "BR runtime.runCheckmark(SB)" "b 0x30d50 <runtime.runCheckmark>" mcheckmark.go:126
 0x30d70 4 "mfspr" "MOVD LR,R31" "mflr r31" mcheckmark.go:126
 0x30d74 4 "stdu" "MOVDU R31,-56(R1)" "stdu r31,-56(r1)" mcheckmark.go:126
 0x30d78 4 "std" "MOVD R3,88(R1)" "std r3,88(r1)" mcheckmark.go:144
@@ -283,8 +283,8 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x30d8c 4 "li" "MOVD $0,R4" "li r4,0" types.go:131
 0x30d90 4 "sync" "HWSYNC" "hwsync" types.go:131
 0x30d94 4 "stb" "MOVB R4,0(R3)" "stb r4,0(r3)" types.go:131
-0x30d98 4 "bl" "CALL runtime.startCheckmarks(SB)" "bl 0x308e0" mcheckmark.go:135
-0x30d9c 4 "bl" "CALL runtime.gcResetMarkState(SB)" "bl 0x370b0" mcheckmark.go:136
+0x30d98 4 "bl" "CALL runtime.startCheckmarks(SB)" "bl 0x308e0 <runtime.startCheckmarks>" mcheckmark.go:135
+0x30d9c 4 "bl" "CALL runtime.gcResetMarkState(SB)" "bl 0x370b0 <runtime.gcResetMarkState>" mcheckmark.go:136
 0x30da0 4 "or" "OR g,g,R3" "or r3,r30,r30" mcheckmark.go:137
 0x30da4 4 "ld" "MOVD 48(R3),R3" "ld r3,48(r3)" mcheckmark.go:137
 0x30da8 4 "ld" "MOVD 208(R3),R3" "ld r3,208(r3)" mcheckmark.go:137
@@ -297,14 +297,14 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x30dc4 4 "bclrl" "BCLRL $20,LT,$1" "bclrl 20,lt,1" mcheckmark.go:138
 0x30dc8 4 "ld" "MOVD 48(R1),R3" "ld r3,48(r1)" mcheckmark.go:139
 0x30dcc 4 "li" "MOVD $0,R4" "li r4,0" mcheckmark.go:139
-0x30dd0 4 "bl" "CALL runtime.gcDrain(SB)" "bl 0x3a920" mcheckmark.go:139
+0x30dd0 4 "bl" "CALL runtime.gcDrain(SB)" "bl 0x3a920 <runtime.gcDrain>" mcheckmark.go:139
 0x30dd4 4 "or" "OR g,g,R3" "or r3,r30,r30" mcheckmark.go:140
 0x30dd8 4 "ld" "MOVD 48(R3),R3" "ld r3,48(r3)" mcheckmark.go:140
 0x30ddc 4 "ld" "MOVD 208(R3),R3" "ld r3,208(r3)" mcheckmark.go:140
-0x30de0 4 "bl" "CALL runtime.wbBufFlush1(SB)" "bl 0x515b0" mcheckmark.go:140
+0x30de0 4 "bl" "CALL runtime.wbBufFlush1(SB)" "bl 0x515b0 <runtime.wbBufFlush1>" mcheckmark.go:140
 0x30de4 4 "ld" "MOVD 48(R1),R3" "ld r3,48(r1)" mcheckmark.go:141
-0x30de8 4 "bl" "CALL runtime.(*gcWork).dispose(SB)" "bl 0x45a50" mcheckmark.go:141
-0x30dec 4 "bl" "CALL runtime.endCheckmarks(SB)" "bl 0x309e0" mcheckmark.go:142
+0x30de8 4 "bl" "CALL runtime.(*gcWork).dispose(SB)" "bl 0x45a50 <runtime.(*gcWork).dispose>" mcheckmark.go:141
+0x30dec 4 "bl" "CALL runtime.endCheckmarks(SB)" "bl 0x309e0 <runtime.endCheckmarks>" mcheckmark.go:142
 0x30df0 4 "nop" "NOP" "nop" mcheckmark.go:143
 0x30df4 4 "nop" "NOP" "nop" types.go:179
 0x30df8 4 "lis" "ADDIS $0,$21,R3" "lis r3,21" types.go:131
@@ -321,10 +321,10 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x32ce0 4 "ld" "MOVD 16(R30),R22" "ld r22,16(r30)" mfinal.go:193
 0x32ce4 4 "addi" "ADD R1,$-360,R23" "addi r23,r1,-360" mfinal.go:193
 0x32ce8 4 "cmpld" "CMPU R22,R23" "cmpld r22,r23" mfinal.go:193
-0x32cec 4 "bc" "BLT 0x32cfc" "blt 0x32cfc" mfinal.go:193
+0x32cec 4 "bc" "BLT 0x32cfc" "blt 0x32cfc <runtime.runFinalizers+0x1c>" mfinal.go:193
 0x32cf0 4 "mfspr" "MOVD LR,R5" "mflr r5" mfinal.go:193
-0x32cf4 4 "bl" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 0x90220" mfinal.go:193
-0x32cf8 4 "b" "BR runtime.runFinalizers(SB)" "b 0x32ce0" mfinal.go:193
+0x32cf4 4 "bl" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 0x90220 <runtime.morestack_noctxt.abi0>" mfinal.go:193
+0x32cf8 4 "b" "BR runtime.runFinalizers(SB)" "b 0x32ce0 <runtime.runFinalizers>" mfinal.go:193
 0x32cfc 4 "mfspr" "MOVD LR,R31" "mflr r31" mfinal.go:193
 0x32d00 4 "stdu" "MOVDU R31,-488(R1)" "stdu r31,-488(r1)" mfinal.go:193
 0x32d04 4 "std" "MOVD g,448(R1)" "std r30,448(r1)" mfinal.go:200
@@ -332,20 +332,20 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x32d0c 4 "nop" "NOP" "nop" lock_spinbit.go:161
 0x32d10 4 "lis" "ADDIS $0,$23,R3" "lis r3,23" lockrank_off.go:24
 0x32d14 4 "addi" "ADD R3,$-9256,R3" "addi r3,r3,-9256" lockrank_off.go:24
-0x32d18 4 "bl" "CALL runtime.lock2(SB)" "bl 0x26c30" lockrank_off.go:24
+0x32d18 4 "bl" "CALL runtime.lock2(SB)" "bl 0x26c30 <runtime.lock2>" lockrank_off.go:24
 0x32d1c 4 "lis" "ADDIS $0,$23,R4" "lis r4,23" mfinal.go:202
 0x32d20 4 "addi" "ADD R4,$-8832,R4" "addi r4,r4,-8832" mfinal.go:202
 0x32d24 4 "lwz" "MOVWZ 0(R4),R4" "lwz r4,0(r4)" mfinal.go:202
 0x32d28 4 "cmpwi" "CMPW R4,$0" "cmpwi r4,0" mfinal.go:202
-0x32d2c 4 "bc" "BNE 0x32d40" "bne 0x32d40" mfinal.go:202
+0x32d2c 4 "bc" "BNE 0x32d40" "bne 0x32d40 <runtime.runFinalizers+0x60>" mfinal.go:202
 0x32d30 4 "lis" "ADDIS $0,$20,R4" "lis r4,20" mfinal.go:202
 0x32d34 4 "addi" "ADD R4,$29544,R4" "addi r4,r4,29544" mfinal.go:202
 0x32d38 4 "ld" "MOVD 448(R1),R6" "ld r6,448(r1)" mfinal.go:202
-0x32d3c 4 "b" "BR 0x32d5c" "b 0x32d5c" mfinal.go:202
+0x32d3c 4 "b" "BR 0x32d5c" "b 0x32d5c <runtime.runFinalizers+0x7c>" mfinal.go:202
 0x32d40 4 "lis" "ADDIS $0,$20,R4" "lis r4,20" mfinal.go:202
 0x32d44 4 "addi" "ADD R4,$29544,R4" "addi r4,r4,29544" mfinal.go:202
 0x32d48 4 "ld" "MOVD 0(R4),R5" "ld r5,0(r4)" mfinal.go:202
-0x32d4c 4 "bl" "CALL runtime.gcWriteBarrier2(SB)" "bl 0x925c0" mfinal.go:202
+0x32d4c 4 "bl" "CALL runtime.gcWriteBarrier2(SB)" "bl 0x925c0 <runtime.gcWriteBarrier2>" mfinal.go:202
 0x32d50 4 "ld" "MOVD 448(R1),R6" "ld r6,448(r1)" mfinal.go:202
 0x32d54 4 "std" "MOVD R6,0(R29)" "std r6,0(r29)" mfinal.go:202
 0x32d58 4 "std" "MOVD R5,8(R29)" "std r5,8(r29)" mfinal.go:202
@@ -354,7 +354,7 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x32d64 4 "nop" "NOP" "nop" lock_spinbit.go:270
 0x32d68 4 "lis" "ADDIS $0,$23,R3" "lis r3,23" lockrank_off.go:36
 0x32d6c 4 "addi" "ADD R3,$-9256,R3" "addi r3,r3,-9256" lockrank_off.go:36
-0x32d70 4 "bl" "CALL runtime.unlock2(SB)" "bl 0x27150" lockrank_off.go:36
+0x32d70 4 "bl" "CALL runtime.unlock2(SB)" "bl 0x27150 <runtime.unlock2>" lockrank_off.go:36
 0x32d74 4 "li" "MOVD $0,R3" "li r3,0" lockrank_off.go:36
 0x32d78 4 "li" "MOVD $0,R4" "li r4,0" lockrank_off.go:36
 0x32d7c 4 "std" "MOVD R4,456(R1)" "std r4,456(r1)" lockrank_off.go:36
@@ -362,13 +362,13 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x32d84 4 "nop" "NOP" "nop" lock_spinbit.go:161
 0x32d88 4 "lis" "ADDIS $0,$23,R3" "lis r3,23" lockrank_off.go:24
 0x32d8c 4 "addi" "ADD R3,$-9256,R3" "addi r3,r3,-9256" lockrank_off.go:24
-0x32d90 4 "bl" "CALL runtime.lock2(SB)" "bl 0x26c30" lockrank_off.go:24
+0x32d90 4 "bl" "CALL runtime.lock2(SB)" "bl 0x26c30 <runtime.lock2>" lockrank_off.go:24
 0x32d94 4 "lis" "ADDIS $0,$23,R4" "lis r4,23" mfinal.go:207
 0x32d98 4 "addi" "ADD R4,$-9248,R4" "addi r4,r4,-9248" mfinal.go:207
 0x32d9c 4 "ld" "MOVD 0(R4),R5" "ld r5,0(r4)" mfinal.go:207
 0x32da0 4 "std" "MOVD R0,0(R4)" "std r0,0(r4)" mfinal.go:208
 0x32da4 4 "cmpdi" "CMP R5,$0" "cmpdi r5,0" mfinal.go:209
-0x32da8 4 "bc" "BEQ 0x32ddc" "beq 0x32ddc" mfinal.go:209
+0x32da8 4 "bc" "BEQ 0x32ddc" "beq 0x32ddc <runtime.runFinalizers+0xfc>" mfinal.go:209
 0x32dac 4 "std" "MOVD R5,96(R1)" "std r5,96(r1)" mfinal.go:207
 0x32db0 4 "lis" "ADDIS $0,$20,R4" "lis r4,20" mfinal.go:213
 0x32db4 4 "ld" "MOVD 1256(R4),R4" "ld r4,1256(r4)" mfinal.go:213
@@ -376,11 +376,11 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x32dbc 4 "nop" "NOP" "nop" mfinal.go:214
 0x32dc0 4 "lis" "ADDIS $0,$23,R3" "lis r3,23" lockrank_off.go:36
 0x32dc4 4 "addi" "ADD R3,$-9256,R3" "addi r3,r3,-9256" lockrank_off.go:36
-0x32dc8 4 "bl" "CALL runtime.unlock2(SB)" "bl 0x27150" lockrank_off.go:36
+0x32dc8 4 "bl" "CALL runtime.unlock2(SB)" "bl 0x27150 <runtime.unlock2>" lockrank_off.go:36
 0x32dcc 4 "ld" "MOVD 96(R1),R3" "ld r3,96(r1)" mfinal.go:218
 0x32dd0 4 "ld" "MOVD 88(R1),R4" "ld r4,88(r1)" mfinal.go:218
 0x32dd4 4 "ld" "MOVD 456(R1),R5" "ld r5,456(r1)" mfinal.go:218
-0x32dd8 4 "b" "BR 0x32e7c" "b 0x32e7c" lock_spinbit.go:270
+0x32dd8 4 "b" "BR 0x32e7c" "b 0x32e7c <runtime.runFinalizers+0x19c>" lock_spinbit.go:270
 0x32ddc 4 "lis" "ADDIS $0,$20,R3" "lis r3,20" mfinal.go:210
 0x32de0 4 "addi" "ADD R3,$-23984,R3" "addi r3,r3,-23984" mfinal.go:210
 0x32de4 4 "lis" "ADDIS $0,$23,R4" "lis r4,23" mfinal.go:210
@@ -388,10 +388,10 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x32dec 4 "li" "MOVD $10,R5" "li r5,10" mfinal.go:210
 0x32df0 4 "li" "MOVD $10,R6" "li r6,10" mfinal.go:210
 0x32df4 4 "li" "MOVD $1,R7" "li r7,1" mfinal.go:210
-0x32df8 4 "bl" "CALL runtime.gopark(SB)" "bl 0x8ce60" mfinal.go:210
+0x32df8 4 "bl" "CALL runtime.gopark(SB)" "bl 0x8ce60 <runtime.gopark>" mfinal.go:210
 0x32dfc 4 "ld" "MOVD 88(R1),R3" "ld r3,88(r1)" mfinal.go:206
 0x32e00 4 "ld" "MOVD 456(R1),R4" "ld r4,456(r1)" mfinal.go:206
-0x32e04 4 "b" "BR 0x32d7c" "b 0x32d7c" mfinal.go:211
+0x32e04 4 "b" "BR 0x32d7c" "b 0x32d7c <runtime.runFinalizers+0x9c>" mfinal.go:211
 0x32e08 4 "std" "MOVD R5,472(R1)" "std r5,472(r1)" mfinal.go:220
 0x32e0c 4 "std" "MOVD R4,120(R1)" "std r4,120(r1)" mfinal.go:220
 0x32e10 4 "ld" "MOVD 8(R3),R4" "ld r4,8(r3)" mfinal.go:284
@@ -400,7 +400,7 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x32e1c 4 "nop" "NOP" "nop" lock_spinbit.go:161
 0x32e20 4 "lis" "ADDIS $0,$23,R3" "lis r3,23" lockrank_off.go:24
 0x32e24 4 "addi" "ADD R3,$-9256,R3" "addi r3,r3,-9256" lockrank_off.go:24
-0x32e28 4 "bl" "CALL runtime.lock2(SB)" "bl 0x26c30" lockrank_off.go:24
+0x32e28 4 "bl" "CALL runtime.lock2(SB)" "bl 0x26c30 <runtime.lock2>" lockrank_off.go:24
 0x32e2c 4 "lis" "ADDIS $0,$23,R4" "lis r4,23" mfinal.go:286
 0x32e30 4 "addi" "ADD R4,$-9224,R4" "addi r4,r4,-9224" mfinal.go:286
 0x32e34 4 "ld" "MOVD 0(R4),R5" "ld r5,0(r4)" mfinal.go:286
@@ -417,17 +417,17 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x32e60 4 "nop" "NOP" "nop" lock_spinbit.go:270
 0x32e64 4 "lis" "ADDIS $0,$23,R3" "lis r3,23" lockrank_off.go:36
 0x32e68 4 "addi" "ADD R3,$-9256,R3" "addi r3,r3,-9256" lockrank_off.go:36
-0x32e6c 4 "bl" "CALL runtime.unlock2(SB)" "bl 0x27150" lockrank_off.go:36
+0x32e6c 4 "bl" "CALL runtime.unlock2(SB)" "bl 0x27150 <runtime.unlock2>" lockrank_off.go:36
 0x32e70 4 "ld" "MOVD 112(R1),R3" "ld r3,112(r1)" mfinal.go:218
 0x32e74 4 "ld" "MOVD 120(R1),R4" "ld r4,120(r1)" mfinal.go:218
 0x32e78 4 "ld" "MOVD 472(R1),R5" "ld r5,472(r1)" mfinal.go:218
 0x32e7c 4 "cmpdi" "CMP R3,$0" "cmpdi r3,0" mfinal.go:218
-0x32e80 4 "bc" "BEQ 0x33194" "beq 0x33194" mfinal.go:218
+0x32e80 4 "bc" "BEQ 0x33194" "beq 0x33194 <runtime.runFinalizers+0x4b4>" mfinal.go:218
 0x32e84 4 "std" "MOVD R3,96(R1)" "std r3,96(r1)" mfinal.go:218
 0x32e88 4 "lwz" "MOVWZ 16(R3),R6" "lwz r6,16(r3)" mfinal.go:219
 0x32e8c 4 "stw" "MOVW R6,80(R1)" "stw r6,80(r1)" mfinal.go:219
 0x32e90 4 "or" "OR R6,R6,R7" "or r7,r6,r6" mfinal.go:219
-0x32e94 4 "b" "BR 0x32ec8" "b 0x32ec8" mfinal.go:220
+0x32e94 4 "b" "BR 0x32ec8" "b 0x32ec8 <runtime.runFinalizers+0x1e8>" mfinal.go:220
 0x32e98 4 "std" "MOVD R0,0(R6)" "std r0,0(r6)" mfinal.go:279
 0x32e9c 4 "std" "MOVD R0,8(R6)" "std r0,8(r6)" mfinal.go:280
 0x32ea0 4 "std" "MOVD R0,32(R6)" "std r0,32(r6)" mfinal.go:281
@@ -441,11 +441,11 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x32ec0 4 "ld" "MOVD 128(R1),R4" "ld r4,128(r1)" mfinal.go:220
 0x32ec4 4 "ld" "MOVD 480(R1),R5" "ld r5,480(r1)" mfinal.go:220
 0x32ec8 4 "cmplwi" "CMPWU R6,$0" "cmplwi r6,0" mfinal.go:220
-0x32ecc 4 "bc" "BLE 0x32e08" "ble 0x32e08" mfinal.go:220
+0x32ecc 4 "bc" "BLE 0x32e08" "ble 0x32e08 <runtime.runFinalizers+0x128>" mfinal.go:220
 0x32ed0 4 "addi" "ADD R6,$-1,R6" "addi r6,r6,-1" mfinal.go:221
 0x32ed4 4 "rldic" "RLDIC R6,$0,$32,R8" "rldic r8,r6,0,32" mfinal.go:221
 0x32ed8 4 "cmpldi" "CMPU R8,$101" "cmpldi r8,101" mfinal.go:221
-0x32edc 4 "bc" "BGE 0x33210" "bge 0x33210" mfinal.go:221
+0x32edc 4 "bc" "BGE 0x33210" "bge 0x33210 <runtime.runFinalizers+0x530>" mfinal.go:221
 0x32ee0 4 "stw" "MOVW R6,84(R1)" "stw r6,84(r1)" mfinal.go:221
 0x32ee4 4 "addi" "ADD R3,$24,R9" "addi r9,r3,24" mfinal.go:221
 0x32ee8 4 "mulli" "MULLD R8,$40,R8" "mulli r8,r8,40" mfinal.go:221
@@ -461,17 +461,17 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x32f10 4 "stxvd2x" "STXVD2X VS32,(R20)(R0)" "stxvd2x vs32,r0,r20" mfinal.go:223
 0x32f14 4 "stxvd2x" "STXVD2X VS32,(R20)(R31)" "stxvd2x vs32,r31,r20" mfinal.go:223
 0x32f18 4 "addi" "ADD R20,$32,R20" "addi r20,r20,32" mfinal.go:223
-0x32f1c 4 "bc" "BC $16,LT,0x32f10" "bdnz 0x32f10" mfinal.go:223
+0x32f1c 4 "bc" "BC $16,LT,0x32f10" "bdnz 0x32f10 <runtime.runFinalizers+0x230>" mfinal.go:223
 0x32f20 4 "std" "MOVD R0,0(R20)" "std r0,0(r20)" mfinal.go:223
 0x32f24 4 "ld" "MOVD 16(R8),R9" "ld r9,16(r8)" mfinal.go:232
 0x32f28 4 "addi" "ADD R9,$16,R9" "addi r9,r9,16" mfinal.go:232
 0x32f2c 4 "std" "MOVD R9,88(R1)" "std r9,88(r1)" mfinal.go:232
 0x32f30 4 "cmpld" "CMPU R4,R9" "cmpld r4,r9" mfinal.go:233
-0x32f34 4 "bc" "BGE 0x32f64" "bge 0x32f64" mfinal.go:233
+0x32f34 4 "bc" "BGE 0x32f64" "bge 0x32f64 <runtime.runFinalizers+0x284>" mfinal.go:233
 0x32f38 4 "or" "OR R9,R9,R3" "or r3,r9,r9" mfinal.go:238
 0x32f3c 4 "li" "MOVD $0,R4" "li r4,0" mfinal.go:238
 0x32f40 4 "li" "MOVD $1,R5" "li r5,1" mfinal.go:238
-0x32f44 4 "bl" "CALL runtime.mallocgc(SB)" "bl 0x8c180" mfinal.go:238
+0x32f44 4 "bl" "CALL runtime.mallocgc(SB)" "bl 0x8c180 <runtime.mallocgc>" mfinal.go:238
 0x32f48 4 "lwz" "MOVWZ 84(R1),R6" "lwz r6,84(r1)" mfinal.go:282
 0x32f4c 4 "lwz" "MOVWZ 80(R1),R7" "lwz r7,80(r1)" mfinal.go:286
 0x32f50 4 "ld" "MOVD 464(R1),R8" "ld r8,464(r1)" mfinal.go:241
@@ -481,12 +481,12 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x32f60 4 "ld" "MOVD 96(R1),R3" "ld r3,96(r1)" mfinal.go:282
 0x32f64 4 "ld" "MOVD 24(R8),R10" "ld r10,24(r8)" mfinal.go:241
 0x32f68 4 "cmpdi" "CMP R10,$0" "cmpdi r10,0" mfinal.go:241
-0x32f6c 4 "bc" "BEQ 0x33200" "beq 0x33200" mfinal.go:241
+0x32f6c 4 "bc" "BEQ 0x33200" "beq 0x33200 <runtime.runFinalizers+0x520>" mfinal.go:241
 0x32f70 4 "ld" "MOVD 104(R1),R10" "ld r10,104(r1)" mfinal.go:245
 0x32f74 4 "cmpdi" "CMP R10,$0" "cmpdi r10,0" mfinal.go:245
-0x32f78 4 "bc" "BLE 0x32f84" "ble 0x32f84" mfinal.go:245
+0x32f78 4 "bc" "BLE 0x32f84" "ble 0x32f84 <runtime.runFinalizers+0x2a4>" mfinal.go:245
 0x32f7c 4 "addi" "ADD R1,$144,R11" "addi r11,r1,144" mfinal.go:223
-0x32f80 4 "b" "BR 0x32f90" "b 0x32f90" mfinal.go:246
+0x32f80 4 "b" "BR 0x32f90" "b 0x32f90 <runtime.runFinalizers+0x2b0>" mfinal.go:246
 0x32f84 4 "std" "MOVD R0,0(R5)" "std r0,0(r5)" mfinal.go:252
 0x32f88 4 "std" "MOVD R0,8(R5)" "std r0,8(r5)" mfinal.go:252
 0x32f8c 4 "or" "OR R5,R5,R11" "or r11,r5,r5" mfinal.go:254
@@ -496,7 +496,7 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x32f9c 4 "ld" "MOVD 24(R8),R12" "ld r12,24(r8)" mfinal.go:254
 0x32fa0 4 "lbz" "MOVBZ 23(R12),R14" "lbz r14,23(r12)" type.go:197
 0x32fa4 4 "cmpwi" "CMPW R14,$20" "cmpwi r14,20" mfinal.go:258
-0x32fa8 4 "bc" "BNE 0x3309c" "bne 0x3309c" mfinal.go:258
+0x32fa8 4 "bc" "BNE 0x3309c" "bne 0x3309c <runtime.runFinalizers+0x3bc>" mfinal.go:258
 0x32fac 4 "std" "MOVD R12,136(R1)" "std r12,136(r1)" mfinal.go:254
 0x32fb0 4 "lbz" "MOVBZ 0(R11),R31" "lbz r31,0(r11)" mfinal.go:261
 0x32fb4 4 "lis" "ADDIS $0,$23,R14" "lis r14,23" mfinal.go:261
@@ -505,9 +505,9 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x32fc0 4 "ld" "MOVD 32(R8),R16" "ld r16,32(r8)" mfinal.go:261
 0x32fc4 4 "lbz" "MOVBZ 0(R16),R31" "lbz r31,0(r16)" mfinal.go:261
 0x32fc8 4 "cmpwi" "CMPW R15,$0" "cmpwi r15,0" mfinal.go:261
-0x32fcc 4 "bc" "BEQ 0x32fe8" "beq 0x32fe8" mfinal.go:261
+0x32fcc 4 "bc" "BEQ 0x32fe8" "beq 0x32fe8 <runtime.runFinalizers+0x308>" mfinal.go:261
 0x32fd0 4 "ld" "MOVD 0(R11),R15" "ld r15,0(r11)" mfinal.go:261
-0x32fd4 4 "bl" "CALL runtime.gcWriteBarrier2(SB)" "bl 0x925c0" mfinal.go:261
+0x32fd4 4 "bl" "CALL runtime.gcWriteBarrier2(SB)" "bl 0x925c0 <runtime.gcWriteBarrier2>" mfinal.go:261
 0x32fd8 4 "std" "MOVD R16,0(R29)" "std r16,0(r29)" mfinal.go:261
 0x32fdc 4 "std" "MOVD R15,8(R29)" "std r15,8(r29)" mfinal.go:261
 0x32fe0 4 "ld" "MOVD 440(R1),R11" "ld r11,440(r1)" mfinal.go:261
@@ -516,9 +516,9 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x32fec 4 "lwz" "MOVWZ 0(R14),R15" "lwz r15,0(r14)" mfinal.go:262
 0x32ff0 4 "ld" "MOVD 8(R8),R17" "ld r17,8(r8)" mfinal.go:262
 0x32ff4 4 "cmpwi" "CMPW R15,$0" "cmpwi r15,0" mfinal.go:262
-0x32ff8 4 "bc" "BEQ 0x33014" "beq 0x33014" mfinal.go:262
+0x32ff8 4 "bc" "BEQ 0x33014" "beq 0x33014 <runtime.runFinalizers+0x334>" mfinal.go:262
 0x32ffc 4 "ld" "MOVD 8(R11),R15" "ld r15,8(r11)" mfinal.go:262
-0x33000 4 "bl" "CALL runtime.gcWriteBarrier2(SB)" "bl 0x925c0" mfinal.go:262
+0x33000 4 "bl" "CALL runtime.gcWriteBarrier2(SB)" "bl 0x925c0 <runtime.gcWriteBarrier2>" mfinal.go:262
 0x33004 4 "std" "MOVD R17,0(R29)" "std r17,0(r29)" mfinal.go:262
 0x33008 4 "std" "MOVD R15,8(R29)" "std r15,8(r29)" mfinal.go:262
 0x3300c 4 "ld" "MOVD 440(R1),R11" "ld r11,440(r1)" mfinal.go:262
@@ -526,23 +526,23 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x33014 4 "std" "MOVD R17,8(R11)" "std r17,8(r11)" mfinal.go:262
 0x33018 4 "ld" "MOVD 64(R12),R15" "ld r15,64(r12)" mfinal.go:263
 0x3301c 4 "cmpdi" "CMP R15,$0" "cmpdi r15,0" mfinal.go:263
-0x33020 4 "bc" "BEQ 0x330dc" "beq 0x330dc" mfinal.go:263
+0x33020 4 "bc" "BEQ 0x330dc" "beq 0x330dc <runtime.runFinalizers+0x3fc>" mfinal.go:263
 0x33024 4 "cmpdi" "CMP R16,$0" "cmpdi r16,0" iface.go:468
-0x33028 4 "bc" "BEQ 0x331b0" "beq 0x331b0" iface.go:468
+0x33028 4 "bc" "BEQ 0x331b0" "beq 0x331b0 <runtime.runFinalizers+0x4d0>" iface.go:468
 0x3302c 4 "or" "OR R12,R12,R3" "or r3,r12,r12" iface.go:472
 0x33030 4 "or" "OR R16,R16,R4" "or r4,r16,r16" iface.go:472
 0x33034 4 "li" "MOVD $0,R5" "li r5,0" iface.go:472
-0x33038 4 "bl" "CALL runtime.getitab(SB)" "bl 0x8bdd0" iface.go:472
+0x33038 4 "bl" "CALL runtime.getitab(SB)" "bl 0x8bdd0 <runtime.getitab>" iface.go:472
 0x3303c 4 "lis" "ADDIS $0,$23,R6" "lis r6,23" mfinal.go:266
 0x33040 4 "addi" "ADD R6,$-8832,R6" "addi r6,r6,-8832" mfinal.go:266
 0x33044 4 "lwz" "MOVWZ 0(R6),R7" "lwz r7,0(r6)" mfinal.go:266
 0x33048 4 "cmpwi" "CMPW R7,$0" "cmpwi r7,0" mfinal.go:266
-0x3304c 4 "bc" "BNE 0x33058" "bne 0x33058" mfinal.go:266
+0x3304c 4 "bc" "BNE 0x33058" "bne 0x33058 <runtime.runFinalizers+0x378>" mfinal.go:266
 0x33050 4 "ld" "MOVD 440(R1),R4" "ld r4,440(r1)" mfinal.go:266
-0x33054 4 "b" "BR 0x3306c" "b 0x3306c" mfinal.go:266
+0x33054 4 "b" "BR 0x3306c" "b 0x3306c <runtime.runFinalizers+0x38c>" mfinal.go:266
 0x33058 4 "ld" "MOVD 440(R1),R4" "ld r4,440(r1)" mfinal.go:266
 0x3305c 4 "ld" "MOVD 0(R4),R5" "ld r5,0(r4)" mfinal.go:266
-0x33060 4 "bl" "CALL runtime.gcWriteBarrier2(SB)" "bl 0x925c0" mfinal.go:266
+0x33060 4 "bl" "CALL runtime.gcWriteBarrier2(SB)" "bl 0x925c0 <runtime.gcWriteBarrier2>" mfinal.go:266
 0x33064 4 "std" "MOVD R3,0(R29)" "std r3,0(r29)" mfinal.go:266
 0x33068 4 "std" "MOVD R5,8(R29)" "std r5,8(r29)" mfinal.go:266
 0x3306c 4 "std" "MOVD R3,0(R4)" "std r3,0(r4)" mfinal.go:266
@@ -556,17 +556,17 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x3308c 4 "ld" "MOVD 104(R1),R10" "ld r10,104(r1)" mfinal.go:245
 0x33090 4 "lis" "ADDIS $0,$23,R14" "lis r14,23" mfinal.go:206
 0x33094 4 "addi" "ADD R14,$-8832,R14" "addi r14,r14,-8832" mfinal.go:206
-0x33098 4 "b" "BR 0x330dc" "b 0x330dc" mfinal.go:266
+0x33098 4 "b" "BR 0x330dc" "b 0x330dc <runtime.runFinalizers+0x3fc>" mfinal.go:266
 0x3309c 4 "cmpwi" "CMPW R14,$22" "cmpwi r14,22" mfinal.go:255
-0x330a0 4 "bc" "BNE 0x331a0" "bne 0x331a0" mfinal.go:255
+0x330a0 4 "bc" "BNE 0x331a0" "bne 0x331a0 <runtime.runFinalizers+0x4c0>" mfinal.go:255
 0x330a4 4 "lis" "ADDIS $0,$23,R12" "lis r12,23" mfinal.go:257
 0x330a8 4 "addi" "ADD R12,$-8832,R12" "addi r12,r12,-8832" mfinal.go:257
 0x330ac 4 "lwz" "MOVWZ 0(R12),R14" "lwz r14,0(r12)" mfinal.go:257
 0x330b0 4 "ld" "MOVD 8(R8),R15" "ld r15,8(r8)" mfinal.go:257
 0x330b4 4 "cmpwi" "CMPW R14,$0" "cmpwi r14,0" mfinal.go:257
-0x330b8 4 "bc" "BEQ 0x330d8" "beq 0x330d8" mfinal.go:257
+0x330b8 4 "bc" "BEQ 0x330d8" "beq 0x330d8 <runtime.runFinalizers+0x3f8>" mfinal.go:257
 0x330bc 4 "ld" "MOVD 0(R11),R14" "ld r14,0(r11)" mfinal.go:257
-0x330c0 4 "bl" "CALL runtime.gcWriteBarrier2(SB)" "bl 0x925c0" mfinal.go:257
+0x330c0 4 "bl" "CALL runtime.gcWriteBarrier2(SB)" "bl 0x925c0 <runtime.gcWriteBarrier2>" mfinal.go:257
 0x330c4 4 "std" "MOVD R15,0(R29)" "std r15,0(r29)" mfinal.go:257
 0x330c8 4 "std" "MOVD R14,8(R29)" "std r14,8(r29)" mfinal.go:257
 0x330cc 4 "ld" "MOVD 440(R1),R11" "ld r11,440(r1)" mfinal.go:257
@@ -581,7 +581,7 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x330f0 4 "lwarx" "LWAR (R3),R31" "lwarx r31,0,r3" types.go:280
 0x330f4 4 "or" "OR R4,R31,R31" "or r31,r31,r4" types.go:280
 0x330f8 4 "stwcx." "STWCCC R31,(R3)(R0)" "stwcx. r31,r0,r3" types.go:280
-0x330fc 4 "bc" "BNE 0x330f0" "bne 0x330f0" types.go:280
+0x330fc 4 "bc" "BNE 0x330f0" "bne 0x330f0 <runtime.runFinalizers+0x410>" types.go:280
 0x33100 4 "sync" "LWSYNC" "lwsync" types.go:280
 0x33104 4 "ld" "MOVD 0(R8),R3" "ld r3,0(r8)" mfinal.go:272
 0x33108 4 "std" "MOVD R0,32(R1)" "std r0,32(r1)" mfinal.go:272
@@ -592,7 +592,7 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x3311c 4 "stw" "MOVW R9,64(R1)" "stw r9,64(r1)" mfinal.go:272
 0x33120 4 "addi" "ADD R1,$144,R3" "addi r3,r1,144" mfinal.go:272
 0x33124 4 "std" "MOVD R3,72(R1)" "std r3,72(r1)" mfinal.go:272
-0x33128 4 "bl" "CALL runtime.reflectcall.abi0(SB)" "bl 0x90230" mfinal.go:272
+0x33128 4 "bl" "CALL runtime.reflectcall.abi0(SB)" "bl 0x90230 <runtime.reflectcall.abi0>" mfinal.go:272
 0x3312c 4 "nop" "NOP" "nop" mfinal.go:273
 0x33130 4 "lis" "ADDIS $0,$23,R3" "lis r3,23" types.go:269
 0x33134 4 "addi" "ADD R3,$-9436,R3" "addi r3,r3,-9436" types.go:269
@@ -601,39 +601,39 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x33140 4 "lwarx" "LWAR (R3),R31" "lwarx r31,0,r3" types.go:269
 0x33144 4 "and" "AND R4,R31,R31" "and r31,r31,r4" types.go:269
 0x33148 4 "stwcx." "STWCCC R31,(R3)(R0)" "stwcx. r31,r0,r3" types.go:269
-0x3314c 4 "bc" "BNE 0x33140" "bne 0x33140" types.go:269
+0x3314c 4 "bc" "BNE 0x33140" "bne 0x33140 <runtime.runFinalizers+0x460>" types.go:269
 0x33150 4 "sync" "LWSYNC" "lwsync" types.go:269
 0x33154 4 "lis" "ADDIS $0,$23,R4" "lis r4,23" mfinal.go:279
 0x33158 4 "addi" "ADD R4,$-8832,R4" "addi r4,r4,-8832" mfinal.go:279
 0x3315c 4 "lwz" "MOVWZ 0(R4),R5" "lwz r5,0(r4)" mfinal.go:279
 0x33160 4 "cmpwi" "CMPW R5,$0" "cmpwi r5,0" mfinal.go:279
-0x33164 4 "bc" "BNE 0x33170" "bne 0x33170" mfinal.go:279
+0x33164 4 "bc" "BNE 0x33170" "bne 0x33170 <runtime.runFinalizers+0x490>" mfinal.go:279
 0x33168 4 "ld" "MOVD 464(R1),R6" "ld r6,464(r1)" mfinal.go:279
-0x3316c 4 "b" "BR 0x32e98" "b 0x32e98" mfinal.go:279
+0x3316c 4 "b" "BR 0x32e98" "b 0x32e98 <runtime.runFinalizers+0x1b8>" mfinal.go:279
 0x33170 4 "ld" "MOVD 464(R1),R6" "ld r6,464(r1)" mfinal.go:279
 0x33174 4 "ld" "MOVD 0(R6),R7" "ld r7,0(r6)" mfinal.go:279
 0x33178 4 "ld" "MOVD 8(R6),R8" "ld r8,8(r6)" mfinal.go:280
 0x3317c 4 "ld" "MOVD 32(R6),R9" "ld r9,32(r6)" mfinal.go:281
-0x33180 4 "bl" "CALL runtime.gcWriteBarrier3(SB)" "bl 0x925d0" mfinal.go:279
+0x33180 4 "bl" "CALL runtime.gcWriteBarrier3(SB)" "bl 0x925d0 <runtime.gcWriteBarrier3>" mfinal.go:279
 0x33184 4 "std" "MOVD R7,0(R29)" "std r7,0(r29)" mfinal.go:279
 0x33188 4 "std" "MOVD R8,8(R29)" "std r8,8(r29)" mfinal.go:280
 0x3318c 4 "std" "MOVD R9,16(R29)" "std r9,16(r29)" mfinal.go:281
-0x33190 4 "b" "BR 0x32e98" "b 0x32e98" mfinal.go:279
+0x33190 4 "b" "BR 0x32e98" "b 0x32e98 <runtime.runFinalizers+0x1b8>" mfinal.go:279
 0x33194 4 "or" "OR R4,R4,R3" "or r3,r4,r4" mfinal.go:206
 0x33198 4 "or" "OR R5,R5,R4" "or r4,r5,r5" mfinal.go:206
-0x3319c 4 "b" "BR 0x32d7c" "b 0x32d7c" mfinal.go:206
+0x3319c 4 "b" "BR 0x32d7c" "b 0x32d7c <runtime.runFinalizers+0x9c>" mfinal.go:206
 0x331a0 4 "lis" "ADDIS $0,$10,R3" "lis r3,10" mfinal.go:269
 0x331a4 4 "addi" "ADD R3,$13243,R3" "addi r3,r3,13243" mfinal.go:269
 0x331a8 4 "li" "MOVD $26,R4" "li r4,26" mfinal.go:269
-0x331ac 4 "bl" "CALL runtime.throw(SB)" "bl 0x8ce10" mfinal.go:269
+0x331ac 4 "bl" "CALL runtime.throw(SB)" "bl 0x8ce10 <runtime.throw>" mfinal.go:269
 0x331b0 4 "lis" "ADDIS $0,$19,R3" "lis r3,19" iface.go:470
 0x331b4 4 "addi" "ADD R3,$23392,R3" "addi r3,r3,23392" iface.go:470
-0x331b8 4 "bl" "CALL runtime.newobject(SB)" "bl 0x29610" iface.go:470
+0x331b8 4 "bl" "CALL runtime.newobject(SB)" "bl 0x29610 <runtime.newobject>" iface.go:470
 0x331bc 4 "lis" "ADDIS $0,$23,R4" "lis r4,23" iface.go:470
 0x331c0 4 "addi" "ADD R4,$-8832,R4" "addi r4,r4,-8832" iface.go:470
 0x331c4 4 "lwz" "MOVWZ 0(R4),R4" "lwz r4,0(r4)" iface.go:470
 0x331c8 4 "cmpwi" "CMPW R4,$0" "cmpwi r4,0" iface.go:470
-0x331cc 4 "bc" "BNE 0x331f0" "bne 0x331f0" iface.go:470
+0x331cc 4 "bc" "BNE 0x331f0" "bne 0x331f0 <runtime.runFinalizers+0x510>" iface.go:470
 0x331d0 4 "ld" "MOVD 136(R1),R5" "ld r5,136(r1)" iface.go:470
 0x331d4 4 "std" "MOVD R5,16(R3)" "std r5,16(r3)" iface.go:470
 0x331d8 4 "std" "MOVD R0,32(R3)" "std r0,32(r3)" iface.go:470
@@ -641,17 +641,17 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x331e0 4 "or" "OR R3,R3,R4" "or r4,r3,r3" iface.go:470
 0x331e4 4 "lis" "ADDIS $0,$19,R3" "lis r3,19" iface.go:470
 0x331e8 4 "addi" "ADD R3,$-29912,R3" "addi r3,r3,-29912" iface.go:470
-0x331ec 4 "bl" "CALL runtime.gopanic(SB)" "bl 0x8ca80" iface.go:470
-0x331f0 4 "bl" "CALL runtime.gcWriteBarrier1(SB)" "bl 0x925b0" iface.go:470
+0x331ec 4 "bl" "CALL runtime.gopanic(SB)" "bl 0x8ca80 <runtime.gopanic>" iface.go:470
+0x331f0 4 "bl" "CALL runtime.gcWriteBarrier1(SB)" "bl 0x925b0 <runtime.gcWriteBarrier1>" iface.go:470
 0x331f4 4 "ld" "MOVD 136(R1),R5" "ld r5,136(r1)" iface.go:470
 0x331f8 4 "std" "MOVD R5,0(R29)" "std r5,0(r29)" iface.go:470
-0x331fc 4 "b" "BR 0x331d0" "b 0x331d0" iface.go:470
+0x331fc 4 "b" "BR 0x331d0" "b 0x331d0 <runtime.runFinalizers+0x4f0>" iface.go:470
 0x33200 4 "lis" "ADDIS $0,$10,R3" "lis r3,10" mfinal.go:242
 0x33204 4 "addi" "ADD R3,$12562,R3" "addi r3,r3,12562" mfinal.go:242
 0x33208 4 "li" "MOVD $25,R4" "li r4,25" mfinal.go:242
-0x3320c 4 "bl" "CALL runtime.throw(SB)" "bl 0x8ce10" mfinal.go:242
+0x3320c 4 "bl" "CALL runtime.throw(SB)" "bl 0x8ce10 <runtime.throw>" mfinal.go:242
 0x33210 4 "li" "MOVD $101,R3" "li r3,101" mfinal.go:221
-0x33214 4 "bl" "CALL runtime.panicBounds(SB)" "bl 0x92970" mfinal.go:221
+0x33214 4 "bl" "CALL runtime.panicBounds(SB)" "bl 0x92970 <runtime.panicBounds>" mfinal.go:221
 0x33218 4 "nop" "NOP" "nop" mfinal.go:221
 0x3321c 4 "Op(0)" "WORD $0" ".long 0x0" .:-1
 == runtime.runPerThreadSyscall 0x532b0 672 /usr/local/go/src/runtime/os_linux.go
@@ -664,10 +664,10 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x532c8 4 "sync" "HWSYNC" "hwsync" types.go:124
 0x532cc 4 "lbz" "MOVBZ 0(R11),R11" "lbz r11,0(r11)" types.go:124
 0x532d0 4 "cmpd" "CMP R11,R11" "cmpd r11,r11" types.go:124
-0x532d4 4 "bc" "BNE 0x532d8" "bne 0x532d8" types.go:124
+0x532d4 4 "bc" "BNE 0x532d8" "bne 0x532d8 <runtime.runPerThreadSyscall+0x28>" types.go:124
 0x532d8 4 "isync" "ISYNC" "isync" types.go:124
 0x532dc 4 "cmpwi" "CMPW R11,$0" "cmpwi r11,0" os_linux.go:892
-0x532e0 4 "bc" "BEQ 0x53540" "beq 0x53540" os_linux.go:892
+0x532e0 4 "bc" "BEQ 0x53540" "beq 0x53540 <runtime.runPerThreadSyscall+0x290>" os_linux.go:892
 0x532e4 4 "std" "MOVD R10,232(R1)" "std r10,232(r1)" os_linux.go:891
 0x532e8 4 "lis" "ADDIS $0,$23,R21" "lis r21,23" os_linux.go:897
 0x532ec 4 "addi" "ADD R21,$-8096,R21" "addi r21,r21,-8096" os_linux.go:897
@@ -688,20 +688,20 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x53328 4 "stxvd2x" "STXVD2X VS32,(R20)(R0)" "stxvd2x vs32,r0,r20" os_linux.go:896
 0x5332c 4 "stxvd2x" "STXVD2X VS33,(R20)(R31)" "stxvd2x vs33,r31,r20" os_linux.go:896
 0x53330 4 "addi" "ADD R20,$32,R20" "addi r20,r20,32" os_linux.go:896
-0x53334 4 "bc" "BC $16,LT,0x5331c" "bdnz 0x5331c" os_linux.go:896
+0x53334 4 "bc" "BC $16,LT,0x5331c" "bdnz 0x5331c <runtime.runPerThreadSyscall+0x6c>" os_linux.go:896
 0x53338 4 "ld" "MOVD 0(R21),R31" "ld r31,0(r21)" os_linux.go:896
 0x5333c 4 "std" "MOVD R31,0(R20)" "std r31,0(r20)" os_linux.go:896
-0x53340 4 "bl" "CALL internal/runtime/syscall/linux.Syscall6(SB)" "bl 0x1c480" os_linux.go:897
+0x53340 4 "bl" "CALL internal/runtime/syscall/linux.Syscall6(SB)" "bl 0x1c480 <internal/runtime/syscall/linux.Syscall6>" os_linux.go:897
 0x53344 4 "std" "MOVD R5,96(R1)" "std r5,96(r1)" os_linux.go:897
 0x53348 4 "std" "MOVD R3,88(R1)" "std r3,88(r1)" os_linux.go:897
 0x5334c 4 "cmpdi" "CMP R5,$0" "cmpdi r5,0" os_linux.go:902
-0x53350 4 "bc" "BNE 0x5336c" "bne 0x5336c" os_linux.go:902
+0x53350 4 "bc" "BNE 0x5336c" "bne 0x5336c <runtime.runPerThreadSyscall+0xbc>" os_linux.go:902
 0x53354 4 "ld" "MOVD 160(R1),R4" "ld r4,160(r1)" os_linux.go:902
 0x53358 4 "cmpd" "CMP R3,R4" "cmpd r3,r4" os_linux.go:902
-0x5335c 4 "bc" "BNE 0x5336c" "bne 0x5336c" os_linux.go:902
+0x5335c 4 "bc" "BNE 0x5336c" "bne 0x5336c <runtime.runPerThreadSyscall+0xbc>" os_linux.go:902
 0x53360 4 "ld" "MOVD 168(R1),R4" "ld r4,168(r1)" os_linux.go:902
 0x53364 4 "cmpdi" "CMP R4,$0" "cmpdi r4,0" os_linux.go:902
-0x53368 4 "bc" "BEQ 0x53514" "beq 0x53514" os_linux.go:902
+0x53368 4 "bc" "BEQ 0x53514" "beq 0x53514 <runtime.runPerThreadSyscall+0x264>" os_linux.go:902
 0x5336c 4 "ld" "MOVD 104(R1),R3" "ld r3,104(r1)" os_linux.go:903
 0x53370 4 "std" "MOVD R3,224(R1)" "std r3,224(r1)" os_linux.go:903
 0x53374 4 "ld" "MOVD 112(R1),R3" "ld r3,112(r1)" os_linux.go:903
@@ -716,98 +716,98 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x53398 4 "std" "MOVD R3,184(R1)" "std r3,184(r1)" os_linux.go:903
 0x5339c 4 "ld" "MOVD 152(R1),R3" "ld r3,152(r1)" os_linux.go:903
 0x533a0 4 "std" "MOVD R3,176(R1)" "std r3,176(r1)" os_linux.go:903
-0x533a4 4 "bl" "CALL runtime.printlock(SB)" "bl 0x57160" os_linux.go:903
+0x533a4 4 "bl" "CALL runtime.printlock(SB)" "bl 0x57160 <runtime.printlock>" os_linux.go:903
 0x533a8 4 "lis" "ADDIS $0,$10,R3" "lis r3,10" os_linux.go:903
 0x533ac 4 "addi" "ADD R3,$510,R3" "addi r3,r3,510" os_linux.go:903
 0x533b0 4 "li" "MOVD $5,R4" "li r4,5" os_linux.go:903
-0x533b4 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60" os_linux.go:903
+0x533b4 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60 <runtime.printstring>" os_linux.go:903
 0x533b8 4 "ld" "MOVD 224(R1),R3" "ld r3,224(r1)" os_linux.go:903
-0x533bc 4 "bl" "CALL runtime.printuint(SB)" "bl 0x57670" os_linux.go:903
+0x533bc 4 "bl" "CALL runtime.printuint(SB)" "bl 0x57670 <runtime.printuint>" os_linux.go:903
 0x533c0 4 "lis" "ADDIS $0,$10,R3" "lis r3,10" os_linux.go:903
 0x533c4 4 "addi" "ADD R3,$3401,R3" "addi r3,r3,3401" os_linux.go:903
 0x533c8 4 "li" "MOVD $11,R4" "li r4,11" os_linux.go:903
-0x533cc 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60" os_linux.go:903
+0x533cc 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60 <runtime.printstring>" os_linux.go:903
 0x533d0 4 "ld" "MOVD 216(R1),R3" "ld r3,216(r1)" os_linux.go:903
-0x533d4 4 "bl" "CALL runtime.printuint(SB)" "bl 0x57670" os_linux.go:903
+0x533d4 4 "bl" "CALL runtime.printuint(SB)" "bl 0x57670 <runtime.printuint>" os_linux.go:903
 0x533d8 4 "lis" "ADDIS $0,$10,R3" "lis r3,10" os_linux.go:903
 0x533dc 4 "addi" "ADD R3,$11,R3" "addi r3,r3,11" os_linux.go:903
 0x533e0 4 "li" "MOVD $1,R4" "li r4,1" os_linux.go:903
-0x533e4 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60" os_linux.go:903
+0x533e4 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60 <runtime.printstring>" os_linux.go:903
 0x533e8 4 "ld" "MOVD 208(R1),R3" "ld r3,208(r1)" os_linux.go:903
-0x533ec 4 "bl" "CALL runtime.printuint(SB)" "bl 0x57670" os_linux.go:903
+0x533ec 4 "bl" "CALL runtime.printuint(SB)" "bl 0x57670 <runtime.printuint>" os_linux.go:903
 0x533f0 4 "lis" "ADDIS $0,$10,R3" "lis r3,10" os_linux.go:903
 0x533f4 4 "addi" "ADD R3,$11,R3" "addi r3,r3,11" os_linux.go:903
 0x533f8 4 "li" "MOVD $1,R4" "li r4,1" os_linux.go:903
-0x533fc 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60" os_linux.go:903
+0x533fc 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60 <runtime.printstring>" os_linux.go:903
 0x53400 4 "ld" "MOVD 200(R1),R3" "ld r3,200(r1)" os_linux.go:903
-0x53404 4 "bl" "CALL runtime.printuint(SB)" "bl 0x57670" os_linux.go:903
+0x53404 4 "bl" "CALL runtime.printuint(SB)" "bl 0x57670 <runtime.printuint>" os_linux.go:903
 0x53408 4 "lis" "ADDIS $0,$10,R3" "lis r3,10" os_linux.go:903
 0x5340c 4 "addi" "ADD R3,$11,R3" "addi r3,r3,11" os_linux.go:903
 0x53410 4 "li" "MOVD $1,R4" "li r4,1" os_linux.go:903
-0x53414 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60" os_linux.go:903
+0x53414 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60 <runtime.printstring>" os_linux.go:903
 0x53418 4 "ld" "MOVD 192(R1),R3" "ld r3,192(r1)" os_linux.go:903
-0x5341c 4 "bl" "CALL runtime.printuint(SB)" "bl 0x57670" os_linux.go:903
+0x5341c 4 "bl" "CALL runtime.printuint(SB)" "bl 0x57670 <runtime.printuint>" os_linux.go:903
 0x53420 4 "lis" "ADDIS $0,$10,R3" "lis r3,10" os_linux.go:903
 0x53424 4 "addi" "ADD R3,$11,R3" "addi r3,r3,11" os_linux.go:903
 0x53428 4 "li" "MOVD $1,R4" "li r4,1" os_linux.go:903
-0x5342c 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60" os_linux.go:903
+0x5342c 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60 <runtime.printstring>" os_linux.go:903
 0x53430 4 "ld" "MOVD 184(R1),R3" "ld r3,184(r1)" os_linux.go:903
-0x53434 4 "bl" "CALL runtime.printuint(SB)" "bl 0x57670" os_linux.go:903
+0x53434 4 "bl" "CALL runtime.printuint(SB)" "bl 0x57670 <runtime.printuint>" os_linux.go:903
 0x53438 4 "lis" "ADDIS $0,$10,R3" "lis r3,10" os_linux.go:903
 0x5343c 4 "addi" "ADD R3,$11,R3" "addi r3,r3,11" os_linux.go:903
 0x53440 4 "li" "MOVD $1,R4" "li r4,1" os_linux.go:903
-0x53444 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60" os_linux.go:903
+0x53444 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60 <runtime.printstring>" os_linux.go:903
 0x53448 4 "ld" "MOVD 176(R1),R3" "ld r3,176(r1)" os_linux.go:903
-0x5344c 4 "bl" "CALL runtime.printuint(SB)" "bl 0x57670" os_linux.go:903
+0x5344c 4 "bl" "CALL runtime.printuint(SB)" "bl 0x57670 <runtime.printuint>" os_linux.go:903
 0x53450 4 "lis" "ADDIS $0,$10,R3" "lis r3,10" os_linux.go:903
 0x53454 4 "addi" "ADD R3,$57,R3" "addi r3,r3,57" os_linux.go:903
 0x53458 4 "li" "MOVD $2,R4" "li r4,2" os_linux.go:903
-0x5345c 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60" os_linux.go:903
-0x53460 4 "bl" "CALL runtime.printunlock(SB)" "bl 0x571f0" os_linux.go:903
+0x5345c 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60 <runtime.printstring>" os_linux.go:903
+0x53460 4 "bl" "CALL runtime.printunlock(SB)" "bl 0x571f0 <runtime.printunlock>" os_linux.go:903
 0x53464 4 "ld" "MOVD 160(R1),R3" "ld r3,160(r1)" os_linux.go:904
 0x53468 4 "std" "MOVD R3,224(R1)" "std r3,224(r1)" os_linux.go:904
 0x5346c 4 "ld" "MOVD 168(R1),R3" "ld r3,168(r1)" os_linux.go:904
 0x53470 4 "std" "MOVD R3,216(R1)" "std r3,216(r1)" os_linux.go:904
-0x53474 4 "bl" "CALL runtime.printlock(SB)" "bl 0x57160" os_linux.go:904
+0x53474 4 "bl" "CALL runtime.printlock(SB)" "bl 0x57160 <runtime.printlock>" os_linux.go:904
 0x53478 4 "lis" "ADDIS $0,$10,R3" "lis r3,10" os_linux.go:904
 0x5347c 4 "addi" "ADD R3,$7557,R3" "addi r3,r3,7557" os_linux.go:904
 0x53480 4 "li" "MOVD $17,R4" "li r4,17" os_linux.go:904
-0x53484 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60" os_linux.go:904
+0x53484 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60 <runtime.printstring>" os_linux.go:904
 0x53488 4 "ld" "MOVD 88(R1),R3" "ld r3,88(r1)" os_linux.go:904
-0x5348c 4 "bl" "CALL runtime.printuint(SB)" "bl 0x57670" os_linux.go:904
+0x5348c 4 "bl" "CALL runtime.printuint(SB)" "bl 0x57670 <runtime.printuint>" os_linux.go:904
 0x53490 4 "lis" "ADDIS $0,$10,R3" "lis r3,10" os_linux.go:904
 0x53494 4 "addi" "ADD R3,$273,R3" "addi r3,r3,273" os_linux.go:904
 0x53498 4 "li" "MOVD $4,R4" "li r4,4" os_linux.go:904
-0x5349c 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60" os_linux.go:904
+0x5349c 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60 <runtime.printstring>" os_linux.go:904
 0x534a0 4 "li" "MOVD $0,R3" "li r3,0" os_linux.go:904
-0x534a4 4 "bl" "CALL runtime.printuint(SB)" "bl 0x57670" os_linux.go:904
+0x534a4 4 "bl" "CALL runtime.printuint(SB)" "bl 0x57670 <runtime.printuint>" os_linux.go:904
 0x534a8 4 "lis" "ADDIS $0,$10,R3" "lis r3,10" os_linux.go:904
 0x534ac 4 "addi" "ADD R3,$1235,R3" "addi r3,r3,1235" os_linux.go:904
 0x534b0 4 "li" "MOVD $7,R4" "li r4,7" os_linux.go:904
-0x534b4 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60" os_linux.go:904
+0x534b4 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60 <runtime.printstring>" os_linux.go:904
 0x534b8 4 "ld" "MOVD 96(R1),R3" "ld r3,96(r1)" os_linux.go:904
-0x534bc 4 "bl" "CALL runtime.printuint(SB)" "bl 0x57670" os_linux.go:904
+0x534bc 4 "bl" "CALL runtime.printuint(SB)" "bl 0x57670 <runtime.printuint>" os_linux.go:904
 0x534c0 4 "lis" "ADDIS $0,$10,R3" "lis r3,10" os_linux.go:904
 0x534c4 4 "addi" "ADD R3,$4134,R3" "addi r3,r3,4134" os_linux.go:904
 0x534c8 4 "li" "MOVD $12,R4" "li r4,12" os_linux.go:904
-0x534cc 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60" os_linux.go:904
+0x534cc 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60 <runtime.printstring>" os_linux.go:904
 0x534d0 4 "ld" "MOVD 224(R1),R3" "ld r3,224(r1)" os_linux.go:904
-0x534d4 4 "bl" "CALL runtime.printuint(SB)" "bl 0x57670" os_linux.go:904
+0x534d4 4 "bl" "CALL runtime.printuint(SB)" "bl 0x57670 <runtime.printuint>" os_linux.go:904
 0x534d8 4 "lis" "ADDIS $0,$10,R3" "lis r3,10" os_linux.go:904
 0x534dc 4 "addi" "ADD R3,$273,R3" "addi r3,r3,273" os_linux.go:904
 0x534e0 4 "li" "MOVD $4,R4" "li r4,4" os_linux.go:904
-0x534e4 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60" os_linux.go:904
+0x534e4 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60 <runtime.printstring>" os_linux.go:904
 0x534e8 4 "ld" "MOVD 216(R1),R3" "ld r3,216(r1)" os_linux.go:904
-0x534ec 4 "bl" "CALL runtime.printuint(SB)" "bl 0x57670" os_linux.go:904
+0x534ec 4 "bl" "CALL runtime.printuint(SB)" "bl 0x57670 <runtime.printuint>" os_linux.go:904
 0x534f0 4 "lis" "ADDIS $0,$10,R3" "lis r3,10" os_linux.go:904
 0x534f4 4 "addi" "ADD R3,$2874,R3" "addi r3,r3,2874" os_linux.go:904
 0x534f8 4 "li" "MOVD $10,R4" "li r4,10" os_linux.go:904
-0x534fc 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60" os_linux.go:904
-0x53500 4 "bl" "CALL runtime.printunlock(SB)" "bl 0x571f0" os_linux.go:904
+0x534fc 4 "bl" "CALL runtime.printstring(SB)" "bl 0x57d60 <runtime.printstring>" os_linux.go:904
+0x53500 4 "bl" "CALL runtime.printunlock(SB)" "bl 0x571f0 <runtime.printunlock>" os_linux.go:904
 0x53504 4 "lis" "ADDIS $0,$10,R3" "lis r3,10" os_linux.go:905
 0x53508 4 "addi" "ADD R3,$30557,R3" "addi r3,r3,30557" os_linux.go:905
 0x5350c 4 "li" "MOVD $68,R4" "li r4,68" os_linux.go:905
-0x53510 4 "bl" "CALL runtime.fatal(SB)" "bl 0x548a0" os_linux.go:905
+0x53510 4 "bl" "CALL runtime.fatal(SB)" "bl 0x548a0 <runtime.fatal>" os_linux.go:905
 0x53514 4 "ld" "MOVD 232(R1),R3" "ld r3,232(r1)" os_linux.go:908
 0x53518 4 "ld" "MOVD 48(R3),R3" "ld r3,48(r3)" os_linux.go:908
 0x5351c 4 "lbz" "MOVBZ 0(R3),R31" "lbz r31,0(r3)" os_linux.go:908
@@ -826,10 +826,10 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 == runtime.runSafePointFn 0x5c250 240 /usr/local/go/src/runtime/proc.go
 0x5c250 4 "ld" "MOVD 16(R30),R22" "ld r22,16(r30)" proc.go:2250
 0x5c254 4 "cmpld" "CMPU R22,R1" "cmpld r22,r1" proc.go:2250
-0x5c258 4 "bc" "BLT 0x5c268" "blt 0x5c268" proc.go:2250
+0x5c258 4 "bc" "BLT 0x5c268" "blt 0x5c268 <runtime.runSafePointFn+0x18>" proc.go:2250
 0x5c25c 4 "mfspr" "MOVD LR,R5" "mflr r5" proc.go:2250
-0x5c260 4 "bl" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 0x90220" proc.go:2250
-0x5c264 4 "b" "BR runtime.runSafePointFn(SB)" "b 0x5c250" proc.go:2250
+0x5c260 4 "bl" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 0x90220 <runtime.morestack_noctxt.abi0>" proc.go:2250
+0x5c264 4 "b" "BR runtime.runSafePointFn(SB)" "b 0x5c250 <runtime.runSafePointFn>" proc.go:2250
 0x5c268 4 "mfspr" "MOVD LR,R31" "mflr r31" proc.go:2250
 0x5c26c 4 "stdu" "MOVDU R31,-40(R1)" "stdu r31,-40(r1)" proc.go:2250
 0x5c270 4 "or" "OR g,g,R4" "or r4,r30,r30" proc.go:2251
@@ -843,13 +843,13 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x5c290 4 "sync" "LWSYNC" "lwsync" proc.go:2255
 0x5c294 4 "lwarx" "LWAR (R4),R31" "lwarx r31,0,r4" proc.go:2255
 0x5c298 4 "cmpw" "CMPW R5,R31" "cmpw r5,r31" proc.go:2255
-0x5c29c 4 "bc" "BNE 0x5c2ac" "bne 0x5c2ac" proc.go:2255
+0x5c29c 4 "bc" "BNE 0x5c2ac" "bne 0x5c2ac <runtime.runSafePointFn+0x5c>" proc.go:2255
 0x5c2a0 4 "stwcx." "STWCCC R6,(R4)(R0)" "stwcx. r6,r0,r4" proc.go:2255
-0x5c2a4 4 "bc" "BNE 0x5c294" "bne 0x5c294" proc.go:2255
+0x5c2a4 4 "bc" "BNE 0x5c294" "bne 0x5c294 <runtime.runSafePointFn+0x44>" proc.go:2255
 0x5c2a8 4 "li" "MOVD $1,R7" "li r7,1" proc.go:2255
 0x5c2ac 4 "sync" "LWSYNC" "lwsync" proc.go:2255
 0x5c2b0 4 "andi." "ANDCC R7,$1,R4" "andi. r4,r7,1" proc.go:2255
-0x5c2b4 4 "bc" "BEQ 0x5c330" "beq 0x5c330" proc.go:2255
+0x5c2b4 4 "bc" "BEQ 0x5c330" "beq 0x5c330 <runtime.runSafePointFn+0xe0>" proc.go:2255
 0x5c2b8 4 "lis" "ADDIS $0,$21,R4" "lis r4,21" proc.go:2258
 0x5c2bc 4 "addi" "ADD R4,$-27776,R4" "addi r4,r4,-27776" proc.go:2258
 0x5c2c0 4 "ld" "MOVD 296(R4),R11" "ld r11,296(r4)" proc.go:2258
@@ -860,22 +860,22 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x5c2d4 4 "nop" "NOP" "nop" lock_spinbit.go:161
 0x5c2d8 4 "lis" "ADDIS $0,$21,R3" "lis r3,21" lockrank_off.go:24
 0x5c2dc 4 "addi" "ADD R3,$-27744,R3" "addi r3,r3,-27744" lockrank_off.go:24
-0x5c2e0 4 "bl" "CALL runtime.lock2(SB)" "bl 0x26c30" lockrank_off.go:24
+0x5c2e0 4 "bl" "CALL runtime.lock2(SB)" "bl 0x26c30 <runtime.lock2>" lockrank_off.go:24
 0x5c2e4 4 "lis" "ADDIS $0,$21,R4" "lis r4,21" proc.go:2260
 0x5c2e8 4 "addi" "ADD R4,$-27776,R4" "addi r4,r4,-27776" proc.go:2260
 0x5c2ec 4 "lwa" "MOVW 304(R4),R5" "lwa r5,304(r4)" proc.go:2260
 0x5c2f0 4 "addi" "ADD R5,$-1,R5" "addi r5,r5,-1" proc.go:2260
 0x5c2f4 4 "stw" "MOVW R5,304(R4)" "stw r5,304(r4)" proc.go:2260
 0x5c2f8 4 "cmpwi" "CMPW R5,$0" "cmpwi r5,0" proc.go:2261
-0x5c2fc 4 "bc" "BNE 0x5c30c" "bne 0x5c30c" proc.go:2261
+0x5c2fc 4 "bc" "BNE 0x5c30c" "bne 0x5c30c <runtime.runSafePointFn+0xbc>" proc.go:2261
 0x5c300 4 "lis" "ADDIS $0,$21,R3" "lis r3,21" proc.go:2262
 0x5c304 4 "addi" "ADD R3,$-27464,R3" "addi r3,r3,-27464" proc.go:2262
-0x5c308 4 "bl" "CALL runtime.notewakeup(SB)" "bl 0x26590" proc.go:2262
+0x5c308 4 "bl" "CALL runtime.notewakeup(SB)" "bl 0x26590 <runtime.notewakeup>" proc.go:2262
 0x5c30c 4 "nop" "NOP" "nop" proc.go:2264
 0x5c310 4 "nop" "NOP" "nop" lock_spinbit.go:270
 0x5c314 4 "lis" "ADDIS $0,$21,R3" "lis r3,21" lockrank_off.go:36
 0x5c318 4 "addi" "ADD R3,$-27744,R3" "addi r3,r3,-27744" lockrank_off.go:36
-0x5c31c 4 "bl" "CALL runtime.unlock2(SB)" "bl 0x27150" lockrank_off.go:36
+0x5c31c 4 "bl" "CALL runtime.unlock2(SB)" "bl 0x27150 <runtime.unlock2>" lockrank_off.go:36
 0x5c320 4 "ld" "MOVD 0(R1),R31" "ld r31,0(r1)" proc.go:2265
 0x5c324 4 "mtspr" "MOVD R31,LR" "mtlr r31" proc.go:2265
 0x5c328 4 "addi" "ADD R1,$40,R1" "addi r1,r1,40" proc.go:2265
@@ -887,38 +887,38 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 == runtime.runqput 0x682a0 288 /usr/local/go/src/runtime/proc.go
 0x682a0 4 "ld" "MOVD 16(R30),R22" "ld r22,16(r30)" proc.go:7529
 0x682a4 4 "cmpld" "CMPU R22,R1" "cmpld r22,r1" proc.go:7529
-0x682a8 4 "bc" "BLT 0x682d0" "blt 0x682d0" proc.go:7529
+0x682a8 4 "bc" "BLT 0x682d0" "blt 0x682d0 <runtime.runqput+0x30>" proc.go:7529
 0x682ac 4 "std" "MOVD R3,32(R1)" "std r3,32(r1)" proc.go:7529
 0x682b0 4 "std" "MOVD R4,40(R1)" "std r4,40(r1)" proc.go:7529
 0x682b4 4 "stb" "MOVB R5,48(R1)" "stb r5,48(r1)" proc.go:7529
 0x682b8 4 "mfspr" "MOVD LR,R5" "mflr r5" proc.go:7529
-0x682bc 4 "bl" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 0x90220" proc.go:7529
+0x682bc 4 "bl" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 0x90220 <runtime.morestack_noctxt.abi0>" proc.go:7529
 0x682c0 4 "ld" "MOVD 32(R1),R3" "ld r3,32(r1)" proc.go:7529
 0x682c4 4 "ld" "MOVD 40(R1),R4" "ld r4,40(r1)" proc.go:7529
 0x682c8 4 "lbz" "MOVBZ 48(R1),R5" "lbz r5,48(r1)" proc.go:7529
-0x682cc 4 "b" "BR runtime.runqput(SB)" "b 0x682a0" proc.go:7529
+0x682cc 4 "b" "BR runtime.runqput(SB)" "b 0x682a0 <runtime.runqput>" proc.go:7529
 0x682d0 4 "mfspr" "MOVD LR,R31" "mflr r31" proc.go:7529
 0x682d4 4 "stdu" "MOVDU R31,-64(R1)" "stdu r31,-64(r1)" proc.go:7529
 0x682d8 4 "andi." "ANDCC R5,$1,R7" "andi. r7,r5,1" proc.go:7545
-0x682dc 4 "bc" "BNE 0x68368" "bne 0x68368" proc.go:7545
+0x682dc 4 "bc" "BNE 0x68368" "bne 0x68368 <runtime.runqput+0xc8>" proc.go:7545
 0x682e0 4 "std" "MOVD R3,96(R1)" "std r3,96(r1)" proc.go:7545
 0x682e4 4 "std" "MOVD R4,56(R1)" "std r4,56(r1)" proc.go:7558
-0x682e8 4 "b" "BR 0x682f4" "b 0x682f4" proc.go:7559
+0x682e8 4 "b" "BR 0x682f4" "b 0x682f4 <runtime.runqput+0x54>" proc.go:7559
 0x682ec 4 "ld" "MOVD 96(R1),R3" "ld r3,96(r1)" proc.go:7559
 0x682f0 4 "ld" "MOVD 56(R1),R4" "ld r4,56(r1)" proc.go:7566
 0x682f4 4 "lbz" "MOVBZ 0(R3),R31" "lbz r31,0(r3)" proc.go:7559
 0x682f8 4 "addi" "ADD R3,$400,R7" "addi r7,r3,400" proc.go:7559
 0x682fc 4 "lwz" "MOVWZ 0(R7),R5" "lwz r5,0(r7)" proc.go:7559
 0x68300 4 "cmpw" "CMPW R5,R5" "cmpw r5,r5" proc.go:7559
-0x68304 4 "bc" "BNE 0x68308" "bne 0x68308" proc.go:7559
+0x68304 4 "bc" "BNE 0x68308" "bne 0x68308 <runtime.runqput+0x68>" proc.go:7559
 0x68308 4 "isync" "ISYNC" "isync" proc.go:7559
 0x6830c 4 "lwz" "MOVWZ 404(R3),R6" "lwz r6,404(r3)" proc.go:7560
 0x68310 4 "subf" "SUB R5,R6,R7" "subf r7,r5,r6" proc.go:7561
 0x68314 4 "cmplwi" "CMPWU R7,$256" "cmplwi r7,256" proc.go:7561
-0x68318 4 "bc" "BLT 0x68338" "blt 0x68338" proc.go:7561
-0x6831c 4 "bl" "CALL runtime.runqputslow(SB)" "bl 0x683c0" proc.go:7566
+0x68318 4 "bc" "BLT 0x68338" "blt 0x68338 <runtime.runqput+0x98>" proc.go:7561
+0x6831c 4 "bl" "CALL runtime.runqputslow(SB)" "bl 0x683c0 <runtime.runqputslow>" proc.go:7566
 0x68320 4 "andi." "ANDCC R3,$1,R7" "andi. r7,r3,1" proc.go:7566
-0x68324 4 "bc" "BEQ 0x682ec" "beq 0x682ec" proc.go:7566
+0x68324 4 "bc" "BEQ 0x682ec" "beq 0x682ec <runtime.runqput+0x4c>" proc.go:7566
 0x68328 4 "ld" "MOVD 0(R1),R31" "ld r31,0(r1)" proc.go:7567
 0x6832c 4 "mtspr" "MOVD R31,LR" "mtlr r31" proc.go:7567
 0x68330 4 "addi" "ADD R1,$64,R1" "addi r1,r1,64" proc.go:7567
@@ -942,17 +942,17 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x68378 4 "sync" "LWSYNC" "lwsync" runtime2.go:252
 0x6837c 4 "ldarx" "LDAR (R8),R31" "ldarx r31,0,r8" runtime2.go:252
 0x68380 4 "cmpd" "CMP R7,R31" "cmpd r7,r31" runtime2.go:252
-0x68384 4 "bc" "BNE 0x68394" "bne 0x68394" runtime2.go:252
+0x68384 4 "bc" "BNE 0x68394" "bne 0x68394 <runtime.runqput+0xf4>" runtime2.go:252
 0x68388 4 "stdcx." "STDCCC R4,(R8)(R0)" "stdcx. r4,r0,r8" runtime2.go:252
-0x6838c 4 "bc" "BNE 0x6837c" "bne 0x6837c" runtime2.go:252
+0x6838c 4 "bc" "BNE 0x6837c" "bne 0x6837c <runtime.runqput+0xdc>" runtime2.go:252
 0x68390 4 "li" "MOVD $1,R10" "li r10,1" runtime2.go:252
 0x68394 4 "sync" "LWSYNC" "lwsync" runtime2.go:252
 0x68398 4 "andi." "ANDCC R10,$1,R8" "andi. r8,r10,1" runtime2.go:252
-0x6839c 4 "bc" "BEQ 0x68364" "beq 0x68364" proc.go:7548
+0x6839c 4 "bc" "BEQ 0x68364" "beq 0x68364 <runtime.runqput+0xc4>" proc.go:7548
 0x683a0 4 "cmpdi" "CMP R7,$0" "cmpdi r7,0" proc.go:7551
-0x683a4 4 "bc" "BEQ 0x683b0" "beq 0x683b0" proc.go:7551
+0x683a4 4 "bc" "BEQ 0x683b0" "beq 0x683b0 <runtime.runqput+0x110>" proc.go:7551
 0x683a8 4 "or" "OR R7,R7,R4" "or r4,r7,r7" proc.go:7558
-0x683ac 4 "b" "BR 0x682e0" "b 0x682e0" proc.go:7555
+0x683ac 4 "b" "BR 0x682e0" "b 0x682e0 <runtime.runqput+0x40>" proc.go:7555
 0x683b0 4 "ld" "MOVD 0(R1),R31" "ld r31,0(r1)" proc.go:7552
 0x683b4 4 "mtspr" "MOVD R31,LR" "mtlr r31" proc.go:7552
 0x683b8 4 "addi" "ADD R1,$64,R1" "addi r1,r1,64" proc.go:7552
@@ -961,18 +961,18 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x683c0 4 "ld" "MOVD 16(R30),R22" "ld r22,16(r30)" proc.go:7575
 0x683c4 4 "addi" "ADD R1,$-976,R23" "addi r23,r1,-976" proc.go:7575
 0x683c8 4 "cmpld" "CMPU R22,R23" "cmpld r22,r23" proc.go:7575
-0x683cc 4 "bc" "BLT 0x683fc" "blt 0x683fc" proc.go:7575
+0x683cc 4 "bc" "BLT 0x683fc" "blt 0x683fc <runtime.runqputslow+0x3c>" proc.go:7575
 0x683d0 4 "std" "MOVD R3,32(R1)" "std r3,32(r1)" proc.go:7575
 0x683d4 4 "std" "MOVD R4,40(R1)" "std r4,40(r1)" proc.go:7575
 0x683d8 4 "stw" "MOVW R5,48(R1)" "stw r5,48(r1)" proc.go:7575
 0x683dc 4 "stw" "MOVW R6,52(R1)" "stw r6,52(r1)" proc.go:7575
 0x683e0 4 "mfspr" "MOVD LR,R5" "mflr r5" proc.go:7575
-0x683e4 4 "bl" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 0x90220" proc.go:7575
+0x683e4 4 "bl" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 0x90220 <runtime.morestack_noctxt.abi0>" proc.go:7575
 0x683e8 4 "ld" "MOVD 32(R1),R3" "ld r3,32(r1)" proc.go:7575
 0x683ec 4 "ld" "MOVD 40(R1),R4" "ld r4,40(r1)" proc.go:7575
 0x683f0 4 "lwz" "MOVWZ 48(R1),R5" "lwz r5,48(r1)" proc.go:7575
 0x683f4 4 "lwz" "MOVWZ 52(R1),R6" "lwz r6,52(r1)" proc.go:7575
-0x683f8 4 "b" "BR runtime.runqputslow(SB)" "b 0x683c0" proc.go:7575
+0x683f8 4 "b" "BR runtime.runqputslow(SB)" "b 0x683c0 <runtime.runqputslow>" proc.go:7575
 0x683fc 4 "mfspr" "MOVD LR,R31" "mflr r31" proc.go:7575
 0x68400 4 "stdu" "MOVDU R31,-1104(R1)" "stdu r31,-1104(r1)" proc.go:7575
 0x68404 4 "addi" "ADD R1,$72,R20" "addi r20,r1,72" proc.go:7576
@@ -985,14 +985,14 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x68420 4 "stxvd2x" "STXVD2X VS32,(R20)(R0)" "stxvd2x vs32,r0,r20" proc.go:7576
 0x68424 4 "stxvd2x" "STXVD2X VS32,(R20)(R31)" "stxvd2x vs32,r31,r20" proc.go:7576
 0x68428 4 "addi" "ADD R20,$32,R20" "addi r20,r20,32" proc.go:7576
-0x6842c 4 "bc" "BC $16,LT,0x68420" "bdnz 0x68420" proc.go:7576
+0x6842c 4 "bc" "BC $16,LT,0x68420" "bdnz 0x68420 <runtime.runqputslow+0x60>" proc.go:7576
 0x68430 4 "std" "MOVD R0,0(R20)" "std r0,0(r20)" proc.go:7576
 0x68434 4 "subf" "SUB R5,R6,R6" "subf r6,r5,r6" proc.go:7579
 0x68438 4 "rlwinm" "RLWINM R6,$31,$1,$31,R6" "rlwinm r6,r6,31,1,31" proc.go:7580
 0x6843c 4 "cmpwi" "CMPW R6,$128" "cmpwi r6,128" proc.go:7581
-0x68440 4 "bc" "BNE 0x685a4" "bne 0x685a4" proc.go:7581
+0x68440 4 "bc" "BNE 0x685a4" "bne 0x685a4 <runtime.runqputslow+0x1e4>" proc.go:7581
 0x68444 4 "li" "MOVD $0,R6" "li r6,0" proc.go:7581
-0x68448 4 "b" "BR 0x68470" "b 0x68470" proc.go:7581
+0x68448 4 "b" "BR 0x68470" "b 0x68470 <runtime.runqputslow+0xb0>" proc.go:7581
 0x6844c 4 "lbz" "MOVBZ 0(R3),R31" "lbz r31,0(r3)" proc.go:7585
 0x68450 4 "rldic" "RLDIC R6,$3,$29,R7" "rldic r7,r6,3,29" proc.go:7585
 0x68454 4 "addi" "ADD R3,$408,R8" "addi r8,r3,408" proc.go:7585
@@ -1003,7 +1003,7 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x68468 4 "stdx" "MOVD R8,(R9)(R7)" "stdx r8,r7,r9" proc.go:7585
 0x6846c 4 "addi" "ADD R6,$1,R6" "addi r6,r6,1" proc.go:7584
 0x68470 4 "cmplwi" "CMPWU R6,$128" "cmplwi r6,128" proc.go:7584
-0x68474 4 "bc" "BLT 0x6844c" "blt 0x6844c" proc.go:7584
+0x68474 4 "bc" "BLT 0x6844c" "blt 0x6844c <runtime.runqputslow+0x8c>" proc.go:7584
 0x68478 4 "lbz" "MOVBZ 0(R3),R31" "lbz r31,0(r3)" proc.go:7587
 0x6847c 4 "addi" "ADD R3,$400,R6" "addi r6,r3,400" proc.go:7587
 0x68480 4 "addi" "ADD R5,$128,R7" "addi r7,r5,128" proc.go:7587
@@ -1011,16 +1011,16 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x68488 4 "sync" "LWSYNC" "lwsync" proc.go:7587
 0x6848c 4 "lwarx" "LWAR (R6),R31" "lwarx r31,0,r6" proc.go:7587
 0x68490 4 "cmpw" "CMPW R5,R31" "cmpw r5,r31" proc.go:7587
-0x68494 4 "bc" "BNE 0x684a4" "bne 0x684a4" proc.go:7587
+0x68494 4 "bc" "BNE 0x684a4" "bne 0x684a4 <runtime.runqputslow+0xe4>" proc.go:7587
 0x68498 4 "stwcx." "STWCCC R7,(R6)(R0)" "stwcx. r7,r0,r6" proc.go:7587
-0x6849c 4 "bc" "BNE 0x6848c" "bne 0x6848c" proc.go:7587
+0x6849c 4 "bc" "BNE 0x6848c" "bne 0x6848c <runtime.runqputslow+0xcc>" proc.go:7587
 0x684a0 4 "li" "MOVD $1,R8" "li r8,1" proc.go:7587
 0x684a4 4 "sync" "LWSYNC" "lwsync" proc.go:7587
 0x684a8 4 "andi." "ANDCC R8,$1,R5" "andi. r5,r8,1" proc.go:7587
-0x684ac 4 "bc" "BEQ 0x684bc" "beq 0x684bc" proc.go:7587
+0x684ac 4 "bc" "BEQ 0x684bc" "beq 0x684bc <runtime.runqputslow+0xfc>" proc.go:7587
 0x684b0 4 "std" "MOVD R4,1096(R1)" "std r4,1096(r1)" proc.go:7590
 0x684b4 4 "li" "MOVD $0,R4" "li r4,0" proc.go:7600
-0x684b8 4 "b" "BR 0x684ec" "b 0x684ec" proc.go:7600
+0x684b8 4 "b" "BR 0x684ec" "b 0x684ec <runtime.runqputslow+0x12c>" proc.go:7600
 0x684bc 4 "li" "MOVD $0,R3" "li r3,0" proc.go:7588
 0x684c0 4 "ld" "MOVD 0(R1),R31" "ld r31,0(r1)" proc.go:7588
 0x684c4 4 "mtspr" "MOVD R31,LR" "mtlr r31" proc.go:7588
@@ -1034,7 +1034,7 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x684e4 4 "ldx" "MOVD (R6)(R7),R7" "ldx r7,r7,r6" proc.go:7601
 0x684e8 4 "std" "MOVD R7,160(R5)" "std r7,160(r5)" proc.go:7601
 0x684ec 4 "cmplwi" "CMPWU R4,$128" "cmplwi r4,128" proc.go:7600
-0x684f0 4 "bc" "BLT 0x684d0" "blt 0x684d0" proc.go:7600
+0x684f0 4 "bc" "BLT 0x684d0" "blt 0x684d0 <runtime.runqputslow+0x110>" proc.go:7600
 0x684f4 4 "ld" "MOVD 72(R1),R4" "ld r4,72(r1)" proc.go:7604
 0x684f8 4 "ld" "MOVD 1096(R1),R5" "ld r5,1096(r1)" proc.go:7604
 0x684fc 4 "std" "MOVD R4,48(R1)" "std r4,48(r1)" proc.go:7604
@@ -1045,12 +1045,12 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x68510 4 "nop" "NOP" "nop" lock_spinbit.go:161
 0x68514 4 "lis" "ADDIS $0,$21,R3" "lis r3,21" lockrank_off.go:24
 0x68518 4 "addi" "ADD R3,$-27744,R3" "addi r3,r3,-27744" lockrank_off.go:24
-0x6851c 4 "bl" "CALL runtime.lock2(SB)" "bl 0x26c30" lockrank_off.go:24
+0x6851c 4 "bl" "CALL runtime.lock2(SB)" "bl 0x26c30 <runtime.lock2>" lockrank_off.go:24
 0x68520 4 "ld" "MOVD 56(R1),R4" "ld r4,56(r1)" proc.go:7326
 0x68524 4 "nop" "NOP" "nop" proc.go:7608
 0x68528 4 "lwa" "MOVW 64(R1),R5" "lwa r5,64(r1)" proc.go:7326
 0x6852c 4 "cmpdi" "CMP R4,$0" "cmpdi r4,0" proc.go:7838
-0x68530 4 "bc" "BEQ 0x68570" "beq 0x68570" proc.go:7838
+0x68530 4 "bc" "BEQ 0x68570" "beq 0x68570 <runtime.runqputslow+0x1b0>" proc.go:7838
 0x68534 4 "or" "OR R4,R4,R6" "or r6,r4,r4" runtime2.go:245
 0x68538 4 "ld" "MOVD 48(R1),R7" "ld r7,48(r1)" proc.go:7326
 0x6853c 4 "std" "MOVD R0,160(R4)" "std r0,160(r4)" proc.go:7841
@@ -1058,9 +1058,9 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x68544 4 "addi" "ADD R4,$-27776,R4" "addi r4,r4,-27776" proc.go:7842
 0x68548 4 "ld" "MOVD 136(R4),R8" "ld r8,136(r4)" proc.go:7842
 0x6854c 4 "cmpdi" "CMP R8,$0" "cmpdi r8,0" proc.go:7842
-0x68550 4 "bc" "BEQ 0x6855c" "beq 0x6855c" proc.go:7842
+0x68550 4 "bc" "BEQ 0x6855c" "beq 0x6855c <runtime.runqputslow+0x19c>" proc.go:7842
 0x68554 4 "std" "MOVD R7,160(R8)" "std r7,160(r8)" proc.go:7843
-0x68558 4 "b" "BR 0x68560" "b 0x68560" proc.go:7843
+0x68558 4 "b" "BR 0x68560" "b 0x68560 <runtime.runqputslow+0x1a0>" proc.go:7843
 0x6855c 4 "std" "MOVD R7,128(R4)" "std r7,128(r4)" proc.go:7845
 0x68560 4 "std" "MOVD R6,136(R4)" "std r6,136(r4)" proc.go:7847
 0x68564 4 "lwa" "MOVW 144(R4),R6" "lwa r6,144(r4)" proc.go:7848
@@ -1073,7 +1073,7 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x68580 4 "nop" "NOP" "nop" lock_spinbit.go:270
 0x68584 4 "lis" "ADDIS $0,$21,R3" "lis r3,21" lockrank_off.go:36
 0x68588 4 "addi" "ADD R3,$-27744,R3" "addi r3,r3,-27744" lockrank_off.go:36
-0x6858c 4 "bl" "CALL runtime.unlock2(SB)" "bl 0x27150" lockrank_off.go:36
+0x6858c 4 "bl" "CALL runtime.unlock2(SB)" "bl 0x27150 <runtime.unlock2>" lockrank_off.go:36
 0x68590 4 "li" "MOVD $1,R3" "li r3,1" proc.go:7610
 0x68594 4 "ld" "MOVD 0(R1),R31" "ld r31,0(r1)" proc.go:7610
 0x68598 4 "mtspr" "MOVD R31,LR" "mtlr r31" proc.go:7610
@@ -1082,7 +1082,7 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x685a4 4 "lis" "ADDIS $0,$10,R3" "lis r3,10" proc.go:7582
 0x685a8 4 "addi" "ADD R3,$16530,R3" "addi r3,r3,16530" proc.go:7582
 0x685ac 4 "li" "MOVD $30,R4" "li r4,30" proc.go:7582
-0x685b0 4 "bl" "CALL runtime.throw(SB)" "bl 0x8ce10" proc.go:7582
+0x685b0 4 "bl" "CALL runtime.throw(SB)" "bl 0x8ce10 <runtime.throw>" proc.go:7582
 0x685b4 4 "nop" "NOP" "nop" proc.go:7582
 0x685b8 4 "Op(0)" "WORD $0" ".long 0x0" .:-1
 0x685bc 4 "Op(0)" "WORD $0" ".long 0x0" .:-1
@@ -1090,15 +1090,15 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x685c0 4 "nop" "NOP" "nop" proc.go:7616
 0x685c4 4 "ld" "MOVD 0(R4),R5" "ld r5,0(r4)" proc.go:7810
 0x685c8 4 "cmpdi" "CMP R5,$0" "cmpdi r5,0" proc.go:7810
-0x685cc 4 "bc" "BEQ 0x685f0" "beq 0x685f0" proc.go:7617
+0x685cc 4 "bc" "BEQ 0x685f0" "beq 0x685f0 <runtime.runqputbatch+0x30>" proc.go:7617
 0x685d0 4 "lbz" "MOVBZ 0(R3),R31" "lbz r31,0(r3)" proc.go:7620
 0x685d4 4 "addi" "ADD R3,$400,R5" "addi r5,r3,400" proc.go:7620
 0x685d8 4 "lwz" "MOVWZ 0(R5),R5" "lwz r5,0(r5)" proc.go:7620
 0x685dc 4 "cmpw" "CMPW R5,R5" "cmpw r5,r5" proc.go:7620
-0x685e0 4 "bc" "BNE 0x685e4" "bne 0x685e4" proc.go:7620
+0x685e0 4 "bc" "BNE 0x685e4" "bne 0x685e4 <runtime.runqputbatch+0x24>" proc.go:7620
 0x685e4 4 "isync" "ISYNC" "isync" proc.go:7620
 0x685e8 4 "lwz" "MOVWZ 404(R3),R6" "lwz r6,404(r3)" proc.go:7621
-0x685ec 4 "b" "BR 0x68604" "b 0x68604" proc.go:7623
+0x685ec 4 "b" "BR 0x68604" "b 0x68604 <runtime.runqputbatch+0x44>" proc.go:7623
 0x685f0 4 "bclr" "RET" "blr" proc.go:7618
 0x685f4 4 "addi" "ADD R3,$408,R8" "addi r8,r3,408" proc.go:7625
 0x685f8 4 "rldic" "RLDIC R6,$3,$53,R9" "rldic r9,r6,3,53" proc.go:7625
@@ -1106,23 +1106,23 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x68600 4 "addi" "ADD R6,$1,R6" "addi r6,r6,1" proc.go:7626
 0x68604 4 "ld" "MOVD 0(R4),R7" "ld r7,0(r4)" proc.go:7810
 0x68608 4 "cmpdi" "CMP R7,$0" "cmpdi r7,0" proc.go:7810
-0x6860c 4 "bc" "BEQ 0x68650" "beq 0x68650" proc.go:7623
+0x6860c 4 "bc" "BEQ 0x68650" "beq 0x68650 <runtime.runqputbatch+0x90>" proc.go:7623
 0x68610 4 "subf" "SUB R5,R6,R8" "subf r8,r5,r6" proc.go:7623
 0x68614 4 "cmplwi" "CMPWU R8,$256" "cmplwi r8,256" proc.go:7623
-0x68618 4 "bc" "BGE 0x68650" "bge 0x68650" proc.go:7623
+0x68618 4 "bc" "BGE 0x68650" "bge 0x68650 <runtime.runqputbatch+0x90>" proc.go:7623
 0x6861c 4 "nop" "NOP" "nop" proc.go:7624
 0x68620 4 "nop" "NOP" "nop" proc.go:7854
 0x68624 4 "cmpdi" "CMP R7,$0" "cmpdi r7,0" proc.go:7855
-0x68628 4 "bc" "BEQ 0x685f4" "beq 0x685f4" proc.go:7855
+0x68628 4 "bc" "BEQ 0x685f4" "beq 0x685f4 <runtime.runqputbatch+0x34>" proc.go:7855
 0x6862c 4 "ld" "MOVD 160(R7),R8" "ld r8,160(r7)" proc.go:7856
 0x68630 4 "std" "MOVD R8,0(R4)" "std r8,0(r4)" proc.go:7856
 0x68634 4 "cmpdi" "CMP R8,$0" "cmpdi r8,0" proc.go:7857
-0x68638 4 "bc" "BNE 0x68640" "bne 0x68640" proc.go:7857
+0x68638 4 "bc" "BNE 0x68640" "bne 0x68640 <runtime.runqputbatch+0x80>" proc.go:7857
 0x6863c 4 "std" "MOVD R0,8(R4)" "std r0,8(r4)" proc.go:7858
 0x68640 4 "lwa" "MOVW 16(R4),R8" "lwa r8,16(r4)" proc.go:7860
 0x68644 4 "addi" "ADD R8,$-1,R8" "addi r8,r8,-1" proc.go:7860
 0x68648 4 "stw" "MOVW R8,16(R4)" "stw r8,16(r4)" proc.go:7860
-0x6864c 4 "b" "BR 0x685f4" "b 0x685f4" proc.go:7860
+0x6864c 4 "b" "BR 0x685f4" "b 0x685f4 <runtime.runqputbatch+0x34>" proc.go:7860
 0x68650 4 "addi" "ADD R3,$404,R3" "addi r3,r3,404" proc.go:7640
 0x68654 4 "sync" "LWSYNC" "lwsync" proc.go:7640
 0x68658 4 "stw" "MOVW R6,0(R3)" "stw r6,0(r3)" proc.go:7640
@@ -1135,29 +1135,29 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x68670 4 "stw" "MOVW R0,48(R1)" "stw r0,48(r1)" proc.go:7674
 0x68674 4 "ld" "MOVD 2456(R3),R6" "ld r6,2456(r3)" proc.go:7675
 0x68678 4 "cmpdi" "CMP R6,$0" "cmpdi r6,0" proc.go:7676
-0x6867c 4 "bc" "BEQ 0x686fc" "beq 0x686fc" proc.go:7676
+0x6867c 4 "bc" "BEQ 0x686fc" "beq 0x686fc <runtime.runqdrain+0x9c>" proc.go:7676
 0x68680 4 "addi" "ADD R3,$2456,R7" "addi r7,r3,2456" proc.go:7675
 0x68684 4 "li" "MOVD $0,R8" "li r8,0" runtime2.go:252
 0x68688 4 "li" "MOVD $0,R9" "li r9,0" runtime2.go:252
 0x6868c 4 "sync" "LWSYNC" "lwsync" runtime2.go:252
 0x68690 4 "ldarx" "LDAR (R7),R31" "ldarx r31,0,r7" runtime2.go:252
 0x68694 4 "cmpd" "CMP R6,R31" "cmpd r6,r31" runtime2.go:252
-0x68698 4 "bc" "BNE 0x686a8" "bne 0x686a8" runtime2.go:252
+0x68698 4 "bc" "BNE 0x686a8" "bne 0x686a8 <runtime.runqdrain+0x48>" runtime2.go:252
 0x6869c 4 "stdcx." "STDCCC R8,(R7)(R0)" "stdcx. r8,r0,r7" runtime2.go:252
-0x686a0 4 "bc" "BNE 0x68690" "bne 0x68690" runtime2.go:252
+0x686a0 4 "bc" "BNE 0x68690" "bne 0x68690 <runtime.runqdrain+0x30>" runtime2.go:252
 0x686a4 4 "li" "MOVD $1,R9" "li r9,1" runtime2.go:252
 0x686a8 4 "sync" "LWSYNC" "lwsync" runtime2.go:252
 0x686ac 4 "andi." "ANDCC R9,$1,R7" "andi. r7,r9,1" runtime2.go:252
-0x686b0 4 "bc" "BEQ 0x686fc" "beq 0x686fc" proc.go:7676
+0x686b0 4 "bc" "BEQ 0x686fc" "beq 0x686fc <runtime.runqdrain+0x9c>" proc.go:7676
 0x686b4 4 "nop" "NOP" "nop" proc.go:7677
 0x686b8 4 "nop" "NOP" "nop" proc.go:7677
 0x686bc 4 "std" "MOVD R0,160(R6)" "std r0,160(r6)" proc.go:7825
 0x686c0 4 "ld" "MOVD 40(R1),R7" "ld r7,40(r1)" proc.go:7826
 0x686c4 4 "cmpdi" "CMP R7,$0" "cmpdi r7,0" proc.go:7826
-0x686c8 4 "bc" "BEQ 0x686d8" "beq 0x686d8" proc.go:7826
+0x686c8 4 "bc" "BEQ 0x686d8" "beq 0x686d8 <runtime.runqdrain+0x78>" proc.go:7826
 0x686cc 4 "or" "OR R6,R6,R8" "or r8,r6,r6" runtime2.go:248
 0x686d0 4 "std" "MOVD R6,160(R7)" "std r6,160(r7)" proc.go:7827
-0x686d4 4 "b" "BR 0x686e8" "b 0x686e8" proc.go:7827
+0x686d4 4 "b" "BR 0x686e8" "b 0x686e8 <runtime.runqdrain+0x88>" proc.go:7827
 0x686d8 4 "or" "OR R6,R6,R7" "or r7,r6,r6" runtime2.go:248
 0x686dc 4 "nop" "NOP" "nop" proc.go:7829
 0x686e0 4 "std" "MOVD R6,32(R1)" "std r6,32(r1)" runtime2.go:248
@@ -1170,27 +1170,27 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x686fc 4 "addi" "ADD R3,$400,R6" "addi r6,r3,400" proc.go:7681
 0x68700 4 "lwz" "MOVWZ 0(R6),R7" "lwz r7,0(r6)" proc.go:7681
 0x68704 4 "cmpw" "CMPW R7,R7" "cmpw r7,r7" proc.go:7681
-0x68708 4 "bc" "BNE 0x6870c" "bne 0x6870c" proc.go:7681
+0x68708 4 "bc" "BNE 0x6870c" "bne 0x6870c <runtime.runqdrain+0xac>" proc.go:7681
 0x6870c 4 "isync" "ISYNC" "isync" proc.go:7681
 0x68710 4 "lwz" "MOVWZ 404(R3),R8" "lwz r8,404(r3)" proc.go:7682
 0x68714 4 "subf" "SUB R7,R8,R9" "subf r9,r7,r8" proc.go:7683
 0x68718 4 "cmpwi" "CMPW R9,$0" "cmpwi r9,0" proc.go:7684
-0x6871c 4 "bc" "BEQ 0x6875c" "beq 0x6875c" proc.go:7684
+0x6871c 4 "bc" "BEQ 0x6875c" "beq 0x6875c <runtime.runqdrain+0xfc>" proc.go:7684
 0x68720 4 "cmplwi" "CMPWU R9,$256" "cmplwi r9,256" proc.go:7687
-0x68724 4 "bc" "BGT 0x686fc" "bgt 0x686fc" proc.go:7687
+0x68724 4 "bc" "BGT 0x686fc" "bgt 0x686fc <runtime.runqdrain+0x9c>" proc.go:7687
 0x68728 4 "li" "MOVD $0,R10" "li r10,0" proc.go:7691
 0x6872c 4 "sync" "LWSYNC" "lwsync" proc.go:7691
 0x68730 4 "lwarx" "LWAR (R6),R31" "lwarx r31,0,r6" proc.go:7691
 0x68734 4 "cmpw" "CMPW R7,R31" "cmpw r7,r31" proc.go:7691
-0x68738 4 "bc" "BNE 0x68748" "bne 0x68748" proc.go:7691
+0x68738 4 "bc" "BNE 0x68748" "bne 0x68748 <runtime.runqdrain+0xe8>" proc.go:7691
 0x6873c 4 "stwcx." "STWCCC R8,(R6)(R0)" "stwcx. r8,r0,r6" proc.go:7691
-0x68740 4 "bc" "BNE 0x68730" "bne 0x68730" proc.go:7691
+0x68740 4 "bc" "BNE 0x68730" "bne 0x68730 <runtime.runqdrain+0xd0>" proc.go:7691
 0x68744 4 "li" "MOVD $1,R10" "li r10,1" proc.go:7691
 0x68748 4 "sync" "LWSYNC" "lwsync" proc.go:7691
 0x6874c 4 "andi." "ANDCC R10,$1,R6" "andi. r6,r10,1" proc.go:7691
-0x68750 4 "bc" "BEQ 0x686fc" "beq 0x686fc" proc.go:7691
+0x68750 4 "bc" "BEQ 0x686fc" "beq 0x686fc <runtime.runqdrain+0x9c>" proc.go:7691
 0x68754 4 "li" "MOVD $0,R6" "li r6,0" proc.go:7691
-0x68758 4 "b" "BR 0x68788" "b 0x68788" proc.go:7691
+0x68758 4 "b" "BR 0x68788" "b 0x68788 <runtime.runqdrain+0x128>" proc.go:7691
 0x6875c 4 "ld" "MOVD 32(R1),R3" "ld r3,32(r1)" proc.go:7685
 0x68760 4 "ld" "MOVD 40(R1),R4" "ld r4,40(r1)" proc.go:7685
 0x68764 4 "lwa" "MOVW 48(R1),R5" "lwa r5,48(r1)" proc.go:7685
@@ -1203,7 +1203,7 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x68780 4 "stw" "MOVW R8,48(R1)" "stw r8,48(r1)" proc.go:7832
 0x68784 4 "addi" "ADD R6,$1,R6" "addi r6,r6,1" proc.go:7702
 0x68788 4 "cmplw" "CMPWU R6,R9" "cmplw r6,r9" proc.go:7702
-0x6878c 4 "bc" "BGE 0x687d0" "bge 0x687d0" proc.go:7702
+0x6878c 4 "bc" "BGE 0x687d0" "bge 0x687d0 <runtime.runqdrain+0x170>" proc.go:7702
 0x68790 4 "addi" "ADD R3,$408,R8" "addi r8,r3,408" proc.go:7703
 0x68794 4 "add" "ADD R7,R6,R10" "add r10,r6,r7" proc.go:7703
 0x68798 4 "rldic" "RLDIC R10,$3,$53,R10" "rldic r10,r10,3,53" proc.go:7703
@@ -1212,14 +1212,14 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x687a4 4 "std" "MOVD R0,160(R8)" "std r0,160(r8)" proc.go:7825
 0x687a8 4 "ld" "MOVD 40(R1),R10" "ld r10,40(r1)" proc.go:7826
 0x687ac 4 "cmpdi" "CMP R10,$0" "cmpdi r10,0" proc.go:7826
-0x687b0 4 "bc" "BEQ 0x687c0" "beq 0x687c0" proc.go:7826
+0x687b0 4 "bc" "BEQ 0x687c0" "beq 0x687c0 <runtime.runqdrain+0x160>" proc.go:7826
 0x687b4 4 "or" "OR R8,R8,R11" "or r11,r8,r8" runtime2.go:248
 0x687b8 4 "std" "MOVD R8,160(R10)" "std r8,160(r10)" proc.go:7827
-0x687bc 4 "b" "BR 0x68770" "b 0x68770" proc.go:7827
+0x687bc 4 "b" "BR 0x68770" "b 0x68770 <runtime.runqdrain+0x110>" proc.go:7827
 0x687c0 4 "or" "OR R8,R8,R10" "or r10,r8,r8" runtime2.go:248
 0x687c4 4 "std" "MOVD R8,32(R1)" "std r8,32(r1)" runtime2.go:248
 0x687c8 4 "or" "OR R10,R10,R11" "or r11,r10,r10" runtime2.go:248
-0x687cc 4 "b" "BR 0x68770" "b 0x68770" proc.go:7829
+0x687cc 4 "b" "BR 0x68770" "b 0x68770 <runtime.runqdrain+0x110>" proc.go:7829
 0x687d0 4 "ld" "MOVD 32(R1),R3" "ld r3,32(r1)" proc.go:7706
 0x687d4 4 "ld" "MOVD 40(R1),R4" "ld r4,40(r1)" proc.go:7706
 0x687d8 4 "lwa" "MOVW 48(R1),R5" "lwa r5,48(r1)" proc.go:7706
@@ -1231,18 +1231,18 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 == runtime.runqgrab 0x687f0 528 /usr/local/go/src/runtime/proc.go
 0x687f0 4 "ld" "MOVD 16(R30),R22" "ld r22,16(r30)" proc.go:7713
 0x687f4 4 "cmpld" "CMPU R22,R1" "cmpld r22,r1" proc.go:7713
-0x687f8 4 "bc" "BLT 0x68828" "blt 0x68828" proc.go:7713
+0x687f8 4 "bc" "BLT 0x68828" "blt 0x68828 <runtime.runqgrab+0x38>" proc.go:7713
 0x687fc 4 "std" "MOVD R3,32(R1)" "std r3,32(r1)" proc.go:7713
 0x68800 4 "std" "MOVD R4,40(R1)" "std r4,40(r1)" proc.go:7713
 0x68804 4 "stw" "MOVW R5,48(R1)" "stw r5,48(r1)" proc.go:7713
 0x68808 4 "stb" "MOVB R6,52(R1)" "stb r6,52(r1)" proc.go:7713
 0x6880c 4 "mfspr" "MOVD LR,R5" "mflr r5" proc.go:7713
-0x68810 4 "bl" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 0x90220" proc.go:7713
+0x68810 4 "bl" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 0x90220 <runtime.morestack_noctxt.abi0>" proc.go:7713
 0x68814 4 "ld" "MOVD 32(R1),R3" "ld r3,32(r1)" proc.go:7713
 0x68818 4 "ld" "MOVD 40(R1),R4" "ld r4,40(r1)" proc.go:7713
 0x6881c 4 "lwz" "MOVWZ 48(R1),R5" "lwz r5,48(r1)" proc.go:7713
 0x68820 4 "lbz" "MOVBZ 52(R1),R6" "lbz r6,52(r1)" proc.go:7713
-0x68824 4 "b" "BR runtime.runqgrab(SB)" "b 0x687f0" proc.go:7713
+0x68824 4 "b" "BR runtime.runqgrab(SB)" "b 0x687f0 <runtime.runqgrab>" proc.go:7713
 0x68828 4 "mfspr" "MOVD LR,R31" "mflr r31" proc.go:7713
 0x6882c 4 "stdu" "MOVDU R31,-48(R1)" "stdu r31,-48(r1)" proc.go:7713
 0x68830 4 "std" "MOVD R3,80(R1)" "std r3,80(r1)" proc.go:7714
@@ -1253,46 +1253,46 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x68844 4 "addi" "ADD R3,$400,R7" "addi r7,r3,400" proc.go:7715
 0x68848 4 "lwz" "MOVWZ 0(R7),R8" "lwz r8,0(r7)" proc.go:7715
 0x6884c 4 "cmpw" "CMPW R8,R8" "cmpw r8,r8" proc.go:7715
-0x68850 4 "bc" "BNE 0x68854" "bne 0x68854" proc.go:7715
+0x68850 4 "bc" "BNE 0x68854" "bne 0x68854 <runtime.runqgrab+0x64>" proc.go:7715
 0x68854 4 "isync" "ISYNC" "isync" proc.go:7715
 0x68858 4 "addi" "ADD R3,$404,R9" "addi r9,r3,404" proc.go:7716
 0x6885c 4 "lwz" "MOVWZ 0(R9),R9" "lwz r9,0(r9)" proc.go:7716
 0x68860 4 "cmpw" "CMPW R9,R9" "cmpw r9,r9" proc.go:7716
-0x68864 4 "bc" "BNE 0x68868" "bne 0x68868" proc.go:7716
+0x68864 4 "bc" "BNE 0x68868" "bne 0x68868 <runtime.runqgrab+0x78>" proc.go:7716
 0x68868 4 "isync" "ISYNC" "isync" proc.go:7716
 0x6886c 4 "subf" "SUB R8,R9,R9" "subf r9,r8,r9" proc.go:7717
 0x68870 4 "rlwinm" "RLWINM R9,$31,$1,$31,R10" "rlwinm r10,r9,31,1,31" proc.go:7718
 0x68874 4 "subf" "SUB R10,R9,R9" "subf r9,r10,r9" proc.go:7718
 0x68878 4 "cmpwi" "CMPW R9,$0" "cmpwi r9,0" proc.go:7719
-0x6887c 4 "bc" "BNE 0x6893c" "bne 0x6893c" proc.go:7719
+0x6887c 4 "bc" "BNE 0x6893c" "bne 0x6893c <runtime.runqgrab+0x14c>" proc.go:7719
 0x68880 4 "andi." "ANDCC R6,$1,R7" "andi. r7,r6,1" proc.go:7714
-0x68884 4 "bc" "BEQ 0x689d8" "beq 0x689d8" proc.go:7720
+0x68884 4 "bc" "BEQ 0x689d8" "beq 0x689d8 <runtime.runqgrab+0x1e8>" proc.go:7720
 0x68888 4 "ld" "MOVD 2456(R3),R7" "ld r7,2456(r3)" proc.go:7722
 0x6888c 4 "cmpdi" "CMP R7,$0" "cmpdi r7,0" proc.go:7722
-0x68890 4 "bc" "BEQ 0x689d8" "beq 0x689d8" proc.go:7722
+0x68890 4 "bc" "BEQ 0x689d8" "beq 0x689d8 <runtime.runqgrab+0x1e8>" proc.go:7722
 0x68894 4 "lwz" "MOVWZ 4(R3),R8" "lwz r8,4(r3)" proc.go:7723
 0x68898 4 "cmpwi" "CMPW R8,$1" "cmpwi r8,1" proc.go:7723
-0x6889c 4 "bc" "BNE 0x68904" "bne 0x68904" proc.go:7723
+0x6889c 4 "bc" "BNE 0x68904" "bne 0x68904 <runtime.runqgrab+0x114>" proc.go:7723
 0x688a0 4 "ld" "MOVD 48(R3),R8" "ld r8,48(r3)" proc.go:7724
 0x688a4 4 "cmpdi" "CMP R8,$0" "cmpdi r8,0" proc.go:7724
-0x688a8 4 "bc" "BEQ 0x68904" "beq 0x68904" proc.go:7724
+0x688a8 4 "bc" "BEQ 0x68904" "beq 0x68904 <runtime.runqgrab+0x114>" proc.go:7724
 0x688ac 4 "std" "MOVD R7,40(R1)" "std r7,40(r1)" proc.go:7722
 0x688b0 4 "ld" "MOVD 184(R8),R8" "ld r8,184(r8)" proc.go:7725
 0x688b4 4 "cmpdi" "CMP R8,$0" "cmpdi r8,0" proc.go:7725
-0x688b8 4 "bc" "BEQ 0x688e4" "beq 0x688e4" proc.go:7725
+0x688b8 4 "bc" "BEQ 0x688e4" "beq 0x688e4 <runtime.runqgrab+0xf4>" proc.go:7725
 0x688bc 4 "addi" "ADD R8,$144,R8" "addi r8,r8,144" types.go:194
 0x688c0 4 "nop" "NOP" "nop" proc.go:1221
 0x688c4 4 "sync" "HWSYNC" "hwsync" types.go:194
 0x688c8 4 "lwz" "MOVWZ 0(R8),R8" "lwz r8,0(r8)" types.go:194
 0x688cc 4 "cmpw" "CMPW R8,R8" "cmpw r8,r8" types.go:194
-0x688d0 4 "bc" "BNE 0x688d4" "bne 0x688d4" types.go:194
+0x688d0 4 "bc" "BNE 0x688d4" "bne 0x688d4 <runtime.runqgrab+0xe4>" types.go:194
 0x688d4 4 "isync" "ISYNC" "isync" types.go:194
 0x688d8 4 "rlwinm" "RLWINM R8,$0,$20,$18,R8" "rlwinm r8,r8,0,20,18" proc.go:7725
 0x688dc 4 "cmpwi" "CMPW R8,$3" "cmpwi r8,3" proc.go:7725
-0x688e0 4 "bc" "BEQ 0x68904" "beq 0x68904" proc.go:7725
+0x688e0 4 "bc" "BEQ 0x68904" "beq 0x68904 <runtime.runqgrab+0x114>" proc.go:7725
 0x688e4 4 "li" "MOVD $3,R3" "li r3,3" proc.go:7746
 0x688e8 4 "stw" "MOVW R3,32(R1)" "stw r3,32(r1)" proc.go:7746
-0x688ec 4 "bl" "CALL runtime.usleep.abi0(SB)" "bl 0x932f0" proc.go:7746
+0x688ec 4 "bl" "CALL runtime.usleep.abi0(SB)" "bl 0x932f0 <runtime.usleep.abi0>" proc.go:7746
 0x688f0 4 "ld" "MOVD 80(R1),R3" "ld r3,80(r1)" proc.go:7756
 0x688f4 4 "ld" "MOVD 88(R1),R4" "ld r4,88(r1)" proc.go:7770
 0x688f8 4 "lwz" "MOVWZ 96(R1),R5" "lwz r5,96(r1)" proc.go:7770
@@ -1304,20 +1304,20 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x68910 4 "sync" "LWSYNC" "lwsync" runtime2.go:252
 0x68914 4 "ldarx" "LDAR (R8),R31" "ldarx r31,0,r8" runtime2.go:252
 0x68918 4 "cmpd" "CMP R7,R31" "cmpd r7,r31" runtime2.go:252
-0x6891c 4 "bc" "BNE 0x6892c" "bne 0x6892c" runtime2.go:252
+0x6891c 4 "bc" "BNE 0x6892c" "bne 0x6892c <runtime.runqgrab+0x13c>" runtime2.go:252
 0x68920 4 "stdcx." "STDCCC R9,(R8)(R0)" "stdcx. r9,r0,r8" runtime2.go:252
-0x68924 4 "bc" "BNE 0x68914" "bne 0x68914" runtime2.go:252
+0x68924 4 "bc" "BNE 0x68914" "bne 0x68914 <runtime.runqgrab+0x124>" runtime2.go:252
 0x68928 4 "li" "MOVD $1,R10" "li r10,1" runtime2.go:252
 0x6892c 4 "sync" "LWSYNC" "lwsync" runtime2.go:252
 0x68930 4 "andi." "ANDCC R10,$1,R8" "andi. r8,r10,1" runtime2.go:252
-0x68934 4 "bc" "BEQ 0x68840" "beq 0x68840" proc.go:7756
-0x68938 4 "b" "BR 0x689b8" "b 0x689b8" proc.go:7756
+0x68934 4 "bc" "BEQ 0x68840" "beq 0x68840 <runtime.runqgrab+0x50>" proc.go:7756
+0x68938 4 "b" "BR 0x689b8" "b 0x689b8 <runtime.runqgrab+0x1c8>" proc.go:7756
 0x6893c 4 "cmplwi" "CMPWU R9,$128" "cmplwi r9,128" proc.go:7765
-0x68940 4 "bc" "BLE 0x6894c" "ble 0x6894c" proc.go:7765
+0x68940 4 "bc" "BLE 0x6894c" "ble 0x6894c <runtime.runqgrab+0x15c>" proc.go:7765
 0x68944 4 "li" "MOVD $0,R9" "li r9,0" proc.go:7765
-0x68948 4 "b" "BR 0x68840" "b 0x68840" proc.go:7766
+0x68948 4 "b" "BR 0x68840" "b 0x68840 <runtime.runqgrab+0x50>" proc.go:7766
 0x6894c 4 "li" "MOVD $0,R10" "li r10,0" proc.go:7765
-0x68950 4 "b" "BR 0x68978" "b 0x68978" proc.go:7765
+0x68950 4 "b" "BR 0x68978" "b 0x68978 <runtime.runqgrab+0x188>" proc.go:7765
 0x68954 4 "lbz" "MOVBZ 0(R4),R31" "lbz r31,0(r4)" proc.go:7770
 0x68958 4 "addi" "ADD R3,$408,R11" "addi r11,r3,408" proc.go:7769
 0x6895c 4 "add" "ADD R8,R10,R12" "add r12,r10,r8" proc.go:7769
@@ -1328,21 +1328,21 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x68970 4 "stdx" "MOVD R11,(R4)(R12)" "stdx r11,r12,r4" proc.go:7770
 0x68974 4 "addi" "ADD R10,$1,R10" "addi r10,r10,1" proc.go:7768
 0x68978 4 "cmplw" "CMPWU R10,R9" "cmplw r10,r9" proc.go:7768
-0x6897c 4 "bc" "BLT 0x68954" "blt 0x68954" proc.go:7768
+0x6897c 4 "bc" "BLT 0x68954" "blt 0x68954 <runtime.runqgrab+0x164>" proc.go:7768
 0x68980 4 "add" "ADD R8,R9,R10" "add r10,r9,r8" proc.go:7772
 0x68984 4 "li" "MOVD $0,R11" "li r11,0" proc.go:7772
 0x68988 4 "sync" "LWSYNC" "lwsync" proc.go:7772
 0x6898c 4 "lwarx" "LWAR (R7),R31" "lwarx r31,0,r7" proc.go:7772
 0x68990 4 "cmpw" "CMPW R8,R31" "cmpw r8,r31" proc.go:7772
-0x68994 4 "bc" "BNE 0x689a4" "bne 0x689a4" proc.go:7772
+0x68994 4 "bc" "BNE 0x689a4" "bne 0x689a4 <runtime.runqgrab+0x1b4>" proc.go:7772
 0x68998 4 "stwcx." "STWCCC R10,(R7)(R0)" "stwcx. r10,r0,r7" proc.go:7772
-0x6899c 4 "bc" "BNE 0x6898c" "bne 0x6898c" proc.go:7772
+0x6899c 4 "bc" "BNE 0x6898c" "bne 0x6898c <runtime.runqgrab+0x19c>" proc.go:7772
 0x689a0 4 "li" "MOVD $1,R11" "li r11,1" proc.go:7772
 0x689a4 4 "sync" "LWSYNC" "lwsync" proc.go:7772
 0x689a8 4 "andi." "ANDCC R11,$1,R7" "andi. r7,r11,1" proc.go:7772
-0x689ac 4 "bc" "BNE 0x689ec" "bne 0x689ec" proc.go:7772
+0x689ac 4 "bc" "BNE 0x689ec" "bne 0x689ec <runtime.runqgrab+0x1fc>" proc.go:7772
 0x689b0 4 "li" "MOVD $0,R9" "li r9,0" proc.go:7772
-0x689b4 4 "b" "BR 0x68840" "b 0x68840" proc.go:7772
+0x689b4 4 "b" "BR 0x68840" "b 0x68840 <runtime.runqgrab+0x50>" proc.go:7772
 0x689b8 4 "lbz" "MOVBZ 0(R4),R31" "lbz r31,0(r4)" proc.go:7759
 0x689bc 4 "rldic" "RLDIC R5,$3,$53,R5" "rldic r5,r5,3,53" proc.go:7759
 0x689c0 4 "stdx" "MOVD R7,(R4)(R5)" "stdx r7,r5,r4" proc.go:7759
@@ -1364,16 +1364,16 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 == runtime.runqsteal 0x68a00 272 /usr/local/go/src/runtime/proc.go
 0x68a00 4 "ld" "MOVD 16(R30),R22" "ld r22,16(r30)" proc.go:7781
 0x68a04 4 "cmpld" "CMPU R22,R1" "cmpld r22,r1" proc.go:7781
-0x68a08 4 "bc" "BLT 0x68a30" "blt 0x68a30" proc.go:7781
+0x68a08 4 "bc" "BLT 0x68a30" "blt 0x68a30 <runtime.runqsteal+0x30>" proc.go:7781
 0x68a0c 4 "std" "MOVD R3,32(R1)" "std r3,32(r1)" proc.go:7781
 0x68a10 4 "std" "MOVD R4,40(R1)" "std r4,40(r1)" proc.go:7781
 0x68a14 4 "stb" "MOVB R5,48(R1)" "stb r5,48(r1)" proc.go:7781
 0x68a18 4 "mfspr" "MOVD LR,R5" "mflr r5" proc.go:7781
-0x68a1c 4 "bl" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 0x90220" proc.go:7781
+0x68a1c 4 "bl" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 0x90220 <runtime.morestack_noctxt.abi0>" proc.go:7781
 0x68a20 4 "ld" "MOVD 32(R1),R3" "ld r3,32(r1)" proc.go:7781
 0x68a24 4 "ld" "MOVD 40(R1),R4" "ld r4,40(r1)" proc.go:7781
 0x68a28 4 "lbz" "MOVBZ 48(R1),R5" "lbz r5,48(r1)" proc.go:7781
-0x68a2c 4 "b" "BR runtime.runqsteal(SB)" "b 0x68a00" proc.go:7781
+0x68a2c 4 "b" "BR runtime.runqsteal(SB)" "b 0x68a00 <runtime.runqsteal>" proc.go:7781
 0x68a30 4 "mfspr" "MOVD LR,R31" "mflr r31" proc.go:7781
 0x68a34 4 "stdu" "MOVDU R31,-72(R1)" "stdu r31,-72(r1)" proc.go:7781
 0x68a38 4 "std" "MOVD R3,104(R1)" "std r3,104(r1)" proc.go:7784
@@ -1385,9 +1385,9 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x68a50 4 "or" "OR R8,R8,R4" "or r4,r8,r8" proc.go:7783
 0x68a54 4 "or" "OR R5,R5,R6" "or r6,r5,r5" proc.go:7783
 0x68a58 4 "or" "OR R7,R7,R5" "or r5,r7,r7" proc.go:7783
-0x68a5c 4 "bl" "CALL runtime.runqgrab(SB)" "bl 0x687f0" proc.go:7783
+0x68a5c 4 "bl" "CALL runtime.runqgrab(SB)" "bl 0x687f0 <runtime.runqgrab>" proc.go:7783
 0x68a60 4 "cmpwi" "CMPW R3,$0" "cmpwi r3,0" proc.go:7784
-0x68a64 4 "bc" "BEQ 0x68ae8" "beq 0x68ae8" proc.go:7784
+0x68a64 4 "bc" "BEQ 0x68ae8" "beq 0x68ae8 <runtime.runqsteal+0xe8>" proc.go:7784
 0x68a68 4 "lwz" "MOVWZ 60(R1),R5" "lwz r5,60(r1)" proc.go:7788
 0x68a6c 4 "add" "ADD R5,R3,R6" "add r6,r3,r5" proc.go:7788
 0x68a70 4 "addi" "ADD R6,$-1,R6" "addi r6,r6,-1" proc.go:7788
@@ -1395,18 +1395,18 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x68a78 4 "ld" "MOVD 64(R1),R8" "ld r8,64(r1)" proc.go:7788
 0x68a7c 4 "ldx" "MOVD (R8)(R7),R7" "ldx r7,r7,r8" proc.go:7788
 0x68a80 4 "cmpwi" "CMPW R3,$1" "cmpwi r3,1" proc.go:7789
-0x68a84 4 "bc" "BEQ 0x68ad4" "beq 0x68ad4" proc.go:7789
+0x68a84 4 "bc" "BEQ 0x68ad4" "beq 0x68ad4 <runtime.runqsteal+0xd4>" proc.go:7789
 0x68a88 4 "ld" "MOVD 104(R1),R8" "ld r8,104(r1)" proc.go:7792
 0x68a8c 4 "addi" "ADD R8,$400,R9" "addi r9,r8,400" proc.go:7792
 0x68a90 4 "lwz" "MOVWZ 0(R9),R9" "lwz r9,0(r9)" proc.go:7792
 0x68a94 4 "cmpw" "CMPW R9,R9" "cmpw r9,r9" proc.go:7792
-0x68a98 4 "bc" "BNE 0x68a9c" "bne 0x68a9c" proc.go:7792
+0x68a98 4 "bc" "BNE 0x68a9c" "bne 0x68a9c <runtime.runqsteal+0x9c>" proc.go:7792
 0x68a9c 4 "isync" "ISYNC" "isync" proc.go:7792
 0x68aa0 4 "subf" "SUB R9,R5,R5" "subf r5,r9,r5" proc.go:7793
 0x68aa4 4 "add" "ADD R3,R5,R5" "add r5,r5,r3" proc.go:7793
 0x68aa8 4 "addi" "ADD R5,$-1,R5" "addi r5,r5,-1" proc.go:7793
 0x68aac 4 "cmplwi" "CMPWU R5,$256" "cmplwi r5,256" proc.go:7793
-0x68ab0 4 "bc" "BGE 0x68afc" "bge 0x68afc" proc.go:7793
+0x68ab0 4 "bc" "BGE 0x68afc" "bge 0x68afc <runtime.runqsteal+0xfc>" proc.go:7793
 0x68ab4 4 "addi" "ADD R8,$404,R4" "addi r4,r8,404" proc.go:7796
 0x68ab8 4 "sync" "LWSYNC" "lwsync" proc.go:7796
 0x68abc 4 "stw" "MOVW R6,0(R4)" "stw r6,0(r4)" proc.go:7796
@@ -1428,7 +1428,7 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x68afc 4 "lis" "ADDIS $0,$10,R3" "lis r3,10" proc.go:7794
 0x68b00 4 "addi" "ADD R3,$12168,R3" "addi r3,r3,12168" proc.go:7794
 0x68b04 4 "li" "MOVD $24,R4" "li r4,24" proc.go:7794
-0x68b08 4 "bl" "CALL runtime.throw(SB)" "bl 0x8ce10" proc.go:7794
+0x68b08 4 "bl" "CALL runtime.throw(SB)" "bl 0x8ce10 <runtime.throw>" proc.go:7794
 0x68b0c 4 "nop" "NOP" "nop" proc.go:7794
 == runtime.memmove 0x92ba0 432 /usr/local/go/src/runtime/memmove_ppc64x.s
 0x92ba0 4 "andi." "ANDCC R5,$7,R7" "andi. r7,r5,7" memmove_ppc64x.s:51
@@ -1437,11 +1437,11 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x92bac 4 "cmpdi" "CMP R6,$0,CR1" "cmpdi cr1,r6,0" memmove_ppc64x.s:54
 0x92bb0 4 "subf" "SUB R4,R3,R9" "subf r9,r4,r3" memmove_ppc64x.s:61
 0x92bb4 4 "cmpld" "CMPU R9,R5,CR2" "cmpld cr2,r9,r5" memmove_ppc64x.s:62
-0x92bb8 4 "bc" "BLT CR2,0x92cbc" "blt cr2,0x92cbc" memmove_ppc64x.s:63
-0x92bbc 4 "bc" "BEQ CR1,0x92c6c" "beq cr1,0x92c6c" memmove_ppc64x.s:67
+0x92bb8 4 "bc" "BLT CR2,0x92cbc" "blt cr2,0x92cbc <runtime.memmove+0x11c>" memmove_ppc64x.s:63
+0x92bbc 4 "bc" "BEQ CR1,0x92c6c" "beq cr1,0x92c6c <runtime.memmove+0xcc>" memmove_ppc64x.s:67
 0x92bc0 4 "rldicl." "RLDICLCC R6,$61,$3,R16" "rldicl. r16,r6,61,3" memmove_ppc64x.s:68
 0x92bc4 4 "li" "MOVD $16,R8" "li r8,16" memmove_ppc64x.s:69
-0x92bc8 4 "bc" "BEQ 0x92c14" "beq 0x92c14" memmove_ppc64x.s:70
+0x92bc8 4 "bc" "BEQ 0x92c14" "beq 0x92c14 <runtime.memmove+0x74>" memmove_ppc64x.s:70
 0x92bcc 4 "dcbtst" "DCBTST (R3)" "dcbtst r0,r3,0" memmove_ppc64x.s:75
 0x92bd0 4 "dcbt" "DCBT (R4)" "dcbt r0,r4,0" memmove_ppc64x.s:76
 0x92bd4 4 "mtspr" "MOVD R16,CTR" "mtctr r16" memmove_ppc64x.s:77
@@ -1457,11 +1457,11 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x92bfc 4 "stxvd2x" "STXVD2X VS34,(R14)(R3)" "stxvd2x vs34,r3,r14" memmove_ppc64x.s:90
 0x92c00 4 "stxvd2x" "STXVD2X VS35,(R15)(R3)" "stxvd2x vs35,r3,r15" memmove_ppc64x.s:91
 0x92c04 4 "addi" "ADD R3,$64,R3" "addi r3,r3,64" memmove_ppc64x.s:92
-0x92c08 4 "bc" "BC $16,LT,0x92be0" "bdnz 0x92be0" memmove_ppc64x.s:93
+0x92c08 4 "bc" "BC $16,LT,0x92be0" "bdnz 0x92be0 <runtime.memmove+0x40>" memmove_ppc64x.s:93
 0x92c0c 4 "andi." "ANDCC R6,$7,R6" "andi. r6,r6,7" memmove_ppc64x.s:94
-0x92c10 4 "bc" "BEQ 0x92c6c" "beq 0x92c6c" memmove_ppc64x.s:95
+0x92c10 4 "bc" "BEQ 0x92c6c" "beq 0x92c6c <runtime.memmove+0xcc>" memmove_ppc64x.s:95
 0x92c14 4 "cmpdi" "CMP R6,$4" "cmpdi r6,4" memmove_ppc64x.s:98
-0x92c18 4 "bc" "BLT 0x92c38" "blt 0x92c38" memmove_ppc64x.s:99
+0x92c18 4 "bc" "BLT 0x92c38" "blt 0x92c38 <runtime.memmove+0x98>" memmove_ppc64x.s:99
 0x92c1c 4 "lxvd2x" "LXVD2X (R0)(R4),VS32" "lxvd2x vs32,r4,r0" memmove_ppc64x.s:100
 0x92c20 4 "lxvd2x" "LXVD2X (R8)(R4),VS33" "lxvd2x vs33,r4,r8" memmove_ppc64x.s:101
 0x92c24 4 "addi" "ADD R6,$-4,R6" "addi r6,r6,-4" memmove_ppc64x.s:102
@@ -1470,28 +1470,28 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x92c30 4 "addi" "ADD R4,$32,R4" "addi r4,r4,32" memmove_ppc64x.s:105
 0x92c34 4 "addi" "ADD R3,$32,R3" "addi r3,r3,32" memmove_ppc64x.s:106
 0x92c38 4 "cmpdi" "CMP R6,$2" "cmpdi r6,2" memmove_ppc64x.s:111
-0x92c3c 4 "bc" "BLT 0x92c54" "blt 0x92c54" memmove_ppc64x.s:112
+0x92c3c 4 "bc" "BLT 0x92c54" "blt 0x92c54 <runtime.memmove+0xb4>" memmove_ppc64x.s:112
 0x92c40 4 "lxvd2x" "LXVD2X (R0)(R4),VS32" "lxvd2x vs32,r4,r0" memmove_ppc64x.s:113
 0x92c44 4 "addi" "ADD R6,$-2,R6" "addi r6,r6,-2" memmove_ppc64x.s:114
 0x92c48 4 "stxvd2x" "STXVD2X VS32,(R0)(R3)" "stxvd2x vs32,r3,r0" memmove_ppc64x.s:115
 0x92c4c 4 "addi" "ADD R4,$16,R4" "addi r4,r4,16" memmove_ppc64x.s:116
 0x92c50 4 "addi" "ADD R3,$16,R3" "addi r3,r3,16" memmove_ppc64x.s:117
 0x92c54 4 "cmpdi" "CMP R6,$1" "cmpdi r6,1" memmove_ppc64x.s:120
-0x92c58 4 "bc" "BLT 0x92c6c" "blt 0x92c6c" memmove_ppc64x.s:121
+0x92c58 4 "bc" "BLT 0x92c6c" "blt 0x92c6c <runtime.memmove+0xcc>" memmove_ppc64x.s:121
 0x92c5c 4 "ld" "MOVD 0(R4),R9" "ld r9,0(r4)" memmove_ppc64x.s:130
 0x92c60 4 "addi" "ADD R4,$8,R4" "addi r4,r4,8" memmove_ppc64x.s:131
 0x92c64 4 "std" "MOVD R9,0(R3)" "std r9,0(r3)" memmove_ppc64x.s:132
 0x92c68 4 "addi" "ADD R3,$8,R3" "addi r3,r3,8" memmove_ppc64x.s:133
 0x92c6c 4 "bclr" "BCLR $12, CR3EQ, $0" "beqlr cr3" memmove_ppc64x.s:135
 0x92c70 4 "cmpdi" "CMP R7,$4" "cmpdi r7,4" memmove_ppc64x.s:143
-0x92c74 4 "bc" "BLT 0x92c8c" "blt 0x92c8c" memmove_ppc64x.s:144
+0x92c74 4 "bc" "BLT 0x92c8c" "blt 0x92c8c <runtime.memmove+0xec>" memmove_ppc64x.s:144
 0x92c78 4 "lwz" "MOVWZ 0(R4),R9" "lwz r9,0(r4)" memmove_ppc64x.s:145
 0x92c7c 4 "addi" "ADD R7,$-4,R7" "addi r7,r7,-4" memmove_ppc64x.s:146
 0x92c80 4 "stw" "MOVW R9,0(R3)" "stw r9,0(r3)" memmove_ppc64x.s:147
 0x92c84 4 "addi" "ADD R4,$4,R4" "addi r4,r4,4" memmove_ppc64x.s:148
 0x92c88 4 "addi" "ADD R3,$4,R3" "addi r3,r3,4" memmove_ppc64x.s:149
 0x92c8c 4 "cmpdi" "CMP R7,$2" "cmpdi r7,2" memmove_ppc64x.s:151
-0x92c90 4 "bc" "BLT 0x92ca8" "blt 0x92ca8" memmove_ppc64x.s:152
+0x92c90 4 "bc" "BLT 0x92ca8" "blt 0x92ca8 <runtime.memmove+0x108>" memmove_ppc64x.s:152
 0x92c94 4 "lhz" "MOVHZ 0(R4),R9" "lhz r9,0(r4)" memmove_ppc64x.s:153
 0x92c98 4 "addi" "ADD R7,$-2,R7" "addi r7,r7,-2" memmove_ppc64x.s:154
 0x92c9c 4 "sth" "MOVH R9,0(R3)" "sth r9,0(r3)" memmove_ppc64x.s:155
@@ -1504,16 +1504,16 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x92cb8 4 "bclr" "RET" "blr" memmove_ppc64x.s:163
 0x92cbc 4 "add" "ADD R5,R4,R4" "add r4,r4,r5" memmove_ppc64x.s:170
 0x92cc0 4 "add" "ADD R3,R5,R3" "add r3,r5,r3" memmove_ppc64x.s:171
-0x92cc4 4 "bc" "BEQ 0x92ce0" "beq 0x92ce0" memmove_ppc64x.s:173
+0x92cc4 4 "bc" "BEQ 0x92ce0" "beq 0x92ce0 <runtime.memmove+0x140>" memmove_ppc64x.s:173
 0x92cc8 4 "mtspr" "MOVD R7,CTR" "mtctr r7" memmove_ppc64x.s:175
 0x92ccc 4 "lbz" "MOVBZ -1(R4),R9" "lbz r9,-1(r4)" memmove_ppc64x.s:178
 0x92cd0 4 "addi" "ADD R4,$-1,R4" "addi r4,r4,-1" memmove_ppc64x.s:179
 0x92cd4 4 "stb" "MOVB R9,-1(R3)" "stb r9,-1(r3)" memmove_ppc64x.s:180
 0x92cd8 4 "addi" "ADD R3,$-1,R3" "addi r3,r3,-1" memmove_ppc64x.s:181
-0x92cdc 4 "bc" "BC $16,LT,0x92ccc" "bdnz 0x92ccc" memmove_ppc64x.s:182
+0x92cdc 4 "bc" "BC $16,LT,0x92ccc" "bdnz 0x92ccc <runtime.memmove+0x12c>" memmove_ppc64x.s:182
 0x92ce0 4 "bclr" "BCLR $4, CR1GT, $0" "blelr cr1" memmove_ppc64x.s:185
 0x92ce4 4 "rldicl." "RLDICLCC R6,$62,$2,R10" "rldicl. r10,r6,62,2" memmove_ppc64x.s:186
-0x92ce8 4 "bc" "BNE 0x92d14" "bne 0x92d14" memmove_ppc64x.s:187
+0x92ce8 4 "bc" "BNE 0x92d14" "bne 0x92d14 <runtime.memmove+0x174>" memmove_ppc64x.s:187
 0x92cec 4 "cmpdi" "CMP R6,$2" "cmpdi r6,2" memmove_ppc64x.s:191
 0x92cf0 4 "ld" "MOVD -8(R4),R9" "ld r9,-8(r4)" memmove_ppc64x.s:193
 0x92cf4 4 "std" "MOVD R9,-8(R3)" "std r9,-8(r3)" memmove_ppc64x.s:194
@@ -1533,9 +1533,9 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x92d2c 4 "lxvd2x" "LXVD2X (R8)(R4),VS33" "lxvd2x vs33,r4,r8" memmove_ppc64x.s:215
 0x92d30 4 "stxvd2x" "STXVD2X VS32,(R0)(R3)" "stxvd2x vs32,r3,r0" memmove_ppc64x.s:216
 0x92d34 4 "stxvd2x" "STXVD2X VS33,(R8)(R3)" "stxvd2x vs33,r3,r8" memmove_ppc64x.s:217
-0x92d38 4 "bc" "BC $16,LT,0x92d20" "bdnz 0x92d20" memmove_ppc64x.s:218
+0x92d38 4 "bc" "BC $16,LT,0x92d20" "bdnz 0x92d20 <runtime.memmove+0x180>" memmove_ppc64x.s:218
 0x92d3c 4 "bclr" "BCLR $12, EQ, $0" "beqlr" memmove_ppc64x.s:219
-0x92d40 4 "b" "BR 0x92cec" "b 0x92cec" memmove_ppc64x.s:220
+0x92d40 4 "b" "BR 0x92cec" "b 0x92cec <runtime.memmove+0x14c>" memmove_ppc64x.s:220
 0x92d44 4 "Op(0)" "WORD $0" ".long 0x0" .:-1
 0x92d48 4 "Op(0)" "WORD $0" ".long 0x0" .:-1
 0x92d4c 4 "Op(0)" "WORD $0" ".long 0x0" .:-1
@@ -1547,20 +1547,20 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 == main.sumInts 0x94d10 48 /Users/egon/code/gio/lensm/testdata/testprog/main.go
 0x94d10 4 "std" "MOVD R3,32(R1)" "std r3,32(r1)" main.go:19
 0x94d14 4 "li" "MOVD $0,R5" "li r5,0" main.go:21
-0x94d18 4 "b" "BR 0x94d30" "b 0x94d30" main.go:21
+0x94d18 4 "b" "BR 0x94d30" "b 0x94d30 <main.sumInts+0x20>" main.go:21
 0x94d1c 4 "or" "OR R3,R3,R6" "or r6,r3,r3" main.go:21
 0x94d20 4 "ld" "MOVD 0(R3),R7" "ld r7,0(r3)" main.go:21
 0x94d24 4 "add" "ADD R5,R7,R5" "add r5,r7,r5" main.go:22
 0x94d28 4 "addi" "ADD R6,$8,R3" "addi r3,r6,8" main.go:21
 0x94d2c 4 "addi" "ADD R4,$-1,R4" "addi r4,r4,-1" main.go:21
 0x94d30 4 "cmpdi" "CMP R4,$0" "cmpdi r4,0" main.go:21
-0x94d34 4 "bc" "BGT 0x94d1c" "bgt 0x94d1c" main.go:21
+0x94d34 4 "bc" "BGT 0x94d1c" "bgt 0x94d1c <main.sumInts+0xc>" main.go:21
 0x94d38 4 "or" "OR R5,R5,R3" "or r3,r5,r5" main.go:24
 0x94d3c 4 "bclr" "RET" "blr" main.go:24
 == main.dot 0x94d40 176 /Users/egon/code/gio/lensm/testdata/testprog/main.go
 0x94d40 4 "ld" "MOVD 16(R30),R22" "ld r22,16(r30)" main.go:28
 0x94d44 4 "cmpld" "CMPU R22,R1" "cmpld r22,r1" main.go:28
-0x94d48 4 "bc" "BLT 0x94d88" "blt 0x94d88" main.go:28
+0x94d48 4 "bc" "BLT 0x94d88" "blt 0x94d88 <main.dot+0x48>" main.go:28
 0x94d4c 4 "std" "MOVD R3,32(R1)" "std r3,32(r1)" main.go:28
 0x94d50 4 "std" "MOVD R4,40(R1)" "std r4,40(r1)" main.go:28
 0x94d54 4 "std" "MOVD R5,48(R1)" "std r5,48(r1)" main.go:28
@@ -1568,44 +1568,44 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x94d5c 4 "std" "MOVD R7,64(R1)" "std r7,64(r1)" main.go:28
 0x94d60 4 "std" "MOVD R8,72(R1)" "std r8,72(r1)" main.go:28
 0x94d64 4 "mfspr" "MOVD LR,R5" "mflr r5" main.go:28
-0x94d68 4 "bl" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 0x90220" main.go:28
+0x94d68 4 "bl" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 0x90220 <runtime.morestack_noctxt.abi0>" main.go:28
 0x94d6c 4 "ld" "MOVD 32(R1),R3" "ld r3,32(r1)" main.go:28
 0x94d70 4 "ld" "MOVD 40(R1),R4" "ld r4,40(r1)" main.go:28
 0x94d74 4 "ld" "MOVD 48(R1),R5" "ld r5,48(r1)" main.go:28
 0x94d78 4 "ld" "MOVD 56(R1),R6" "ld r6,56(r1)" main.go:28
 0x94d7c 4 "ld" "MOVD 64(R1),R7" "ld r7,64(r1)" main.go:28
 0x94d80 4 "ld" "MOVD 72(R1),R8" "ld r8,72(r1)" main.go:28
-0x94d84 4 "b" "BR main.dot(SB)" "b 0x94d40" main.go:28
+0x94d84 4 "b" "BR main.dot(SB)" "b 0x94d40 <main.dot>" main.go:28
 0x94d88 4 "mfspr" "MOVD LR,R31" "mflr r31" main.go:28
 0x94d8c 4 "stdu" "MOVDU R31,-32(R1)" "stdu r31,-32(r1)" main.go:28
 0x94d90 4 "std" "MOVD R3,64(R1)" "std r3,64(r1)" main.go:28
 0x94d94 4 "std" "MOVD R6,88(R1)" "std r6,88(r1)" main.go:28
 0x94d98 4 "xxlxor" "XXLXOR VS0,VS0,VS0" "xxlxor vs0,vs0,vs0" main.go:30
 0x94d9c 4 "li" "MOVD $0,R5" "li r5,0" main.go:30
-0x94da0 4 "b" "BR 0x94db8" "b 0x94db8" main.go:30
+0x94da0 4 "b" "BR 0x94db8" "b 0x94db8 <main.dot+0x78>" main.go:30
 0x94da4 4 "lfd" "FMOVD 0(R9),F1" "lfd f1,0(r9)" main.go:31
 0x94da8 4 "add" "ADD R8,R6,R8" "add r8,r6,r8" main.go:31
 0x94dac 4 "lfd" "FMOVD 0(R8),F2" "lfd f2,0(r8)" main.go:31
 0x94db0 4 "fmadd" "FMADD F1,F0,F2,F0" "fmadd f0,f1,f2,f0" main.go:31
 0x94db4 4 "addi" "ADD R5,$1,R5" "addi r5,r5,1" main.go:30
 0x94db8 4 "cmpd" "CMP R4,R5" "cmpd r4,r5" main.go:30
-0x94dbc 4 "bc" "BLE 0x94dd4" "ble 0x94dd4" main.go:30
+0x94dbc 4 "bc" "BLE 0x94dd4" "ble 0x94dd4 <main.dot+0x94>" main.go:30
 0x94dc0 4 "rldicr" "RLDICR R5,$3,$60,R8" "rldicr r8,r5,3,60" main.go:31
 0x94dc4 4 "add" "ADD R8,R3,R9" "add r9,r3,r8" main.go:31
 0x94dc8 4 "cmpld" "CMPU R7,R5" "cmpld r7,r5" main.go:31
-0x94dcc 4 "bc" "BGT 0x94da4" "bgt 0x94da4" main.go:31
-0x94dd0 4 "b" "BR 0x94de8" "b 0x94de8" main.go:31
+0x94dcc 4 "bc" "BGT 0x94da4" "bgt 0x94da4 <main.dot+0x64>" main.go:31
+0x94dd0 4 "b" "BR 0x94de8" "b 0x94de8 <main.dot+0xa8>" main.go:31
 0x94dd4 4 "fmr" "FMR F0,F1" "fmr f1,f0" main.go:33
 0x94dd8 4 "ld" "MOVD 0(R1),R31" "ld r31,0(r1)" main.go:33
 0x94ddc 4 "mtspr" "MOVD R31,LR" "mtlr r31" main.go:33
 0x94de0 4 "addi" "ADD R1,$32,R1" "addi r1,r1,32" main.go:33
 0x94de4 4 "bclr" "RET" "blr" main.go:33
-0x94de8 4 "bl" "CALL runtime.panicBounds(SB)" "bl 0x92970" main.go:31
+0x94de8 4 "bl" "CALL runtime.panicBounds(SB)" "bl 0x92970 <runtime.panicBounds>" main.go:31
 0x94dec 4 "nop" "NOP" "nop" main.go:31
 == main.popcountAll 0x94df0 64 /Users/egon/code/gio/lensm/testdata/testprog/main.go
 0x94df0 4 "std" "MOVD R3,32(R1)" "std r3,32(r1)" main.go:37
 0x94df4 4 "li" "MOVD $0,R5" "li r5,0" main.go:39
-0x94df8 4 "b" "BR 0x94e14" "b 0x94e14" main.go:39
+0x94df8 4 "b" "BR 0x94e14" "b 0x94e14 <main.popcountAll+0x24>" main.go:39
 0x94dfc 4 "or" "OR R3,R3,R6" "or r6,r3,r3" main.go:39
 0x94e00 4 "ld" "MOVD 0(R3),R7" "ld r7,0(r3)" main.go:39
 0x94e04 4 "popcntd" "POPCNTD R7,R7" "popcntd r7,r7" main.go:40
@@ -1613,7 +1613,7 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x94e0c 4 "addi" "ADD R6,$8,R3" "addi r3,r6,8" main.go:39
 0x94e10 4 "addi" "ADD R4,$-1,R4" "addi r4,r4,-1" main.go:39
 0x94e14 4 "cmpdi" "CMP R4,$0" "cmpdi r4,0" main.go:39
-0x94e18 4 "bc" "BGT 0x94dfc" "bgt 0x94dfc" main.go:39
+0x94e18 4 "bc" "BGT 0x94dfc" "bgt 0x94dfc <main.popcountAll+0xc>" main.go:39
 0x94e1c 4 "or" "OR R5,R5,R3" "or r3,r5,r5" main.go:42
 0x94e20 4 "bclr" "RET" "blr" main.go:42
 0x94e24 4 "Op(0)" "WORD $0" ".long 0x0" .:-1
@@ -1621,33 +1621,33 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x94e2c 4 "Op(0)" "WORD $0" ".long 0x0" .:-1
 == main.collatzSteps 0x94e30 64 /Users/egon/code/gio/lensm/testdata/testprog/main.go
 0x94e30 4 "li" "MOVD $0,R4" "li r4,0" main.go:48
-0x94e34 4 "b" "BR 0x94e3c" "b 0x94e3c" main.go:48
+0x94e34 4 "b" "BR 0x94e3c" "b 0x94e3c <main.collatzSteps+0xc>" main.go:48
 0x94e38 4 "addi" "ADD R4,$1,R4" "addi r4,r4,1" main.go:54
 0x94e3c 4 "cmpdi" "CMP R3,$1" "cmpdi r3,1" main.go:48
-0x94e40 4 "bc" "BEQ 0x94e68" "beq 0x94e68" main.go:48
+0x94e40 4 "bc" "BEQ 0x94e68" "beq 0x94e68 <main.collatzSteps+0x38>" main.go:48
 0x94e44 4 "rldicl" "RLDICL R3,$1,$63,R5" "rldicl r5,r3,1,63" main.go:49
 0x94e48 4 "add" "ADD R5,R3,R5" "add r5,r3,r5" main.go:49
 0x94e4c 4 "andi." "ANDCC R3,$1,R6" "andi. r6,r3,1" main.go:49
-0x94e50 4 "bc" "BNE 0x94e5c" "bne 0x94e5c" main.go:49
+0x94e50 4 "bc" "BNE 0x94e5c" "bne 0x94e5c <main.collatzSteps+0x2c>" main.go:49
 0x94e54 4 "sradi" "SRAD R5,$1,R3" "sradi r3,r5,1" main.go:49
-0x94e58 4 "b" "BR 0x94e38" "b 0x94e38" main.go:50
+0x94e58 4 "b" "BR 0x94e38" "b 0x94e38 <main.collatzSteps+0x8>" main.go:50
 0x94e5c 4 "mulli" "MULLD R3,$3,R5" "mulli r5,r3,3" main.go:52
 0x94e60 4 "addi" "ADD R5,$1,R3" "addi r3,r5,1" main.go:52
-0x94e64 4 "b" "BR 0x94e38" "b 0x94e38" main.go:52
+0x94e64 4 "b" "BR 0x94e38" "b 0x94e38 <main.collatzSteps+0x8>" main.go:52
 0x94e68 4 "or" "OR R4,R4,R3" "or r3,r4,r4" main.go:56
 0x94e6c 4 "bclr" "RET" "blr" main.go:56
 == main.mat4Mul 0x94e70 352 /Users/egon/code/gio/lensm/testdata/testprog/main.go
 0x94e70 4 "ld" "MOVD 16(R30),R22" "ld r22,16(r30)" main.go:60
 0x94e74 4 "addi" "ADD R1,$-32,R23" "addi r23,r1,-32" main.go:60
 0x94e78 4 "cmpld" "CMPU R22,R23" "cmpld r22,r23" main.go:60
-0x94e7c 4 "bc" "BLT 0x94e9c" "blt 0x94e9c" main.go:60
+0x94e7c 4 "bc" "BLT 0x94e9c" "blt 0x94e9c <main.mat4Mul+0x2c>" main.go:60
 0x94e80 4 "std" "MOVD R3,160(R1)" "std r3,160(r1)" main.go:60
 0x94e84 4 "std" "MOVD R4,168(R1)" "std r4,168(r1)" main.go:60
 0x94e88 4 "mfspr" "MOVD LR,R5" "mflr r5" main.go:60
-0x94e8c 4 "bl" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 0x90220" main.go:60
+0x94e8c 4 "bl" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 0x90220 <runtime.morestack_noctxt.abi0>" main.go:60
 0x94e90 4 "ld" "MOVD 160(R1),R3" "ld r3,160(r1)" main.go:60
 0x94e94 4 "ld" "MOVD 168(R1),R4" "ld r4,168(r1)" main.go:60
-0x94e98 4 "b" "BR main.mat4Mul(SB)" "b 0x94e70" main.go:60
+0x94e98 4 "b" "BR main.mat4Mul(SB)" "b 0x94e70 <main.mat4Mul>" main.go:60
 0x94e9c 4 "mfspr" "MOVD LR,R31" "mflr r31" main.go:60
 0x94ea0 4 "stdu" "MOVDU R31,-160(R1)" "stdu r31,-160(r1)" main.go:60
 0x94ea4 4 "addi" "ADD R1,$192,R20" "addi r20,r1,192" main.go:60
@@ -1660,7 +1660,7 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x94ec0 4 "stxvd2x" "STXVD2X VS32,(R20)(R0)" "stxvd2x vs32,r0,r20" main.go:60
 0x94ec4 4 "stxvd2x" "STXVD2X VS32,(R20)(R31)" "stxvd2x vs32,r31,r20" main.go:60
 0x94ec8 4 "addi" "ADD R20,$32,R20" "addi r20,r20,32" main.go:60
-0x94ecc 4 "bc" "BC $16,LT,0x94ec0" "bdnz 0x94ec0" main.go:60
+0x94ecc 4 "bc" "BC $16,LT,0x94ec0" "bdnz 0x94ec0 <main.mat4Mul+0x50>" main.go:60
 0x94ed0 4 "addi" "ADD R1,$32,R20" "addi r20,r1,32" main.go:61
 0x94ed4 4 "xxlxor" "XXLXOR VS32,VS32,VS32" "xxlxor vs32,vs32,vs32" main.go:61
 0x94ed8 4 "li" "MOVD $4,R31" "li r31,4" main.go:61
@@ -1672,22 +1672,22 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x94ef0 4 "stxvd2x" "STXVD2X VS32,(R20)(R0)" "stxvd2x vs32,r0,r20" main.go:61
 0x94ef4 4 "stxvd2x" "STXVD2X VS32,(R20)(R31)" "stxvd2x vs32,r31,r20" main.go:61
 0x94ef8 4 "addi" "ADD R20,$32,R20" "addi r20,r20,32" main.go:61
-0x94efc 4 "bc" "BC $16,LT,0x94ef0" "bdnz 0x94ef0" main.go:61
+0x94efc 4 "bc" "BC $16,LT,0x94ef0" "bdnz 0x94ef0 <main.mat4Mul+0x80>" main.go:61
 0x94f00 4 "li" "MOVD $0,R5" "li r5,0" main.go:62
-0x94f04 4 "b" "BR 0x94f0c" "b 0x94f0c" main.go:62
+0x94f04 4 "b" "BR 0x94f0c" "b 0x94f0c <main.mat4Mul+0x9c>" main.go:62
 0x94f08 4 "addi" "ADD R5,$1,R5" "addi r5,r5,1" main.go:62
 0x94f0c 4 "cmpdi" "CMP R5,$4" "cmpdi r5,4" main.go:62
-0x94f10 4 "bc" "BGE 0x94f8c" "bge 0x94f8c" main.go:62
+0x94f10 4 "bc" "BGE 0x94f8c" "bge 0x94f8c <main.mat4Mul+0x11c>" main.go:62
 0x94f14 4 "li" "MOVD $0,R6" "li r6,0" main.go:63
-0x94f18 4 "b" "BR 0x94f20" "b 0x94f20" main.go:63
+0x94f18 4 "b" "BR 0x94f20" "b 0x94f20 <main.mat4Mul+0xb0>" main.go:63
 0x94f1c 4 "addi" "ADD R6,$1,R6" "addi r6,r6,1" main.go:63
 0x94f20 4 "cmpdi" "CMP R6,$4" "cmpdi r6,4" main.go:63
-0x94f24 4 "bc" "BGE 0x94f08" "bge 0x94f08" main.go:63
+0x94f24 4 "bc" "BGE 0x94f08" "bge 0x94f08 <main.mat4Mul+0x98>" main.go:63
 0x94f28 4 "rldicr" "RLDICR R5,$2,$61,R7" "rldicr r7,r5,2,61" main.go:65
 0x94f2c 4 "add" "ADD R6,R7,R8" "add r8,r7,r6" main.go:65
 0x94f30 4 "rldicr" "RLDICR R8,$3,$60,R8" "rldicr r8,r8,3,60" main.go:65
 0x94f34 4 "li" "MOVD $0,R9" "li r9,0" main.go:64
-0x94f38 4 "b" "BR 0x94f80" "b 0x94f80" main.go:64
+0x94f38 4 "b" "BR 0x94f80" "b 0x94f80 <main.mat4Mul+0x110>" main.go:64
 0x94f3c 4 "lbz" "MOVBZ 0(R3),R31" "lbz r31,0(r3)" main.go:65
 0x94f40 4 "lbz" "MOVBZ 0(R4),R31" "lbz r31,0(r4)" main.go:65
 0x94f44 4 "addi" "ADD R1,$32,R21" "addi r21,r1,32" main.go:65
@@ -1706,8 +1706,8 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x94f78 4 "stfd" "FMOVD F0,0(R10)" "stfd f0,0(r10)" main.go:65
 0x94f7c 4 "addi" "ADD R9,$1,R9" "addi r9,r9,1" main.go:64
 0x94f80 4 "cmpdi" "CMP R9,$4" "cmpdi r9,4" main.go:64
-0x94f84 4 "bc" "BLT 0x94f3c" "blt 0x94f3c" main.go:64
-0x94f88 4 "b" "BR 0x94f1c" "b 0x94f1c" main.go:64
+0x94f84 4 "bc" "BLT 0x94f3c" "blt 0x94f3c <main.mat4Mul+0xcc>" main.go:64
+0x94f88 4 "b" "BR 0x94f1c" "b 0x94f1c <main.mat4Mul+0xac>" main.go:64
 0x94f8c 4 "addi" "ADD R1,$192,R20" "addi r20,r1,192" main.go:69
 0x94f90 4 "addi" "ADD R1,$32,R21" "addi r21,r1,32" main.go:69
 0x94f94 4 "li" "MOVD $4,R31" "li r31,4" main.go:69
@@ -1719,7 +1719,7 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x94fac 4 "stxvd2x" "STXVD2X VS32,(R20)(R0)" "stxvd2x vs32,r0,r20" main.go:69
 0x94fb0 4 "stxvd2x" "STXVD2X VS33,(R20)(R31)" "stxvd2x vs33,r31,r20" main.go:69
 0x94fb4 4 "addi" "ADD R20,$32,R20" "addi r20,r20,32" main.go:69
-0x94fb8 4 "bc" "BC $16,LT,0x94fa0" "bdnz 0x94fa0" main.go:69
+0x94fb8 4 "bc" "BC $16,LT,0x94fa0" "bdnz 0x94fa0 <main.mat4Mul+0x130>" main.go:69
 0x94fbc 4 "addi" "ADD R1,$160,R1" "addi r1,r1,160" main.go:69
 0x94fc0 4 "bclr" "RET" "blr" main.go:69
 0x94fc4 4 "Op(0)" "WORD $0" ".long 0x0" .:-1
@@ -1730,18 +1730,18 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x94fd4 4 "or" "OR R3,R3,R5" "or r5,r3,r3" main.go:75
 0x94fd8 4 "xxlxor" "XXLXOR VS0,VS0,VS0" "xxlxor vs0,vs0,vs0" main.go:75
 0x94fdc 4 "or" "OR R4,R4,R6" "or r6,r4,r4" main.go:75
-0x94fe0 4 "b" "BR 0x94ff8" "b 0x94ff8" main.go:75
+0x94fe0 4 "b" "BR 0x94ff8" "b 0x94ff8 <main.normalize+0x28>" main.go:75
 0x94fe4 4 "or" "OR R3,R3,R7" "or r7,r3,r3" main.go:75
 0x94fe8 4 "lfd" "FMOVD 0(R3),F1" "lfd f1,0(r3)" main.go:75
 0x94fec 4 "fmadd" "FMADD F1,F0,F1,F0" "fmadd f0,f1,f1,f0" main.go:76
 0x94ff0 4 "addi" "ADD R7,$8,R3" "addi r3,r7,8" main.go:75
 0x94ff4 4 "addi" "ADD R4,$-1,R4" "addi r4,r4,-1" main.go:75
 0x94ff8 4 "cmpdi" "CMP R4,$0" "cmpdi r4,0" main.go:75
-0x94ffc 4 "bc" "BGT 0x94fe4" "bgt 0x94fe4" main.go:75
+0x94ffc 4 "bc" "BGT 0x94fe4" "bgt 0x94fe4 <main.normalize+0x14>" main.go:75
 0x95000 4 "nop" "NOP" "nop" main.go:78
 0x95004 4 "fsqrt" "FSQRT F0,F0" "fsqrt f0,f0" sqrt.go:94
 0x95008 4 "li" "MOVD $0,R3" "li r3,0" main.go:79
-0x9500c 4 "b" "BR 0x95028" "b 0x95028" main.go:79
+0x9500c 4 "b" "BR 0x95028" "b 0x95028 <main.normalize+0x58>" main.go:79
 0x95010 4 "rldicr" "RLDICR R3,$3,$60,R4" "rldicr r4,r3,3,60" main.go:80
 0x95014 4 "add" "ADD R4,R5,R4" "add r4,r5,r4" main.go:80
 0x95018 4 "lfd" "FMOVD 0(R4),F1" "lfd f1,0(r4)" main.go:80
@@ -1749,7 +1749,7 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x95020 4 "stfd" "FMOVD F1,0(R4)" "stfd f1,0(r4)" main.go:80
 0x95024 4 "addi" "ADD R3,$1,R3" "addi r3,r3,1" main.go:79
 0x95028 4 "cmpd" "CMP R6,R3" "cmpd r6,r3" main.go:79
-0x9502c 4 "bc" "BGT 0x95010" "bgt 0x95010" main.go:79
+0x9502c 4 "bc" "BGT 0x95010" "bgt 0x95010 <main.normalize+0x40>" main.go:79
 0x95030 4 "bclr" "RET" "blr" main.go:82
 0x95034 4 "Op(0)" "WORD $0" ".long 0x0" .:-1
 0x95038 4 "Op(0)" "WORD $0" ".long 0x0" .:-1
@@ -1758,10 +1758,10 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x95040 4 "ld" "MOVD 16(R30),R22" "ld r22,16(r30)" main.go:84
 0x95044 4 "addi" "ADD R1,$-592,R23" "addi r23,r1,-592" main.go:84
 0x95048 4 "cmpld" "CMPU R22,R23" "cmpld r22,r23" main.go:84
-0x9504c 4 "bc" "BLT 0x9505c" "blt 0x9505c" main.go:84
+0x9504c 4 "bc" "BLT 0x9505c" "blt 0x9505c <main.main+0x1c>" main.go:84
 0x95050 4 "mfspr" "MOVD LR,R5" "mflr r5" main.go:84
-0x95054 4 "bl" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 0x90220" main.go:84
-0x95058 4 "b" "BR main.main(SB)" "b 0x95040" main.go:84
+0x95054 4 "bl" "CALL runtime.morestack_noctxt.abi0(SB)" "bl 0x90220 <runtime.morestack_noctxt.abi0>" main.go:84
+0x95058 4 "b" "BR main.main(SB)" "b 0x95040 <main.main>" main.go:84
 0x9505c 4 "mfspr" "MOVD LR,R31" "mflr r31" main.go:84
 0x95060 4 "stdu" "MOVDU R31,-720(R1)" "stdu r31,-720(r1)" main.go:84
 0x95064 4 "li" "MOVD $3,R5" "li r5,3" main.go:85
@@ -1806,7 +1806,7 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x95100 4 "stxvd2x" "STXVD2X VS32,(R20)(R0)" "stxvd2x vs32,r0,r20" main.go:89
 0x95104 4 "stxvd2x" "STXVD2X VS32,(R20)(R31)" "stxvd2x vs32,r31,r20" main.go:89
 0x95108 4 "addi" "ADD R20,$32,R20" "addi r20,r20,32" main.go:89
-0x9510c 4 "bc" "BC $16,LT,0x95100" "bdnz 0x95100" main.go:89
+0x9510c 4 "bc" "BC $16,LT,0x95100" "bdnz 0x95100 <main.main+0xc0>" main.go:89
 0x95110 4 "addi" "ADD R1,$304,R20" "addi r20,r1,304" main.go:89
 0x95114 4 "xxlxor" "XXLXOR VS32,VS32,VS32" "xxlxor vs32,vs32,vs32" main.go:89
 0x95118 4 "li" "MOVD $4,R31" "li r31,4" main.go:89
@@ -1818,9 +1818,9 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x95130 4 "stxvd2x" "STXVD2X VS32,(R20)(R0)" "stxvd2x vs32,r0,r20" main.go:89
 0x95134 4 "stxvd2x" "STXVD2X VS32,(R20)(R31)" "stxvd2x vs32,r31,r20" main.go:89
 0x95138 4 "addi" "ADD R20,$32,R20" "addi r20,r20,32" main.go:89
-0x9513c 4 "bc" "BC $16,LT,0x95130" "bdnz 0x95130" main.go:89
+0x9513c 4 "bc" "BC $16,LT,0x95130" "bdnz 0x95130 <main.main+0xf0>" main.go:89
 0x95140 4 "li" "MOVD $0,R5" "li r5,0" main.go:90
-0x95144 4 "b" "BR 0x9517c" "b 0x9517c" main.go:90
+0x95144 4 "b" "BR 0x9517c" "b 0x9517c <main.main+0x13c>" main.go:90
 0x95148 4 "rldicr" "RLDICR R5,$3,$60,R6" "rldicr r6,r5,3,60" main.go:91
 0x9514c 4 "addi" "ADD R1,$432,R3" "addi r3,r1,432" main.go:91
 0x95150 4 "add" "ADD R3,R6,R7" "add r7,r6,r3" main.go:91
@@ -1835,10 +1835,10 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x95174 4 "stfd" "FMOVD F0,0(R6)" "stfd f0,0(r6)" main.go:92
 0x95178 4 "addi" "ADD R5,$1,R5" "addi r5,r5,1" main.go:90
 0x9517c 4 "cmpdi" "CMP R5,$16" "cmpdi r5,16" main.go:90
-0x95180 4 "bc" "BLT 0x95148" "blt 0x95148" main.go:90
+0x95180 4 "bc" "BLT 0x95148" "blt 0x95148 <main.main+0x108>" main.go:90
 0x95184 4 "addi" "ADD R1,$432,R3" "addi r3,r1,432" main.go:94
 0x95188 4 "addi" "ADD R1,$304,R4" "addi r4,r1,304" main.go:94
-0x9518c 4 "bl" "CALL main.mat4Mul(SB)" "bl 0x94e70" main.go:94
+0x9518c 4 "bl" "CALL main.mat4Mul(SB)" "bl 0x94e70 <main.mat4Mul>" main.go:94
 0x95190 4 "addi" "ADD R1,$176,R20" "addi r20,r1,176" main.go:94
 0x95194 4 "addi" "ADD R1,$32,R21" "addi r21,r1,32" main.go:94
 0x95198 4 "li" "MOVD $4,R31" "li r31,4" main.go:94
@@ -1853,15 +1853,15 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x951bc 4 "stxvd2x" "STXVD2X VS32,(R20)(R0)" "stxvd2x vs32,r0,r20" main.go:94
 0x951c0 4 "stxvd2x" "STXVD2X VS33,(R20)(R31)" "stxvd2x vs33,r31,r20" main.go:94
 0x951c4 4 "addi" "ADD R20,$32,R20" "addi r20,r20,32" main.go:94
-0x951c8 4 "bc" "BC $16,LT,0x951b0" "bdnz 0x951b0" main.go:94
+0x951c8 4 "bc" "BC $16,LT,0x951b0" "bdnz 0x951b0 <main.main+0x170>" main.go:94
 0x951cc 4 "addi" "ADD R1,$624,R3" "addi r3,r1,624" main.go:95
 0x951d0 4 "li" "MOVD $4,R4" "li r4,4" main.go:95
 0x951d4 4 "or" "OR R4,R4,R5" "or r5,r4,r4" main.go:95
-0x951d8 4 "bl" "CALL main.normalize(SB)" "bl 0x94fd0" main.go:95
+0x951d8 4 "bl" "CALL main.normalize(SB)" "bl 0x94fd0 <main.normalize>" main.go:95
 0x951dc 4 "addi" "ADD R1,$656,R3" "addi r3,r1,656" main.go:97
 0x951e0 4 "li" "MOVD $8,R4" "li r4,8" main.go:97
 0x951e4 4 "or" "OR R4,R4,R5" "or r5,r4,r4" main.go:97
-0x951e8 4 "bl" "CALL main.sumInts(SB)" "bl 0x94d10" main.go:97
+0x951e8 4 "bl" "CALL main.sumInts(SB)" "bl 0x94d10 <main.sumInts>" main.go:97
 0x951ec 4 "std" "MOVD R3,592(R1)" "std r3,592(r1)" main.go:97
 0x951f0 4 "addi" "ADD R1,$624,R3" "addi r3,r1,624" main.go:97
 0x951f4 4 "li" "MOVD $4,R4" "li r4,4" main.go:97
@@ -1869,35 +1869,35 @@ arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fb
 0x951fc 4 "or" "OR R3,R3,R6" "or r6,r3,r3" main.go:97
 0x95200 4 "or" "OR R4,R4,R7" "or r7,r4,r4" main.go:97
 0x95204 4 "or" "OR R4,R4,R8" "or r8,r4,r4" main.go:97
-0x95208 4 "bl" "CALL main.dot(SB)" "bl 0x94d40" main.go:97
+0x95208 4 "bl" "CALL main.dot(SB)" "bl 0x94d40 <main.dot>" main.go:97
 0x9520c 4 "stfd" "FMOVD F1,584(R1)" "stfd f1,584(r1)" main.go:97
 0x95210 4 "addi" "ADD R1,$600,R3" "addi r3,r1,600" main.go:97
 0x95214 4 "li" "MOVD $3,R4" "li r4,3" main.go:97
 0x95218 4 "or" "OR R4,R4,R5" "or r5,r4,r4" main.go:97
-0x9521c 4 "bl" "CALL main.popcountAll(SB)" "bl 0x94df0" main.go:97
+0x9521c 4 "bl" "CALL main.popcountAll(SB)" "bl 0x94df0 <main.popcountAll>" main.go:97
 0x95220 4 "std" "MOVD R3,576(R1)" "std r3,576(r1)" main.go:97
 0x95224 4 "li" "MOVD $27,R3" "li r3,27" main.go:97
-0x95228 4 "bl" "CALL main.collatzSteps(SB)" "bl 0x94e30" main.go:97
+0x95228 4 "bl" "CALL main.collatzSteps(SB)" "bl 0x94e30 <main.collatzSteps>" main.go:97
 0x9522c 4 "std" "MOVD R3,568(R1)" "std r3,568(r1)" main.go:97
 0x95230 4 "lfd" "FMOVD 216(R1),F0" "lfd f0,216(r1)" main.go:97
 0x95234 4 "stfd" "FMOVD F0,560(R1)" "stfd f0,560(r1)" main.go:97
-0x95238 4 "bl" "CALL runtime.printlock(SB)" "bl 0x57160" main.go:97
+0x95238 4 "bl" "CALL runtime.printlock(SB)" "bl 0x57160 <runtime.printlock>" main.go:97
 0x9523c 4 "ld" "MOVD 592(R1),R3" "ld r3,592(r1)" main.go:97
-0x95240 4 "bl" "CALL runtime.printint(SB)" "bl 0x57700" main.go:97
-0x95244 4 "bl" "CALL runtime.printsp(SB)" "bl 0x57390" main.go:97
+0x95240 4 "bl" "CALL runtime.printint(SB)" "bl 0x57700 <runtime.printint>" main.go:97
+0x95244 4 "bl" "CALL runtime.printsp(SB)" "bl 0x57390 <runtime.printsp>" main.go:97
 0x95248 4 "lfd" "FMOVD 584(R1),F1" "lfd f1,584(r1)" main.go:97
-0x9524c 4 "bl" "CALL runtime.printfloat64(SB)" "bl 0x57480" main.go:97
-0x95250 4 "bl" "CALL runtime.printsp(SB)" "bl 0x57390" main.go:97
+0x9524c 4 "bl" "CALL runtime.printfloat64(SB)" "bl 0x57480 <runtime.printfloat64>" main.go:97
+0x95250 4 "bl" "CALL runtime.printsp(SB)" "bl 0x57390 <runtime.printsp>" main.go:97
 0x95254 4 "ld" "MOVD 576(R1),R3" "ld r3,576(r1)" main.go:97
-0x95258 4 "bl" "CALL runtime.printint(SB)" "bl 0x57700" main.go:97
-0x9525c 4 "bl" "CALL runtime.printsp(SB)" "bl 0x57390" main.go:97
+0x95258 4 "bl" "CALL runtime.printint(SB)" "bl 0x57700 <runtime.printint>" main.go:97
+0x9525c 4 "bl" "CALL runtime.printsp(SB)" "bl 0x57390 <runtime.printsp>" main.go:97
 0x95260 4 "ld" "MOVD 568(R1),R3" "ld r3,568(r1)" main.go:97
-0x95264 4 "bl" "CALL runtime.printint(SB)" "bl 0x57700" main.go:97
-0x95268 4 "bl" "CALL runtime.printsp(SB)" "bl 0x57390" main.go:97
+0x95264 4 "bl" "CALL runtime.printint(SB)" "bl 0x57700 <runtime.printint>" main.go:97
+0x95268 4 "bl" "CALL runtime.printsp(SB)" "bl 0x57390 <runtime.printsp>" main.go:97
 0x9526c 4 "lfd" "FMOVD 560(R1),F1" "lfd f1,560(r1)" main.go:97
-0x95270 4 "bl" "CALL runtime.printfloat64(SB)" "bl 0x57480" main.go:97
-0x95274 4 "bl" "CALL runtime.printnl(SB)" "bl 0x573d0" main.go:97
-0x95278 4 "bl" "CALL runtime.printunlock(SB)" "bl 0x571f0" main.go:97
+0x95270 4 "bl" "CALL runtime.printfloat64(SB)" "bl 0x57480 <runtime.printfloat64>" main.go:97
+0x95274 4 "bl" "CALL runtime.printnl(SB)" "bl 0x573d0 <runtime.printnl>" main.go:97
+0x95278 4 "bl" "CALL runtime.printunlock(SB)" "bl 0x571f0 <runtime.printunlock>" main.go:97
 0x9527c 4 "ld" "MOVD 0(R1),R31" "ld r31,0(r1)" main.go:98
 0x95280 4 "mtspr" "MOVD R31,LR" "mtlr r31" main.go:98
 0x95284 4 "addi" "ADD R1,$720,R1" "addi r1,r1,720" main.go:98

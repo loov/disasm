@@ -41,7 +41,11 @@ type Binary struct {
 	// than a memory layout: gaps between functions are not padding.
 	NoLayout bool
 
-	text     []byte
+	// texts are the executable sections, sorted by address: .text and
+	// whatever else the linker put code in (.init, .plt, __stubs).
+	texts []textSection
+	// textAddr is where the .text section starts: what a Go 1.18+
+	// pclntab's function entries are relative to.
 	textAddr uint64
 	// byteOrder of instruction words; only ppc64 has a big-endian variant.
 	byteOrder binary.ByteOrder
@@ -92,16 +96,48 @@ type Func struct {
 }
 
 // Code returns the machine code of the function, or nil when it lies
-// outside the text section. The slice aliases the file mapping and must
-// not be modified.
+// outside every text section. The slice aliases the file mapping and
+// must not be modified.
 func (f *Func) Code() []byte {
 	if f.code != nil {
 		return f.code
 	}
-	if f.Addr < f.bin.textAddr {
+	sec := f.bin.textAt(f.Addr)
+	if sec == nil {
 		return nil
 	}
-	return sectionSlice(f.bin.text, f.Addr-f.bin.textAddr, f.Size)
+	return sectionSlice(sec.data, f.Addr-sec.addr, f.Size)
+}
+
+// textSection is one executable section, a slice of the mapping.
+type textSection struct {
+	addr uint64
+	data []byte
+}
+
+func (s *textSection) end() uint64 { return s.addr + uint64(len(s.data)) }
+
+// addText records an executable section.
+func (b *Binary) addText(addr uint64, data []byte) {
+	if len(data) == 0 {
+		return
+	}
+	b.texts = append(b.texts, textSection{addr: addr, data: data})
+	slices.SortFunc(b.texts, func(x, y textSection) int { return cmp.Compare(x.addr, y.addr) })
+}
+
+// textAt returns the text section containing addr, or nil.
+func (b *Binary) textAt(addr uint64) *textSection {
+	i, _ := slices.BinarySearchFunc(b.texts, addr, func(s textSection, a uint64) int {
+		if s.addr > a {
+			return 1
+		}
+		return -1
+	})
+	if i > 0 && addr < b.texts[i-1].end() {
+		return &b.texts[i-1]
+	}
+	return nil
 }
 
 // Close releases the file mapping.
@@ -254,7 +290,7 @@ func Open(path string) (*Binary, error) {
 	if err != nil {
 		return nil, err
 	}
-	bin, err := parse(data)
+	bin, err := Parse(data)
 	if err != nil {
 		_ = closeMapping()
 		return nil, fmt.Errorf("%q: %w", path, err)
@@ -266,21 +302,21 @@ func Open(path string) (*Binary, error) {
 	return bin, nil
 }
 
-// parse dispatches on the magic bytes of a mapped binary.
-func parse(data []byte) (*Binary, error) {
+// Parse reads a binary held in memory. The Binary aliases data, which
+// must not change while it is in use; Close does nothing.
+func Parse(data []byte) (*Binary, error) {
 	if len(data) < 4 {
 		return nil, fmt.Errorf("too short to be a binary")
 	}
-	r := bytes.NewReader(data)
 	var bin *Binary
 	var err error
 	switch magic := string(data[:4]); {
 	case magic == elf.ELFMAG:
-		bin, err = openELF(r, data)
+		bin, err = openELF(bytes.NewReader(data), data)
 	case magic == "\xcf\xfa\xed\xfe" || magic == "\xfe\xed\xfa\xcf":
-		bin, err = openMachO(r, data)
+		bin, err = openMachO(data)
 	case magic[0] == 'M' && magic[1] == 'Z':
-		bin, err = openPE(r, data)
+		bin, err = openPE(bytes.NewReader(data), data)
 	case magic == "\x00asm":
 		bin, err = openWasm(data)
 	case bytes.HasPrefix(data, []byte("!<arch>\n")):
@@ -482,7 +518,6 @@ func (b *Binary) finish() {
 	b.syms = slices.CompactFunc(b.syms, func(x, y sym) bool {
 		return x.addr == y.addr && x.name == y.name && x.kind == y.kind
 	})
-	textEnd := b.textAddr + uint64(len(b.text))
 	for i := range b.syms {
 		s := &b.syms[i]
 		if s.size != 0 {
@@ -497,9 +532,10 @@ func (b *Binary) finish() {
 		if s.size == 0 {
 			// Last of its kind: bound it by its section instead of
 			// infinity, so unrelated high addresses don't resolve to it.
-			end := textEnd
-			if s.kind == symData {
-				end = 0
+			var end uint64
+			if sec := b.textAt(s.addr); sec != nil && s.kind == symText {
+				end = sec.end()
+			} else {
 				for _, r := range b.ranges {
 					if r[0] <= s.addr && s.addr < r[1] {
 						end = r[1]
@@ -513,7 +549,7 @@ func (b *Binary) finish() {
 		}
 	}
 
-	if b.text == nil {
+	if b.texts == nil {
 		// Formats without a text section (wasm, Go archives) collect
 		// their functions while loading.
 		slices.SortFunc(b.Funcs, func(x, y Func) int {
@@ -523,7 +559,7 @@ func (b *Binary) finish() {
 	}
 	b.Funcs = make([]Func, 0, len(b.syms))
 	for _, s := range b.syms {
-		if s.kind == symText && s.addr >= b.textAddr && s.addr < textEnd {
+		if s.kind == symText && b.textAt(s.addr) != nil {
 			b.Funcs = append(b.Funcs, Func{Name: s.name, Addr: s.addr, Size: s.size, bin: b})
 		}
 	}
@@ -711,19 +747,20 @@ func openELF(r *bytes.Reader, data []byte) (*Binary, error) {
 		return nil, fmt.Errorf("unsupported 32-bit ELF for %s", bin.Arch)
 	}
 
-	text := ef.Section(".text")
-	if text == nil {
-		return nil, fmt.Errorf("no .text section")
-	}
-	bin.text = elfSection(ef, data, ".text")
-	if bin.text == nil {
-		return nil, fmt.Errorf("unreadable .text section")
-	}
-	bin.textAddr = text.Addr
 	for _, sec := range ef.Sections {
-		if sec.Flags&elf.SHF_ALLOC != 0 {
-			bin.addRange(sec.Addr, sec.Size)
+		if sec.Flags&elf.SHF_ALLOC == 0 {
+			continue
 		}
+		bin.addRange(sec.Addr, sec.Size)
+		if sec.Flags&elf.SHF_EXECINSTR != 0 && sec.Type == elf.SHT_PROGBITS {
+			bin.addText(sec.Addr, elfSection(ef, data, sec.Name))
+			if sec.Name == ".text" {
+				bin.textAddr = sec.Addr
+			}
+		}
+	}
+	if bin.texts == nil {
+		return nil, fmt.Errorf("no executable section")
 	}
 
 	var arm32 armRegionsBuilder
@@ -742,8 +779,8 @@ func openELF(r *bytes.Reader, data []byte) (*Binary, error) {
 		case elf.STT_OBJECT:
 			bin.addSym(s.name, s.value, s.size, symData)
 		case elf.STT_NOTYPE:
-			if bin.Arch == "arm" {
-				arm32.addMapping(s.name, s.value, bin.textAddr, bin.textAddr+uint64(len(bin.text)))
+			if bin.Arch == "arm" && bin.textAt(s.value) != nil {
+				arm32.addMapping(s.name, s.value)
 			}
 		}
 		return true
@@ -756,6 +793,11 @@ func openELF(r *bytes.Reader, data []byte) (*Binary, error) {
 	}
 
 	bin.dwarf = func() (*dwarf.Data, error) { return elfDWARF(ef, data) }
+	if ef.Type == elf.ET_REL {
+		// A relocatable object's debug sections need their relocations
+		// applied, which debug/elf does on its copy.
+		bin.dwarf = ef.DWARF
+	}
 	if tab := elfSection(ef, data, ".gopclntab"); tab != nil {
 		bin.loadPclntab(tab)
 	} else if ef.Section(".gopclntab") == nil {
@@ -771,59 +813,6 @@ func openELF(r *bytes.Reader, data []byte) (*Binary, error) {
 			}
 		}
 	}
-	return bin, nil
-}
-
-func openMachO(r *bytes.Reader, data []byte) (*Binary, error) {
-	mf, err := macho.NewFile(r)
-	if err != nil {
-		return nil, err
-	}
-	bin := &Binary{byteOrder: binary.LittleEndian}
-	switch mf.Cpu {
-	case macho.CpuAmd64:
-		bin.Arch = "amd64"
-	case macho.CpuArm64:
-		bin.Arch = "arm64"
-	default:
-		return nil, fmt.Errorf("unsupported Mach-O cpu %v", mf.Cpu)
-	}
-
-	text := mf.Section("__text")
-	if text == nil {
-		return nil, fmt.Errorf("no __text section")
-	}
-	bin.text = sectionSlice(data, uint64(text.Offset), text.Size)
-	if bin.text == nil {
-		return nil, fmt.Errorf("unreadable __text section")
-	}
-	bin.textAddr = text.Addr
-	for _, seg := range mf.Loads {
-		if seg, ok := seg.(*macho.Segment); ok && seg.Name != "__PAGEZERO" {
-			bin.addRange(seg.Addr, seg.Memsz)
-		}
-	}
-
-	if mf.Symtab != nil {
-		for _, s := range mf.Symtab.Syms {
-			// 0xe0 masks the N_STAB debugging bits; such entries
-			// describe source info, not symbols.
-			if s.Type&0xe0 != 0 {
-				continue
-			}
-			kind := symData
-			if s.Value >= bin.textAddr && s.Value < bin.textAddr+uint64(len(bin.text)) {
-				kind = symText
-			}
-			bin.addSym(strings.TrimPrefix(s.Name, "_"), s.Value, 0, kind)
-		}
-	}
-	if sec := mf.Section("__gopclntab"); sec != nil {
-		if tab := sectionSlice(data, uint64(sec.Offset), sec.Size); tab != nil {
-			bin.loadPclntab(tab)
-		}
-	}
-	bin.dwarf = mf.DWARF
 	return bin, nil
 }
 
@@ -854,18 +843,19 @@ func openPE(r *bytes.Reader, data []byte) (*Binary, error) {
 		return nil, fmt.Errorf("missing PE optional header")
 	}
 
-	text := pf.Section(".text")
-	if text == nil {
-		return nil, fmt.Errorf("no .text section")
-	}
-	// The on-disk section can be padded past its virtual size.
-	bin.text = sectionSlice(data, uint64(text.Offset), min(uint64(text.Size), uint64(text.VirtualSize)))
-	if bin.text == nil {
-		return nil, fmt.Errorf("unreadable .text section")
-	}
-	bin.textAddr = imageBase + uint64(text.VirtualAddress)
+	const memExecute = 0x20000000 // IMAGE_SCN_MEM_EXECUTE
 	for _, sec := range pf.Sections {
 		bin.addRange(imageBase+uint64(sec.VirtualAddress), uint64(sec.VirtualSize))
+		if sec.Characteristics&memExecute != 0 {
+			// The on-disk section can be padded past its virtual size.
+			bin.addText(imageBase+uint64(sec.VirtualAddress), sectionSlice(data, uint64(sec.Offset), min(uint64(sec.Size), uint64(sec.VirtualSize))))
+			if sec.Name == ".text" {
+				bin.textAddr = imageBase + uint64(sec.VirtualAddress)
+			}
+		}
+	}
+	if bin.texts == nil {
+		return nil, fmt.Errorf("no executable section")
 	}
 
 	// COFF symbol values are offsets within their 1-based section.
@@ -874,11 +864,12 @@ func openPE(r *bytes.Reader, data []byte) (*Binary, error) {
 			continue
 		}
 		sec := pf.Sections[s.SectionNumber-1]
+		addr := imageBase + uint64(sec.VirtualAddress) + uint64(s.Value)
 		kind := symData
-		if sec == text {
+		if sec.Characteristics&memExecute != 0 {
 			kind = symText
 		}
-		bin.addSym(s.Name, imageBase+uint64(sec.VirtualAddress)+uint64(s.Value), 0, kind)
+		bin.addSym(s.Name, addr, 0, kind)
 	}
 
 	bin.dwarf = pf.DWARF

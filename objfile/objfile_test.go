@@ -313,7 +313,8 @@ func TestOpen_Wasm_GoNames(t *testing.T) {
 // binaries per format is disproportionate, so the guarded code is
 // exercised directly.
 func TestHardening(t *testing.T) {
-	b := &Binary{text: make([]byte, 64), textAddr: ^uint64(0) - 32}
+	b := &Binary{}
+	b.addText(^uint64(0)-32, make([]byte, 64))
 	f := &Func{Name: "evil", Addr: ^uint64(0) - 8, Size: 1 << 20, bin: b}
 	if got := f.Code(); got != nil {
 		t.Errorf("Code() = %d bytes for a symbol whose addr+size wraps, want nil", len(got))
@@ -330,7 +331,8 @@ func TestHardening(t *testing.T) {
 
 	// The last sizeless data symbol is bounded by its section, not
 	// infinity; sizeless aliases share the extent to the next address.
-	b = &Binary{text: make([]byte, 0x100), textAddr: 0x1000}
+	b = &Binary{}
+	b.addText(0x1000, make([]byte, 0x100))
 	b.addRange(0x1000, 0x100)
 	b.addRange(0x2000, 0x100)
 	b.addSym("a", 0x1000, 0, symText)

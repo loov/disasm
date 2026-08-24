@@ -1,0 +1,35 @@
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: go.mod
+      - run: go vet ./...
+      - run: go test ./...
+      - run: test -z "$(gofmt -l .)"
+        shell: bash
+
+  # A new Go release can rev the pclntab format (see the magic list in
+  # objfile/pclntab.go); testing against the latest release turns that
+  # into a visible failure instead of silent degradation.
+  latest-go:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-go@v7
+        with:
+          go-version: stable
+          check-latest: true
+      - run: go test ./...

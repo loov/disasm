@@ -1,4 +1,4 @@
-arch=arm funcs=1456 sha256=07cc856609e7d0671d70b4184c3760eb1c759b73ecc107df60906cec214f65da
+arch=arm funcs=1456 sha256=2d6e5128a02c7be44e91e26469d1fddf552e9a7603c28ab288f58f9ff549a87f
 == runtime.runGCProg 0x3345c 1088 /usr/local/go/src/runtime/mbitmap.go
 0x3345c 4 "LDR" "MOVW 0x8(R10), R1" "ldr r1, [sl, #8]" mbitmap.go:1565
 0x33460 4 "CMP" "CMP R1, R13" "cmp sp, r1" mbitmap.go:1565

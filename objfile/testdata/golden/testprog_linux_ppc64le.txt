@@ -1,4 +1,4 @@
-arch=ppc64le funcs=1523 sha256=797310903abde7c97d3f6786430b80a9533a7b89cb099c1fbd9f028e436d9761
+arch=ppc64le funcs=1545 sha256=01fc2ca4319bce77ecff34a9a7248dd4bc7cbba88cbe684fbcc7b416c57e9429
 == runtime.runGCProg 0x2f4d0 1056 /usr/local/go/src/runtime/mbitmap.go
 0x2f4d0 4 "ld" "MOVD 16(R30),R22" "ld r22,16(r30)" mbitmap.go:1565
 0x2f4d4 4 "cmpld" "CMPU R22,R1" "cmpld r22,r1" mbitmap.go:1565

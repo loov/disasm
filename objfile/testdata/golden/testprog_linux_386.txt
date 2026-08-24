@@ -1,4 +1,4 @@
-arch=386 funcs=1457 sha256=98b9eecbda923412e86c0dfabacc160ac6a6ee17b9e8702f310fb3390d8b5ef1
+arch=386 funcs=1457 sha256=8d327306379b13c8f1141b2f28e876219d06f100bdb220b82896c3dfe970326c
 == runtime.runGCProg 0x806a080 880 /usr/local/go/src/runtime/mbitmap.go
 0x806a080 7 "MOV" "MOVL GS:0, CX" "mov %gs:,%ecx" mbitmap.go:1565
 0x806a087 6 "MOV" "MOVL 0xfffffffc(CX), CX" "mov 0xfffffffc(%ecx),%ecx" mbitmap.go:1565

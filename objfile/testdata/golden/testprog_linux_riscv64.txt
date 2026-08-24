@@ -1,4 +1,4 @@
-arch=riscv64 funcs=1377 sha256=dd9dc6f1003c871296954793a2c0ad69bd4c76c9c3eedd34fa3deeadf986124a
+arch=riscv64 funcs=1395 sha256=6fbce766c8cfb03478eab36d6ac4acc82d15ff961041fffa4370e0e4806dbb2a
 == runtime.runGCProg 0x28938 832 /usr/local/go/src/runtime/mbitmap.go
 0x28938 4 "LD" "MOV 16(X27), X6" "ld x6,16(x27)" mbitmap.go:1565
 0x2893c 4 "BLTU" "BLTU X6, X2, 5(PC)" "bltu x6,x2,20" mbitmap.go:1565

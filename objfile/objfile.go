@@ -13,11 +13,11 @@ import (
 	"cmp"
 	"debug/dwarf"
 	"debug/elf"
-	"debug/gosym"
 	"debug/macho"
 	"debug/pe"
 	"encoding/binary"
 	"fmt"
+	"os"
 	"path/filepath"
 	"slices"
 	"strings"
@@ -33,7 +33,8 @@ import (
 type Binary struct {
 	Arch string // GOARCH name, e.g. "amd64"
 	// Funcs are the functions inside the text section, sorted by
-	// address, then name.
+	// address, then name. Names are not unique: a Go ABI wrapper shares
+	// the name of the function it wraps.
 	Funcs []Func
 	// NoLayout reports that function addresses are deterministic
 	// pseudo-addresses (file offsets in a Go compile archive) rather
@@ -50,10 +51,14 @@ type Binary struct {
 	// binary's loadable sections, used to recognize address-valued
 	// immediates.
 	ranges [][2]uint64
-	pcln   *gosym.Table
-	// lines is the DWARF line table, used when there is no pclntab:
-	// binaries from clang, gcc and anything else that isn't Go.
-	lines *Lines
+	pcln   *pclntab
+	// dwarf opens the debug info, and lines is the line table indexed
+	// from it on first use. It is only consulted when there is no
+	// pclntab — binaries from clang, gcc and anything else that isn't
+	// Go — so a Go binary never pays for the DWARF it also carries.
+	dwarf     func() (*dwarf.Data, error)
+	lines     *Lines
+	linesOnce sync.Once
 	// arm32 is the ARM mapping-symbol map: where ARM, Thumb and data
 	// regions begin within the text of a 32-bit ARM ELF. Empty for
 	// everything else, and for binaries that carry no mapping symbols.
@@ -99,12 +104,15 @@ func (b *Binary) Close() error {
 	return err
 }
 
-// Func returns the function called name, or nil.
+// Func returns the function called name — the lowest-addressed one
+// when several share it — or nil.
 func (b *Binary) Func(name string) *Func {
 	b.byNameOnce.Do(func() {
 		b.byName = make(map[string]int, len(b.Funcs))
 		for i, fn := range b.Funcs {
-			b.byName[fn.Name] = i
+			if _, ok := b.byName[fn.Name]; !ok {
+				b.byName[fn.Name] = i
+			}
 		}
 	})
 	if i, ok := b.byName[name]; ok {
@@ -117,16 +125,36 @@ func (b *Binary) Func(name string) *Func {
 // DWARF when there is none; zero values when unknown.
 func (b *Binary) PCToLine(pc uint64) (file string, line int) {
 	if b.pcln == nil {
-		return b.lines.At(pc)
+		return b.lineTable().At(pc)
 	}
-	file, line, _ = b.pcln.PCToLine(pc)
-	return file, line
+	return b.pcln.pcToLine(pc)
 }
 
 // FuncFile returns the file a function starting at addr was written in,
 // from the debug info; empty when it isn't recorded.
 func (b *Binary) FuncFile(addr uint64) string {
-	return b.lines.DeclFile(addr)
+	if b.pcln != nil {
+		// A Go function's entry instruction is on its declaration
+		// line; inlined bodies never own the entry.
+		file, _ := b.pcln.pcToLine(addr)
+		return file
+	}
+	return b.lineTable().DeclFile(addr)
+}
+
+// lineTable indexes the DWARF on first use; nil when there is none.
+func (b *Binary) lineTable() *Lines {
+	b.linesOnce.Do(func() {
+		if b.dwarf == nil {
+			return
+		}
+		data, err := b.dwarf()
+		if err != nil {
+			return
+		}
+		b.lines = LinesFromDWARF(data, 0)
+	})
+	return b.lines
 }
 
 // Contains reports whether addr falls inside any loadable section of
@@ -210,7 +238,7 @@ func Open(path string) (*Binary, error) {
 		return nil, fmt.Errorf("%q: %w", path, err)
 	}
 	bin.closeMapping = closeMapping
-	if bin.pcln == nil && bin.lines == nil {
+	if bin.pcln == nil && bin.dwarf == nil {
 		bin.loadCompanionDWARF(path)
 	}
 	return bin, nil
@@ -247,12 +275,17 @@ func parse(data []byte) (*Binary, error) {
 // DWARF of its own.
 func (b *Binary) loadCompanionDWARF(path string) {
 	dsym := path + ".dSYM/Contents/Resources/DWARF/" + filepath.Base(path)
-	file, err := macho.Open(dsym)
-	if err != nil {
+	if _, err := os.Stat(dsym); err != nil {
 		return
 	}
-	defer file.Close()
-	b.loadDWARF(file.DWARF)
+	b.dwarf = func() (*dwarf.Data, error) {
+		file, err := macho.Open(dsym)
+		if err != nil {
+			return nil, err
+		}
+		defer file.Close()
+		return file.DWARF()
+	}
 }
 
 // sectionSlice returns data[off:off+size], or nil when the range is
@@ -315,37 +348,22 @@ func Demangle(name string) string {
 // ranges even for stripped binaries. Best-effort: on failure the
 // symbol-table functions remain.
 func (b *Binary) loadPclntab(pclntab []byte) {
-	b.pcln = LineTable(pclntab, b.textAddr)
-}
-
-// LineTable parses a Go pclntab whose text starts at textAddr; nil when
-// the data isn't a table this Go version understands.
-func LineTable(pclntab []byte, textAddr uint64) *gosym.Table {
 	if len(pclntab) == 0 {
-		return nil
+		return
 	}
-	tab, err := gosym.NewTable(nil, gosym.NewLineTable(pclntab, textAddr))
-	if err != nil {
-		return nil
-	}
-	return tab
+	b.pcln, _ = parsePclntab(pclntab, b.textAddr)
 }
 
-// FindLineTable scans data — a memory image or data section — for an
-// embedded pclntab and parses it. nil when there is none.
-func FindLineTable(data []byte, textAddr uint64) *gosym.Table {
-	return LineTable(findPclntab(data), textAddr)
-}
-
-// FindWasmLineTable scans a reconstructed linear-memory image for a Go
+// findWasmLineTable scans a reconstructed linear-memory image for a Go
 // pclntab and returns a table addressed by wasm PCs: function index plus
 // funcValueOffset, shifted left 16, with the resume-point block in the
 // low bits. That is the PC the compiler's line deltas are relative to,
-// but the table stores function entries unshifted, so gosym would place
-// every block after the first inside the following function. Scaling the
-// stored entries — and only those — puts them back in PC space, leaving
-// the deltas to count blocks. nil when there is no usable table.
-func FindWasmLineTable(image []byte) *gosym.Table {
+// but the table stores function entries unshifted, so the table would
+// place every block after the first inside the following function.
+// Scaling the stored entries — and only those — puts them back in PC
+// space, leaving the deltas to count blocks. nil when there is no
+// usable table.
+func findWasmLineTable(image []byte) *pclntab {
 	tab := findPclntab(image)
 	if tab == nil {
 		return nil
@@ -354,7 +372,8 @@ func FindWasmLineTable(image []byte) *gosym.Table {
 	if !scaleWasmEntries(tab) {
 		return nil
 	}
-	return LineTable(tab, 0)
+	t, _ := parsePclntab(tab, 0)
+	return t
 }
 
 // scaleWasmEntries shifts every function entry in a pclntab left by 16,
@@ -414,20 +433,28 @@ func scaleWasmEntries(tab []byte) bool {
 	return true
 }
 
-// finish sorts symbols, infers missing sizes as the distance to the next
-// symbol, and collects the functions: pclntab entries first (exact sizes,
-// present even when stripped), then any remaining text symbols.
+// finish sorts symbols, drops duplicates, infers missing sizes as the
+// distance to the next symbol, and collects the functions: pclntab
+// entries give exact ranges even when the binary is stripped, the
+// symbol table supplies the rest.
 func (b *Binary) finish() {
 	if b.pcln != nil {
-		for _, fn := range b.pcln.Funcs {
-			b.addSym(fn.Name, fn.Entry, fn.End-fn.Entry, symText)
-		}
+		b.syms = slices.Grow(b.syms, b.pcln.nfunc)
+		b.pcln.funcs(func(name string, entry, end uint64) bool {
+			b.addSym(name, entry, end-entry, symText)
+			return true
+		})
 	}
 	// The last symbol at or before an address wins a lookup; ties are
 	// broken by name so aliases (f and f.abi0) resolve the same way in
-	// every binary.
+	// every binary. A function known to both the symbol table and the
+	// pclntab keeps the larger extent, the pclntab's: it runs to the
+	// next function, covering the alignment padding.
 	slices.SortFunc(b.syms, func(x, y sym) int {
-		return cmp.Or(cmp.Compare(x.addr, y.addr), cmp.Compare(x.name, y.name))
+		return cmp.Or(cmp.Compare(x.addr, y.addr), cmp.Compare(x.name, y.name), cmp.Compare(y.size, x.size))
+	})
+	b.syms = slices.CompactFunc(b.syms, func(x, y sym) bool {
+		return x.addr == y.addr && x.name == y.name && x.kind == y.kind
 	})
 	textEnd := b.textAddr + uint64(len(b.text))
 	for i := range b.syms {
@@ -460,43 +487,13 @@ func (b *Binary) finish() {
 		}
 	}
 
-	seen := map[string]bool{}
-	add := func(name string, addr, size uint64) {
-		if addr < b.textAddr || addr >= textEnd || seen[name] {
-			return
-		}
-		seen[name] = true
-		b.Funcs = append(b.Funcs, Func{Name: name, Addr: addr, Size: size, bin: b})
-	}
-	if b.pcln != nil {
-		for _, fn := range b.pcln.Funcs {
-			add(fn.Name, fn.Entry, fn.End-fn.Entry)
-		}
-	}
+	b.Funcs = make([]Func, 0, len(b.syms))
 	for _, s := range b.syms {
-		if s.kind == symText {
-			add(s.name, s.addr, s.size)
+		if s.kind == symText && s.addr >= b.textAddr && s.addr < textEnd {
+			b.Funcs = append(b.Funcs, Func{Name: s.name, Addr: s.addr, Size: s.size, bin: b})
 		}
 	}
-	// Ties broken by name so aliased symbols (e.g. f and f.abi0 at the
-	// same address) come out in the same order in every binary.
-	slices.SortFunc(b.Funcs, func(x, y Func) int {
-		return cmp.Or(cmp.Compare(x.Addr, y.Addr), cmp.Compare(x.Name, y.Name))
-	})
-}
-
-// loadDWARF reads the line table a non-Go compiler left in the binary.
-// Best-effort: most binaries carry none, and a Go binary has its pclntab
-// instead.
-func (b *Binary) loadDWARF(open func() (*dwarf.Data, error)) {
-	if b.lines != nil {
-		return
-	}
-	data, err := open()
-	if err != nil {
-		return
-	}
-	b.lines = LinesFromDWARF(data, 0)
+	b.Funcs = slices.Clip(b.Funcs)
 }
 
 // pclntabMagics are the little-endian header magics of pclntab versions.
@@ -724,7 +721,7 @@ func openELF(r *bytes.Reader, data []byte) (*Binary, error) {
 		bin.arm32 = arm32.regions()
 	}
 
-	bin.loadDWARF(func() (*dwarf.Data, error) { return elfDWARF(ef, data) })
+	bin.dwarf = func() (*dwarf.Data, error) { return elfDWARF(ef, data) }
 	if tab := elfSection(ef, data, ".gopclntab"); tab != nil {
 		bin.loadPclntab(tab)
 	} else if ef.Section(".gopclntab") == nil {
@@ -792,7 +789,7 @@ func openMachO(r *bytes.Reader, data []byte) (*Binary, error) {
 			bin.loadPclntab(tab)
 		}
 	}
-	bin.loadDWARF(mf.DWARF)
+	bin.dwarf = mf.DWARF
 	return bin, nil
 }
 
@@ -850,7 +847,7 @@ func openPE(r *bytes.Reader, data []byte) (*Binary, error) {
 		bin.addSym(s.Name, imageBase+uint64(sec.VirtualAddress)+uint64(s.Value), 0, kind)
 	}
 
-	bin.loadDWARF(pf.DWARF)
+	bin.dwarf = pf.DWARF
 	// PE has no pclntab section; scan the data sections for its header.
 	for _, name := range []string{".rdata", ".data"} {
 		if sec := pf.Section(name); sec != nil {

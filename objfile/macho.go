@@ -58,6 +58,7 @@ func openMachO(data []byte) (*Binary, error) {
 	}
 	var symoff, nsyms, stroff, strsize uint32
 	var pclntab []byte
+	var hasDWARF bool
 	for range ncmds {
 		if len(cmds) < 8 {
 			return nil, fmt.Errorf("truncated Mach-O load command")
@@ -97,6 +98,8 @@ func openMachO(data []byte) (*Binary, error) {
 					}
 				case sectname == "__gopclntab":
 					pclntab = sectionSlice(data, uint64(off), size)
+				case sectname == "__debug_info" || sectname == "__zdebug_info":
+					hasDWARF = hasDWARF || size > 0 && sectionSlice(data, uint64(off), size) != nil
 				}
 			}
 		case machoSymtab:
@@ -136,12 +139,14 @@ func openMachO(data []byte) (*Binary, error) {
 		bin.addSym(name, value, 0, kind)
 	}
 	bin.loadPclntab(pclntab)
-	bin.dwarf = func() (*dwarf.Data, error) {
-		mf, err := macho.NewFile(bytes.NewReader(data))
-		if err != nil {
-			return nil, err
+	if hasDWARF {
+		bin.dwarf = func() (*dwarf.Data, error) {
+			mf, err := macho.NewFile(bytes.NewReader(data))
+			if err != nil {
+				return nil, err
+			}
+			return mf.DWARF()
 		}
-		return mf.DWARF()
 	}
 	return bin, nil
 }

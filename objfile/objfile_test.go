@@ -263,6 +263,43 @@ func TestOpen_ELFWithoutPclntabSection(t *testing.T) {
 	}
 }
 
+func TestOpen_MachOUsesCompanionDWARF(t *testing.T) {
+	companion, err := os.ReadFile("testdata/testprog_darwin_arm64")
+	if err != nil {
+		t.Fatal(err)
+	}
+	data := slices.Clone(companion)
+	for _, name := range []string{"__gopclntab", "__zdebug_info"} {
+		i := bytes.Index(data, []byte(name))
+		if i < 0 {
+			t.Fatalf("fixture has no %s section", name)
+		}
+		data[i+2] = 'x'
+	}
+
+	path := filepath.Join(t.TempDir(), "testprog")
+	if err := os.WriteFile(path, data, 0o700); err != nil {
+		t.Fatal(err)
+	}
+	dsym := path + ".dSYM/Contents/Resources/DWARF/" + filepath.Base(path)
+	if err := os.MkdirAll(filepath.Dir(dsym), 0o700); err != nil {
+		t.Fatal(err)
+	}
+	if err := os.WriteFile(dsym, companion, 0o600); err != nil {
+		t.Fatal(err)
+	}
+
+	bin := open(t, path)
+	d, err := bin.dwarf()
+	if err != nil {
+		t.Fatal(err)
+	}
+	entry, err := d.Reader().Next()
+	if err != nil || entry == nil {
+		t.Fatalf("companion DWARF has no entries: %v", err)
+	}
+}
+
 func TestOpen_GoArchive(t *testing.T) {
 	dir := t.TempDir()
 	for name, data := range map[string]string{

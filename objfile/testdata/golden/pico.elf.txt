@@ -1,4 +1,4 @@
-arch=arm funcs=108 sha256=5903a3d3836b89adce93861f924bfe4add6a1bd97a73de1e4857223b1bb486ea
+arch=arm funcs=108 sha256=d4830e66869b94589511fb1b10636ca92f892775f8fb51e7675857bafad1f02b
 == runtime.runtimePanicAt 0x10001044 52 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/panic.go
 0x10001044 2 "MOV" "mov r4, r2" "mov r4, r2" ref=0x0 call=false .:0
 0x10001046 2 "MOV" "mov r5, r1" "mov r5, r1" ref=0x0 call=false .:0
@@ -18,9 +18,9 @@ arch=arm funcs=108 sha256=5903a3d3836b89adce93861f924bfe4add6a1bd97a73de1e485722
 0x10001064 4 "BL" "bl 0x100010d4 <runtime.printnl>" "bl 0x100010d4 <runtime.printnl>" ref=0x100010d4 call=true panic.go:106
 0x10001068 2 "WFI" "wfi" "wfi" ref=0x0 call=false runtime_cortexm_abort.go:16
 0x1000106a 2 "B" "b 0x10001068 <runtime.runtimePanicAt+0x24>" "b 0x10001068 <runtime.runtimePanicAt+0x24>" ref=0x10001068 call=false runtime_cortexm_abort.go:0
-0x1000106c 4 "" "WORD $0x10001c53" ".word 0x10001c53" runtime_cortexm_abort.go:0
-0x10001070 4 "" "WORD $0x10001079" ".word 0x10001079" runtime_cortexm_abort.go:0
-0x10001074 4 "" "WORD $0x10001c6b" ".word 0x10001c6b" runtime_cortexm_abort.go:0
+0x1000106c 4 "" "WORD $0x10001c53" ".word 0x10001c53" ref=0x0 call=false runtime_cortexm_abort.go:0
+0x10001070 4 "" "WORD $0x10001079" ".word 0x10001079" ref=0x0 call=false runtime_cortexm_abort.go:0
+0x10001074 4 "" "WORD $0x10001c6b" ".word 0x10001c6b" ref=0x0 call=false runtime_cortexm_abort.go:0
 == runtime.runtimePanic 0x100011b2 12 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/panic.go
 0x100011b2 2 "MOV" "mov r3, r0" "mov r3, r0" ref=0x0 call=false panic.go:0
 0x100011b4 2 "MOV" "movs r2, #0x18" "movs r2, #0x18" ref=0x0 call=false panic.go:0
@@ -113,19 +113,19 @@ arch=arm funcs=108 sha256=5903a3d3836b89adce93861f924bfe4add6a1bd97a73de1e485722
 0x100018ac 2 "B" "b 0x100018aa <Reset_Handler+0xb6>" "b 0x100018aa <Reset_Handler+0xb6>" ref=0x100018aa call=false runtime_cortexm_abort.go:0
 0x100018ae 4 "BL" "bl 0x10001034 <runtime.nilPanic>" "bl 0x10001034 <runtime.nilPanic>" ref=0x10001034 call=true task_stack_cortexm.go:43
 0x100018b2 2 "MOV" "mov r8, r8" "mov r8, r8" ref=0x0 call=false task_stack_cortexm.go:0
-0x100018b4 4 "" "WORD $0x20001070" ".word 0x20001070" task_stack_cortexm.go:0
-0x100018b8 4 "" "WORD $0x20001620" ".word 0x20001620" task_stack_cortexm.go:0
-0x100018bc 4 "" "WORD $0x20001000" ".word 0x20001000" task_stack_cortexm.go:0
-0x100018c0 4 "" "WORD $0x10001e80" ".word 0x10001e80" task_stack_cortexm.go:0
-0x100018c4 4 "" "WORD $0x2000106c" ".word 0x2000106c" task_stack_cortexm.go:0
-0x100018c8 4 "" "WORD $0xd0000100" ".word 0xd0000100" task_stack_cortexm.go:0
-0x100018cc 4 "" "WORD $0x20001620" ".word 0x20001620" task_stack_cortexm.go:0
-0x100018d0 4 "" "WORD $0x20040000" ".word 0x20040000" task_stack_cortexm.go:0
-0x100018d4 4 "" "WORD $0x200015b0" ".word 0x200015b0" task_stack_cortexm.go:0
-0x100018d8 4 "" "WORD $0x10001e7c" ".word 0x10001e7c" task_stack_cortexm.go:0
-0x100018dc 4 "" "WORD $0xb83bf575" ".word 0xb83bf575" task_stack_cortexm.go:0
-0x100018e0 4 "" "WORD $0x100018e9" ".word 0x100018e9" task_stack_cortexm.go:0
-0x100018e4 4 "" "WORD $0x100001e9" ".word 0x100001e9" task_stack_cortexm.go:0
+0x100018b4 4 "" "WORD $0x20001070" ".word 0x20001070" ref=0x0 call=false task_stack_cortexm.go:0
+0x100018b8 4 "" "WORD $0x20001620" ".word 0x20001620" ref=0x0 call=false task_stack_cortexm.go:0
+0x100018bc 4 "" "WORD $0x20001000" ".word 0x20001000" ref=0x0 call=false task_stack_cortexm.go:0
+0x100018c0 4 "" "WORD $0x10001e80" ".word 0x10001e80" ref=0x0 call=false task_stack_cortexm.go:0
+0x100018c4 4 "" "WORD $0x2000106c" ".word 0x2000106c" ref=0x0 call=false task_stack_cortexm.go:0
+0x100018c8 4 "" "WORD $0xd0000100" ".word 0xd0000100" ref=0x0 call=false task_stack_cortexm.go:0
+0x100018cc 4 "" "WORD $0x20001620" ".word 0x20001620" ref=0x0 call=false task_stack_cortexm.go:0
+0x100018d0 4 "" "WORD $0x20040000" ".word 0x20040000" ref=0x0 call=false task_stack_cortexm.go:0
+0x100018d4 4 "" "WORD $0x200015b0" ".word 0x200015b0" ref=0x0 call=false task_stack_cortexm.go:0
+0x100018d8 4 "" "WORD $0x10001e7c" ".word 0x10001e7c" ref=0x0 call=false task_stack_cortexm.go:0
+0x100018dc 4 "" "WORD $0xb83bf575" ".word 0xb83bf575" ref=0x0 call=false task_stack_cortexm.go:0
+0x100018e0 4 "" "WORD $0x100018e9" ".word 0x100018e9" ref=0x0 call=false task_stack_cortexm.go:0
+0x100018e4 4 "" "WORD $0x100001e9" ".word 0x100001e9" ref=0x0 call=false task_stack_cortexm.go:0
 == runtime.run$1$gowrapper 0x100018e8 628 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/scheduler_cooperative.go
 0x100018e8 2 "PUSH" "push {r4, r5, r6, r7, lr}" "push {r4, r5, r6, r7, lr}" ref=0x0 call=false scheduler_cooperative.go:0
 0x100018ea 2 "SUB" "sub sp, #0x5c" "sub sp, #0x5c" ref=0x0 call=false scheduler_cooperative.go:0
@@ -381,30 +381,30 @@ arch=arm funcs=108 sha256=5903a3d3836b89adce93861f924bfe4add6a1bd97a73de1e485722
 0x10001af6 2 "STRB" "strb r0, [r1, #0xd]" "strb r0, [r1, #0xd]" ref=0x0 call=false scheduler_cooperative.go:251
 0x10001af8 2 "ADD" "add sp, #0x5c" "add sp, #0x5c" ref=0x0 call=false scheduler_cooperative.go:248
 0x10001afa 2 "POP" "pop {r4, r5, r6, r7, pc}" "pop {r4, r5, r6, r7, pc}" ref=0x0 call=false scheduler_cooperative.go:248
-0x10001afc 4 "" "WORD $0x4000c000" ".word 0x4000c000" scheduler_cooperative.go:0
-0x10001b00 4 "" "WORD $0xfefbcdbf" ".word 0xfefbcdbf" scheduler_cooperative.go:0
-0x10001b04 4 "" "WORD $0xfe3c7ffe" ".word 0xfe3c7ffe" scheduler_cooperative.go:0
-0x10001b08 4 "" "WORD $0x4005802c" ".word 0x4005802c" scheduler_cooperative.go:0
-0x10001b0c 4 "" "WORD $0x40008030" ".word 0x40008030" scheduler_cooperative.go:0
-0x10001b10 4 "" "WORD $0x40024000" ".word 0x40024000" scheduler_cooperative.go:0
-0x10001b14 4 "" "WORD $0x00fab000" ".word 0x00fab000" scheduler_cooperative.go:0
-0x10001b18 4 "" "WORD $0x40028000" ".word 0x40028000" scheduler_cooperative.go:0
-0x10001b1c 4 "" "WORD $0x4002c000" ".word 0x4002c000" scheduler_cooperative.go:0
-0x10001b20 4 "" "WORD $0x40064000" ".word 0x40064000" scheduler_cooperative.go:0
-0x10001b24 4 "" "WORD $0x00002ee0" ".word 0x00002ee0" scheduler_cooperative.go:0
-0x10001b28 4 "" "WORD $0x0bebc200" ".word 0x0bebc200" scheduler_cooperative.go:0
-0x10001b2c 4 "" "WORD $0x10000dc9" ".word 0x10000dc9" scheduler_cooperative.go:0
-0x10001b30 4 "" "WORD $0x02dc6c00" ".word 0x02dc6c00" scheduler_cooperative.go:0
-0x10001b34 4 "" "WORD $0x0000b71b" ".word 0x0000b71b" scheduler_cooperative.go:0
-0x10001b38 4 "" "WORD $0x01ffffff" ".word 0x01ffffff" scheduler_cooperative.go:0
-0x10001b3c 4 "" "WORD $0x4005402c" ".word 0x4005402c" scheduler_cooperative.go:0
-0x10001b40 4 "" "WORD $0x50100000" ".word 0x50100000" scheduler_cooperative.go:0
-0x10001b44 4 "" "WORD $0x5011004c" ".word 0x5011004c" scheduler_cooperative.go:0
-0x10001b48 4 "" "WORD $0xe000e404" ".word 0xe000e404" scheduler_cooperative.go:0
-0x10001b4c 4 "" "WORD $0xe000e280" ".word 0xe000e280" scheduler_cooperative.go:0
-0x10001b50 4 "" "WORD $0xe000e100" ".word 0xe000e100" scheduler_cooperative.go:0
-0x10001b54 4 "" "WORD $0x00011010" ".word 0x00011010" scheduler_cooperative.go:0
-0x10001b58 4 "" "WORD $0x200015b0" ".word 0x200015b0" scheduler_cooperative.go:0
+0x10001afc 4 "" "WORD $0x4000c000" ".word 0x4000c000" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001b00 4 "" "WORD $0xfefbcdbf" ".word 0xfefbcdbf" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001b04 4 "" "WORD $0xfe3c7ffe" ".word 0xfe3c7ffe" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001b08 4 "" "WORD $0x4005802c" ".word 0x4005802c" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001b0c 4 "" "WORD $0x40008030" ".word 0x40008030" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001b10 4 "" "WORD $0x40024000" ".word 0x40024000" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001b14 4 "" "WORD $0x00fab000" ".word 0x00fab000" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001b18 4 "" "WORD $0x40028000" ".word 0x40028000" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001b1c 4 "" "WORD $0x4002c000" ".word 0x4002c000" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001b20 4 "" "WORD $0x40064000" ".word 0x40064000" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001b24 4 "" "WORD $0x00002ee0" ".word 0x00002ee0" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001b28 4 "" "WORD $0x0bebc200" ".word 0x0bebc200" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001b2c 4 "" "WORD $0x10000dc9" ".word 0x10000dc9" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001b30 4 "" "WORD $0x02dc6c00" ".word 0x02dc6c00" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001b34 4 "" "WORD $0x0000b71b" ".word 0x0000b71b" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001b38 4 "" "WORD $0x01ffffff" ".word 0x01ffffff" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001b3c 4 "" "WORD $0x4005402c" ".word 0x4005402c" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001b40 4 "" "WORD $0x50100000" ".word 0x50100000" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001b44 4 "" "WORD $0x5011004c" ".word 0x5011004c" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001b48 4 "" "WORD $0xe000e404" ".word 0xe000e404" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001b4c 4 "" "WORD $0xe000e280" ".word 0xe000e280" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001b50 4 "" "WORD $0xe000e100" ".word 0xe000e100" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001b54 4 "" "WORD $0x00011010" ".word 0x00011010" ref=0x0 call=false scheduler_cooperative.go:0
+0x10001b58 4 "" "WORD $0x200015b0" ".word 0x200015b0" ref=0x0 call=false scheduler_cooperative.go:0
 == main.sumInts 0x10001b5c 20 /Users/egon/code/gio/lensm/testdata/tinygo/main.go
 0x10001b5c 2 "MOV" "movs r2, #0" "movs r2, #0" ref=0x0 call=false main.go:0
 0x10001b5e 2 "MOV" "mov r1, r2" "mov r1, r2" ref=0x0 call=false main.go:0

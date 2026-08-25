@@ -32,14 +32,19 @@ type Inst struct {
 	// Op is the canonical decoder mnemonic, e.g. "LD1" where the Go
 	// syntax spells it "VLD1"; empty for undecodable bytes.
 	Op string
-	// Text is the Go assembler syntax, GNU the native syntax.
+	// Text is the Go assembler syntax and GNU the native syntax, with
+	// the symbol at a resolved address appended objdump style ("<f>").
+	// Thumb, AVR and Xtensa have no Go syntax: Text is the native text
+	// and GNU equals it.
 	Text, GNU string
-	// RefKnown reports that the decoder determined the instruction's
-	// reference itself (Thumb, AVR): Ref is then the absolute target of
-	// a branch or call, or zero for none. Otherwise callers parse Text.
+	// Ref is the absolute address the instruction refers to, when it
+	// has one inside the binary: the target of a branch or call, or the
+	// data a pc-relative load or lea addresses. Zero for none.
+	Ref uint64
+	// RefKnown is always true; it predates Ref being set on every arch.
 	RefKnown bool
-	Ref      uint64
-	// Call reports that Ref is a call target rather than a jump.
+	// Call reports a call instruction; Ref is zero when the callee is
+	// in a register.
 	Call bool
 }
 
@@ -59,8 +64,14 @@ func (b *Binary) Disassemble(fn *Func) ([]Inst, error) {
 	// what their Go renderers resolved so the same symbols are appended
 	// to the native text, objdump style: "call 0x475ca0 <runtime.f>".
 	var refs []string
+	// ref is the first address the Go renderer asked about that lies in
+	// the binary: the branch target, or the data a load addresses.
+	var ref uint64
 	resolve := func(a uint64) (string, uint64) {
 		name, base := lookup(a)
+		if ref == 0 && b.Contains(a) {
+			ref = a
+		}
 		if name != "" {
 			ref := name
 			if a != base {
@@ -78,7 +89,10 @@ func (b *Binary) Disassemble(fn *Func) ([]Inst, error) {
 			gnu += " <" + ref + ">"
 		}
 		refs = refs[:0]
-		insts = append(insts, Inst{Addr: addr, Len: n, Op: op, Text: text, GNU: gnu})
+		textOp, _, _ := strings.Cut(text, " ")
+		insts = append(insts, Inst{Addr: addr, Len: n, Op: op, Text: text, GNU: gnu,
+			Ref: ref, RefKnown: true, Call: isCall[textOp]})
+		ref = 0
 		code, addr = code[n:], addr+uint64(n)
 	}
 	undecodable := func(n int) {
@@ -296,7 +310,10 @@ func (b *Binary) Disassemble(fn *Func) ([]Inst, error) {
 				undecodable(2)
 				continue
 			}
-			emit(inst.Len, inst.Op.String(), s390xasm.GoSyntax(inst, addr, resolve), s390xasm.GNUSyntax(inst, addr))
+			// s390xasm's Op.String is lowercase, like ppc64asm's.
+			text := s390xasm.GoSyntax(inst, addr, resolve)
+			op, _, _ := strings.Cut(text, " ")
+			emit(inst.Len, op, text, s390xasm.GNUSyntax(inst, addr))
 		}
 	default:
 		return nil, fmt.Errorf("unsupported architecture %q", b.Arch)
@@ -347,3 +364,8 @@ func (b *Binary) literalPools() map[uint64]bool {
 	})
 	return b.xtensaLiterals
 }
+
+// isCall holds the Go-syntax mnemonics that link: CALL on most arches,
+// the ARM and s390x spellings, and riscv64's JAL when it keeps a return
+// address (rendered JAL rather than JMP).
+var isCall = map[string]bool{"CALL": true, "BL": true, "BLX": true, "BLR": true, "BASR": true, "JAL": true}

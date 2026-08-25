@@ -1,258 +1,258 @@
-arch=riscv32 funcs=38 sha256=672bcc84a90610e169d6658a664c4250ae5f44d9f489da139a0a41ea0133c584
+arch=riscv32 funcs=38 sha256=c92a85dad76060b432b20a08661a3892ee661344b8cdee09d31fb952696bc685
 == _start 0x403810c4 24 
-0x403810c4 4 "AUIPC" "AUIPC $1046784, X2" "auipc x2,0xff900" start.S:45
-0x403810c8 4 "ADDI" "ADDI $-196, X2, X2" "addi x2,x2,-196" start.S:45
-0x403810cc 4 "AUIPC" "AUIPC $785535, X3" "auipc x3,0xbfc7f" start.S:55
-0x403810d0 4 "ADDI" "ADDI $1844, X3, X3" "addi x3,x3,1844" start.S:55
-0x403810d4 4 "AUIPC" "AUIPC $7296, X1" "auipc x1,0x1c80" start.S:59
-0x403810d8 4 "JALR" "CALL 414(X1)" "jalr x1,414(x1)" start.S:59
+0x403810c4 4 "AUIPC" "AUIPC $1046784, X2" "auipc x2,0xff900" ref=0x0 call=false start.S:45
+0x403810c8 4 "ADDI" "ADDI $-196, X2, X2" "addi x2,x2,-196" ref=0x0 call=false start.S:45
+0x403810cc 4 "AUIPC" "AUIPC $785535, X3" "auipc x3,0xbfc7f" ref=0x0 call=false start.S:55
+0x403810d0 4 "ADDI" "ADDI $1844, X3, X3" "addi x3,x3,1844" ref=0x0 call=false start.S:55
+0x403810d4 4 "AUIPC" "AUIPC $7296, X1" "auipc x1,0x1c80" ref=0x0 call=false start.S:59
+0x403810d8 4 "JALR" "CALL 414(X1)" "jalr x1,414(x1)" ref=0x0 call=true start.S:59
 == runtime.runtimePanicAt 0x420009f6 90 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/panic.go
-0x420009f6 2 "ADDI" "ADDI $-16, X2, X2" "addi x2,x2,-16" .:0
-0x420009f8 2 "SW" "MOVW X1, 12(X2)" "sw x1,12(x2)" .:0
-0x420009fa 2 "SW" "MOVW X8, 8(X2)" "sw x8,8(x2)" .:0
-0x420009fc 2 "SW" "MOVW X9, 4(X2)" "sw x9,4(x2)" .:0
-0x420009fe 2 "SW" "MOVW X18, (X2)" "sw x18,0(x2)" .:0
-0x42000a00 2 "ADD" "ADD X12, X0, X18" "mv x18,x12" .:0
-0x42000a02 2 "ADD" "ADD X11, X0, X9" "mv x9,x11" .:0
-0x42000a04 2 "ADD" "ADD X10, X0, X8" "mv x8,x10" .:0
-0x42000a06 4 "LUI" "LUI $245760, X10" "lui x10,0x3c000" panic.go:99
-0x42000a0a 4 "ADDI" "ADDI $455, X10, X10" "addi x10,x10,455" panic.go:99
-0x42000a0e 2 "ADDI" "ADDI $24, X0, X11" "li x11,24" panic.go:99
-0x42000a10 4 "AUIPC" "AUIPC $0, X1" "auipc x1,0x0" panic.go:99
-0x42000a14 4 "JALR" "CALL 64(X1)" "jalr x1,64(x1)" panic.go:99
-0x42000a18 4 "ADDI" "ADDI $-4, X8, X10" "addi x10,x8,-4" panic.go:100
-0x42000a1c 4 "AUIPC" "AUIPC $0, X1" "auipc x1,0x0" panic.go:100
-0x42000a20 4 "JALR" "CALL 102(X1)" "jalr x1,102(x1)" panic.go:100
-0x42000a24 4 "LUI" "LUI $245760, X10" "lui x10,0x3c000" panic.go:101
-0x42000a28 4 "ADDI" "ADDI $479, X10, X10" "addi x10,x10,479" panic.go:101
-0x42000a2c 2 "ADDI" "ADDI $2, X0, X11" "li x11,2" panic.go:101
-0x42000a2e 4 "AUIPC" "AUIPC $0, X1" "auipc x1,0x0" panic.go:101
-0x42000a32 4 "JALR" "CALL 34(X1)" "jalr x1,34(x1)" panic.go:101
-0x42000a36 2 "ADD" "ADD X9, X0, X10" "mv x10,x9" panic.go:105
-0x42000a38 2 "ADD" "ADD X18, X0, X11" "mv x11,x18" panic.go:105
-0x42000a3a 4 "AUIPC" "AUIPC $0, X1" "auipc x1,0x0" panic.go:105
-0x42000a3e 4 "JALR" "CALL 22(X1)" "jalr x1,22(x1)" panic.go:105
-0x42000a42 4 "AUIPC" "AUIPC $0, X1" "auipc x1,0x0" panic.go:106
-0x42000a46 4 "JALR" "CALL 174(X1)" "jalr x1,174(x1)" panic.go:106
-0x42000a4a 2 "" "BYTE 0x7300" ".byte 0x7300" runtime_esp32c3.go:79
-0x42000a4c 2 "ADDI" "ADDI $36, X2, X12" "addi x12,x2,36" runtime_esp32c3.go:79
-0x42000a4e 2 "JAL" "JMP -1(PC)" "j -6 <runtime.runtimePanicAt+0x52>" runtime_esp32c3.go:0
+0x420009f6 2 "ADDI" "ADDI $-16, X2, X2" "addi x2,x2,-16" ref=0x0 call=false .:0
+0x420009f8 2 "SW" "MOVW X1, 12(X2)" "sw x1,12(x2)" ref=0x0 call=false .:0
+0x420009fa 2 "SW" "MOVW X8, 8(X2)" "sw x8,8(x2)" ref=0x0 call=false .:0
+0x420009fc 2 "SW" "MOVW X9, 4(X2)" "sw x9,4(x2)" ref=0x0 call=false .:0
+0x420009fe 2 "SW" "MOVW X18, (X2)" "sw x18,0(x2)" ref=0x0 call=false .:0
+0x42000a00 2 "ADD" "ADD X12, X0, X18" "mv x18,x12" ref=0x0 call=false .:0
+0x42000a02 2 "ADD" "ADD X11, X0, X9" "mv x9,x11" ref=0x0 call=false .:0
+0x42000a04 2 "ADD" "ADD X10, X0, X8" "mv x8,x10" ref=0x0 call=false .:0
+0x42000a06 4 "LUI" "LUI $245760, X10" "lui x10,0x3c000" ref=0x0 call=false panic.go:99
+0x42000a0a 4 "ADDI" "ADDI $455, X10, X10" "addi x10,x10,455" ref=0x0 call=false panic.go:99
+0x42000a0e 2 "ADDI" "ADDI $24, X0, X11" "li x11,24" ref=0x0 call=false panic.go:99
+0x42000a10 4 "AUIPC" "AUIPC $0, X1" "auipc x1,0x0" ref=0x0 call=false panic.go:99
+0x42000a14 4 "JALR" "CALL 64(X1)" "jalr x1,64(x1)" ref=0x0 call=true panic.go:99
+0x42000a18 4 "ADDI" "ADDI $-4, X8, X10" "addi x10,x8,-4" ref=0x0 call=false panic.go:100
+0x42000a1c 4 "AUIPC" "AUIPC $0, X1" "auipc x1,0x0" ref=0x0 call=false panic.go:100
+0x42000a20 4 "JALR" "CALL 102(X1)" "jalr x1,102(x1)" ref=0x0 call=true panic.go:100
+0x42000a24 4 "LUI" "LUI $245760, X10" "lui x10,0x3c000" ref=0x0 call=false panic.go:101
+0x42000a28 4 "ADDI" "ADDI $479, X10, X10" "addi x10,x10,479" ref=0x0 call=false panic.go:101
+0x42000a2c 2 "ADDI" "ADDI $2, X0, X11" "li x11,2" ref=0x0 call=false panic.go:101
+0x42000a2e 4 "AUIPC" "AUIPC $0, X1" "auipc x1,0x0" ref=0x0 call=false panic.go:101
+0x42000a32 4 "JALR" "CALL 34(X1)" "jalr x1,34(x1)" ref=0x0 call=true panic.go:101
+0x42000a36 2 "ADD" "ADD X9, X0, X10" "mv x10,x9" ref=0x0 call=false panic.go:105
+0x42000a38 2 "ADD" "ADD X18, X0, X11" "mv x11,x18" ref=0x0 call=false panic.go:105
+0x42000a3a 4 "AUIPC" "AUIPC $0, X1" "auipc x1,0x0" ref=0x0 call=false panic.go:105
+0x42000a3e 4 "JALR" "CALL 22(X1)" "jalr x1,22(x1)" ref=0x0 call=true panic.go:105
+0x42000a42 4 "AUIPC" "AUIPC $0, X1" "auipc x1,0x0" ref=0x0 call=false panic.go:106
+0x42000a46 4 "JALR" "CALL 174(X1)" "jalr x1,174(x1)" ref=0x0 call=true panic.go:106
+0x42000a4a 2 "" "BYTE 0x7300" ".byte 0x7300" ref=0x0 call=false runtime_esp32c3.go:79
+0x42000a4c 2 "ADDI" "ADDI $36, X2, X12" "addi x12,x2,36" ref=0x0 call=false runtime_esp32c3.go:79
+0x42000a4e 2 "JAL" "JMP -1(PC)" "j -6 <runtime.runtimePanicAt+0x52>" ref=0x42000a48 call=false runtime_esp32c3.go:0
 == runtime.runtimePanic 0x420010ae 14 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/panic.go
-0x420010ae 2 "ADD" "ADD X10, X0, X11" "mv x11,x10" .:0
-0x420010b0 2 "ADDI" "ADDI $24, X0, X12" "li x12,24" panic.go:88
-0x420010b2 2 "ADD" "ADD X1, X0, X10" "mv x10,x1" panic.go:88
-0x420010b4 4 "AUIPC" "AUIPC $0, X1" "auipc x1,0x0" panic.go:88
-0x420010b8 4 "JALR" "CALL -1726(X1)" "jalr x1,-1726(x1)" panic.go:88
+0x420010ae 2 "ADD" "ADD X10, X0, X11" "mv x11,x10" ref=0x0 call=false .:0
+0x420010b0 2 "ADDI" "ADDI $24, X0, X12" "li x12,24" ref=0x0 call=false panic.go:88
+0x420010b2 2 "ADD" "ADD X1, X0, X10" "mv x10,x1" ref=0x0 call=false panic.go:88
+0x420010b4 4 "AUIPC" "AUIPC $0, X1" "auipc x1,0x0" ref=0x0 call=false panic.go:88
+0x420010b8 4 "JALR" "CALL -1726(X1)" "jalr x1,-1726(x1)" ref=0x0 call=true panic.go:88
 == main 0x42001272 536 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/runtime_esp32c3.go
-0x42001272 2 "ADDI" "ADDI $-32, X2, X2" "addi x2,x2,-32" runtime_esp32c3.go:0
-0x42001274 2 "SW" "MOVW X1, 28(X2)" "sw x1,28(x2)" runtime_esp32c3.go:0
-0x42001276 2 "SW" "MOVW X8, 24(X2)" "sw x8,24(x2)" runtime_esp32c3.go:0
-0x42001278 2 "SW" "MOVW X9, 20(X2)" "sw x9,20(x2)" runtime_esp32c3.go:0
-0x4200127a 2 "SW" "MOVW X18, 16(X2)" "sw x18,16(x2)" runtime_esp32c3.go:0
-0x4200127c 2 "SW" "MOVW X19, 12(X2)" "sw x19,12(x2)" runtime_esp32c3.go:0
-0x4200127e 4 "LUI" "LUI $393247, X19" "lui x19,0x6001f" runtime_esp32c3.go:0
-0x42001282 4 "LUI" "LUI $393224, X10" "lui x10,0x60008" runtime_esp32c3.go:0
-0x42001286 4 "LUI" "LUI $331140, X11" "lui x11,0x50d84" runtime_esp32c3.go:0
-0x4200128a 4 "SW" "MOVW X0, 72(X19)" "sw x0,72(x19)" volatile.go:37
-0x4200128e 4 "ADDI" "ADDI $-1375, X11, X11" "addi x11,x11,-1375" volatile.go:37
-0x42001292 4 "ADDI" "ADDI $128, X10, X12" "addi x12,x10,128" volatile.go:37
-0x42001296 2 "SW" "MOVW X11, 40(X12)" "sw x11,40(x12)" volatile.go:37
-0x42001298 4 "LUI" "LUI $586195, X11" "lui x11,0x8f1d3" volatile.go:37
-0x4200129c 4 "ADDI" "ADDI $298, X11, X11" "addi x11,x11,298" volatile.go:37
-0x420012a0 4 "SW" "MOVW X0, 144(X10)" "sw x0,144(x10)" volatile.go:37
-0x420012a4 2 "SW" "MOVW X11, 48(X12)" "sw x11,48(x12)" volatile.go:37
-0x420012a6 4 "LUI" "LUI $262144, X11" "lui x11,0x40000" volatile.go:37
-0x420012aa 2 "SW" "MOVW X11, 44(X12)" "sw x11,44(x12)" volatile.go:37
-0x420012ac 4 "LUI" "LUI $393408, X10" "lui x10,0x600c0" volatile.go:37
-0x420012b0 4 "ADDI" "ADDI $1024, X0, X11" "li x11,1024" volatile.go:37
-0x420012b4 2 "SW" "MOVW X11, 88(X10)" "sw x11,88(x10)" volatile.go:37
-0x420012b6 2 "ADDI" "ADDI $13, X0, X11" "li x11,13" volatile.go:37
-0x420012b8 2 "SW" "MOVW X11, 8(X10)" "sw x11,8(x10)" volatile.go:37
-0x420012ba 4 "LUI" "LUI $261249, X10" "lui x10,0x3fc81" volatile.go:37
-0x420012be 4 "ADDI" "MOV X10, X10" "mv x10,x10" volatile.go:37
-0x420012c2 4 "LUI" "LUI $261249, X11" "lui x11,0x3fc81" volatile.go:37
-0x420012c6 4 "ADDI" "ADDI $196, X11, X11" "addi x11,x11,196" volatile.go:37
-0x420012ca 4 "BEQ" "BEQ X10, X11, 3(PC)" "beq x10,x11,14 <main+0x66>" runtime_esp32xx.go:0
-0x420012ce 4 "SW" "MOVW X0, (X10)" "sw x0,0(x10)" runtime_esp32xx.go:16
-0x420012d2 2 "ADDI" "ADDI $4, X10, X10" "addi x10,x10,4" runtime_esp32xx.go:17
-0x420012d4 4 "BNE" "BNE X10, X11, -1(PC)" "bne x10,x11,-6 <main+0x5c>" runtime_esp32xx.go:0
-0x420012d8 4 "CSRRS" "CSRRS X0, MSTATUS, X18" "csrr x18,mstatus" riscv.go:28
-0x420012dc 2 "ADDI" "ADDI $8, X0, X10" "li x10,8" riscv.go:0
-0x420012de 2 "ADDI" "ADDI $31, X0, X9" "li x9,31" riscv.go:0
-0x420012e0 4 "CSRRC" "CSRRC X10, MSTATUS, X10" "csrrc x10,mstatus,x10" riscv.go:29
-0x420012e4 4 "LUI" "LUI $393410, X10" "lui x10,0x600c2" riscv.go:29
-0x420012e8 4 "ADDI" "ADDI $280, X10, X8" "addi x8,x10,280" riscv.go:29
-0x420012ec 2 "BEQ" "BEQZ X9, 5(PC)" "beqz x9,20 <main+0x8e>" runtime_esp32c3.go:0
-0x420012ee 2 "ADD" "ADD X8, X0, X10" "mv x10,x8" runtime_esp32c3.go:90
-0x420012f0 2 "ADDI" "MOV X0, X11" "li x11,0" runtime_esp32c3.go:90
-0x420012f2 4 "AUIPC" "AUIPC $1048575, X1" "auipc x1,0xfffff" runtime_esp32c3.go:90
-0x420012f6 4 "JALR" "CALL 370(X1)" "jalr x1,370(x1)" runtime_esp32c3.go:90
-0x420012fa 2 "ADDI" "ADDI $4, X8, X8" "addi x8,x8,4" runtime_esp32c3.go:91
-0x420012fc 2 "ADDI" "ADDI $-1, X9, X9" "addi x9,x9,-1" runtime_esp32c3.go:0
-0x420012fe 2 "BNE" "BNEZ X9, -4(PC)" "bnez x9,-16 <main+0x7c>" runtime_esp32c3.go:0
-0x42001300 4 "LUI" "LUI $393410, X10" "lui x10,0x600c2" runtime_esp32c3.go:0
-0x42001304 2 "ADDI" "ADDI $5, X0, X11" "li x11,5" runtime_esp32c3.go:0
-0x42001306 4 "SW" "MOVW X11, 404(X10)" "sw x11,404(x10)" volatile.go:37
-0x4200130a 4 "LUI" "LUI $270336, X11" "lui x11,0x42000" runtime_esp32c3.go:100
-0x4200130e 4 "ADDI" "ADDI $769, X11, X11" "addi x11,x11,769" runtime_esp32c3.go:100
-0x42001312 4 "ANDI" "ANDI $8, X18, X12" "andi x12,x18,8" riscv.go:36
-0x42001316 4 "CSRRW" "CSRRW X11, MTVEC, X0" "csrw mtvec,x11" runtime_esp32c3.go:100
-0x4200131a 4 "LUI" "LUI $393247, X11" "lui x11,0x6001f" runtime_esp32c3.go:0
-0x4200131e 4 "CSRRS" "CSRRS X12, MSTATUS, X12" "csrrs x12,mstatus,x12" riscv.go:37
-0x42001322 4 "LUI" "LUI $786436, X12" "lui x12,0xc0004" riscv.go:37
-0x42001326 2 "SW" "MOVW X12, (X11)" "sw x12,0(x11)" volatile.go:37
-0x42001328 2 "ADDI" "ADDI $9, X0, X11" "li x11,9" volatile.go:37
-0x4200132a 4 "SW" "MOVW X0, 24(X19)" "sw x0,24(x19)" volatile.go:37
-0x4200132e 4 "SW" "MOVW X0, 28(X19)" "sw x0,28(x19)" volatile.go:37
-0x42001332 4 "SW" "MOVW X0, 32(X19)" "sw x0,32(x19)" volatile.go:37
-0x42001336 4 "SW" "MOVW X11, 128(X10)" "sw x11,128(x10)" volatile.go:37
-0x4200133a 2 "ADD" "ADD X19, X0, X12" "mv x12,x19" volatile.go:25
-0x4200133c 2 "LW" "MOVW 112(X12), X11" "lw x11,112(x12)" volatile.go:25
-0x4200133e 2 "ADDI" "ADDI $8, X0, X18" "li x18,8" volatile.go:25
-0x42001340 4 "ORI" "ORI $1, X11, X11" "ori x11,x11,1" register.go:161
-0x42001344 2 "SW" "MOVW X11, 112(X12)" "sw x11,112(x12)" volatile.go:37
-0x42001346 4 "CSRRS" "CSRRS X0, MSTATUS, X11" "csrr x11,mstatus" riscv.go:28
-0x4200134a 4 "CSRRC" "CSRRC X18, MSTATUS, X12" "csrrc x12,mstatus,x18" riscv.go:29
-0x4200134e 4 "ADDI" "ADDI $256, X10, X13" "addi x13,x10,256" volatile.go:25
-0x42001352 2 "LW" "MOVW 12(X13), X12" "lw x12,12(x13)" volatile.go:25
-0x42001354 4 "ORI" "ORI $512, X12, X12" "ori x12,x12,512" register.go:161
-0x42001358 2 "SW" "MOVW X12, 12(X13)" "sw x12,12(x13)" volatile.go:37
-0x4200135a 2 "LW" "MOVW 12(X13), X12" "lw x12,12(x13)" volatile.go:25
-0x4200135c 4 "ANDI" "ANDI $-513, X12, X12" "andi x12,x12,-513" register.go:171
-0x42001360 2 "SW" "MOVW X12, 12(X13)" "sw x12,12(x13)" volatile.go:37
-0x42001362 2 "LW" "MOVW 8(X13), X12" "lw x12,8(x13)" volatile.go:25
-0x42001364 4 "ORI" "ORI $512, X12, X12" "ori x12,x12,512" register.go:161
-0x42001368 2 "SW" "MOVW X12, 8(X13)" "sw x12,8(x13)" volatile.go:37
-0x4200136a 2 "ADDI" "ADDI $10, X0, X12" "li x12,10" volatile.go:37
-0x4200136c 2 "SW" "MOVW X12, 56(X13)" "sw x12,56(x13)" volatile.go:37
-0x4200136e 4 "FENCE" "FENCE" "fence" runtime_esp32c3.go:144
-0x42001372 2 "LW" "MOVW 4(X13), X12" "lw x12,4(x13)" volatile.go:25
-0x42001374 2 "ANDI" "ANDI $8, X11, X11" "andi x11,x11,8" riscv.go:36
-0x42001376 4 "ORI" "ORI $512, X12, X12" "ori x12,x12,512" register.go:161
-0x4200137a 2 "SW" "MOVW X12, 4(X13)" "sw x12,4(x13)" volatile.go:37
-0x4200137c 4 "CSRRS" "CSRRS X11, MSTATUS, X10" "csrrs x10,mstatus,x11" riscv.go:37
-0x42001380 4 "AUIPC" "AUIPC $1048575, X1" "auipc x1,0xfffff" rand_hwrng.go:16
-0x42001384 4 "JALR" "CALL 1502(X1)" "jalr x1,1502(x1)" rand_hwrng.go:16
-0x42001388 4 "AUIPC" "AUIPC $1048575, X1" "auipc x1,0xfffff" rand_hwrng.go:17
-0x4200138c 4 "JALR" "CALL 1494(X1)" "jalr x1,1494(x1)" rand_hwrng.go:17
-0x42001390 4 "LUI" "LUI $261249, X11" "lui x11,0x3fc81" gc_blocks.go:367
-0x42001394 4 "ADDI" "ADDI $196, X11, X11" "addi x11,x11,196" gc_blocks.go:367
-0x42001398 4 "LUI" "LUI $261326, X10" "lui x10,0x3fcce" gc_blocks.go:367
-0x4200139c 4 "ADDI" "ADDI $1808, X10, X10" "addi x10,x10,1808" gc_blocks.go:367
-0x420013a0 4 "ADDI" "ADDI $65, X0, X12" "li x12,65" gc_blocks.go:0
-0x420013a4 4 "SUB" "SUB X11, X10, X13" "sub x13,x10,x11" gc_blocks.go:367
-0x420013a8 4 "ADDI" "ADDI $64, X13, X13" "addi x13,x13,64" gc_blocks.go:367
-0x420013ac 4 "DIVU" "DIVU X12, X13, X12" "divu x12,x13,x12" gc_blocks.go:367
-0x420013b0 4 "LUI" "LUI $261249, X19" "lui x19,0x3fc81" gc_blocks.go:368
-0x420013b4 4 "ADDI" "ADDI $8, X19, X19" "addi x19,x19,8" gc_blocks.go:368
-0x420013b8 2 "SUB" "SUB X12, X10, X10" "sub x10,x10,x12" gc_blocks.go:368
-0x420013ba 4 "SUB" "SUB X11, X10, X11" "sub x11,x10,x11" gc_blocks.go:371
-0x420013be 2 "SRLI" "SRLI $4, X11, X11" "srli x11,x11,0x4" gc_blocks.go:371
-0x420013c0 2 "ADD" "ADD X19, X0, X13" "mv x13,x19" gc_blocks.go:368
-0x420013c2 2 "SW" "MOVW X10, 12(X13)" "sw x10,12(x13)" gc_blocks.go:368
-0x420013c4 2 "SW" "MOVW X11, 24(X13)" "sw x11,24(x13)" gc_blocks.go:372
-0x420013c6 2 "ADDI" "MOV X0, X11" "li x11,0" runtime.go:53
-0x420013c8 4 "AUIPC" "AUIPC $1040383, X1" "auipc x1,0xfdfff" runtime.go:53
-0x420013cc 4 "JALR" "CALL -116(X1)" "jalr x1,-116(x1)" runtime.go:53
-0x420013d0 4 "AUIPC" "AUIPC $0, X1" "auipc x1,0x0" gc_blocks.go:321
-0x420013d4 4 "JALR" "CALL -1030(X1)" "jalr x1,-1030(x1)" gc_blocks.go:321
-0x420013d8 4 "ADDI" "ADDI $32, X0, X10" "li x10,32" task_stack.go:75
-0x420013dc 4 "AUIPC" "AUIPC $1048575, X1" "auipc x1,0xfffff" task_stack.go:75
-0x420013e0 4 "JALR" "CALL 2044(X1)" "jalr x1,2044(x1)" task_stack.go:75
-0x420013e4 2 "ADD" "ADD X10, X0, X8" "mv x8,x10" task_stack.go:75
-0x420013e6 2 "LUI" "LUI $2, X10" "lui x10,0x2" task_stack.go:43
-0x420013e8 2 "LUI" "LUI $2, X9" "lui x9,0x2" task_stack.go:43
-0x420013ea 4 "AUIPC" "AUIPC $1048575, X1" "auipc x1,0xfffff" task_stack.go:43
-0x420013ee 4 "JALR" "CALL 2030(X1)" "jalr x1,2030(x1)" task_stack.go:43
-0x420013f2 4 "ADDI" "ADDI $-52, X9, X11" "addi x11,x9,-52" task_stack.go:0
-0x420013f6 4 "LUI" "LUI $754623, X12" "lui x12,0xb83bf" task_stack.go:0
-0x420013fa 4 "LUI" "LUI $270336, X13" "lui x13,0x42000" task_stack_tinygoriscv.go:46
-0x420013fe 4 "ADDI" "ADDI $896, X13, X13" "addi x13,x13,896" task_stack_tinygoriscv.go:46
-0x42001402 4 "LUI" "LUI $270337, X14" "lui x14,0x42001" task_stack_tinygoriscv.go:52
-0x42001406 4 "ADDI" "ADDI $1162, X14, X14" "addi x14,x14,1162" task_stack_tinygoriscv.go:52
-0x4200140a 2 "ADD" "ADD X10, X11, X11" "add x11,x11,x10" task_stack.go:49
-0x4200140c 4 "ADDI" "ADDI $1397, X12, X12" "addi x12,x12,1397" task_stack.go:49
-0x42001410 2 "SW" "MOVW X11, 16(X8)" "sw x11,16(x8)" task_stack_tinygoriscv.go:38
-0x42001412 2 "SW" "MOVW X10, 20(X8)" "sw x10,20(x8)" task_stack.go:49
-0x42001414 2 "SW" "MOVW X12, (X10)" "sw x12,0(x10)" task_stack.go:50
-0x42001416 2 "SW" "MOVW X14, (X11)" "sw x14,0(x11)" task_stack_tinygoriscv.go:52
-0x42001418 4 "SW" "MOVW X0, 4(X11)" "sw x0,4(x11)" task_stack_tinygoriscv.go:55
-0x4200141c 2 "SW" "MOVW X13, 48(X11)" "sw x13,48(x11)" task_stack_tinygoriscv.go:46
-0x4200141e 4 "ADDI" "ADDI $48, X19, X10" "addi x10,x19,48" scheduler_cooperative.go:59
-0x42001422 2 "ADD" "ADD X8, X0, X11" "mv x11,x8" scheduler_cooperative.go:59
-0x42001424 4 "AUIPC" "AUIPC $1048575, X1" "auipc x1,0xfffff" scheduler_cooperative.go:59
-0x42001428 4 "JALR" "CALL 1282(X1)" "jalr x1,1282(x1)" scheduler_cooperative.go:59
-0x4200142c 4 "LUI" "LUI $261249, X9" "lui x9,0x3fc81" scheduler_cooperative.go:0
-0x42001430 4 "ADDI" "ADDI $28, X19, X8" "addi x8,x19,28" scheduler_cooperative.go:0
-0x42001434 4 "LBU" "MOVBU 12(X9), X10" "lbu x10,12(x9)" scheduler_cooperative.go:141
-0x42001438 2 "BNE" "BNEZ X10, 19(PC)" "bnez x10,76 <main+0x212>" scheduler_cooperative.go:0
-0x4200143a 4 "AUIPC" "AUIPC $1048575, X1" "auipc x1,0xfffff" scheduler_cooperative.go:171
-0x4200143e 4 "JALR" "CALL 1204(X1)" "jalr x1,1204(x1)" scheduler_cooperative.go:171
-0x42001442 2 "BEQ" "BEQZ X10, 6(PC)" "beqz x10,26 <main+0x1ea>" scheduler_cooperative.go:0
-0x42001444 2 "LW" "MOVW 16(X10), X11" "lw x11,16(x10)" task_stack_tinygoriscv.go:59
-0x42001446 4 "SW" "MOVW X10, 8(X19)" "sw x10,8(x19)" task_stack_unicore.go:32
-0x4200144a 2 "ADD" "ADD X11, X0, X10" "mv x10,x11" task_stack_tinygoriscv.go:59
-0x4200144c 2 "ADD" "ADD X8, X0, X11" "mv x11,x8" task_stack_tinygoriscv.go:59
-0x4200144e 4 "AUIPC" "AUIPC $1048575, X1" "auipc x1,0xfffff" task_stack_tinygoriscv.go:59
-0x42001452 4 "JALR" "CALL -194(X1)" "jalr x1,-194(x1)" task_stack_tinygoriscv.go:59
-0x42001456 4 "SW" "MOVW X0, 8(X19)" "sw x0,8(x19)" task_stack_unicore.go:36
-0x4200145a 2 "JAL" "JMP -11(PC)" "j -44 <main+0x1bc>" scheduler_cooperative.go:0
-0x4200145c 4 "CSRRS" "CSRRS X0, MSTATUS, X10" "csrr x10,mstatus" riscv.go:28
-0x42001460 4 "CSRRC" "CSRRC X18, MSTATUS, X11" "csrrc x11,mstatus,x18" riscv.go:29
-0x42001464 4 "CSRRS" "CSRRS X0, MSTATUS, X11" "csrr x11,mstatus" riscv.go:28
-0x42001468 4 "CSRRC" "CSRRC X18, MSTATUS, X12" "csrrc x12,mstatus,x18" riscv.go:29
-0x4200146c 4 "LW" "MOVW 48(X19), X12" "lw x12,48(x19)" queue.go:64
-0x42001470 2 "ANDI" "ANDI $8, X11, X11" "andi x11,x11,8" riscv.go:36
-0x42001472 4 "CSRRS" "CSRRS X11, MSTATUS, X11" "csrrs x11,mstatus,x11" riscv.go:37
-0x42001476 2 "BEQ" "BEQZ X12, 1(PC)" "beqz x12,6 <main+0x20a>" arch_tinygoriscv.go:0
-0x42001478 2 "" "BYTE 0x7300" ".byte 0x7300" arch_tinygoriscv.go:40
-0x4200147a 2 "ADDI" "ADDI $36, X2, X12" "addi x12,x2,36" arch_tinygoriscv.go:40
-0x4200147c 2 "ANDI" "ANDI $8, X10, X10" "andi x10,x10,8" riscv.go:36
-0x4200147e 4 "CSRRS" "CSRRS X10, MSTATUS, X10" "csrrs x10,mstatus,x10" riscv.go:37
-0x42001482 2 "JAL" "JMP -18(PC)" "j -74 <main+0x1c6>" scheduler_cooperative.go:0
-0x42001484 2 "" "BYTE 0x7300" ".byte 0x7300" runtime_esp32c3.go:79
-0x42001486 2 "ADDI" "ADDI $36, X2, X12" "addi x12,x2,36" runtime_esp32c3.go:79
-0x42001488 2 "JAL" "JMP -1(PC)" "j -6 <main+0x210>" runtime_esp32c3.go:0
+0x42001272 2 "ADDI" "ADDI $-32, X2, X2" "addi x2,x2,-32" ref=0x0 call=false runtime_esp32c3.go:0
+0x42001274 2 "SW" "MOVW X1, 28(X2)" "sw x1,28(x2)" ref=0x0 call=false runtime_esp32c3.go:0
+0x42001276 2 "SW" "MOVW X8, 24(X2)" "sw x8,24(x2)" ref=0x0 call=false runtime_esp32c3.go:0
+0x42001278 2 "SW" "MOVW X9, 20(X2)" "sw x9,20(x2)" ref=0x0 call=false runtime_esp32c3.go:0
+0x4200127a 2 "SW" "MOVW X18, 16(X2)" "sw x18,16(x2)" ref=0x0 call=false runtime_esp32c3.go:0
+0x4200127c 2 "SW" "MOVW X19, 12(X2)" "sw x19,12(x2)" ref=0x0 call=false runtime_esp32c3.go:0
+0x4200127e 4 "LUI" "LUI $393247, X19" "lui x19,0x6001f" ref=0x0 call=false runtime_esp32c3.go:0
+0x42001282 4 "LUI" "LUI $393224, X10" "lui x10,0x60008" ref=0x0 call=false runtime_esp32c3.go:0
+0x42001286 4 "LUI" "LUI $331140, X11" "lui x11,0x50d84" ref=0x0 call=false runtime_esp32c3.go:0
+0x4200128a 4 "SW" "MOVW X0, 72(X19)" "sw x0,72(x19)" ref=0x0 call=false volatile.go:37
+0x4200128e 4 "ADDI" "ADDI $-1375, X11, X11" "addi x11,x11,-1375" ref=0x0 call=false volatile.go:37
+0x42001292 4 "ADDI" "ADDI $128, X10, X12" "addi x12,x10,128" ref=0x0 call=false volatile.go:37
+0x42001296 2 "SW" "MOVW X11, 40(X12)" "sw x11,40(x12)" ref=0x0 call=false volatile.go:37
+0x42001298 4 "LUI" "LUI $586195, X11" "lui x11,0x8f1d3" ref=0x0 call=false volatile.go:37
+0x4200129c 4 "ADDI" "ADDI $298, X11, X11" "addi x11,x11,298" ref=0x0 call=false volatile.go:37
+0x420012a0 4 "SW" "MOVW X0, 144(X10)" "sw x0,144(x10)" ref=0x0 call=false volatile.go:37
+0x420012a4 2 "SW" "MOVW X11, 48(X12)" "sw x11,48(x12)" ref=0x0 call=false volatile.go:37
+0x420012a6 4 "LUI" "LUI $262144, X11" "lui x11,0x40000" ref=0x0 call=false volatile.go:37
+0x420012aa 2 "SW" "MOVW X11, 44(X12)" "sw x11,44(x12)" ref=0x0 call=false volatile.go:37
+0x420012ac 4 "LUI" "LUI $393408, X10" "lui x10,0x600c0" ref=0x0 call=false volatile.go:37
+0x420012b0 4 "ADDI" "ADDI $1024, X0, X11" "li x11,1024" ref=0x0 call=false volatile.go:37
+0x420012b4 2 "SW" "MOVW X11, 88(X10)" "sw x11,88(x10)" ref=0x0 call=false volatile.go:37
+0x420012b6 2 "ADDI" "ADDI $13, X0, X11" "li x11,13" ref=0x0 call=false volatile.go:37
+0x420012b8 2 "SW" "MOVW X11, 8(X10)" "sw x11,8(x10)" ref=0x0 call=false volatile.go:37
+0x420012ba 4 "LUI" "LUI $261249, X10" "lui x10,0x3fc81" ref=0x0 call=false volatile.go:37
+0x420012be 4 "ADDI" "MOV X10, X10" "mv x10,x10" ref=0x0 call=false volatile.go:37
+0x420012c2 4 "LUI" "LUI $261249, X11" "lui x11,0x3fc81" ref=0x0 call=false volatile.go:37
+0x420012c6 4 "ADDI" "ADDI $196, X11, X11" "addi x11,x11,196" ref=0x0 call=false volatile.go:37
+0x420012ca 4 "BEQ" "BEQ X10, X11, 3(PC)" "beq x10,x11,14 <main+0x66>" ref=0x420012d8 call=false runtime_esp32xx.go:0
+0x420012ce 4 "SW" "MOVW X0, (X10)" "sw x0,0(x10)" ref=0x0 call=false runtime_esp32xx.go:16
+0x420012d2 2 "ADDI" "ADDI $4, X10, X10" "addi x10,x10,4" ref=0x0 call=false runtime_esp32xx.go:17
+0x420012d4 4 "BNE" "BNE X10, X11, -1(PC)" "bne x10,x11,-6 <main+0x5c>" ref=0x420012ce call=false runtime_esp32xx.go:0
+0x420012d8 4 "CSRRS" "CSRRS X0, MSTATUS, X18" "csrr x18,mstatus" ref=0x0 call=false riscv.go:28
+0x420012dc 2 "ADDI" "ADDI $8, X0, X10" "li x10,8" ref=0x0 call=false riscv.go:0
+0x420012de 2 "ADDI" "ADDI $31, X0, X9" "li x9,31" ref=0x0 call=false riscv.go:0
+0x420012e0 4 "CSRRC" "CSRRC X10, MSTATUS, X10" "csrrc x10,mstatus,x10" ref=0x0 call=false riscv.go:29
+0x420012e4 4 "LUI" "LUI $393410, X10" "lui x10,0x600c2" ref=0x0 call=false riscv.go:29
+0x420012e8 4 "ADDI" "ADDI $280, X10, X8" "addi x8,x10,280" ref=0x0 call=false riscv.go:29
+0x420012ec 2 "BEQ" "BEQZ X9, 5(PC)" "beqz x9,20 <main+0x8e>" ref=0x42001300 call=false runtime_esp32c3.go:0
+0x420012ee 2 "ADD" "ADD X8, X0, X10" "mv x10,x8" ref=0x0 call=false runtime_esp32c3.go:90
+0x420012f0 2 "ADDI" "MOV X0, X11" "li x11,0" ref=0x0 call=false runtime_esp32c3.go:90
+0x420012f2 4 "AUIPC" "AUIPC $1048575, X1" "auipc x1,0xfffff" ref=0x0 call=false runtime_esp32c3.go:90
+0x420012f6 4 "JALR" "CALL 370(X1)" "jalr x1,370(x1)" ref=0x0 call=true runtime_esp32c3.go:90
+0x420012fa 2 "ADDI" "ADDI $4, X8, X8" "addi x8,x8,4" ref=0x0 call=false runtime_esp32c3.go:91
+0x420012fc 2 "ADDI" "ADDI $-1, X9, X9" "addi x9,x9,-1" ref=0x0 call=false runtime_esp32c3.go:0
+0x420012fe 2 "BNE" "BNEZ X9, -4(PC)" "bnez x9,-16 <main+0x7c>" ref=0x420012ee call=false runtime_esp32c3.go:0
+0x42001300 4 "LUI" "LUI $393410, X10" "lui x10,0x600c2" ref=0x0 call=false runtime_esp32c3.go:0
+0x42001304 2 "ADDI" "ADDI $5, X0, X11" "li x11,5" ref=0x0 call=false runtime_esp32c3.go:0
+0x42001306 4 "SW" "MOVW X11, 404(X10)" "sw x11,404(x10)" ref=0x0 call=false volatile.go:37
+0x4200130a 4 "LUI" "LUI $270336, X11" "lui x11,0x42000" ref=0x0 call=false runtime_esp32c3.go:100
+0x4200130e 4 "ADDI" "ADDI $769, X11, X11" "addi x11,x11,769" ref=0x0 call=false runtime_esp32c3.go:100
+0x42001312 4 "ANDI" "ANDI $8, X18, X12" "andi x12,x18,8" ref=0x0 call=false riscv.go:36
+0x42001316 4 "CSRRW" "CSRRW X11, MTVEC, X0" "csrw mtvec,x11" ref=0x0 call=false runtime_esp32c3.go:100
+0x4200131a 4 "LUI" "LUI $393247, X11" "lui x11,0x6001f" ref=0x0 call=false runtime_esp32c3.go:0
+0x4200131e 4 "CSRRS" "CSRRS X12, MSTATUS, X12" "csrrs x12,mstatus,x12" ref=0x0 call=false riscv.go:37
+0x42001322 4 "LUI" "LUI $786436, X12" "lui x12,0xc0004" ref=0x0 call=false riscv.go:37
+0x42001326 2 "SW" "MOVW X12, (X11)" "sw x12,0(x11)" ref=0x0 call=false volatile.go:37
+0x42001328 2 "ADDI" "ADDI $9, X0, X11" "li x11,9" ref=0x0 call=false volatile.go:37
+0x4200132a 4 "SW" "MOVW X0, 24(X19)" "sw x0,24(x19)" ref=0x0 call=false volatile.go:37
+0x4200132e 4 "SW" "MOVW X0, 28(X19)" "sw x0,28(x19)" ref=0x0 call=false volatile.go:37
+0x42001332 4 "SW" "MOVW X0, 32(X19)" "sw x0,32(x19)" ref=0x0 call=false volatile.go:37
+0x42001336 4 "SW" "MOVW X11, 128(X10)" "sw x11,128(x10)" ref=0x0 call=false volatile.go:37
+0x4200133a 2 "ADD" "ADD X19, X0, X12" "mv x12,x19" ref=0x0 call=false volatile.go:25
+0x4200133c 2 "LW" "MOVW 112(X12), X11" "lw x11,112(x12)" ref=0x0 call=false volatile.go:25
+0x4200133e 2 "ADDI" "ADDI $8, X0, X18" "li x18,8" ref=0x0 call=false volatile.go:25
+0x42001340 4 "ORI" "ORI $1, X11, X11" "ori x11,x11,1" ref=0x0 call=false register.go:161
+0x42001344 2 "SW" "MOVW X11, 112(X12)" "sw x11,112(x12)" ref=0x0 call=false volatile.go:37
+0x42001346 4 "CSRRS" "CSRRS X0, MSTATUS, X11" "csrr x11,mstatus" ref=0x0 call=false riscv.go:28
+0x4200134a 4 "CSRRC" "CSRRC X18, MSTATUS, X12" "csrrc x12,mstatus,x18" ref=0x0 call=false riscv.go:29
+0x4200134e 4 "ADDI" "ADDI $256, X10, X13" "addi x13,x10,256" ref=0x0 call=false volatile.go:25
+0x42001352 2 "LW" "MOVW 12(X13), X12" "lw x12,12(x13)" ref=0x0 call=false volatile.go:25
+0x42001354 4 "ORI" "ORI $512, X12, X12" "ori x12,x12,512" ref=0x0 call=false register.go:161
+0x42001358 2 "SW" "MOVW X12, 12(X13)" "sw x12,12(x13)" ref=0x0 call=false volatile.go:37
+0x4200135a 2 "LW" "MOVW 12(X13), X12" "lw x12,12(x13)" ref=0x0 call=false volatile.go:25
+0x4200135c 4 "ANDI" "ANDI $-513, X12, X12" "andi x12,x12,-513" ref=0x0 call=false register.go:171
+0x42001360 2 "SW" "MOVW X12, 12(X13)" "sw x12,12(x13)" ref=0x0 call=false volatile.go:37
+0x42001362 2 "LW" "MOVW 8(X13), X12" "lw x12,8(x13)" ref=0x0 call=false volatile.go:25
+0x42001364 4 "ORI" "ORI $512, X12, X12" "ori x12,x12,512" ref=0x0 call=false register.go:161
+0x42001368 2 "SW" "MOVW X12, 8(X13)" "sw x12,8(x13)" ref=0x0 call=false volatile.go:37
+0x4200136a 2 "ADDI" "ADDI $10, X0, X12" "li x12,10" ref=0x0 call=false volatile.go:37
+0x4200136c 2 "SW" "MOVW X12, 56(X13)" "sw x12,56(x13)" ref=0x0 call=false volatile.go:37
+0x4200136e 4 "FENCE" "FENCE" "fence" ref=0x0 call=false runtime_esp32c3.go:144
+0x42001372 2 "LW" "MOVW 4(X13), X12" "lw x12,4(x13)" ref=0x0 call=false volatile.go:25
+0x42001374 2 "ANDI" "ANDI $8, X11, X11" "andi x11,x11,8" ref=0x0 call=false riscv.go:36
+0x42001376 4 "ORI" "ORI $512, X12, X12" "ori x12,x12,512" ref=0x0 call=false register.go:161
+0x4200137a 2 "SW" "MOVW X12, 4(X13)" "sw x12,4(x13)" ref=0x0 call=false volatile.go:37
+0x4200137c 4 "CSRRS" "CSRRS X11, MSTATUS, X10" "csrrs x10,mstatus,x11" ref=0x0 call=false riscv.go:37
+0x42001380 4 "AUIPC" "AUIPC $1048575, X1" "auipc x1,0xfffff" ref=0x0 call=false rand_hwrng.go:16
+0x42001384 4 "JALR" "CALL 1502(X1)" "jalr x1,1502(x1)" ref=0x0 call=true rand_hwrng.go:16
+0x42001388 4 "AUIPC" "AUIPC $1048575, X1" "auipc x1,0xfffff" ref=0x0 call=false rand_hwrng.go:17
+0x4200138c 4 "JALR" "CALL 1494(X1)" "jalr x1,1494(x1)" ref=0x0 call=true rand_hwrng.go:17
+0x42001390 4 "LUI" "LUI $261249, X11" "lui x11,0x3fc81" ref=0x0 call=false gc_blocks.go:367
+0x42001394 4 "ADDI" "ADDI $196, X11, X11" "addi x11,x11,196" ref=0x0 call=false gc_blocks.go:367
+0x42001398 4 "LUI" "LUI $261326, X10" "lui x10,0x3fcce" ref=0x0 call=false gc_blocks.go:367
+0x4200139c 4 "ADDI" "ADDI $1808, X10, X10" "addi x10,x10,1808" ref=0x0 call=false gc_blocks.go:367
+0x420013a0 4 "ADDI" "ADDI $65, X0, X12" "li x12,65" ref=0x0 call=false gc_blocks.go:0
+0x420013a4 4 "SUB" "SUB X11, X10, X13" "sub x13,x10,x11" ref=0x0 call=false gc_blocks.go:367
+0x420013a8 4 "ADDI" "ADDI $64, X13, X13" "addi x13,x13,64" ref=0x0 call=false gc_blocks.go:367
+0x420013ac 4 "DIVU" "DIVU X12, X13, X12" "divu x12,x13,x12" ref=0x0 call=false gc_blocks.go:367
+0x420013b0 4 "LUI" "LUI $261249, X19" "lui x19,0x3fc81" ref=0x0 call=false gc_blocks.go:368
+0x420013b4 4 "ADDI" "ADDI $8, X19, X19" "addi x19,x19,8" ref=0x0 call=false gc_blocks.go:368
+0x420013b8 2 "SUB" "SUB X12, X10, X10" "sub x10,x10,x12" ref=0x0 call=false gc_blocks.go:368
+0x420013ba 4 "SUB" "SUB X11, X10, X11" "sub x11,x10,x11" ref=0x0 call=false gc_blocks.go:371
+0x420013be 2 "SRLI" "SRLI $4, X11, X11" "srli x11,x11,0x4" ref=0x0 call=false gc_blocks.go:371
+0x420013c0 2 "ADD" "ADD X19, X0, X13" "mv x13,x19" ref=0x0 call=false gc_blocks.go:368
+0x420013c2 2 "SW" "MOVW X10, 12(X13)" "sw x10,12(x13)" ref=0x0 call=false gc_blocks.go:368
+0x420013c4 2 "SW" "MOVW X11, 24(X13)" "sw x11,24(x13)" ref=0x0 call=false gc_blocks.go:372
+0x420013c6 2 "ADDI" "MOV X0, X11" "li x11,0" ref=0x0 call=false runtime.go:53
+0x420013c8 4 "AUIPC" "AUIPC $1040383, X1" "auipc x1,0xfdfff" ref=0x0 call=false runtime.go:53
+0x420013cc 4 "JALR" "CALL -116(X1)" "jalr x1,-116(x1)" ref=0x0 call=true runtime.go:53
+0x420013d0 4 "AUIPC" "AUIPC $0, X1" "auipc x1,0x0" ref=0x0 call=false gc_blocks.go:321
+0x420013d4 4 "JALR" "CALL -1030(X1)" "jalr x1,-1030(x1)" ref=0x0 call=true gc_blocks.go:321
+0x420013d8 4 "ADDI" "ADDI $32, X0, X10" "li x10,32" ref=0x0 call=false task_stack.go:75
+0x420013dc 4 "AUIPC" "AUIPC $1048575, X1" "auipc x1,0xfffff" ref=0x0 call=false task_stack.go:75
+0x420013e0 4 "JALR" "CALL 2044(X1)" "jalr x1,2044(x1)" ref=0x0 call=true task_stack.go:75
+0x420013e4 2 "ADD" "ADD X10, X0, X8" "mv x8,x10" ref=0x0 call=false task_stack.go:75
+0x420013e6 2 "LUI" "LUI $2, X10" "lui x10,0x2" ref=0x0 call=false task_stack.go:43
+0x420013e8 2 "LUI" "LUI $2, X9" "lui x9,0x2" ref=0x0 call=false task_stack.go:43
+0x420013ea 4 "AUIPC" "AUIPC $1048575, X1" "auipc x1,0xfffff" ref=0x0 call=false task_stack.go:43
+0x420013ee 4 "JALR" "CALL 2030(X1)" "jalr x1,2030(x1)" ref=0x0 call=true task_stack.go:43
+0x420013f2 4 "ADDI" "ADDI $-52, X9, X11" "addi x11,x9,-52" ref=0x0 call=false task_stack.go:0
+0x420013f6 4 "LUI" "LUI $754623, X12" "lui x12,0xb83bf" ref=0x0 call=false task_stack.go:0
+0x420013fa 4 "LUI" "LUI $270336, X13" "lui x13,0x42000" ref=0x0 call=false task_stack_tinygoriscv.go:46
+0x420013fe 4 "ADDI" "ADDI $896, X13, X13" "addi x13,x13,896" ref=0x0 call=false task_stack_tinygoriscv.go:46
+0x42001402 4 "LUI" "LUI $270337, X14" "lui x14,0x42001" ref=0x0 call=false task_stack_tinygoriscv.go:52
+0x42001406 4 "ADDI" "ADDI $1162, X14, X14" "addi x14,x14,1162" ref=0x0 call=false task_stack_tinygoriscv.go:52
+0x4200140a 2 "ADD" "ADD X10, X11, X11" "add x11,x11,x10" ref=0x0 call=false task_stack.go:49
+0x4200140c 4 "ADDI" "ADDI $1397, X12, X12" "addi x12,x12,1397" ref=0x0 call=false task_stack.go:49
+0x42001410 2 "SW" "MOVW X11, 16(X8)" "sw x11,16(x8)" ref=0x0 call=false task_stack_tinygoriscv.go:38
+0x42001412 2 "SW" "MOVW X10, 20(X8)" "sw x10,20(x8)" ref=0x0 call=false task_stack.go:49
+0x42001414 2 "SW" "MOVW X12, (X10)" "sw x12,0(x10)" ref=0x0 call=false task_stack.go:50
+0x42001416 2 "SW" "MOVW X14, (X11)" "sw x14,0(x11)" ref=0x0 call=false task_stack_tinygoriscv.go:52
+0x42001418 4 "SW" "MOVW X0, 4(X11)" "sw x0,4(x11)" ref=0x0 call=false task_stack_tinygoriscv.go:55
+0x4200141c 2 "SW" "MOVW X13, 48(X11)" "sw x13,48(x11)" ref=0x0 call=false task_stack_tinygoriscv.go:46
+0x4200141e 4 "ADDI" "ADDI $48, X19, X10" "addi x10,x19,48" ref=0x0 call=false scheduler_cooperative.go:59
+0x42001422 2 "ADD" "ADD X8, X0, X11" "mv x11,x8" ref=0x0 call=false scheduler_cooperative.go:59
+0x42001424 4 "AUIPC" "AUIPC $1048575, X1" "auipc x1,0xfffff" ref=0x0 call=false scheduler_cooperative.go:59
+0x42001428 4 "JALR" "CALL 1282(X1)" "jalr x1,1282(x1)" ref=0x0 call=true scheduler_cooperative.go:59
+0x4200142c 4 "LUI" "LUI $261249, X9" "lui x9,0x3fc81" ref=0x0 call=false scheduler_cooperative.go:0
+0x42001430 4 "ADDI" "ADDI $28, X19, X8" "addi x8,x19,28" ref=0x0 call=false scheduler_cooperative.go:0
+0x42001434 4 "LBU" "MOVBU 12(X9), X10" "lbu x10,12(x9)" ref=0x0 call=false scheduler_cooperative.go:141
+0x42001438 2 "BNE" "BNEZ X10, 19(PC)" "bnez x10,76 <main+0x212>" ref=0x42001484 call=false scheduler_cooperative.go:0
+0x4200143a 4 "AUIPC" "AUIPC $1048575, X1" "auipc x1,0xfffff" ref=0x0 call=false scheduler_cooperative.go:171
+0x4200143e 4 "JALR" "CALL 1204(X1)" "jalr x1,1204(x1)" ref=0x0 call=true scheduler_cooperative.go:171
+0x42001442 2 "BEQ" "BEQZ X10, 6(PC)" "beqz x10,26 <main+0x1ea>" ref=0x4200145c call=false scheduler_cooperative.go:0
+0x42001444 2 "LW" "MOVW 16(X10), X11" "lw x11,16(x10)" ref=0x0 call=false task_stack_tinygoriscv.go:59
+0x42001446 4 "SW" "MOVW X10, 8(X19)" "sw x10,8(x19)" ref=0x0 call=false task_stack_unicore.go:32
+0x4200144a 2 "ADD" "ADD X11, X0, X10" "mv x10,x11" ref=0x0 call=false task_stack_tinygoriscv.go:59
+0x4200144c 2 "ADD" "ADD X8, X0, X11" "mv x11,x8" ref=0x0 call=false task_stack_tinygoriscv.go:59
+0x4200144e 4 "AUIPC" "AUIPC $1048575, X1" "auipc x1,0xfffff" ref=0x0 call=false task_stack_tinygoriscv.go:59
+0x42001452 4 "JALR" "CALL -194(X1)" "jalr x1,-194(x1)" ref=0x0 call=true task_stack_tinygoriscv.go:59
+0x42001456 4 "SW" "MOVW X0, 8(X19)" "sw x0,8(x19)" ref=0x0 call=false task_stack_unicore.go:36
+0x4200145a 2 "JAL" "JMP -11(PC)" "j -44 <main+0x1bc>" ref=0x4200142e call=false scheduler_cooperative.go:0
+0x4200145c 4 "CSRRS" "CSRRS X0, MSTATUS, X10" "csrr x10,mstatus" ref=0x0 call=false riscv.go:28
+0x42001460 4 "CSRRC" "CSRRC X18, MSTATUS, X11" "csrrc x11,mstatus,x18" ref=0x0 call=false riscv.go:29
+0x42001464 4 "CSRRS" "CSRRS X0, MSTATUS, X11" "csrr x11,mstatus" ref=0x0 call=false riscv.go:28
+0x42001468 4 "CSRRC" "CSRRC X18, MSTATUS, X12" "csrrc x12,mstatus,x18" ref=0x0 call=false riscv.go:29
+0x4200146c 4 "LW" "MOVW 48(X19), X12" "lw x12,48(x19)" ref=0x0 call=false queue.go:64
+0x42001470 2 "ANDI" "ANDI $8, X11, X11" "andi x11,x11,8" ref=0x0 call=false riscv.go:36
+0x42001472 4 "CSRRS" "CSRRS X11, MSTATUS, X11" "csrrs x11,mstatus,x11" ref=0x0 call=false riscv.go:37
+0x42001476 2 "BEQ" "BEQZ X12, 1(PC)" "beqz x12,6 <main+0x20a>" ref=0x4200147c call=false arch_tinygoriscv.go:0
+0x42001478 2 "" "BYTE 0x7300" ".byte 0x7300" ref=0x0 call=false arch_tinygoriscv.go:40
+0x4200147a 2 "ADDI" "ADDI $36, X2, X12" "addi x12,x2,36" ref=0x0 call=false arch_tinygoriscv.go:40
+0x4200147c 2 "ANDI" "ANDI $8, X10, X10" "andi x10,x10,8" ref=0x0 call=false riscv.go:36
+0x4200147e 4 "CSRRS" "CSRRS X10, MSTATUS, X10" "csrrs x10,mstatus,x10" ref=0x0 call=false riscv.go:37
+0x42001482 2 "JAL" "JMP -18(PC)" "j -74 <main+0x1c6>" ref=0x42001438 call=false scheduler_cooperative.go:0
+0x42001484 2 "" "BYTE 0x7300" ".byte 0x7300" ref=0x0 call=false runtime_esp32c3.go:79
+0x42001486 2 "ADDI" "ADDI $36, X2, X12" "addi x12,x2,36" ref=0x0 call=false runtime_esp32c3.go:79
+0x42001488 2 "JAL" "JMP -1(PC)" "j -6 <main+0x210>" ref=0x42001482 call=false runtime_esp32c3.go:0
 == runtime.run$1$gowrapper 0x4200148a 88 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/scheduler_cooperative.go
-0x4200148a 2 "ADDI" "ADDI $-32, X2, X2" "addi x2,x2,-32" scheduler_cooperative.go:0
-0x4200148c 2 "SW" "MOVW X1, 28(X2)" "sw x1,28(x2)" scheduler_cooperative.go:0
-0x4200148e 2 "SW" "MOVW X8, 24(X2)" "sw x8,24(x2)" scheduler_cooperative.go:0
-0x42001490 2 "SW" "MOVW X9, 20(X2)" "sw x9,20(x2)" scheduler_cooperative.go:0
-0x42001492 2 "ADDI" "ADDI $1, X0, X9" "li x9,1" scheduler_cooperative.go:0
-0x42001494 2 "ADDI" "ADDI $2, X0, X10" "li x10,2" scheduler_cooperative.go:0
-0x42001496 2 "ADDI" "ADDI $3, X0, X11" "li x11,3" scheduler_cooperative.go:0
-0x42001498 2 "SW" "MOVW X9, 8(X2)" "sw x9,8(x2)" main.go:13
-0x4200149a 2 "SW" "MOVW X10, 12(X2)" "sw x10,12(x2)" main.go:13
-0x4200149c 2 "SW" "MOVW X11, 16(X2)" "sw x11,16(x2)" main.go:13
-0x4200149e 2 "ADDI" "ADDI $8, X2, X10" "addi x10,x2,8" main.go:13
-0x420014a0 4 "AUIPC" "AUIPC $0, X1" "auipc x1,0x0" main.go:13
-0x420014a4 4 "JALR" "CALL 66(X1)" "jalr x1,66(x1)" main.go:13
-0x420014a8 2 "ADD" "ADD X10, X0, X8" "mv x8,x10" main.go:13
-0x420014aa 4 "BGE" "BGEZ X10, 5(PC)" "bgez x10,20 <runtime.run$1$gowrapper+0x34>" print.go:0
-0x420014ae 4 "ADDI" "ADDI $45, X0, X10" "li x10,45" print.go:69
-0x420014b2 4 "AUIPC" "AUIPC $1048575, X1" "auipc x1,0xfffff" print.go:69
-0x420014b6 4 "JALR" "CALL 1626(X1)" "jalr x1,1626(x1)" print.go:69
-0x420014ba 4 "SUB" "NEG X8, X8" "neg x8,x8" print.go:70
-0x420014be 2 "ADD" "ADD X8, X0, X10" "mv x10,x8" print.go:72
-0x420014c0 4 "AUIPC" "AUIPC $0, X1" "auipc x1,0x0" print.go:72
-0x420014c4 4 "JALR" "CALL -1536(X1)" "jalr x1,-1536(x1)" print.go:72
-0x420014c8 4 "AUIPC" "AUIPC $1048575, X1" "auipc x1,0xfffff" main.go:13
-0x420014cc 4 "JALR" "CALL 1576(X1)" "jalr x1,1576(x1)" main.go:13
-0x420014d0 4 "LUI" "LUI $261249, X10" "lui x10,0x3fc81" scheduler_cooperative.go:251
-0x420014d4 4 "SB" "MOVB X9, 12(X10)" "sb x9,12(x10)" scheduler_cooperative.go:251
-0x420014d8 2 "LW" "MOVW 28(X2), X1" "lw x1,28(x2)" scheduler_cooperative.go:248
-0x420014da 2 "LW" "MOVW 24(X2), X8" "lw x8,24(x2)" scheduler_cooperative.go:248
-0x420014dc 2 "LW" "MOVW 20(X2), X9" "lw x9,20(x2)" scheduler_cooperative.go:248
-0x420014de 2 "ADDI" "ADDI $32, X2, X2" "addi x2,x2,32" scheduler_cooperative.go:248
-0x420014e0 2 "JALR" "RET" "ret" scheduler_cooperative.go:248
+0x4200148a 2 "ADDI" "ADDI $-32, X2, X2" "addi x2,x2,-32" ref=0x0 call=false scheduler_cooperative.go:0
+0x4200148c 2 "SW" "MOVW X1, 28(X2)" "sw x1,28(x2)" ref=0x0 call=false scheduler_cooperative.go:0
+0x4200148e 2 "SW" "MOVW X8, 24(X2)" "sw x8,24(x2)" ref=0x0 call=false scheduler_cooperative.go:0
+0x42001490 2 "SW" "MOVW X9, 20(X2)" "sw x9,20(x2)" ref=0x0 call=false scheduler_cooperative.go:0
+0x42001492 2 "ADDI" "ADDI $1, X0, X9" "li x9,1" ref=0x0 call=false scheduler_cooperative.go:0
+0x42001494 2 "ADDI" "ADDI $2, X0, X10" "li x10,2" ref=0x0 call=false scheduler_cooperative.go:0
+0x42001496 2 "ADDI" "ADDI $3, X0, X11" "li x11,3" ref=0x0 call=false scheduler_cooperative.go:0
+0x42001498 2 "SW" "MOVW X9, 8(X2)" "sw x9,8(x2)" ref=0x0 call=false main.go:13
+0x4200149a 2 "SW" "MOVW X10, 12(X2)" "sw x10,12(x2)" ref=0x0 call=false main.go:13
+0x4200149c 2 "SW" "MOVW X11, 16(X2)" "sw x11,16(x2)" ref=0x0 call=false main.go:13
+0x4200149e 2 "ADDI" "ADDI $8, X2, X10" "addi x10,x2,8" ref=0x0 call=false main.go:13
+0x420014a0 4 "AUIPC" "AUIPC $0, X1" "auipc x1,0x0" ref=0x0 call=false main.go:13
+0x420014a4 4 "JALR" "CALL 66(X1)" "jalr x1,66(x1)" ref=0x0 call=true main.go:13
+0x420014a8 2 "ADD" "ADD X10, X0, X8" "mv x8,x10" ref=0x0 call=false main.go:13
+0x420014aa 4 "BGE" "BGEZ X10, 5(PC)" "bgez x10,20 <runtime.run$1$gowrapper+0x34>" ref=0x420014be call=false print.go:0
+0x420014ae 4 "ADDI" "ADDI $45, X0, X10" "li x10,45" ref=0x0 call=false print.go:69
+0x420014b2 4 "AUIPC" "AUIPC $1048575, X1" "auipc x1,0xfffff" ref=0x0 call=false print.go:69
+0x420014b6 4 "JALR" "CALL 1626(X1)" "jalr x1,1626(x1)" ref=0x0 call=true print.go:69
+0x420014ba 4 "SUB" "NEG X8, X8" "neg x8,x8" ref=0x0 call=false print.go:70
+0x420014be 2 "ADD" "ADD X8, X0, X10" "mv x10,x8" ref=0x0 call=false print.go:72
+0x420014c0 4 "AUIPC" "AUIPC $0, X1" "auipc x1,0x0" ref=0x0 call=false print.go:72
+0x420014c4 4 "JALR" "CALL -1536(X1)" "jalr x1,-1536(x1)" ref=0x0 call=true print.go:72
+0x420014c8 4 "AUIPC" "AUIPC $1048575, X1" "auipc x1,0xfffff" ref=0x0 call=false main.go:13
+0x420014cc 4 "JALR" "CALL 1576(X1)" "jalr x1,1576(x1)" ref=0x0 call=true main.go:13
+0x420014d0 4 "LUI" "LUI $261249, X10" "lui x10,0x3fc81" ref=0x0 call=false scheduler_cooperative.go:251
+0x420014d4 4 "SB" "MOVB X9, 12(X10)" "sb x9,12(x10)" ref=0x0 call=false scheduler_cooperative.go:251
+0x420014d8 2 "LW" "MOVW 28(X2), X1" "lw x1,28(x2)" ref=0x0 call=false scheduler_cooperative.go:248
+0x420014da 2 "LW" "MOVW 24(X2), X8" "lw x8,24(x2)" ref=0x0 call=false scheduler_cooperative.go:248
+0x420014dc 2 "LW" "MOVW 20(X2), X9" "lw x9,20(x2)" ref=0x0 call=false scheduler_cooperative.go:248
+0x420014de 2 "ADDI" "ADDI $32, X2, X2" "addi x2,x2,32" ref=0x0 call=false scheduler_cooperative.go:248
+0x420014e0 2 "JALR" "RET" "ret" ref=0x0 call=false scheduler_cooperative.go:248
 == main.sumInts 0x420014e2 20 /Users/egon/code/gio/lensm/testdata/tinygo/main.go
-0x420014e2 2 "ADD" "ADD X10, X0, X11" "mv x11,x10" main.go:0
-0x420014e4 2 "ADDI" "MOV X0, X10" "li x10,0" main.go:0
-0x420014e6 2 "ADDI" "ADDI $3, X0, X12" "li x12,3" main.go:0
-0x420014e8 2 "BEQ" "BEQZ X12, 3(PC)" "beqz x12,12 <main.sumInts+0x12>" main.go:0
-0x420014ea 2 "LW" "MOVW (X11), X13" "lw x13,0(x11)" main.go:0
-0x420014ec 2 "ADDI" "ADDI $4, X11, X11" "addi x11,x11,4" main.go:0
-0x420014ee 2 "ADD" "ADD X13, X10, X10" "add x10,x10,x13" main.go:7
-0x420014f0 2 "ADDI" "ADDI $-1, X12, X12" "addi x12,x12,-1" main.go:0
-0x420014f2 2 "BNE" "BNEZ X12, -2(PC)" "bnez x12,-8 <main.sumInts+0x8>" main.go:0
-0x420014f4 2 "JALR" "RET" "ret" main.go:9
+0x420014e2 2 "ADD" "ADD X10, X0, X11" "mv x11,x10" ref=0x0 call=false main.go:0
+0x420014e4 2 "ADDI" "MOV X0, X10" "li x10,0" ref=0x0 call=false main.go:0
+0x420014e6 2 "ADDI" "ADDI $3, X0, X12" "li x12,3" ref=0x0 call=false main.go:0
+0x420014e8 2 "BEQ" "BEQZ X12, 3(PC)" "beqz x12,12 <main.sumInts+0x12>" ref=0x420014f4 call=false main.go:0
+0x420014ea 2 "LW" "MOVW (X11), X13" "lw x13,0(x11)" ref=0x0 call=false main.go:0
+0x420014ec 2 "ADDI" "ADDI $4, X11, X11" "addi x11,x11,4" ref=0x0 call=false main.go:0
+0x420014ee 2 "ADD" "ADD X13, X10, X10" "add x10,x10,x13" ref=0x0 call=false main.go:7
+0x420014f0 2 "ADDI" "ADDI $-1, X12, X12" "addi x12,x12,-1" ref=0x0 call=false main.go:0
+0x420014f2 2 "BNE" "BNEZ X12, -2(PC)" "bnez x12,-8 <main.sumInts+0x8>" ref=0x420014ea call=false main.go:0
+0x420014f4 2 "JALR" "RET" "ret" ref=0x0 call=false main.go:9

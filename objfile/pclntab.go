@@ -5,7 +5,6 @@ import (
 	"encoding/binary"
 	"fmt"
 	"sort"
-	"unsafe"
 )
 
 // pclntab reads the Go runtime's function table in place: the functab
@@ -113,13 +112,17 @@ func (t *pclntab) funcField(fn []byte, n int) uint32 {
 	return t.order.Uint32(fn[t.fieldSize()+(n-1)*4:])
 }
 
-// cstring returns the NUL-terminated string at off, aliasing the table.
+// cstring returns an owned copy of the NUL-terminated string at off.
 func cstring(tab []byte, off uint32) string {
-	end := bytes.IndexByte(tab[off:], 0)
+	if uint64(off) >= uint64(len(tab)) {
+		return ""
+	}
+	start := int(off)
+	end := bytes.IndexByte(tab[start:], 0)
 	if end < 0 {
 		return ""
 	}
-	return unsafe.String(&tab[off], end)
+	return string(tab[start : start+end])
 }
 
 // funcs calls yield for every function with its name and pc range;

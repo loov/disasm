@@ -22,7 +22,6 @@ import (
 	"slices"
 	"strings"
 	"sync"
-	"unsafe"
 
 	"github.com/ianlancetaylor/demangle"
 )
@@ -601,18 +600,17 @@ func findPclntab(data []byte) []byte {
 	return nil
 }
 
-// elfSym is one symbol table entry, read in place.
+// elfSym is one symbol table entry.
 type elfSym struct {
-	name  string // aliases the string table
+	name  string
 	value uint64
 	size  uint64
 	info  uint8
 	shndx elf.SectionIndex
 }
 
-// elfSymbols walks the symbol table without copying it: entries are
-// decoded from the mapping and names are views into .strtab. f returns
-// false to stop.
+// elfSymbols decodes symbol entries from the mapping. f returns false
+// to stop.
 func elfSymbols(ef *elf.File, data []byte, f func(elfSym) bool) error {
 	symtab := ef.SectionByType(elf.SHT_SYMTAB)
 	if symtab == nil {
@@ -630,16 +628,6 @@ func elfSymbols(ef *elf.File, data []byte, f func(elfSym) bool) error {
 	if entries == nil || strs == nil {
 		return fmt.Errorf("unreadable symbol table")
 	}
-	name := func(off uint32) string {
-		if off >= uint32(len(strs)) {
-			return ""
-		}
-		end := bytes.IndexByte(strs[off:], 0)
-		if end < 0 {
-			end = len(strs) - int(off)
-		}
-		return unsafe.String(&strs[off], end)
-	}
 	ord := ef.ByteOrder
 	entrySize := 16
 	if ef.Class == elf.ELFCLASS64 {
@@ -651,7 +639,7 @@ func elfSymbols(ef *elf.File, data []byte, f func(elfSym) bool) error {
 		var s elfSym
 		if ef.Class == elf.ELFCLASS64 {
 			s = elfSym{
-				name:  name(ord.Uint32(e)),
+				name:  cstring(strs, ord.Uint32(e)),
 				info:  e[4],
 				shndx: elf.SectionIndex(ord.Uint16(e[6:])),
 				value: ord.Uint64(e[8:]),
@@ -659,7 +647,7 @@ func elfSymbols(ef *elf.File, data []byte, f func(elfSym) bool) error {
 			}
 		} else {
 			s = elfSym{
-				name:  name(ord.Uint32(e)),
+				name:  cstring(strs, ord.Uint32(e)),
 				value: uint64(ord.Uint32(e[4:])),
 				size:  uint64(ord.Uint32(e[8:])),
 				info:  e[12],

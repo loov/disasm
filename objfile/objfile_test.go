@@ -208,6 +208,15 @@ func TestWasmImage_BoundsCopies(t *testing.T) {
 	}
 }
 
+func TestCString_OwnsResult(t *testing.T) {
+	data := []byte("symbol\x00")
+	name := cstring(data, 0)
+	data[0] = 'x'
+	if name != "symbol" {
+		t.Fatalf("cstring result changed with its backing data: %q", name)
+	}
+}
+
 // archive wraps content as the single entry of an ar archive.
 func archive(name, content string) []byte {
 	hdr := fmt.Sprintf("%-16s%-12d%-6d%-6d%-8o%-10d`\n", name, 0, 0, 0, 0o644, len(content))

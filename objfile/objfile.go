@@ -205,7 +205,7 @@ func (b *Binary) lineTable() *lines {
 		if err != nil {
 			return
 		}
-		b.lines = LinesFromDWARF(data, 0)
+		b.lines = linesFromDWARF(data, 0)
 	})
 	return b.lines
 }

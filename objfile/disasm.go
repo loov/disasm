@@ -86,6 +86,22 @@ func (b *Binary) Disassemble(fn *Func) ([]Inst, error) {
 		emit(n, "", fmt.Sprintf("BYTE %#x", code[:n]), fmt.Sprintf(".byte %#x", code[:n]))
 	}
 	reader := textReader{code, addr}
+	// data emits w little-endian bytes as a data word: literal pools and
+	// mapping-symbol data regions, spelled the same on every arch.
+	data := func(w int) {
+		w = min(w, len(code))
+		var v uint64
+		for i := w - 1; i >= 0; i-- {
+			v = v<<8 | uint64(code[i])
+		}
+		directive := map[int]string{4: ".word", 2: ".short", 1: ".byte"}[w]
+		gnu := fmt.Sprintf("%s %#0*x", directive, 2*w, v)
+		text := gnu
+		if w == 4 {
+			text = fmt.Sprintf("WORD $%#08x", v) // what go tool objdump prints
+		}
+		emit(w, "", text, gnu)
+	}
 
 	switch b.Arch {
 	case "amd64", "386":
@@ -110,20 +126,6 @@ func (b *Binary) Disassemble(fn *Func) ([]Inst, error) {
 	case "arm":
 		// Mapping symbols split the text into ARM, Thumb and data
 		// regions; a binary without them is all ARM.
-		data := func(w int) {
-			w = min(w, len(code))
-			var v uint64
-			for i := w - 1; i >= 0; i-- {
-				v = v<<8 | uint64(code[i])
-			}
-			directive := map[int]string{4: ".word", 2: ".short", 1: ".byte"}[w]
-			gnu := fmt.Sprintf("%s %#0*x", directive, 2*w, v)
-			text := gnu
-			if w == 4 {
-				text = fmt.Sprintf("WORD $%#08x", v) // what go tool objdump prints
-			}
-			emit(w, "", text, gnu)
-		}
 		// The Go linker emits no mapping symbols, so without them the
 		// literal pools are found from the pc-relative loads that read
 		// them; offsets are from the function start.
@@ -217,9 +219,7 @@ func (b *Binary) Disassemble(fn *Func) ([]Inst, error) {
 		literals := b.literalPools()
 		for len(code) > 0 {
 			if literals[addr] && len(code) >= 4 {
-				v := binary.LittleEndian.Uint32(code)
-				text := fmt.Sprintf(".word %#010x", v)
-				emit(4, "", text, text)
+				data(4)
 				continue
 			}
 			inst, err := xtensaasm.Decode(code, addr)

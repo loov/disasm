@@ -295,7 +295,7 @@ func (m *wasmModule) lineTable() *lines {
 		if !m.describesBodies(data) {
 			return
 		}
-		m.lines = LinesFromDWARF(data, shift)
+		m.lines = linesFromDWARF(data, shift)
 	})
 	return m.lines
 }

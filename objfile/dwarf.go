@@ -48,11 +48,11 @@ type lineRow struct {
 	line int
 }
 
-// LinesFromDWARF indexes the compilation units. shift is added to each
+// linesFromDWARF indexes the compilation units. shift is added to each
 // address, for formats whose DWARF addresses are relative to something
 // other than the addresses used elsewhere; wasm counts from the start
 // of the code section. nil when there are no units.
-func LinesFromDWARF(data *dwarf.Data, shift int64) *lines {
+func linesFromDWARF(data *dwarf.Data, shift int64) *lines {
 	lines := &lines{data: data, shift: shift, cache: map[dwarf.Offset]*unitLines{}}
 	reader := data.Reader()
 	for {

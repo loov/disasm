@@ -166,8 +166,8 @@ func (t *pclntab) pcToLine(pc uint64) (file string, line int) {
 	return file, line
 }
 
-// pcvalue walks the pc-value table at off — pairs of zigzag value
-// deltas and pc deltas in quantum units — and returns the value in
+// pcvalue walks the pc-value table at off, pairs of zigzag value
+// deltas and pc deltas in quantum units, and returns the value in
 // effect at targetpc, or -1 past the table's end.
 func (t *pclntab) pcvalue(off uint32, entry, targetpc uint64) int32 {
 	p := t.pctab[off:]

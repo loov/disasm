@@ -58,8 +58,8 @@ type Binary struct {
 	pcln   *pclntab
 	// dwarf opens the debug info, and lines is the line table indexed
 	// from it on first use. It is only consulted when there is no
-	// pclntab — binaries from clang, gcc and anything else that isn't
-	// Go — so a Go binary never pays for the DWARF it also carries.
+	// pclntab (binaries from clang, gcc and anything else that isn't
+	// Go), so a Go binary never pays for the DWARF it also carries.
 	dwarf     func() (*dwarf.Data, error)
 	lines     *lines
 	linesOnce sync.Once
@@ -150,8 +150,8 @@ func (b *Binary) Close() error {
 	return err
 }
 
-// Func returns the function called name — the lowest-addressed one
-// when several share it — or nil.
+// Func returns the function called name, or nil. When several share
+// the name it returns the lowest-addressed one.
 func (b *Binary) Func(name string) *Func {
 	b.byNameOnce.Do(func() {
 		b.byName = make(map[string]int, len(b.Funcs))
@@ -396,7 +396,7 @@ func (b *Binary) addRange(addr, size uint64) {
 
 // Demangle turns a C++ or Rust symbol into the name it had in the
 // source, signature and all, so that overloads stay apart. Anything that
-// isn't a mangled name — every Go and C symbol — is returned unchanged.
+// isn't a mangled name, which is every Go and C symbol, is returned unchanged.
 // Rust has two schemes: the older one looks like C++ ("_ZN4prog8sum_ints
 // 17h<hash>E"), the current one has its own prefix.
 func Demangle(name string) string {
@@ -422,7 +422,7 @@ func (b *Binary) loadPclntab(pclntab []byte) {
 // low bits. That is the PC the compiler's line deltas are relative to,
 // but the table stores function entries unshifted, so the table would
 // place every block after the first inside the following function.
-// Scaling the stored entries — and only those — puts them back in PC
+// Scaling the stored entries, and only those, puts them back in PC
 // space, leaving the deltas to count blocks. nil when there is no
 // usable table.
 func findWasmLineTable(image []byte) *pclntab {

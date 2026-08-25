@@ -17,8 +17,8 @@ import (
 // defined functions), which is what call instructions name, and
 // Func.Size is the body size in bytes. Inst.Addr is whatever the
 // module's own line table is keyed by: for a Go module the runtime's
-// PC — function index plus wasmPCBase, shifted left 16, with the resume
-// block below — for a module with DWARF the instruction's byte offset
+// PC (function index plus wasmPCBase, shifted left 16, with the resume
+// block below), for a module with DWARF the instruction's byte offset
 // in the file, and otherwise the instruction's 1-based ordinal.
 //
 // A component (the component model's container, as TinyGo's wasip2
@@ -54,8 +54,8 @@ type wasmModule struct {
 	// pcln is the Go line table recovered from the data segments,
 	// keyed by wasm PC; nil for non-Go modules.
 	pcln *pclntab
-	// debug holds the DWARF custom sections — what TinyGo and clang
-	// emit instead of a pclntab — indexed on first use.
+	// debug holds the DWARF custom sections, which TinyGo and clang
+	// emit instead of a pclntab, indexed on first use.
 	debug     map[string][]byte
 	codeStart uint64 // offset of the code section payload in data
 	bodies    []codeRange
@@ -232,7 +232,7 @@ func (b *Binary) loadWasmModule(data []byte, base uint64, index int, qualify boo
 	// One range from the start of initialized data to the end of the
 	// initial memory, for recognizing address-valued constants: global
 	// data, including bss past the initialized segments, lives there.
-	// An ordinary large constant inside the range is masked too —
+	// An ordinary large constant inside the range is masked too, an
 	// inherent ambiguity of wasm's flat low address space.
 	var lo, hi int64
 	for _, s := range segs {
@@ -423,7 +423,7 @@ func (fn *Func) wasmBody() codeRange {
 }
 
 // resumeBlocks returns, for each instruction of body, the index of the
-// resume point it belongs to — the PC_B half of its Go PC. The compiler
+// resume point it belongs to, the PC_B half of its Go PC. The compiler
 // wraps a function's body in one block per resume point and dispatches
 // on PC_B through a br_table, so after that dispatch each block that
 // ends moves execution into the next resume point.
@@ -459,8 +459,8 @@ func resumeBlocks(body []wasmir.Instruction) []int {
 // the body, for looking up DWARF rows. Lengths come from re-encoding
 // each instruction, and the total is checked against the bytes the
 // function actually occupies: a module whose encoding differs from
-// watgo's — a non-canonical integer, an instruction it round-trips
-// differently — would otherwise shift every later offset silently. nil
+// watgo's (a non-canonical integer, an instruction it round-trips
+// differently) would otherwise shift every later offset silently. nil
 // when the body is unreadable or the check fails.
 func instructionOffsets(m *wasmModule, fn *Func, f wasmir.Function) []uint64 {
 	locals := localsSize(fn.code)

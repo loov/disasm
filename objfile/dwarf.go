@@ -47,9 +47,9 @@ type lineRow struct {
 	line int
 }
 
-// linesFromDWARF indexes the compilation units. shift is added to each
+// LinesFromDWARF indexes the compilation units. shift is added to each
 // address, for formats whose DWARF addresses are relative to something
-// other than the addresses used elsewhere — wasm counts from the start
+// other than the addresses used elsewhere; wasm counts from the start
 // of the code section. nil when there are no units.
 func LinesFromDWARF(data *dwarf.Data, shift int64) *lines {
 	lines := &lines{data: data, shift: shift, cache: map[dwarf.Offset]*unitLines{}}
@@ -217,7 +217,7 @@ func (lines *lines) At(addr uint64) (file string, line int) {
 // unjoinCompDir undoes debug/dwarf joining an absolute file name onto
 // the compilation directory. Its pathJoin documents that the name must
 // be relative, but clang records absolute names, and DWARF says the
-// directory is then ignored — so "/build/dir" + "/src/prog.c" arrives as
+// directory is then ignored, so "/build/dir" + "/src/prog.c" arrives as
 // "/build/dir/src/prog.c". The join is only undone when the path it
 // produced is missing and the plain one is there, so a project that
 // really does have that layout keeps working.

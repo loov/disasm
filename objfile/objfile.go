@@ -468,8 +468,9 @@ func scaleWasmEntries(tab []byte) bool {
 	}
 	// The function table is nfunc (entryOff, funcOff) uint32 pairs plus a
 	// final entryOff marking the end of the text.
+	tabLen := uint64(len(tab))
 	shift := func(off uint64) bool {
-		if off+4 > uint64(len(tab)) {
+		if off > tabLen-4 {
 			return false
 		}
 		v := binary.LittleEndian.Uint32(tab[off:])
@@ -480,15 +481,22 @@ func scaleWasmEntries(tab []byte) bool {
 		return true
 	}
 	for i := uint64(0); i <= nfunc; i++ {
-		if !shift(funcTab + i*8) {
+		if funcTab > tabLen || i > (tabLen-funcTab)/8 {
+			return false
+		}
+		off := funcTab + i*8
+		if !shift(off) {
 			return false
 		}
 		if i == nfunc {
 			break
 		}
-		funcOff := uint64(binary.LittleEndian.Uint32(tab[funcTab+i*8+4:]))
+		if off > tabLen-8 {
+			return false
+		}
+		funcOff := uint64(binary.LittleEndian.Uint32(tab[off+4:]))
 		// _func starts with its own entryOff.
-		if !shift(funcTab + funcOff) {
+		if funcOff > tabLen-funcTab || !shift(funcTab+funcOff) {
 			return false
 		}
 	}

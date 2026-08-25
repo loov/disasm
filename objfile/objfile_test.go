@@ -183,6 +183,25 @@ func TestOpen_HostileInputs(t *testing.T) {
 	}
 }
 
+func TestParse_TruncatedWasmPclntab(t *testing.T) {
+	tab := make([]byte, 44)
+	copy(tab, []byte{0xf1, 0xff, 0xff, 0xff, 0, 0, 1, 4})
+	binary.LittleEndian.PutUint32(tab[8:], 1)
+	binary.LittleEndian.PutUint32(tab[36:], 40)
+
+	payload := []byte{1, 0, 0x41, 0, 0x0b}
+	payload = appendUleb(payload, uint64(len(tab)))
+	payload = append(payload, tab...)
+	wasm := []byte("\x00asm\x01\x00\x00\x00")
+	wasm = append(wasm, wasmSecData)
+	wasm = appendUleb(wasm, uint64(len(payload)))
+	wasm = append(wasm, payload...)
+
+	if _, err := Parse(wasm); err != nil {
+		t.Fatal(err)
+	}
+}
+
 // archive wraps content as the single entry of an ar archive.
 func archive(name, content string) []byte {
 	hdr := fmt.Sprintf("%-16s%-12d%-6d%-6d%-8o%-10d`\n", name, 0, 0, 0, 0o644, len(content))

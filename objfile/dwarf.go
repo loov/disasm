@@ -4,6 +4,7 @@ import (
 	"cmp"
 	"debug/dwarf"
 	"os"
+	"path/filepath"
 	"slices"
 	"strings"
 	"sync"
@@ -222,13 +223,15 @@ func (lines *lines) At(addr uint64) (file string, line int) {
 // produced is missing and the plain one is there, so a project that
 // really does have that layout keeps working.
 func unjoinCompDir(compDir, name string) string {
-	if compDir == "" || !strings.HasPrefix(name, compDir+"/") {
+	if compDir == "" || !strings.HasPrefix(name, compDir) ||
+		len(name) == len(compDir) || !os.IsPathSeparator(name[len(compDir)]) {
 		return name
 	}
 	if _, err := os.Stat(name); err == nil {
 		return name
 	}
-	absolute := name[len(compDir):]
+	// A DOS-style join drops the drive from the name; put it back.
+	absolute := filepath.VolumeName(compDir) + name[len(compDir):]
 	if _, err := os.Stat(absolute); err != nil {
 		return name
 	}

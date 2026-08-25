@@ -13,8 +13,9 @@ func TestUnjoinCompDir(t *testing.T) {
 		t.Fatal(err)
 	}
 	// What debug/dwarf hands over for an absolute name recorded with a
-	// compilation directory: the two pasted together.
-	joined := filepath.Join(dir, "build") + real
+	// compilation directory: the two pasted together, with the drive
+	// dropped from the name on DOS-style paths.
+	joined := filepath.Join(dir, "build") + real[len(filepath.VolumeName(real)):]
 	if got := unjoinCompDir(filepath.Join(dir, "build"), joined); got != real {
 		t.Errorf("unjoinCompDir(joined) = %q, want %q", got, real)
 	}

@@ -430,7 +430,6 @@ func findWasmLineTable(image []byte) *pclntab {
 	if tab == nil {
 		return nil
 	}
-	tab = bytes.Clone(tab)
 	if !scaleWasmEntries(tab) {
 		return nil
 	}

@@ -202,6 +202,12 @@ func TestParse_TruncatedWasmPclntab(t *testing.T) {
 	}
 }
 
+func TestWasmImage_BoundsCopies(t *testing.T) {
+	if image := wasmImage([]wasmSeg{{init: []byte("ordinary module data")}}); image != nil {
+		t.Fatalf("wasmImage copied %d bytes with no pclntab", len(image))
+	}
+}
+
 // archive wraps content as the single entry of an ar archive.
 func archive(name, content string) []byte {
 	hdr := fmt.Sprintf("%-16s%-12d%-6d%-6d%-8o%-10d`\n", name, 0, 0, 0, 0o644, len(content))

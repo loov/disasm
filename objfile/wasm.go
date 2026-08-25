@@ -646,7 +646,7 @@ func parseWasmData(sec *wasmCursor) []wasmSeg {
 
 // wasmMaxImage caps the reconstructed linear-memory image used for
 // pclntab recovery.
-const wasmMaxImage = 1 << 31
+const wasmMaxImage int64 = 512 << 20
 
 // wasmImage reconstructs the module's initialized memory from its
 // active data segments, where a Go module's pclntab lives. It gives up
@@ -657,13 +657,19 @@ const wasmMaxImage = 1 << 31
 // is safe.
 func wasmImage(segs []wasmSeg) []byte {
 	var end, total int64
+	var hasPclntab bool
 	for _, s := range segs {
-		if e := s.off + int64(len(s.init)); e > end {
+		n := int64(len(s.init))
+		if s.off < 0 || n > wasmMaxImage || s.off > wasmMaxImage-n || total > wasmMaxImage-n {
+			return nil
+		}
+		if e := s.off + n; e > end {
 			end = e
 		}
-		total += int64(len(s.init))
+		total += n
+		hasPclntab = hasPclntab || findPclntab(s.init) != nil
 	}
-	if end <= 0 || end > wasmMaxImage || end > total+1<<20 {
+	if !hasPclntab || end <= 0 || end > total+1<<20 {
 		return nil
 	}
 	mem := make([]byte, end)

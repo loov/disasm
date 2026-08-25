@@ -247,6 +247,20 @@ func (b *Binary) Disassemble(fn *Func) ([]Inst, error) {
 		}
 	case "riscv64", "riscv32":
 		for len(code) > 0 {
+			// Quadrant 1, funct3 001 is C.JAL on RV32 but C.ADDIW on RV64.
+			if b.Arch == "riscv32" && len(code) >= 2 {
+				enc := uint32(binary.LittleEndian.Uint16(code))
+				if enc&0xe003 == 0x2001 {
+					imm := int32(((enc>>2)&1)<<5 | ((enc>>3)&7)<<1 | ((enc>>6)&1)<<7 |
+						((enc>>7)&1)<<6 | ((enc>>8)&1)<<10 | ((enc>>9)&3)<<8 |
+						((enc>>11)&1)<<4 | ((enc>>12)&1)<<11)
+					imm = imm << 20 >> 20
+					inst := riscv64asm.Inst{Op: riscv64asm.JAL, Enc: enc, Len: 2}
+					inst.Args[0], inst.Args[1] = riscv64asm.X1, riscv64asm.Simm{Imm: imm, Decimal: true, Width: 21}
+					emit(2, inst.Op.String(), riscv64asm.GoSyntax(inst, addr, resolve, reader), riscv64asm.GNUSyntax(inst))
+					continue
+				}
+			}
 			inst, err := riscv64asm.Decode(code)
 			if err != nil || inst.Len == 0 || inst.Op == 0 {
 				undecodable(2)

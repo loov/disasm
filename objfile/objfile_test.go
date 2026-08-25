@@ -292,6 +292,18 @@ func TestOpen_GoArchive(t *testing.T) {
 	}
 }
 
+func TestDisassemble_RV32CompressedJAL(t *testing.T) {
+	bin := &Binary{Arch: "riscv32"}
+	fn := &Func{Addr: 0x1000, Size: 2, bin: bin, code: []byte{0xc1, 0x20}}
+	insts, err := bin.Disassemble(fn)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(insts) != 1 || insts[0].Op != "JAL" || insts[0].GNU != "jal 192" {
+		t.Fatalf("Disassemble = %+v, want RV32 C.JAL", insts)
+	}
+}
+
 func buildIn(t *testing.T, dir, out string) string {
 	t.Helper()
 	path := filepath.Join(dir, out)

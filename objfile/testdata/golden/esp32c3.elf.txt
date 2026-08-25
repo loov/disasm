@@ -1,4 +1,4 @@
-arch=riscv32 funcs=38 sha256=91bd1ec3fcc8114a6463f0e38ab54c6e41c326bd9beb83bac8b7da82c2be9bcf
+arch=riscv32 funcs=38 sha256=672bcc84a90610e169d6658a664c4250ae5f44d9f489da139a0a41ea0133c584
 == _start 0x403810c4 24 
 0x403810c4 4 "AUIPC" "AUIPC $1046784, X2" "auipc x2,0xff900" start.S:45
 0x403810c8 4 "ADDI" "ADDI $-196, X2, X2" "addi x2,x2,-196" start.S:45

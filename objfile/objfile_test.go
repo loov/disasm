@@ -355,3 +355,27 @@ func TestHardening(t *testing.T) {
 		t.Errorf("Lookup(0x1090) = %q, want b", name)
 	}
 }
+
+func TestFinish_SizelessSymbolsStopAtSectionEnd(t *testing.T) {
+	b := &Binary{}
+	b.addText(0x1000, make([]byte, 0x100))
+	b.addText(0x3000, make([]byte, 0x100))
+	b.addRange(0x2000, 0x100)
+	b.addRange(0x4000, 0x100)
+	b.addSym("first-text", 0x1080, 0, symText)
+	b.addSym("later-text", 0x3000, 0, symText)
+	b.addSym("data", 0x2080, 0, symData)
+	b.addSym("later-data", 0x4000, 0, symData)
+	b.finish()
+
+	fn := b.Func("first-text")
+	if fn == nil {
+		t.Fatal("first-text not found")
+	}
+	if fn.Size != 0x80 || len(fn.Code()) != 0x80 {
+		t.Errorf("first-text = %+v, %d code bytes; want size 128", fn, len(fn.Code()))
+	}
+	if name, _, _ := b.DataSym(0x2200); name != "" {
+		t.Errorf("DataSym in section gap = %q, want no match", name)
+	}
+}

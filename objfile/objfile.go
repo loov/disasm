@@ -495,8 +495,8 @@ func scaleWasmEntries(tab []byte) bool {
 	return true
 }
 
-// finish sorts symbols, drops duplicates, infers missing sizes as the
-// distance to the next symbol, and collects the functions: pclntab
+// finish sorts symbols, drops duplicates, infers missing sizes up to the
+// next symbol or section end, and collects the functions: pclntab
 // entries give exact ranges even when the binary is stripped, the
 // symbol table supplies the rest.
 func (b *Binary) finish() {
@@ -523,29 +523,27 @@ func (b *Binary) finish() {
 		if s.size != 0 {
 			continue
 		}
+		var end uint64
+		if sec := b.textAt(s.addr); sec != nil && s.kind == symText {
+			end = sec.end()
+		} else {
+			for _, r := range b.ranges {
+				if r[0] <= s.addr && s.addr < r[1] {
+					end = r[1]
+					break
+				}
+			}
+		}
 		for _, next := range b.syms[i+1:] {
 			if next.addr != s.addr && next.kind == s.kind {
-				s.size = next.addr - s.addr
+				if end == 0 || next.addr < end {
+					end = next.addr
+				}
 				break
 			}
 		}
-		if s.size == 0 {
-			// Last of its kind: bound it by its section instead of
-			// infinity, so unrelated high addresses don't resolve to it.
-			var end uint64
-			if sec := b.textAt(s.addr); sec != nil && s.kind == symText {
-				end = sec.end()
-			} else {
-				for _, r := range b.ranges {
-					if r[0] <= s.addr && s.addr < r[1] {
-						end = r[1]
-						break
-					}
-				}
-			}
-			if s.addr < end {
-				s.size = end - s.addr
-			}
+		if s.addr < end {
+			s.size = end - s.addr
 		}
 	}
 

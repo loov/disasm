@@ -1,4 +1,4 @@
-arch=arm funcs=108 sha256=95889b4ea0e0d072ebb19a6080c11958ea34449668319927d2a43578784f03aa
+arch=arm funcs=108 sha256=f106dedcbbd8701c1a85c38d756c2fd97c40772d20e09cc96c8ea37750e5130d
 == runtime.runtimePanicAt 0x10001044 52 /opt/homebrew/Cellar/tinygo/0.41.1/src/runtime/panic.go
 0x10001044 2 "MOV" "mov r4, r2" "mov r4, r2" ref=0x0 call=false .:0
 0x10001046 2 "MOV" "mov r5, r1" "mov r5, r1" ref=0x0 call=false .:0

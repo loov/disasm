@@ -1,8 +1,6 @@
 # disasm
 
-Go packages for reading executables and decoding their machine code,
-shared by [lensm](https://github.com/loov/lensm) and
-[ixdiff](https://github.com/loov/ixdiff).
+Go packages for reading executables and disassembling their machine code.
 
 - `objfile` opens ELF, Mach-O, PE, WebAssembly (modules and
   components) and Go compile archives; lists functions with their code,
@@ -27,6 +25,11 @@ for _, in := range insts {
 	fmt.Printf("%#x %s %s:%d\n", in.Addr, in.Text, file, line)
 }
 ```
+
+## Users
+
+[lensm](https://github.com/loov/lensm) and
+[ixdiff](https://github.com/loov/ixdiff) are built on these packages.
 
 ## Testing
 

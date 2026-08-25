@@ -1,4 +1,4 @@
-arch=arm funcs=1456 sha256=70cee1b3f4f18d479028a3d99b26c423182669275b95d5c7eabfed34c72c5385
+arch=arm funcs=1456 sha256=a66f3ce445307387c349ae6f0e269e9b4dc680a119dbf369650b8a261c6ff17f
 == runtime.runGCProg 0x3345c 1088 /usr/local/go/src/runtime/mbitmap.go
 0x3345c 4 "LDR" "MOVW 0x8(R10), R1" "ldr r1, [sl, #8]" mbitmap.go:1565
 0x33460 4 "CMP" "CMP R1, R13" "cmp sp, r1" mbitmap.go:1565
@@ -321,7 +321,7 @@ arch=arm funcs=1456 sha256=70cee1b3f4f18d479028a3d99b26c423182669275b95d5c7eabfe
 0x34cf8 4 "BL" "BL runtime.morestack_noctxt(SB)" "bl .+0x635e4 <runtime.morestack_noctxt>" mcheckmark.go:126
 0x34cfc 4 "B" "B runtime.runCheckmark(SB)" "b .-0xbc <runtime.runCheckmark>" mcheckmark.go:126
 0x34d00 4 "B" "B 0x34d00" "b .-0x4 <runtime.runCheckmark+0xbc>" mcheckmark.go:126
-0x34d04 4 "AND.S.EQ" "AND.S.EQ R0->$7, R3, R7" "andseq r7, r3, r0, asr #7" mcheckmark.go:126
+0x34d04 4 "" "WORD $0x001373c0" ".word 0x001373c0" mcheckmark.go:126
 == runtime.runPerThreadSyscall 0x59a68 956 /usr/local/go/src/runtime/os_linux.go
 0x59a68 4 "STR" "MOVW.W R14, -0x7c(R13)" "str lr, [sp, #-124]!" os_linux.go:890
 0x59a6c 4 "STR" "MOVW R10, 0x78(R13)" "str sl, [sp, #120]" os_linux.go:891
@@ -544,24 +544,24 @@ arch=arm funcs=1456 sha256=70cee1b3f4f18d479028a3d99b26c423182669275b95d5c7eabfe
 0x59dd0 4 "LDR" "RET #124" "ldr pc, [sp], #124" os_linux.go:909
 0x59dd4 4 "LDR" "RET #124" "ldr pc, [sp], #124" os_linux.go:893
 0x59dd8 4 "B" "B 0x59dd8" "b .-0x4 <runtime.runPerThreadSyscall+0x370>" os_linux.go:893
-0x59ddc 4 "MUL.S.EQ" "MUL.S.EQ R7, R8, R3" "mulseq r3, r8, r7" os_linux.go:893
-0x59de0 4 "MUL.S.EQ" "MUL.S.EQ R7, R12, R3" "mulseq r3, ip, r7" os_linux.go:893
-0x59de4 4 "AND.S.EQ" "AND.S.EQ R0>>$15, R3, R15" "andseq pc, r3, r0, lsr #15" os_linux.go:893
-0x59de8 4 "AND.S.EQ" "AND.S.EQ R4>>$15, R3, R15" "andseq pc, r3, r4, lsr #15" os_linux.go:893
-0x59dec 4 "AND.S.EQ" "AND.S.EQ R8>>$15, R3, R15" "andseq pc, r3, r8, lsr #15" os_linux.go:893
-0x59df0 4 "AND.S.EQ" "AND.S.EQ R12>>$15, R3, R15" "andseq pc, r3, ip, lsr #15" os_linux.go:893
-0x59df4 4 "" "BYTE 0xb0f71300" ".byte 0xb0f71300" os_linux.go:893
-0x59df8 4 "MUL.S.EQ" "MUL.S.EQ R7, R8, R3" "mulseq r3, r8, r7" os_linux.go:893
-0x59dfc 4 "AND.EQ" "AND.EQ R3@>$3, R10, R0" "andeq r0, sl, r3, ror #3" os_linux.go:893
-0x59e00 4 "AND.EQ" "AND.EQ R9<<R13, R10, R0" "andeq r0, sl, r9, lsl sp" os_linux.go:893
-0x59e04 4 "AND.EQ" "AND.EQ R11, R10, R0" "andeq r0, sl, fp" os_linux.go:893
-0x59e08 4 "AND.EQ" "AND.EQ R9>>R0, R10, R0" "andeq r0, sl, r9, lsr r0" os_linux.go:893
-0x59e0c 4 "AND.EQ" "AND.EQ R15<<R13, R10, R1" "andeq r1, sl, pc, lsl sp" os_linux.go:893
-0x59e10 4 "AND.EQ" "AND.EQ R2<<$2, R10, R0" "andeq r0, sl, r2, lsl #2" os_linux.go:893
-0x59e14 4 "STRD.EQ" "STRD.EQ [R10], -R9, R1, R0" "strdeq r0, [sl], -r9" os_linux.go:893
-0x59e18 4 "AND.EQ" "AND.EQ R10@>$31, R10, R0" "andeq r0, sl, sl, ror #31" os_linux.go:893
-0x59e1c 4 "AND.EQ" "AND.EQ R0<<$22, R10, R0" "andeq r0, sl, r0, lsl #22" os_linux.go:893
-0x59e20 4 "MUL.EQ" "MUL.EQ R3, R0, R10" "muleq sl, r0, r3" os_linux.go:893
+0x59ddc 4 "" "WORD $0x0013f798" ".word 0x0013f798" os_linux.go:893
+0x59de0 4 "" "WORD $0x0013f79c" ".word 0x0013f79c" os_linux.go:893
+0x59de4 4 "" "WORD $0x0013f7a0" ".word 0x0013f7a0" os_linux.go:893
+0x59de8 4 "" "WORD $0x0013f7a4" ".word 0x0013f7a4" os_linux.go:893
+0x59dec 4 "" "WORD $0x0013f7a8" ".word 0x0013f7a8" os_linux.go:893
+0x59df0 4 "" "WORD $0x0013f7ac" ".word 0x0013f7ac" os_linux.go:893
+0x59df4 4 "" "WORD $0x0013f7b0" ".word 0x0013f7b0" os_linux.go:893
+0x59df8 4 "" "WORD $0x0013f798" ".word 0x0013f798" os_linux.go:893
+0x59dfc 4 "" "WORD $0x000a01e3" ".word 0x000a01e3" os_linux.go:893
+0x59e00 4 "" "WORD $0x000a0d19" ".word 0x000a0d19" os_linux.go:893
+0x59e04 4 "" "WORD $0x000a000b" ".word 0x000a000b" os_linux.go:893
+0x59e08 4 "" "WORD $0x000a0039" ".word 0x000a0039" os_linux.go:893
+0x59e0c 4 "" "WORD $0x000a1d1f" ".word 0x000a1d1f" os_linux.go:893
+0x59e10 4 "" "WORD $0x000a0102" ".word 0x000a0102" os_linux.go:893
+0x59e14 4 "" "WORD $0x000a03f9" ".word 0x000a03f9" os_linux.go:893
+0x59e18 4 "" "WORD $0x000a0fea" ".word 0x000a0fea" os_linux.go:893
+0x59e1c 4 "" "WORD $0x000a0b00" ".word 0x000a0b00" os_linux.go:893
+0x59e20 4 "" "WORD $0x000a7390" ".word 0x000a7390" os_linux.go:893
 == runtime.runSafePointFn 0x62d4c 220 /usr/local/go/src/runtime/proc.go
 0x62d4c 4 "LDR" "MOVW 0x8(R10), R1" "ldr r1, [sl, #8]" proc.go:2250
 0x62d50 4 "CMP" "CMP R1, R13" "cmp sp, r1" proc.go:2250
@@ -614,10 +614,10 @@ arch=arm funcs=1456 sha256=70cee1b3f4f18d479028a3d99b26c423182669275b95d5c7eabfe
 0x62e0c 4 "BL" "BL runtime.morestack_noctxt(SB)" "bl .+0x354d0 <runtime.morestack_noctxt>" proc.go:2250
 0x62e10 4 "B" "B runtime.runSafePointFn(SB)" "b .-0xc8 <runtime.runSafePointFn>" proc.go:2250
 0x62e14 4 "B" "B 0x62e14" "b .-0x4 <runtime.runSafePointFn+0xc8>" proc.go:2250
-0x62e18 4 "" "BYTE 0xd4731300" ".byte 0xd4731300" proc.go:2250
-0x62e1c 4 "AND.S.EQ" "AND.S.EQ R4>>R3, R3, R7" "andseq r7, r3, r4, lsr r3" proc.go:2250
-0x62e20 4 "" "BYTE 0xd8731300" ".byte 0xd8731300" proc.go:2250
-0x62e24 4 "" "BYTE 0xdc731300" ".byte 0xdc731300" proc.go:2250
+0x62e18 4 "" "WORD $0x001373d4" ".word 0x001373d4" proc.go:2250
+0x62e1c 4 "" "WORD $0x00137334" ".word 0x00137334" proc.go:2250
+0x62e20 4 "" "WORD $0x001373d8" ".word 0x001373d8" proc.go:2250
+0x62e24 4 "" "WORD $0x001373dc" ".word 0x001373dc" proc.go:2250
 == runtime.runqempty 0x6ec74 188 /usr/local/go/src/runtime/proc.go
 0x6ec74 4 "LDR" "MOVW 0x8(R10), R1" "ldr r1, [sl, #8]" proc.go:7498
 0x6ec78 4 "CMP" "CMP R1, R13" "cmp sp, r1" proc.go:7498
@@ -842,11 +842,11 @@ arch=arm funcs=1456 sha256=70cee1b3f4f18d479028a3d99b26c423182669275b95d5c7eabfe
 0x6efdc 4 "BL" "BL runtime.morestack_noctxt(SB)" "bl .+0x29300 <runtime.morestack_noctxt>" proc.go:7575
 0x6efe0 4 "B" "B runtime.runqputslow(SB)" "b .-0x1c0 <runtime.runqputslow>" proc.go:7575
 0x6efe4 4 "B" "B 0x6efe4" "b .-0x4 <runtime.runqputslow+0x1c0>" proc.go:7575
-0x6efe8 4 "AND.S.EQ" "AND.S.EQ R4>>R3, R3, R7" "andseq r7, r3, r4, lsr r3" proc.go:7575
-0x6efec 4 "AND.S.EQ" "AND.S.EQ R0<<$7, R3, R7" "andseq r7, r3, r0, lsl #7" proc.go:7575
-0x6eff0 4 "AND.S.EQ" "AND.S.EQ R12@>R3, R3, R7" "andseq r7, r3, ip, ror r3" proc.go:7575
-0x6eff4 4 "AND.S.EQ" "AND.S.EQ R4<<$7, R3, R7" "andseq r7, r3, r4, lsl #7" proc.go:7575
-0x6eff8 4 "AND.EQ" "AND.EQ R11->R15, R10, R3" "andeq r3, sl, fp, asr pc" proc.go:7575
+0x6efe8 4 "" "WORD $0x00137334" ".word 0x00137334" proc.go:7575
+0x6efec 4 "" "WORD $0x00137380" ".word 0x00137380" proc.go:7575
+0x6eff0 4 "" "WORD $0x0013737c" ".word 0x0013737c" proc.go:7575
+0x6eff4 4 "" "WORD $0x00137384" ".word 0x00137384" proc.go:7575
+0x6eff8 4 "" "WORD $0x000a3f5b" ".word 0x000a3f5b" proc.go:7575
 == runtime.runqputbatch 0x6effc 220 /usr/local/go/src/runtime/proc.go
 0x6effc 4 "LDR" "MOVW 0x8(R10), R1" "ldr r1, [sl, #8]" proc.go:7616
 0x6f000 4 "CMP" "CMP R1, R13" "cmp sp, r1" proc.go:7616
@@ -1245,7 +1245,7 @@ arch=arm funcs=1456 sha256=70cee1b3f4f18d479028a3d99b26c423182669275b95d5c7eabfe
 0x6f614 4 "BL" "BL runtime.morestack_noctxt(SB)" "bl .+0x28cc8 <runtime.morestack_noctxt>" proc.go:7781
 0x6f618 4 "B" "B runtime.runqsteal(SB)" "b .-0x104 <runtime.runqsteal>" proc.go:7781
 0x6f61c 4 "B" "B 0x6f61c" "b .-0x4 <runtime.runqsteal+0x104>" proc.go:7781
-0x6f620 4 "LDRD.EQ" "LDRD.EQ [R10], -R8, R3, R2" "ldrdeq r2, [sl], -r8" proc.go:7781
+0x6f620 4 "" "WORD $0x000a2ed8" ".word 0x000a2ed8" proc.go:7781
 == runtime.memmove 0x98bf4 520 /usr/local/go/src/runtime/memmove_arm.s
 0x98bf4 4 "STR" "MOVW.W R14, -0x8(R13)" "str lr, [sp, #-8]!" memmove_arm.s:64
 0x98bf8 4 "LDR" "MOVW 0xc(R13), R0" "ldr r0, [sp, #12]" memmove_arm.s:66
@@ -1482,9 +1482,9 @@ arch=arm funcs=1456 sha256=70cee1b3f4f18d479028a3d99b26c423182669275b95d5c7eabfe
 0x9a878 4 "STR" "MOVW R3, 0x10(R13)" "str r3, [sp, #16]" main.go:42
 0x9a87c 4 "ADD" "ADD $0, R14, R15" "add pc, lr, #0" main.go:42
 0x9a880 4 "B" "B 0x9a880" "b .-0x4 <main.popcountAll+0xe8>" main.go:42
-0x9a884 4 "LDRB.PL" "MOVBU.PL -0x555(R5), R5" "ldrbpl r5, [r5, #-1365]" main.go:42
-0x9a888 4 "TEQ.CC" "TEQ.CC $3422552064, R3" "teqcc r3, #-872415232" main.go:42
-0x9a88c 4 "SVC.EQ" "SVC.EQ $986895" "svceq 0x000f0f0f" main.go:42
+0x9a884 4 "" "WORD $0x55555555" ".word 0x55555555" main.go:42
+0x9a888 4 "" "WORD $0x33333333" ".word 0x33333333" main.go:42
+0x9a88c 4 "" "WORD $0x0f0f0f0f" ".word 0x0f0f0f0f" main.go:42
 == main.collatzSteps 0x9a890 64 /Users/egon/code/gio/lensm/testdata/testprog/main.go
 0x9a890 4 "LDR" "MOVW 0x4(R13), R0" "ldr r0, [sp, #4]" main.go:48
 0x9a894 4 "MOV" "MOVW $0, R1" "mov r1, #0" main.go:48
@@ -1728,9 +1728,9 @@ arch=arm funcs=1456 sha256=70cee1b3f4f18d479028a3d99b26c423182669275b95d5c7eabfe
 0x9ac40 4 "BL" "BL runtime.morestack_noctxt(SB)" "bl .-0x2964 <runtime.morestack_noctxt>" main.go:84
 0x9ac44 4 "B" "B main.main(SB)" "b .-0x250 <main.main>" main.go:84
 0x9ac48 4 "B" "B 0x9ac48" "b .-0x4 <main.main+0x250>" main.go:84
-0x9ac4c 4 "AND.EQ" "AND.EQ R12@>$18, R10, R7" "andeq r7, sl, ip, ror #18" main.go:84
-0x9ac50 4 "AND.EQ" "AND.EQ R4@>$18, R10, R7" "andeq r7, sl, r4, ror #18" main.go:84
-0x9ac54 4 "AND.EQ" "AND.EQ R4@>R9, R10, R7" "andeq r7, sl, r4, ror r9" main.go:84
-0x9ac58 4 "" "BYTE 0xefbeadde" ".byte 0xefbeadde" main.go:84
-0x9ac5c 4 "B.GT" "B.GT 0x4975c" "bgt .-0x51504 <runtime.(*stackScanState).getPtr+0xf0>" main.go:84
-0x9ac60 4 "SBC.S.EQ" "SBC.S.EQ R1<<R10, R13, R11" "sbcseq fp, sp, r1, lsl sl" main.go:84
+0x9ac4c 4 "" "WORD $0x000a796c" ".word 0x000a796c" main.go:84
+0x9ac50 4 "" "WORD $0x000a7964" ".word 0x000a7964" main.go:84
+0x9ac54 4 "" "WORD $0x000a7974" ".word 0x000a7974" main.go:84
+0x9ac58 4 "" "WORD $0xdeadbeef" ".word 0xdeadbeef" main.go:84
+0x9ac5c 4 "" "WORD $0xcafebabe" ".word 0xcafebabe" main.go:84
+0x9ac60 4 "" "WORD $0x00ddba11" ".word 0x00ddba11" main.go:84

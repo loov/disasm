@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"slices"
+	"strings"
 	"sync"
 
 	"golang.org/x/arch/arm/armasm"
@@ -116,9 +117,21 @@ func (b *Binary) Disassemble(fn *Func) ([]Inst, error) {
 				v = v<<8 | uint64(code[i])
 			}
 			directive := map[int]string{4: ".word", 2: ".short", 1: ".byte"}[w]
-			text := fmt.Sprintf("%s %#0*x", directive, 2*w+2, v)
-			emit(w, "", text, text)
+			gnu := fmt.Sprintf("%s %#0*x", directive, 2*w, v)
+			text := gnu
+			if w == 4 {
+				text = fmt.Sprintf("WORD $%#08x", v) // what go tool objdump prints
+			}
+			emit(w, "", text, gnu)
 		}
+		// The Go linker emits no mapping symbols, so without them the
+		// literal pools are found from the pc-relative loads that read
+		// them; offsets are from the function start.
+		var pool map[int]bool
+		if b.arm32 == nil {
+			pool = armPool(code)
+		}
+		start := addr
 		for len(code) > 0 {
 			kind, end := byte('a'), addr+uint64(len(code))
 			if b.arm32 != nil {
@@ -163,6 +176,10 @@ func (b *Binary) Disassemble(fn *Func) ([]Inst, error) {
 				}
 			default:
 				for addr < end {
+					if pool[int(addr-start)] {
+						data(4)
+						continue
+					}
 					inst, err := armasm.Decode(code[:end-addr], armasm.ModeARM)
 					if err != nil || inst.Len == 0 || inst.Op == 0 {
 						undecodable(4)
@@ -243,7 +260,11 @@ func (b *Binary) Disassemble(fn *Func) ([]Inst, error) {
 				undecodable(4)
 				continue
 			}
-			emit(inst.Len, inst.Op.String(), ppc64asm.GoSyntax(inst, addr, resolve), ppc64asm.GNUSyntax(inst, addr))
+			// Op is the Go spelling like every other arch; ppc64asm's own
+			// Op.String is the lowercase Power mnemonic.
+			text := ppc64asm.GoSyntax(inst, addr, resolve)
+			op, _, _ := strings.Cut(text, " ")
+			emit(inst.Len, op, text, ppc64asm.GNUSyntax(inst, addr))
 		}
 	case "riscv64", "riscv32":
 		for len(code) > 0 {

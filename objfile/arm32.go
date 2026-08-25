@@ -2,6 +2,7 @@ package objfile
 
 import (
 	"cmp"
+	"encoding/binary"
 	"slices"
 )
 
@@ -89,4 +90,40 @@ func (r *armRegions) at(addr, limit uint64) (kind byte, end uint64) {
 		end = r.regions[i+1].addr
 	}
 	return kind, end
+}
+
+// armPool finds the literal-pool words of an ARM-mode body from the
+// pc-relative LDR and VLDR that read them, keyed by offset into code.
+// Used when the binary has no mapping symbols.
+func armPool(code []byte) map[int]bool {
+	pool := map[int]bool{}
+	n := len(code) &^ 3
+	for i := 0; i < n; i += 4 {
+		w := binary.LittleEndian.Uint32(code[i:])
+		if w>>28 == 0xF { // unconditional space: PLD etc., not a load
+			continue
+		}
+		var off, size int
+		switch {
+		case w&0x0F7F0000 == 0x051F0000: // LDR Rt, [PC, ±imm12]
+			off, size = int(w&0xFFF), 4
+		case w&0x0F3F0E00 == 0x0D1F0A00: // VLDR Fd, [PC, ±imm8*4]
+			off, size = int(w&0xFF)*4, 4
+			if w&0x100 != 0 { // double precision
+				size = 8
+			}
+		default:
+			continue
+		}
+		if w&0x00800000 == 0 { // U bit clear: subtract the offset
+			off = -off
+		}
+		target := i + 8 + off
+		for j := 0; j < size; j += 4 {
+			if p := target + j; 0 <= p && p+4 <= n {
+				pool[p] = true
+			}
+		}
+	}
+	return pool
 }

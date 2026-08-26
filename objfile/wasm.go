@@ -664,9 +664,11 @@ const wasmMaxImage int64 = 512 << 20
 // active data segments, where a Go module's pclntab lives. It gives up
 // on a segment placed implausibly far past the data actually present:
 // a hostile module can name a huge offset with a few bytes of payload,
-// and allocating for it is an OOM vector. Real Go binaries lay segments
-// out compactly, so a generous slack over the total initialized size
-// is safe.
+// and allocating for it is an OOM vector. The Go linker skips zero
+// runs, emitting tens of thousands of small segments, so the image is
+// larger than the initialized bytes by the zeroed data in between: a
+// 50 MB module has 2 MB of gaps over 22 MB of segments. Several times
+// the initialized size is still far from hostile.
 func wasmImage(segs []wasmSeg) []byte {
 	var end, total int64
 	var hasPclntab bool
@@ -681,7 +683,7 @@ func wasmImage(segs []wasmSeg) []byte {
 		total += n
 		hasPclntab = hasPclntab || findPclntab(s.init) != nil
 	}
-	if !hasPclntab || end <= 0 || end > total+1<<20 {
+	if !hasPclntab || end <= 0 || end > 4*total+1<<20 {
 		return nil
 	}
 	mem := make([]byte, end)

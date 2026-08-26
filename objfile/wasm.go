@@ -344,20 +344,31 @@ func (m *wasmModule) pcToLine(addr uint64) (string, int) {
 
 // disassembleWasm renders one function body. watgo decodes whole
 // modules only, so the body is wrapped into a synthetic single-function
-// module, rendered as WAT, and the printed instruction lines are
-// collected back out; the body's own instructions give call targets,
-// resume blocks and encoded sizes.
+// module and decoded; the body's own instructions give call targets,
+// resume blocks and encoded sizes. For the text, every instruction is
+// printed as the sole instruction of its own function: watgo indents
+// by block depth, and Go compiles a large switch into a br_table over
+// blocks nested thousands deep, so printing the body as-is costs
+// instructions×depth bytes of whitespace (gigabytes for one function).
 func (b *Binary) disassembleWasm(fn *Func) ([]Inst, error) {
 	m := fn.wasm
 	module, err := watgo.DecodeWASM(wrapWasmBody(fn.code))
 	if err != nil {
 		return nil, fmt.Errorf("decoding wasm body: %w", err)
 	}
-	wat, err := watgo.PrintWAT(module)
+	f := module.Funcs[0]
+
+	// The body's final end closes the function and is not an
+	// instruction of the listing.
+	body := f.Body[:max(len(f.Body)-1, 0)]
+	flat := &wasmir.Module{Types: module.Types, Funcs: make([]wasmir.Function, len(body))}
+	for i, in := range body {
+		flat.Funcs[i].Body = []wasmir.Instruction{in, {Kind: wasmir.InstrEnd}}
+	}
+	wat, err := watgo.PrintWAT(flat)
 	if err != nil {
 		return nil, fmt.Errorf("rendering wasm body: %w", err)
 	}
-	f := module.Funcs[0]
 
 	// Addresses, by what the module's line table is keyed on.
 	var offsets []uint64
@@ -371,18 +382,19 @@ func (b *Binary) disassembleWasm(fn *Func) ([]Inst, error) {
 	index := int(fn.Addr) - m.imports
 
 	var insts []Inst
-	// The body prints one instruction per line between "(func" and its
-	// closing ")", in Body order; the final InstrEnd becomes the ")".
-	inFunc := false
+	// Each function prints its instruction on the first body line after
+	// "(func", then the synthetic end, then ")"; only the first is kept.
+	want := false
 	for line := range strings.Lines(string(wat)) {
 		text := strings.TrimSpace(line)
 		switch {
 		case strings.HasPrefix(text, "(func"):
-			inFunc = true
+			want = true
 			continue
-		case !inFunc || text == "" || strings.HasPrefix(text, "(") || strings.HasPrefix(text, ")"):
+		case !want || text == "" || strings.HasPrefix(text, "(") || strings.HasPrefix(text, ")"):
 			continue
 		}
+		want = false
 		i := len(insts)
 		if i >= len(f.Body) {
 			break

@@ -1,6 +1,7 @@
 package objfile
 
 import (
+	"bytes"
 	"debug/dwarf"
 	"fmt"
 	"strconv"
@@ -395,8 +396,8 @@ func (b *Binary) disassembleWasm(fn *Func) ([]Inst, error) {
 	var insts []Inst
 	// Each function prints one instruction per line between "(func" and
 	// its closing ")", in body order.
-	for line := range strings.Lines(string(wat)) {
-		text := strings.TrimSpace(line)
+	for line := range bytes.Lines(wat) {
+		text := string(bytes.TrimSpace(line))
 		if text == "" || strings.HasPrefix(text, "(") || strings.HasPrefix(text, ")") {
 			continue
 		}

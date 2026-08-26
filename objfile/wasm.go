@@ -345,11 +345,14 @@ func (m *wasmModule) pcToLine(addr uint64) (string, int) {
 // disassembleWasm renders one function body. watgo decodes whole
 // modules only, so the body is wrapped into a synthetic single-function
 // module and decoded; the body's own instructions give call targets,
-// resume blocks and encoded sizes. For the text, every instruction is
-// printed as the sole instruction of its own function: watgo indents
-// by block depth, and Go compiles a large switch into a br_table over
-// blocks nested thousands deep, so printing the body as-is costs
-// instructions×depth bytes of whitespace (gigabytes for one function).
+// resume blocks and encoded sizes. For the text, the body is printed
+// as a sequence of functions, each ending at an instruction that opens
+// a block: watgo indents by block depth, and Go compiles a large
+// switch into a br_table over blocks nested thousands deep, so
+// printing the body as-is costs instructions×depth bytes of
+// whitespace (gigabytes for one function). Cut this way no function
+// nests, and the printer does not require a closing end, so the
+// functions alias the decoded body without copying.
 func (b *Binary) disassembleWasm(fn *Func) ([]Inst, error) {
 	m := fn.wasm
 	module, err := watgo.DecodeWASM(wrapWasmBody(fn.code))
@@ -358,12 +361,20 @@ func (b *Binary) disassembleWasm(fn *Func) ([]Inst, error) {
 	}
 	f := module.Funcs[0]
 
-	// The body's final end closes the function and is not an
-	// instruction of the listing.
-	body := f.Body[:max(len(f.Body)-1, 0)]
-	flat := &wasmir.Module{Types: module.Types, Funcs: make([]wasmir.Function, len(body))}
+	// The body's final end closes the function: the printer drops a
+	// trailing end, so it is not an instruction of the listing.
+	body := f.Body
+	flat := &wasmir.Module{Types: module.Types}
+	start := 0
 	for i, in := range body {
-		flat.Funcs[i].Body = []wasmir.Instruction{in, {Kind: wasmir.InstrEnd}}
+		switch in.Kind {
+		case wasmir.InstrBlock, wasmir.InstrLoop, wasmir.InstrIf, wasmir.InstrTryTable, wasmir.InstrElse:
+			flat.Funcs = append(flat.Funcs, wasmir.Function{Body: body[start : i+1]})
+			start = i + 1
+		}
+	}
+	if start < len(body) {
+		flat.Funcs = append(flat.Funcs, wasmir.Function{Body: body[start:]})
 	}
 	wat, err := watgo.PrintWAT(flat)
 	if err != nil {
@@ -382,19 +393,13 @@ func (b *Binary) disassembleWasm(fn *Func) ([]Inst, error) {
 	index := int(fn.Addr) - m.imports
 
 	var insts []Inst
-	// Each function prints its instruction on the first body line after
-	// "(func", then the synthetic end, then ")"; only the first is kept.
-	want := false
+	// Each function prints one instruction per line between "(func" and
+	// its closing ")", in body order.
 	for line := range strings.Lines(string(wat)) {
 		text := strings.TrimSpace(line)
-		switch {
-		case strings.HasPrefix(text, "(func"):
-			want = true
-			continue
-		case !want || text == "" || strings.HasPrefix(text, "(") || strings.HasPrefix(text, ")"):
+		if text == "" || strings.HasPrefix(text, "(") || strings.HasPrefix(text, ")") {
 			continue
 		}
-		want = false
 		i := len(insts)
 		if i >= len(f.Body) {
 			break

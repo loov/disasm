@@ -1,10 +1,8 @@
 package objfile
 
 import (
-	"bytes"
 	"debug/dwarf"
 	"fmt"
-	"strconv"
 	"strings"
 	"sync"
 	"unsafe"
@@ -345,15 +343,8 @@ func (m *wasmModule) pcToLine(addr uint64) (string, int) {
 
 // disassembleWasm renders one function body. watgo decodes whole
 // modules only, so the body is wrapped into a synthetic single-function
-// module and decoded; the body's own instructions give call targets,
-// resume blocks and encoded sizes. For the text, the body is printed
-// as a sequence of functions, each ending at an instruction that opens
-// a block: watgo indents by block depth, and Go compiles a large
-// switch into a br_table over blocks nested thousands deep, so
-// printing the body as-is costs instructions×depth bytes of
-// whitespace (gigabytes for one function). Cut this way no function
-// nests, and the printer does not require a closing end, so the
-// functions alias the decoded body without copying.
+// module and decoded; the instructions are rendered one at a time by
+// wasmInstText, and give call targets, resume blocks and encoded sizes.
 func (b *Binary) disassembleWasm(fn *Func) ([]Inst, error) {
 	m := fn.wasm
 	module, err := watgo.DecodeWASM(wrapWasmBody(fn.code))
@@ -361,26 +352,6 @@ func (b *Binary) disassembleWasm(fn *Func) ([]Inst, error) {
 		return nil, fmt.Errorf("decoding wasm body: %w", err)
 	}
 	f := module.Funcs[0]
-
-	// The body's final end closes the function: the printer drops a
-	// trailing end, so it is not an instruction of the listing.
-	body := f.Body
-	flat := &wasmir.Module{Types: module.Types}
-	start := 0
-	for i, in := range body {
-		switch in.Kind {
-		case wasmir.InstrBlock, wasmir.InstrLoop, wasmir.InstrIf, wasmir.InstrTryTable, wasmir.InstrElse:
-			flat.Funcs = append(flat.Funcs, wasmir.Function{Body: body[start : i+1]})
-			start = i + 1
-		}
-	}
-	if start < len(body) {
-		flat.Funcs = append(flat.Funcs, wasmir.Function{Body: body[start:]})
-	}
-	wat, err := watgo.PrintWAT(flat)
-	if err != nil {
-		return nil, fmt.Errorf("rendering wasm body: %w", err)
-	}
 
 	// Addresses, by what the module's line table is keyed on.
 	var offsets []uint64
@@ -393,20 +364,13 @@ func (b *Binary) disassembleWasm(fn *Func) ([]Inst, error) {
 	}
 	index := int(fn.Addr) - m.imports
 
-	var insts []Inst
-	// Each function prints one instruction per line between "(func" and
-	// its closing ")", in body order.
-	for line := range bytes.Lines(wat) {
-		text := string(bytes.TrimSpace(line))
-		if text == "" || strings.HasPrefix(text, "(") || strings.HasPrefix(text, ")") {
-			continue
-		}
-		i := len(insts)
-		if i >= len(f.Body) {
-			break
-		}
-		op, rest, _ := strings.Cut(text, " ")
-		inst := Inst{Op: op, Text: text}
+	// The body's final end closes the function and is not an
+	// instruction of the listing.
+	body := f.Body[:max(len(f.Body)-1, 0)]
+	insts := make([]Inst, 0, len(body))
+	for i := range body {
+		in := &body[i]
+		inst := Inst{Op: wasmOpNames[in.Kind], Text: wasmInstText(in)}
 		switch {
 		case offsets != nil:
 			inst.Addr = offsets[i]
@@ -420,14 +384,12 @@ func (b *Binary) disassembleWasm(fn *Func) ([]Inst, error) {
 		default:
 			inst.Addr = uint64(i + 1)
 		}
-		if f.Body[i].Kind == wasmir.InstrCall {
+		if in.Kind == wasmir.InstrCall {
 			// ponytail: only plain call is symbolized; Go does not
 			// emit return_call or ref.func in function bodies.
-			inst.RefKnown, inst.Call, inst.Ref = true, true, uint64(f.Body[i].FuncIndex)
-			if idx, err := strconv.ParseUint(rest, 10, 64); err == nil {
-				if name, _ := m.lookup(idx); name != "" {
-					inst.Text = "call " + name
-				}
+			inst.RefKnown, inst.Call, inst.Ref = true, true, uint64(in.FuncIndex)
+			if name, _ := m.lookup(uint64(in.FuncIndex)); name != "" {
+				inst.Text = "call " + name
 			}
 		}
 		insts = append(insts, inst)

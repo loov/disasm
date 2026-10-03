@@ -208,6 +208,16 @@ func TestWasmImage_BoundsCopies(t *testing.T) {
 	}
 }
 
+// TestLocalsSize_HugeCount checks that a body declaring more local
+// groups than it holds bytes for fails instead of spinning on the
+// declared count.
+func TestLocalsSize_HugeCount(t *testing.T) {
+	body := []byte{0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x7f, 0x0b}
+	if n := localsSize(body); n != -1 {
+		t.Fatalf("localsSize = %d, want -1", n)
+	}
+}
+
 func TestCString_OwnsResult(t *testing.T) {
 	data := []byte("symbol\x00")
 	name := cstring(data, 0)

@@ -490,6 +490,12 @@ func localsSize(body []byte) int {
 	for range c.uint() {
 		c.uint() // count
 		c.byte() // value type
+		// Checked inside the loop: the declared count is
+		// attacker-controlled and reads past the end are no-ops, so an
+		// unchecked loop would spin on a huge count in a short body.
+		if c.fail {
+			return -1
+		}
 	}
 	if c.fail {
 		return -1

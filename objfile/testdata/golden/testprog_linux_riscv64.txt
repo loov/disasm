@@ -1,7 +1,7 @@
-arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1a75643ddd277f90
+arch=riscv64 funcs=1395 sha256=02995da9e680b40b74cf4f237a9c065a8f1fccae1125307f35374b9c96b115af
 == runtime.runGCProg 0x28938 832 /usr/local/go/src/runtime/mbitmap.go
 0x28938 4 "LD" "MOV 16(X27), X6" "ld x6,16(x27)" ref=0x0 call=false mbitmap.go:1565
-0x2893c 4 "BLTU" "BLTU X6, X2, 5(PC)" "bltu x6,x2,20 <runtime.runGCProg+0x18>" ref=0x28950 call=false mbitmap.go:1565
+0x2893c 4 "BLTU" "BLTU X6, X2, 0x28950" "bltu x6,x2,20 <runtime.runGCProg+0x18>" ref=0x28950 call=false mbitmap.go:1565
 0x28940 2 "SD" "MOV X10, 8(X2)" "sd x10,8(x2)" ref=0x0 call=false mbitmap.go:1565
 0x28942 2 "SD" "MOV X11, 16(X2)" "sd x11,16(x2)" ref=0x0 call=false mbitmap.go:1565
 0x28944 4 "JAL" "JAL X5, runtime.morestack_noctxt.abi0(SB)" "jal x5,276324 <runtime.morestack_noctxt.abi0>" ref=0x6c0a8 call=true mbitmap.go:1565
@@ -14,34 +14,34 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x28958 2 "ADDI" "MOV X0, X9" "li x9,0" ref=0x0 call=false mbitmap.go:1577
 0x2895a 2 "ADD" "ADD X11, X0, X12" "mv x12,x11" ref=0x0 call=false mbitmap.go:1577
 0x2895c 2 "ADDI" "MOV X0, X13" "li x13,0" ref=0x0 call=false mbitmap.go:1577
-0x2895e 4 "JAL" "JMP 6(PC)" "j 24 <runtime.runGCProg+0x3e>" ref=0x28976 call=false mbitmap.go:1577
+0x2895e 4 "JAL" "JMP 0x28976" "j 24 <runtime.runGCProg+0x3e>" ref=0x28976 call=false mbitmap.go:1577
 0x28962 2 "ADD" "ADD X5, X0, X10" "mv x10,x5" ref=0x0 call=false mbitmap.go:1577
 0x28964 2 "ADD" "ADD X6, X0, X11" "mv x11,x6" ref=0x0 call=false mbitmap.go:1577
-0x28966 4 "JAL" "JMP 4(PC)" "j 16 <runtime.runGCProg+0x3e>" ref=0x28976 call=false mbitmap.go:1577
+0x28966 4 "JAL" "JMP 0x28976" "j 16 <runtime.runGCProg+0x3e>" ref=0x28976 call=false mbitmap.go:1577
 0x2896a 4 "SB" "MOVB X9, (X11)" "sb x9,0(x11)" ref=0x0 call=false mbitmap.go:1578
 0x2896e 2 "ADDI" "MOV X0, X0" "nop" ref=0x0 call=false mbitmap.go:1579
 0x28970 2 "ADDI" "ADDI $-8, X13, X13" "addi x13,x13,-8" ref=0x0 call=false mbitmap.go:1577
 0x28972 2 "SRLI" "SRLI $8, X9, X9" "srli x9,x9,0x8" ref=0x0 call=false mbitmap.go:1580
 0x28974 2 "ADDI" "ADDI $1, X11, X11" "addi x11,x11,1" ref=0x0 call=false mbitmap.go:1056
 0x28976 2 "ADDI" "ADDI $8, X0, X14" "li x14,8" ref=0x0 call=false mbitmap.go:1577
-0x28978 4 "BGEU" "BGEU X13, X14, -3(PC)" "bgeu x13,x14,-14 <runtime.runGCProg+0x32>" ref=0x2896a call=false mbitmap.go:1577
+0x28978 4 "BGEU" "BGEU X13, X14, 0x2896a" "bgeu x13,x14,-14 <runtime.runGCProg+0x32>" ref=0x2896a call=false mbitmap.go:1577
 0x2897c 4 "LBU" "MOVBU (X10), X15" "lbu x15,0(x10)" ref=0x0 call=false mbitmap.go:1584
 0x28980 2 "ADDI" "MOV X0, X0" "nop" ref=0x0 call=false mbitmap.go:1585
 0x28982 4 "ANDI" "ANDI $127, X15, X16" "andi x16,x15,127" ref=0x0 call=false mbitmap.go:1586
 0x28986 4 "ADDI" "ADDI $1, X10, X5" "addi x5,x10,1" ref=0x0 call=false mbitmap.go:1056
 0x2898a 4 "ANDI" "ANDI $128, X15, X6" "andi x6,x15,128" ref=0x0 call=false mbitmap.go:1587
-0x2898e 4 "BNE" "BNEZ X6, 4(PC)" "bnez x6,18 <runtime.runGCProg+0x68>" ref=0x289a0 call=false mbitmap.go:1587
-0x28992 4 "BEQ" "BEQZ X16, 67(PC)" "beqz x16,270 <runtime.runGCProg+0x168>" ref=0x28aa0 call=false mbitmap.go:1589
+0x2898e 4 "BNE" "BNEZ X6, 0x289a0" "bnez x6,18 <runtime.runGCProg+0x68>" ref=0x289a0 call=false mbitmap.go:1587
+0x28992 4 "BEQ" "BEQZ X16, 0x28aa0" "beqz x16,270 <runtime.runGCProg+0x168>" ref=0x28aa0 call=false mbitmap.go:1589
 0x28996 4 "SRLI" "SRLI $3, X16, X14" "srli x14,x16,0x3" ref=0x0 call=false mbitmap.go:1593
 0x2899a 2 "ADDI" "MOV X0, X16" "li x16,0" ref=0x0 call=false mbitmap.go:1594
-0x2899c 4 "JAL" "JMP 172(PC)" "j 690 <runtime.runGCProg+0x316>" ref=0x28c4e call=false mbitmap.go:1594
-0x289a0 4 "BNE" "BNEZ X16, 3(PC)" "bnez x16,12 <runtime.runGCProg+0x74>" ref=0x289ac call=false mbitmap.go:1610
+0x2899c 4 "JAL" "JMP 0x28c4e" "j 690 <runtime.runGCProg+0x316>" ref=0x28c4e call=false mbitmap.go:1594
+0x289a0 4 "BNE" "BNEZ X16, 0x289ac" "bnez x16,12 <runtime.runGCProg+0x74>" ref=0x289ac call=false mbitmap.go:1610
 0x289a4 2 "ADDI" "MOV X0, X15" "li x15,0" ref=0x0 call=false mbitmap.go:1610
 0x289a6 2 "ADDI" "MOV X0, X16" "li x16,0" ref=0x0 call=false mbitmap.go:1610
-0x289a8 4 "JAL" "JMP 144(PC)" "j 578 <runtime.runGCProg+0x2b2>" ref=0x28bea call=false mbitmap.go:1610
+0x289a8 4 "JAL" "JMP 0x28bea" "j 578 <runtime.runGCProg+0x2b2>" ref=0x28bea call=false mbitmap.go:1610
 0x289ac 2 "ADDI" "MOV X0, X15" "li x15,0" ref=0x0 call=false mbitmap.go:1624
 0x289ae 2 "ADDI" "MOV X0, X6" "li x6,0" ref=0x0 call=false mbitmap.go:1624
-0x289b0 4 "JAL" "JMP 1(PC)" "j 6 <runtime.runGCProg+0x7e>" ref=0x289b6 call=false mbitmap.go:1624
+0x289b0 4 "JAL" "JMP 0x289b6" "j 6 <runtime.runGCProg+0x7e>" ref=0x289b6 call=false mbitmap.go:1624
 0x289b4 2 "ADDI" "ADDI $7, X15, X15" "addi x15,x15,7" ref=0x0 call=false mbitmap.go:1623
 0x289b6 4 "LBU" "MOVBU (X5), X7" "lbu x7,0(x5)" ref=0x0 call=false mbitmap.go:1624
 0x289ba 4 "ANDI" "ANDI $127, X7, X8" "andi x8,x7,127" ref=0x0 call=false mbitmap.go:1626
@@ -53,15 +53,15 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x289d2 2 "ADDI" "ADDI $1, X5, X5" "addi x5,x5,1" ref=0x0 call=false mbitmap.go:1056
 0x289d4 2 "ADDI" "MOV X0, X0" "nop" ref=0x0 call=false mbitmap.go:1625
 0x289d6 4 "ANDI" "ANDI $128, X7, X7" "andi x7,x7,128" ref=0x0 call=false mbitmap.go:1627
-0x289da 4 "BNE" "BNEZ X7, -9(PC)" "bnez x7,-38 <runtime.runGCProg+0x7c>" ref=0x289b4 call=false mbitmap.go:1627
+0x289da 4 "BNE" "BNEZ X7, 0x289b4" "bnez x7,-38 <runtime.runGCProg+0x7c>" ref=0x289b4 call=false mbitmap.go:1627
 0x289de 4 "MUL" "MUL X6, X16, X15" "mul x15,x16,x6" ref=0x0 call=false mbitmap.go:1631
 0x289e2 4 "ADDI" "ADDI $57, X0, X10" "li x10,57" ref=0x0 call=false mbitmap.go:1642
-0x289e6 4 "BLTU" "BLTU X10, X16, 4(PC)" "bltu x10,x16,18 <runtime.runGCProg+0xc0>" ref=0x289f8 call=false mbitmap.go:1642
+0x289e6 4 "BLTU" "BLTU X10, X16, 0x289f8" "bltu x10,x16,18 <runtime.runGCProg+0xc0>" ref=0x289f8 call=false mbitmap.go:1642
 0x289ea 2 "ADDI" "MOV X0, X0" "nop" ref=0x0 call=false mbitmap.go:1648
 0x289ec 4 "ADDI" "ADDI $-1, X11, X6" "addi x6,x11,-1" ref=0x0 call=false mbitmap.go:1069
 0x289f0 2 "ADD" "ADD X13, X0, X7" "mv x7,x13" ref=0x0 call=false mbitmap.go:1577
 0x289f2 2 "ADD" "ADD X9, X0, X8" "mv x8,x9" ref=0x0 call=false mbitmap.go:1577
-0x289f4 4 "JAL" "JMP 54(PC)" "j 216 <runtime.runGCProg+0x194>" ref=0x28acc call=false mbitmap.go:1649
+0x289f4 4 "JAL" "JMP 0x28acc" "j 216 <runtime.runGCProg+0x194>" ref=0x28acc call=false mbitmap.go:1649
 0x289f8 4 "SUB" "SUB X13, X16, X14" "sub x14,x16,x13" ref=0x0 call=false mbitmap.go:1723
 0x289fc 4 "ADDI" "ADDI $7, X14, X16" "addi x16,x14,7" ref=0x0 call=false mbitmap.go:1725
 0x28a00 4 "SRLI" "SRLI $3, X16, X16" "srli x16,x16,0x3" ref=0x0 call=false mbitmap.go:1725
@@ -69,7 +69,7 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x28a06 4 "SUB" "SUB X16, X11, X11" "sub x11,x11,x16" ref=0x0 call=false mbitmap.go:1045
 0x28a0a 2 "ADD" "ADD X11, X0, X16" "mv x16,x11" ref=0x0 call=false mbitmap.go:1045
 0x28a0c 2 "ANDI" "ANDI $7, X14, X14" "andi x14,x14,7" ref=0x0 call=false mbitmap.go:1726
-0x28a0e 4 "BEQ" "BEQZ X14, 9(PC)" "beqz x14,38 <runtime.runGCProg+0xfc>" ref=0x28a34 call=false mbitmap.go:1726
+0x28a0e 4 "BEQ" "BEQZ X14, 0x28a34" "beqz x14,38 <runtime.runGCProg+0xfc>" ref=0x28a34 call=false mbitmap.go:1726
 0x28a12 4 "LBU" "MOVBU (X11), X7" "lbu x7,0(x11)" ref=0x0 call=false mbitmap.go:1727
 0x28a16 4 "ADDI" "ADDI $-8, X14, X8" "addi x8,x14,-8" ref=0x0 call=false mbitmap.go:1727
 0x28a1a 4 "SUB" "NEG X8, X8" "neg x8,x8" ref=0x0 call=false mbitmap.go:1727
@@ -83,7 +83,7 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x28a34 4 "SLTIU" "SLTIU $64, X13, X14" "sltiu x14,x13,64" ref=0x0 call=false mbitmap.go:1735
 0x28a38 4 "SRLI" "SRLI $3, X15, X16" "srli x16,x15,0x3" ref=0x0 call=false mbitmap.go:1734
 0x28a3c 4 "SUB" "NEG X14, X14" "neg x14,x14" ref=0x0 call=false mbitmap.go:1735
-0x28a40 4 "JAL" "JMP 9(PC)" "j 38 <runtime.runGCProg+0x12e>" ref=0x28a66 call=false mbitmap.go:1734
+0x28a40 4 "JAL" "JMP 0x28a66" "j 38 <runtime.runGCProg+0x12e>" ref=0x28a66 call=false mbitmap.go:1734
 0x28a44 4 "LBU" "MOVBU (X11), X7" "lbu x7,0(x11)" ref=0x0 call=false mbitmap.go:1735
 0x28a48 4 "SLL" "SLL X13, X7, X7" "sll x7,x7,x13" ref=0x0 call=false mbitmap.go:1735
 0x28a4c 4 "AND" "AND X14, X7, X7" "and x7,x7,x14" ref=0x0 call=false mbitmap.go:1735
@@ -95,9 +95,9 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x28a60 2 "ADDI" "ADDI $-1, X16, X16" "addi x16,x16,-1" ref=0x0 call=false mbitmap.go:1734
 0x28a62 2 "ADDI" "ADDI $1, X11, X11" "addi x11,x11,1" ref=0x0 call=false mbitmap.go:1056
 0x28a64 2 "ADDI" "ADDI $1, X6, X6" "addi x6,x6,1" ref=0x0 call=false mbitmap.go:1056
-0x28a66 4 "BNE" "BNEZ X16, -8(PC)" "bnez x16,-34 <runtime.runGCProg+0x10c>" ref=0x28a44 call=false mbitmap.go:1734
+0x28a66 4 "BNE" "BNEZ X16, 0x28a44" "bnez x16,-34 <runtime.runGCProg+0x10c>" ref=0x28a44 call=false mbitmap.go:1734
 0x28a6a 4 "ANDI" "ANDI $7, X15, X14" "andi x14,x15,7" ref=0x0 call=false mbitmap.go:1742
-0x28a6e 4 "BEQ" "BEQZ X14, 11(PC)" "beqz x14,44 <runtime.runGCProg+0x162>" ref=0x28a9a call=false mbitmap.go:1742
+0x28a6e 4 "BEQ" "BEQZ X14, 0x28a9a" "beqz x14,44 <runtime.runGCProg+0x162>" ref=0x28a9a call=false mbitmap.go:1742
 0x28a72 4 "LBU" "MOVBU (X11), X11" "lbu x11,0(x11)" ref=0x0 call=false mbitmap.go:1743
 0x28a76 2 "ADDI" "ADDI $1, X0, X15" "li x15,1" ref=0x0 call=false mbitmap.go:1743
 0x28a78 4 "SLL" "SLL X14, X15, X16" "sll x16,x15,x14" ref=0x0 call=false mbitmap.go:1743
@@ -109,9 +109,9 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x28a8e 4 "AND" "AND X16, X11, X11" "and x11,x11,x16" ref=0x0 call=false mbitmap.go:1743
 0x28a92 2 "OR" "OR X11, X9, X9" "or x9,x9,x11" ref=0x0 call=false mbitmap.go:1743
 0x28a94 2 "ADD" "ADD X14, X13, X13" "add x13,x13,x14" ref=0x0 call=false mbitmap.go:1744
-0x28a96 4 "JAL" "JMP -77(PC)" "j -308 <runtime.runGCProg+0x2a>" ref=0x28962 call=false mbitmap.go:1744
+0x28a96 4 "JAL" "JMP 0x28962" "j -308 <runtime.runGCProg+0x2a>" ref=0x28962 call=false mbitmap.go:1744
 0x28a9a 2 "ADDI" "ADDI $1, X0, X15" "li x15,1" ref=0x0 call=false mbitmap.go:1744
-0x28a9c 4 "JAL" "JMP -78(PC)" "j -314 <runtime.runGCProg+0x2a>" ref=0x28962 call=false mbitmap.go:1742
+0x28a9c 4 "JAL" "JMP 0x28962" "j -314 <runtime.runGCProg+0x2a>" ref=0x28962 call=false mbitmap.go:1742
 0x28aa0 2 "ADD" "ADD X11, X0, X14" "mv x14,x11" ref=0x0 call=false mbitmap.go:1749
 0x28aa2 4 "SUB" "SUB X12, X14, X12" "sub x12,x14,x12" ref=0x0 call=false mbitmap.go:1749
 0x28aa6 2 "SLLI" "SLLI $3, X12, X12" "slli x12,x12,0x3" ref=0x0 call=false mbitmap.go:1749
@@ -119,57 +119,57 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x28aac 2 "ANDI" "ANDI $7, X14, X14" "andi x14,x14,7" ref=0x0 call=false mbitmap.go:1750
 0x28aae 4 "ADD" "ADD X13, X12, X10" "add x10,x12,x13" ref=0x0 call=false mbitmap.go:1749
 0x28ab2 4 "ADD" "ADD X13, X14, X12" "add x12,x14,x13" ref=0x0 call=false mbitmap.go:1750
-0x28ab6 4 "JAL" "JMP 91(PC)" "j 366 <runtime.runGCProg+0x2ec>" ref=0x28c24 call=false mbitmap.go:1751
+0x28ab6 4 "JAL" "JMP 0x28c24" "j 366 <runtime.runGCProg+0x2ec>" ref=0x28c24 call=false mbitmap.go:1751
 0x28aba 4 "SLLI" "SLLI $8, X9, X17" "slli x17,x9,0x8" ref=0x0 call=false mbitmap.go:1650
 0x28abe 4 "LBU" "MOVBU (X6), X18" "lbu x18,0(x6)" ref=0x0 call=false mbitmap.go:1651
 0x28ac2 4 "OR" "OR X17, X18, X9" "or x9,x18,x17" ref=0x0 call=false mbitmap.go:1651
 0x28ac6 2 "ADDI" "MOV X0, X0" "nop" ref=0x0 call=false mbitmap.go:1652
 0x28ac8 2 "ADDI" "ADDI $8, X13, X13" "addi x13,x13,8" ref=0x0 call=false mbitmap.go:1653
 0x28aca 2 "ADDI" "ADDI $-1, X6, X6" "addi x6,x6,-1" ref=0x0 call=false mbitmap.go:1069
-0x28acc 4 "BLTU" "BLTU X13, X16, -4(PC)" "bltu x13,x16,-18 <runtime.runGCProg+0x182>" ref=0x28aba call=false mbitmap.go:1649
-0x28ad0 4 "BGEU" "BGEU X16, X13, 7(PC)" "bgeu x16,x13,28 <runtime.runGCProg+0x1b4>" ref=0x28aec call=false mbitmap.go:1660
+0x28acc 4 "BLTU" "BLTU X13, X16, 0x28aba" "bltu x13,x16,-18 <runtime.runGCProg+0x182>" ref=0x28aba call=false mbitmap.go:1649
+0x28ad0 4 "BGEU" "BGEU X16, X13, 0x28aec" "bgeu x16,x13,28 <runtime.runGCProg+0x1b4>" ref=0x28aec call=false mbitmap.go:1660
 0x28ad4 4 "SUB" "SUB X16, X13, X6" "sub x6,x13,x16" ref=0x0 call=false mbitmap.go:1661
 0x28ad8 4 "SRL" "SRL X6, X9, X17" "srl x17,x9,x6" ref=0x0 call=false mbitmap.go:1661
 0x28adc 4 "SLTIU" "SLTIU $64, X6, X6" "sltiu x6,x6,64" ref=0x0 call=false mbitmap.go:1661
 0x28ae0 4 "SUB" "NEG X6, X6" "neg x6,x6" ref=0x0 call=false mbitmap.go:1661
 0x28ae4 4 "AND" "AND X6, X17, X9" "and x9,x17,x6" ref=0x0 call=false mbitmap.go:1661
-0x28ae8 4 "JAL" "JMP 1(PC)" "j 6 <runtime.runGCProg+0x1b6>" ref=0x28aee call=false mbitmap.go:1662
+0x28ae8 4 "JAL" "JMP 0x28aee" "j 6 <runtime.runGCProg+0x1b6>" ref=0x28aee call=false mbitmap.go:1662
 0x28aec 2 "ADD" "ADD X13, X0, X16" "mv x16,x13" ref=0x0 call=false mbitmap.go:1666
 0x28aee 4 "ADDI" "ADDI $-1, X16, X13" "addi x13,x16,-1" ref=0x0 call=false mbitmap.go:1666
-0x28af2 4 "BNE" "BNEZ X13, 7(PC)" "bnez x13,30 <runtime.runGCProg+0x1d8>" ref=0x28b10 call=false mbitmap.go:1666
+0x28af2 4 "BNE" "BNEZ X13, 0x28b10" "bnez x13,30 <runtime.runGCProg+0x1d8>" ref=0x28b10 call=false mbitmap.go:1666
 0x28af6 4 "ADDI" "ADDI $-1, X9, X13" "addi x13,x9,-1" ref=0x0 call=false mbitmap.go:1673
-0x28afa 4 "BNE" "BNEZ X13, 4(PC)" "bnez x13,16 <runtime.runGCProg+0x1d2>" ref=0x28b0a call=false mbitmap.go:1673
+0x28afa 4 "BNE" "BNEZ X13, 0x28b0a" "bnez x13,16 <runtime.runGCProg+0x1d2>" ref=0x28b0a call=false mbitmap.go:1673
 0x28afe 2 "ADDI" "ADDI $-1, X0, X9" "li x9,-1" ref=0x0 call=false mbitmap.go:1673
 0x28b00 2 "SRLI" "SRLI $7, X9, X9" "srli x9,x9,0x7" ref=0x0 call=false mbitmap.go:1673
 0x28b02 4 "ADDI" "ADDI $57, X0, X13" "li x13,57" ref=0x0 call=false mbitmap.go:1673
-0x28b06 4 "JAL" "JMP 9(PC)" "j 36 <runtime.runGCProg+0x1f2>" ref=0x28b2a call=false mbitmap.go:1673
+0x28b06 4 "JAL" "JMP 0x28b2a" "j 36 <runtime.runGCProg+0x1f2>" ref=0x28b2a call=false mbitmap.go:1673
 0x28b0a 2 "ADD" "ADD X15, X0, X13" "mv x13,x15" ref=0x0 call=false mbitmap.go:1673
-0x28b0c 4 "JAL" "JMP 7(PC)" "j 30 <runtime.runGCProg+0x1f2>" ref=0x28b2a call=false mbitmap.go:1677
+0x28b0c 4 "JAL" "JMP 0x28b2a" "j 30 <runtime.runGCProg+0x1f2>" ref=0x28b2a call=false mbitmap.go:1677
 0x28b10 4 "SLLI" "SLLI $1, X16, X13" "slli x13,x16,0x1" ref=0x0 call=false mbitmap.go:1682
-0x28b14 4 "BLTU" "BLTU X10, X13, 2(PC)" "bltu x10,x13,10 <runtime.runGCProg+0x1e6>" ref=0x28b1e call=false mbitmap.go:1682
+0x28b14 4 "BLTU" "BLTU X10, X13, 0x28b1e" "bltu x10,x13,10 <runtime.runGCProg+0x1e6>" ref=0x28b1e call=false mbitmap.go:1682
 0x28b18 2 "ADD" "ADD X16, X0, X13" "mv x13,x16" ref=0x0 call=false mbitmap.go:1666
-0x28b1a 4 "JAL" "JMP 38(PC)" "j 154 <runtime.runGCProg+0x27c>" ref=0x28bb4 call=false mbitmap.go:1682
+0x28b1a 4 "JAL" "JMP 0x28bb4" "j 154 <runtime.runGCProg+0x27c>" ref=0x28bb4 call=false mbitmap.go:1682
 0x28b1e 2 "ADD" "ADD X16, X0, X13" "mv x13,x16" ref=0x0 call=false mbitmap.go:1700
-0x28b20 4 "JAL" "JMP 2(PC)" "j 10 <runtime.runGCProg+0x1f2>" ref=0x28b2a call=false mbitmap.go:1700
+0x28b20 4 "JAL" "JMP 0x28b2a" "j 10 <runtime.runGCProg+0x1f2>" ref=0x28b2a call=false mbitmap.go:1700
 0x28b24 2 "SUB" "SUB X13, X15, X15" "sub x15,x15,x13" ref=0x0 call=false mbitmap.go:1700
 0x28b26 2 "ADD" "ADD X6, X0, X7" "mv x7,x6" ref=0x0 call=false mbitmap.go:1700
 0x28b28 2 "ADD" "ADD X16, X0, X8" "mv x8,x16" ref=0x0 call=false mbitmap.go:1700
-0x28b2a 4 "BLTU" "BLTU X15, X13, 13(PC)" "bltu x15,x13,54 <runtime.runGCProg+0x228>" ref=0x28b60 call=false mbitmap.go:1700
+0x28b2a 4 "BLTU" "BLTU X15, X13, 0x28b60" "bltu x15,x13,54 <runtime.runGCProg+0x228>" ref=0x28b60 call=false mbitmap.go:1700
 0x28b2e 4 "SLL" "SLL X7, X9, X16" "sll x16,x9,x7" ref=0x0 call=false mbitmap.go:1701
 0x28b32 4 "SLTIU" "SLTIU $64, X7, X6" "sltiu x6,x7,64" ref=0x0 call=false mbitmap.go:1701
 0x28b36 4 "SUB" "NEG X6, X6" "neg x6,x6" ref=0x0 call=false mbitmap.go:1701
 0x28b3a 4 "AND" "AND X6, X16, X16" "and x16,x16,x6" ref=0x0 call=false mbitmap.go:1701
 0x28b3e 4 "OR" "OR X16, X8, X16" "or x16,x8,x16" ref=0x0 call=false mbitmap.go:1701
 0x28b42 4 "ADD" "ADD X7, X13, X6" "add x6,x13,x7" ref=0x0 call=false mbitmap.go:1702
-0x28b46 4 "JAL" "JMP 4(PC)" "j 18 <runtime.runGCProg+0x220>" ref=0x28b58 call=false mbitmap.go:1703
+0x28b46 4 "JAL" "JMP 0x28b58" "j 18 <runtime.runGCProg+0x220>" ref=0x28b58 call=false mbitmap.go:1703
 0x28b4a 4 "SB" "MOVB X16, (X11)" "sb x16,0(x11)" ref=0x0 call=false mbitmap.go:1704
 0x28b4e 2 "ADDI" "MOV X0, X0" "nop" ref=0x0 call=false mbitmap.go:1705
 0x28b50 4 "SRLI" "SRLI $8, X16, X16" "srli x16,x16,0x8" ref=0x0 call=false mbitmap.go:1706
 0x28b54 2 "ADDI" "ADDI $-8, X6, X6" "addi x6,x6,-8" ref=0x0 call=false mbitmap.go:1707
 0x28b56 2 "ADDI" "ADDI $1, X11, X11" "addi x11,x11,1" ref=0x0 call=false mbitmap.go:1056
-0x28b58 4 "BGEU" "BGEU X6, X14, -3(PC)" "bgeu x6,x14,-14 <runtime.runGCProg+0x212>" ref=0x28b4a call=false mbitmap.go:1703
-0x28b5c 4 "JAL" "JMP -14(PC)" "j -56 <runtime.runGCProg+0x1ec>" ref=0x28b24 call=false mbitmap.go:1703
-0x28b60 4 "BEQ" "BEQZ X15, 12(PC)" "beqz x15,48 <runtime.runGCProg+0x258>" ref=0x28b90 call=false mbitmap.go:1712
+0x28b58 4 "BGEU" "BGEU X6, X14, 0x28b4a" "bgeu x6,x14,-14 <runtime.runGCProg+0x212>" ref=0x28b4a call=false mbitmap.go:1703
+0x28b5c 4 "JAL" "JMP 0x28b24" "j -56 <runtime.runGCProg+0x1ec>" ref=0x28b24 call=false mbitmap.go:1703
+0x28b60 4 "BEQ" "BEQZ X15, 0x28b90" "beqz x15,48 <runtime.runGCProg+0x258>" ref=0x28b90 call=false mbitmap.go:1712
 0x28b64 2 "ADDI" "ADDI $1, X0, X13" "li x13,1" ref=0x0 call=false mbitmap.go:1713
 0x28b66 4 "SLL" "SLL X15, X13, X14" "sll x14,x13,x15" ref=0x0 call=false mbitmap.go:1713
 0x28b6a 4 "SLTIU" "SLTIU $64, X15, X16" "sltiu x16,x15,64" ref=0x0 call=false mbitmap.go:1713
@@ -183,13 +183,13 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x28b86 2 "AND" "AND X14, X9, X9" "and x9,x9,x14" ref=0x0 call=false mbitmap.go:1714
 0x28b88 2 "OR" "OR X9, X8, X8" "or x8,x8,x9" ref=0x0 call=false mbitmap.go:1714
 0x28b8a 2 "ADD" "ADD X15, X7, X7" "add x7,x7,x15" ref=0x0 call=false mbitmap.go:1715
-0x28b8c 4 "JAL" "JMP 1(PC)" "j 6 <runtime.runGCProg+0x25a>" ref=0x28b92 call=false mbitmap.go:1715
+0x28b8c 4 "JAL" "JMP 0x28b92" "j 6 <runtime.runGCProg+0x25a>" ref=0x28b92 call=false mbitmap.go:1715
 0x28b90 2 "ADDI" "ADDI $1, X0, X13" "li x13,1" ref=0x0 call=false mbitmap.go:1715
 0x28b92 2 "ADDI" "ADDI $1, X0, X15" "li x15,1" ref=0x0 call=false mbitmap.go:1715
 0x28b94 2 "ADD" "ADD X7, X0, X13" "mv x13,x7" ref=0x0 call=false mbitmap.go:1577
 0x28b96 2 "ADD" "ADD X11, X0, X6" "mv x6,x11" ref=0x0 call=false mbitmap.go:1577
 0x28b98 2 "ADD" "ADD X8, X0, X9" "mv x9,x8" ref=0x0 call=false mbitmap.go:1577
-0x28b9a 4 "JAL" "JMP -142(PC)" "j -568 <runtime.runGCProg+0x2a>" ref=0x28962 call=false mbitmap.go:1717
+0x28b9a 4 "JAL" "JMP 0x28962" "j -568 <runtime.runGCProg+0x2a>" ref=0x28962 call=false mbitmap.go:1717
 0x28b9e 4 "SLL" "SLL X16, X9, X17" "sll x17,x9,x16" ref=0x0 call=false mbitmap.go:1685
 0x28ba2 4 "SLTIU" "SLTIU $64, X16, X18" "sltiu x18,x16,64" ref=0x0 call=false mbitmap.go:1685
 0x28ba6 4 "SUB" "NEG X18, X18" "neg x18,x18" ref=0x0 call=false mbitmap.go:1685
@@ -197,8 +197,8 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x28bae 4 "OR" "OR X17, X9, X9" "or x9,x9,x17" ref=0x0 call=false mbitmap.go:1685
 0x28bb2 2 "SLLI" "SLLI $1, X16, X16" "slli x16,x16,0x1" ref=0x0 call=false mbitmap.go:1686
 0x28bb4 4 "ADDI" "ADDI $64, X0, X6" "li x6,64" ref=0x0 call=false mbitmap.go:1684
-0x28bb8 4 "BGEU" "BGEU X6, X16, -6(PC)" "bgeu x6,x16,-26 <runtime.runGCProg+0x266>" ref=0x28b9e call=false mbitmap.go:1684
-0x28bbc 4 "BEQ" "BEQZ X13, 10(PC)" "beqz x13,40 <runtime.runGCProg+0x2ac>" ref=0x28be4 call=false mbitmap.go:1690
+0x28bb8 4 "BGEU" "BGEU X6, X16, 0x28b9e" "bgeu x6,x16,-26 <runtime.runGCProg+0x266>" ref=0x28b9e call=false mbitmap.go:1684
+0x28bbc 4 "BEQ" "BEQZ X13, 0x28be4" "beqz x13,40 <runtime.runGCProg+0x2ac>" ref=0x28be4 call=false mbitmap.go:1690
 0x28bc0 4 "DIVU" "DIVU X13, X10, X17" "divu x17,x10,x13" ref=0x0 call=false mbitmap.go:1690
 0x28bc4 4 "MUL" "MUL X13, X17, X16" "mul x16,x17,x13" ref=0x0 call=false mbitmap.go:1690
 0x28bc8 2 "ADDI" "ADDI $1, X0, X13" "li x13,1" ref=0x0 call=false mbitmap.go:1691
@@ -208,7 +208,7 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x28bd6 4 "AND" "AND X18, X17, X17" "and x17,x17,x18" ref=0x0 call=false mbitmap.go:1691
 0x28bda 2 "ADDI" "ADDI $-1, X17, X17" "addi x17,x17,-1" ref=0x0 call=false mbitmap.go:1691
 0x28bdc 4 "AND" "AND X17, X9, X9" "and x9,x9,x17" ref=0x0 call=false mbitmap.go:1691
-0x28be0 4 "JAL" "JMP -48(PC)" "j -194 <runtime.runGCProg+0x1e6>" ref=0x28b1e call=false mbitmap.go:1693
+0x28be0 4 "JAL" "JMP 0x28b1e" "j -194 <runtime.runGCProg+0x1e6>" ref=0x28b1e call=false mbitmap.go:1693
 0x28be4 4 "JAL" "CALL runtime.panicdivide(SB)" "jal 103916 <runtime.panicdivide>" ref=0x421d0 call=true mbitmap.go:1690
 0x28be8 2 "ADDI" "ADDI $7, X16, X16" "addi x16,x16,7" ref=0x0 call=false mbitmap.go:1611
 0x28bea 4 "LBU" "MOVBU (X5), X6" "lbu x6,0(x5)" ref=0x0 call=false mbitmap.go:1612
@@ -221,15 +221,15 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x28c06 2 "ADDI" "ADDI $1, X5, X5" "addi x5,x5,1" ref=0x0 call=false mbitmap.go:1056
 0x28c08 2 "ADDI" "MOV X0, X0" "nop" ref=0x0 call=false mbitmap.go:1613
 0x28c0a 4 "ANDI" "ANDI $128, X6, X6" "andi x6,x6,128" ref=0x0 call=false mbitmap.go:1615
-0x28c0e 4 "BNE" "BNEZ X6, -9(PC)" "bnez x6,-38 <runtime.runGCProg+0x2b0>" ref=0x28be8 call=false mbitmap.go:1615
+0x28c0e 4 "BNE" "BNEZ X6, 0x28be8" "bnez x6,-38 <runtime.runGCProg+0x2b0>" ref=0x28be8 call=false mbitmap.go:1615
 0x28c12 2 "ADD" "ADD X15, X0, X16" "mv x16,x15" ref=0x0 call=false mbitmap.go:1622
-0x28c14 4 "JAL" "JMP -154(PC)" "j -616 <runtime.runGCProg+0x74>" ref=0x289ac call=false mbitmap.go:1616
+0x28c14 4 "JAL" "JMP 0x289ac" "j -616 <runtime.runGCProg+0x74>" ref=0x289ac call=false mbitmap.go:1616
 0x28c18 4 "SB" "MOVB X9, (X11)" "sb x9,0(x11)" ref=0x0 call=false mbitmap.go:1752
 0x28c1c 2 "ADDI" "MOV X0, X0" "nop" ref=0x0 call=false mbitmap.go:1753
 0x28c1e 2 "ADDI" "ADDI $-8, X12, X12" "addi x12,x12,-8" ref=0x0 call=false mbitmap.go:1751
 0x28c20 2 "SRLI" "SRLI $8, X9, X9" "srli x9,x9,0x8" ref=0x0 call=false mbitmap.go:1754
 0x28c22 2 "ADDI" "ADDI $1, X11, X11" "addi x11,x11,1" ref=0x0 call=false mbitmap.go:1056
-0x28c24 4 "BNE" "BNEZ X12, -3(PC)" "bnez x12,-12 <runtime.runGCProg+0x2e0>" ref=0x28c18 call=false mbitmap.go:1751
+0x28c24 4 "BNE" "BNEZ X12, 0x28c18" "bnez x12,-12 <runtime.runGCProg+0x2e0>" ref=0x28c18 call=false mbitmap.go:1751
 0x28c28 2 "LD" "MOV (X2), X1" "ld x1,0(x2)" ref=0x0 call=false mbitmap.go:1756
 0x28c2a 2 "ADDI" "ADDI $8, X2, X2" "addi x2,x2,8" ref=0x0 call=false mbitmap.go:1756
 0x28c2c 4 "JALR" "RET" "ret" ref=0x0 call=false mbitmap.go:1756
@@ -243,9 +243,9 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x28c48 2 "ADDI" "ADDI $1, X16, X16" "addi x16,x16,1" ref=0x0 call=false mbitmap.go:1594
 0x28c4a 2 "ADDI" "ADDI $1, X5, X5" "addi x5,x5,1" ref=0x0 call=false mbitmap.go:1056
 0x28c4c 2 "ADDI" "ADDI $1, X11, X11" "addi x11,x11,1" ref=0x0 call=false mbitmap.go:1056
-0x28c4e 4 "BLTU" "BLTU X16, X14, -7(PC)" "bltu x16,x14,-30 <runtime.runGCProg+0x2f8>" ref=0x28c30 call=false mbitmap.go:1594
+0x28c4e 4 "BLTU" "BLTU X16, X14, 0x28c30" "bltu x16,x14,-30 <runtime.runGCProg+0x2f8>" ref=0x28c30 call=false mbitmap.go:1594
 0x28c52 4 "ANDI" "ANDI $7, X15, X14" "andi x14,x15,7" ref=0x0 call=false mbitmap.go:1601
-0x28c56 4 "BEQ" "BEQZ X14, 5(PC)" "beqz x14,20 <runtime.runGCProg+0x332>" ref=0x28c6a call=false mbitmap.go:1601
+0x28c56 4 "BEQ" "BEQZ X14, 0x28c6a" "beqz x14,20 <runtime.runGCProg+0x332>" ref=0x28c6a call=false mbitmap.go:1601
 0x28c5a 4 "LBU" "MOVBU (X5), X15" "lbu x15,0(x5)" ref=0x0 call=false mbitmap.go:1602
 0x28c5e 4 "SLL" "SLL X13, X15, X15" "sll x15,x15,x13" ref=0x0 call=false mbitmap.go:1602
 0x28c62 2 "OR" "OR X15, X9, X9" "or x9,x9,x15" ref=0x0 call=false mbitmap.go:1602
@@ -255,11 +255,11 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x28c6a 4 "ADDI" "ADDI $57, X0, X10" "li x10,57" ref=0x0 call=false mbitmap.go:1056
 0x28c6e 2 "ADDI" "ADDI $1, X0, X15" "li x15,1" ref=0x0 call=false mbitmap.go:1056
 0x28c70 2 "ADD" "ADD X11, X0, X6" "mv x6,x11" ref=0x0 call=false mbitmap.go:1577
-0x28c72 4 "JAL" "JMP -196(PC)" "j -784 <runtime.runGCProg+0x2a>" ref=0x28962 call=false mbitmap.go:1606
+0x28c72 4 "JAL" "JMP 0x28962" "j -784 <runtime.runGCProg+0x2a>" ref=0x28962 call=false mbitmap.go:1606
 0x28c76 2 "CSRRW" "UNIMP" "unimp" ref=0x0 call=false .:-1
 == runtime.runCheckmark 0x29b38 160 /usr/local/go/src/runtime/mcheckmark.go
 0x29b38 4 "LD" "MOV 16(X27), X6" "ld x6,16(x27)" ref=0x0 call=false mcheckmark.go:126
-0x29b3c 4 "BLTU" "BLTU X6, X2, 4(PC)" "bltu x6,x2,16 <runtime.runCheckmark+0x14>" ref=0x29b4c call=false mcheckmark.go:126
+0x29b3c 4 "BLTU" "BLTU X6, X2, 0x29b4c" "bltu x6,x2,16 <runtime.runCheckmark+0x14>" ref=0x29b4c call=false mcheckmark.go:126
 0x29b40 2 "SD" "MOV X10, 8(X2)" "sd x10,8(x2)" ref=0x0 call=false mcheckmark.go:126
 0x29b42 4 "JAL" "JAL X5, runtime.morestack_noctxt.abi0(SB)" "jal x5,271718 <runtime.morestack_noctxt.abi0>" ref=0x6c0a8 call=true mcheckmark.go:126
 0x29b46 2 "LD" "MOV 8(X2), X10" "ld x10,8(x2)" ref=0x0 call=false mcheckmark.go:126
@@ -323,7 +323,7 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x41d7e 4 "FENCE" "FENCE RW, RW" "fence rw,rw" ref=0x0 call=false types.go:124
 0x41d82 4 "LBU" "MOVBU (X5), X5" "lbu x5,0(x5)" ref=0x0 call=false types.go:124
 0x41d86 4 "FENCE" "FENCE R, RW" "fence r,rw" ref=0x0 call=false types.go:124
-0x41d8a 4 "BEQ" "BEQZ X5, 135(PC)" "beqz x5,540 <runtime.runPerThreadSyscall+0x23e>" ref=0x41fa6 call=false os_linux.go:892
+0x41d8a 4 "BEQ" "BEQZ X5, 0x41fa6" "beqz x5,540 <runtime.runPerThreadSyscall+0x23e>" ref=0x41fa6 call=false os_linux.go:892
 0x41d8e 2 "SD" "MOV X9, 216(X2)" "sd x9,216(x2)" ref=0x0 call=false os_linux.go:891
 0x41d90 4 "AUIPC" "AUIPC $246, X10" "auipc x10,0xf6" ref=0x0 call=false os_linux.go:897
 0x41d94 4 "LD" "MOV -880(X10), X10" "ld x10,-880(x10)" ref=0x0 call=false os_linux.go:897
@@ -364,11 +364,11 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x41e1e 2 "SD" "MOV X10, 72(X2)" "sd x10,72(x2)" ref=0x0 call=false os_linux.go:897
 0x41e20 2 "SD" "MOV X11, 64(X2)" "sd x11,64(x2)" ref=0x0 call=false os_linux.go:897
 0x41e22 2 "SD" "MOV X12, 80(X2)" "sd x12,80(x2)" ref=0x0 call=false os_linux.go:897
-0x41e24 4 "BNE" "BNEZ X12, 4(PC)" "bnez x12,16 <runtime.runPerThreadSyscall+0xcc>" ref=0x41e34 call=false os_linux.go:902
+0x41e24 4 "BNE" "BNEZ X12, 0x41e34" "bnez x12,16 <runtime.runPerThreadSyscall+0xcc>" ref=0x41e34 call=false os_linux.go:902
 0x41e28 2 "LD" "MOV 144(X2), X9" "ld x9,144(x2)" ref=0x0 call=false os_linux.go:902
-0x41e2a 4 "BNE" "BNE X10, X9, 2(PC)" "bne x10,x9,10 <runtime.runPerThreadSyscall+0xcc>" ref=0x41e34 call=false os_linux.go:902
+0x41e2a 4 "BNE" "BNE X10, X9, 0x41e34" "bne x10,x9,10 <runtime.runPerThreadSyscall+0xcc>" ref=0x41e34 call=false os_linux.go:902
 0x41e2e 2 "LD" "MOV 152(X2), X9" "ld x9,152(x2)" ref=0x0 call=false os_linux.go:902
-0x41e30 4 "BEQ" "BEQ X11, X9, 85(PC)" "beq x11,x9,340 <runtime.runPerThreadSyscall+0x21c>" ref=0x41f84 call=false os_linux.go:902
+0x41e30 4 "BEQ" "BEQ X11, X9, 0x41f84" "beq x11,x9,340 <runtime.runPerThreadSyscall+0x21c>" ref=0x41f84 call=false os_linux.go:902
 0x41e34 2 "LD" "MOV 88(X2), X9" "ld x9,88(x2)" ref=0x0 call=false os_linux.go:903
 0x41e36 2 "SD" "MOV X9, 208(X2)" "sd x9,208(x2)" ref=0x0 call=false os_linux.go:903
 0x41e38 2 "LD" "MOV 96(X2), X9" "ld x9,96(x2)" ref=0x0 call=false os_linux.go:903
@@ -492,7 +492,7 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x41fae 2 "CSRRW" "UNIMP" "unimp" ref=0x0 call=false .:-1
 == runtime.runSafePointFn 0x47fb8 176 /usr/local/go/src/runtime/proc.go
 0x47fb8 4 "LD" "MOV 16(X27), X6" "ld x6,16(x27)" ref=0x0 call=false proc.go:2250
-0x47fbc 4 "BLTU" "BLTU X6, X2, 3(PC)" "bltu x6,x2,12 <runtime.runSafePointFn+0x10>" ref=0x47fc8 call=false proc.go:2250
+0x47fbc 4 "BLTU" "BLTU X6, X2, 0x47fc8" "bltu x6,x2,12 <runtime.runSafePointFn+0x10>" ref=0x47fc8 call=false proc.go:2250
 0x47fc0 4 "JAL" "JAL X5, runtime.morestack_noctxt.abi0(SB)" "jal x5,147688 <runtime.morestack_noctxt.abi0>" ref=0x6c0a8 call=true proc.go:2250
 0x47fc4 4 "JAL" "JMP runtime.runSafePointFn(SB)" "j -12 <runtime.runSafePointFn>" ref=0x47fb8 call=false proc.go:2250
 0x47fc8 4 "SD" "MOV X1, -16(X2)" "sd x1,-16(x2)" ref=0x0 call=false proc.go:2250
@@ -509,11 +509,11 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x47fe6 2 "ADDI" "MOV X0, X12" "li x12,0" ref=0x0 call=false proc.go:2255
 0x47fe8 2 "ADDI" "MOV X0, X13" "li x13,0" ref=0x0 call=false proc.go:2255
 0x47fea 4 "LR.W.AQ" "LRW (X9), X31" "lr.w.aq x31,(x9)" ref=0x0 call=false proc.go:2255
-0x47fee 4 "BNE" "BNE X11, X31, 3(PC)" "bne x11,x31,14 <runtime.runSafePointFn+0x44>" ref=0x47ffc call=false proc.go:2255
+0x47fee 4 "BNE" "BNE X11, X31, 0x47ffc" "bne x11,x31,14 <runtime.runSafePointFn+0x44>" ref=0x47ffc call=false proc.go:2255
 0x47ff2 4 "SC.W.RL" "SCW X12, (X9), X31" "sc.w.rl x31,x12,(x9)" ref=0x0 call=false proc.go:2255
-0x47ff6 4 "BNE" "BNEZ X31, -3(PC)" "bnez x31,-12 <runtime.runSafePointFn+0x32>" ref=0x47fea call=false proc.go:2255
+0x47ff6 4 "BNE" "BNEZ X31, 0x47fea" "bnez x31,-12 <runtime.runSafePointFn+0x32>" ref=0x47fea call=false proc.go:2255
 0x47ffa 2 "ADDI" "ADDI $1, X0, X13" "li x13,1" ref=0x0 call=false proc.go:2255
-0x47ffc 4 "BEQ" "BEQZ X13, 24(PC)" "beqz x13,96 <runtime.runSafePointFn+0xa4>" ref=0x4805c call=false proc.go:2255
+0x47ffc 4 "BEQ" "BEQZ X13, 0x4805c" "beqz x13,96 <runtime.runSafePointFn+0xa4>" ref=0x4805c call=false proc.go:2255
 0x48000 4 "AUIPC" "AUIPC $209, X26" "auipc x26,0xd1" ref=0x0 call=false proc.go:2258
 0x48004 4 "LD" "MOV -56(X26), X26" "ld x26,-56(x26)" ref=0x0 call=false proc.go:2258
 0x48008 4 "LD" "MOV (X26), X9" "ld x9,0(x26)" ref=0x0 call=false proc.go:2258
@@ -529,7 +529,7 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x4802a 4 "AUIPC" "AUIPC $209, X31" "auipc x31,0xd1" ref=0x0 call=false proc.go:2260
 0x4802e 4 "SW" "MOVW X9, -90(X31)" "sw x9,-90(x31)" ref=0x0 call=false proc.go:2260
 0x48032 2 "ADDIW" "MOVW X9, X9" "sext.w x9,x9" ref=0x0 call=false proc.go:2261
-0x48034 4 "BNE" "BNEZ X9, 4(PC)" "bnez x9,16 <runtime.runSafePointFn+0x8c>" ref=0x48044 call=false proc.go:2261
+0x48034 4 "BNE" "BNEZ X9, 0x48044" "bnez x9,16 <runtime.runSafePointFn+0x8c>" ref=0x48044 call=false proc.go:2261
 0x48038 4 "AUIPC" "AUIPC $209, X10" "auipc x10,0xd1" ref=0x0 call=false proc.go:2262
 0x4803c 4 "ADDI" "ADDI $-96, X10, X10" "addi x10,x10,-96" ref=0x0 call=false proc.go:2262
 0x48040 4 "JAL" "CALL runtime.notewakeup(SB)" "jal -156072 <runtime.notewakeup>" ref=0x21e98 call=true proc.go:2262
@@ -548,7 +548,7 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x48066 2 "CSRRW" "UNIMP" "unimp" ref=0x0 call=false .:-1
 == runtime.runqput 0x50720 216 /usr/local/go/src/runtime/proc.go
 0x50720 4 "LD" "MOV 16(X27), X6" "ld x6,16(x27)" ref=0x0 call=false proc.go:7529
-0x50724 4 "BLTU" "BLTU X6, X2, 7(PC)" "bltu x6,x2,28 <runtime.runqput+0x20>" ref=0x50740 call=false proc.go:7529
+0x50724 4 "BLTU" "BLTU X6, X2, 0x50740" "bltu x6,x2,28 <runtime.runqput+0x20>" ref=0x50740 call=false proc.go:7529
 0x50728 2 "SD" "MOV X10, 8(X2)" "sd x10,8(x2)" ref=0x0 call=false proc.go:7529
 0x5072a 2 "SD" "MOV X11, 16(X2)" "sd x11,16(x2)" ref=0x0 call=false proc.go:7529
 0x5072c 4 "SB" "MOVB X12, 24(X2)" "sb x12,24(x2)" ref=0x0 call=false proc.go:7529
@@ -561,10 +561,10 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x50744 4 "ADDI" "ADDI $-40, X2, X2" "addi x2,x2,-40" ref=0x0 call=false proc.go:7529
 0x50748 2 "SD" "MOV X1, (X2)" "sd x1,0(x2)" ref=0x0 call=false proc.go:7529
 0x5074a 4 "ANDI" "MOVBU X12, X9" "zext.b x9,x12" ref=0x0 call=false proc.go:7545
-0x5074e 4 "BNE" "BNEZ X9, 27(PC)" "bnez x9,108 <runtime.runqput+0x9a>" ref=0x507ba call=false proc.go:7545
+0x5074e 4 "BNE" "BNEZ X9, 0x507ba" "bnez x9,108 <runtime.runqput+0x9a>" ref=0x507ba call=false proc.go:7545
 0x50752 2 "SD" "MOV X10, 48(X2)" "sd x10,48(x2)" ref=0x0 call=false proc.go:7545
 0x50754 2 "SD" "MOV X11, 32(X2)" "sd x11,32(x2)" ref=0x0 call=false proc.go:7558
-0x50756 4 "JAL" "JMP 2(PC)" "j 8 <runtime.runqput+0x3e>" ref=0x5075e call=false proc.go:7559
+0x50756 4 "JAL" "JMP 0x5075e" "j 8 <runtime.runqput+0x3e>" ref=0x5075e call=false proc.go:7559
 0x5075a 2 "LD" "MOV 48(X2), X10" "ld x10,48(x2)" ref=0x0 call=false proc.go:7559
 0x5075c 2 "LD" "MOV 32(X2), X11" "ld x11,32(x2)" ref=0x0 call=false proc.go:7566
 0x5075e 4 "LB" "MOVB (X10), X0" "lb x0,0(x10)" ref=0x0 call=false proc.go:7559
@@ -575,10 +575,10 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x50772 2 "SLLI" "SLLI $32, X9, X9" "slli x9,x9,0x20" ref=0x0 call=false proc.go:7561
 0x50774 2 "SRLI" "SRLI $32, X9, X9" "srli x9,x9,0x20" ref=0x0 call=false proc.go:7561
 0x50776 4 "ADDI" "ADDI $256, X0, X14" "li x14,256" ref=0x0 call=false proc.go:7561
-0x5077a 4 "BLTU" "BLTU X9, X14, 6(PC)" "bltu x9,x14,26 <runtime.runqput+0x74>" ref=0x50794 call=false proc.go:7561
+0x5077a 4 "BLTU" "BLTU X9, X14, 0x50794" "bltu x9,x14,26 <runtime.runqput+0x74>" ref=0x50794 call=false proc.go:7561
 0x5077e 4 "JAL" "CALL runtime.runqputslow(SB)" "jal 122 <runtime.runqputslow>" ref=0x507f8 call=true proc.go:7566
 0x50782 4 "ANDI" "MOVBU X10, X9" "zext.b x9,x10" ref=0x0 call=false proc.go:7566
-0x50786 4 "BEQ" "BEQZ X9, -11(PC)" "beqz x9,-44 <runtime.runqput+0x3a>" ref=0x5075a call=false proc.go:7566
+0x50786 4 "BEQ" "BEQZ X9, 0x5075a" "beqz x9,-44 <runtime.runqput+0x3a>" ref=0x5075a call=false proc.go:7566
 0x5078a 2 "LD" "MOV (X2), X1" "ld x1,0(x2)" ref=0x0 call=false proc.go:7567
 0x5078c 4 "ADDI" "ADDI $40, X2, X2" "addi x2,x2,40" ref=0x0 call=false proc.go:7567
 0x50790 4 "JALR" "RET" "ret" ref=0x0 call=false proc.go:7567
@@ -602,21 +602,21 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x507ca 2 "ADD" "ADD X11, X0, X15" "mv x15,x11" ref=0x0 call=false proc.go:7548
 0x507cc 2 "ADDI" "MOV X0, X16" "li x16,0" ref=0x0 call=false runtime2.go:252
 0x507ce 4 "LR.D.AQ" "LRD (X14), X31" "lr.d.aq x31,(x14)" ref=0x0 call=false runtime2.go:252
-0x507d2 4 "BNE" "BNE X9, X31, 3(PC)" "bne x9,x31,14 <runtime.runqput+0xc0>" ref=0x507e0 call=false runtime2.go:252
+0x507d2 4 "BNE" "BNE X9, X31, 0x507e0" "bne x9,x31,14 <runtime.runqput+0xc0>" ref=0x507e0 call=false runtime2.go:252
 0x507d6 4 "SC.D.RL" "SCD X11, (X14), X31" "sc.d.rl x31,x11,(x14)" ref=0x0 call=false runtime2.go:252
-0x507da 4 "BNE" "BNEZ X31, -3(PC)" "bnez x31,-12 <runtime.runqput+0xae>" ref=0x507ce call=false runtime2.go:252
+0x507da 4 "BNE" "BNEZ X31, 0x507ce" "bnez x31,-12 <runtime.runqput+0xae>" ref=0x507ce call=false runtime2.go:252
 0x507de 2 "ADDI" "ADDI $1, X0, X16" "li x16,1" ref=0x0 call=false runtime2.go:252
-0x507e0 4 "BEQ" "BEQZ X16, -10(PC)" "beqz x16,-40 <runtime.runqput+0x98>" ref=0x507b8 call=false proc.go:7548
-0x507e4 4 "BEQ" "BEQZ X9, 2(PC)" "beqz x9,10 <runtime.runqput+0xce>" ref=0x507ee call=false proc.go:7551
+0x507e0 4 "BEQ" "BEQZ X16, 0x507b8" "beqz x16,-40 <runtime.runqput+0x98>" ref=0x507b8 call=false proc.go:7548
+0x507e4 4 "BEQ" "BEQZ X9, 0x507ee" "beqz x9,10 <runtime.runqput+0xce>" ref=0x507ee call=false proc.go:7551
 0x507e8 2 "ADD" "ADD X9, X0, X11" "mv x11,x9" ref=0x0 call=false proc.go:7558
-0x507ea 4 "JAL" "JMP -38(PC)" "j -152 <runtime.runqput+0x32>" ref=0x50752 call=false proc.go:7555
+0x507ea 4 "JAL" "JMP 0x50752" "j -152 <runtime.runqput+0x32>" ref=0x50752 call=false proc.go:7555
 0x507ee 2 "LD" "MOV (X2), X1" "ld x1,0(x2)" ref=0x0 call=false proc.go:7552
 0x507f0 4 "ADDI" "ADDI $40, X2, X2" "addi x2,x2,40" ref=0x0 call=false proc.go:7552
 0x507f4 4 "JALR" "RET" "ret" ref=0x0 call=false proc.go:7552
 == runtime.runqputslow 0x507f8 432 /usr/local/go/src/runtime/proc.go
 0x507f8 4 "LD" "MOV 16(X27), X6" "ld x6,16(x27)" ref=0x0 call=false proc.go:7575
 0x507fc 4 "ADDI" "ADDI $-952, X2, X7" "addi x7,x2,-952" ref=0x0 call=false proc.go:7575
-0x50800 4 "BLTU" "BLTU X6, X7, 8(PC)" "bltu x6,x7,32 <runtime.runqputslow+0x28>" ref=0x50820 call=false proc.go:7575
+0x50800 4 "BLTU" "BLTU X6, X7, 0x50820" "bltu x6,x7,32 <runtime.runqputslow+0x28>" ref=0x50820 call=false proc.go:7575
 0x50804 2 "SD" "MOV X10, 8(X2)" "sd x10,8(x2)" ref=0x0 call=false proc.go:7575
 0x50806 2 "SD" "MOV X11, 16(X2)" "sd x11,16(x2)" ref=0x0 call=false proc.go:7575
 0x50808 2 "SW" "MOVW X12, 24(X2)" "sw x12,24(x2)" ref=0x0 call=false proc.go:7575
@@ -641,16 +641,16 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x50848 4 "SD" "MOV X0, 48(X9)" "sd x0,48(x9)" ref=0x0 call=false proc.go:7576
 0x5084c 4 "SD" "MOV X0, 56(X9)" "sd x0,56(x9)" ref=0x0 call=false proc.go:7576
 0x50850 4 "ADDI" "ADDI $64, X9, X9" "addi x9,x9,64" ref=0x0 call=false proc.go:7576
-0x50854 4 "BNE" "BNE X14, X9, -9(PC)" "bne x14,x9,-36 <runtime.runqputslow+0x38>" ref=0x50830 call=false proc.go:7576
+0x50854 4 "BNE" "BNE X14, X9, 0x50830" "bne x14,x9,-36 <runtime.runqputslow+0x38>" ref=0x50830 call=false proc.go:7576
 0x50858 4 "SD" "MOV X0, (X9)" "sd x0,0(x9)" ref=0x0 call=false proc.go:7576
 0x5085c 4 "SUB" "SUB X12, X13, X9" "sub x9,x13,x12" ref=0x0 call=false proc.go:7579
 0x50860 4 "SRLIW" "SRLIW $1, X9, X9" "srliw x9,x9,0x1" ref=0x0 call=false proc.go:7580
 0x50864 2 "SLLI" "SLLI $32, X9, X9" "slli x9,x9,0x20" ref=0x0 call=false proc.go:7581
 0x50866 2 "SRLI" "SRLI $32, X9, X9" "srli x9,x9,0x20" ref=0x0 call=false proc.go:7581
 0x50868 4 "ADDI" "ADDI $128, X0, X13" "li x13,128" ref=0x0 call=false proc.go:7581
-0x5086c 4 "BNE" "BNE X9, X13, 73(PC)" "bne x9,x13,294 <runtime.runqputslow+0x19a>" ref=0x50992 call=false proc.go:7581
+0x5086c 4 "BNE" "BNE X9, X13, 0x50992" "bne x9,x13,294 <runtime.runqputslow+0x19a>" ref=0x50992 call=false proc.go:7581
 0x50870 2 "ADDI" "MOV X0, X9" "li x9,0" ref=0x0 call=false proc.go:7581
-0x50872 4 "JAL" "JMP 11(PC)" "j 44 <runtime.runqputslow+0xa6>" ref=0x5089e call=false proc.go:7581
+0x50872 4 "JAL" "JMP 0x5089e" "j 44 <runtime.runqputslow+0xa6>" ref=0x5089e call=false proc.go:7581
 0x50876 4 "LB" "MOVB (X10), X0" "lb x0,0(x10)" ref=0x0 call=false proc.go:7585
 0x5087a 4 "SLLI" "SLLI $32, X9, X14" "slli x14,x9,0x20" ref=0x0 call=false proc.go:7585
 0x5087e 2 "SRLI" "SRLI $29, X14, X14" "srli x14,x14,0x1d" ref=0x0 call=false proc.go:7585
@@ -666,21 +666,21 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x5089c 2 "ADDI" "ADDI $1, X9, X9" "addi x9,x9,1" ref=0x0 call=false proc.go:7584
 0x5089e 4 "SLLI" "SLLI $32, X9, X14" "slli x14,x9,0x20" ref=0x0 call=false proc.go:7584
 0x508a2 2 "SRLI" "SRLI $32, X14, X14" "srli x14,x14,0x20" ref=0x0 call=false proc.go:7584
-0x508a4 4 "BLTU" "BLTU X14, X13, -11(PC)" "bltu x14,x13,-46 <runtime.runqputslow+0x7e>" ref=0x50876 call=false proc.go:7584
+0x508a4 4 "BLTU" "BLTU X14, X13, 0x50876" "bltu x14,x13,-46 <runtime.runqputslow+0x7e>" ref=0x50876 call=false proc.go:7584
 0x508a8 4 "LB" "MOVB (X10), X0" "lb x0,0(x10)" ref=0x0 call=false proc.go:7587
 0x508ac 4 "ADDIW" "MOVW X12, X9" "sext.w x9,x12" ref=0x0 call=false proc.go:7587
 0x508b0 4 "ADDI" "ADDI $400, X10, X14" "addi x14,x10,400" ref=0x0 call=false proc.go:7587
 0x508b4 4 "ADDI" "ADDI $128, X12, X12" "addi x12,x12,128" ref=0x0 call=false proc.go:7587
 0x508b8 2 "ADDI" "MOV X0, X15" "li x15,0" ref=0x0 call=false proc.go:7587
 0x508ba 4 "LR.W.AQ" "LRW (X14), X31" "lr.w.aq x31,(x14)" ref=0x0 call=false proc.go:7587
-0x508be 4 "BNE" "BNE X9, X31, 3(PC)" "bne x9,x31,14 <runtime.runqputslow+0xd4>" ref=0x508cc call=false proc.go:7587
+0x508be 4 "BNE" "BNE X9, X31, 0x508cc" "bne x9,x31,14 <runtime.runqputslow+0xd4>" ref=0x508cc call=false proc.go:7587
 0x508c2 4 "SC.W.RL" "SCW X12, (X14), X31" "sc.w.rl x31,x12,(x14)" ref=0x0 call=false proc.go:7587
-0x508c6 4 "BNE" "BNEZ X31, -3(PC)" "bnez x31,-12 <runtime.runqputslow+0xc2>" ref=0x508ba call=false proc.go:7587
+0x508c6 4 "BNE" "BNEZ X31, 0x508ba" "bnez x31,-12 <runtime.runqputslow+0xc2>" ref=0x508ba call=false proc.go:7587
 0x508ca 2 "ADDI" "ADDI $1, X0, X15" "li x15,1" ref=0x0 call=false proc.go:7587
-0x508cc 4 "BEQ" "BEQZ X15, 3(PC)" "beqz x15,14 <runtime.runqputslow+0xe2>" ref=0x508da call=false proc.go:7587
+0x508cc 4 "BEQ" "BEQZ X15, 0x508da" "beqz x15,14 <runtime.runqputslow+0xe2>" ref=0x508da call=false proc.go:7587
 0x508d0 4 "SD" "MOV X11, 1072(X2)" "sd x11,1072(x2)" ref=0x0 call=false proc.go:7590
 0x508d4 2 "ADDI" "MOV X0, X9" "li x9,0" ref=0x0 call=false proc.go:7600
-0x508d6 4 "JAL" "JMP 10(PC)" "j 42 <runtime.runqputslow+0x108>" ref=0x50900 call=false proc.go:7600
+0x508d6 4 "JAL" "JMP 0x50900" "j 42 <runtime.runqputslow+0x108>" ref=0x50900 call=false proc.go:7600
 0x508da 2 "ADDI" "MOV X0, X10" "li x10,0" ref=0x0 call=false proc.go:7588
 0x508dc 2 "LD" "MOV (X2), X1" "ld x1,0(x2)" ref=0x0 call=false proc.go:7588
 0x508de 4 "ADDI" "ADDI $1080, X2, X2" "addi x2,x2,1080" ref=0x0 call=false proc.go:7588
@@ -698,7 +698,7 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x508fe 2 "SD" "MOV X14, 160(X11)" "sd x14,160(x11)" ref=0x0 call=false proc.go:7601
 0x50900 4 "SLLI" "SLLI $32, X9, X11" "slli x11,x9,0x20" ref=0x0 call=false proc.go:7600
 0x50904 2 "SRLI" "SRLI $32, X11, X11" "srli x11,x11,0x20" ref=0x0 call=false proc.go:7600
-0x50906 4 "BLTU" "BLTU X11, X13, -8(PC)" "bltu x11,x13,-32 <runtime.runqputslow+0xee>" ref=0x508e6 call=false proc.go:7600
+0x50906 4 "BLTU" "BLTU X11, X13, 0x508e6" "bltu x11,x13,-32 <runtime.runqputslow+0xee>" ref=0x508e6 call=false proc.go:7600
 0x5090a 2 "LD" "MOV 48(X2), X9" "ld x9,48(x2)" ref=0x0 call=false proc.go:7604
 0x5090c 4 "LD" "MOV 1072(X2), X11" "ld x11,1072(x2)" ref=0x0 call=false proc.go:7604
 0x50910 2 "SD" "MOV X9, 24(X2)" "sd x9,24(x2)" ref=0x0 call=false proc.go:7604
@@ -713,15 +713,15 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x5092a 2 "ADDI" "MOV X0, X0" "nop" ref=0x0 call=false proc.go:7608
 0x5092c 2 "LW" "MOVW 40(X2), X9" "lw x9,40(x2)" ref=0x0 call=false proc.go:7326
 0x5092e 2 "LD" "MOV 32(X2), X11" "ld x11,32(x2)" ref=0x0 call=false proc.go:7326
-0x50930 4 "BEQ" "BEQZ X11, 16(PC)" "beqz x11,64 <runtime.runqputslow+0x178>" ref=0x50970 call=false proc.go:7838
+0x50930 4 "BEQ" "BEQZ X11, 0x50970" "beqz x11,64 <runtime.runqputslow+0x178>" ref=0x50970 call=false proc.go:7838
 0x50934 2 "ADD" "ADD X11, X0, X12" "mv x12,x11" ref=0x0 call=false runtime2.go:245
 0x50936 2 "LD" "MOV 24(X2), X13" "ld x13,24(x2)" ref=0x0 call=false proc.go:7326
 0x50938 4 "SD" "MOV X0, 160(X11)" "sd x0,160(x11)" ref=0x0 call=false proc.go:7841
 0x5093c 4 "AUIPC" "AUIPC $200, X11" "auipc x11,0xc8" ref=0x0 call=false proc.go:7842
 0x50940 4 "LD" "MOV 1516(X11), X11" "ld x11,1516(x11)" ref=0x0 call=false proc.go:7842
-0x50944 4 "BEQ" "BEQZ X11, 2(PC)" "beqz x11,10 <runtime.runqputslow+0x156>" ref=0x5094e call=false proc.go:7842
+0x50944 4 "BEQ" "BEQZ X11, 0x5094e" "beqz x11,10 <runtime.runqputslow+0x156>" ref=0x5094e call=false proc.go:7842
 0x50948 2 "SD" "MOV X13, 160(X11)" "sd x13,160(x11)" ref=0x0 call=false proc.go:7843
-0x5094a 4 "JAL" "JMP 3(PC)" "j 12 <runtime.runqputslow+0x15e>" ref=0x50956 call=false proc.go:7843
+0x5094a 4 "JAL" "JMP 0x50956" "j 12 <runtime.runqputslow+0x15e>" ref=0x50956 call=false proc.go:7843
 0x5094e 4 "AUIPC" "AUIPC $200, X31" "auipc x31,0xc8" ref=0x0 call=false proc.go:7845
 0x50952 4 "SD" "MOV X13, 1490(X31)" "sd x13,1490(x31)" ref=0x0 call=false proc.go:7845
 0x50956 4 "AUIPC" "AUIPC $200, X31" "auipc x31,0xc8" ref=0x0 call=false proc.go:7847
@@ -754,12 +754,12 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 == runtime.runqputbatch 0x509a8 112 /usr/local/go/src/runtime/proc.go
 0x509a8 2 "ADDI" "MOV X0, X0" "nop" ref=0x0 call=false proc.go:7616
 0x509aa 2 "LD" "MOV (X11), X9" "ld x9,0(x11)" ref=0x0 call=false proc.go:7810
-0x509ac 4 "BEQ" "BEQZ X9, 6(PC)" "beqz x9,24 <runtime.runqputbatch+0x1c>" ref=0x509c4 call=false proc.go:7617
+0x509ac 4 "BEQ" "BEQZ X9, 0x509c4" "beqz x9,24 <runtime.runqputbatch+0x1c>" ref=0x509c4 call=false proc.go:7617
 0x509b0 4 "LB" "MOVB (X10), X0" "lb x0,0(x10)" ref=0x0 call=false proc.go:7620
 0x509b4 4 "ADDI" "ADDI $400, X10, X9" "addi x9,x10,400" ref=0x0 call=false proc.go:7620
 0x509b8 4 "LR.W.AQ" "LRW (X9), X9" "lr.w.aq x9,(x9)" ref=0x0 call=false proc.go:7620
 0x509bc 4 "LWU" "MOVWU 404(X10), X12" "lwu x12,404(x10)" ref=0x0 call=false proc.go:7621
-0x509c0 4 "JAL" "JMP 6(PC)" "j 24 <runtime.runqputbatch+0x30>" ref=0x509d8 call=false proc.go:7623
+0x509c0 4 "JAL" "JMP 0x509d8" "j 24 <runtime.runqputbatch+0x30>" ref=0x509d8 call=false proc.go:7623
 0x509c4 4 "JALR" "RET" "ret" ref=0x0 call=false proc.go:7618
 0x509c8 4 "ADDI" "ADDI $408, X10, X14" "addi x14,x10,408" ref=0x0 call=false proc.go:7625
 0x509cc 4 "ANDI" "MOVBU X12, X16" "zext.b x16,x12" ref=0x0 call=false proc.go:7625
@@ -768,29 +768,29 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x509d4 2 "SD" "MOV X13, (X14)" "sd x13,0(x14)" ref=0x0 call=false runtime2.go:248
 0x509d6 2 "ADDI" "ADDI $1, X12, X12" "addi x12,x12,1" ref=0x0 call=false proc.go:7626
 0x509d8 2 "LD" "MOV (X11), X13" "ld x13,0(x11)" ref=0x0 call=false proc.go:7810
-0x509da 4 "BEQ" "BEQZ X13, 12(PC)" "beqz x13,50 <runtime.runqputbatch+0x64>" ref=0x50a0c call=false proc.go:7623
+0x509da 4 "BEQ" "BEQZ X13, 0x50a0c" "beqz x13,50 <runtime.runqputbatch+0x64>" ref=0x50a0c call=false proc.go:7623
 0x509de 4 "SUB" "SUB X9, X12, X14" "sub x14,x12,x9" ref=0x0 call=false proc.go:7623
 0x509e2 2 "SLLI" "SLLI $32, X14, X14" "slli x14,x14,0x20" ref=0x0 call=false proc.go:7623
 0x509e4 2 "SRLI" "SRLI $32, X14, X14" "srli x14,x14,0x20" ref=0x0 call=false proc.go:7623
 0x509e6 4 "ADDI" "ADDI $256, X0, X15" "li x15,256" ref=0x0 call=false proc.go:7623
-0x509ea 4 "BGEU" "BGEU X14, X15, 8(PC)" "bgeu x14,x15,34 <runtime.runqputbatch+0x64>" ref=0x50a0c call=false proc.go:7623
+0x509ea 4 "BGEU" "BGEU X14, X15, 0x50a0c" "bgeu x14,x15,34 <runtime.runqputbatch+0x64>" ref=0x50a0c call=false proc.go:7623
 0x509ee 2 "ADDI" "MOV X0, X0" "nop" ref=0x0 call=false proc.go:7624
 0x509f0 2 "ADDI" "MOV X0, X0" "nop" ref=0x0 call=false proc.go:7854
-0x509f2 4 "BEQ" "BEQZ X13, -10(PC)" "beqz x13,-42 <runtime.runqputbatch+0x20>" ref=0x509c8 call=false proc.go:7855
+0x509f2 4 "BEQ" "BEQZ X13, 0x509c8" "beqz x13,-42 <runtime.runqputbatch+0x20>" ref=0x509c8 call=false proc.go:7855
 0x509f6 2 "LD" "MOV 160(X13), X14" "ld x14,160(x13)" ref=0x0 call=false proc.go:7856
 0x509f8 2 "SD" "MOV X14, (X11)" "sd x14,0(x11)" ref=0x0 call=false proc.go:7856
-0x509fa 4 "BNE" "BNEZ X14, 2(PC)" "bnez x14,8 <runtime.runqputbatch+0x5a>" ref=0x50a02 call=false proc.go:7857
+0x509fa 4 "BNE" "BNEZ X14, 0x50a02" "bnez x14,8 <runtime.runqputbatch+0x5a>" ref=0x50a02 call=false proc.go:7857
 0x509fe 4 "SD" "MOV X0, 8(X11)" "sd x0,8(x11)" ref=0x0 call=false proc.go:7858
 0x50a02 2 "LW" "MOVW 16(X11), X14" "lw x14,16(x11)" ref=0x0 call=false proc.go:7860
 0x50a04 2 "ADDI" "ADDI $-1, X14, X14" "addi x14,x14,-1" ref=0x0 call=false proc.go:7860
 0x50a06 2 "SW" "MOVW X14, 16(X11)" "sw x14,16(x11)" ref=0x0 call=false proc.go:7860
-0x50a08 4 "JAL" "JMP -16(PC)" "j -64 <runtime.runqputbatch+0x20>" ref=0x509c8 call=false proc.go:7860
+0x50a08 4 "JAL" "JMP 0x509c8" "j -64 <runtime.runqputbatch+0x20>" ref=0x509c8 call=false proc.go:7860
 0x50a0c 4 "ADDI" "ADDI $404, X10, X9" "addi x9,x10,404" ref=0x0 call=false proc.go:7640
 0x50a10 4 "AMOSWAP.W.AQRL" "AMOSWAPW X12, (X9), X0" "amoswap.w.aqrl x0,x12,(x9)" ref=0x0 call=false proc.go:7640
 0x50a14 4 "JALR" "RET" "ret" ref=0x0 call=false proc.go:7642
 == runtime.runqdrain 0x50a18 288 /usr/local/go/src/runtime/proc.go
 0x50a18 4 "LD" "MOV 16(X27), X6" "ld x6,16(x27)" ref=0x0 call=false proc.go:7674
-0x50a1c 4 "BLTU" "BLTU X6, X2, 4(PC)" "bltu x6,x2,16 <runtime.runqdrain+0x14>" ref=0x50a2c call=false proc.go:7674
+0x50a1c 4 "BLTU" "BLTU X6, X2, 0x50a2c" "bltu x6,x2,16 <runtime.runqdrain+0x14>" ref=0x50a2c call=false proc.go:7674
 0x50a20 2 "SD" "MOV X10, 8(X2)" "sd x10,8(x2)" ref=0x0 call=false proc.go:7674
 0x50a22 4 "JAL" "JAL X5, runtime.morestack_noctxt.abi0(SB)" "jal x5,112262 <runtime.morestack_noctxt.abi0>" ref=0x6c0a8 call=true proc.go:7674
 0x50a26 2 "LD" "MOV 8(X2), X10" "ld x10,8(x2)" ref=0x0 call=false proc.go:7674
@@ -804,25 +804,25 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x50a3a 2 "LUI" "LUI $1, X31" "lui x31,0x1" ref=0x0 call=false proc.go:7675
 0x50a3c 2 "ADD" "ADD X10, X31, X31" "add x31,x31,x10" ref=0x0 call=false proc.go:7675
 0x50a3e 4 "LD" "MOV -1640(X31), X9" "ld x9,-1640(x31)" ref=0x0 call=false proc.go:7675
-0x50a42 4 "BEQ" "BEQZ X9, 19(PC)" "beqz x9,78 <runtime.runqdrain+0x78>" ref=0x50a90 call=false proc.go:7676
+0x50a42 4 "BEQ" "BEQZ X9, 0x50a90" "beqz x9,78 <runtime.runqdrain+0x78>" ref=0x50a90 call=false proc.go:7676
 0x50a46 4 "ADDI" "ADDI $1228, X10, X13" "addi x13,x10,1228" ref=0x0 call=false proc.go:7675
 0x50a4a 4 "ADDI" "ADDI $1228, X13, X13" "addi x13,x13,1228" ref=0x0 call=false proc.go:7675
 0x50a4e 2 "ADDI" "MOV X0, X14" "li x14,0" ref=0x0 call=false runtime2.go:252
 0x50a50 2 "ADDI" "MOV X0, X15" "li x15,0" ref=0x0 call=false runtime2.go:252
 0x50a52 4 "LR.D.AQ" "LRD (X13), X31" "lr.d.aq x31,(x13)" ref=0x0 call=false runtime2.go:252
-0x50a56 4 "BNE" "BNE X9, X31, 3(PC)" "bne x9,x31,14 <runtime.runqdrain+0x4c>" ref=0x50a64 call=false runtime2.go:252
+0x50a56 4 "BNE" "BNE X9, X31, 0x50a64" "bne x9,x31,14 <runtime.runqdrain+0x4c>" ref=0x50a64 call=false runtime2.go:252
 0x50a5a 4 "SC.D.RL" "SCD X14, (X13), X31" "sc.d.rl x31,x14,(x13)" ref=0x0 call=false runtime2.go:252
-0x50a5e 4 "BNE" "BNEZ X31, -3(PC)" "bnez x31,-12 <runtime.runqdrain+0x3a>" ref=0x50a52 call=false runtime2.go:252
+0x50a5e 4 "BNE" "BNEZ X31, 0x50a52" "bnez x31,-12 <runtime.runqdrain+0x3a>" ref=0x50a52 call=false runtime2.go:252
 0x50a62 2 "ADDI" "ADDI $1, X0, X15" "li x15,1" ref=0x0 call=false runtime2.go:252
-0x50a64 4 "BEQ" "BEQZ X15, 11(PC)" "beqz x15,44 <runtime.runqdrain+0x78>" ref=0x50a90 call=false proc.go:7676
+0x50a64 4 "BEQ" "BEQZ X15, 0x50a90" "beqz x15,44 <runtime.runqdrain+0x78>" ref=0x50a90 call=false proc.go:7676
 0x50a68 2 "ADDI" "MOV X0, X0" "nop" ref=0x0 call=false proc.go:7677
 0x50a6a 2 "ADDI" "MOV X0, X0" "nop" ref=0x0 call=false proc.go:7677
 0x50a6c 4 "SD" "MOV X0, 160(X9)" "sd x0,160(x9)" ref=0x0 call=false proc.go:7825
 0x50a70 2 "LD" "MOV 16(X2), X13" "ld x13,16(x2)" ref=0x0 call=false proc.go:7826
-0x50a72 4 "BEQ" "BEQZ X13, 3(PC)" "beqz x13,12 <runtime.runqdrain+0x66>" ref=0x50a7e call=false proc.go:7826
+0x50a72 4 "BEQ" "BEQZ X13, 0x50a7e" "beqz x13,12 <runtime.runqdrain+0x66>" ref=0x50a7e call=false proc.go:7826
 0x50a76 2 "ADD" "ADD X9, X0, X14" "mv x14,x9" ref=0x0 call=false runtime2.go:248
 0x50a78 2 "SD" "MOV X9, 160(X13)" "sd x9,160(x13)" ref=0x0 call=false proc.go:7827
-0x50a7a 4 "JAL" "JMP 3(PC)" "j 12 <runtime.runqdrain+0x6e>" ref=0x50a86 call=false proc.go:7827
+0x50a7a 4 "JAL" "JMP 0x50a86" "j 12 <runtime.runqdrain+0x6e>" ref=0x50a86 call=false proc.go:7827
 0x50a7e 2 "ADD" "ADD X9, X0, X13" "mv x13,x9" ref=0x0 call=false runtime2.go:248
 0x50a80 2 "ADDI" "MOV X0, X0" "nop" ref=0x0 call=false proc.go:7829
 0x50a82 2 "SD" "MOV X9, 8(X2)" "sd x9,8(x2)" ref=0x0 call=false runtime2.go:248
@@ -838,19 +838,19 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x50a9c 4 "SUB" "SUB X13, X14, X15" "sub x15,x14,x13" ref=0x0 call=false proc.go:7683
 0x50aa0 2 "SLLI" "SLLI $32, X15, X15" "slli x15,x15,0x20" ref=0x0 call=false proc.go:7684
 0x50aa2 2 "SRLI" "SRLI $32, X15, X15" "srli x15,x15,0x20" ref=0x0 call=false proc.go:7684
-0x50aa4 4 "BEQ" "BEQZ X15, 11(PC)" "beqz x15,46 <runtime.runqdrain+0xba>" ref=0x50ad2 call=false proc.go:7684
+0x50aa4 4 "BEQ" "BEQZ X15, 0x50ad2" "beqz x15,46 <runtime.runqdrain+0xba>" ref=0x50ad2 call=false proc.go:7684
 0x50aa8 4 "ADDI" "ADDI $256, X0, X11" "li x11,256" ref=0x0 call=false proc.go:7687
-0x50aac 4 "BLTU" "BLTU X11, X15, -7(PC)" "bltu x11,x15,-28 <runtime.runqdrain+0x78>" ref=0x50a90 call=false proc.go:7687
+0x50aac 4 "BLTU" "BLTU X11, X15, 0x50a90" "bltu x11,x15,-28 <runtime.runqdrain+0x78>" ref=0x50a90 call=false proc.go:7687
 0x50ab0 4 "ADDIW" "MOVW X13, X16" "sext.w x16,x13" ref=0x0 call=false proc.go:7691
 0x50ab4 2 "ADDI" "MOV X0, X5" "li x5,0" ref=0x0 call=false proc.go:7691
 0x50ab6 4 "LR.W.AQ" "LRW (X9), X31" "lr.w.aq x31,(x9)" ref=0x0 call=false proc.go:7691
-0x50aba 4 "BNE" "BNE X16, X31, 3(PC)" "bne x16,x31,14 <runtime.runqdrain+0xb0>" ref=0x50ac8 call=false proc.go:7691
+0x50aba 4 "BNE" "BNE X16, X31, 0x50ac8" "bne x16,x31,14 <runtime.runqdrain+0xb0>" ref=0x50ac8 call=false proc.go:7691
 0x50abe 4 "SC.W.RL" "SCW X14, (X9), X31" "sc.w.rl x31,x14,(x9)" ref=0x0 call=false proc.go:7691
-0x50ac2 4 "BNE" "BNEZ X31, -3(PC)" "bnez x31,-12 <runtime.runqdrain+0x9e>" ref=0x50ab6 call=false proc.go:7691
+0x50ac2 4 "BNE" "BNEZ X31, 0x50ab6" "bnez x31,-12 <runtime.runqdrain+0x9e>" ref=0x50ab6 call=false proc.go:7691
 0x50ac6 2 "ADDI" "ADDI $1, X0, X5" "li x5,1" ref=0x0 call=false proc.go:7691
-0x50ac8 4 "BEQ" "BEQZ X5, -14(PC)" "beqz x5,-56 <runtime.runqdrain+0x78>" ref=0x50a90 call=false proc.go:7691
+0x50ac8 4 "BEQ" "BEQZ X5, 0x50a90" "beqz x5,-56 <runtime.runqdrain+0x78>" ref=0x50a90 call=false proc.go:7691
 0x50acc 2 "ADDI" "MOV X0, X9" "li x9,0" ref=0x0 call=false proc.go:7691
-0x50ace 4 "JAL" "JMP 7(PC)" "j 30 <runtime.runqdrain+0xd4>" ref=0x50aec call=false proc.go:7691
+0x50ace 4 "JAL" "JMP 0x50aec" "j 30 <runtime.runqdrain+0xd4>" ref=0x50aec call=false proc.go:7691
 0x50ad2 2 "LD" "MOV 8(X2), X10" "ld x10,8(x2)" ref=0x0 call=false proc.go:7685
 0x50ad4 2 "LD" "MOV 16(X2), X11" "ld x11,16(x2)" ref=0x0 call=false proc.go:7685
 0x50ad6 2 "LW" "MOVW 24(X2), X12" "lw x12,24(x2)" ref=0x0 call=false proc.go:7685
@@ -865,7 +865,7 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x50aea 2 "ADDI" "ADDI $1, X9, X9" "addi x9,x9,1" ref=0x0 call=false proc.go:7702
 0x50aec 4 "SLLI" "SLLI $32, X9, X14" "slli x14,x9,0x20" ref=0x0 call=false proc.go:7702
 0x50af0 2 "SRLI" "SRLI $32, X14, X14" "srli x14,x14,0x20" ref=0x0 call=false proc.go:7702
-0x50af2 4 "BGEU" "BGEU X14, X15, 13(PC)" "bgeu x14,x15,54 <runtime.runqdrain+0x110>" ref=0x50b28 call=false proc.go:7702
+0x50af2 4 "BGEU" "BGEU X14, X15, 0x50b28" "bgeu x14,x15,54 <runtime.runqdrain+0x110>" ref=0x50b28 call=false proc.go:7702
 0x50af6 4 "ADDI" "ADDI $408, X10, X14" "addi x14,x10,408" ref=0x0 call=false proc.go:7703
 0x50afa 4 "ADD" "ADD X13, X9, X16" "add x16,x9,x13" ref=0x0 call=false proc.go:7703
 0x50afe 4 "ANDI" "MOVBU X16, X16" "zext.b x16,x16" ref=0x0 call=false proc.go:7703
@@ -875,14 +875,14 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x50b08 2 "ADDI" "MOV X0, X0" "nop" ref=0x0 call=false proc.go:7704
 0x50b0a 4 "SD" "MOV X0, 160(X14)" "sd x0,160(x14)" ref=0x0 call=false proc.go:7825
 0x50b0e 2 "LD" "MOV 16(X2), X16" "ld x16,16(x2)" ref=0x0 call=false proc.go:7826
-0x50b10 4 "BEQ" "BEQZ X16, 3(PC)" "beqz x16,14 <runtime.runqdrain+0x106>" ref=0x50b1e call=false proc.go:7826
+0x50b10 4 "BEQ" "BEQZ X16, 0x50b1e" "beqz x16,14 <runtime.runqdrain+0x106>" ref=0x50b1e call=false proc.go:7826
 0x50b14 2 "ADD" "ADD X14, X0, X5" "mv x5,x14" ref=0x0 call=false runtime2.go:248
 0x50b16 4 "SD" "MOV X14, 160(X16)" "sd x14,160(x16)" ref=0x0 call=false proc.go:7827
-0x50b1a 4 "JAL" "JMP -14(PC)" "j -58 <runtime.runqdrain+0xc8>" ref=0x50ae0 call=false proc.go:7827
+0x50b1a 4 "JAL" "JMP 0x50ae0" "j -58 <runtime.runqdrain+0xc8>" ref=0x50ae0 call=false proc.go:7827
 0x50b1e 2 "ADD" "ADD X14, X0, X16" "mv x16,x14" ref=0x0 call=false runtime2.go:248
 0x50b20 2 "SD" "MOV X14, 8(X2)" "sd x14,8(x2)" ref=0x0 call=false runtime2.go:248
 0x50b22 2 "ADD" "ADD X16, X0, X5" "mv x5,x16" ref=0x0 call=false runtime2.go:248
-0x50b24 4 "JAL" "JMP -17(PC)" "j -68 <runtime.runqdrain+0xc8>" ref=0x50ae0 call=false proc.go:7829
+0x50b24 4 "JAL" "JMP 0x50ae0" "j -68 <runtime.runqdrain+0xc8>" ref=0x50ae0 call=false proc.go:7829
 0x50b28 2 "LD" "MOV 8(X2), X10" "ld x10,8(x2)" ref=0x0 call=false proc.go:7706
 0x50b2a 2 "LD" "MOV 16(X2), X11" "ld x11,16(x2)" ref=0x0 call=false proc.go:7706
 0x50b2c 2 "LW" "MOVW 24(X2), X12" "lw x12,24(x2)" ref=0x0 call=false proc.go:7706
@@ -892,7 +892,7 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x50b36 2 "CSRRW" "UNIMP" "unimp" ref=0x0 call=false .:-1
 == runtime.runqgrab 0x50b38 384 /usr/local/go/src/runtime/proc.go
 0x50b38 4 "LD" "MOV 16(X27), X6" "ld x6,16(x27)" ref=0x0 call=false proc.go:7713
-0x50b3c 4 "BLTU" "BLTU X6, X2, 8(PC)" "bltu x6,x2,34 <runtime.runqgrab+0x26>" ref=0x50b5e call=false proc.go:7713
+0x50b3c 4 "BLTU" "BLTU X6, X2, 0x50b5e" "bltu x6,x2,34 <runtime.runqgrab+0x26>" ref=0x50b5e call=false proc.go:7713
 0x50b40 2 "SD" "MOV X10, 8(X2)" "sd x10,8(x2)" ref=0x0 call=false proc.go:7713
 0x50b42 2 "SD" "MOV X11, 16(X2)" "sd x11,16(x2)" ref=0x0 call=false proc.go:7713
 0x50b44 2 "SW" "MOVW X12, 24(X2)" "sw x12,24(x2)" ref=0x0 call=false proc.go:7713
@@ -920,21 +920,21 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x50b8a 4 "SUB" "SUB X16, X15, X15" "sub x15,x15,x16" ref=0x0 call=false proc.go:7718
 0x50b8e 4 "SLLI" "SLLI $32, X15, X16" "slli x16,x15,0x20" ref=0x0 call=false proc.go:7719
 0x50b92 4 "SRLI" "SRLI $32, X16, X16" "srli x16,x16,0x20" ref=0x0 call=false proc.go:7719
-0x50b96 4 "BNE" "BNEZ X16, 33(PC)" "bnez x16,134 <runtime.runqgrab+0xe4>" ref=0x50c1c call=false proc.go:7719
+0x50b96 4 "BNE" "BNEZ X16, 0x50c1c" "bnez x16,134 <runtime.runqgrab+0xe4>" ref=0x50c1c call=false proc.go:7719
 0x50b9a 4 "ANDI" "MOVBU X13, X9" "zext.b x9,x13" ref=0x0 call=false proc.go:7714
-0x50b9e 4 "BEQ" "BEQZ X9, 65(PC)" "beqz x9,260 <runtime.runqgrab+0x16a>" ref=0x50ca2 call=false proc.go:7720
+0x50b9e 4 "BEQ" "BEQZ X9, 0x50ca2" "beqz x9,260 <runtime.runqgrab+0x16a>" ref=0x50ca2 call=false proc.go:7720
 0x50ba2 2 "LUI" "LUI $1, X31" "lui x31,0x1" ref=0x0 call=false proc.go:7722
 0x50ba4 2 "ADD" "ADD X10, X31, X31" "add x31,x31,x10" ref=0x0 call=false proc.go:7722
 0x50ba6 4 "LD" "MOV -1640(X31), X9" "ld x9,-1640(x31)" ref=0x0 call=false proc.go:7722
-0x50baa 4 "BEQ" "BEQZ X9, 62(PC)" "beqz x9,248 <runtime.runqgrab+0x16a>" ref=0x50ca2 call=false proc.go:7722
+0x50baa 4 "BEQ" "BEQZ X9, 0x50ca2" "beqz x9,248 <runtime.runqgrab+0x16a>" ref=0x50ca2 call=false proc.go:7722
 0x50bae 4 "LWU" "MOVWU 4(X10), X14" "lwu x14,4(x10)" ref=0x0 call=false proc.go:7723
 0x50bb2 2 "ADDI" "ADDI $1, X0, X15" "li x15,1" ref=0x0 call=false proc.go:7723
-0x50bb4 4 "BNE" "BNE X15, X14, 16(PC)" "bne x15,x14,66 <runtime.runqgrab+0xbe>" ref=0x50bf6 call=false proc.go:7723
+0x50bb4 4 "BNE" "BNE X15, X14, 0x50bf6" "bne x15,x14,66 <runtime.runqgrab+0xbe>" ref=0x50bf6 call=false proc.go:7723
 0x50bb8 2 "LD" "MOV 48(X10), X14" "ld x14,48(x10)" ref=0x0 call=false proc.go:7724
-0x50bba 4 "BEQ" "BEQZ X14, 15(PC)" "beqz x14,60 <runtime.runqgrab+0xbe>" ref=0x50bf6 call=false proc.go:7724
+0x50bba 4 "BEQ" "BEQZ X14, 0x50bf6" "beqz x14,60 <runtime.runqgrab+0xbe>" ref=0x50bf6 call=false proc.go:7724
 0x50bbe 2 "SD" "MOV X9, 16(X2)" "sd x9,16(x2)" ref=0x0 call=false proc.go:7722
 0x50bc0 2 "LD" "MOV 184(X14), X14" "ld x14,184(x14)" ref=0x0 call=false proc.go:7725
-0x50bc2 4 "BEQ" "BEQZ X14, 7(PC)" "beqz x14,30 <runtime.runqgrab+0xa8>" ref=0x50be0 call=false proc.go:7725
+0x50bc2 4 "BEQ" "BEQZ X14, 0x50be0" "beqz x14,30 <runtime.runqgrab+0xa8>" ref=0x50be0 call=false proc.go:7725
 0x50bc6 4 "ADDI" "ADDI $144, X14, X14" "addi x14,x14,144" ref=0x0 call=false types.go:194
 0x50bca 2 "ADDI" "MOV X0, X0" "nop" ref=0x0 call=false proc.go:1221
 0x50bcc 4 "LR.W.AQ" "LRW (X14), X14" "lr.w.aq x14,(x14)" ref=0x0 call=false types.go:194
@@ -944,7 +944,7 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x50bd6 2 "SRLI" "SRLI $32, X15, X15" "srli x15,x15,0x20" ref=0x0 call=false proc.go:7725
 0x50bd8 2 "AND" "AND X15, X14, X14" "and x14,x14,x15" ref=0x0 call=false proc.go:7725
 0x50bda 2 "ADDI" "ADDI $3, X0, X15" "li x15,3" ref=0x0 call=false proc.go:7725
-0x50bdc 4 "BEQ" "BEQ X14, X15, 6(PC)" "beq x14,x15,26 <runtime.runqgrab+0xbe>" ref=0x50bf6 call=false proc.go:7725
+0x50bdc 4 "BEQ" "BEQ X14, X15, 0x50bf6" "beq x14,x15,26 <runtime.runqgrab+0xbe>" ref=0x50bf6 call=false proc.go:7725
 0x50be0 2 "ADDI" "ADDI $3, X0, X9" "li x9,3" ref=0x0 call=false proc.go:7746
 0x50be2 2 "SW" "MOVW X9, 8(X2)" "sw x9,8(x2)" ref=0x0 call=false proc.go:7746
 0x50be4 4 "JAL" "CALL runtime.usleep.abi0(SB)" "jal 113788 <runtime.usleep.abi0>" ref=0x6c860 call=true proc.go:7746
@@ -958,18 +958,18 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x50bfe 2 "ADDI" "MOV X0, X15" "li x15,0" ref=0x0 call=false runtime2.go:252
 0x50c00 2 "ADDI" "MOV X0, X16" "li x16,0" ref=0x0 call=false runtime2.go:252
 0x50c02 4 "LR.D.AQ" "LRD (X14), X31" "lr.d.aq x31,(x14)" ref=0x0 call=false runtime2.go:252
-0x50c06 4 "BNE" "BNE X9, X31, 3(PC)" "bne x9,x31,14 <runtime.runqgrab+0xdc>" ref=0x50c14 call=false runtime2.go:252
+0x50c06 4 "BNE" "BNE X9, X31, 0x50c14" "bne x9,x31,14 <runtime.runqgrab+0xdc>" ref=0x50c14 call=false runtime2.go:252
 0x50c0a 4 "SC.D.RL" "SCD X15, (X14), X31" "sc.d.rl x31,x15,(x14)" ref=0x0 call=false runtime2.go:252
-0x50c0e 4 "BNE" "BNEZ X31, -3(PC)" "bnez x31,-12 <runtime.runqgrab+0xca>" ref=0x50c02 call=false runtime2.go:252
+0x50c0e 4 "BNE" "BNEZ X31, 0x50c02" "bnez x31,-12 <runtime.runqgrab+0xca>" ref=0x50c02 call=false runtime2.go:252
 0x50c12 2 "ADDI" "ADDI $1, X0, X16" "li x16,1" ref=0x0 call=false runtime2.go:252
-0x50c14 4 "BEQ" "BEQZ X16, -41(PC)" "beqz x16,-164 <runtime.runqgrab+0x38>" ref=0x50b70 call=false proc.go:7756
-0x50c18 4 "JAL" "JMP 28(PC)" "j 114 <runtime.runqgrab+0x152>" ref=0x50c8a call=false proc.go:7756
+0x50c14 4 "BEQ" "BEQZ X16, 0x50b70" "beqz x16,-164 <runtime.runqgrab+0x38>" ref=0x50b70 call=false proc.go:7756
+0x50c18 4 "JAL" "JMP 0x50c8a" "j 114 <runtime.runqgrab+0x152>" ref=0x50c8a call=false proc.go:7756
 0x50c1c 4 "ADDI" "ADDI $128, X0, X5" "li x5,128" ref=0x0 call=false proc.go:7765
-0x50c20 4 "BGEU" "BGEU X5, X16, 2(PC)" "bgeu x5,x16,10 <runtime.runqgrab+0xf2>" ref=0x50c2a call=false proc.go:7765
+0x50c20 4 "BGEU" "BGEU X5, X16, 0x50c2a" "bgeu x5,x16,10 <runtime.runqgrab+0xf2>" ref=0x50c2a call=false proc.go:7765
 0x50c24 2 "ADDI" "MOV X0, X15" "li x15,0" ref=0x0 call=false proc.go:7765
-0x50c26 4 "JAL" "JMP -45(PC)" "j -182 <runtime.runqgrab+0x38>" ref=0x50b70 call=false proc.go:7766
+0x50c26 4 "JAL" "JMP 0x50b70" "j -182 <runtime.runqgrab+0x38>" ref=0x50b70 call=false proc.go:7766
 0x50c2a 2 "ADDI" "MOV X0, X5" "li x5,0" ref=0x0 call=false proc.go:7765
-0x50c2c 4 "JAL" "JMP 11(PC)" "j 46 <runtime.runqgrab+0x122>" ref=0x50c5a call=false proc.go:7765
+0x50c2c 4 "JAL" "JMP 0x50c5a" "j 46 <runtime.runqgrab+0x122>" ref=0x50c5a call=false proc.go:7765
 0x50c30 4 "LB" "MOVB (X11), X0" "lb x0,0(x11)" ref=0x0 call=false proc.go:7770
 0x50c34 4 "ADDI" "ADDI $408, X10, X6" "addi x6,x10,408" ref=0x0 call=false proc.go:7769
 0x50c38 4 "ADD" "ADD X14, X5, X7" "add x7,x5,x14" ref=0x0 call=false proc.go:7769
@@ -985,18 +985,18 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x50c58 2 "ADDI" "ADDI $1, X5, X5" "addi x5,x5,1" ref=0x0 call=false proc.go:7768
 0x50c5a 4 "SLLI" "SLLI $32, X5, X6" "slli x6,x5,0x20" ref=0x0 call=false proc.go:7768
 0x50c5e 4 "SRLI" "SRLI $32, X6, X6" "srli x6,x6,0x20" ref=0x0 call=false proc.go:7768
-0x50c62 4 "BLTU" "BLTU X6, X16, -12(PC)" "bltu x6,x16,-50 <runtime.runqgrab+0xf8>" ref=0x50c30 call=false proc.go:7768
+0x50c62 4 "BLTU" "BLTU X6, X16, 0x50c30" "bltu x6,x16,-50 <runtime.runqgrab+0xf8>" ref=0x50c30 call=false proc.go:7768
 0x50c66 4 "ADDIW" "MOVW X14, X16" "sext.w x16,x14" ref=0x0 call=false proc.go:7772
 0x50c6a 2 "ADD" "ADD X15, X14, X14" "add x14,x14,x15" ref=0x0 call=false proc.go:7772
 0x50c6c 2 "ADDI" "MOV X0, X5" "li x5,0" ref=0x0 call=false proc.go:7772
 0x50c6e 4 "LR.W.AQ" "LRW (X9), X31" "lr.w.aq x31,(x9)" ref=0x0 call=false proc.go:7772
-0x50c72 4 "BNE" "BNE X16, X31, 3(PC)" "bne x16,x31,14 <runtime.runqgrab+0x148>" ref=0x50c80 call=false proc.go:7772
+0x50c72 4 "BNE" "BNE X16, X31, 0x50c80" "bne x16,x31,14 <runtime.runqgrab+0x148>" ref=0x50c80 call=false proc.go:7772
 0x50c76 4 "SC.W.RL" "SCW X14, (X9), X31" "sc.w.rl x31,x14,(x9)" ref=0x0 call=false proc.go:7772
-0x50c7a 4 "BNE" "BNEZ X31, -3(PC)" "bnez x31,-12 <runtime.runqgrab+0x136>" ref=0x50c6e call=false proc.go:7772
+0x50c7a 4 "BNE" "BNEZ X31, 0x50c6e" "bnez x31,-12 <runtime.runqgrab+0x136>" ref=0x50c6e call=false proc.go:7772
 0x50c7e 2 "ADDI" "ADDI $1, X0, X5" "li x5,1" ref=0x0 call=false proc.go:7772
-0x50c80 4 "BNE" "BNEZ X5, 11(PC)" "bnez x5,44 <runtime.runqgrab+0x174>" ref=0x50cac call=false proc.go:7772
+0x50c80 4 "BNE" "BNEZ X5, 0x50cac" "bnez x5,44 <runtime.runqgrab+0x174>" ref=0x50cac call=false proc.go:7772
 0x50c84 2 "ADDI" "MOV X0, X15" "li x15,0" ref=0x0 call=false proc.go:7772
-0x50c86 4 "JAL" "JMP -69(PC)" "j -278 <runtime.runqgrab+0x38>" ref=0x50b70 call=false proc.go:7772
+0x50c86 4 "JAL" "JMP 0x50b70" "j -278 <runtime.runqgrab+0x38>" ref=0x50b70 call=false proc.go:7772
 0x50c8a 4 "LB" "MOVB (X11), X0" "lb x0,0(x11)" ref=0x0 call=false proc.go:7759
 0x50c8e 4 "ANDI" "MOVBU X12, X12" "zext.b x12,x12" ref=0x0 call=false proc.go:7759
 0x50c92 2 "SLLI" "SLLI $3, X12, X12" "slli x12,x12,0x3" ref=0x0 call=false proc.go:7759
@@ -1017,7 +1017,7 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x50cb6 2 "CSRRW" "UNIMP" "unimp" ref=0x0 call=false .:-1
 == runtime.runqsteal 0x50cb8 192 /usr/local/go/src/runtime/proc.go
 0x50cb8 4 "LD" "MOV 16(X27), X6" "ld x6,16(x27)" ref=0x0 call=false proc.go:7781
-0x50cbc 4 "BLTU" "BLTU X6, X2, 7(PC)" "bltu x6,x2,28 <runtime.runqsteal+0x20>" ref=0x50cd8 call=false proc.go:7781
+0x50cbc 4 "BLTU" "BLTU X6, X2, 0x50cd8" "bltu x6,x2,28 <runtime.runqsteal+0x20>" ref=0x50cd8 call=false proc.go:7781
 0x50cc0 2 "SD" "MOV X10, 8(X2)" "sd x10,8(x2)" ref=0x0 call=false proc.go:7781
 0x50cc2 2 "SD" "MOV X11, 16(X2)" "sd x11,16(x2)" ref=0x0 call=false proc.go:7781
 0x50cc4 4 "SB" "MOVB X12, 24(X2)" "sb x12,24(x2)" ref=0x0 call=false proc.go:7781
@@ -1041,7 +1041,7 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x50cf6 4 "JAL" "CALL runtime.runqgrab(SB)" "jal -446 <runtime.runqgrab>" ref=0x50b38 call=true proc.go:7783
 0x50cfa 4 "SLLI" "SLLI $32, X10, X9" "slli x9,x10,0x20" ref=0x0 call=false proc.go:7784
 0x50cfe 2 "SRLI" "SRLI $32, X9, X9" "srli x9,x9,0x20" ref=0x0 call=false proc.go:7784
-0x50d00 4 "BEQ" "BEQZ X9, 22(PC)" "beqz x9,88 <runtime.runqsteal+0xa0>" ref=0x50d58 call=false proc.go:7784
+0x50d00 4 "BEQ" "BEQZ X9, 0x50d58" "beqz x9,88 <runtime.runqsteal+0xa0>" ref=0x50d58 call=false proc.go:7784
 0x50d04 4 "LWU" "MOVWU 36(X2), X12" "lwu x12,36(x2)" ref=0x0 call=false proc.go:7788
 0x50d08 4 "ADD" "ADD X12, X10, X13" "add x13,x10,x12" ref=0x0 call=false proc.go:7788
 0x50d0c 2 "ADDI" "ADDI $-1, X13, X13" "addi x13,x13,-1" ref=0x0 call=false proc.go:7788
@@ -1051,7 +1051,7 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x50d16 2 "ADD" "ADD X15, X14, X14" "add x14,x14,x15" ref=0x0 call=false proc.go:7788
 0x50d18 2 "LD" "MOV (X14), X14" "ld x14,0(x14)" ref=0x0 call=false proc.go:7788
 0x50d1a 2 "ADDI" "ADDI $1, X0, X11" "li x11,1" ref=0x0 call=false proc.go:7789
-0x50d1c 4 "BEQ" "BEQ X11, X9, 12(PC)" "beq x11,x9,50 <runtime.runqsteal+0x96>" ref=0x50d4e call=false proc.go:7789
+0x50d1c 4 "BEQ" "BEQ X11, X9, 0x50d4e" "beq x11,x9,50 <runtime.runqsteal+0x96>" ref=0x50d4e call=false proc.go:7789
 0x50d20 2 "LD" "MOV 56(X2), X9" "ld x9,56(x2)" ref=0x0 call=false proc.go:7792
 0x50d22 4 "ADDI" "ADDI $400, X9, X15" "addi x15,x9,400" ref=0x0 call=false proc.go:7792
 0x50d26 4 "LR.W.AQ" "LRW (X15), X15" "lr.w.aq x15,(x15)" ref=0x0 call=false proc.go:7792
@@ -1061,7 +1061,7 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x50d30 2 "SLLI" "SLLI $32, X12, X12" "slli x12,x12,0x20" ref=0x0 call=false proc.go:7793
 0x50d32 2 "SRLI" "SRLI $32, X12, X12" "srli x12,x12,0x20" ref=0x0 call=false proc.go:7793
 0x50d34 4 "ADDI" "ADDI $256, X0, X10" "li x10,256" ref=0x0 call=false proc.go:7793
-0x50d38 4 "BGEU" "BGEU X12, X10, 10(PC)" "bgeu x12,x10,42 <runtime.runqsteal+0xaa>" ref=0x50d62 call=false proc.go:7793
+0x50d38 4 "BGEU" "BGEU X12, X10, 0x50d62" "bgeu x12,x10,42 <runtime.runqsteal+0xaa>" ref=0x50d62 call=false proc.go:7793
 0x50d3c 4 "ADDI" "ADDI $404, X9, X9" "addi x9,x9,404" ref=0x0 call=false proc.go:7796
 0x50d40 4 "AMOSWAP.W.AQRL" "AMOSWAPW X13, (X9), X0" "amoswap.w.aqrl x0,x13,(x9)" ref=0x0 call=false proc.go:7796
 0x50d44 2 "ADD" "ADD X14, X0, X10" "mv x10,x14" ref=0x0 call=false proc.go:7797
@@ -1085,15 +1085,15 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x50d74 2 "CSRRW" "UNIMP" "unimp" ref=0x0 call=false .:-1
 0x50d76 2 "CSRRW" "UNIMP" "unimp" ref=0x0 call=false .:-1
 == runtime.memmove 0x6c388 816 /usr/local/go/src/runtime/memmove_riscv64.s
-0x6c388 4 "BEQ" "BEQ X10, X11, 203(PC)" "beq x10,x11,812 <runtime.memmove+0x32c>" ref=0x6c6b4 call=false memmove_riscv64.s:14
-0x6c38c 4 "BEQ" "BEQZ X12, 202(PC)" "beqz x12,808 <runtime.memmove+0x32c>" ref=0x6c6b4 call=false memmove_riscv64.s:15
-0x6c390 4 "BLTU" "BLTU X11, X10, 101(PC)" "bltu x11,x10,406 <runtime.memmove+0x19e>" ref=0x6c526 call=false memmove_riscv64.s:19
+0x6c388 4 "BEQ" "BEQ X10, X11, 0x6c6b4" "beq x10,x11,812 <runtime.memmove+0x32c>" ref=0x6c6b4 call=false memmove_riscv64.s:14
+0x6c38c 4 "BEQ" "BEQZ X12, 0x6c6b4" "beqz x12,808 <runtime.memmove+0x32c>" ref=0x6c6b4 call=false memmove_riscv64.s:15
+0x6c390 4 "BLTU" "BLTU X11, X10, 0x6c526" "bltu x11,x10,406 <runtime.memmove+0x19e>" ref=0x6c526 call=false memmove_riscv64.s:19
 0x6c394 2 "ADDI" "ADDI $8, X0, X9" "li x9,8" ref=0x0 call=false memmove_riscv64.s:22
-0x6c396 4 "BLT" "BLT X12, X9, 82(PC)" "blt x12,x9,330 <runtime.memmove+0x158>" ref=0x6c4e0 call=false memmove_riscv64.s:23
+0x6c396 4 "BLT" "BLT X12, X9, 0x6c4e0" "blt x12,x9,330 <runtime.memmove+0x158>" ref=0x6c4e0 call=false memmove_riscv64.s:23
 0x6c39a 4 "ANDI" "ANDI $7, X10, X5" "andi x5,x10,7" ref=0x0 call=false memmove_riscv64.s:26
 0x6c39e 4 "ANDI" "ANDI $7, X11, X6" "andi x6,x11,7" ref=0x0 call=false memmove_riscv64.s:27
-0x6c3a2 4 "BNE" "BNE X5, X6, 59(PC)" "bne x5,x6,238 <runtime.memmove+0x108>" ref=0x6c490 call=false memmove_riscv64.s:28
-0x6c3a6 4 "BEQ" "BEQZ X5, 7(PC)" "beqz x5,30 <runtime.memmove+0x3c>" ref=0x6c3c4 call=false memmove_riscv64.s:29
+0x6c3a2 4 "BNE" "BNE X5, X6, 0x6c490" "bne x5,x6,238 <runtime.memmove+0x108>" ref=0x6c490 call=false memmove_riscv64.s:28
+0x6c3a6 4 "BEQ" "BEQZ X5, 0x6c3c4" "beqz x5,30 <runtime.memmove+0x3c>" ref=0x6c3c4 call=false memmove_riscv64.s:29
 0x6c3aa 4 "SUB" "SUB X5, X9, X5" "sub x5,x9,x5" ref=0x0 call=false memmove_riscv64.s:32
 0x6c3ae 4 "SUB" "SUB X5, X12, X12" "sub x12,x12,x5" ref=0x0 call=false memmove_riscv64.s:33
 0x6c3b2 2 "ADDI" "ADDI $-1, X5, X5" "addi x5,x5,-1" ref=0x0 call=false memmove_riscv64.s:35
@@ -1101,13 +1101,13 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x6c3b8 4 "SB" "MOVB X14, (X10)" "sb x14,0(x10)" ref=0x0 call=false memmove_riscv64.s:37
 0x6c3bc 2 "ADDI" "ADDI $1, X10, X10" "addi x10,x10,1" ref=0x0 call=false memmove_riscv64.s:38
 0x6c3be 2 "ADDI" "ADDI $1, X11, X11" "addi x11,x11,1" ref=0x0 call=false memmove_riscv64.s:39
-0x6c3c0 4 "BNE" "BNEZ X5, -3(PC)" "bnez x5,-14 <runtime.memmove+0x2a>" ref=0x6c3b2 call=false memmove_riscv64.s:40
+0x6c3c0 4 "BNE" "BNEZ X5, 0x6c3b2" "bnez x5,-14 <runtime.memmove+0x2a>" ref=0x6c3b2 call=false memmove_riscv64.s:40
 0x6c3c4 2 "ADDI" "ADDI $16, X0, X9" "li x9,16" ref=0x0 call=false memmove_riscv64.s:43
-0x6c3c6 4 "BLT" "BLT X12, X9, 43(PC)" "blt x12,x9,174 <runtime.memmove+0xec>" ref=0x6c474 call=false memmove_riscv64.s:44
+0x6c3c6 4 "BLT" "BLT X12, X9, 0x6c474" "blt x12,x9,174 <runtime.memmove+0xec>" ref=0x6c474 call=false memmove_riscv64.s:44
 0x6c3ca 4 "ADDI" "ADDI $32, X0, X9" "li x9,32" ref=0x0 call=false memmove_riscv64.s:45
-0x6c3ce 4 "BLT" "BLT X12, X9, 34(PC)" "blt x12,x9,138 <runtime.memmove+0xd0>" ref=0x6c458 call=false memmove_riscv64.s:46
+0x6c3ce 4 "BLT" "BLT X12, X9, 0x6c458" "blt x12,x9,138 <runtime.memmove+0xd0>" ref=0x6c458 call=false memmove_riscv64.s:46
 0x6c3d2 4 "ADDI" "ADDI $64, X0, X9" "li x9,64" ref=0x0 call=false memmove_riscv64.s:47
-0x6c3d6 4 "BLT" "BLT X12, X9, 20(PC)" "blt x12,x9,80 <runtime.memmove+0x9e>" ref=0x6c426 call=false memmove_riscv64.s:48
+0x6c3d6 4 "BLT" "BLT X12, X9, 0x6c426" "blt x12,x9,80 <runtime.memmove+0x9e>" ref=0x6c426 call=false memmove_riscv64.s:48
 0x6c3da 2 "LD" "MOV (X11), X14" "ld x14,0(x11)" ref=0x0 call=false memmove_riscv64.s:50
 0x6c3dc 2 "LD" "MOV 8(X11), X15" "ld x15,8(x11)" ref=0x0 call=false memmove_riscv64.s:51
 0x6c3de 4 "LD" "MOV 16(X11), X16" "ld x16,16(x11)" ref=0x0 call=false memmove_riscv64.s:52
@@ -1127,10 +1127,10 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x6c412 4 "ADDI" "ADDI $64, X10, X10" "addi x10,x10,64" ref=0x0 call=false memmove_riscv64.s:66
 0x6c416 4 "ADDI" "ADDI $64, X11, X11" "addi x11,x11,64" ref=0x0 call=false memmove_riscv64.s:67
 0x6c41a 4 "ADDI" "ADDI $-64, X12, X12" "addi x12,x12,-64" ref=0x0 call=false memmove_riscv64.s:68
-0x6c41e 4 "BGE" "BGE X12, X9, -17(PC)" "bge x12,x9,-68 <runtime.memmove+0x52>" ref=0x6c3da call=false memmove_riscv64.s:69
-0x6c422 4 "BEQ" "BEQZ X12, 164(PC)" "beqz x12,658 <runtime.memmove+0x32c>" ref=0x6c6b4 call=false memmove_riscv64.s:70
+0x6c41e 4 "BGE" "BGE X12, X9, 0x6c3da" "bge x12,x9,-68 <runtime.memmove+0x52>" ref=0x6c3da call=false memmove_riscv64.s:69
+0x6c422 4 "BEQ" "BEQZ X12, 0x6c6b4" "beqz x12,658 <runtime.memmove+0x32c>" ref=0x6c6b4 call=false memmove_riscv64.s:70
 0x6c426 4 "ADDI" "ADDI $32, X0, X9" "li x9,32" ref=0x0 call=false memmove_riscv64.s:73
-0x6c42a 4 "BLT" "BLT X12, X9, 11(PC)" "blt x12,x9,46 <runtime.memmove+0xd0>" ref=0x6c458 call=false memmove_riscv64.s:74
+0x6c42a 4 "BLT" "BLT X12, X9, 0x6c458" "blt x12,x9,46 <runtime.memmove+0xd0>" ref=0x6c458 call=false memmove_riscv64.s:74
 0x6c42e 2 "LD" "MOV (X11), X14" "ld x14,0(x11)" ref=0x0 call=false memmove_riscv64.s:76
 0x6c430 2 "LD" "MOV 8(X11), X15" "ld x15,8(x11)" ref=0x0 call=false memmove_riscv64.s:77
 0x6c432 4 "LD" "MOV 16(X11), X16" "ld x16,16(x11)" ref=0x0 call=false memmove_riscv64.s:78
@@ -1142,10 +1142,10 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x6c446 4 "ADDI" "ADDI $32, X10, X10" "addi x10,x10,32" ref=0x0 call=false memmove_riscv64.s:84
 0x6c44a 4 "ADDI" "ADDI $32, X11, X11" "addi x11,x11,32" ref=0x0 call=false memmove_riscv64.s:85
 0x6c44e 2 "ADDI" "ADDI $-32, X12, X12" "addi x12,x12,-32" ref=0x0 call=false memmove_riscv64.s:86
-0x6c450 4 "BGE" "BGE X12, X9, -8(PC)" "bge x12,x9,-34 <runtime.memmove+0xa6>" ref=0x6c42e call=false memmove_riscv64.s:87
-0x6c454 4 "BEQ" "BEQZ X12, 152(PC)" "beqz x12,608 <runtime.memmove+0x32c>" ref=0x6c6b4 call=false memmove_riscv64.s:88
+0x6c450 4 "BGE" "BGE X12, X9, 0x6c42e" "bge x12,x9,-34 <runtime.memmove+0xa6>" ref=0x6c42e call=false memmove_riscv64.s:87
+0x6c454 4 "BEQ" "BEQZ X12, 0x6c6b4" "beqz x12,608 <runtime.memmove+0x32c>" ref=0x6c6b4 call=false memmove_riscv64.s:88
 0x6c458 2 "ADDI" "ADDI $16, X0, X9" "li x9,16" ref=0x0 call=false memmove_riscv64.s:91
-0x6c45a 4 "BLT" "BLT X12, X9, 6(PC)" "blt x12,x9,26 <runtime.memmove+0xec>" ref=0x6c474 call=false memmove_riscv64.s:92
+0x6c45a 4 "BLT" "BLT X12, X9, 0x6c474" "blt x12,x9,26 <runtime.memmove+0xec>" ref=0x6c474 call=false memmove_riscv64.s:92
 0x6c45e 2 "LD" "MOV (X11), X14" "ld x14,0(x11)" ref=0x0 call=false memmove_riscv64.s:94
 0x6c460 2 "LD" "MOV 8(X11), X15" "ld x15,8(x11)" ref=0x0 call=false memmove_riscv64.s:95
 0x6c462 2 "SD" "MOV X14, (X10)" "sd x14,0(x10)" ref=0x0 call=false memmove_riscv64.s:96
@@ -1153,20 +1153,20 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x6c466 2 "ADDI" "ADDI $16, X10, X10" "addi x10,x10,16" ref=0x0 call=false memmove_riscv64.s:98
 0x6c468 2 "ADDI" "ADDI $16, X11, X11" "addi x11,x11,16" ref=0x0 call=false memmove_riscv64.s:99
 0x6c46a 2 "ADDI" "ADDI $-16, X12, X12" "addi x12,x12,-16" ref=0x0 call=false memmove_riscv64.s:100
-0x6c46c 4 "BGE" "BGE X12, X9, -3(PC)" "bge x12,x9,-14 <runtime.memmove+0xd6>" ref=0x6c45e call=false memmove_riscv64.s:101
-0x6c470 4 "BEQ" "BEQZ X12, 145(PC)" "beqz x12,580 <runtime.memmove+0x32c>" ref=0x6c6b4 call=false memmove_riscv64.s:102
+0x6c46c 4 "BGE" "BGE X12, X9, 0x6c45e" "bge x12,x9,-14 <runtime.memmove+0xd6>" ref=0x6c45e call=false memmove_riscv64.s:101
+0x6c470 4 "BEQ" "BEQZ X12, 0x6c6b4" "beqz x12,580 <runtime.memmove+0x32c>" ref=0x6c6b4 call=false memmove_riscv64.s:102
 0x6c474 2 "ADDI" "ADDI $8, X0, X9" "li x9,8" ref=0x0 call=false memmove_riscv64.s:105
-0x6c476 4 "BLT" "BLT X12, X9, 26(PC)" "blt x12,x9,106 <runtime.memmove+0x158>" ref=0x6c4e0 call=false memmove_riscv64.s:106
+0x6c476 4 "BLT" "BLT X12, X9, 0x6c4e0" "blt x12,x9,106 <runtime.memmove+0x158>" ref=0x6c4e0 call=false memmove_riscv64.s:106
 0x6c47a 2 "LD" "MOV (X11), X14" "ld x14,0(x11)" ref=0x0 call=false memmove_riscv64.s:108
 0x6c47c 2 "SD" "MOV X14, (X10)" "sd x14,0(x10)" ref=0x0 call=false memmove_riscv64.s:109
 0x6c47e 2 "ADDI" "ADDI $8, X10, X10" "addi x10,x10,8" ref=0x0 call=false memmove_riscv64.s:110
 0x6c480 2 "ADDI" "ADDI $8, X11, X11" "addi x11,x11,8" ref=0x0 call=false memmove_riscv64.s:111
 0x6c482 2 "ADDI" "ADDI $-8, X12, X12" "addi x12,x12,-8" ref=0x0 call=false memmove_riscv64.s:112
-0x6c484 4 "BGE" "BGE X12, X9, -2(PC)" "bge x12,x9,-10 <runtime.memmove+0xf2>" ref=0x6c47a call=false memmove_riscv64.s:113
-0x6c488 4 "BEQ" "BEQZ X12, 139(PC)" "beqz x12,556 <runtime.memmove+0x32c>" ref=0x6c6b4 call=false memmove_riscv64.s:114
-0x6c48c 4 "JAL" "JMP 21(PC)" "j 84 <runtime.memmove+0x158>" ref=0x6c4e0 call=false memmove_riscv64.s:115
+0x6c484 4 "BGE" "BGE X12, X9, 0x6c47a" "bge x12,x9,-10 <runtime.memmove+0xf2>" ref=0x6c47a call=false memmove_riscv64.s:113
+0x6c488 4 "BEQ" "BEQZ X12, 0x6c6b4" "beqz x12,556 <runtime.memmove+0x32c>" ref=0x6c6b4 call=false memmove_riscv64.s:114
+0x6c48c 4 "JAL" "JMP 0x6c4e0" "j 84 <runtime.memmove+0x158>" ref=0x6c4e0 call=false memmove_riscv64.s:115
 0x6c490 2 "ADDI" "ADDI $8, X0, X9" "li x9,8" ref=0x0 call=false memmove_riscv64.s:118
-0x6c492 4 "BLT" "BLT X12, X9, 19(PC)" "blt x12,x9,78 <runtime.memmove+0x158>" ref=0x6c4e0 call=false memmove_riscv64.s:119
+0x6c492 4 "BLT" "BLT X12, X9, 0x6c4e0" "blt x12,x9,78 <runtime.memmove+0x158>" ref=0x6c4e0 call=false memmove_riscv64.s:119
 0x6c496 4 "LB" "MOVB (X11), X14" "lb x14,0(x11)" ref=0x0 call=false memmove_riscv64.s:121
 0x6c49a 4 "LB" "MOVB 1(X11), X15" "lb x15,1(x11)" ref=0x0 call=false memmove_riscv64.s:122
 0x6c49e 4 "LB" "MOVB 2(X11), X16" "lb x16,2(x11)" ref=0x0 call=false memmove_riscv64.s:123
@@ -1186,9 +1186,9 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x6c4d6 2 "ADDI" "ADDI $8, X10, X10" "addi x10,x10,8" ref=0x0 call=false memmove_riscv64.s:137
 0x6c4d8 2 "ADDI" "ADDI $8, X11, X11" "addi x11,x11,8" ref=0x0 call=false memmove_riscv64.s:138
 0x6c4da 2 "ADDI" "ADDI $-8, X12, X12" "addi x12,x12,-8" ref=0x0 call=false memmove_riscv64.s:139
-0x6c4dc 4 "BGE" "BGE X12, X9, -17(PC)" "bge x12,x9,-70 <runtime.memmove+0x10e>" ref=0x6c496 call=false memmove_riscv64.s:140
+0x6c4dc 4 "BGE" "BGE X12, X9, 0x6c496" "bge x12,x9,-70 <runtime.memmove+0x10e>" ref=0x6c496 call=false memmove_riscv64.s:140
 0x6c4e0 2 "ADDI" "ADDI $4, X0, X9" "li x9,4" ref=0x0 call=false memmove_riscv64.s:143
-0x6c4e2 4 "BLT" "BLT X12, X9, 11(PC)" "blt x12,x9,46 <runtime.memmove+0x188>" ref=0x6c510 call=false memmove_riscv64.s:144
+0x6c4e2 4 "BLT" "BLT X12, X9, 0x6c510" "blt x12,x9,46 <runtime.memmove+0x188>" ref=0x6c510 call=false memmove_riscv64.s:144
 0x6c4e6 4 "LB" "MOVB (X11), X14" "lb x14,0(x11)" ref=0x0 call=false memmove_riscv64.s:146
 0x6c4ea 4 "LB" "MOVB 1(X11), X15" "lb x15,1(x11)" ref=0x0 call=false memmove_riscv64.s:147
 0x6c4ee 4 "LB" "MOVB 2(X11), X16" "lb x16,2(x11)" ref=0x0 call=false memmove_riscv64.s:148
@@ -1200,35 +1200,35 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x6c506 2 "ADDI" "ADDI $4, X10, X10" "addi x10,x10,4" ref=0x0 call=false memmove_riscv64.s:154
 0x6c508 2 "ADDI" "ADDI $4, X11, X11" "addi x11,x11,4" ref=0x0 call=false memmove_riscv64.s:155
 0x6c50a 2 "ADDI" "ADDI $-4, X12, X12" "addi x12,x12,-4" ref=0x0 call=false memmove_riscv64.s:156
-0x6c50c 4 "BGE" "BGE X12, X9, -9(PC)" "bge x12,x9,-38 <runtime.memmove+0x15e>" ref=0x6c4e6 call=false memmove_riscv64.s:157
-0x6c510 4 "BEQ" "BEQZ X12, 105(PC)" "beqz x12,420 <runtime.memmove+0x32c>" ref=0x6c6b4 call=false memmove_riscv64.s:160
+0x6c50c 4 "BGE" "BGE X12, X9, 0x6c4e6" "bge x12,x9,-38 <runtime.memmove+0x15e>" ref=0x6c4e6 call=false memmove_riscv64.s:157
+0x6c510 4 "BEQ" "BEQZ X12, 0x6c6b4" "beqz x12,420 <runtime.memmove+0x32c>" ref=0x6c6b4 call=false memmove_riscv64.s:160
 0x6c514 4 "LB" "MOVB (X11), X14" "lb x14,0(x11)" ref=0x0 call=false memmove_riscv64.s:161
 0x6c518 4 "SB" "MOVB X14, (X10)" "sb x14,0(x10)" ref=0x0 call=false memmove_riscv64.s:162
 0x6c51c 2 "ADDI" "ADDI $1, X10, X10" "addi x10,x10,1" ref=0x0 call=false memmove_riscv64.s:163
 0x6c51e 2 "ADDI" "ADDI $1, X11, X11" "addi x11,x11,1" ref=0x0 call=false memmove_riscv64.s:164
 0x6c520 2 "ADDI" "ADDI $-1, X12, X12" "addi x12,x12,-1" ref=0x0 call=false memmove_riscv64.s:165
-0x6c522 4 "JAL" "JMP -4(PC)" "j -18 <runtime.memmove+0x188>" ref=0x6c510 call=false memmove_riscv64.s:166
+0x6c522 4 "JAL" "JMP 0x6c510" "j -18 <runtime.memmove+0x188>" ref=0x6c510 call=false memmove_riscv64.s:166
 0x6c526 2 "ADD" "ADD X12, X10, X10" "add x10,x10,x12" ref=0x0 call=false memmove_riscv64.s:169
 0x6c528 2 "ADD" "ADD X12, X11, X11" "add x11,x11,x12" ref=0x0 call=false memmove_riscv64.s:170
 0x6c52a 2 "ADDI" "ADDI $8, X0, X9" "li x9,8" ref=0x0 call=false memmove_riscv64.s:173
-0x6c52c 4 "BLT" "BLT X12, X9, 80(PC)" "blt x12,x9,322 <runtime.memmove+0x2e6>" ref=0x6c66e call=false memmove_riscv64.s:174
+0x6c52c 4 "BLT" "BLT X12, X9, 0x6c66e" "blt x12,x9,322 <runtime.memmove+0x2e6>" ref=0x6c66e call=false memmove_riscv64.s:174
 0x6c530 4 "ANDI" "ANDI $7, X10, X5" "andi x5,x10,7" ref=0x0 call=false memmove_riscv64.s:177
 0x6c534 4 "ANDI" "ANDI $7, X11, X6" "andi x6,x11,7" ref=0x0 call=false memmove_riscv64.s:178
-0x6c538 4 "BNE" "BNE X5, X6, 57(PC)" "bne x5,x6,230 <runtime.memmove+0x296>" ref=0x6c61e call=false memmove_riscv64.s:179
-0x6c53c 4 "BEQ" "BEQZ X5, 6(PC)" "beqz x5,26 <runtime.memmove+0x1ce>" ref=0x6c556 call=false memmove_riscv64.s:180
+0x6c538 4 "BNE" "BNE X5, X6, 0x6c61e" "bne x5,x6,230 <runtime.memmove+0x296>" ref=0x6c61e call=false memmove_riscv64.s:179
+0x6c53c 4 "BEQ" "BEQZ X5, 0x6c556" "beqz x5,26 <runtime.memmove+0x1ce>" ref=0x6c556 call=false memmove_riscv64.s:180
 0x6c540 4 "SUB" "SUB X5, X12, X12" "sub x12,x12,x5" ref=0x0 call=false memmove_riscv64.s:183
 0x6c544 2 "ADDI" "ADDI $-1, X5, X5" "addi x5,x5,-1" ref=0x0 call=false memmove_riscv64.s:185
 0x6c546 2 "ADDI" "ADDI $-1, X10, X10" "addi x10,x10,-1" ref=0x0 call=false memmove_riscv64.s:186
 0x6c548 2 "ADDI" "ADDI $-1, X11, X11" "addi x11,x11,-1" ref=0x0 call=false memmove_riscv64.s:187
 0x6c54a 4 "LB" "MOVB (X11), X14" "lb x14,0(x11)" ref=0x0 call=false memmove_riscv64.s:188
 0x6c54e 4 "SB" "MOVB X14, (X10)" "sb x14,0(x10)" ref=0x0 call=false memmove_riscv64.s:189
-0x6c552 4 "BNE" "BNEZ X5, -3(PC)" "bnez x5,-14 <runtime.memmove+0x1bc>" ref=0x6c544 call=false memmove_riscv64.s:190
+0x6c552 4 "BNE" "BNEZ X5, 0x6c544" "bnez x5,-14 <runtime.memmove+0x1bc>" ref=0x6c544 call=false memmove_riscv64.s:190
 0x6c556 2 "ADDI" "ADDI $16, X0, X9" "li x9,16" ref=0x0 call=false memmove_riscv64.s:193
-0x6c558 4 "BLT" "BLT X12, X9, 42(PC)" "blt x12,x9,170 <runtime.memmove+0x27a>" ref=0x6c602 call=false memmove_riscv64.s:194
+0x6c558 4 "BLT" "BLT X12, X9, 0x6c602" "blt x12,x9,170 <runtime.memmove+0x27a>" ref=0x6c602 call=false memmove_riscv64.s:194
 0x6c55c 4 "ADDI" "ADDI $32, X0, X9" "li x9,32" ref=0x0 call=false memmove_riscv64.s:195
-0x6c560 4 "BLT" "BLT X12, X9, 33(PC)" "blt x12,x9,134 <runtime.memmove+0x25e>" ref=0x6c5e6 call=false memmove_riscv64.s:196
+0x6c560 4 "BLT" "BLT X12, X9, 0x6c5e6" "blt x12,x9,134 <runtime.memmove+0x25e>" ref=0x6c5e6 call=false memmove_riscv64.s:196
 0x6c564 4 "ADDI" "ADDI $64, X0, X9" "li x9,64" ref=0x0 call=false memmove_riscv64.s:197
-0x6c568 4 "BLT" "BLT X12, X9, 20(PC)" "blt x12,x9,80 <runtime.memmove+0x230>" ref=0x6c5b8 call=false memmove_riscv64.s:198
+0x6c568 4 "BLT" "BLT X12, X9, 0x6c5b8" "blt x12,x9,80 <runtime.memmove+0x230>" ref=0x6c5b8 call=false memmove_riscv64.s:198
 0x6c56c 4 "ADDI" "ADDI $-64, X10, X10" "addi x10,x10,-64" ref=0x0 call=false memmove_riscv64.s:200
 0x6c570 4 "ADDI" "ADDI $-64, X11, X11" "addi x11,x11,-64" ref=0x0 call=false memmove_riscv64.s:201
 0x6c574 2 "LD" "MOV (X11), X14" "ld x14,0(x11)" ref=0x0 call=false memmove_riscv64.s:202
@@ -1248,10 +1248,10 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x6c5a4 4 "SD" "MOV X20, 48(X10)" "sd x20,48(x10)" ref=0x0 call=false memmove_riscv64.s:216
 0x6c5a8 4 "SD" "MOV X21, 56(X10)" "sd x21,56(x10)" ref=0x0 call=false memmove_riscv64.s:217
 0x6c5ac 4 "ADDI" "ADDI $-64, X12, X12" "addi x12,x12,-64" ref=0x0 call=false memmove_riscv64.s:218
-0x6c5b0 4 "BGE" "BGE X12, X9, -17(PC)" "bge x12,x9,-68 <runtime.memmove+0x1e4>" ref=0x6c56c call=false memmove_riscv64.s:219
-0x6c5b4 4 "BEQ" "BEQZ X12, 64(PC)" "beqz x12,256 <runtime.memmove+0x32c>" ref=0x6c6b4 call=false memmove_riscv64.s:220
+0x6c5b0 4 "BGE" "BGE X12, X9, 0x6c56c" "bge x12,x9,-68 <runtime.memmove+0x1e4>" ref=0x6c56c call=false memmove_riscv64.s:219
+0x6c5b4 4 "BEQ" "BEQZ X12, 0x6c6b4" "beqz x12,256 <runtime.memmove+0x32c>" ref=0x6c6b4 call=false memmove_riscv64.s:220
 0x6c5b8 4 "ADDI" "ADDI $32, X0, X9" "li x9,32" ref=0x0 call=false memmove_riscv64.s:223
-0x6c5bc 4 "BLT" "BLT X12, X9, 10(PC)" "blt x12,x9,42 <runtime.memmove+0x25e>" ref=0x6c5e6 call=false memmove_riscv64.s:224
+0x6c5bc 4 "BLT" "BLT X12, X9, 0x6c5e6" "blt x12,x9,42 <runtime.memmove+0x25e>" ref=0x6c5e6 call=false memmove_riscv64.s:224
 0x6c5c0 2 "ADDI" "ADDI $-32, X10, X10" "addi x10,x10,-32" ref=0x0 call=false memmove_riscv64.s:226
 0x6c5c2 2 "ADDI" "ADDI $-32, X11, X11" "addi x11,x11,-32" ref=0x0 call=false memmove_riscv64.s:227
 0x6c5c4 2 "LD" "MOV (X11), X14" "ld x14,0(x11)" ref=0x0 call=false memmove_riscv64.s:228
@@ -1263,10 +1263,10 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x6c5d4 4 "SD" "MOV X16, 16(X10)" "sd x16,16(x10)" ref=0x0 call=false memmove_riscv64.s:234
 0x6c5d8 4 "SD" "MOV X17, 24(X10)" "sd x17,24(x10)" ref=0x0 call=false memmove_riscv64.s:235
 0x6c5dc 2 "ADDI" "ADDI $-32, X12, X12" "addi x12,x12,-32" ref=0x0 call=false memmove_riscv64.s:236
-0x6c5de 4 "BGE" "BGE X12, X9, -7(PC)" "bge x12,x9,-30 <runtime.memmove+0x238>" ref=0x6c5c0 call=false memmove_riscv64.s:237
-0x6c5e2 4 "BEQ" "BEQZ X12, 52(PC)" "beqz x12,210 <runtime.memmove+0x32c>" ref=0x6c6b4 call=false memmove_riscv64.s:238
+0x6c5de 4 "BGE" "BGE X12, X9, 0x6c5c0" "bge x12,x9,-30 <runtime.memmove+0x238>" ref=0x6c5c0 call=false memmove_riscv64.s:237
+0x6c5e2 4 "BEQ" "BEQZ X12, 0x6c6b4" "beqz x12,210 <runtime.memmove+0x32c>" ref=0x6c6b4 call=false memmove_riscv64.s:238
 0x6c5e6 2 "ADDI" "ADDI $16, X0, X9" "li x9,16" ref=0x0 call=false memmove_riscv64.s:241
-0x6c5e8 4 "BLT" "BLT X12, X9, 6(PC)" "blt x12,x9,26 <runtime.memmove+0x27a>" ref=0x6c602 call=false memmove_riscv64.s:242
+0x6c5e8 4 "BLT" "BLT X12, X9, 0x6c602" "blt x12,x9,26 <runtime.memmove+0x27a>" ref=0x6c602 call=false memmove_riscv64.s:242
 0x6c5ec 2 "ADDI" "ADDI $-16, X10, X10" "addi x10,x10,-16" ref=0x0 call=false memmove_riscv64.s:244
 0x6c5ee 2 "ADDI" "ADDI $-16, X11, X11" "addi x11,x11,-16" ref=0x0 call=false memmove_riscv64.s:245
 0x6c5f0 2 "LD" "MOV (X11), X14" "ld x14,0(x11)" ref=0x0 call=false memmove_riscv64.s:246
@@ -1274,20 +1274,20 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x6c5f4 2 "SD" "MOV X14, (X10)" "sd x14,0(x10)" ref=0x0 call=false memmove_riscv64.s:248
 0x6c5f6 2 "SD" "MOV X15, 8(X10)" "sd x15,8(x10)" ref=0x0 call=false memmove_riscv64.s:249
 0x6c5f8 2 "ADDI" "ADDI $-16, X12, X12" "addi x12,x12,-16" ref=0x0 call=false memmove_riscv64.s:250
-0x6c5fa 4 "BGE" "BGE X12, X9, -3(PC)" "bge x12,x9,-14 <runtime.memmove+0x264>" ref=0x6c5ec call=false memmove_riscv64.s:251
-0x6c5fe 4 "BEQ" "BEQZ X12, 45(PC)" "beqz x12,182 <runtime.memmove+0x32c>" ref=0x6c6b4 call=false memmove_riscv64.s:252
+0x6c5fa 4 "BGE" "BGE X12, X9, 0x6c5ec" "bge x12,x9,-14 <runtime.memmove+0x264>" ref=0x6c5ec call=false memmove_riscv64.s:251
+0x6c5fe 4 "BEQ" "BEQZ X12, 0x6c6b4" "beqz x12,182 <runtime.memmove+0x32c>" ref=0x6c6b4 call=false memmove_riscv64.s:252
 0x6c602 2 "ADDI" "ADDI $8, X0, X9" "li x9,8" ref=0x0 call=false memmove_riscv64.s:255
-0x6c604 4 "BLT" "BLT X12, X9, 26(PC)" "blt x12,x9,106 <runtime.memmove+0x2e6>" ref=0x6c66e call=false memmove_riscv64.s:256
+0x6c604 4 "BLT" "BLT X12, X9, 0x6c66e" "blt x12,x9,106 <runtime.memmove+0x2e6>" ref=0x6c66e call=false memmove_riscv64.s:256
 0x6c608 2 "ADDI" "ADDI $-8, X10, X10" "addi x10,x10,-8" ref=0x0 call=false memmove_riscv64.s:258
 0x6c60a 2 "ADDI" "ADDI $-8, X11, X11" "addi x11,x11,-8" ref=0x0 call=false memmove_riscv64.s:259
 0x6c60c 2 "LD" "MOV (X11), X14" "ld x14,0(x11)" ref=0x0 call=false memmove_riscv64.s:260
 0x6c60e 2 "SD" "MOV X14, (X10)" "sd x14,0(x10)" ref=0x0 call=false memmove_riscv64.s:261
 0x6c610 2 "ADDI" "ADDI $-8, X12, X12" "addi x12,x12,-8" ref=0x0 call=false memmove_riscv64.s:262
-0x6c612 4 "BGE" "BGE X12, X9, -2(PC)" "bge x12,x9,-10 <runtime.memmove+0x280>" ref=0x6c608 call=false memmove_riscv64.s:263
-0x6c616 4 "BEQ" "BEQZ X12, 39(PC)" "beqz x12,158 <runtime.memmove+0x32c>" ref=0x6c6b4 call=false memmove_riscv64.s:264
-0x6c61a 4 "JAL" "JMP 21(PC)" "j 84 <runtime.memmove+0x2e6>" ref=0x6c66e call=false memmove_riscv64.s:265
+0x6c612 4 "BGE" "BGE X12, X9, 0x6c608" "bge x12,x9,-10 <runtime.memmove+0x280>" ref=0x6c608 call=false memmove_riscv64.s:263
+0x6c616 4 "BEQ" "BEQZ X12, 0x6c6b4" "beqz x12,158 <runtime.memmove+0x32c>" ref=0x6c6b4 call=false memmove_riscv64.s:264
+0x6c61a 4 "JAL" "JMP 0x6c66e" "j 84 <runtime.memmove+0x2e6>" ref=0x6c66e call=false memmove_riscv64.s:265
 0x6c61e 2 "ADDI" "ADDI $8, X0, X9" "li x9,8" ref=0x0 call=false memmove_riscv64.s:268
-0x6c620 4 "BLT" "BLT X12, X9, 19(PC)" "blt x12,x9,78 <runtime.memmove+0x2e6>" ref=0x6c66e call=false memmove_riscv64.s:269
+0x6c620 4 "BLT" "BLT X12, X9, 0x6c66e" "blt x12,x9,78 <runtime.memmove+0x2e6>" ref=0x6c66e call=false memmove_riscv64.s:269
 0x6c624 2 "ADDI" "ADDI $-8, X10, X10" "addi x10,x10,-8" ref=0x0 call=false memmove_riscv64.s:271
 0x6c626 2 "ADDI" "ADDI $-8, X11, X11" "addi x11,x11,-8" ref=0x0 call=false memmove_riscv64.s:272
 0x6c628 4 "LB" "MOVB (X11), X14" "lb x14,0(x11)" ref=0x0 call=false memmove_riscv64.s:273
@@ -1307,9 +1307,9 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x6c660 4 "SB" "MOVB X20, 6(X10)" "sb x20,6(x10)" ref=0x0 call=false memmove_riscv64.s:287
 0x6c664 4 "SB" "MOVB X21, 7(X10)" "sb x21,7(x10)" ref=0x0 call=false memmove_riscv64.s:288
 0x6c668 2 "ADDI" "ADDI $-8, X12, X12" "addi x12,x12,-8" ref=0x0 call=false memmove_riscv64.s:289
-0x6c66a 4 "BGE" "BGE X12, X9, -17(PC)" "bge x12,x9,-70 <runtime.memmove+0x29c>" ref=0x6c624 call=false memmove_riscv64.s:290
+0x6c66a 4 "BGE" "BGE X12, X9, 0x6c624" "bge x12,x9,-70 <runtime.memmove+0x29c>" ref=0x6c624 call=false memmove_riscv64.s:290
 0x6c66e 2 "ADDI" "ADDI $4, X0, X9" "li x9,4" ref=0x0 call=false memmove_riscv64.s:293
-0x6c670 4 "BLT" "BLT X12, X9, 11(PC)" "blt x12,x9,46 <runtime.memmove+0x316>" ref=0x6c69e call=false memmove_riscv64.s:294
+0x6c670 4 "BLT" "BLT X12, X9, 0x6c69e" "blt x12,x9,46 <runtime.memmove+0x316>" ref=0x6c69e call=false memmove_riscv64.s:294
 0x6c674 2 "ADDI" "ADDI $-4, X10, X10" "addi x10,x10,-4" ref=0x0 call=false memmove_riscv64.s:296
 0x6c676 2 "ADDI" "ADDI $-4, X11, X11" "addi x11,x11,-4" ref=0x0 call=false memmove_riscv64.s:297
 0x6c678 4 "LB" "MOVB (X11), X14" "lb x14,0(x11)" ref=0x0 call=false memmove_riscv64.s:298
@@ -1321,14 +1321,14 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x6c690 4 "SB" "MOVB X16, 2(X10)" "sb x16,2(x10)" ref=0x0 call=false memmove_riscv64.s:304
 0x6c694 4 "SB" "MOVB X17, 3(X10)" "sb x17,3(x10)" ref=0x0 call=false memmove_riscv64.s:305
 0x6c698 2 "ADDI" "ADDI $-4, X12, X12" "addi x12,x12,-4" ref=0x0 call=false memmove_riscv64.s:306
-0x6c69a 4 "BGE" "BGE X12, X9, -9(PC)" "bge x12,x9,-38 <runtime.memmove+0x2ec>" ref=0x6c674 call=false memmove_riscv64.s:307
-0x6c69e 4 "BEQ" "BEQZ X12, 5(PC)" "beqz x12,22 <runtime.memmove+0x32c>" ref=0x6c6b4 call=false memmove_riscv64.s:310
+0x6c69a 4 "BGE" "BGE X12, X9, 0x6c674" "bge x12,x9,-38 <runtime.memmove+0x2ec>" ref=0x6c674 call=false memmove_riscv64.s:307
+0x6c69e 4 "BEQ" "BEQZ X12, 0x6c6b4" "beqz x12,22 <runtime.memmove+0x32c>" ref=0x6c6b4 call=false memmove_riscv64.s:310
 0x6c6a2 2 "ADDI" "ADDI $-1, X10, X10" "addi x10,x10,-1" ref=0x0 call=false memmove_riscv64.s:311
 0x6c6a4 2 "ADDI" "ADDI $-1, X11, X11" "addi x11,x11,-1" ref=0x0 call=false memmove_riscv64.s:312
 0x6c6a6 4 "LB" "MOVB (X11), X14" "lb x14,0(x11)" ref=0x0 call=false memmove_riscv64.s:313
 0x6c6aa 4 "SB" "MOVB X14, (X10)" "sb x14,0(x10)" ref=0x0 call=false memmove_riscv64.s:314
 0x6c6ae 2 "ADDI" "ADDI $-1, X12, X12" "addi x12,x12,-1" ref=0x0 call=false memmove_riscv64.s:315
-0x6c6b0 4 "JAL" "JMP -4(PC)" "j -18 <runtime.memmove+0x316>" ref=0x6c69e call=false memmove_riscv64.s:316
+0x6c6b0 4 "JAL" "JMP 0x6c69e" "j -18 <runtime.memmove+0x316>" ref=0x6c69e call=false memmove_riscv64.s:316
 0x6c6b4 4 "JALR" "RET" "ret" ref=0x0 call=false memmove_riscv64.s:319
 == main 0x6c7c8 16 /usr/local/go/src/runtime/rt0_linux_riscv64.s
 0x6c7c8 4 "AUIPC" "AUIPC $1048575, X5" "auipc x5,0xfffff" ref=0x0 call=false rt0_linux_riscv64.s:19
@@ -1339,19 +1339,19 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 == main.sumInts 0x6d710 32 /Users/egon/code/gio/lensm/testdata/testprog/main.go
 0x6d710 2 "SD" "MOV X10, 8(X2)" "sd x10,8(x2)" ref=0x0 call=false main.go:19
 0x6d712 2 "ADDI" "MOV X0, X9" "li x9,0" ref=0x0 call=false main.go:21
-0x6d714 4 "JAL" "JMP 4(PC)" "j 16 <main.sumInts+0x14>" ref=0x6d724 call=false main.go:21
+0x6d714 4 "JAL" "JMP 0x6d724" "j 16 <main.sumInts+0x14>" ref=0x6d724 call=false main.go:21
 0x6d718 2 "ADD" "ADD X10, X0, X12" "mv x12,x10" ref=0x0 call=false main.go:21
 0x6d71a 2 "LD" "MOV (X10), X13" "ld x13,0(x10)" ref=0x0 call=false main.go:21
 0x6d71c 2 "ADD" "ADD X13, X9, X9" "add x9,x9,x13" ref=0x0 call=false main.go:22
 0x6d71e 4 "ADDI" "ADDI $8, X12, X10" "addi x10,x12,8" ref=0x0 call=false main.go:21
 0x6d722 2 "ADDI" "ADDI $-1, X11, X11" "addi x11,x11,-1" ref=0x0 call=false main.go:21
-0x6d724 4 "BLT" "BLT X0, X11, -3(PC)" "bgtz x11,-12 <main.sumInts+0x8>" ref=0x6d718 call=false main.go:21
+0x6d724 4 "BLT" "BLT X0, X11, 0x6d718" "bgtz x11,-12 <main.sumInts+0x8>" ref=0x6d718 call=false main.go:21
 0x6d728 2 "ADD" "ADD X9, X0, X10" "mv x10,x9" ref=0x0 call=false main.go:24
 0x6d72a 4 "JALR" "RET" "ret" ref=0x0 call=false main.go:24
 0x6d72e 2 "CSRRW" "UNIMP" "unimp" ref=0x0 call=false .:-1
 == main.dot 0x6d730 112 /Users/egon/code/gio/lensm/testdata/testprog/main.go
 0x6d730 4 "LD" "MOV 16(X27), X6" "ld x6,16(x27)" ref=0x0 call=false main.go:28
-0x6d734 4 "BLTU" "BLTU X6, X2, 9(PC)" "bltu x6,x2,36 <main.dot+0x28>" ref=0x6d758 call=false main.go:28
+0x6d734 4 "BLTU" "BLTU X6, X2, 0x6d758" "bltu x6,x2,36 <main.dot+0x28>" ref=0x6d758 call=false main.go:28
 0x6d738 2 "SD" "MOV X10, 8(X2)" "sd x10,8(x2)" ref=0x0 call=false main.go:28
 0x6d73a 2 "SD" "MOV X11, 16(X2)" "sd x11,16(x2)" ref=0x0 call=false main.go:28
 0x6d73c 2 "SD" "MOV X12, 24(X2)" "sd x12,24(x2)" ref=0x0 call=false main.go:28
@@ -1373,17 +1373,17 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x6d762 2 "SD" "MOV X13, 40(X2)" "sd x13,40(x2)" ref=0x0 call=false main.go:28
 0x6d764 4 "FMV.D.X" "MOVD $(0.0), F9" "fmv.d.x f9,x0" ref=0x0 call=false main.go:30
 0x6d768 2 "ADDI" "MOV X0, X9" "li x9,0" ref=0x0 call=false main.go:30
-0x6d76a 4 "JAL" "JMP 4(PC)" "j 16 <main.dot+0x4a>" ref=0x6d77a call=false main.go:30
+0x6d76a 4 "JAL" "JMP 0x6d77a" "j 16 <main.dot+0x4a>" ref=0x6d77a call=false main.go:30
 0x6d76e 2 "FLD" "MOVD (X15), F10" "fld f10,0(x15)" ref=0x0 call=false main.go:31
 0x6d770 2 "ADD" "ADD X13, X12, X12" "add x12,x12,x13" ref=0x0 call=false main.go:31
 0x6d772 2 "FLD" "MOVD (X12), F11" "fld f11,0(x12)" ref=0x0 call=false main.go:31
 0x6d774 4 "FMADD.D" "FMADDD F11, F10, F9, F9" "fmadd.d f9,f11,f10,f9" ref=0x0 call=false main.go:31
 0x6d778 2 "ADDI" "ADDI $1, X9, X9" "addi x9,x9,1" ref=0x0 call=false main.go:30
-0x6d77a 4 "BGE" "BGE X9, X11, 5(PC)" "bge x9,x11,20 <main.dot+0x5e>" ref=0x6d78e call=false main.go:30
+0x6d77a 4 "BGE" "BGE X9, X11, 0x6d78e" "bge x9,x11,20 <main.dot+0x5e>" ref=0x6d78e call=false main.go:30
 0x6d77e 4 "SLLI" "SLLI $3, X9, X12" "slli x12,x9,0x3" ref=0x0 call=false main.go:31
 0x6d782 4 "ADD" "ADD X12, X10, X15" "add x15,x10,x12" ref=0x0 call=false main.go:31
-0x6d786 4 "BLTU" "BLTU X9, X14, -6(PC)" "bltu x9,x14,-24 <main.dot+0x3e>" ref=0x6d76e call=false main.go:31
-0x6d78a 4 "JAL" "JMP 4(PC)" "j 16 <main.dot+0x6a>" ref=0x6d79a call=false main.go:31
+0x6d786 4 "BLTU" "BLTU X9, X14, 0x6d76e" "bltu x9,x14,-24 <main.dot+0x3e>" ref=0x6d76e call=false main.go:31
+0x6d78a 4 "JAL" "JMP 0x6d79a" "j 16 <main.dot+0x6a>" ref=0x6d79a call=false main.go:31
 0x6d78e 4 "FSGNJ.D" "MOVD F9, F10" "fmv.d f10,f9" ref=0x0 call=false main.go:33
 0x6d792 2 "LD" "MOV (X2), X1" "ld x1,0(x2)" ref=0x0 call=false main.go:33
 0x6d794 2 "ADDI" "ADDI $8, X2, X2" "addi x2,x2,8" ref=0x0 call=false main.go:33
@@ -1392,7 +1392,7 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x6d79e 2 "ADDI" "MOV X0, X0" "nop" ref=0x0 call=false main.go:31
 == main.popcountAll 0x6d7a0 120 /Users/egon/code/gio/lensm/testdata/testprog/main.go
 0x6d7a0 4 "LD" "MOV 16(X27), X6" "ld x6,16(x27)" ref=0x0 call=false main.go:37
-0x6d7a4 4 "BLTU" "BLTU X6, X2, 6(PC)" "bltu x6,x2,24 <main.popcountAll+0x1c>" ref=0x6d7bc call=false main.go:37
+0x6d7a4 4 "BLTU" "BLTU X6, X2, 0x6d7bc" "bltu x6,x2,24 <main.popcountAll+0x1c>" ref=0x6d7bc call=false main.go:37
 0x6d7a8 2 "SD" "MOV X10, 8(X2)" "sd x10,8(x2)" ref=0x0 call=false main.go:37
 0x6d7aa 2 "SD" "MOV X11, 16(X2)" "sd x11,16(x2)" ref=0x0 call=false main.go:37
 0x6d7ac 2 "SD" "MOV X12, 24(X2)" "sd x12,24(x2)" ref=0x0 call=false main.go:37
@@ -1406,17 +1406,17 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x6d7c4 2 "SD" "MOV X1, (X2)" "sd x1,0(x2)" ref=0x0 call=false main.go:37
 0x6d7c6 2 "SD" "MOV X10, 48(X2)" "sd x10,48(x2)" ref=0x0 call=false main.go:37
 0x6d7c8 2 "ADDI" "MOV X0, X9" "li x9,0" ref=0x0 call=false main.go:39
-0x6d7ca 4 "JAL" "JMP 2(PC)" "j 10 <main.popcountAll+0x34>" ref=0x6d7d4 call=false main.go:39
+0x6d7ca 4 "JAL" "JMP 0x6d7d4" "j 10 <main.popcountAll+0x34>" ref=0x6d7d4 call=false main.go:39
 0x6d7ce 2 "ADDI" "ADDI $8, X10, X10" "addi x10,x10,8" ref=0x0 call=false main.go:39
 0x6d7d0 2 "ADD" "ADD X12, X9, X9" "add x9,x9,x12" ref=0x0 call=false main.go:40
 0x6d7d2 2 "ADDI" "ADDI $-1, X11, X11" "addi x11,x11,-1" ref=0x0 call=false main.go:39
-0x6d7d4 4 "BGE" "BGE X0, X11, 12(PC)" "blez x11,50 <main.popcountAll+0x66>" ref=0x6d806 call=false main.go:39
+0x6d7d4 4 "BGE" "BGE X0, X11, 0x6d806" "blez x11,50 <main.popcountAll+0x66>" ref=0x6d806 call=false main.go:39
 0x6d7d8 4 "AUIPC" "AUIPC $202, X12" "auipc x12,0xca" ref=0x0 call=false main.go:40
 0x6d7dc 4 "LBU" "MOVBU -749(X12), X12" "lbu x12,-749(x12)" ref=0x0 call=false main.go:40
 0x6d7e0 2 "LD" "MOV (X10), X13" "ld x13,0(x10)" ref=0x0 call=false main.go:39
-0x6d7e2 4 "BEQ" "BEQZ X12, 3(PC)" "beqz x12,12 <main.popcountAll+0x4e>" ref=0x6d7ee call=false main.go:40
+0x6d7e2 4 "BEQ" "BEQZ X12, 0x6d7ee" "beqz x12,12 <main.popcountAll+0x4e>" ref=0x6d7ee call=false main.go:40
 0x6d7e6 4 "CPOP" "CPOP X13, X12" "cpop x12,x13" ref=0x0 call=false main.go:40
-0x6d7ea 4 "JAL" "JMP -7(PC)" "j -28 <main.popcountAll+0x2e>" ref=0x6d7ce call=false main.go:40
+0x6d7ea 4 "JAL" "JMP 0x6d7ce" "j -28 <main.popcountAll+0x2e>" ref=0x6d7ce call=false main.go:40
 0x6d7ee 2 "SD" "MOV X11, 24(X2)" "sd x11,24(x2)" ref=0x0 call=false main.go:39
 0x6d7f0 2 "SD" "MOV X10, 32(X2)" "sd x10,32(x2)" ref=0x0 call=false main.go:39
 0x6d7f2 2 "SD" "MOV X9, 16(X2)" "sd x9,16(x2)" ref=0x0 call=false main.go:39
@@ -1426,7 +1426,7 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x6d7fc 2 "LD" "MOV 24(X2), X11" "ld x11,24(x2)" ref=0x0 call=false main.go:39
 0x6d7fe 2 "ADD" "ADD X10, X0, X12" "mv x12,x10" ref=0x0 call=false main.go:40
 0x6d800 2 "LD" "MOV 32(X2), X10" "ld x10,32(x2)" ref=0x0 call=false main.go:39
-0x6d802 4 "JAL" "JMP -13(PC)" "j -52 <main.popcountAll+0x2e>" ref=0x6d7ce call=false main.go:40
+0x6d802 4 "JAL" "JMP 0x6d7ce" "j -52 <main.popcountAll+0x2e>" ref=0x6d7ce call=false main.go:40
 0x6d806 2 "ADD" "ADD X9, X0, X10" "mv x10,x9" ref=0x0 call=false main.go:42
 0x6d808 2 "LD" "MOV (X2), X1" "ld x1,0(x2)" ref=0x0 call=false main.go:42
 0x6d80a 4 "ADDI" "ADDI $40, X2, X2" "addi x2,x2,40" ref=0x0 call=false main.go:42
@@ -1436,20 +1436,20 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x6d816 2 "CSRRW" "UNIMP" "unimp" ref=0x0 call=false .:-1
 == main.collatzSteps 0x6d818 64 /Users/egon/code/gio/lensm/testdata/testprog/main.go
 0x6d818 2 "ADDI" "MOV X0, X9" "li x9,0" ref=0x0 call=false main.go:48
-0x6d81a 4 "JAL" "JMP 1(PC)" "j 6 <main.collatzSteps+0x8>" ref=0x6d820 call=false main.go:48
+0x6d81a 4 "JAL" "JMP 0x6d820" "j 6 <main.collatzSteps+0x8>" ref=0x6d820 call=false main.go:48
 0x6d81e 2 "ADDI" "ADDI $1, X9, X9" "addi x9,x9,1" ref=0x0 call=false main.go:54
 0x6d820 4 "ADDI" "ADDI $-1, X10, X11" "addi x11,x10,-1" ref=0x0 call=false main.go:48
-0x6d824 4 "BEQ" "BEQZ X11, 10(PC)" "beqz x11,40 <main.collatzSteps+0x34>" ref=0x6d84c call=false main.go:48
+0x6d824 4 "BEQ" "BEQZ X11, 0x6d84c" "beqz x11,40 <main.collatzSteps+0x34>" ref=0x6d84c call=false main.go:48
 0x6d828 4 "SRLI" "SRLI $63, X10, X11" "srli x11,x10,0x3f" ref=0x0 call=false main.go:49
 0x6d82c 2 "ADD" "ADD X10, X11, X11" "add x11,x11,x10" ref=0x0 call=false main.go:49
 0x6d82e 4 "ANDI" "ANDI $1, X10, X12" "andi x12,x10,1" ref=0x0 call=false main.go:49
-0x6d832 4 "BNE" "BNEZ X12, 3(PC)" "bnez x12,12 <main.collatzSteps+0x26>" ref=0x6d83e call=false main.go:49
+0x6d832 4 "BNE" "BNEZ X12, 0x6d83e" "bnez x12,12 <main.collatzSteps+0x26>" ref=0x6d83e call=false main.go:49
 0x6d836 4 "SRAI" "SRAI $1, X11, X10" "srai x10,x11,0x1" ref=0x0 call=false main.go:49
-0x6d83a 4 "JAL" "JMP -7(PC)" "j -28 <main.collatzSteps+0x6>" ref=0x6d81e call=false main.go:50
+0x6d83a 4 "JAL" "JMP 0x6d81e" "j -28 <main.collatzSteps+0x6>" ref=0x6d81e call=false main.go:50
 0x6d83e 2 "ADDI" "ADDI $3, X0, X11" "li x11,3" ref=0x0 call=false main.go:52
 0x6d840 4 "MUL" "MUL X10, X11, X12" "mul x12,x11,x10" ref=0x0 call=false main.go:52
 0x6d844 4 "ADDI" "ADDI $1, X12, X10" "addi x10,x12,1" ref=0x0 call=false main.go:52
-0x6d848 4 "JAL" "JMP -10(PC)" "j -42 <main.collatzSteps+0x6>" ref=0x6d81e call=false main.go:52
+0x6d848 4 "JAL" "JMP 0x6d81e" "j -42 <main.collatzSteps+0x6>" ref=0x6d81e call=false main.go:52
 0x6d84c 2 "ADD" "ADD X9, X0, X10" "mv x10,x9" ref=0x0 call=false main.go:56
 0x6d84e 4 "JALR" "RET" "ret" ref=0x0 call=false main.go:56
 0x6d852 2 "CSRRW" "UNIMP" "unimp" ref=0x0 call=false .:-1
@@ -1458,7 +1458,7 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 == main.mat4Mul 0x6d858 408 /Users/egon/code/gio/lensm/testdata/testprog/main.go
 0x6d858 4 "LD" "MOV 16(X27), X6" "ld x6,16(x27)" ref=0x0 call=false main.go:60
 0x6d85c 4 "ADDI" "ADDI $-8, X2, X7" "addi x7,x2,-8" ref=0x0 call=false main.go:60
-0x6d860 4 "BLTU" "BLTU X6, X7, 5(PC)" "bltu x6,x7,20 <main.mat4Mul+0x1c>" ref=0x6d874 call=false main.go:60
+0x6d860 4 "BLTU" "BLTU X6, X7, 0x6d874" "bltu x6,x7,20 <main.mat4Mul+0x1c>" ref=0x6d874 call=false main.go:60
 0x6d864 2 "SD" "MOV X10, 136(X2)" "sd x10,136(x2)" ref=0x0 call=false main.go:60
 0x6d866 2 "SD" "MOV X11, 144(X2)" "sd x11,144(x2)" ref=0x0 call=false main.go:60
 0x6d868 4 "JAL" "JAL X5, runtime.morestack_noctxt.abi0(SB)" "jal x5,-6080 <runtime.morestack_noctxt.abi0>" ref=0x6c0a8 call=true main.go:60
@@ -1503,19 +1503,19 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x6d8fa 4 "SD" "MOV X0, 112(X12)" "sd x0,112(x12)" ref=0x0 call=false main.go:61
 0x6d8fe 4 "SD" "MOV X0, 120(X12)" "sd x0,120(x12)" ref=0x0 call=false main.go:61
 0x6d902 2 "ADDI" "MOV X0, X13" "li x13,0" ref=0x0 call=false main.go:62
-0x6d904 4 "JAL" "JMP 1(PC)" "j 6 <main.mat4Mul+0xb2>" ref=0x6d90a call=false main.go:62
+0x6d904 4 "JAL" "JMP 0x6d90a" "j 6 <main.mat4Mul+0xb2>" ref=0x6d90a call=false main.go:62
 0x6d908 2 "ADDI" "ADDI $1, X13, X13" "addi x13,x13,1" ref=0x0 call=false main.go:62
 0x6d90a 2 "ADDI" "ADDI $4, X0, X14" "li x14,4" ref=0x0 call=false main.go:62
-0x6d90c 4 "BGE" "BGE X13, X14, 22(PC)" "bge x13,x14,88 <main.mat4Mul+0x10c>" ref=0x6d964 call=false main.go:62
+0x6d90c 4 "BGE" "BGE X13, X14, 0x6d964" "bge x13,x14,88 <main.mat4Mul+0x10c>" ref=0x6d964 call=false main.go:62
 0x6d910 2 "ADDI" "MOV X0, X15" "li x15,0" ref=0x0 call=false main.go:63
-0x6d912 4 "JAL" "JMP 1(PC)" "j 6 <main.mat4Mul+0xc0>" ref=0x6d918 call=false main.go:63
+0x6d912 4 "JAL" "JMP 0x6d918" "j 6 <main.mat4Mul+0xc0>" ref=0x6d918 call=false main.go:63
 0x6d916 2 "ADDI" "ADDI $1, X15, X15" "addi x15,x15,1" ref=0x0 call=false main.go:63
-0x6d918 4 "BGE" "BGE X15, X14, -4(PC)" "bge x15,x14,-16 <main.mat4Mul+0xb0>" ref=0x6d908 call=false main.go:63
+0x6d918 4 "BGE" "BGE X15, X14, 0x6d908" "bge x15,x14,-16 <main.mat4Mul+0xb0>" ref=0x6d908 call=false main.go:63
 0x6d91c 4 "SLLI" "SLLI $2, X13, X16" "slli x16,x13,0x2" ref=0x0 call=false main.go:65
 0x6d920 4 "ADD" "ADD X15, X16, X5" "add x5,x16,x15" ref=0x0 call=false main.go:65
 0x6d924 2 "SLLI" "SLLI $3, X5, X5" "slli x5,x5,0x3" ref=0x0 call=false main.go:65
 0x6d926 2 "ADDI" "MOV X0, X6" "li x6,0" ref=0x0 call=false main.go:64
-0x6d928 4 "JAL" "JMP 13(PC)" "j 52 <main.mat4Mul+0x104>" ref=0x6d95c call=false main.go:64
+0x6d928 4 "JAL" "JMP 0x6d95c" "j 52 <main.mat4Mul+0x104>" ref=0x6d95c call=false main.go:64
 0x6d92c 4 "LB" "MOVB (X10), X0" "lb x0,0(x10)" ref=0x0 call=false main.go:65
 0x6d930 4 "LB" "MOVB (X11), X0" "lb x0,0(x11)" ref=0x0 call=false main.go:65
 0x6d934 4 "ADD" "ADD X5, X12, X7" "add x7,x12,x5" ref=0x0 call=false main.go:65
@@ -1532,8 +1532,8 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x6d952 4 "FMADD.D" "FMADDD F11, F10, F9, F9" "fmadd.d f9,f11,f10,f9" ref=0x0 call=false main.go:65
 0x6d956 4 "FSD" "MOVD F9, (X7)" "fsd f9,0(x7)" ref=0x0 call=false main.go:65
 0x6d95a 2 "ADDI" "ADDI $1, X6, X6" "addi x6,x6,1" ref=0x0 call=false main.go:64
-0x6d95c 4 "BLT" "BLT X6, X14, -12(PC)" "blt x6,x14,-48 <main.mat4Mul+0xd4>" ref=0x6d92c call=false main.go:64
-0x6d960 4 "JAL" "JMP -18(PC)" "j -74 <main.mat4Mul+0xbe>" ref=0x6d916 call=false main.go:64
+0x6d95c 4 "BLT" "BLT X6, X14, 0x6d92c" "blt x6,x14,-48 <main.mat4Mul+0xd4>" ref=0x6d92c call=false main.go:64
+0x6d960 4 "JAL" "JMP 0x6d916" "j -74 <main.mat4Mul+0xbe>" ref=0x6d916 call=false main.go:64
 0x6d964 4 "LD" "MOV (X12), X5" "ld x5,0(x12)" ref=0x0 call=false main.go:69
 0x6d968 4 "SD" "MOV X5, (X9)" "sd x5,0(x9)" ref=0x0 call=false main.go:69
 0x6d96c 4 "LD" "MOV 8(X12), X5" "ld x5,8(x12)" ref=0x0 call=false main.go:69
@@ -1575,31 +1575,31 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x6d9f2 2 "ADD" "ADD X10, X0, X9" "mv x9,x10" ref=0x0 call=false main.go:75
 0x6d9f4 4 "FMV.D.X" "MOVD $(0.0), F9" "fmv.d.x f9,x0" ref=0x0 call=false main.go:75
 0x6d9f8 2 "ADD" "ADD X11, X0, X12" "mv x12,x11" ref=0x0 call=false main.go:75
-0x6d9fa 4 "JAL" "JMP 4(PC)" "j 18 <main.normalize+0x1c>" ref=0x6da0c call=false main.go:75
+0x6d9fa 4 "JAL" "JMP 0x6da0c" "j 18 <main.normalize+0x1c>" ref=0x6da0c call=false main.go:75
 0x6d9fe 2 "ADD" "ADD X10, X0, X13" "mv x13,x10" ref=0x0 call=false main.go:75
 0x6da00 2 "FLD" "MOVD (X10), F10" "fld f10,0(x10)" ref=0x0 call=false main.go:75
 0x6da02 4 "FMADD.D" "FMADDD F10, F10, F9, F9" "fmadd.d f9,f10,f10,f9" ref=0x0 call=false main.go:76
 0x6da06 4 "ADDI" "ADDI $8, X13, X10" "addi x10,x13,8" ref=0x0 call=false main.go:75
 0x6da0a 2 "ADDI" "ADDI $-1, X11, X11" "addi x11,x11,-1" ref=0x0 call=false main.go:75
-0x6da0c 4 "BLT" "BLT X0, X11, -3(PC)" "bgtz x11,-14 <main.normalize+0xe>" ref=0x6d9fe call=false main.go:75
+0x6da0c 4 "BLT" "BLT X0, X11, 0x6d9fe" "bgtz x11,-14 <main.normalize+0xe>" ref=0x6d9fe call=false main.go:75
 0x6da10 2 "ADDI" "MOV X0, X0" "nop" ref=0x0 call=false main.go:78
 0x6da12 4 "FSQRT.D" "FSQRTD F9, F9" "fsqrt.d f9,f9" ref=0x0 call=false sqrt.go:94
 0x6da16 2 "ADDI" "MOV X0, X10" "li x10,0" ref=0x0 call=false main.go:79
-0x6da18 4 "JAL" "JMP 5(PC)" "j 20 <main.normalize+0x3c>" ref=0x6da2c call=false main.go:79
+0x6da18 4 "JAL" "JMP 0x6da2c" "j 20 <main.normalize+0x3c>" ref=0x6da2c call=false main.go:79
 0x6da1c 4 "SLLI" "SLLI $3, X10, X11" "slli x11,x10,0x3" ref=0x0 call=false main.go:80
 0x6da20 2 "ADD" "ADD X9, X11, X11" "add x11,x11,x9" ref=0x0 call=false main.go:80
 0x6da22 2 "FLD" "MOVD (X11), F10" "fld f10,0(x11)" ref=0x0 call=false main.go:80
 0x6da24 4 "FDIV.D" "FDIVD F9, F10, F10" "fdiv.d f10,f10,f9" ref=0x0 call=false main.go:80
 0x6da28 2 "FSD" "MOVD F10, (X11)" "fsd f10,0(x11)" ref=0x0 call=false main.go:80
 0x6da2a 2 "ADDI" "ADDI $1, X10, X10" "addi x10,x10,1" ref=0x0 call=false main.go:79
-0x6da2c 4 "BLT" "BLT X10, X12, -4(PC)" "blt x10,x12,-16 <main.normalize+0x2c>" ref=0x6da1c call=false main.go:79
+0x6da2c 4 "BLT" "BLT X10, X12, 0x6da1c" "blt x10,x12,-16 <main.normalize+0x2c>" ref=0x6da1c call=false main.go:79
 0x6da30 4 "JALR" "RET" "ret" ref=0x0 call=false main.go:82
 0x6da34 2 "CSRRW" "UNIMP" "unimp" ref=0x0 call=false .:-1
 0x6da36 2 "CSRRW" "UNIMP" "unimp" ref=0x0 call=false .:-1
 == main.main 0x6da38 624 /Users/egon/code/gio/lensm/testdata/testprog/main.go
 0x6da38 4 "LD" "MOV 16(X27), X6" "ld x6,16(x27)" ref=0x0 call=false main.go:84
 0x6da3c 4 "ADDI" "ADDI $-568, X2, X7" "addi x7,x2,-568" ref=0x0 call=false main.go:84
-0x6da40 4 "BLTU" "BLTU X6, X7, 3(PC)" "bltu x6,x7,12 <main.main+0x14>" ref=0x6da4c call=false main.go:84
+0x6da40 4 "BLTU" "BLTU X6, X7, 0x6da4c" "bltu x6,x7,12 <main.main+0x14>" ref=0x6da4c call=false main.go:84
 0x6da44 4 "JAL" "JAL X5, runtime.morestack_noctxt.abi0(SB)" "jal x5,-6556 <runtime.morestack_noctxt.abi0>" ref=0x6c0a8 call=true main.go:84
 0x6da48 4 "JAL" "JMP main.main(SB)" "j -16 <main.main>" ref=0x6da38 call=false main.go:84
 0x6da4c 4 "SD" "MOV X1, -696(X2)" "sd x1,-696(x2)" ref=0x0 call=false main.go:84
@@ -1677,7 +1677,7 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x6db52 4 "SD" "MOV X0, 112(X11)" "sd x0,112(x11)" ref=0x0 call=false main.go:89
 0x6db56 4 "SD" "MOV X0, 120(X11)" "sd x0,120(x11)" ref=0x0 call=false main.go:89
 0x6db5a 2 "ADDI" "MOV X0, X9" "li x9,0" ref=0x0 call=false main.go:90
-0x6db5c 4 "JAL" "JMP 9(PC)" "j 36 <main.main+0x148>" ref=0x6db80 call=false main.go:90
+0x6db5c 4 "JAL" "JMP 0x6db80" "j 36 <main.main+0x148>" ref=0x6db80 call=false main.go:90
 0x6db60 4 "SLLI" "SLLI $3, X9, X13" "slli x13,x9,0x3" ref=0x0 call=false main.go:91
 0x6db64 4 "ADD" "ADD X10, X13, X14" "add x14,x13,x10" ref=0x0 call=false main.go:91
 0x6db68 4 "FCVT.D.L" "FCVTDL X9, F9" "fcvt.d.l f9,x9" ref=0x0 call=false main.go:91
@@ -1689,7 +1689,7 @@ arch=riscv64 funcs=1395 sha256=c4ab282e61623121364fdc6de6b4d0e15d6d1dab3de7c90e1
 0x6db7c 2 "FSD" "MOVD F9, (X13)" "fsd f9,0(x13)" ref=0x0 call=false main.go:92
 0x6db7e 2 "ADDI" "ADDI $1, X9, X9" "addi x9,x9,1" ref=0x0 call=false main.go:90
 0x6db80 2 "ADDI" "ADDI $16, X0, X12" "li x12,16" ref=0x0 call=false main.go:90
-0x6db82 4 "BLT" "BLT X9, X12, -8(PC)" "blt x9,x12,-34 <main.main+0x128>" ref=0x6db60 call=false main.go:90
+0x6db82 4 "BLT" "BLT X9, X12, 0x6db60" "blt x9,x12,-34 <main.main+0x128>" ref=0x6db60 call=false main.go:90
 0x6db86 4 "JAL" "CALL main.mat4Mul(SB)" "jal -814 <main.mat4Mul>" ref=0x6d858 call=true main.go:94
 0x6db8a 2 "ADDI" "ADDI $152, X2, X9" "addi x9,x2,152" ref=0x0 call=false main.go:94
 0x6db8c 2 "ADDI" "ADDI $8, X2, X12" "addi x12,x2,8" ref=0x0 call=false main.go:94

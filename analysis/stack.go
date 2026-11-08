@@ -1,5 +1,6 @@
 // Package analysis finds properties of disassembled code that matter
-// for performance: stack traffic from spills and reloads.
+// for performance: stack traffic from spills and reloads, bounds
+// checks, heap allocations and write barriers.
 package analysis
 
 import (

@@ -8,6 +8,7 @@ Go packages for reading executables and disassembling their machine code.
   pclntab or DWARF, and disassembles into Go and native syntax for
   amd64, 386, arm64, arm (ARM and Thumb), riscv64/32, ppc64/le, s390x,
   loong64, avr, xtensa and wasm.
+- `analysis` finds stack spills and reloads in disassembled code.
 - `thumbasm` is a Thumb/Thumb-2 decoder generated from ARM's ISA XML.
 - `avrasm`, `xtensaasm` are hand-written decoders for AVR and Xtensa.
 
